@@ -1,0 +1,158 @@
+@import "compass/reset";
+@import "compass/typography/links/link-colors";
+@import "compass/utilities/general/clearfix";
+@import "fonts";
+@import "colours";
+
+body {
+  background-color: $beige;
+  font-family: $roboto;
+  font-size: 18px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 81px;
+  font-weight: 700px;
+  text-align: center;
+  font-family: $roboto-slab;
+  margin-bottom: 30px;
+  
+  span { 
+    vertical-align: middle;
+    font-size: 20px; 
+  }
+}
+
+a { text-decoration: none; }
+
+body > header {
+  height: 70px;
+  background: $slate;
+  color: white;
+  
+  .container {
+    position: relative;
+  }
+  
+  a.logo {
+    display: block;
+    width: 138px;
+    height: 69px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 31px 17px 28px;
+    background: $slate;
+    
+    img {
+      display: block;
+    }
+  }
+  
+  nav {
+    margin-left: 230px;
+    
+    a {
+      @include link-colors(white);
+      float: left;
+      height: 63px;
+      padding-top: 7px;
+      margin-right: 56px;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      
+      span {
+        display: block;
+        line-height: 56px;
+        background-color: $slate;
+        padding-bottom: 7px;
+      }
+    }
+    
+		.pull-right {
+			float: right;
+		}
+
+    a.gradebook.active, a.gradebook:hover { background: $green; }
+    
+    a.students.active, a.students:hover { background: $green; }
+    
+    a.resources.active, a.resources:hover { background: $green; }
+    
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.hero {
+  color: white;
+	
+	textarea {
+		background: transparent;
+		border: none;
+		color: white;
+		margin-left: 25px;
+		resize:none;
+		outline:none;
+	}
+	
+	.verticalLine {
+	    border-left: thick solid white;
+	}
+}
+
+.hero.green {
+  background: url(../images/green-background-pattern.gif);
+
+	//input[type="text"] {
+		::-webkit-input-placeholder { /* WebKit browsers */
+		    color:    $light-green;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color:    $light-green;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color:    $light-green;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color:    $light-green;
+		}
+	//}
+	
+	span {
+		color: $dark-slate;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	
+}
+
+.title-input-text {
+	font-family: $roboto-slab;
+	font-size: 54px;
+}
+
+.desc-input-text {
+	font-family: $roboto;
+	font-size: 18px;
+	font-weight: 200;
+	margin-top: 13px;
+}
+
+.plus-white {
+	background-image: url(/images/plus-white.png);
+	background-repeat: no-repeat;
+	padding-bottom: 5px;
+	padding-left: 42px;
+	margin-left: -12px;
+	height: 20px;
+	cursor: pointer;
+}
