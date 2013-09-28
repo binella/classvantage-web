@@ -1,7 +1,7 @@
 'use strict';
 
-var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-var _baseURL = 'http://localhost\\:3000/v1/';
+var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+var _baseURL = 'http://com-classvantage-test.herokuapp.com/	v1/';
 
 angular.module('oauthService',['ngCookies'])	
 	.factory('TokenHandler', function ($cookieStore) {
@@ -39,7 +39,7 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
       })
 */
 			.when('/rubrics/:id', {
-				templateUrl: 'views/rubrics/show.html',
+				templateUrl: 'views/rubric.html',
 				controller: 'RubricCtrl'
 			})
       .when('/gradebook', {
@@ -146,8 +146,8 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 	          username: username,
 	          password: password,
 	          grant_type: 'password',
-	          client_id: 'e5fe8cebca719598957f20c7d717c1193d35f9cacf4aa3263483ec5bfaa930a7',
-	          client_secret: '84cea0b0201b9af18942f6a3b80de0c915d75f3cd3f86e5369d573d0f528f7fe' 
+	          client_id: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
+	          client_secret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
 	        };
 
 	        $http.post(_oauthEndPoint, payload).success(

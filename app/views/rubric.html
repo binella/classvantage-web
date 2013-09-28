@@ -3,18 +3,39 @@
 		<div>Breadcrumbs</div>
   	<form>
 			
+			<!-- This stuff is temporary -->
+			<div style="margin-left:250px;height:77px;">&lt;BREADCRUMBS GO HERE&gt;</div>
+			<!-- End -->
+			
 			<div style="float:left;width:639px;">
-				<textarea name="title" class="title-input-text" msd-elastic="\n" placeholder="Type a title" rows="2" autocorrect="off" ng-model="foo"/>
-				<input type="text" name="description" autocomplete="off"/>
-				<button type="submit" />
+				<textarea ng-model="rubric.title" class="title-input-text" msd-elastic="" 
+									placeholder="Type a title" rows="2" cols="17" autocorrect="off" 
+									style="height:100px;" blurs-on-enter cv-input/>
+				
+				<a class="plus-white" ng-click="displayDesc = true"
+					 ng-show="(rubric.description == null || rubric.description == '') && displayDesc == false">Add a description</a>
+				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text"
+									ng-show="(rubric.description != null && rubric.description != '') || displayDesc == true"
+									focus-when="displayDesc == true" ng-blur="displayDesc = false" cv-input />
 			</div>
 			
 			<div style="float:left;width:5px;height:215px;" class="verticalLine"></div>
 			
 			<div style="float:left;">
-				Grade:<br/>
-				Subject:<br/>
-				Unit:<br/>
+				<ul>
+					<li>
+						<span>Grade:</span><br/>
+						<select></select>
+					</li>
+					<li>
+						<span>Subject:</span><br/>
+						<select></select>
+					</li>
+					<li>
+						<span>Unit:</span><br/>
+						<select></select>
+					</li>
+				</ul>
 			</div>
 			
 		</form>
