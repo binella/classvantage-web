@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('GradebookCtrl', function ($scope, Rubric, $location) {
+  .controller('GradebookCtrl', function ($scope, $location, Rubric, Gradebook) {
+	
+		
+	
     $scope.newRubric = function () {
 			Rubric.save({},{}, function(rubric, postResponseHeader) {
 				// Success
@@ -12,4 +15,6 @@ angular.module('classvantageApp')
 				alert('Error');
 			})
 		};
+		
+		
   });

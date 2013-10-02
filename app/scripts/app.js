@@ -1,7 +1,7 @@
 'use strict';
 
-var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-var _baseURL = 'http://com-classvantage-test.herokuapp.com/	v1/';
+var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+var _baseURL = 'http://localhost\\:3000/v1/';
 
 angular.module('oauthService',['ngCookies'])	
 	.factory('TokenHandler', function ($cookieStore) {
@@ -123,13 +123,15 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 	  }
 	}])
 	
-	.directive('cvSelect', function() {
+	.directive('cvStyledSelect', function($timeout) {
 		return {
-			restrict: 'E',
-			link: function(scope, element, attrs) {
-				$(element).uniform({
-					
-				});
+			restrict: 'A',
+			require: 'ngModel',
+			link: function(scope, element, attrs, ngModel) {
+				element.uniform({});
+				scope.$watch(function() {return ngModel.$modelValue}, function() {
+					$timeout(jQuery.uniform.update, 0);
+				})
 			}
 		}
 	})

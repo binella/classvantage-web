@@ -1,23 +1,27 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $routeParams, Rubric) {
+  .controller('RubricCtrl', function ($scope, $routeParams, Rubric, Unit) {
 	
-		$scope.rubric = Rubric.currentRubric || {};
-			Rubric.get({id: $routeParams.id}, function (rubric, responseHeaders){
-				angular.extend($scope.rubric, rubric);
-			}, function (httpResponse){
-				// Error getting rubric
-			});
+		$scope.units = Unit.query();
 		
+		$scope.rubric = Rubric.currentRubric || {};
+		Rubric.get({id: $routeParams.id}, function (rubric, responseHeaders){
+			angular.extend($scope.rubric, rubric);
+		}, function (httpResponse){
+			// Error getting rubric
+		});
+		
+		
+		// TODO: this needs to be DRYed out of here
 		$scope.updateModel = function() {
 			Rubric.update({id: $scope.rubric.id}, {rubric: $scope.rubric}, function (){/* success */}, function (){/* error */});
 		};
 		
-		$scope.displayDesc = false;
+		$scope.hey = function () {
+			alert($scope.rubric.unit.strand.subject.id);
+		};
 		
-		$scope.hey = function() {
-			alert('hey');
-		}
+		$scope.displayDesc = false;
 		
   });

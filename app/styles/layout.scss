@@ -3,6 +3,7 @@
 @import "compass/utilities/general/clearfix";
 @import "fonts";
 @import "colours";
+@import "uniform";
 
 body {
   background-color: $beige;
@@ -106,7 +107,18 @@ body > header {
 	
 	.verticalLine {
 	    border-left: thick solid white;
+			border-width: 4px;
 	}
+	
+	ul {
+		line-height: 29px;
+		margin-top: 10px;
+	}
+	
+	li {
+		margin-bottom: 11px;
+	}
+	
 }
 
 .hero.green {
@@ -133,6 +145,15 @@ body > header {
 		font-weight: 500;
 	}
 	
+	h1 {
+		vertical-align: middle;
+		
+		span {
+			color: white;
+			font-size: 20px;
+		}
+	}
+	
 }
 
 .title-input-text {
@@ -155,4 +176,31 @@ body > header {
 	margin-left: -12px;
 	height: 20px;
 	cursor: pointer;
+}
+
+.wide-select {
+	width: 232px;
+}
+
+.gradebook-coach {
+	background-image: url(/images/arrow.png);
+	background-repeat: no-repeat;
+	margin-top: 13px;
+	margin-left: 32px;
+	padding-top: 40px;
+	padding-left: 75px;
+	font-size: 16px;
+	color: $dark-beige;
+	 
+	span {
+		font-family: $roboto-slab;
+		font-weight: 500;
+		font-size: 26px;
+		color: $dark-slate;
+	}
+	
+	a {
+		color: $green;
+		font-weight: 500;
+	}
 }
