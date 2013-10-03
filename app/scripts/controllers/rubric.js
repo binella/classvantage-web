@@ -18,10 +18,6 @@ angular.module('classvantageApp')
 			Rubric.update({id: $scope.rubric.id}, {rubric: $scope.rubric}, function (){/* success */}, function (){/* error */});
 		};
 		
-		$scope.hey = function () {
-			alert($scope.rubric.unit.strand.subject.id);
-		};
-		
 		$scope.displayDesc = false;
 		
   });

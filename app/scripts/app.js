@@ -20,24 +20,18 @@ angular.module('oauthService',['ngCookies'])
   });
 
 
-angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauthService', 'monospaced.elastic'])
+angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router'])
 
-  .config(function ($routeProvider, $httpProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 		
 		// Allow CORS
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];
-	
+/*
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-/*
-      .when('/rubrics', {
-        templateUrl: 'views/rubrics/index.html',
-        controller: 'RubricCtrl'
-      })
-*/
 			.when('/rubrics/:id', {
 				templateUrl: 'views/rubric.html',
 				controller: 'RubricCtrl'
@@ -49,6 +43,23 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
       .otherwise({
         redirectTo: '/'
       });
+*/
+		$urlRouterProvider.otherwise("/");
+		$stateProvider
+			.state('home', {
+				url: "/",
+				templateUrl: "views/main.html"
+			})
+			.state('gradebook', {
+				url: "/gradebook",
+				templateUrl: "views/gradebook.html",
+				controller: 'GradebookCtrl'
+			})
+			.state('rubric', {
+				url: '/rubrics/:id',
+				templateUrl: 'views/rubric.html',
+				controller: 'RubricCtrl'
+			});
   })
 
 	.directive('login', function() {

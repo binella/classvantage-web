@@ -30,7 +30,7 @@
 	    <div class="container" ng-controller="MeCtrl">
 	      <a href="#/" class="logo"><img src="images/logo.png"></a>
 	      <nav>
-	        <a href="#/gradebook" class="gradebook"><span>Gradebook</span></a>
+	        <a ui-sref="gradebook" class="gradebook"><span>Gradebook</span></a>
 	        <a href="" class="students"><span>Students</span></a>
 	        <a href="" class="resources"><span>Resources</span></a>
 	
@@ -48,7 +48,7 @@
 	    </div>
 	  </header>
 
-		<div ng-view="">
+		<div ui-view>
 
 	  </div>
 
@@ -72,7 +72,9 @@
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 				<script src="bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
 				<script src="bower_components/angular-elastic/elastic.js"></script>
+				<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 				<script src="bower_components/jquery.uniform/jquery.uniform.js"></script>
+				<script src="custom_components/angular-bootstrap-modal/angular-modal.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -87,6 +89,7 @@
         <script src="scripts/services/Unit.js"></script>
         <script src="scripts/filters/unique.js"></script>
         <script src="scripts/services/Gradebook.js"></script>
+        <script src="scripts/services/Page.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,12 +1,20 @@
 <div class="hero green">
 	<div class="container" style="height:275px;">
-  	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span>(0 Pages)</span></h1>
-		<a class="plus-white" style="line-height:75px;">Add your first page</a>
+  	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
+		
+		<a class="plus-white" style="line-height:75px;" ng-click="newPage()"></a>
+		<a style="line-height:75px;position:absolute;margin-left:27px;color:white;" href="" ng-click="newPage()" ng-show="pages.length == 0">Add your first page</a>
+		
+		<nav class="tab-container">
+			<a class="pages-tab" href="" ng-repeat="page in pages"><span>{{page.title}}</span></a>
+		</nav>
 	</div>
 </div>
-<div class="container">
-	<div class="gradebook-coach">
+<div class="container" id="pageContainer">
+	<div class="gradebook-coach" ng-show="pages.length == 0">
 		<span>Get started!</span><br/><br/>
-		You'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href="#">add your first page</a>.
+		<p>
+			You'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href="" ng-click="newPage()">add your first page</a>.
+		</p>
 	</div>
 </div>
