@@ -2,11 +2,18 @@
 	<div class="container" style="height:275px;">
   	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
 		
-		<a class="plus-white" style="line-height:75px;" ng-click="newPage()"></a>
-		<a style="line-height:75px;position:absolute;margin-left:27px;color:white;" href="" ng-click="newPage()" ng-show="pages.length == 0">Add your first page</a>
+		<div style="position:absolute;">
+			<a class="plus-white" style="line-height:75px;" ng-click="newPage()"></a>
+			<a style="line-height:75px;margin-left:27px;color:white;" href="" ng-click="newPage()" ng-show="pages.length == 0">Add your first page</a>
+		</div>
 		
 		<nav class="tab-container">
-			<a class="pages-tab" href="" ng-repeat="page in pages"><span>{{page.title}}</span></a>
+			<a class="pages-tab" 
+				 ng-class="{selected: $stateParams.page_id == page.id}"
+				 ng-repeat="page in pages" 
+				 ui-sref="gradebook.page({ page_id: page.id })">
+				<span>{{page.title}}</span>
+			</a>
 		</nav>
 	</div>
 </div>
@@ -17,4 +24,5 @@
 			You'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href="" ng-click="newPage()">add your first page</a>.
 		</p>
 	</div>
+	<div class="page-container" ng-show="pages.length > 0" ui-view></div>
 </div>

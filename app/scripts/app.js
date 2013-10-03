@@ -55,6 +55,11 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 				templateUrl: "views/gradebook.html",
 				controller: 'GradebookCtrl'
 			})
+			.state('gradebook.page', {
+				url: "/:page_id",
+				templateUrl: "views/page.html",
+				controller: 'PageCtrl'
+			})
 			.state('rubric', {
 				url: '/rubrics/:id',
 				templateUrl: 'views/rubric.html',
@@ -147,8 +152,11 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 		}
 	})
 	
-	.run(['$rootScope', '$http', 'TokenHandler', 'Me', 'httpBuffer',
-	  function( scope, $http, tokenHandler, Me, httpBuffer) {
+	.run(['$rootScope', '$http', 'TokenHandler', 'Me', 'httpBuffer', '$state', '$stateParams',
+	  function( scope, $http, tokenHandler, Me, httpBuffer, state, stateParams) {
+			
+			scope.$state = state;
+			scope.$stateParams = stateParams;
 			
 			// Set access_token if there is any
 			$http.defaults.headers.common['Authorization'] = 'Bearer ' + tokenHandler.get();

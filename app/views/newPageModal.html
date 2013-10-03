@@ -27,6 +27,7 @@
     </ul>
 </div>
 <div class="modal-footer">
-    <a class="btn btn-red" ng-click="newPage()">Add page</a>
+		<button class="btn btn-red" ng-click="newPage()" 
+						ng-disabled="page.title == '' || page.title == null || page.grade == '' || page.grade == null || page.subject_id == '' || page.subject_id == null">Add page</button>
 </div>
 </form>

@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $routeParams, Rubric, Unit) {
+  .controller('RubricCtrl', function ($scope, $stateParams, Rubric, Unit) {
 	
 		$scope.units = Unit.query();
 		
 		$scope.rubric = Rubric.currentRubric || {};
-		Rubric.get({id: $routeParams.id}, function (rubric, responseHeaders){
+		Rubric.get({id: $stateParams.id}, function (rubric, responseHeaders){
 			angular.extend($scope.rubric, rubric);
 		}, function (httpResponse){
 			// Error getting rubric
