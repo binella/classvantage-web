@@ -36,6 +36,11 @@ $upload-width: 190px;
 
 @import "jquery.uniform/themes/_base/css/uniform._base.scss";
 
+div.selector-dark, div.selector-dark span, div.checker-dark span, div.radio-dark span, div.uploader-dark, div.uploader-dark span.action-dark, div.button-dark, div.button-dark span {
+  background-image: url("../images/sprite-dark.png") !important;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased; }
+
 /* INPUT & TEXTAREA */
 
 #{$class-wrapper-element}#{$class-wrapper} input#{$class-input},
@@ -101,7 +106,9 @@ div#{$class-wrapper}#{$class-select} {
 
 	@include whenDisabled {
 		span {
-			color: #bbb;
+			//color: #bbb;
+			color: rgba(0,0,0,0.4);
+			text-shadow: 0px 0px transparent;
 		}
 	}
 }

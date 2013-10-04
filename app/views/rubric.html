@@ -25,19 +25,23 @@
 				<ul>
 					<li>
 						<span>Grade:</span><br/>
-						<select ng-model="rubric.unit.grade" ng-change="rubric.unit.strand.subject.id = null"
+						<select ng-model="rubric.unit.grade" ng-change="rubric.unit.strand.subject.id = null;rubric.unit_id = null;updateModel();"
 										ng-options="u.grade as u.grade for u in units | unique:'grade'" cv-styled-select></select>
 					</li>
 					<li>
 						<span>Subject:</span><br/>
-						<select ng-model="rubric.unit.strand.subject.id" class="wide-select" ng-disabled="rubric.unit.grade == null"
-										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.unit.grade} | unique:'u.strand.subject.id'" cv-styled-select></select>
+						<select ng-model="rubric.unit.strand.subject.id" class="wide-select" ng-disabled="rubric.unit.grade == null" ng-change="rubric.unit_id = null;updateModel();"
+										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.unit.grade} | unique:'u.strand.subject.id'" cv-styled-select>
+							<option value="" disabled="disabled">Select a subject</option>
+						</select>
 					</li>
 					<li>
 						<span>Unit:</span><br/>
 						<select ng-model="rubric.unit_id" class="wide-select" ng-disabled="rubric.unit.strand.subject.id == null"
 										ng-options="u.id as u.strand.title for u in units | filter:{grade: rubric.unit.grade, strand.subject.id: rubric.unit.strand.subject.id} "
-										ng-change="updateModel()" cv-styled-select></select>
+										ng-change="updateModel()" cv-styled-select>
+							<option value="" disabled="disabled">Select a unit</option>
+						</select>
 					</li>
 				</ul>
 			</div>

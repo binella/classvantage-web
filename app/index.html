@@ -41,7 +41,7 @@
 						  <button type="submit" class="btn">Log in</button>
 						</form>
 
-						<a href="#" class="pull-right" ng-show="me.name" style="display:none;"><span>Logged in as {{me.name}}</span></a>
+						<a href="#" class="pull-right" ng-show="me.name" ng-hide="me.name == null"><span>Logged in as {{me.name}}</span></a>
 
 
 	      </nav>
@@ -75,6 +75,7 @@
 				<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 				<script src="bower_components/jquery.uniform/jquery.uniform.js"></script>
 				<script src="custom_components/angular-bootstrap-modal/angular-modal.js"></script>
+				<script src="custom_components/angular-bootstrap-dropdown/angular-dropdown.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -88,6 +89,8 @@
         <script src="scripts/controllers/gradebook.js"></script>
         <script src="scripts/services/Unit.js"></script>
         <script src="scripts/filters/unique.js"></script>
+				<script src="scripts/filters/slice.js"></script>
+				<script src="scripts/filters/getById.js"></script>
         <script src="scripts/services/Gradebook.js"></script>
         <script src="scripts/services/Page.js"></script>
         <script src="scripts/controllers/page.js"></script>

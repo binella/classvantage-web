@@ -3,7 +3,12 @@
 var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
 var _baseURL = 'http://localhost\\:3000/v1/';
 
-angular.module('oauthService',['ngCookies'])	
+//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+ 
+
+
+angular.module('oauthService', ['ngCookies'])	
 	.factory('TokenHandler', function ($cookieStore) {
     // Service logic
     var tokenHandler = {};
@@ -20,7 +25,7 @@ angular.module('oauthService',['ngCookies'])
   });
 
 
-angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router'])
+angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 		
@@ -53,12 +58,26 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 			.state('gradebook', {
 				url: "/gradebook",
 				templateUrl: "views/gradebook.html",
-				controller: 'GradebookCtrl'
+				controller: 'GradebookCtrl',
+				resolve: {
+					pages: ['Page', function (Page) {
+						return Page.query().$promise;
+					}]
+				}
 			})
 			.state('gradebook.page', {
 				url: "/:page_id",
 				templateUrl: "views/page.html",
-				controller: 'PageCtrl'
+				controller: 'PageCtrl',
+				resolve: {
+					pages: ['$q', 'pages', function ($q, pages) {
+						return pages;
+						//var deferred = $q.defer();
+						//deferred.resolve('hello');
+						//return deferred.promise;
+						//return Page.query().$promise;
+					}]
+				}
 			})
 			.state('rubric', {
 				url: '/rubrics/:id',
@@ -139,7 +158,7 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 	  }
 	}])
 	
-	.directive('cvStyledSelect', function($timeout) {
+	.directive('cvStyledSelect', ['$timeout', function($timeout) {
 		return {
 			restrict: 'A',
 			require: 'ngModel',
@@ -150,7 +169,7 @@ angular.module('classvantageApp', ['ngResource', 'http-auth-interceptor', 'oauth
 				})
 			}
 		}
-	})
+	}])
 	
 	.run(['$rootScope', '$http', 'TokenHandler', 'Me', 'httpBuffer', '$state', '$stateParams',
 	  function( scope, $http, tokenHandler, Me, httpBuffer, state, stateParams) {

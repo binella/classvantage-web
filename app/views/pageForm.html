@@ -1,0 +1,41 @@
+<form ng-submit="submitForm()">
+<div class="modal-header">
+
+    <input type="text" id="beige-input" placeholder="Type a title (eg. French P2)" ng-model="page.title" required />
+		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
+
+</div>
+<div class="modal-body">
+    <ul>
+    	<li>Grade:<br/>
+				<span class="dark-uniform">
+				<select class="narrow-select"
+								ng-model="page.grade" ng-options="u.grade as u.grade for u in units | unique:'grade'" ng-change="page.subject = null;" cv-styled-select></select>
+				</span>
+			</li>
+			<!--li>Term:<br/>
+				<select></select>
+			</li-->
+			<li>Subject:<br/>
+				<span class="dark-uniform">
+				<select ng-model="page.subject" ng-disabled="page.grade == null" class="wider-select"
+								ng-options="u.strand.subject as u.strand.subject.title for u in units | filter:{grade: page.grade} | unique:'u.strand.subject.id' track by u.id"
+								cv-styled-select>
+					
+				</select>
+				</span>
+			</li>
+			<li style="display:none;">Use students from:<br/>
+				<select ng-model="page.students_from_page" class="wider-select"
+								ng-options="page.id as page.title for page in pages"
+								cv-styled-select></select>
+			</li>
+    </ul>
+</div>
+<div class="modal-footer">
+		<button class="btn btn-red" type="submit" 
+						ng-disabled="page.title == '' || page.title == null || page.grade == '' || page.grade == null || page.subject == null">
+						{{buttonCaption}}
+		</button>
+</div>
+</form>

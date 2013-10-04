@@ -3,17 +3,27 @@
   	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
 		
 		<div style="position:absolute;">
-			<a class="plus-white" style="line-height:75px;" ng-click="newPage()"></a>
-			<a style="line-height:75px;margin-left:27px;color:white;" href="" ng-click="newPage()" ng-show="pages.length == 0">Add your first page</a>
+			<a class="plus-white" style="line-height:75px;" ng-click="openPageModal()"></a>
+			<a style="line-height:75px;color:white;" href="" ng-click="openPageModal()" ng-show="pages.length == 0">Add your first page</a>
 		</div>
 		
 		<nav class="tab-container">
 			<a class="pages-tab" 
 				 ng-class="{selected: $stateParams.page_id == page.id}"
-				 ng-repeat="page in pages" 
+				 ng-repeat="page in pages | limitTo: 6" 
 				 ui-sref="gradebook.page({ page_id: page.id })">
 				<span>{{page.title}}</span>
 			</a>
+			<div class="pages-tab" style="position:relative;">
+				<span style="width:65px;">
+					<a ng-show="pages.length > 6" href="" class="dropdown-toggle"></a>
+			  	<ul class="dropdown-menu" style="left:auto;right:0;">
+			    	<li ng-repeat="page in pages | slice:6:pages.length">
+			      	<a ui-sref="gradebook.page({ page_id: page.id })">{{page.title}}</a>
+			    	</li>
+			  	</ul>
+				</span>
+			</div>
 		</nav>
 	</div>
 </div>
@@ -21,7 +31,7 @@
 	<div class="gradebook-coach" ng-show="pages.length == 0">
 		<span>Get started!</span><br/><br/>
 		<p>
-			You'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href="" ng-click="newPage()">add your first page</a>.
+			You'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href="" ng-click="openPageModal()">add your first page</a>.
 		</p>
 	</div>
 	<div class="page-container" ng-show="pages.length > 0" ui-view></div>

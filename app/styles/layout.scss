@@ -5,11 +5,51 @@
 @import "colours";
 @import "uniform";
 
+.dark-uniform {
+	@include use-backgrounds(url('/images/sprite_dark.png'), 0, url('../images/bg-input.png'), url('../images/bg-input-focus.png'), 0);
+
+	input {
+		color: #FFE000;
+	}
+}
+
+
+// Modals
 $zindexModalBackdrop:     1040 !default;
 $zindexModal:             1050 !default;
 $black:                 #000 !default;
 $white:                 #fff !default;
 @import "modals";
+
+// Dropdowns
+$baseLineHeight:        20px !default;
+$grayLight:             #999 !default;
+$grayDark:              #333 !default;
+$linkColor:             #08c !default;
+$zindexDropdown:          1000 !default;
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
+
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $white !default;
+
+$dropdownLinkBackgroundActive:  $linkColor !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+$baseBorderRadius:      4px !default;
+@import "dropdowns";
+
+select {
+	height: 37px;
+	cursor: pointer;
+}
+
+select:disabled {
+	cursor: default;
+}
+
 
 body {
   background-color: $beige;
@@ -228,7 +268,7 @@ body > header {
 .new-page-modal {
 	top: 11px;
 	left: 313px;
-	width: 724px;
+	//width: 724px;
 	height: 252px;
 	position: relative;
 }
@@ -285,7 +325,7 @@ body > header {
 
 .pages-tab:not(:last-child) {
 	span {
-		border-right: 1px $chiaro-beige solid;
+		border-right: 2px $chiaro-beige solid;
 	}
 }
 
@@ -343,4 +383,14 @@ body > header {
 	margin-left: 5px;
 	height: 20px;
 	padding-top: 4px;
+}
+
+.dropdown-toggle {
+	background-image: url(/images/dropdown-red.png);
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
+	padding-left: 29px;
+	margin-left: 5px;
+	height: 20px;
+	padding-top: 1px;
 }
