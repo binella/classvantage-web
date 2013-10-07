@@ -320,6 +320,10 @@ body > header {
 		width: 137px;
 		text-align: center;
 		color: $dark-beige !important;
+		
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 }
 
