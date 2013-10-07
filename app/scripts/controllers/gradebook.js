@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('GradebookCtrl', function ($scope, $location, $modal, Rubric, Page, Gradebook, pages) {
+  .controller('GradebookCtrl', function ($scope, $location, $modal, Rubric, Page, Gradebook, Unit, pages) {
 	
 		// We are promised 'pages' here
 	
@@ -34,26 +34,19 @@ angular.module('classvantageApp')
 	      templateUrl: 'views/pageForm.html',
 				windowClass: 'new-page-modal',
 				containerElement: '.hero .container',
-	      controller: ['$scope', '$modalInstance', '$location', '$filter', 'Unit', 'Page', 'pages', function ($scope, $modalInstance, $location, $filter, Unit, Page, pages) {
+	      controller: ['$scope', '$modalInstance', '$location', '$filter', 'units', 'Page', 'pages', function ($scope, $modalInstance, $location, $filter, units, Page, pages) {
 					
 
 					$scope.page = {};
 					angular.copy(currentPage, $scope.page);
-					$scope.page =  $scope.page || {};
+					$scope.page = $scope.page || {};
 					//alert($scope.page.grade);
 					//if (!currentPage) {
 					//	$scope.page.
 					//};
 					
 					$scope.pages = pages;
-					$scope.units = Unit.query({}, function (units, responseHeader) {
-						if (!currentPage) {
-							$scope.page.grade = $filter('unique')(units, 'grade')[0].grade;
-							$scope.page.subject = $filter('filter')(units, function(u) { return u.grade === $scope.page.grade; })[0].strand.subject;
-						};
-						//$scope.page.grade = '1';//$filter('unique')(units ,'grade')[0];
-						//$scope.page.subject = $scope.page.subject || $filter('{grade: '+$scope.page.grade+'}')[0];
-					}, function (httpResponse) {/* Error */});
+					$scope.units = units;
 
 					$scope.buttonCaption = $scope.page.id ? 'Save changes' : 'Add page';
 					
@@ -86,7 +79,17 @@ angular.module('classvantageApp')
 	      resolve: {
 	        pages: function () {
 	          return $scope.pages;
-	        }
+	        },
+					units: function () {
+						return Unit.query({}, function (units, responseHeader) {
+							if (!currentPage) {
+								$scope.page.grade = $filter('unique')(units, 'grade')[0].grade;
+								$scope.page.subject = $filter('filter')(units, function(u) { return u.grade === $scope.page.grade; })[0].strand.subject;
+							};
+							//$scope.page.grade = '1';//$filter('unique')(units ,'grade')[0];
+							//$scope.page.subject = $scope.page.subject || $filter('{grade: '+$scope.page.grade+'}')[0];
+						}, function (httpResponse) {/* Error */}).$promise;
+					}
 	      }
 	    });
 

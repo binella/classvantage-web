@@ -5,17 +5,21 @@ angular.module('classvantageApp')
 		// We are promised 'pages'
 	
 		$scope.page = $filter('getById')(pages, $stateParams.page_id);
+		//$scope.page = {};
 		var pageIndex = pages.indexOf($scope.page);
 		if (pageIndex > 5) {
-			swapArrayElements(pages, 0, pageIndex);
+			swapArrayElements(pages, 5, pageIndex);
 		};
+		
+		//$scope.page.get();
+		
 		
 		Page.get({id: $stateParams.page_id}, function (page, responseHeaders){
 			angular.extend($scope.page, page);
 		}, function (httpResponse){
 			// Error getting page
 		});
-		 
+		
   });
 
 function swapArrayElements(array_object, index_a, index_b) {
