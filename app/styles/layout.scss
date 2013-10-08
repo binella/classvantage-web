@@ -3,6 +3,7 @@
 @import "compass/utilities/general/clearfix";
 @import "fonts";
 @import "colours";
+@import "grid";
 @import "uniform";
 
 .dark-uniform {
@@ -33,8 +34,8 @@ $dropdownDividerTop:            #e5e5e5 !default;
 $dropdownDividerBottom:         $white !default;
 
 $dropdownLinkColor:             $grayDark !default;
-$dropdownLinkColorHover:        $white !default;
-$dropdownLinkColorActive:       $white !default;
+$dropdownLinkColorHover:        $slate !default;
+$dropdownLinkColorActive:       $slate !default;
 
 $dropdownLinkBackgroundActive:  $linkColor !default;
 $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
@@ -213,9 +214,7 @@ body > header {
 	margin-top: 13px;
 }
 
-.plus-white {
-	background-image: url(/images/plus-white.png);
-	background-repeat: no-repeat;
+.plus {
 	padding-bottom: 5px;
 	padding-left: 42px;
 	margin-left: -12px;
@@ -223,6 +222,17 @@ body > header {
 	cursor: pointer;
 	height: 25px;
 	margin-top: 24px;
+	background-repeat: no-repeat;
+}
+
+.plus.white {
+	color: white;
+	background-image: url(/images/plus-white.png);
+}
+
+.plus.green {
+	color: $green;
+	background-image: url(/images/plus-white.png);
 }
 
 .wide-select {

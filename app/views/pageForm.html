@@ -19,7 +19,7 @@
 			<li>Subject:<br/>
 				<span class="dark-uniform">
 				<select ng-model="page.subject" ng-disabled="page.grade == null" class="wider-select"
-								ng-options="u.strand.subject as u.strand.subject.title for u in units | filter:{grade: page.grade} | unique:'u.strand.subject.id' track by u.id"
+								ng-options="u.strand.subject as u.strand.subject.title for u in units | filter:{grade: page.grade} | unique:'subject_id' track by $subjectId(u)"
 								cv-styled-select>
 					
 				</select>
