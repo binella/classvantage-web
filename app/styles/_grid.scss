@@ -47,8 +47,12 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background-color: inherit;
+  background-color: white;
 	//margin-top: -35px;
+}
+
+.ngHeaderCell:first-child {
+	background-color: inherit;
 }
 
 .ngHeaderCell:first-child, .ngCell:first-child {
