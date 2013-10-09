@@ -32,13 +32,13 @@
 						<span>Subject:</span><br/>
 						<select ng-model="rubric.unit.strand.subject.id" class="wide-select" ng-disabled="rubric.unit.grade == null" ng-change="rubric.unit_id = null;updateModel();"
 										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.unit.grade} | unique:'subject_id'" cv-styled-select>
-							<option value="" disabled="disabled">Select a subject</option>
+							<option value="" disabled="disabled" >Select a subject</option>
 						</select>
 					</li>
 					<li>
 						<span>Unit:</span><br/>
 						<select ng-model="rubric.unit_id" class="wide-select" ng-disabled="rubric.unit.strand.subject.id == null"
-										ng-options="u.id as u.title for u in units | filter:{grade: rubric.unit.grade, subject_id: rubric.unit.strand.subject.id} "
+										ng-options="u.id as u.title for u in units | filter:{grade: rubric.unit.grade, strand.subject.id: rubric.unit.strand.subject.id} "
 										ng-change="updateModel()" cv-styled-select>
 							<option value="" disabled="disabled">Select a unit</option>
 						</select>

@@ -232,7 +232,7 @@ body > header {
 
 .plus.green {
 	color: $green;
-	background-image: url(/images/plus-white.png);
+	background-image: url(/images/plus-green.png);
 }
 
 .wide-select {
@@ -275,12 +275,59 @@ body > header {
 	}
 }
 
+// All the specific stuff from _modal.scss should be moved here
+// Much like .new-student-modal
 .new-page-modal {
 	top: 11px;
 	left: 313px;
 	//width: 724px;
 	height: 252px;
 	position: relative;
+}
+
+.new-student-modal {
+	position: absolute;
+	top: 478px;
+	left: 312px;
+	width: 435px;
+	
+	#silver-input::-webkit-input-placeholder { /* WebKit browsers */
+	    color:    $silver;
+	}
+	#silver-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    color:    $silver;
+	}
+	#silver-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    color:    $silver;
+	}
+	#silver-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    color:    $silver;
+	}
+	
+	.modal-header {
+		background-color: transparent;
+		border-top: none;
+		height: 65px;
+		
+		input {
+			top: 17px;
+			width: 292px;
+			border-bottom: 1px solid $silver;
+		}
+		
+		.close-button {
+			margin-top: 15px;
+			margin-right: 17px;
+		}
+	}
+	
+	.modal-footer {
+		height: 70px;
+		
+		.btn {
+		margin-top: 8px;
+		}
+	}
 }
 
 .beige-ex {

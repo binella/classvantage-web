@@ -1,0 +1,14 @@
+<form ng-submit="submitForm()">
+<div class="modal-header">
+
+    <input type="text" id="silver-input" placeholder="Type a student's name" ng-model="student.full_name" required />
+		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
+
+</div>
+<div class="modal-footer">
+		<button class="btn btn-red" type="submit" 
+						ng-disabled="student.full_name == null || student.full_name == ''">
+						Add student
+		</button>
+</div>
+</form>

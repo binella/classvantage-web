@@ -21,7 +21,7 @@
 				<select ng-model="page.subject" ng-disabled="page.grade == null" class="wider-select"
 								ng-options="u.strand.subject as u.strand.subject.title for u in units | filter:{grade: page.grade} | unique:'subject_id' track by $subjectId(u)"
 								cv-styled-select>
-					
+					<option value="" disabled="disabled">Select a subject</option>
 				</select>
 				</span>
 			</li>

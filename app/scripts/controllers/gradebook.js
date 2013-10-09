@@ -28,12 +28,16 @@ angular.module('classvantageApp')
 					$scope.buttonCaption = $scope.page.id ? 'Save changes' : 'Add page';
 					
 					$scope.$subjectId = function(item) {
-						if (item.grade) { // Cheat!
-							// Type: Unit
-							return item.strand.subject.id;
+						if (item) {
+							if (item.grade) { // Cheat!
+								// Type: Unit
+								return item.strand.subject.id;
+							} else {
+								// Type: Subject
+								return item.id;
+							}
 						} else {
-							// Type: Subject
-							return item.id;
+							return null;
 						}
 					}
 					
