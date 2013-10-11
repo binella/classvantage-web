@@ -24,9 +24,11 @@ angular.module('classvantageApp')
 			if (page.rubrics.length > 0) {
 				$scope.addRubricCaption = '';
 				$scope.addRubricWidth = '113px';
+				$scope.addRubricMargin = '40px';
 			} else {
 				$scope.addRubricCaption = 'Add your first rubric';
 				$scope.addRubricWidth = '265px';
+				$scope.addRubricMargin = '34px';
 			}
 			
 			$scope.gridHeight = (95 + (page.students.length * 50)) + 'px';

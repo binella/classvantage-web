@@ -15,43 +15,46 @@
         this.settings = s;
         this.timer = 0;
         this.before = {
-            'v': 0,
+            //'v': 0,
             'h': 0
         };
-        this.touch = {};
+        //this.touch = {};
         this.pressed = 0;
+/*
         this.vslider = $('<div/>', {
             'class': 'scrollbar-handle'
         });
         this.vpath = $('<div/>', {
             'class': 'scrollbar-path-vertical'
         });
+*/
         this.hslider = $('<div/>', {
             'class': 'scrollbar-handle'
         });
         this.hpath = $('<div/>', {
             'class': 'scrollbar-path-horizontal'
         });
-        this.sliders = this.vslider.add(this.hslider);
+        this.sliders = this.hslider; //this.vslider.add(this.hslider);
         this.container.css({
             'overflow': 'hidden',
             'position': 'relative'
-        }).contents().filter(this.settings.contentFilter).wrapAll('<div class="scrollbar-content"></div>');
-        this.content = this.container.children('.scrollbar-content').css({
+        }).contents().filter(this.settings.contentFilter).wrapAll('<div class="jscrollbar-content"></div>');
+        this.content = this.container.children('.jscrollbar-content').css({
             'top': 0,
             'left': 0,
             'position': 'relative',
             'float': 'left'
         });
-        if (this.settings.scroll == 'horizontal') {
+        //if (this.settings.scroll == 'horizontal') {
             this.container.prepend(this.hpath.append(this.hslider))
-        }
-        else if (this.settings.scroll == 'vertical') {
-            this.container.prepend(this.vpath.append(this.vslider))
-        }
-        else {
-            this.container.prepend(this.vpath.append(this.vslider), this.hpath.append(this.hslider))
-        }
+        //}
+        //else if (this.settings.scroll == 'vertical') {
+        //    this.container.prepend(this.vpath.append(this.vslider))
+        //}
+        //else {
+        //    this.container.prepend(this.vpath.append(this.vslider), this.hpath.append(this.hslider))
+        //}
+/*
         this.vpath.add(this.hpath).css({
             'z-index': this.settings.zIndex,
             'display': 'none'
@@ -60,6 +63,7 @@
             'height': this.settings.sliderSize,
             'opacity': this.settings.sliderOpacity
         });
+*/
         this.hslider.css({
             'width': this.settings.sliderSize,
             'opacity': this.settings.sliderOpacity
@@ -75,25 +79,29 @@
         }
         this.init();
         this.pathSize();
+// JUST DO THIS ONE TIME for performace, might have to call it everytime sizes change
+setTimeout(this.fixFn(this.checkScroll), 10);
+/*
         this.bindEvent($(window), 'load', function () {
             setTimeout(this.fixFn(this.checkScroll), 10)
         });
         if (this.settings.lazyCheckScroll > 0) {
             setInterval(this.fixFn(this.checkScroll), this.settings.lazyCheckScroll)
         }
+*/
     }
     _ClassyScroll.prototype.checkScroll = function () {
-        this.vtrack = this.vpath.height() - this.vslider.height();
+        //this.vtrack = this.vpath.height() - this.vslider.height();
         this.htrack = this.hpath.width() - this.hslider.width();
-        this.vdiff = this.content.height() - this.container.height();
+        //this.vdiff = this.content.height() - this.container.height();
         this.hdiff = this.content.width() - this.container.width();
         if (!this.settings.autoHide) return;
-        if (this.vdiff > 0) {
-            this.vpath.fadeIn(this.settings.autoHideTime)
-        }
-        else {
-            this.vpath.fadeOut(this.settings.autoHideTime)
-        }
+        //if (this.vdiff > 0) {
+        //    this.vpath.fadeIn(this.settings.autoHideTime)
+        //}
+        //else {
+        //    this.vpath.fadeOut(this.settings.autoHideTime)
+        //}
         if (this.hdiff > 0) {
             this.hpath.fadeIn(this.settings.autoHideTime)
         }
@@ -103,10 +111,12 @@
     };
     _ClassyScroll.prototype.pathSize = function () {
         var a = parseInt(this.settings.pathPadding, 10);
+/*
         this.vpath.css({
             'top': a + 'px',
             'height': this.container.height() - 2 * a + 'px'
         });
+*/
         this.hpath.css({
             'left': a + 'px',
             'width': this.container.width() - 2 * a + 'px'
@@ -114,7 +124,8 @@
     };
     _ClassyScroll.prototype.scroll = function (v, h, e) {
         var a = 0;
-        var b = 0;
+        /*
+				var b = 0;
         if (v < 0) {
             v = 0
         }
@@ -122,13 +133,15 @@
             v = this.vtrack
         }
         this.vslider.css('top', v + 'px');
-        if (h < 0) {
+        */
+				if (h < 0) {
             h = 0
         }
         if (h > this.htrack) {
             h = this.htrack
         }
         this.hslider.css('left', h + 'px');
+				/*
         if (this.vdiff > 0) {
             b = v / this.vtrack;
             this.content.css('top', Math.round(-this.vdiff * b));
@@ -137,23 +150,28 @@
                 e.preventDefault()
             }
         }
+				*/
+				var scrollLeft;
         if (this.hdiff > 0) {
             a = h / this.htrack;
-            this.content.css('left', Math.round(-this.hdiff * a));
+						scrollLeft = Math.round(this.hdiff * a);
+            //this.content.css('left', -scrollLeft);
             if (e && (h && h != this.htrack)) {
                 e.stopPropagation();
                 e.preventDefault()
             }
         }
-        if (this.before.v != b || this.before.h != a) {
-            if (typeof this.settings.onscroll == 'function') {
-                this.settings.onscroll.call(this.container.get(0), b, a)
-            }
-            this.before.v = b;
+        if (/*this.before.v != b ||*/ this.before.h != a) {
+            //if (typeof this.settings.onscroll == 'function') {
+                this.settings.onscroll.call(this.container.get(0), null, null, scrollLeft);
+								//this.settings.onscroll(this.container.get(0),null,null,scrollLeft);
+            //}
+            //this.before.v = b;
             this.before.h = a
         }
     };
     _ClassyScroll.prototype.easeScroll = function (v, h) {
+	/*
         var n = 0;
         var a = Math.floor(this.settings.scrollTime / this.settings.scrollInterval);
         var b = this.vslider.position().top;
@@ -168,6 +186,7 @@
                 this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
             }
         }), this.settings.scrollInterval)
+*/
     };
     _ClassyScroll.prototype.fixFn = function (f, s) {
         var a = this;
@@ -181,33 +200,35 @@
     _ClassyScroll.prototype.init = function () {
         var f = $(window.document);
         this.bindEvent(this.sliders, 'mousedown', function (e) {
-            this.pressed = (e.target === this.vslider.get(0)) ? 1 : 2;
+            //this.pressed = (e.target === this.vslider.get(0)) ? 1 : 2;
             var a = e.pageX;
-            var b = e.pageY;
-            var c = this.vslider.position().top;
+            //var b = e.pageY;
+            //var c = this.vslider.position().top;
             var d = this.hslider.position().left;
             this.bindEvent(f, 'mousemove', function (e) {
-                if (this.pressed == 1) {
-                    this.scroll(c + (e.pageY - b), d)
-                } else {
-                    this.scroll(c, d + (e.pageX - a))
-                }
+                //if (this.pressed == 1) {
+                //    this.scroll(c + (e.pageY - b), d)
+                //} else {
+                    this.scroll(/*c*/null, d + (e.pageX - a))
+                //}
             });
             this.bindEvent(f, 'selectstart', function (e) {
                 e.preventDefault()
             })
         });
         this.bindEvent(f, 'mouseup', function (e) {
-            if (this.pressed == 1 && e.target !== this.vslider.get(0)) {
-                this.vslider.fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
-            }
-            else if (this.pressed == 2 && e.target !== this.hslider.get(0)) {
+            //if (this.pressed == 1 && e.target !== this.vslider.get(0)) {
+            //    this.vslider.fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
+            //}
+            //else 
+						if (/*this.pressed == 2 &&*/ e.target !== this.hslider.get(0)) {
                 this.hslider.fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
             }
             this.pressed = 0;
             f.unbind('mousemove');
             f.unbind('selectstart')
         });
+/*
         this.bindEvent(this.container, 'touchstart', function (e) {
             var a = e.originalEvent;
             var b = a.changedTouches[0];
@@ -231,8 +252,10 @@
             this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity);
             a.stopPropagation()
         });
-        var g = this.vpath.height(),
+*/
+        //var g = this.vpath.height(),
         htrack = this.hpath.width();
+/*
         this.bindEvent($(window), 'resize', function () {
             this.pathSize();
             this.checkScroll();
@@ -246,14 +269,15 @@
             g = this.vpath.height();
             htrack = this.hpath.width()
         });
+*/
         this.bindEvent(this.container, 'mousewheel', function (e, a, b, c) {
-            this.scroll(this.vslider.position().top - this.settings.wheelSpeed * c, this.hslider.position().left + this.settings.wheelSpeed * b, e);
+            this.scroll(/*this.vslider.position().top - this.settings.wheelSpeed * c*/ null, this.hslider.position().left + this.settings.wheelSpeed * b, e);
             this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, 1);
             window.clearTimeout(this.timer);
             this.timer = window.setTimeout(this.fixFn(function () {
                 this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
             }), this.settings.sliderOpacityDelay);
-            if (this.settings.blockGlobalScroll && (this.vdiff || this.hdiff)) {
+            if (this.settings.blockGlobalScroll && (/*this.vdiff ||*/ this.hdiff)) {
                 e.preventDefault();
                 e.stopPropagation()
             }
@@ -269,7 +293,8 @@
                 this.easeScroll(vkey, a)
             }
         });
-        this.bindEvent(this.container, 'uscrollbar', function (e, v, h, a) {
+/*
+        this.bindEvent(this.container, 'uscrollbars', function (e, v, h, a) {
             if (v === 'reset') {
                 this.container.find('.scrollbar-content, .scrollbar-handle').stop().css({
                     top: 0,
@@ -300,6 +325,7 @@
             }
             this.easeScroll(v, h)
         })
+*/
     };
     $.fn.ClassyScroll = function (s) {
         var a = {
