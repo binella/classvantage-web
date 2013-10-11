@@ -7,5 +7,39 @@
 		<li><a class="pencil" href="" ng-click="openPageModal(page)"></a></li>
 	</ul>
 </div>
-<div ng-grid="gridOptions">
+<div style="height:15px;"></div>
+<div class="student-list">
+	<div class="student header-row">
+		<div class="student header-cell">
+			<a class="plus green" ng-click="newStudent();">Add a student</a>
+		</div>
+	</div>
+	<div class="student row" ng-repeat="student in page.students">
+		<div class="student-cell">
+			<span>{{student.full_name}}</span>
+		</div>
+	</div>
+</div>
+<div class="scroll-container" style="overflow-x: scroll;">
+	<div class="scroll-content" ng-style="{width: (page.rubrics.length*117) + 'px'}">
+		<div class="rubric header-row">
+			<div class="rubric header-cell" ng-repeat="rubric in page.rubrics">
+				<div class="title-container">
+					<a ui-sref="rubric({id: rubric.id})">{{rubric.title}}</a>
+				</div>
+			</div>
+		</div>
+		<div class="grade row" ng-repeat="student in page.students">
+			<div class="grade-cell" ng-repeat="rubric in page.rubrics">
+				<a href="" title="click here to grade this rubric for this student"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pin-right" ng-class="{true:'with-divider', false:''}[page.rubrics.length > 0]" ng-style="{height: gridHeight}"> <!-- HEIGHT MUST BE SET ON THIS -->
+	<div class="rubric header-row">
+		<div class="rubric header-cell" ng-style="{width: addRubricWidth}">
+			<a class="plus green" style="margin-left:40px;position:relative;top:39px;" ng-click="newRubric()">{{addRubricCaption}}</a>
+		</div>
+	</div>
 </div>

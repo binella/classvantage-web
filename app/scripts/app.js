@@ -1,12 +1,12 @@
 'use strict';
 
-//var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-//var _baseURL = 'http://localhost\\:3000/v1/';
+var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+var _baseURL = 'http://localhost\\:3000/v1/';
 
-var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
-angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngGrid'])
+angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider) {
 		
