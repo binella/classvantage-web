@@ -4,7 +4,10 @@
   	<form>
 			
 			<!-- This stuff is temporary -->
-			<div style="margin-left:250px;height:77px;">&lt;BREADCRUMBS GO HERE&gt;</div>
+			<div class="breadcrumbs" ng-show="rubric.page">
+				<a ui-sref="gradebook.page({page_id: rubric.page.id})">{{rubric.page.title}}</a>
+				<span>{{rubric.title || 'New Rubric'}}</span>
+			</div>
 			<!-- End -->
 			
 			<div style="float:left;width:639px;">
@@ -38,7 +41,7 @@
 					<li>
 						<span>Unit:</span><br/>
 						<select ng-model="rubric.unit_id" class="wide-select" ng-disabled="rubric.unit.strand.subject.id == null"
-										ng-options="u.id as u.title for u in units | filter:{grade: rubric.unit.grade, strand.subject.id: rubric.unit.strand.subject.id} "
+										ng-options="u.id as u.title for u in units | filter: filterUnits"
 										ng-change="updateModel()" cv-styled-select>
 							<option value="" disabled="disabled">Select a unit</option>
 						</select>

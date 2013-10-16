@@ -1,54 +1,25 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('PageCtrl', function ($scope, $stateParams, $filter, $location, $templateCache, $modal, Page, Rubric, pages) {
-		// We are promised 'pages'
+  .controller('PageCtrl', function ($scope, $location, $modal, Page, Rubric, currentPage) {
 		
-		$scope.page = $filter('getById')(pages, $stateParams.page_id);
-		//$scope.page = {};
-		var pageIndex = pages.indexOf($scope.page);
-		if (pageIndex > 5) {
-			swapArrayElements(pages, 5, pageIndex);
-		};
+		// We are promissed currentPage here
+		
+		$scope.page = currentPage;
+		
+		//$scope.addRubricCaption = 'Add your first rubric';
+		//$scope.addRubricMargin = '34px';
+		//$scope.addRubricWidth = '265px';
+
+		//if (currentPage.rubrics && currentPage.rubrics.length > 0) {
+			//$scope.addRubricCaption = '';
+			//$scope.addRubricWidth = '113px';
+			//$scope.addRubricMargin = '40px';
+		//} 
+
+		$scope.gridHeight = (95 + (currentPage.students ? currentPage.students.length * 50 : 0)) + 'px';
 		
 		
-		/*
-		
-		$scope.rubricColDefs = [{ field: 'full_name', headerCellTemplate: '<a class="plus green" style="margin-left:-47px;position:relative;top:34px;" ng-click="newStudent();">Add a student</a>', width: 159, pinned: true},
-														{ field: 'rubric', headerCellTemplate: '<a class="plus green" style="margin-left:34px;position:relative;top:34px;" ng-click="newRubric()">Add your first rubric</a>', width: 265, pinned: true, pinRight: true}];
-		*/
-		// This can be done better no?
-		Page.get({id: $stateParams.page_id}, function (page, responseHeaders){
-			angular.extend($scope.page, page);
-			// Should this be done somehwere else?
-			if (page.rubrics.length > 0) {
-				$scope.addRubricCaption = '';
-				$scope.addRubricWidth = '113px';
-				$scope.addRubricMargin = '40px';
-			} else {
-				$scope.addRubricCaption = 'Add your first rubric';
-				$scope.addRubricWidth = '265px';
-				$scope.addRubricMargin = '34px';
-			}
-			
-			$scope.gridHeight = (95 + (page.students.length * 50)) + 'px';
-			
-		}, function (httpResponse){
-			// Error getting page
-		});
-		/*
-		// Grid
-		$scope.gridOptions = { 
-			data: 'page.students',
-			headerRowHeight: 90,
-			enableSorting: false,
-			enablePinning: true,
-			plugins: [new ngGridFlexibleHeightPlugin()],
-			columnDefs: 'rubricColDefs'
-			//[{ field: 'full_name', headerCellTemplate: '<a class="plus green" style="margin-left:-47px;position:relative;top:25px;" ng-click="newStudent();">Add a student</a>', width: 148},
-			//						 { field: 'rubric', headerCellTemplate: '<a class="plus green" style="margin-left:30px;position:relative;top:25px;" ng-click="newRubric()">Add your first rubric</a>' }]
-		};
-		*/
 		
 		// New Rubric
 		$scope.newRubric = function () {
@@ -74,9 +45,10 @@ angular.module('classvantageApp')
 				  };
 					
 					$scope.submitForm = function () {
-						Page.update({id: page.id}, {page: {students_attributes: [{full_name: $scope.student.full_name}]}}, function (newPage, responseHeaders) {
+						// TODO: just update the model and it should take care of the ajax call and what not
+						Page.update({id: currentPage.id}, {page: {students_attributes: [{full_name: $scope.student.full_name}]}}, function (newPage, responseHeaders) {
 							$scope.cancel();
-							angular.extend(page, newPage);
+							angular.extend(currentPage, newPage);
 						}, function () { alert('Error adding student'); });
 					}
 					
@@ -89,10 +61,21 @@ angular.module('classvantageApp')
 	    });
 		};
 		
+		
+		// Delete Student
+		$scope.deleteStudent = function (student) {
+			var confirmDelete = confirm('Are you sure you want to remove ' + student.full_name + ' and all his/her marks form the ' + $scope.page.title + ' page?');
+			if (confirmDelete) {
+				// TODO: This should all happen on the model side
+				var studentIndex = $scope.page.students.indexOf(student);
+				if (studentIndex > -1) {
+					$scope.page.students.splice(studentIndex, 1);
+				};
+				Page.update({id: $scope.page.id}, {page: {students_attributes: [{id: student.id, _destroy: true}]}}, function (page, responseHeaders) {
+					
+				}, function () { alert('Error deleting student'); });
+			};
+		};
+		
   });
 
-function swapArrayElements(array_object, index_a, index_b) {
-    var temp = array_object[index_a];
-    array_object[index_a] = array_object[index_b];
-    array_object[index_b] = temp;
-}

@@ -249,7 +249,7 @@
         this.bindEvent(this.container, 'mousewheel', function (e, a, b, c) {
             this.scroll(this.vslider.position().top - this.settings.wheelSpeed * c, this.hslider.position().left + this.settings.wheelSpeed * b, e);
             this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, 1);
-            window.clearTimeout(this.timer);
+						window.clearTimeout(this.timer);
             this.timer = window.setTimeout(this.fixFn(function () {
                 this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity)
             }), this.settings.sliderOpacityDelay);

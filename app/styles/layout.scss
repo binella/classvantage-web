@@ -1,10 +1,16 @@
+@mixin inner-shadow($a, $b, $c, $d, $e) {
+	-webkit-box-shadow: inset $a $b $c $d $e;
+  -moz-box-shadow: inset $a $b $c $d $e;
+  box-shadow: inset $a $b $c $d $e;
+}
+
 @import "compass/reset";
 @import "compass/typography/links/link-colors";
 @import "compass/utilities/general/clearfix";
 @import "fonts";
 @import "colours";
-//@import "grid";
-@import "grid_layout";
+@import "grid";
+@import "scrollbar";
 @import "uniform";
 
 .dark-uniform {
@@ -286,9 +292,13 @@ body > header {
 	position: relative;
 }
 
+.wider-modal {
+	width: 724px;
+}
+
 .new-student-modal {
 	position: absolute;
-	top: 478px;
+	top: 507px;
 	left: 312px;
 	width: 435px;
 	
@@ -448,11 +458,28 @@ body > header {
 }
 
 .dropdown-toggle {
-	background-image: url(/images/dropdown-red.png);
-	background-repeat: no-repeat;
-	padding-bottom: 10px;
-	padding-left: 29px;
-	margin-left: 5px;
-	height: 20px;
-	padding-top: 1px;
+	cursor: pointer;
+}
+
+.breadcrumbs {
+	font-size: 14px;
+	position: relative;
+	left: 228px;
+	height: 78px;
+	
+	a {
+		background-image: url(/images/chevron-white.png);
+		background-repeat: no-repeat;
+		background-position: right 20px top 3px;
+		padding-right: 45px;
+		padding-bottom: 10px;
+		border-bottom: 2px solid white;
+		color: white;
+	}
+	
+	span {
+		margin-left: -3px;
+		padding-bottom: 10px;
+		border-bottom:2px solid $dark-slate;
+	}
 }

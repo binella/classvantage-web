@@ -25,10 +25,12 @@
 				</select>
 				</span>
 			</li>
-			<li style="display:none;">Use students from:<br/>
-				<select ng-model="page.students_from_page" class="wider-select"
+			<li ng-show="pages.length > 0 && !page.id">Use students from:<br/>
+				<span class="dark-uniform">
+				<select ng-model="page.copy_students_from" class="wider-select"
 								ng-options="page.id as page.title for page in pages"
 								cv-styled-select></select>
+				</span>
 			</li>
     </ul>
 </div>

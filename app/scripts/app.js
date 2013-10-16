@@ -6,7 +6,13 @@ var _baseURL = 'http://localhost\\:3000/v1/';
 //var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
 //var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
-angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle'])
+function swapArrayElements(array_object, index_a, index_b) {
+    var temp = array_object[index_a];
+    array_object[index_a] = array_object[index_b];
+    array_object[index_b] = temp;
+}
+
+angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider) {
 		
@@ -39,14 +45,23 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				url: "/:page_id",
 				templateUrl: "views/page.html",
 				controller: 'PageCtrl',
-				// this might not even be needed
 				resolve: {
-					pages: ['$q', 'pages', function ($q, pages) {
-						return pages;
-						//var deferred = $q.defer();
-						//deferred.resolve('hello');
-						//return deferred.promise;
-						//return Page.query().$promise;
+					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
+						var currentPage = $filter('getById')(pages, $stateParams.page_id);
+						var pageIndex = pages.indexOf(currentPage);
+						if (pageIndex > 5) {
+							swapArrayElements(pages, 5, pageIndex);
+						};
+						
+						// This can be done better no?
+						Page.get({id: $stateParams.page_id}, function (page, responseHeaders){
+							angular.extend(currentPage, page);
+						}, function (httpResponse){
+							// Error getting page
+						});
+						
+						return currentPage;
+						
 					}]
 				}
 			})
@@ -55,6 +70,19 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				templateUrl: 'views/rubric.html',
 				controller: 'RubricCtrl',
 				resolve: {
+					currentRubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
+						// TODO: Should use model side fetch here!
+						var currentRubric = {};
+						
+						Rubric.get({id: $stateParams.id}, function (rubric, responseHeaders){
+							angular.extend(currentRubric, rubric);
+							currentRubric.unit = currentRubric.unit || {grade: currentRubric.page.grade, strand: {subject: {id: currentRubric.page.subject_id}}};
+						}, function (httpResponse){
+							// Error getting rubric
+						});
+						
+						return currentRubric;
+					}],
 					units: ['Unit', function (Unit) {
 						return Unit.query().$promise;
 					}]
@@ -146,6 +174,23 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 			}
 		}
 	}])
+	
+	.directive('scrollWith', function () {
+		return {
+			restrict: 'A',
+			link: function (scope, element, attrs) {
+				var elm = $(element), target = $(attrs.scrollWith);
+				target.scroll(function(){
+		        elm
+		            .scrollLeft(target.scrollLeft());
+		    });
+		    elm.scroll(function(){
+		        target
+		            .scrollLeft(elm.scrollLeft());
+		    });
+			}
+		}
+	})
 	
 	.run(['$rootScope', 'Me', '$state', '$stateParams',
 	  function( scope, Me, state, stateParams) {

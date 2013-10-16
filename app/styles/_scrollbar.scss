@@ -1,0 +1,60 @@
+$topMargin: 30px;
+
+.scroll-container {
+	max-width: 642px;
+	outline: none;
+/*	padding-top: 30px !important;*/
+	//margin-top: -$topMargin;
+}
+
+.scrollbar-container {
+	position: absolute;
+	margin-left: 168px;
+	margin-top: -17px;
+	background-color: $medium-beige;
+	width: 645px;
+	height: 17px;
+}
+
+.scrollbar {
+	overflow-x: auto; 
+	overflow-y:hidden;
+	width: 100%;
+	height: 17px;
+	margin-top: -2px;
+}
+
+div.scrollbar::-webkit-scrollbar {
+    height: 13px;
+}
+ 
+div.scrollbar::-webkit-scrollbar-track {
+    margin: 2px;
+}
+ 
+div.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: white;
+		background-image: url(/images/scroll-thumb.png);
+		background-repeat: no-repeat;
+		background-position: center;
+}
+
+.grid-container {
+	float: left;
+	position: relative;
+}
+
+.drop-shadow {
+  pointer-events: none;
+	position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+	@include inner-shadow(15px, 0px, 99px, -56px, black);
+}
+
+.scroll-fixed {
+	//margin-top: $topMargin;
+}
