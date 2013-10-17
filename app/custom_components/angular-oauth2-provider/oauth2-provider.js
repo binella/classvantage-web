@@ -39,6 +39,12 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 		// Set access_token if there is any
 		$http.defaults.headers.common['Authorization'] = 'Bearer ' + tokenHandler.get();
 
+		scope.$on('event:auth-signout', function (event) {
+			scope.$emit('event:auth-loginRequired')
+			tokenHandler.set(null);
+			delete $http.defaults.headers.common['Authorization'];
+		});
+
 		scope.$on( 'event:authenticate',
 		  function( event, username, password ) {
 		    var payload = {

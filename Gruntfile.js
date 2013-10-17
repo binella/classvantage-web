@@ -15,6 +15,7 @@ var mountFolder = function (connect, dir) {
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
+	require('grunt-angular-templates')(grunt);
 
   // configurable paths
   var yeomanConfig = {
@@ -27,6 +28,18 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
+		ngtemplates: {
+			app: {
+				cwd: '<%= yeoman.dist %>',
+				src: 'views/**.html',
+				dest: '<%= yeoman.app %>/scripts/templates.js',
+				options: {
+					module: 'classvantageApp',
+					concat: '<%= yeoman.dist %>/scripts/scripts.js',
+					htmlmin:  '<%= htmlmin.dist %>'
+				}
+			}
+		},
     yeoman: yeomanConfig,
     watch: {
       coffee: {
@@ -373,6 +386,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+		'ngtemplates',
     'concat',
     'copy:dist',
     'cdnify',

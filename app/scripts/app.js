@@ -1,10 +1,10 @@
 'use strict';
 
-var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-var _baseURL = 'http://localhost\\:3000/v1/';
+//var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+//var _baseURL = 'http://localhost\\:3000/v1/';
 
-//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
 function swapArrayElements(array_object, index_a, index_b) {
     var temp = array_object[index_a];
@@ -96,16 +96,21 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 	    link: function(scope, element, attrs) {
 
 	      scope.$on('event:auth-loginRequired', function( event ) {
+					scope.username = '';
+					scope.password = '';
 	        scope.show = true;
+
 	      });
 
 	      scope.$on('event:auth-loginConfirmed', function( event ) {
 	        scope.show = false;
 	      });
+	
 
 	      var button = angular.element(element.find('button'));
 	      button.bind('click', function(){
 	        scope.$emit('event:authenticate', scope.username, scope.password)
+
 	      });
 	    }
 	  }
@@ -192,8 +197,23 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 		}
 	})
 	
-	.run(['$rootScope', 'Me', '$state', '$stateParams',
-	  function( scope, Me, state, stateParams) {
+	.run(['$rootScope', 'Me', '$state', '$stateParams', '$location',
+	  function( scope, Me, state, stateParams, $location) {
+	
+			scope.$on('event:auth-forbidden', function( event ) {
+        history.back();
+				alert('Access Denied');
+      })
+			
+			scope.logOut = function () {
+				scope.me = {};
+				scope.$emit('event:auth-signout');
+				$location.path('/');
+			};
+			
+			scope.$on('event:auth-loginConfirmed', function( event ) {
+        scope.me = Me.get();
+      });
 			
 			scope.$state = state;
 			scope.$stateParams = stateParams;

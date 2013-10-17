@@ -23,7 +23,7 @@ angular.module('classvantageApp')
 					if (!currentPage) {
 						$scope.page.grade = $filter('unique')(units, 'grade')[0].grade;
 						$scope.page.subject = $filter('filter')(units, function(u) { return u.grade === $scope.page.grade; })[0].strand.subject;
-						$scope.page.copy_students_from = $scope.pages.length > 0 ? $scope.pages[0].id : null;
+						//$scope.page.copy_students_from = $scope.pages.length > 0 ? $scope.pages[0].id : null;
 					}
 
 					$scope.buttonCaption = $scope.page.id ? 'Save changes' : 'Add page';

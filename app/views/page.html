@@ -21,11 +21,11 @@
 		</div>
 	</div>
 </div>
-<div class="scrollbar-container">
+<div class="scrollbar-container" ng-show="page.rubrics.length > 5">
 	<div class="scrollbar" id="grid-scrollbar"><div class="empty-content" style="height:17px;" ng-style="{'width': (page.rubrics.length*117)+'px'}"></div></div>
 </div>
 <div class="grid-container">
-	<div class="drop-shadow"></div>
+	<div class="drop-shadow" ng-show="page.rubrics.length > 5"></div>
 	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length > 0" scroll-with="#grid-scrollbar" >
 		<div class="scroll-content" ng-style="{width: (page.rubrics.length*117) + 'px'}">
 			<div class="rubric header-row">

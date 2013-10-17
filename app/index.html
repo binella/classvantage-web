@@ -27,7 +27,7 @@
 
     <!-- Add your site or application content here -->
 	  <header>
-	    <div class="container" ng-controller="MeCtrl">
+	    <div class="container">
 	      <a href="#/" class="logo"><img src="images/logo.png"></a>
 	      <nav>
 	        <a ui-sref="gradebook" class="gradebook"><span>Gradebook</span></a>
@@ -41,8 +41,12 @@
 						  <button type="submit" class="btn">Log in</button>
 						</form>
 
-						<a href="#" class="pull-right" ng-show="me.name" ng-hide="me.name == null"><span>Logged in as {{me.name}}</span></a>
-
+					<a class="pull-right dropdown-toggle" ng-show="me.name" ng-hide="me.name == null"><span>{{me.name}}</span></a>
+					<ul class="dropdown-menu" style="left:auto;right:50px;top:60px;">
+			    	<li>
+			      	<a href="" ng-click="logOut()">Log out</a>
+			    	</li>
+			  	</ul>
 
 	      </nav>
 	    </div>

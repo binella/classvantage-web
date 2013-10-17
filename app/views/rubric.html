@@ -3,18 +3,18 @@
 		<div>Breadcrumbs</div>
   	<form>
 			
-			<!-- This stuff is temporary -->
-			<div class="breadcrumbs" ng-show="rubric.page">
-				<a ui-sref="gradebook.page({page_id: rubric.page.id})">{{rubric.page.title}}</a>
-				<span>{{rubric.title || 'New Rubric'}}</span>
+			<div class="breadcrumbs">
+				<div ng-show="rubric.page">
+					<a ui-sref="gradebook.page({page_id: rubric.page.id})">{{rubric.page.title}}</a>
+					<span>{{rubric.title || 'New Rubric'}}</span>
+				</div>
 			</div>
-			<!-- End -->
 			
 			<div style="float:left;width:639px;">
 				<textarea ng-model="rubric.title" class="title-input-text" msd-elastic="" 
 									placeholder="Type a title" rows="2" cols="17" autocorrect="off" 
 									style="height:100px;" blurs-on-enter cv-input></textarea>
-				
+				<br />
 				<a class="plus white" ng-click="displayDesc = true"
 					 ng-show="(rubric.description == null || rubric.description == '') && displayDesc == false">Add a description</a>
 				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text"
