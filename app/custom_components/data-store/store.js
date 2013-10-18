@@ -14,7 +14,8 @@ angular.module('data.store', [])
 
       typeMap = {
         idToRecord: {},
-        records: []
+        records: [],
+				modelPrototype: null
       };
 
       typeMaps[type] = typeMap;
@@ -25,10 +26,11 @@ angular.module('data.store', [])
 		function recordFor(type, id) {
 			var id = coerceId(id),
           typeMap = typeMapFor(type),
-          record = typeMap.idToRecord[id];
+          record = typeMap.idToRecord[id],
+					modelPrototype = typeMap.modelPrototype;
           
       if (!record) { 
-        typeMap.idToRecord[id] = record = {}; 
+        typeMap.idToRecord[id] = record = new modelPrototype(); 
       }
       
       return record;
@@ -48,10 +50,12 @@ angular.module('data.store', [])
     function push(type, data) {
       var id = coerceId(data.id),
           typeMap = typeMapFor(type),
-          record = recordFor(type, id);
+          record = recordFor(type, id),
+					modelPrototype = typeMap.modelPrototype;
       
-      angular.copy(data, record);
-      
+      //angular.copy(data, record);
+      angular.extend(record, data);
+
       if (typeMap.records.indexOf(record) === -1) {
         typeMap.records.push(record);
       }
@@ -59,11 +63,11 @@ angular.module('data.store', [])
       return record;
     }
     
-    function pushMany(type, items, prototype) {
+    function pushMany(type, items) {
 			var records = [];
 			
       angular.forEach(items, function(item) {
-        records.push(push(type, new prototype(item)));
+        records.push(push(type, item));
       });
 
 			return records;
@@ -77,8 +81,12 @@ angular.module('data.store', [])
 					url				= config.url,
 					relations	= config.relations;
 			
+			// Register
+			var typeMap = typeMapFor(type);
+			typeMap.modelPrototype = Resource;
 			
-			var klass = {type: type, resource: Resource, typeMaps: typeMaps};
+			
+			var klass = {type: type, typeMaps: typeMaps};
 			
 			// Resource prototype
 			
@@ -123,7 +131,7 @@ angular.module('data.store', [])
         
         records.$promise =
           $http(params).then(function(response) {
-            return pushMany(type, response.data, Resource);
+            return pushMany(type, response.data);
           }, function(response) {
 	
             return $q.reject(response);
@@ -146,6 +154,7 @@ angular.module('data.store', [])
           $http(params).then(function(response) {
 						var value = response.data;
 						
+						/*
 						// Extract relations
 						for (var relation in relations) {
 							var reference = value[relation];
@@ -161,8 +170,9 @@ angular.module('data.store', [])
 								value[relation] = newReference;
 							}
 						}
+						*/
 						
-            return push(type, new Resource(value));
+            return push(type, value);
           }, function(response) {
             
 						return $q.reject(response);
