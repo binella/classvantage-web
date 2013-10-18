@@ -1,10 +1,10 @@
 'use strict';
 
-//var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-//var _baseURL = 'http://localhost\\:3000/v1/';
+var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+var _baseURL = 'http://localhost\:3000/v1/';
 
-var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
 function swapArrayElements(array_object, index_a, index_b) {
     var temp = array_object[index_a];
@@ -12,7 +12,7 @@ function swapArrayElements(array_object, index_a, index_b) {
     array_object[index_b] = temp;
 }
 
-angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate'])
+angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider) {
 		
@@ -37,8 +37,13 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'GradebookCtrl',
 				resolve: {
 					pages: ['Page', function (Page) {
+						return Page.fetchAll();
+					}]
+					/*
+					pages: ['Page', function (Page) {
 						return Page.query().$promise;
 					}]
+					*/
 				}
 			})
 			.state('gradebook.page', {
@@ -46,6 +51,10 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				templateUrl: "views/page.html",
 				controller: 'PageCtrl',
 				resolve: {
+					currentPage: ['Page', '$stateParams', function (Page, $stateParams) {
+						return Page.fetchOne($stateParams.page_id);
+					}]
+					/*
 					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
 						var currentPage = $filter('getById')(pages, $stateParams.page_id);
 						var pageIndex = pages.indexOf(currentPage);
@@ -63,6 +72,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 						return currentPage;
 						
 					}]
+					*/
 				}
 			})
 			.state('rubric', {

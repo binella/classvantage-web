@@ -1,0 +1,172 @@
+'use strict';
+
+angular.module('data.store', [])
+  .factory('Store', function($q, $http) {
+    
+		// Entity Store
+		
+		var typeMaps = {};
+		
+		function typeMapFor(type) {
+			var typeMap = typeMaps[type];
+
+      if (typeMap) { return typeMap; }
+
+      typeMap = {
+        idToRecord: {},
+        records: []
+      };
+
+      typeMaps[type] = typeMap;
+
+      return typeMap;
+		}
+		
+		function recordFor(type, id) {
+			var id = coerceId(id),
+          typeMap = typeMapFor(type),
+          record = typeMap.idToRecord[id];
+          
+      if (!record) { 
+        typeMap.idToRecord[id] = record = {}; 
+      }
+      
+      return record;
+		}
+		
+		// Helpers
+		
+    function coerceId(id) {
+      return id == null ? null : id + '';
+    }
+    
+    function pluralize(type) {
+      if (type.slice(-1) === 'y') { return type.slice(0, type.length - 1) + 'ies'; }
+      return type + 's';
+    }
+		
+    function push(type, data) {
+      var id = coerceId(data.id),
+          typeMap = typeMapFor(type),
+          record = recordFor(type, id);
+      
+      angular.copy(data, record);
+      
+      if (typeMap.records.indexOf(record) === -1) {
+        typeMap.records.push(record);
+      }
+      
+      return record;
+    }
+    
+    function pushMany(type, items, prototype) {
+			var records = [];
+			
+      angular.forEach(items, function(item) {
+        records.push(push(type, new prototype(item)));
+      });
+
+			return records;
+    }
+    
+		// Factory
+
+    return function(type, url) {
+			
+			var klass = {};
+			
+			// Resource prototype
+			
+			function Resource(value){
+        angular.copy(value || {}, this);
+      }
+
+			// Should probably include class methods for these prototype methods as well
+			// e.g Resource.destroy(:id); as oppose to resourceInstance.$destroy();
+
+			Resource.prototype.$save = function () {
+				var params = {
+					url: url + '/' + this.id,
+					data: {type: this},
+					method: 'PUT' // Can do a condition here to see if it should be a PUT or POST
+				}
+				
+				var promise = $http(params).then(function (response) {
+					// expect a response?
+					// can take a call back and fire it with an object
+				}, function (response) {
+					// can do the same here
+					// maybe roll back the model changes here if we can keep track
+				});
+			};
+			
+			Resource.prototype.$destroy = function () {
+				return klass.destroy(this.id); 
+			}
+
+      klass.fetchAll = function() {
+        var typeMap = typeMapFor(type),
+            records = typeMap.records,
+            plural = pluralize(type),
+            //deferred = $q.defer(),
+            params = {
+              url: url,
+              method: 'GET'
+            };
+        
+        records.$promise =
+          $http(params).then(function(response) {
+            return pushMany(type, response.data, Resource);
+          }, function(response) {
+	
+            return $q.reject(response);
+          });
+				
+        return records;
+      };
+   
+      klass.fetchOne = function(id) {
+        var id = coerceId(id),
+            record = recordFor(type, id),
+            plural = pluralize(type),
+            //deferred = $q.defer(),
+            params = {
+              url: url + '/' + id, //'http://localhost:3000/v1/' + plural + '/' + id,
+              method: 'GET'
+            };
+  
+        record.$promise = 
+          $http(params).then(function(response) {
+            return push(type, new Resource(response.data));
+          }, function(response) {
+            
+						return $q.reject(response);
+          });
+				
+        return record;
+      };
+
+			klass.destroy = function(id) {
+				var id = coerceId(id),
+						record = recordFor(type, id),
+						params = {
+							url: url + '/' + id,
+							method: 'DELETE'
+						}
+						
+				var promise =
+					$http(params).then(function(response) {
+						return true;
+					}, function(response) {
+						// put it back in on error/rollback?
+						return false;
+					});
+					
+				return promise;
+			}
+
+			return klass;
+			
+    };
+  
+  });

@@ -23,7 +23,6 @@ angular.module('classvantageApp')
 					if (!currentPage) {
 						$scope.page.grade = $filter('unique')(units, 'grade')[0].grade;
 						$scope.page.subject = $filter('filter')(units, function(u) { return u.grade === $scope.page.grade; })[0].strand.subject;
-						//$scope.page.copy_students_from = $scope.pages.length > 0 ? $scope.pages[0].id : null;
 					}
 
 					$scope.buttonCaption = $scope.page.id ? 'Save changes' : 'Add page';
@@ -49,13 +48,19 @@ angular.module('classvantageApp')
 					$scope.submitForm = function () {
 						// Can we handle this on the backend?
 						angular.extend($scope.page, {subject_id: $scope.page.subject.id })
+						
 						if ($scope.page.id) {
+							/*
 							Page.update({id: $scope.page.id}, {page: $scope.page}, function (response, responseHeaders) {
 								$scope.cancel();
 								angular.extend(currentPage, $scope.page);
 							}, function (httpResponse) {
 								// Error
 							});
+							*/
+
+							angular.extend(currentPage, $scope.page);
+							currentPage.$save();
 						} else {
 							Page.save({}, {page: $scope.page}, function (page, responseHeaders) {
 								$scope.cancel();

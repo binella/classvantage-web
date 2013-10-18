@@ -76,7 +76,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t<div class=\"scrollbar\" id=\"grid-scrollbar\"><div class=\"empty-content\" style=\"height:17px\" ng-style=\"{'width': (page.rubrics.length*117)+'px'}\"></div></div>\n" +
     "</div>\n" +
     "<div class=\"grid-container\">\n" +
-    "\t<div class=\"drop-shadow\"></div>\n" +
+    "\t<div class=\"drop-shadow\" ng-show=\"page.rubrics.length > 5\"></div>\n" +
     "\t<div class=\"scroll-container\" style=\"overflow-x: auto\" ng-show=\"page.rubrics.length > 0\" scroll-with=\"#grid-scrollbar\">\n" +
     "\t\t<div class=\"scroll-content\" ng-style=\"{width: (page.rubrics.length*117) + 'px'}\">\n" +
     "\t\t\t<div class=\"rubric header-row\">\n" +
@@ -133,7 +133,9 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t</li>\n" +
     "\t\t\t<li ng-show=\"pages.length > 0 && !page.id\">Use students from:<br>\n" +
     "\t\t\t\t<span class=\"dark-uniform\">\n" +
-    "\t\t\t\t<select ng-model=\"page.copy_students_from\" class=\"wider-select\" ng-options=\"page.id as page.title for page in pages\" cv-styled-select=\"\"></select>\n" +
+    "\t\t\t\t\t<select ng-model=\"page.copy_students_from\" class=\"wider-select\" ng-options=\"page.id as page.title for page in pages\" cv-styled-select=\"\">\n" +
+    "\t\t\t\t\t\t<option value=\"\">-- None --</option>\n" +
+    "\t\t\t\t\t</select>\n" +
     "\t\t\t\t</span>\n" +
     "\t\t\t</li>\n" +
     "    </ul>\n" +
@@ -162,7 +164,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\n" +
     "\t\t\t<div style=\"float:left;width:639px\">\n" +
     "\t\t\t\t<textarea ng-model=\"rubric.title\" class=\"title-input-text\" msd-elastic=\"\" placeholder=\"Type a title\" rows=\"2\" cols=\"17\" autocorrect=\"off\" style=\"height:100px\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
-    "\t\t\t\t\n" +
+    "\t\t\t\t<br>\n" +
     "\t\t\t\t<a class=\"plus white\" ng-click=\"displayDesc = true\" ng-show=\"(rubric.description == null || rubric.description == '') && displayDesc == false\">Add a description</a>\n" +
     "\t\t\t\t<textarea id=\"rubricDescription\" ng-model=\"rubric.description\" rows=\"3\" cols=\"62\" autocorrect=\"off\" class=\"desc-input-text\" ng-show=\"(rubric.description != null && rubric.description != '') || displayDesc == true\" focus-when=\"displayDesc == true\" ng-blur=\"displayDesc = false\" cv-input=\"\"></textarea>\n" +
     "\t\t\t</div>\n" +
