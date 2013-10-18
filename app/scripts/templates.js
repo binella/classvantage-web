@@ -16,7 +16,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t</a>\n" +
     "\t\t\t<a class=\"pages-tab dropdown-toggle\" style=\"position:relative\" ng-show=\"pages.length > 6\">\n" +
     "\t\t\t\t<span style=\"width:65px\">\n" +
-    "\t\t\t\t\t<img src=\"/images/dropdown-red.png\" style=\"vertical-align:middle\">\n" +
+    "\t\t\t\t\t<img src=\"/images/d90c8301.dropdown-red.png\" style=\"vertical-align:middle\">\n" +
     "\t\t\t\t</span>\n" +
     "\t\t\t</a>\n" +
     "\t\t\t<ul class=\"dropdown-menu\" style=\"left:auto;right:0\">\n" +
@@ -76,7 +76,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t<div class=\"scrollbar\" id=\"grid-scrollbar\"><div class=\"empty-content\" style=\"height:17px\" ng-style=\"{'width': (page.rubrics.length*117)+'px'}\"></div></div>\n" +
     "</div>\n" +
     "<div class=\"grid-container\">\n" +
-    "\t<div class=\"drop-shadow\"></div>\n" +
+    "\t<div class=\"drop-shadow\" ng-show=\"page.rubrics.length > 5\"></div>\n" +
     "\t<div class=\"scroll-container\" style=\"overflow-x: auto\" ng-show=\"page.rubrics.length > 0\" scroll-with=\"#grid-scrollbar\">\n" +
     "\t\t<div class=\"scroll-content\" ng-style=\"{width: (page.rubrics.length*117) + 'px'}\">\n" +
     "\t\t\t<div class=\"rubric header-row\">\n" +
@@ -111,7 +111,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "<div class=\"modal-header\">\n" +
     "\n" +
     "    <input type=\"text\" id=\"beige-input\" placeholder=\"Type a title (eg. French P2)\" ng-model=\"page.title\" required=\"\">\n" +
-    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/beige-ex.png\"></a>\n" +
+    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/909711eb.beige-ex.png\"></a>\n" +
     "\n" +
     "</div>\n" +
     "<div class=\"modal-body\">\n" +
@@ -133,7 +133,9 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t</li>\n" +
     "\t\t\t<li ng-show=\"pages.length > 0 && !page.id\">Use students from:<br>\n" +
     "\t\t\t\t<span class=\"dark-uniform\">\n" +
-    "\t\t\t\t<select ng-model=\"page.copy_students_from\" class=\"wider-select\" ng-options=\"page.id as page.title for page in pages\" cv-styled-select=\"\"></select>\n" +
+    "\t\t\t\t\t<select ng-model=\"page.copy_students_from\" class=\"wider-select\" ng-options=\"page.id as page.title for page in pages\" cv-styled-select=\"\">\n" +
+    "\t\t\t\t\t\t<option value=\"\">Choose a page (optional)</option>\n" +
+    "\t\t\t\t\t</select>\n" +
     "\t\t\t\t</span>\n" +
     "\t\t\t</li>\n" +
     "    </ul>\n" +
@@ -162,7 +164,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\n" +
     "\t\t\t<div style=\"float:left;width:639px\">\n" +
     "\t\t\t\t<textarea ng-model=\"rubric.title\" class=\"title-input-text\" msd-elastic=\"\" placeholder=\"Type a title\" rows=\"2\" cols=\"17\" autocorrect=\"off\" style=\"height:100px\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
-    "\t\t\t\t\n" +
+    "\t\t\t\t<br>\n" +
     "\t\t\t\t<a class=\"plus white\" ng-click=\"displayDesc = true\" ng-show=\"(rubric.description == null || rubric.description == '') && displayDesc == false\">Add a description</a>\n" +
     "\t\t\t\t<textarea id=\"rubricDescription\" ng-model=\"rubric.description\" rows=\"3\" cols=\"62\" autocorrect=\"off\" class=\"desc-input-text\" ng-show=\"(rubric.description != null && rubric.description != '') || displayDesc == true\" focus-when=\"displayDesc == true\" ng-blur=\"displayDesc = false\" cv-input=\"\"></textarea>\n" +
     "\t\t\t</div>\n" +
@@ -201,7 +203,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "<div class=\"modal-header\">\n" +
     "\n" +
     "    <input type=\"text\" id=\"silver-input\" placeholder=\"Type a student's name\" ng-model=\"student.full_name\" required=\"\">\n" +
-    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/beige-ex.png\"></a>\n" +
+    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/909711eb.beige-ex.png\"></a>\n" +
     "\n" +
     "</div>\n" +
     "<div class=\"modal-footer\">\n" +

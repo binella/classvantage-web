@@ -3,8 +3,11 @@
 //var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
 //var _baseURL = 'http://localhost\\:3000/v1/';
 
-var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
+//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
+
+var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
+var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
 
 function swapArrayElements(array_object, index_a, index_b) {
     var temp = array_object[index_a];
