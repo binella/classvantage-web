@@ -71,9 +71,14 @@ angular.module('data.store', [])
     
 		// Factory
 
-    return function(type, url) {
+    return function(config) {
 			
-			var klass = {};
+			var type 			= config.type,
+					url				= config.url,
+					relations	= config.relations;
+			
+			
+			var klass = {type: type, resource: Resource, typeMaps: typeMaps};
 			
 			// Resource prototype
 			
@@ -87,9 +92,11 @@ angular.module('data.store', [])
 			Resource.prototype.$save = function () {
 				var params = {
 					url: url + '/' + this.id,
-					data: {type: this},
+					data: {},
 					method: 'PUT' // Can do a condition here to see if it should be a PUT or POST
 				}
+				
+				params.data[type] = this;
 				
 				var promise = $http(params).then(function (response) {
 					// expect a response?
@@ -137,7 +144,25 @@ angular.module('data.store', [])
   
         record.$promise = 
           $http(params).then(function(response) {
-            return push(type, new Resource(response.data));
+						var value = response.data;
+						
+						// Extract relations
+						for (var relation in relations) {
+							var reference = value[relation];
+							var newReference;
+							
+							if (reference) {
+								if (angular.isArray(reference)) {
+									newReference = pushMany(relations[relation].type, reference, relations[relation].resource);
+								} else {
+									newReference = push(relations[relation].type, new relations[relation].resource(reference));
+								}
+								
+								value[relation] = newReference;
+							}
+						}
+						
+            return push(type, new Resource(value));
           }, function(response) {
             
 						return $q.reject(response);

@@ -52,6 +52,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'PageCtrl',
 				resolve: {
 					currentPage: ['Page', '$stateParams', function (Page, $stateParams) {
+						console.log(Page);
 						return Page.fetchOne($stateParams.page_id);
 					}]
 					/*
