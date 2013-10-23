@@ -82,7 +82,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'RubricCtrl',
 				resolve: {
 					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
-						return Rubric.fetchOne($stateParams.id);
+						return Rubric.fetchOne($stateParams.id);;
 					}],
 					/*
 					currentRubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
