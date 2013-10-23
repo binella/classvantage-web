@@ -3,7 +3,7 @@
   	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
 		
 		<div style="position:absolute;">
-			<a class="plus white" style="line-height:75px;" ng-click="openPageModal()"></a>
+			<a class="plus white" style="line-height:75px;" ng-click="openPageModal(newPage)"></a>
 			<a style="line-height:75px;color:white;" href="" ng-click="openPageModal()" ng-show="pages.length == 0">Add your first page</a>
 		</div>
 		

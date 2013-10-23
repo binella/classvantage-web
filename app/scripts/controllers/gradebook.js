@@ -5,13 +5,17 @@ angular.module('classvantageApp')
 	
 		$scope.gradebook = Gradebook.currentGradebook || {};
 		$scope.pages = pages; // We are promised 'pages' here
+		
+		$scope.newPage = Page.new();
 
 		$scope.openPageModal = function (currentPage) {
+			var isNew = !currentPage.id;
 			var modalInstance = $modal.open({
 	      templateUrl: 'views/pageForm.html',
-				windowClass: 'new-page-modal' + ($scope.pages.length > 0 && !currentPage ? ' wider-modal' : ''),
+				windowClass: 'new-page-modal' + ($scope.pages.length > 0 && isNew ? ' wider-modal' : ''),
 				containerElement: '.hero .container',
 	      controller: ['$scope', '$modalInstance', '$location', 'units', 'Page', 'pages', function ($scope, $modalInstance, $location, units, Page, pages) {
+		
 		
 					$scope.page = {};
 					angular.copy(currentPage, $scope.page);
@@ -48,20 +52,32 @@ angular.module('classvantageApp')
 					$scope.submitForm = function () {
 						// Can we handle this on the backend?
 						angular.extend($scope.page, {subject_id: $scope.page.subject.id })
+	
+						angular.extend(currentPage, $scope.page);
+						if (isNew) {
+							currentPage.$save().then(function (page) {
+								$scope.cancel();
+								$location.path('/gradebook/' + page.id);
+							})
+						} else {
+							currentPage.$save().then(function (page) {}, function () { alert('Error creating page'); });
+							$scope.cancel();
+						}
 						
+						/*
 						if ($scope.page.id) {
-							/*
+							
 							Page.update({id: $scope.page.id}, {page: $scope.page}, function (response, responseHeaders) {
 								$scope.cancel();
 								angular.extend(currentPage, $scope.page);
 							}, function (httpResponse) {
 								// Error
 							});
-							*/
+							
 
-							angular.extend(currentPage, $scope.page);
-							currentPage.$save();
 						} else {
+
+							
 							Page.save({}, {page: $scope.page}, function (page, responseHeaders) {
 								$scope.cancel();
 								pages.unshift(page);
@@ -69,7 +85,9 @@ angular.module('classvantageApp')
 							}, function (httpRespnse) {
 								// Error
 							});
+							
 						};
+						*/
 					}
 					
 				}],

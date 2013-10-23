@@ -39,11 +39,6 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 					pages: ['Page', function (Page) {
 						return Page.fetchAll();
 					}]
-					/*
-					pages: ['Page', function (Page) {
-						return Page.query().$promise;
-					}]
-					*/
 				}
 			})
 			.state('gradebook.page', {
@@ -51,17 +46,18 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				templateUrl: "views/page.html",
 				controller: 'PageCtrl',
 				resolve: {
-					currentPage: ['Page', '$stateParams', function (Page, $stateParams) {
-						console.log(Page);
-						return Page.fetchOne($stateParams.page_id);
-					}]
-					/*
-					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
+					currentPage: ['$stateParams', '$filter', 'Page', 'pages', function ($stateParams, $filter, Page, pages) {
 						var currentPage = $filter('getById')(pages, $stateParams.page_id);
 						var pageIndex = pages.indexOf(currentPage);
 						if (pageIndex > 5) {
 							swapArrayElements(pages, 5, pageIndex);
 						};
+						
+						return Page.fetchOne($stateParams.page_id);
+					}]
+					/*
+					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
+						
 						
 						// This can be done better no?
 						Page.get({id: $stateParams.page_id}, function (page, responseHeaders){
@@ -81,6 +77,10 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				templateUrl: 'views/rubric.html',
 				controller: 'RubricCtrl',
 				resolve: {
+					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
+						return Rubric.fetchOne($stateParams.id);
+					}],
+					/*
 					currentRubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
 						// TODO: Should use model side fetch here!
 						var currentRubric = {};
@@ -94,6 +94,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 						
 						return currentRubric;
 					}],
+					*/
 					units: ['Unit', function (Unit) {
 						return Unit.query().$promise;
 					}]

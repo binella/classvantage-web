@@ -9,4 +9,8 @@ angular.module('classvantageApp')
 		});
 
 		return resource;
-  });
+  })
+// This is required to load the factory, otherwise angular wont load until its needed
+	.run(function(Student) {
+		
+	});

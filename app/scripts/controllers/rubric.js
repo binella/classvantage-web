@@ -1,18 +1,19 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $stateParams, Rubric, units, currentRubric) {
+  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric) {
 	
 		$scope.units = units;
 		
-		$scope.rubric = currentRubric;
+		$scope.rubric = rubric;
 		
 		
 		
 		// TODO: this needs to be DRYed out of here
 		$scope.updateModel = function() {
+			$scope.rubric.$save();
 			//console.log($scope.rubric);
-			Rubric.update({id: $scope.rubric.id}, {rubric: $scope.rubric}, function (){/* success */}, function (){/* error */});
+			//Rubric.update({id: $scope.rubric.id}, {rubric: $scope.rubric}, function (){/* success */}, function (){/* error */});
 		};
 		
 		$scope.displayDesc = false;
