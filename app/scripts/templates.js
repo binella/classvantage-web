@@ -16,7 +16,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t</a>\n" +
     "\t\t\t<a class=\"pages-tab dropdown-toggle\" style=\"position:relative\" ng-show=\"pages.length > 6\">\n" +
     "\t\t\t\t<span style=\"width:65px\">\n" +
-    "\t\t\t\t\t<img src=\"/images/dropdown-red.png\" style=\"vertical-align:middle\">\n" +
+    "\t\t\t\t\t<img src=\"/images/d90c8301.dropdown-red.png\" style=\"vertical-align:middle\">\n" +
     "\t\t\t\t</span>\n" +
     "\t\t\t</a>\n" +
     "\t\t\t<ul class=\"dropdown-menu\" style=\"left:auto;right:0\">\n" +
@@ -111,7 +111,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "<div class=\"modal-header\">\n" +
     "\n" +
     "    <input type=\"text\" id=\"beige-input\" placeholder=\"Type a title (eg. French P2)\" ng-model=\"page.title\" required=\"\">\n" +
-    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/beige-ex.png\"></a>\n" +
+    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/909711eb.beige-ex.png\"></a>\n" +
     "\n" +
     "</div>\n" +
     "<div class=\"modal-body\">\n" +
@@ -134,7 +134,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t<li ng-show=\"pages.length > 0 && !page.id\">Use students from:<br>\n" +
     "\t\t\t\t<span class=\"dark-uniform\">\n" +
     "\t\t\t\t\t<select ng-model=\"page.copy_students_from\" class=\"wider-select\" ng-options=\"page.id as page.title for page in pages\" cv-styled-select=\"\">\n" +
-    "\t\t\t\t\t\t<option value=\"\">-- None --</option>\n" +
+    "\t\t\t\t\t\t<option value=\"\">Choose a page (optional)</option>\n" +
     "\t\t\t\t\t</select>\n" +
     "\t\t\t\t</span>\n" +
     "\t\t\t</li>\n" +
@@ -203,7 +203,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "<div class=\"modal-header\">\n" +
     "\n" +
     "    <input type=\"text\" id=\"silver-input\" placeholder=\"Type a student's name\" ng-model=\"student.full_name\" required=\"\">\n" +
-    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/beige-ex.png\"></a>\n" +
+    "\t\t<a class=\"close-button\" ng-click=\"cancel()\"><img src=\"/images/909711eb.beige-ex.png\"></a>\n" +
     "\n" +
     "</div>\n" +
     "<div class=\"modal-footer\">\n" +
