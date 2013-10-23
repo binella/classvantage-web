@@ -6,7 +6,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "  \t<h1 style=\"padding-top:97px\">Gradebook&nbsp;&nbsp;<span><ng-pluralize count=\"pages.length\" when=\"{'1': '(1 Page)', 'other': '({} Pages)'}\"></ng-pluralize></span></h1>\n" +
     "\t\t\n" +
     "\t\t<div style=\"position:absolute\">\n" +
-    "\t\t\t<a class=\"plus white\" style=\"line-height:75px\" ng-click=\"openPageModal()\"></a>\n" +
+    "\t\t\t<a class=\"plus white\" style=\"line-height:75px\" ng-click=\"openPageModal(newPage)\"></a>\n" +
     "\t\t\t<a style=\"line-height:75px;color:white\" href=\"\" ng-click=\"openPageModal()\" ng-show=\"pages.length == 0\">Add your first page</a>\n" +
     "\t\t</div>\n" +
     "\t\t\n" +

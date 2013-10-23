@@ -8,7 +8,7 @@ angular.module('classvantageApp')
 		$scope.rubric = rubric;
 		
 		
-		
+		console.log(rubric);
 		// TODO: this needs to be DRYed out of here
 		$scope.updateModel = function() {
 			$scope.rubric.$save();

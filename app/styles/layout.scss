@@ -13,6 +13,8 @@
 @import "scrollbar";
 @import "uniform";
 
+@import "admin";
+
 .dark-uniform {
 	@include use-backgrounds(url('/images/sprite_dark.png'), 0, url('../images/bg-input.png'), url('../images/bg-input-focus.png'), 0);
 
@@ -418,6 +420,13 @@ body > header {
 		font-size: 30px;
 		float: left;
 		line-height: 45px;
+	}
+	
+	h3 {
+		font-family: $roboto-slab;
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 40px;
 	}
 	
 	ul.header {

@@ -103,6 +103,16 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 						return Unit.query().$promise;
 					}]
 				}
+			})
+			.state('admin', {
+				url: '/admin',
+				templateUrl: 'views/admin.html',
+				controller: 'AdminCtrl',
+				resolve: {
+					units: ['Unit', function (Unit) {
+						return Unit.query().$promise;
+					}]
+				}
 			});
   })
 

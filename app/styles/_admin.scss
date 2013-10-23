@@ -1,0 +1,66 @@
+div.overall {
+	border-top:3px solid $medium-beige;
+	padding-top:20px;
+	height:100px;
+}
+
+.editable-container {
+	float:left;
+}
+
+.editable-controls {
+	float:right;
+	width:60px;
+	
+	a {
+		display: block;
+		font-size:14px;
+		line-height:20px;
+		color:$green;
+		cursor:pointer;
+	}
+}
+
+div.exp {
+	float:left;
+	padding-right: 30px;
+}
+
+div.code {
+	width: 42px;
+}
+
+div.short {
+	width:230px;
+}
+
+div.long {
+	width:490px;
+}
+
+input.exp {
+	border:1px solid $green;
+	font-size:14px;
+	padding:5px;
+}
+
+textarea.exp {
+	border:1px solid $green;
+	font-size:14px;
+	padding:5px;
+}
+
+input.code {
+	width:41px;
+}
+
+input.short {
+	margin-left:-5px;
+	width:238px;
+}
+
+textarea.long {
+	width:490px;
+	height:60px;
+	margin-top:2px;
+}

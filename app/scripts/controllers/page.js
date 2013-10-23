@@ -58,6 +58,7 @@ angular.module('classvantageApp')
 						}, function () { alert('Error adding student'); });
 						*/
 						currentPage.students.$insert({full_name: $scope.student.full_name});
+						$scope.cancel();
 					}
 					
 				}],
