@@ -1,21 +1,21 @@
 <div class="page-container container">
 	<br/>
 	<h3>Grade:</h3>
-	<select ng-model="rubric.unit.grade" ng-change="rubric.unit.strand.subject.id = null;rubric.unit_id = null;updateModel();"
+	<select ng-model="selectedGrade" ng-change="selectedSubjectId = null;unit = null;"
 					ng-options="u.grade as u.grade for u in units | unique:'grade'" cv-styled-select></select>
 	<br/><br/>
 	
 	<h3>Subject:</h3>
-	<select ng-model="rubric.unit.strand.subject.id" class="wide-select" ng-disabled="rubric.unit.grade == null" ng-change="rubric.unit_id = null;updateModel();"
-					ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.unit.grade} | unique:'subject_id'" cv-styled-select>
+	<select ng-model="selectedSubjectId" class="wide-select" ng-disabled="selectedGrade == null" ng-change="unit = null;"
+					ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: selectedGrade} | unique:'subject_id'" cv-styled-select>
 		<option value="" disabled="disabled" >Select a subject</option>
 	</select>
 	<br/><br/>
 	
 	<h3>Unit:</h3>
-	<select ng-model="rubric.unit_id" class="wide-select" ng-disabled="rubric.unit.strand.subject.id == null"
-					ng-options="u.id as u.title for u in units | filter: filterUnits"
-					ng-change="updateModel()" cv-styled-select>
+	<select ng-model="unit" class="wide-select" ng-disabled="selectedSubjectId == null"
+					ng-options="u as u.title for u in units | filter: filterUnits"
+					ng-change="unit.$reload()" cv-styled-select>
 		<option value="" disabled="disabled">Select a unit</option>
 	</select>
 	<br/><br/>

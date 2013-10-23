@@ -100,7 +100,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 					}],
 					*/
 					units: ['Unit', function (Unit) {
-						return Unit.query().$promise;
+						return Unit.fetchAll().$promise;
 					}]
 				}
 			})
@@ -110,7 +110,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'AdminCtrl',
 				resolve: {
 					units: ['Unit', function (Unit) {
-						return Unit.query().$promise;
+						return Unit.fetchAll().$promise;
 					}]
 				}
 			});

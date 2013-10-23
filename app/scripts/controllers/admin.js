@@ -4,11 +4,15 @@ angular.module('classvantageApp')
   .controller('AdminCtrl', function ($scope, units) {
 	
 		$scope.units = units;
-		
+		$scope.unit = {};
 		$scope.objs = [{val: 'HELLO', val2: 'WORLD', val3: 'LOTS OF TEXT'}, {val: 'HELLO2', val2: 'WORLD2', val3: 'LOTS OF TEXT2'}];
 	
 		$scope.save = function (obj) { console.log(obj); };
-	
+		
+		// TODO: make a global fix for this + file an issue on github
+		$scope.filterUnits = function (unit) {
+			return unit.grade == $scope.selectedGrade && unit.strand.subject.id == $scope.selectedSubjectId;
+		};
   })
 /*
  *	These directives are for use only on the admin page (for now at least)
