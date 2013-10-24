@@ -6,7 +6,9 @@ angular.module('classvantageApp')
 		$scope.gradebook = Gradebook.currentGradebook || {};
 		$scope.pages = pages; // We are promised 'pages' here
 		
-		$scope.newPage = Page.new();
+		$scope.newPage = function () {
+			$scope.openPageModal(Page.new());
+		}
 
 		$scope.openPageModal = function (currentPage) {
 			var isNew = !currentPage.id;
@@ -96,7 +98,7 @@ angular.module('classvantageApp')
 	          return $scope.pages;
 	        },
 					units: function () {
-						return Unit.query().$promise;
+						return Unit.fetchAll();
 					}
 	      }
 	    });
