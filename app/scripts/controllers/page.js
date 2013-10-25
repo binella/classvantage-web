@@ -57,7 +57,10 @@ angular.module('classvantageApp')
 							angular.extend(currentPage, newPage);
 						}, function () { alert('Error adding student'); });
 						*/
-						currentPage.students.$insert({full_name: $scope.student.full_name});
+						var student = Student.new({full_name: $scope.student.full_name});
+						currentPage.students.$insert(student);
+						student.$save();
+						
 						$scope.cancel();
 					}
 					

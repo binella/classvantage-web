@@ -5,7 +5,15 @@ angular.module('classvantageApp')
 		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
 		var resource = Store({
 			type: 'student',
-			url: _baseURL + 'students'
+			url: _baseURL + 'students',
+			relations: [
+				{
+					name: 'pages',
+					type: 'page',
+					inverse: 'students',
+					isArray: true
+				}
+			]
 		});
 
 		return resource;

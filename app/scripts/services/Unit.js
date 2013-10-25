@@ -9,6 +9,7 @@ angular.module('classvantageApp')
 				{
 					name: 'overall_expectations',
 					type: 'overall_expectation',
+					inverse: 'unit',
 					isArray: true
 				}
 			]

@@ -10,12 +10,14 @@ angular.module('classvantageApp')
 			relations: [
 				{
 					name: 'students',
-					type: 'student', 
+					type: 'student',
+					inverse: 'pages',
 					isArray: true
 				},
 				{
 					name: 'rubrics',
 					type: 'rubric',
+					inverse: 'page',
 					isArray: true
 				}
 			]

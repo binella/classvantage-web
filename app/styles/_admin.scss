@@ -1,7 +1,10 @@
 div.overall {
 	border-top:3px solid $medium-beige;
 	padding-top:20px;
-	height:100px;
+}
+
+div.specific {
+	padding-top:15px;
 }
 
 .editable-container {
@@ -19,11 +22,18 @@ div.overall {
 		color:$green;
 		cursor:pointer;
 	}
+	
+	a.disabled {
+		cursor:default;
+		color:$light-green;
+	}
+	
 }
 
 div.exp {
 	float:left;
 	padding-right: 30px;
+	min-height: 20px;
 }
 
 div.code {
@@ -56,6 +66,10 @@ input.code {
 
 input.short {
 	margin-left:-5px;
+	width:238px;
+}
+
+textarea.short {
 	width:238px;
 }
 

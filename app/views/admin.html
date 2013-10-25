@@ -1,39 +1,28 @@
 <div class="page-container container">
 	<br/>
 	<h3>Grade:</h3>
-	<select ng-model="selectedGrade" ng-change="selectedSubjectId = null;unit = null;"
+	<select ng-model="selectedUnit.grade" ng-change="selectedUnit.subject_id = null;"
 					ng-options="u.grade as u.grade for u in units | unique:'grade'" cv-styled-select></select>
 	<br/><br/>
 	
 	<h3>Subject:</h3>
-	<select ng-model="selectedSubjectId" class="wide-select" ng-disabled="selectedGrade == null" ng-change="unit = null;"
-					ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: selectedGrade} | unique:'subject_id'" cv-styled-select>
+	<select ng-model="selectedUnit.subject_id" class="wide-select" ng-disabled="selectedUnit.grade == null"
+					ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: selectedUnit.grade} | unique:'subject_id'" cv-styled-select>
 		<option value="" disabled="disabled" >Select a subject</option>
 	</select>
 	<br/><br/>
 	
 	<h3>Unit:</h3>
-	<select ng-model="unit" class="wide-select" ng-disabled="selectedSubjectId == null"
+	<select ng-model="selectedUnit" class="wide-select" ng-disabled="selectedUnit.subject_id == null"
 					ng-options="u as u.title for u in units | filter: filterUnits"
-					ng-change="unit.$reload()" cv-styled-select>
+					ng-change="goToUnit(selectedUnit);" cv-styled-select>
 		<option value="" disabled="disabled">Select a unit</option>
 	</select>
 	<br/><br/>
 	
 	<br/><br/>
 	
-	<div style="height:60px;">
-		<h3 style="float:left;">Overall Expectations: 2</h3>
-		<a ng-click="" href="" class="" style="float:right;">Add overall expectation</a>
-		<div style="clear:both;"></div>
-	</div>
-	
-	<div class="overall" ng-repeat="obj in objs">
-		<edit-in-place save="save(obj)" model="obj">
-			<editable-input field="val" class="exp code"></editable-input>
-			<editable-input field="val2" class="exp short"></editable-input>
-			<editable-textarea field="val3" class="exp long"></eitable-textarea>
-		</edit-in-place>
-	</div>
+	<div ui-view>
 
+	</div>
 </div>
