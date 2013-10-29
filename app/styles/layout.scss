@@ -12,6 +12,7 @@
 @import "grid";
 @import "scrollbar";
 @import "uniform";
+@import "rubric";
 
 @import "admin";
 
@@ -420,6 +421,7 @@ body > header {
 		font-size: 30px;
 		float: left;
 		line-height: 45px;
+		color: $dark-slate;
 	}
 	
 	h3 {

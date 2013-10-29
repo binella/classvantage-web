@@ -1,17 +1,16 @@
 <div style="height:60px;">
 	<h3 style="float:left;">Overall Expectations: {{unit.overall_expectations.length}}</h3>
-	<a ng-click="newOverall()" class="plus green" style="margin-left:430px;line-height:40px;">Add overall expectation</a>
 	<div style="clear:both;"></div>
 </div>
 
-<div class="overall" ng-repeat="overall in unit.overall_expectations | orderBy:'created_at':true">
+<div class="overall" ng-repeat="overall in unit.overall_expectations | orderBy:'created_at'">
 	<edit-in-place model="overall" save="save(overall)" cancel="cancel(overall)" remove="remove(overall)" required-field="long_form">
 		<editable-input field="code" class="exp code" placeholder="Code"></editable-input>
 		<editable-input field="short_form" class="exp short" placeholder="Short Form"></editable-input>
 		<editable-textarea field="long_form" class="exp long" placeholder="Long Form"></eitable-textarea>
 	</edit-in-place>
 	<br/>
-	<div class="specific" ng-repeat="specific in overall.specific_expectations | orderBy:'created_at':true">
+	<div class="specific" ng-repeat="specific in overall.specific_expectations | orderBy:'created_at'">
 		<edit-in-place model="specific" save="saveSpecific(specific)" cancel="cancelSpecific(overall, specific)" remove="removeSpecific(overall, specific)" required-field="description">
 			<editable-input field="code" class="exp code" placeholder="Code"></editable-input>
 			<editable-textarea field="description" class="exp short" placeholder="Expectation"></editable-textarea>
@@ -20,4 +19,8 @@
 		</edit-in-place>
 	</div>
 	<a ng-click="newSpecific(overall)" class="plus green" style="margin-left:70px;line-height:90px;">Add a specific expectation</a>
+</div>
+
+<div class="overall">
+	<a ng-click="newOverall()" id="bottom" class="plus green" style="float:right;padding-top:3px;margin-bottom:20px;">Add overall expectation</a>
 </div>

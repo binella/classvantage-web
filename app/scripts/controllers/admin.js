@@ -3,16 +3,21 @@
 angular.module('classvantageApp')
   .controller('AdminCtrl', function ($scope, $location, units) {
 	
-		$scope.selectedUnit = {grade: null, subject_id: null};
+		$scope.selection = {unit: {grade: null, subject_id: null}, unit_id: null};
 	
 		$scope.units = units;
 		
 		// TODO: make a global fix for this + file an issue on github
 		$scope.filterUnits = function (unit) {
-			return unit.grade == $scope.selectedUnit.grade && unit.strand.subject.id == $scope.selectedUnit.subject_id;
+			return unit.grade == $scope.selection.unit.grade && unit.strand.subject.id == $scope.selection.unit.subject_id;
 		};
 		
-		$scope.goToUnit = function (unit) {
-			$location.path('/admin/' + unit.id);
+		$scope.goToUnit = function () {
+			$location.path('/admin/' + $scope.selection.unit_id);
 		}
+		
+		$scope.revert = function () {
+			$location.path('/admin');
+		}
+		
   });

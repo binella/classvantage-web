@@ -4,11 +4,14 @@ angular.module('classvantageApp')
   .controller('AdminUnitCtrl', function ($scope, unit, OverallExpectation, SpecificExpectation) {
 	
 		$scope.unit = unit;
-		$scope.$parent.selectedUnit = unit;
+		//if (!$scope.$parent.selection.unit.grade) {
+			$scope.$parent.selection = {unit: {subject_id:unit.subject_id ,grade: unit.grade}, unit_id: unit.id};
+		//}
 	
 		$scope.newOverall = function () {
 			var overall = OverallExpectation.new({ created_at: (new Date()).toISOString() });
 			$scope.unit.overall_expectations.$insert(overall);
+			setTimeout(function () {window.scrollTo(0, document.body.scrollHeight);}, 5);
 		}
 	
 		$scope.save = function (obj) { obj.$save(); };

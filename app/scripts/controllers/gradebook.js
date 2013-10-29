@@ -7,7 +7,7 @@ angular.module('classvantageApp')
 		$scope.pages = pages; // We are promised 'pages' here
 		
 		$scope.newPage = function () {
-			$scope.openPageModal(Page.new());
+			$scope.openPageModal(Page.new({ created_at: (new Date()).toISOString() }));
 		}
 
 		$scope.openPageModal = function (currentPage) {
@@ -58,6 +58,8 @@ angular.module('classvantageApp')
 						angular.extend(currentPage, $scope.page);
 						if (isNew) {
 							currentPage.$save().then(function (page) {
+								// this should be done in the store,..needs scope.apply
+								pages.unshift(page);
 								$scope.cancel();
 								$location.path('/gradebook/' + page.id);
 							})

@@ -10,7 +10,7 @@
 		<nav class="tab-container">
 			<a class="pages-tab" 
 				 ng-class="{selected: $stateParams.page_id == page.id}"
-				 ng-repeat="page in pages | limitTo: 6" 
+				 ng-repeat="page in pages | orderBy:'created_at':true | swapForId:5:$stateParams.page_id | limitTo: 6" 
 				 ui-sref="gradebook.page({ page_id: page.id })">
 				<span>{{page.title}}</span>
 			</a>
@@ -20,7 +20,7 @@
 				</span>
 			</a>
 			<ul class="dropdown-menu" style="left:auto;right:0;">
-	    	<li ng-repeat="page in pages | slice:6:pages.length">
+	    	<li ng-repeat="page in pages | orderBy:'created_at':true | swapForId:5:$stateParams.page_id | slice:6:pages.length">
 	      	<a ui-sref="gradebook.page({ page_id: page.id })">{{page.title}}</a>
 	    	</li>
 	  	</ul>

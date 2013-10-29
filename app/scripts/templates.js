@@ -1,17 +1,75 @@
 angular.module('classvantageApp').run(['$templateCache', function($templateCache) {
 
+  $templateCache.put('views/admin.html',
+    "<div class=\"page-container container\">\n" +
+    "\t<br>\n" +
+    "\t<h3>Grade:</h3>\n" +
+    "\t<select ng-model=\"selection.unit.grade\" ng-change=\"selection.unit.subject_id = null;revert();\" ng-options=\"u.grade as u.grade for u in units | unique:'grade'\" cv-styled-select=\"\"></select>\n" +
+    "\t<br><br>\n" +
+    "\t\n" +
+    "\t<h3>Subject:</h3>\n" +
+    "\t<select ng-model=\"selection.unit.subject_id\" class=\"wide-select\" ng-disabled=\"selection.unit.grade == null\" ng-change=\"selection.unit_id = null;revert();\" ng-options=\"u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: selection.unit.grade} | unique:'subject_id'\" cv-styled-select=\"\">\n" +
+    "\t\t<option value=\"\" disabled=\"disabled\">Select a subject</option>\n" +
+    "\t</select>\n" +
+    "\t<br><br>\n" +
+    "\t\n" +
+    "\t<h3>Unit:</h3>\n" +
+    "\t<select ng-model=\"selection.unit_id\" class=\"wide-select\" ng-disabled=\"selection.unit.subject_id == null\" ng-options=\"u.id as u.title for u in units | filter: filterUnits\" ng-change=\"goToUnit();\" cv-styled-select=\"\">\n" +
+    "\t\t<option value=\"\" disabled=\"disabled\">Select a unit</option>\n" +
+    "\t</select>\n" +
+    "\t<br><br>\n" +
+    "\t\n" +
+    "\t<br><br>\n" +
+    "\t\n" +
+    "\t<div ui-view=\"\">\n" +
+    "\n" +
+    "\t</div>\n" +
+    "</div>"
+  );
+
+
+  $templateCache.put('views/adminUnit.html',
+    "<div style=\"height:60px\">\n" +
+    "\t<h3 style=\"float:left\">Overall Expectations: {{unit.overall_expectations.length}}</h3>\n" +
+    "\t<div style=\"clear:both\"></div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"overall\" ng-repeat=\"overall in unit.overall_expectations | orderBy:'created_at'\">\n" +
+    "\t<edit-in-place model=\"overall\" save=\"save(overall)\" cancel=\"cancel(overall)\" remove=\"remove(overall)\" required-field=\"long_form\">\n" +
+    "\t\t<editable-input field=\"code\" class=\"exp code\" placeholder=\"Code\"></editable-input>\n" +
+    "\t\t<editable-input field=\"short_form\" class=\"exp short\" placeholder=\"Short Form\"></editable-input>\n" +
+    "\t\t<editable-textarea field=\"long_form\" class=\"exp long\" placeholder=\"Long Form\">\n" +
+    "\t</editable-textarea></edit-in-place>\n" +
+    "\t<br>\n" +
+    "\t<div class=\"specific\" ng-repeat=\"specific in overall.specific_expectations | orderBy:'created_at'\">\n" +
+    "\t\t<edit-in-place model=\"specific\" save=\"saveSpecific(specific)\" cancel=\"cancelSpecific(overall, specific)\" remove=\"removeSpecific(overall, specific)\" required-field=\"description\">\n" +
+    "\t\t\t<editable-input field=\"code\" class=\"exp code\" placeholder=\"Code\"></editable-input>\n" +
+    "\t\t\t<editable-textarea field=\"description\" class=\"exp short\" placeholder=\"Expectation\"></editable-textarea>\n" +
+    "\t\t\t<editable-textarea field=\"example\" class=\"exp short\" placeholder=\"Example or helper copy\"></editable-textarea>\n" +
+    "\t\t\t<editable-textarea field=\"friendly_description\" class=\"exp short\" placeholder=\"Child Friendly description\"></editable-textarea>\n" +
+    "\t\t</edit-in-place>\n" +
+    "\t</div>\n" +
+    "\t<a ng-click=\"newSpecific(overall)\" class=\"plus green\" style=\"margin-left:70px;line-height:90px\">Add a specific expectation</a>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"overall\">\n" +
+    "\t<a ng-click=\"newOverall()\" id=\"bottom\" class=\"plus green\" style=\"float:right;padding-top:3px;margin-bottom:20px\">Add overall expectation</a>\n" +
+    "</div>"
+  );
+
+
   $templateCache.put('views/gradebook.html',
     "<div class=\"hero green\">\n" +
     "\t<div class=\"container\" style=\"height:275px\">\n" +
     "  \t<h1 style=\"padding-top:97px\">Gradebook&nbsp;&nbsp;<span><ng-pluralize count=\"pages.length\" when=\"{'1': '(1 Page)', 'other': '({} Pages)'}\"></ng-pluralize></span></h1>\n" +
     "\t\t\n" +
     "\t\t<div style=\"position:absolute\">\n" +
-    "\t\t\t<a class=\"plus white\" style=\"line-height:75px\" ng-click=\"openPageModal(newPage)\"></a>\n" +
-    "\t\t\t<a style=\"line-height:75px;color:white\" href=\"\" ng-click=\"openPageModal()\" ng-show=\"pages.length == 0\">Add your first page</a>\n" +
+    "\t\t\t<a class=\"plus white\" style=\"line-height:75px\" ng-click=\"newPage()\"></a>\n" +
+    "\t\t\t<a style=\"line-height:75px;color:white\" href=\"\" ng-click=\"newPage()\" ng-show=\"pages.length == 0\">Add your first page</a>\n" +
     "\t\t</div>\n" +
     "\t\t\n" +
     "\t\t<nav class=\"tab-container\">\n" +
-    "\t\t\t<a class=\"pages-tab\" ng-class=\"{selected: $stateParams.page_id == page.id}\" ng-repeat=\"page in pages | limitTo: 6\" ui-sref=\"gradebook.page({ page_id: page.id })\">\n" +
+    "\t\t\t<a class=\"pages-tab\" ng-class=\"{selected: $stateParams.page_id == page.id}\" ng-repeat=\"page in pages | orderBy:'created_at':true | swapForId:5:$stateParams.page_id | limitTo: 6\" ui-sref=\"gradebook.page({ page_id: page.id })\">\n" +
     "\t\t\t\t<span>{{page.title}}</span>\n" +
     "\t\t\t</a>\n" +
     "\t\t\t<a class=\"pages-tab dropdown-toggle\" style=\"position:relative\" ng-show=\"pages.length > 6\">\n" +
@@ -20,7 +78,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\t</span>\n" +
     "\t\t\t</a>\n" +
     "\t\t\t<ul class=\"dropdown-menu\" style=\"left:auto;right:0\">\n" +
-    "\t    \t<li ng-repeat=\"page in pages | slice:6:pages.length\">\n" +
+    "\t    \t<li ng-repeat=\"page in pages | orderBy:'created_at':true | swapForId:5:$stateParams.page_id | slice:6:pages.length\">\n" +
     "\t      \t<a ui-sref=\"gradebook.page({ page_id: page.id })\">{{page.title}}</a>\n" +
     "\t    \t</li>\n" +
     "\t  \t</ul>\n" +
@@ -31,7 +89,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t<div class=\"gradebook-coach\" ng-show=\"pages.length == 0\">\n" +
     "\t\t<span>Get started!</span><br><br>\n" +
     "\t\t<p>\n" +
-    "\t\t\tYou'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href=\"\" ng-click=\"openPageModal()\">add your first page</a>.\n" +
+    "\t\t\tYou'll organize the classes or subjects you teach by adding different pages in your Gradebook. So go ahead and <a href=\"\" ng-click=\"newPage()\">add your first page</a>.\n" +
     "\t\t</p>\n" +
     "\t</div>\n" +
     "\t<div class=\"page-container\" ng-show=\"pages.length > 0\" ui-view=\"\"></div>\n" +
@@ -65,7 +123,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t<a class=\"plus green\" ng-click=\"newStudent();\">Add a student</a>\n" +
     "\t\t</div>\n" +
     "\t</div>\n" +
-    "\t<div class=\"student row\" ng-repeat=\"student in page.students\">\n" +
+    "\t<div class=\"student row\" ng-repeat=\"student in page.students | orderBy:'last_name'\">\n" +
     "\t\t<div class=\"student-cell\">\n" +
     "\t\t\t<a href=\"\" class=\"close-button\" ng-click=\"deleteStudent(student)\"><img src=\"images/beige-ex.png\"></a>\n" +
     "\t\t\t<span>{{student.full_name}}</span>\n" +
@@ -194,6 +252,22 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\n" +
     "\t\t</form>\n" +
     "\t</div>\n" +
+    "</div>\n" +
+    "<div class=\"container page-container\" style=\"display:none\">\n" +
+    "\t<h2>Expectations</h2>\n" +
+    "\t<div style=\"clear:both\"></div>\n" +
+    "\t<section>\n" +
+    "\t\t<h4>OVERALL</h4>\n" +
+    "\t\t<ul class=\"overalls\">\n" +
+    "\t\t\t<li>\n" +
+    "\t\t\t\t<input type=\"checkbox\">\n" +
+    "\t\t\t\t<textarea ng-model=\"rubric.custom_expectation\" msd-elastic=\"\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t</li>\n" +
+    "\t\t</ul>\n" +
+    "\t</section>\n" +
+    "\t<section>\n" +
+    "\t\t<h4>SPECIFIC</h4>\n" +
+    "\t</section>\n" +
     "</div>"
   );
 

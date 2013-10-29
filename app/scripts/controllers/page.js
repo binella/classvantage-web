@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('PageCtrl', function ($scope, $location, $modal, Page, Rubric, currentPage) {
+  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, currentPage, pages) {
 		
 		// We are promissed currentPage here
 		$scope.page = currentPage;
@@ -89,6 +89,7 @@ angular.module('classvantageApp')
 				}, function () { alert('Error deleting student'); });
 				*/
 				$scope.page.students.$remove(student);
+				$scope.page.$save();
 			};
 		};
 		

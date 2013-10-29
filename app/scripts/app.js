@@ -1,20 +1,13 @@
 'use strict';
 
-var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-var _baseURL = 'http://localhost\:3000/v1/';
+//var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+//var _baseURL = 'http://localhost\:3000/v1/';
 
 //var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
 //var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
-//var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
-//var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
-
-
-function swapArrayElements(array_object, index_a, index_b) {
-    var temp = array_object[index_a];
-    array_object[index_a] = array_object[index_b];
-    array_object[index_b] = temp;
-}
+var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
+var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
 
 angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
 
@@ -41,7 +34,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'GradebookCtrl',
 				resolve: {
 					pages: ['Page', function (Page) {
-						return Page.fetchAll();
+						return Page.fetchAll().$promise;
 					}]
 				}
 			})
@@ -51,13 +44,8 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'PageCtrl',
 				resolve: {
 					currentPage: ['$stateParams', '$filter', 'Page', 'pages', function ($stateParams, $filter, Page, pages) {
-						var currentPage = $filter('getById')(pages, $stateParams.page_id);
-						var pageIndex = pages.indexOf(currentPage);
-						if (pageIndex > 5) {
-							swapArrayElements(pages, 5, pageIndex);
-						};
-						
-						return Page.fetchOne($stateParams.page_id);
+						var page = Page.fetchOne($stateParams.page_id);
+						return page;
 					}]
 					/*
 					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
@@ -82,7 +70,14 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				controller: 'RubricCtrl',
 				resolve: {
 					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
-						return Rubric.fetchOne($stateParams.id);;
+						var rubric = Rubric.fetchOne($stateParams.id);
+						rubric.$promise.then(function (rubric) {
+							if (!rubric.unit.grade)
+								rubric.unit = {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
+							return rubric;
+						});
+						rubric.unit = rubric.unit || {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
+						return rubric;
 					}],
 					/*
 					currentRubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
@@ -100,7 +95,7 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 					}],
 					*/
 					units: ['Unit', function (Unit) {
-						return Unit.fetchAll().$promise;
+						return Unit.fetchAll();
 					}]
 				}
 			})

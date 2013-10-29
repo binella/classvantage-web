@@ -14,7 +14,7 @@
 			<a class="plus green" ng-click="newStudent();">Add a student</a>
 		</div>
 	</div>
-	<div class="student row" ng-repeat="student in page.students">
+	<div class="student row" ng-repeat="student in page.students | orderBy:'last_name'">
 		<div class="student-cell">
 			<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
 			<span>{{student.full_name}}</span>
