@@ -37,7 +37,13 @@
 			</div>
 			<div class="grade row" ng-repeat="student in page.students">
 				<div class="grade-cell" ng-repeat="rubric in page.rubrics">
-					<a href="" title="click here to grade this rubric for this student"></a>
+					<a ng-repeat-start="assessment in student.assessments" ng-if="assessment.rubric_id === rubric.id" ui-sref="assessment({id: assessment.id})">
+						{{assessment.value}} CLICK
+					</a>
+					<a ng-repeat-end ng-if="assessment.rubric_id !== rubric.id" ng-click="">
+						NO
+					</a>
+					<a ng-if="student.assessments.length === 0" ng-click="">EMPTY</a>
 				</div>
 			</div>
 		</div>

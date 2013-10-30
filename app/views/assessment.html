@@ -1,0 +1,110 @@
+<div class="hero green" style="height:251px;">
+	<div class="container">
+		<br/>
+  	<form>
+			
+			<div class="breadcrumbs">
+				<div ng-show="assessment.rubric.page">
+					<a ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">{{assessment.rubric.page.title}}</a>
+					<span>{{assessment.rubric.title || 'New Rubric'}}</span>
+				</div>
+			</div>
+			
+			<div style="float:left;width:639px;">
+				<label class="title-input-text" style="margin-left:28px;">{{assessment.rubric.title}}</label>
+				<br />
+
+			</div>
+
+			
+		</form>
+	</div>
+</div>
+<!-- RUBRIC CONTENT -->
+<div class="container page-container" style="padding-left:54px;" >
+	<h2>{{assessment.student.first_name}}</h2>
+	<div style="clear:both;"></div>
+	<br/>
+	<section style="margin-top:28px;" class="specific">
+		<div class="header">
+				<h4>SPECIFIC:</h4>
+				<h4>LEVEL 1</h4>
+				<h4>LEVEL 2</h4>
+				<h4>LEVEL 3</h4>
+				<h4>LEVEL 4</h4>
+		</div>
+		<div style="clear:both;">
+		<div class="rubric-group">
+			<div class="rubric-row" ng-repeat="row in assessment.rubric.rows">
+				<div class="top-cover"></div>
+				<div class="rubric-column criteria">
+					<span>{{row.criteria}}</span>
+				</div>
+				<div class="rubric-column level">
+					<span class="mark four red">
+						<div class="marked" ng-repeat="mark in assessment.marks" ng-if="(mark.row_id === row.id) && (mark.value < 4)">
+							<span>{{mark.$value}}</span>
+						</div>
+						<div class="value frst" ng-click="mark(row, 0)"><span>R</span></div>
+						<div class="value scnd" ng-click="mark(row, 1)"><span>1-</span></div>
+						<div class="value thrd" ng-click="mark(row, 2)"><span>1</span></div>
+						<div class="value frth" ng-click="mark(row, 3)"><span>1+</span></div>
+						{{row.level1_description}}
+					</span>
+				</div>
+				<div class="rubric-column level">
+					<span class="mark yellow">
+						<div class="marked" ng-repeat="mark in assessment.marks" ng-if="(mark.row_id === row.id) && (mark.value < 7) && (mark.value > 3)">
+							<span>{{mark.$value}}</span>
+						</div>
+						<div class="value frst" ng-click="mark(row, 4)"><span>2-</span></div>
+						<div class="value scnd" ng-click="mark(row, 5)"><span>2</span></div>
+						<div class="value thrd" ng-click="mark(row, 6)"><span>2+</span></div>
+						{{row.level2_description}}
+					</span>
+				</div>
+				<div class="rubric-column level">
+					<span class="mark bright-green">
+						<div class="marked" ng-repeat="mark in assessment.marks" ng-if="(mark.row_id === row.id) && (mark.value < 10) && (mark.value > 6)">
+							<span>{{mark.$value}}</span>
+						</div>
+						<div class="value frst" ng-click="mark(row, 7)"><span>3-</span></div>
+						<div class="value scnd" ng-click="mark(row, 8)"><span>3</span></div>
+						<div class="value thrd" ng-click="mark(row, 9)"><span>3+</span></div>
+						{{row.level3_description}}
+					</span>
+				</div>
+				<div class="rubric-column level">
+					<span class="mark green">
+						<div class="marked" ng-repeat="mark in assessment.marks" ng-if="(mark.row_id === row.id) && (mark.value > 9)">
+							<span>{{mark.$value}}</span>
+						</div>
+						<div class="value frst" ng-click="mark(row, 10)"><span>4-</span></div>
+						<div class="value scnd" ng-click="mark(row, 11)"><span>4</span></div>
+						<div class="value thrd" ng-click="mark(row, 12)"><span>4+</span></div>
+						{{row.level4_description}}
+					</span>
+				</div>
+				<div class="bottom-divider"></div>
+				<div class="bottom-divider wide"></div>
+				<div class="bottom-cover"></div>
+			</div>
+		</div>
+		
+		
+		<br/><br/><br/><br/><br/>
+
+	</section>
+</div>
+
+<!-- FINAl GRADE -->
+<div class="final">
+	<span>CURRENT GRADE</span>
+	<div class="grade">
+		
+	</div>
+	<span class="auto-grade">
+		<input type="checkbox" checked></input>Autograde
+	</span>
+	<button class="btn">Finished, next!</button>
+</div>

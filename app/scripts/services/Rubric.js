@@ -10,6 +10,12 @@ angular.module('classvantageApp')
 				{
 					name: 'page',
 					type: 'page'
+				},
+				{
+					name: 'rows',
+					type: 'row',
+					inverse: 'rubric',
+					isArray: true
 				}
 			]
 		});

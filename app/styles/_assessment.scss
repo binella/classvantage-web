@@ -1,0 +1,155 @@
+.mark.red {
+	div {
+		background-color:$red;
+	}
+}
+
+.mark.yellow {
+	div {
+		background-color:$yellow;
+	}
+}
+
+.mark.bright-green {
+	div {
+		background-color:$bright-green;
+	}
+}
+
+.mark.green {
+	div {
+		background-color:$green;
+	}
+}
+
+.mark {
+	
+	div.marked {
+		width:101%;
+		height:100%;
+		opacity:0.8;
+		
+		span {
+			display:block;
+		}
+	}
+	
+	div {
+		opacity:0.5;
+		position:absolute;
+		height:100%;
+		width:42px;
+		color:white;
+	
+		span {
+			font-size:18px;
+			margin-left:auto;
+			margin-right:auto;
+			width:25px;
+			text-align:center;
+			display:none;
+		}
+	
+	}
+	
+	div.value {
+		display:none;
+	}
+	
+	div.scnd {
+		margin-left:44px;
+	}
+	
+	div.thrd {
+		margin-left:88px;
+	}
+	
+}
+
+.mark.four {
+	div.marked {
+		width:99%;
+	}
+	
+	div {
+		width:31px;
+	}
+	
+	div.scnd {
+		margin-left:32px;
+	}
+	
+	div.thrd {
+		margin-left:64px;
+	}
+	
+	div.frth {
+		margin-left:96px;
+	}
+}
+
+.mark:hover {
+	
+	div.marked {
+		display:none;
+	}
+	
+	div.value {
+		display:block;
+		cursor:pointer;
+	}
+	
+}
+
+.value:hover {
+	opacity:1;
+	
+	span {
+		display:block;
+	}
+}
+
+.final {
+	width:196px;
+	height:228px;
+	position:fixed;
+	right:0;
+	background-color:$dark-slate;
+	top:358px;
+	@include border-left-radius(5px);
+	color:white;
+	
+	span {
+		margin-left:auto;
+		margin-right:auto;
+		width:100%;
+		text-align:center;
+		display:block;
+		font-size:14px;
+		font-weight:500;
+		margin-top:20px;
+	}
+	
+	span.auto-grade {
+		font-weight:300;
+		font-size:13px;
+		margin-top:10px;
+	}
+	
+	.grade {
+		width:100%;
+		height:75px;
+		margin-top:17px;
+		background-color:$yellow;
+	}
+	
+	button {
+		background-color:$green;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		margin-top:25px;
+		height:35px;
+		width:165px;
+	}
+}

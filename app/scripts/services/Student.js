@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Student', function ($resource, Store) {
+  .factory('Student', function (Store) {
 		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
 		var resource = Store({
 			type: 'student',
@@ -11,6 +11,12 @@ angular.module('classvantageApp')
 					name: 'pages',
 					type: 'page',
 					inverse: 'students',
+					isArray: true
+				},
+				{
+					name: 'assessments',
+					type: 'assessment',
+					inverse: 'student',
 					isArray: true
 				}
 			]

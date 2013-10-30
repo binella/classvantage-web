@@ -4,6 +4,54 @@
   box-shadow: inset $a $b $c $d $e;
 }
 
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Single Corner Border Radius
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+      -moz-border-radius-topleft: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+      -moz-border-radius-topright: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+      -moz-border-radius-bottomright: $radius;
+          border-bottom-right-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+      -moz-border-radius-bottomleft: $radius;
+          border-bottom-left-radius: $radius;
+}
+
+// Single Side Border Radius
+@mixin border-top-radius($radius) {
+  @include border-top-right-radius($radius);
+  @include border-top-left-radius($radius);
+}
+@mixin border-right-radius($radius) {
+  @include border-top-right-radius($radius);
+  @include border-bottom-right-radius($radius);
+}
+@mixin border-bottom-radius($radius) {
+  @include border-bottom-right-radius($radius);
+  @include border-bottom-left-radius($radius);
+}
+@mixin border-left-radius($radius) {
+  @include border-top-left-radius($radius);
+  @include border-bottom-left-radius($radius);
+}
+
+
 @import "compass/reset";
 @import "compass/typography/links/link-colors";
 @import "compass/utilities/general/clearfix";
@@ -13,6 +61,7 @@
 @import "scrollbar";
 @import "uniform";
 @import "rubric";
+@import "assessment";
 
 @import "admin";
 
@@ -431,6 +480,11 @@ body > header {
 		line-height: 40px;
 	}
 	
+	h4 {
+		font-weight:600;
+		font-size:14px;
+	}
+	
 	ul.header {
 		float: right;
 		line-height: 45px;
@@ -493,4 +547,8 @@ body > header {
 		padding-bottom: 10px;
 		border-bottom:2px solid $dark-slate;
 	}
+}
+
+.editable-text:hover, .editable-text:focus {
+	background-color: rgba(0,0,0,0.1);
 }

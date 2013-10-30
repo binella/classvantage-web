@@ -1,6 +1,6 @@
 <div class="hero green" style="height:387px;">
 	<div class="container">
-		<div>Breadcrumbs</div>
+		<br/>
   	<form>
 			
 			<div class="breadcrumbs">
@@ -11,13 +11,13 @@
 			</div>
 			
 			<div style="float:left;width:639px;">
-				<textarea ng-model="rubric.title" class="title-input-text" msd-elastic="" 
+				<textarea ng-model="rubric.title" class="title-input-text editable-text" msd-elastic="" 
 									placeholder="Type a title" rows="2" cols="17" autocorrect="off" 
 									style="height:100px;" blurs-on-enter cv-input></textarea>
 				<br />
 				<a class="plus white" ng-click="displayDesc = true"
 					 ng-show="(rubric.description == null || rubric.description == '') && displayDesc == false">Add a description</a>
-				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text"
+				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text editable-text"
 									ng-show="(rubric.description != null && rubric.description != '') || displayDesc == true"
 									focus-when="displayDesc == true" ng-blur="displayDesc = false" cv-input></textarea>
 			</div>
@@ -52,19 +52,60 @@
 		</form>
 	</div>
 </div>
-<div class="container page-container" style="display:none;">
+<!-- RUBRIC CONTENT -->
+<div class="container page-container" style="padding-left:54px;" >
 	<h2>Expectations</h2>
 	<div style="clear:both;"></div>
-	<section>
+	<section style="margin-top:16px;">
 		<h4>OVERALL</h4>
 		<ul class="overalls">
 			<li>
-				<input type="checkbox" />
-				<textarea ng-model="rubric.custom_expectation" msd-elastic="" blurs-on-enter></textarea>
+				<!-- input type="checkbox" ng-checked="rubric.custom_expectation" cv-value="rubric.custom_expectation" cv-styled-checkbox / -->
+				<textarea ng-model="rubric.custom_expectation" class="editable-text" style="height:22px;" msd-elastic="" placeholder="Type an overall expectation" blurs-on-enter cv-input></textarea>
 			</li>
 		</ul>
 	</section>
-	<section>
-		<h4>SPECIFIC</h4>
+	<br/>
+	<section style="margin-top:16px;" class="specific">
+		<div class="header">
+				<h4>SPECIFIC</h4>
+				<h4>LEVEL 1</h4>
+				<h4>LEVEL 2</h4>
+				<h4>LEVEL 3</h4>
+				<h4>LEVEL 4</h4>
+		</div>
+		<div style="clear:both;">
+		<div class="rubric-group">
+			<div class="rubric-row" ng-repeat="row in rubric.rows">
+				<div class="top-cover"></div>
+				<div class="rubric-column criteria">
+					<a class="close-button" ng-click="deleteRow(row)"><img src="images/beige-ex.png" /></a>
+					<textarea class="editable-text" ng-model="row.criteria" style="height:64px;" msd-elastic="" placeholder="Type criteria description here" ng-blur="row.$save()" blurs-on-enter></textarea>
+				</div>
+				<div class="rubric-column level">
+					<textarea class="editable-text" ng-model="row.level1_description" placeholder="Type level description here" msd-elastic="" ng-blur="unlock(row);row.$save();" blurs-on-enter></textarea>
+				</div>
+				<div class="rubric-column level">
+					<textarea class="editable-text" ng-model="row.level2_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
+				</div>
+				<div class="rubric-column level">
+					<textarea class="editable-text" ng-model="row.level3_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
+				</div>
+				<div class="rubric-column level">
+					<textarea class="editable-text" ng-model="row.level4_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
+				</div>
+				<div class="bottom-divider"></div>
+				<div class="bottom-divider wide"></div>
+				<div class="bottom-cover"></div>
+			</div>
+		</div>
+		
+		
+		<br/><br/><br/><br/><br/>
+		<a class="plus green" ng-click="addRow()" style="margin-left:-39px;">Add a specific expectation</a>
+		<br/><br/>
 	</section>
 </div>

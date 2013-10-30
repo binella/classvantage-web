@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric) {
+  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row) {
 	
 		$scope.units = units;
 		
@@ -21,6 +21,30 @@ angular.module('classvantageApp')
 		$scope.filterUnits = function (unit) {
 			if (!$scope.rubric.unit) {return false};
 			return unit.grade == $scope.rubric.unit.grade && unit.strand.subject.id == $scope.rubric.unit.strand.subject.id;
+		}
+		
+		$scope.addRow = function () {
+			var row = Row.new();
+			$scope.rubric.rows.$insert(row);
+			row.$save();
+		}
+		
+		$scope.deleteRow = function(row) {
+			var confirmDelete = confirm("Are you sure you want to delete this row?");
+			if (confirmDelete) {
+				$scope.rubric.rows.$remove(row);
+				$scope.rubric.$save();
+			};
+		}
+		
+		$scope.unlock = function (row) {
+			if ($scope.levelsLocked(row)) {
+				row.level2_description = row.level3_description = row.level4_description = row.level1_description;
+			}
+		}
+		
+		$scope.levelsLocked = function (row) {
+			return !(row.level2_description || row.level3_description || row.level4_description);
 		}
 		
   });

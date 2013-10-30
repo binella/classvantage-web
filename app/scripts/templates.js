@@ -210,7 +210,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
   $templateCache.put('views/rubric.html',
     "<div class=\"hero green\" style=\"height:387px\">\n" +
     "\t<div class=\"container\">\n" +
-    "\t\t<div>Breadcrumbs</div>\n" +
+    "\t\t<br>\n" +
     "  \t<form>\n" +
     "\t\t\t\n" +
     "\t\t\t<div class=\"breadcrumbs\">\n" +
@@ -221,10 +221,10 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t</div>\n" +
     "\t\t\t\n" +
     "\t\t\t<div style=\"float:left;width:639px\">\n" +
-    "\t\t\t\t<textarea ng-model=\"rubric.title\" class=\"title-input-text\" msd-elastic=\"\" placeholder=\"Type a title\" rows=\"2\" cols=\"17\" autocorrect=\"off\" style=\"height:100px\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
+    "\t\t\t\t<textarea ng-model=\"rubric.title\" class=\"title-input-text editable-text\" msd-elastic=\"\" placeholder=\"Type a title\" rows=\"2\" cols=\"17\" autocorrect=\"off\" style=\"height:100px\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
     "\t\t\t\t<br>\n" +
     "\t\t\t\t<a class=\"plus white\" ng-click=\"displayDesc = true\" ng-show=\"(rubric.description == null || rubric.description == '') && displayDesc == false\">Add a description</a>\n" +
-    "\t\t\t\t<textarea id=\"rubricDescription\" ng-model=\"rubric.description\" rows=\"3\" cols=\"62\" autocorrect=\"off\" class=\"desc-input-text\" ng-show=\"(rubric.description != null && rubric.description != '') || displayDesc == true\" focus-when=\"displayDesc == true\" ng-blur=\"displayDesc = false\" cv-input=\"\"></textarea>\n" +
+    "\t\t\t\t<textarea id=\"rubricDescription\" ng-model=\"rubric.description\" rows=\"3\" cols=\"62\" autocorrect=\"off\" class=\"desc-input-text editable-text\" ng-show=\"(rubric.description != null && rubric.description != '') || displayDesc == true\" focus-when=\"displayDesc == true\" ng-blur=\"displayDesc = false\" cv-input=\"\"></textarea>\n" +
     "\t\t\t</div>\n" +
     "\t\t\t\n" +
     "\t\t\t<div style=\"float:left;width:1px;height:215px;margin-top:21px\" class=\"verticalLine\"></div>\n" +
@@ -253,21 +253,62 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t</form>\n" +
     "\t</div>\n" +
     "</div>\n" +
-    "<div class=\"container page-container\" style=\"display:none\">\n" +
+    "<!-- RUBRIC CONTENT -->\n" +
+    "<div class=\"container page-container\" style=\"padding-left:54px\">\n" +
     "\t<h2>Expectations</h2>\n" +
     "\t<div style=\"clear:both\"></div>\n" +
-    "\t<section>\n" +
+    "\t<section style=\"margin-top:16px\">\n" +
     "\t\t<h4>OVERALL</h4>\n" +
     "\t\t<ul class=\"overalls\">\n" +
     "\t\t\t<li>\n" +
-    "\t\t\t\t<input type=\"checkbox\">\n" +
-    "\t\t\t\t<textarea ng-model=\"rubric.custom_expectation\" msd-elastic=\"\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t<!-- input type=\"checkbox\" ng-checked=\"rubric.custom_expectation\" cv-value=\"rubric.custom_expectation\" cv-styled-checkbox / -->\n" +
+    "\t\t\t\t<textarea ng-model=\"rubric.custom_expectation\" class=\"editable-text\" style=\"height:22px\" msd-elastic=\"\" placeholder=\"Type a custom expectation\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
     "\t\t\t</li>\n" +
     "\t\t</ul>\n" +
     "\t</section>\n" +
-    "\t<section>\n" +
-    "\t\t<h4>SPECIFIC</h4>\n" +
-    "\t</section>\n" +
+    "\t<br>\n" +
+    "\t<section style=\"margin-top:16px\" class=\"specific\">\n" +
+    "\t\t<div class=\"header\">\n" +
+    "\t\t\t\t<h4>SPECIFIC</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 1</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 2</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 3</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 4</h4>\n" +
+    "\t\t</div>\n" +
+    "\t\t<div style=\"clear:both\">\n" +
+    "\t\t<div class=\"rubric-group\">\n" +
+    "\t\t\t<div class=\"rubric-row\" ng-repeat=\"row in rubric.rows\">\n" +
+    "\t\t\t\t<div class=\"top-cover\"></div>\n" +
+    "\t\t\t\t<div class=\"rubric-column criteria\">\n" +
+    "\t\t\t\t\t<a class=\"close-button\" ng-click=\"deleteRow(row)\"><img src=\"images/beige-ex.png\"></a>\n" +
+    "\t\t\t\t\t<textarea class=\"editable-text\" ng-model=\"row.criteria\" style=\"height:64px\" msd-elastic=\"\" placeholder=\"Type criteria description here\" ng-blur=\"row.$save()\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level\">\n" +
+    "\t\t\t\t\t<textarea class=\"editable-text\" ng-model=\"row.level1_description\" placeholder=\"Type level description here\" msd-elastic=\"\" ng-blur=\"unlock(row);row.$save();\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level\">\n" +
+    "\t\t\t\t\t<textarea class=\"editable-text\" ng-model=\"row.level2_description\" msd-elastic=\"\" ng-blur=\"row.$save()\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t\t<label ng-show=\"levelsLocked(row)\">{{row.level1_description}}</label>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level\">\n" +
+    "\t\t\t\t\t<textarea class=\"editable-text\" ng-model=\"row.level3_description\" msd-elastic=\"\" ng-blur=\"row.$save()\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t\t<label ng-show=\"levelsLocked(row)\">{{row.level1_description}}</label>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level\">\n" +
+    "\t\t\t\t\t<textarea class=\"editable-text\" ng-model=\"row.level4_description\" msd-elastic=\"\" ng-blur=\"row.$save()\" blurs-on-enter=\"\"></textarea>\n" +
+    "\t\t\t\t\t<label ng-show=\"levelsLocked(row)\">{{row.level1_description}}</label>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"bottom-divider\"></div>\n" +
+    "\t\t\t\t<div class=\"bottom-divider wide\"></div>\n" +
+    "\t\t\t\t<div class=\"bottom-cover\"></div>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t</div>\n" +
+    "\t\t\n" +
+    "\t\t\n" +
+    "\t\t<br><br><br><br><br>\n" +
+    "\t\t<a class=\"plus green\" ng-click=\"addRow()\" style=\"margin-left:-39px\">Add a custom expectation</a>\n" +
+    "\t\t<br><br>\n" +
+    "\t</div></section>\n" +
     "</div>"
   );
 

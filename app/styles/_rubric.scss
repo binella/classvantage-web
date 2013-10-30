@@ -1,8 +1,166 @@
 .overalls {
 	
+	padding-top:22px;
+	
 	textarea{
 		outline:none;
 		border:none;
-		background-color: $light-beige;
+		width:95%;
+		color: $dark-beige;
+		background-color: transparent;
+		font-size:18px;
+		font-weight:300;
+		font-family: $roboto;
+		resize:none;
+	}
+	
+	::-webkit-input-placeholder { /* WebKit browsers */
+	    color:    $light-beige;
+			font-style: italic;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    color:    $light-beige;
+			font-style: italic;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    color:    $light-beige;
+			font-style: italic;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    color:    $light-beige;
+			font-style: italic;
+	}
+	
+}
+
+.specific {
+	.header {
+		h4 {
+			float:left;
+			border-bottom:6px solid brown;
+			padding-bottom:22px;
+			margin-left: 1px;
+			width:150px;
+		}
+		
+		h4:first-child {
+			margin-left: 0px;
+			width:243px;
+			border-color: $brown;
+		}
+		
+		h4:nth-child(2) {
+			margin-left:3px;
+			border-color: $red;
+		}
+		
+		h4:nth-child(3) {
+			border-color: $yellow;
+		}
+		
+		h4:nth-child(4) {
+			border-color: $bright-green;
+		}
+		
+		h4:nth-child(5) {
+			border-color: $green;
+		}
+		
+		h4:not(:first-child) {
+			padding-left:20px;
+		}
+	}
+}
+
+.rubric-column {
+	display: table-cell;
+	width: 171px;
+	vertical-align:top;
+	//padding:18px;
+	
+	textarea, span {
+		resize: none;
+		border:none;
+		font-family: $roboto;
+		font-size:13px;
+		margin:18px;
+		width:129px;
+		outline:none;
+	}
+
+	span {
+		position:relative;
+		display:block;
+		margin-top:20px;
+		line-height:18px;
+		padding-bottom:32px;
+	}
+	
+	.close-button {
+		position:absolute;
+		margin-top:25px;
+		margin-left:-39px;
+		cursor:pointer;
+	}
+}
+
+.level {
+	label {
+		color:gray;
+		font-family: $roboto;
+		font-size:13px;
+		margin:18px;
+		width:129px;
+		position:absolute;
+		margin-top:-60px;
+		line-height:19px;
+		word-wrap:break-word;
+	}
+}
+
+.rubric-column:not(:nth-child(2)) {
+	border-right: 1px solid lightgray;
+}
+
+.rubric-column:nth-last-child(4) {
+	border: none;
+}
+
+div.criteria {
+	width: 245px;
+	
+	textarea, span {
+		font-weight:300;
+		font-style:italic;
+		width:200px;
+	}
+	
+}
+
+.rubric-group {
+	background-color: white;
+	width: 929px;
+	border-bottom: 2px solid $medium-beige;
+}
+
+.rubric-row {
+	
+	.top-cover {
+		float:left;background:white;height:20px;width:920px;position:absolute;
+	}
+	
+	.bottom-cover {
+		float:left;background:white;height:20px;width:920px;margin-top:-20px;position:absolute;
+	}
+}
+
+.rubric-row:not(:last-child) {
+	
+	.bottom-divider {
+		margin-left:18px;border-bottom:1px solid lightgray;position:relative;z-index:100;width:205px;float:left;
+	}
+	
+	.bottom-divider.wide {
+		margin-left:36px;width:650px;
 	}
 }

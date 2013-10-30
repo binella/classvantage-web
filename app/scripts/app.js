@@ -1,13 +1,13 @@
 'use strict';
 
-//var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-//var _baseURL = 'http://localhost\:3000/v1/';
+var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
+var _baseURL = 'http://localhost\:3000/v1/';
 
 //var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
 //var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
 
-var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
-var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
+//var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
+//var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
 
 angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
 
@@ -47,21 +47,6 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 						var page = Page.fetchOne($stateParams.page_id);
 						return page;
 					}]
-					/*
-					currentPage: ['$q', '$stateParams', '$filter', 'Page', 'pages', function ($q, $stateParams, $filter, Page, pages) {
-						
-						
-						// This can be done better no?
-						Page.get({id: $stateParams.page_id}, function (page, responseHeaders){
-							angular.extend(currentPage, page);
-						}, function (httpResponse){
-							// Error getting page
-						});
-						
-						return currentPage;
-						
-					}]
-					*/
 				}
 			})
 			.state('rubric', {
@@ -79,23 +64,18 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 						rubric.unit = rubric.unit || {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
 						return rubric;
 					}],
-					/*
-					currentRubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
-						// TODO: Should use model side fetch here!
-						var currentRubric = {};
-						
-						Rubric.get({id: $stateParams.id}, function (rubric, responseHeaders){
-							angular.extend(currentRubric, rubric);
-							currentRubric.unit = currentRubric.unit || {grade: currentRubric.page.grade, strand: {subject: {id: currentRubric.page.subject_id}}};
-						}, function (httpResponse){
-							// Error getting rubric
-						});
-						
-						return currentRubric;
-					}],
-					*/
 					units: ['Unit', function (Unit) {
 						return Unit.fetchAll();
+					}]
+				}
+			})
+			.state('assessment', {
+				url: '/assessments/:id',
+				templateUrl: 'views/assessment.html',
+				controller: 'AssessmentCtrl',
+				resolve: {
+					assessment: ['$stateParams', 'Assessment', function ($stateParams, Assessment) {
+						return Assessment.fetchOne($stateParams.id);
 					}]
 				}
 			})
@@ -207,6 +187,15 @@ angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.ela
 				scope.$watch(function() {return ngModel.$modelValue}, function() {
 					$timeout(jQuery.uniform.update, 0);
 				})
+			}
+		}
+	}])
+	
+	.directive('cvStyledCheckbox', ['$timeout', function ($timeout) {
+		return {
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				element.uniform({});
 			}
 		}
 	}])
