@@ -2,7 +2,7 @@
 
 angular.module('classvantageApp')
   .factory('Mark', function (Store) {
-		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
+
 		var resource = Store({
 			type: 'mark',
 			url: _baseURL + 'marks',
@@ -20,8 +20,16 @@ angular.module('classvantageApp')
 			]
 		});
 		
+		Object.defineProperty(resource.resourcePrototype, '$wholeValue', {
+			get: function () { 
+				if (this.value === null) { return null; };
+				return Math.round((this.value + 1) / 3); 
+			}
+		});
+		
 		Object.defineProperty(resource.resourcePrototype, '$value', {
 			get: function () {
+				if (this.value === null) { return null; };
 				if (this.value === 0) { return 'R' };
 				var value = (this.value + 1) / 3,
 						whole = Math.round(value),
@@ -34,6 +42,16 @@ angular.module('classvantageApp')
 				
 			}
 		});
+		
+		resource.collectionPrototype.$firstForRow = function (row) {
+			for (var i=0,l=this.length; i<l; i++) {
+				if (this[i].row_id === row.id) { return this[i]; };
+			}
+			var newInstance = resource.new({row: row, value: null});
+			this.$insert(newInstance);
+			newInstance.$save();
+			return newInstance;
+		};
 
 		return resource;
   })

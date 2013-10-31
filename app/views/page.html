@@ -35,15 +35,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="grade row" ng-repeat="student in page.students">
-				<div class="grade-cell" ng-repeat="rubric in page.rubrics">
-					<a ng-repeat-start="assessment in student.assessments" ng-if="assessment.rubric_id === rubric.id" ui-sref="assessment({id: assessment.id})">
-						{{assessment.value}} CLICK
+			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
+				<div class="grade-cell" ng-repeat="rubric in page.rubrics" 
+						 										ng-init="assessment = student.assessments.$firstForRubric(rubric)"
+																ng-switch="assessment.$status">
+					<a ng-switch-when="incomplete" ui-sref="assessment({id: assessment.id})" class="gray">
+						?
 					</a>
-					<a ng-repeat-end ng-if="assessment.rubric_id !== rubric.id" ng-click="">
-						NO
+					<a ng-switch-when="marked" ui-sref="assessment({id: assessment.id})" class="color{{assessment.$averageGrade.substr(0,1)}}">
+						{{assessment.value || assessment.$averageGrade}}
 					</a>
-					<a ng-if="student.assessments.length === 0" ng-click="">EMPTY</a>
+					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
 				</div>
 			</div>
 		</div>

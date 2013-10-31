@@ -1,24 +1,24 @@
 .mark.red {
 	div {
-		background-color:$red;
+		background-color:rgba(255,70,38,0.8);
 	}
 }
 
 .mark.yellow {
 	div {
-		background-color:$yellow;
+		background-color:rgba(241,175,59,0.8);
 	}
 }
 
 .mark.bright-green {
 	div {
-		background-color:$bright-green;
+		background-color:rgba(131,172,73,0.8);
 	}
 }
 
 .mark.green {
 	div {
-		background-color:$green;
+		background-color:rgba(0,165,115,0.8);
 	}
 }
 
@@ -27,7 +27,7 @@
 	div.marked {
 		width:101%;
 		height:100%;
-		opacity:0.8;
+		opacity:1;
 		
 		span {
 			display:block;
@@ -66,6 +66,12 @@
 	
 }
 
+.criteria.min-height {
+	span {
+		min-height:37px;
+	}
+}
+
 .mark.four {
 	div.marked {
 		width:99%;
@@ -101,6 +107,31 @@
 	
 }
 
+.middle {
+	top:50%;
+	height:26px !important;
+	margin-top:-10px !important;
+}
+
+.color {
+	background-color:$silver;
+}
+.color1 {
+	background-color:$red;
+}
+.color2 {
+	background-color:$yellow;
+}
+.color3 {
+	background-color:$bright-green;
+}
+.color4 {
+	background-color:$green;
+}
+.colorR {
+	background-color:black !important;
+}
+
 .value:hover {
 	opacity:1;
 	
@@ -108,6 +139,28 @@
 		display:block;
 	}
 }
+
+.assess {
+	padding:18px;
+	
+	span {
+		overflow-y:auto;
+		overflow-x:hidden;
+		margin:0px;
+		height:100%;
+		padding-bottom:0px;
+		margin-bottom:5px;
+		//min-height:65px;
+	}
+	
+	.value, .marked {
+		span {
+
+		}
+	}
+	
+}
+
 
 .final {
 	width:196px;
@@ -118,6 +171,7 @@
 	top:358px;
 	@include border-left-radius(5px);
 	color:white;
+	z-index:999;
 	
 	span {
 		margin-left:auto;
@@ -140,7 +194,12 @@
 		width:100%;
 		height:75px;
 		margin-top:17px;
-		background-color:$yellow;
+		
+		span {
+			display:inline-block;
+			font-size:40px;
+		}
+		
 	}
 	
 	button {

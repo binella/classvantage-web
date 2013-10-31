@@ -28,17 +28,40 @@ angular.module('classvantageApp')
 		
 		// Calculated Properties
 		
+		Object.defineProperty(resource.resourcePrototype, '$status', {
+			get: function () {
+				if (!this.id) { return 'not_started'; };
+				if (this.value) { return 'marked'; };
+				if (this.marks.length < this.rubric.rows.length || this.rubric.rows.length === 0) { return 'incomplete'; }
+				for (var i=0,l=this.marks; i<l; i++) {
+					if (this.marks[i].value === null) { return 'incomplete'; };
+				}
+				return 'marked';
+			}
+		})
+		
 		Object.defineProperty(resource.resourcePrototype, '$averageGrade', {
 			get: function () {
 				var count = 0;
 				var sum = 0;
 				for (var i=0,l=this.marks.length; i<l; i++) {
-					if (!!this.marks[i].value) {
+					if (this.marks[i].value !== null) {
 						sum += this.marks[i].value;
 						count++;
 					};
 				}
-				return sum/count;
+				var avg = sum/count;
+				
+				if (isNaN(avg)) { return null; };
+				
+				if (avg === 0) { return 'R'; };
+				var value = (avg + 1) / 3,
+						whole = Math.round(value),
+						sign = (value - whole) > 0 ? '+' : null,
+						sign = sign || ( (value - whole) < 0 ? '-' : '' );
+				
+				return whole + sign;
+				
 			},
 			set: function (newValue) {
 				
@@ -46,15 +69,13 @@ angular.module('classvantageApp')
 		})
 		
 		
-		// Custom Methods
-		
-		resource.resourcePrototype.$markForRow = function (row) {
-			for (var i=0,l=this.marks.length;i<l;i++) {
-				if (this.marks[i].row_id === row.id) {
-					return this.marks[i];
-				};
+		resource.collectionPrototype.$firstForRubric = function (rubric) {
+			for (var i=0,l=this.length; i<l; i++) {
+				if (this[i].rubric_id === rubric.id) { return this[i]; };
 			}
-			return null;
+			var newInstance = resource.new({rubric: rubric});
+			this.$insert(newInstance);
+			return newInstance;
 		};
 		
 		

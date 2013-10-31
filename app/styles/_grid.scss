@@ -102,6 +102,27 @@
 	width: 115px;
 	height: 100%;
 	float: left;
+	
+	a {
+		text-align:center;
+		display:block;
+		height:24px;
+		padding-top:8px;
+		margin:8px;
+		color:white;
+		font-size:16px;
+	}
+	
+	a.new {
+		color:$dark-beige;
+		font-size:20px;
+		font-weight:700;
+		margin-top:6px;
+	}
+	
+	a.gray {
+		background-color:$silver;
+	}
 }
 
 .grade-cell:not(:last-child) {

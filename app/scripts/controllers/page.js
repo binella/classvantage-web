@@ -5,20 +5,8 @@ angular.module('classvantageApp')
 		
 		// We are promissed currentPage here
 		$scope.page = currentPage;
-		
-		//$scope.addRubricCaption = 'Add your first rubric';
-		//$scope.addRubricMargin = '34px';
-		//$scope.addRubricWidth = '265px';
 
-		//if (currentPage.rubrics && currentPage.rubrics.length > 0) {
-			//$scope.addRubricCaption = '';
-			//$scope.addRubricWidth = '113px';
-			//$scope.addRubricMargin = '40px';
-		//} 
-
-		$scope.gridHeight = (95 + (currentPage.students ? currentPage.students.length * 50 : 0)) + 'px';
-		
-		
+		$scope.gridHeight = (95 + (currentPage.students ? currentPage.students.length * 50 : 0)) + 'px';		
 		
 		// New Rubric
 		$scope.newRubric = function () {
@@ -26,13 +14,7 @@ angular.module('classvantageApp')
 			Rubric.create({page_id: $scope.page.id, page: $scope.page}).$promise.then(function (rubric) {
 				$location.path('/rubrics/' + rubric.id);
 			}, function () { alert('Error creating rubric'); });
-			/*
-			Rubric.save({},{rubric: {page_id: $scope.page.id}}, function(rubric, postResponseHeader) {
-				// Success
-				Rubric.currentRubric = rubric;
-				$location.path('/rubrics/' + rubric.id);
-			}, function () {	alert('Error creating rubric'); });
-			*/
+
 		};
 		
 		// New Student
@@ -50,13 +32,6 @@ angular.module('classvantageApp')
 				  };
 					
 					$scope.submitForm = function () {
-						// TODO: just update the model and it should take care of the ajax call and what not
-						/*
-						Page.update({id: currentPage.id}, {page: {students_attributes: [{full_name: $scope.student.full_name}]}}, function (newPage, responseHeaders) {
-							$scope.cancel();
-							angular.extend(currentPage, newPage);
-						}, function () { alert('Error adding student'); });
-						*/
 						var student = Student.new({full_name: $scope.student.full_name});
 						currentPage.students.$insert(student);
 						student.$save();
@@ -78,20 +53,16 @@ angular.module('classvantageApp')
 		$scope.deleteStudent = function (student) {
 			var confirmDelete = confirm('Are you sure you want to remove ' + student.full_name + ' and all his/her marks form the ' + $scope.page.title + ' page?');
 			if (confirmDelete) {
-				/*
-				// TODO: This should all happen on the model side
-				var studentIndex = $scope.page.students.indexOf(student);
-				if (studentIndex > -1) {
-					$scope.page.students.splice(studentIndex, 1);
-				};
-				Page.update({id: $scope.page.id}, {page: {students_attributes: [{id: student.id, _destroy: true}]}}, function (page, responseHeaders) {
-					
-				}, function () { alert('Error deleting student'); });
-				*/
 				$scope.page.students.$remove(student);
 				$scope.page.$save();
 			};
 		};
+		
+		$scope.saveAndAssess = function (assessment) {
+			assessment.$save().then(function (assessment) {
+				$location.path('/assessments/' + assessment.id);
+			});
+		}
 		
   });
 
