@@ -17,6 +17,17 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 	require('grunt-angular-templates')(grunt);
 
+	grunt.registerTask('beep', function () {
+		var locator = function (p) { return grunt.file.expand({filter: 'isFile'}, p); };
+		var RevvedFinder = require(require('path').resolve('node_modules/grunt-usemin/lib/revvedfinder'));
+		var revvedfinder = new RevvedFinder(locator);
+		grunt.log.subhead('WRITING: --- ');
+		grunt.log.writeln(grunt.config('yeoman').dist);
+		var newname = revvedfinder.find('scripts.js', grunt.config('beep').dest + '/scripts');
+		grunt.config('templateHelperScriptsFile', newname);
+		grunt.log.writeln(newname);
+	});
+
   // configurable paths
   var yeomanConfig = {
     app: 'app',
@@ -28,6 +39,9 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
+		beep: {
+			dest: '<%= yeoman.dist %>'
+		},
 		ngtemplates: {
 			app: {
 				cwd: '<%= yeoman.dist %>',
@@ -35,7 +49,7 @@ module.exports = function (grunt) {
 				dest: '<%= yeoman.app %>/scripts/templates.js',
 				options: {
 					module: 'classvantageApp',
-					concat: '<%= yeoman.dist %>/scripts/scripts.js',
+					concat: '<%= yeoman.dist %>/scripts/1e6e074d.scripts.js',
 					htmlmin:  '<%= htmlmin.dist %>'
 				}
 			}
@@ -394,6 +408,7 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
+		//'beep',
 		'ngtemplates'
   ]);
 

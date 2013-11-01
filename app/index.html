@@ -41,7 +41,7 @@
 						  <button type="submit" class="btn">Log in</button>
 						</form>
 
-					<a class="pull-right dropdown-toggle" ng-show="me.name" ng-hide="me.name == null"><span>{{me.name}}</span></a>
+					<a class="pull-right dropdown-toggle" ng-show="me.name" ng-hide="me.name == null"><span ng-bind="me.name"></span></a>
 					<ul class="dropdown-menu" style="left:auto;right:50px;top:60px;">
 			    	<li>
 			      	<a href="" ng-click="logOut()">Log out</a>

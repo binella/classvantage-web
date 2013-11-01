@@ -1,24 +1,36 @@
 .mark.red {
-	div {
+	div.marked {
 		background-color:rgba(255,70,38,0.8);
+	}
+	div {
+		background-color:$red;
 	}
 }
 
 .mark.yellow {
-	div {
+	div.marked {
 		background-color:rgba(241,175,59,0.8);
+	}
+	div {
+		background-color:$yellow;
 	}
 }
 
 .mark.bright-green {
-	div {
+	div.marked {
 		background-color:rgba(131,172,73,0.8);
+	}
+	div {
+		background-color:$bright-green;
 	}
 }
 
 .mark.green {
-	div {
+	div.marked {
 		background-color:rgba(0,165,115,0.8);
+	}
+	div {
+		background-color:$green;
 	}
 }
 
@@ -202,13 +214,27 @@
 		
 	}
 	
-	button {
+	.btn {
 		background-color:$green;
 		margin-left:auto;
 		margin-right:auto;
 		display:block;
 		margin-top:25px;
-		height:35px;
-		width:165px;
+		height:17px;
+		width:137px;
+		text-align:center;
+		padding-top:10px;
+	}
+}
+
+.grade-cell {
+	a {
+		span {
+			position:absolute;
+			font-size:12px;
+			font-weight:300;
+			margin-left:8px;
+			margin-top:3px;
+		}
 	}
 }

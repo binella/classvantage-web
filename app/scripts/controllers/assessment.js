@@ -5,8 +5,6 @@ angular.module('classvantageApp')
 		
 		$scope.assessment = assessment;
 
-		console.log(assessment);
-
 		$scope.saveMark = function (mark, value) {
 			mark.value = value;
 			mark.$save();

@@ -37,21 +37,21 @@
 			</div>
 			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
 				<div class="grade-cell" ng-repeat="rubric in page.rubrics" 
-						 										ng-init="assessment = student.assessments.$firstForRubric(rubric)"
-																ng-switch="assessment.$status">
-					<a ng-switch-when="incomplete" ui-sref="assessment({id: assessment.id})" class="gray">
-						?
+						 										ng-initt="assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;"
+																ng-switch="student.assessments.$firstForRubric(rubric).$status">
+					<a ng-switch-when="incomplete" ui-sref="assessment({id: student.assessments.$firstForRubric(rubric).id})" class="gray">
+						? <span ng-if="student.assessments.$firstForRubric(rubric).$averageGrade">({{student.assessments.$firstForRubric(rubric).$averageGrade}})</span>
 					</a>
-					<a ng-switch-when="marked" ui-sref="assessment({id: assessment.id})" class="color{{assessment.$averageGrade.substr(0,1)}}">
-						{{assessment.value || assessment.$averageGrade}}
+					<a ng-switch-when="marked" ui-sref="assessment({id: student.assessments.$firstForRubric(rubric).id})" class="color{{student.assessments.$firstForRubric(rubric).$averageGrade.substr(0,1)}}">
+						{{student.assessments.$firstForRubric(rubric).value || student.assessments.$firstForRubric(rubric).$averageGrade}}
 					</a>
-					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
+					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(student.assessments.$firstForRubric(rubric))"> + </a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length > 0]" ng-style="{height: (95 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
+<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length > 0]" ng-style="{height: (94 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
 	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]">
 		<div class="rubric header-cell" ng-style="{width: (page.rubrics.length > 0 ? '113px' : '265px')}">
 			<a class="plus green"  ng-style="{'margin-left': (page.rubrics.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;" ng-click="newRubric()">

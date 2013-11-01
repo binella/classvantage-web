@@ -6,7 +6,7 @@
 			<div class="breadcrumbs">
 				<div ng-show="assessment.rubric.page">
 					<a ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">{{assessment.rubric.page.title}}</a>
-					<span>{{assessment.rubric.title || 'New Rubric'}}</span>
+					<span>{{assessment.rubric.title || 'Untitled'}}</span>
 				</div>
 			</div>
 			
@@ -110,7 +110,7 @@
 		<span>{{assessment.$averageGrade || '?'}}</span>
 	</div>
 	<span class="auto-grade">
-		<input type="checkbox" checked></input>Autograde
+		<input type="checkbox" style="display:none;" checked></input>&nbsp;
 	</span>
-	<button class="btn">Finished</button>
+	<a class="btn" ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">Finished</a>
 </div>

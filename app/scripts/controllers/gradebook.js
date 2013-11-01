@@ -20,7 +20,7 @@ angular.module('classvantageApp')
 		
 		
 					$scope.page = {};
-					angular.copy(currentPage, $scope.page);
+					angular.extend( $scope.page, currentPage);
 					$scope.page = $scope.page || {}; // Is this needed?
 					
 					$scope.pages = pages;
@@ -67,31 +67,6 @@ angular.module('classvantageApp')
 							currentPage.$save().then(function (page) {}, function () { alert('Error creating page'); });
 							$scope.cancel();
 						}
-						
-						/*
-						if ($scope.page.id) {
-							
-							Page.update({id: $scope.page.id}, {page: $scope.page}, function (response, responseHeaders) {
-								$scope.cancel();
-								angular.extend(currentPage, $scope.page);
-							}, function (httpResponse) {
-								// Error
-							});
-							
-
-						} else {
-
-							
-							Page.save({}, {page: $scope.page}, function (page, responseHeaders) {
-								$scope.cancel();
-								pages.unshift(page);
-								$location.path('/gradebook/' + page.id);
-							}, function (httpRespnse) {
-								// Error
-							});
-							
-						};
-						*/
 					}
 					
 				}],

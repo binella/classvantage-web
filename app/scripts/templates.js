@@ -58,6 +58,123 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
   );
 
 
+  $templateCache.put('views/assessment.html',
+    "<div class=\"hero green\" style=\"height:251px\">\n" +
+    "\t<div class=\"container\">\n" +
+    "\t\t<br>\n" +
+    "  \t<form>\n" +
+    "\t\t\t\n" +
+    "\t\t\t<div class=\"breadcrumbs\">\n" +
+    "\t\t\t\t<div ng-show=\"assessment.rubric.page\">\n" +
+    "\t\t\t\t\t<a ui-sref=\"gradebook.page({page_id: assessment.rubric.page.id})\">{{assessment.rubric.page.title}}</a>\n" +
+    "\t\t\t\t\t<span>{{assessment.rubric.title || 'Untitled'}}</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t\t\n" +
+    "\t\t\t<div style=\"float:left;width:639px\">\n" +
+    "\t\t\t\t<label class=\"title-input-text\" style=\"margin-left:28px\">{{assessment.rubric.title}}</label>\n" +
+    "\t\t\t\t<br>\n" +
+    "\n" +
+    "\t\t\t</div>\n" +
+    "\n" +
+    "\t\t\t\n" +
+    "\t\t</form>\n" +
+    "\t</div>\n" +
+    "</div>\n" +
+    "<!-- RUBRIC CONTENT -->\n" +
+    "<div class=\"container page-container\" style=\"padding-left:54px\">\n" +
+    "\t<h2>{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>\n" +
+    "\t<div style=\"clear:both\"></div>\n" +
+    "\t<br>\n" +
+    "\t<section style=\"margin-top:28px\" class=\"specific\">\n" +
+    "\t\t<div class=\"header\">\n" +
+    "\t\t\t\t<h4>SPECIFIC:</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 1</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 2</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 3</h4>\n" +
+    "\t\t\t\t<h4>LEVEL 4</h4>\n" +
+    "\t\t</div>\n" +
+    "\t\t<div style=\"clear:both\">\n" +
+    "\t\t<div class=\"rubric-group\">\n" +
+    "\t\t\t<div class=\"rubric-row\" ng-repeat=\"row in assessment.rubric.rows\" ng-init=\"mark = assessment.marks.$firstForRow(row)\" ng-switch=\"mark.$wholeValue\">\n" +
+    "\t\t\t\t<div class=\"top-cover\"></div>\n" +
+    "\t\t\t\t<div class=\"rubric-column criteria min-height\">\n" +
+    "\t\t\t\t\t<span>{{row.criteria}}</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
+    "\t\t\t\t\t<span class=\"mark four red\">\n" +
+    "\t\t\t\t\t\t<div class=\"marked\" style=\"background-color:rgba(0,0,0,0.8)\" ng-switch-when=\"0\">\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"1\">\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst colorR\" ng-click=\"saveMark(mark, 0)\"><span class=\"middle\">R</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 1)\"><span class=\"middle\">1-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 2)\"><span class=\"middle\">1</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frth\" ng-click=\"saveMark(mark, 3)\"><span class=\"middle\">1+</span></div>\n" +
+    "\t\t\t\t\t\t{{row.level1_description}}\n" +
+    "\t\t\t\t\t</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
+    "\t\t\t\t\t<span class=\"mark yellow\">\n" +
+    "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"2\">\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 4)\"><span class=\"middle\">2-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 5)\"><span class=\"middle\">2</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 6)\"><span class=\"middle\">2+</span></div>\n" +
+    "\t\t\t\t\t\t{{row.level2_description}}\n" +
+    "\t\t\t\t\t</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
+    "\t\t\t\t\t<span class=\"mark bright-green\">\n" +
+    "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"3\">\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 7)\"><span class=\"middle\">3-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 8)\"><span class=\"middle\">3</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 9)\"><span class=\"middle\">3+</span></div>\n" +
+    "\t\t\t\t\t\t{{row.level3_description}}\n" +
+    "\t\t\t\t\t</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
+    "\t\t\t\t\t<span class=\"mark green\">\n" +
+    "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"4\">\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 10)\"><span class=\"middle\">4-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 11)\"><span class=\"middle\">4</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 12)\"><span class=\"middle\">4+</span></div>\n" +
+    "\t\t\t\t\t\t{{row.level4_description}}\n" +
+    "\t\t\t\t\t</span>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"bottom-divider\"></div>\n" +
+    "\t\t\t\t<div class=\"bottom-divider wide\"></div>\n" +
+    "\t\t\t\t<div class=\"bottom-cover\"></div>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t</div>\n" +
+    "\t\t\n" +
+    "\t\t\n" +
+    "\t\t<br><br><br><br><br>\n" +
+    "\n" +
+    "\t</div></section>\n" +
+    "</div>\n" +
+    "\n" +
+    "<!-- FINAl GRADE -->\n" +
+    "<div class=\"final\">\n" +
+    "\t<span>FINAL GRADE</span>\n" +
+    "\t<div class=\"grade color{{assessment.$averageGrade.substr(0,1)}}\">\n" +
+    "\t\t<span>{{assessment.$averageGrade || '?'}}</span>\n" +
+    "\t</div>\n" +
+    "\t<span class=\"auto-grade\">\n" +
+    "\t\t<input type=\"checkbox\" style=\"display:none\" checked=\"checked\">Autograde\n" +
+    "\t</span>\n" +
+    "\t<a class=\"btn\" ui-sref=\"gradebook.page({page_id: assessment.rubric.page.id})\">Finished</a>\n" +
+    "</div>"
+  );
+
+
   $templateCache.put('views/gradebook.html',
     "<div class=\"hero green\">\n" +
     "\t<div class=\"container\" style=\"height:275px\">\n" +
@@ -144,15 +261,21 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\t\t</div>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
-    "\t\t\t<div class=\"grade row\" ng-repeat=\"student in page.students\">\n" +
-    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics\">\n" +
-    "\t\t\t\t\t<a href=\"\" title=\"click here to grade this rubric for this student\"></a>\n" +
+    "\t\t\t<div class=\"grade row\" ng-repeat=\"student in page.students | orderBy:'last_name'\">\n" +
+    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics\" ng-init=\"assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;\" ng-switch=\"assessment.$status\">\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"incomplete\" ui-sref=\"assessment({id: assessment.id})\" class=\"gray\">\n" +
+    "\t\t\t\t\t\t? <span ng-if=\"averageGrade\">({{averageGrade}})</span>\n" +
+    "\t\t\t\t\t</a>\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"marked\" ui-sref=\"assessment({id: assessment.id})\" class=\"color{{averageGrade.substr(0,1)}}\">\n" +
+    "\t\t\t\t\t\t{{assessment.value || assessment.$averageGrade}}\n" +
+    "\t\t\t\t\t</a>\n" +
+    "\t\t\t\t\t<a ng-switch-default=\"\" href=\"\" class=\"new\" ng-click=\"saveAndAssess(assessment)\"> + </a>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
     "\t\t</div>\n" +
     "\t</div>\n" +
     "</div>\n" +
-    "<div class=\"pin-right scroll-fixed\" ng-class=\"{true:'with-divider', false:''}[page.rubrics.length > 0]\" ng-style=\"{height: (95 + (page.students ? page.students.length * 50 : 0)) + 'px'}\"> <!-- HEIGHT MUST BE SET ON THIS -->\n" +
+    "<div class=\"pin-right scroll-fixed\" ng-class=\"{true:'with-divider', false:''}[page.rubrics.length > 0]\" ng-style=\"{height: (94 + (page.students ? page.students.length * 50 : 0)) + 'px'}\"> <!-- HEIGHT MUST BE SET ON THIS -->\n" +
     "\t<div class=\"rubric\" ng-class=\"{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]\">\n" +
     "\t\t<div class=\"rubric header-cell\" ng-style=\"{width: (page.rubrics.length > 0 ? '113px' : '265px')}\">\n" +
     "\t\t\t<a class=\"plus green\" ng-style=\"{'margin-left': (page.rubrics.length > 0 ? '40px' : '34px')}\" style=\"margin-left:34px;position:relative;top:39px\" ng-click=\"newRubric()\">\n" +
@@ -262,7 +385,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t<ul class=\"overalls\">\n" +
     "\t\t\t<li>\n" +
     "\t\t\t\t<!-- input type=\"checkbox\" ng-checked=\"rubric.custom_expectation\" cv-value=\"rubric.custom_expectation\" cv-styled-checkbox / -->\n" +
-    "\t\t\t\t<textarea ng-model=\"rubric.custom_expectation\" class=\"editable-text\" style=\"height:22px\" msd-elastic=\"\" placeholder=\"Type a custom expectation\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
+    "\t\t\t\t<textarea ng-model=\"rubric.custom_expectation\" class=\"editable-text\" style=\"height:22px\" msd-elastic=\"\" placeholder=\"Type an overall expectation\" blurs-on-enter=\"\" cv-input=\"\"></textarea>\n" +
     "\t\t\t</li>\n" +
     "\t\t</ul>\n" +
     "\t</section>\n" +
@@ -306,7 +429,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\n" +
     "\t\t\n" +
     "\t\t<br><br><br><br><br>\n" +
-    "\t\t<a class=\"plus green\" ng-click=\"addRow()\" style=\"margin-left:-39px\">Add a custom expectation</a>\n" +
+    "\t\t<a class=\"plus green\" ng-click=\"addRow()\" style=\"margin-left:-39px\">Add a specific expectation</a>\n" +
     "\t\t<br><br>\n" +
     "\t</div></section>\n" +
     "</div>"

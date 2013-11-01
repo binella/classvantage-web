@@ -64,6 +64,7 @@
 .scroll-content {
 	overflow: auto;
 	width: 1000px;
+	background-color:$soft-beige;
 }
 
 .rubric.header-row {
@@ -111,6 +112,7 @@
 		margin:8px;
 		color:white;
 		font-size:16px;
+		position:relative;
 	}
 	
 	a.new {
@@ -134,5 +136,9 @@
 	//height: 1000px; // THIS MUST BE SET PROGRAMATICALLY
 }
 .pin-right.with-divider {
-	border-left: 1px solid $medium-beige;
+	border-left: 1px solid $light-grayish-beige;
+	border-right: 1px solid $light-grayish-beige;
+	border-bottom: 1px solid $light-grayish-beige;
+	background-color:$soft-beige;
+	width:112px;
 }

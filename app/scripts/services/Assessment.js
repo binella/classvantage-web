@@ -33,7 +33,7 @@ angular.module('classvantageApp')
 				if (!this.id) { return 'not_started'; };
 				if (this.value) { return 'marked'; };
 				if (this.marks.length < this.rubric.rows.length || this.rubric.rows.length === 0) { return 'incomplete'; }
-				for (var i=0,l=this.marks; i<l; i++) {
+				for (var i=0,l=this.marks.length; i<l; i++) {
 					if (this.marks[i].value === null) { return 'incomplete'; };
 				}
 				return 'marked';
@@ -70,8 +70,9 @@ angular.module('classvantageApp')
 		
 		
 		resource.collectionPrototype.$firstForRubric = function (rubric) {
+
 			for (var i=0,l=this.length; i<l; i++) {
-				if (this[i].rubric_id === rubric.id) { return this[i]; };
+				if (this[i].rubric.id === rubric.id) { return this[i]; };
 			}
 			var newInstance = resource.new({rubric: rubric});
 			this.$insert(newInstance);

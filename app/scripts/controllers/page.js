@@ -4,17 +4,19 @@ angular.module('classvantageApp')
   .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, currentPage, pages) {
 		
 		// We are promissed currentPage here
-		$scope.page = currentPage;
-
-		$scope.gridHeight = (95 + (currentPage.students ? currentPage.students.length * 50 : 0)) + 'px';		
+		$scope.page = currentPage;		
 		
 		// New Rubric
 		$scope.newRubric = function () {
 			// TOOD: find a good way to set page_id vs. page
+			$scope.page.$reload().then(function (p) {
+				$scope.page = p;
+			})
+			/*
 			Rubric.create({page_id: $scope.page.id, page: $scope.page}).$promise.then(function (rubric) {
 				$location.path('/rubrics/' + rubric.id);
 			}, function () { alert('Error creating rubric'); });
-
+			*/
 		};
 		
 		// New Student
@@ -64,5 +66,8 @@ angular.module('classvantageApp')
 			});
 		}
 		
+		$scope.log = function () {
+			console.log('CALLED FROM INIT');
+		}		
   });
 
