@@ -16,6 +16,9 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 	require('grunt-angular-templates')(grunt);
+	
+	// FOR NOW
+	grunt.loadNpmTasks('grunt-inline-angular-templates');
 
 	grunt.registerTask('beep', function () {
 		var locator = function (p) { return grunt.file.expand({filter: 'isFile'}, p); };
@@ -39,6 +42,16 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
+		inline_angular_templates: {
+			dist: {
+				options: {
+					base: '../views'
+				},
+				files: {
+					'dist/index.html': ['dist/views/*.html']
+				}
+			}
+		},
 		beep: {
 			dest: '<%= yeoman.dist %>'
 		},
@@ -406,10 +419,12 @@ module.exports = function (grunt) {
     'ngmin',
     'cssmin',
     'uglify',
+		
+		'inline_angular_templates',
     'rev',
-    'usemin',
+    'usemin'//,
 		//'beep',
-		'ngtemplates'
+		//'ngtemplates'
   ]);
 
   grunt.registerTask('default', [

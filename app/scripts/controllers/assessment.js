@@ -10,4 +10,12 @@ angular.module('classvantageApp')
 			mark.$save();
 		}
 		
+		$scope.marks = {};
+		
+		$scope.markFor = function (row) {
+			var mark = $scope.marks[row.id] = $scope.assessment.marks.$firstForRow(row);
+			// TODO: also just use .id when datastore implements generating ids for newly created objects
+			return mark.id || '_' + Math.random().toString(36).substr(2, 9);
+		}
+		
   });

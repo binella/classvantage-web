@@ -9,14 +9,10 @@ angular.module('classvantageApp')
 		// New Rubric
 		$scope.newRubric = function () {
 			// TOOD: find a good way to set page_id vs. page
-			$scope.page.$reload().then(function (p) {
-				$scope.page = p;
-			})
-			/*
 			Rubric.create({page_id: $scope.page.id, page: $scope.page}).$promise.then(function (rubric) {
 				$location.path('/rubrics/' + rubric.id);
 			}, function () { alert('Error creating rubric'); });
-			*/
+
 		};
 		
 		// New Student
@@ -60,14 +56,24 @@ angular.module('classvantageApp')
 			};
 		};
 		
+		
+		// Assessments
+		
+		$scope.assessments = {};
+		
+		$scope.assessmentFor = function (student, rubric) {
+			var assessmentRow = $scope.assessments[student.id] = $scope.assessments[student.id] || {};
+			var assessment = assessmentRow[rubric.id] = student.assessments.$firstForRubric(rubric);
+			assessment.$cachedAverage = assessment.$averageGrade;
+			// TODO: use .id when datastore is capable of generating ids for newly created objects
+			return assessment.id || '_' + Math.random().toString(36).substr(2, 9);
+		}
+		
 		$scope.saveAndAssess = function (assessment) {
 			assessment.$save().then(function (assessment) {
 				$location.path('/assessments/' + assessment.id);
 			});
 		}
-		
-		$scope.log = function () {
-			console.log('CALLED FROM INIT');
-		}		
+			
   });
 

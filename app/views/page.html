@@ -36,16 +36,15 @@
 				</div>
 			</div>
 			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
-				<div class="grade-cell" ng-repeat="rubric in page.rubrics" 
-						 										ng-initt="assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;"
-																ng-switch="student.assessments.$firstForRubric(rubric).$status">
-					<a ng-switch-when="incomplete" ui-sref="assessment({id: student.assessments.$firstForRubric(rubric).id})" class="gray">
-						? <span ng-if="student.assessments.$firstForRubric(rubric).$averageGrade">({{student.assessments.$firstForRubric(rubric).$averageGrade}})</span>
+				<div class="grade-cell" ng-repeat="rubric in page.rubrics track by assessmentFor(student, rubric)" 
+																ng-switch="assessments[student.id][rubric.id].$status">
+					<a ng-switch-when="incomplete" ui-sref="assessment({id: assessments[student.id][rubric.id].id})" class="gray">
+						? <span ng-if="assessments[student.id][rubric.id].$cachedAverage">({{assessments[student.id][rubric.id].$cachedAverage}})</span>
 					</a>
-					<a ng-switch-when="marked" ui-sref="assessment({id: student.assessments.$firstForRubric(rubric).id})" class="color{{student.assessments.$firstForRubric(rubric).$averageGrade.substr(0,1)}}">
-						{{student.assessments.$firstForRubric(rubric).value || student.assessments.$firstForRubric(rubric).$averageGrade}}
+					<a ng-switch-when="marked" ui-sref="assessment({id: assessments[student.id][rubric.id].id})" class="color{{assessments[student.id][rubric.id].$cachedAverage.substr(0,1)}}">
+						{{assessments[student.id][rubric.id].value || assessments[student.id][rubric.id].$cachedAverage}}
 					</a>
-					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(student.assessments.$firstForRubric(rubric))"> + </a>
+					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessments[student.id][rubric.id])"> + </a>
 				</div>
 			</div>
 		</div>

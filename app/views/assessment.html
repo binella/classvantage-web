@@ -36,9 +36,8 @@
 		<div style="clear:both;">
 		<div class="rubric-group">
 			<div class="rubric-row" 
-					 ng-repeat="row in assessment.rubric.rows" 
-					 ng-init="mark = assessment.marks.$firstForRow(row)"
-					 ng-switch="mark.$wholeValue">
+					 ng-repeat="row in assessment.rubric.rows track by markFor(row)"
+					 ng-switch="marks[row.id].$wholeValue">
 				<div class="top-cover"></div>
 				<div class="rubric-column criteria min-height">
 					<span>{{row.criteria}}</span>
@@ -46,48 +45,48 @@
 				<div class="rubric-column level assess">
 					<span class="mark four red">
 						<div class="marked" style="background-color:rgba(0,0,0,0.8);" ng-switch-when="0">
-							<span class="middle">{{mark.$value}}</span>
+							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
 						<div class="marked" ng-switch-when="1">
-							<span class="middle">{{mark.$value}}</span>
+							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
-						<div class="value frst colorR" ng-click="saveMark(mark, 0)"><span class="middle">R</span></div>
-						<div class="value scnd" ng-click="saveMark(mark, 1)"><span class="middle">1-</span></div>
-						<div class="value thrd" ng-click="saveMark(mark, 2)"><span class="middle">1</span></div>
-						<div class="value frth" ng-click="saveMark(mark, 3)"><span class="middle">1+</span></div>
+						<div class="value frst colorR" ng-click="saveMark(marks[row.id], 0)"><span class="middle">R</span></div>
+						<div class="value scnd" ng-click="saveMark(marks[row.id], 1)"><span class="middle">1-</span></div>
+						<div class="value thrd" ng-click="saveMark(marks[row.id], 2)"><span class="middle">1</span></div>
+						<div class="value frth" ng-click="saveMark(marks[row.id], 3)"><span class="middle">1+</span></div>
 						{{row.level1_description}}
 					</span>
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark yellow">
 						<div class="marked" ng-switch-when="2">
-							<span class="middle">{{mark.$value}}</span>
+							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
-						<div class="value frst" ng-click="saveMark(mark, 4)"><span class="middle">2-</span></div>
-						<div class="value scnd" ng-click="saveMark(mark, 5)"><span class="middle">2</span></div>
-						<div class="value thrd" ng-click="saveMark(mark, 6)"><span class="middle">2+</span></div>
+						<div class="value frst" ng-click="saveMark(marks[row.id], 4)"><span class="middle">2-</span></div>
+						<div class="value scnd" ng-click="saveMark(marks[row.id], 5)"><span class="middle">2</span></div>
+						<div class="value thrd" ng-click="saveMark(marks[row.id], 6)"><span class="middle">2+</span></div>
 						{{row.level2_description}}
 					</span>
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark bright-green">
 						<div class="marked" ng-switch-when="3">
-							<span class="middle">{{mark.$value}}</span>
+							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
-						<div class="value frst" ng-click="saveMark(mark, 7)"><span class="middle">3-</span></div>
-						<div class="value scnd" ng-click="saveMark(mark, 8)"><span class="middle">3</span></div>
-						<div class="value thrd" ng-click="saveMark(mark, 9)"><span class="middle">3+</span></div>
+						<div class="value frst" ng-click="saveMark(marks[row.id], 7)"><span class="middle">3-</span></div>
+						<div class="value scnd" ng-click="saveMark(marks[row.id], 8)"><span class="middle">3</span></div>
+						<div class="value thrd" ng-click="saveMark(marks[row.id], 9)"><span class="middle">3+</span></div>
 						{{row.level3_description}}
 					</span>
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark green">
 						<div class="marked" ng-switch-when="4">
-							<span class="middle">{{mark.$value}}</span>
+							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
-						<div class="value frst" ng-click="saveMark(mark, 10)"><span class="middle">4-</span></div>
-						<div class="value scnd" ng-click="saveMark(mark, 11)"><span class="middle">4</span></div>
-						<div class="value thrd" ng-click="saveMark(mark, 12)"><span class="middle">4+</span></div>
+						<div class="value frst" ng-click="saveMark(marks[row.id], 10)"><span class="middle">4-</span></div>
+						<div class="value scnd" ng-click="saveMark(marks[row.id], 11)"><span class="middle">4</span></div>
+						<div class="value thrd" ng-click="saveMark(marks[row.id], 12)"><span class="middle">4+</span></div>
 						{{row.level4_description}}
 					</span>
 				</div>

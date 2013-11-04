@@ -168,7 +168,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t<span>{{assessment.$averageGrade || '?'}}</span>\n" +
     "\t</div>\n" +
     "\t<span class=\"auto-grade\">\n" +
-    "\t\t<input type=\"checkbox\" style=\"display:none\" checked=\"checked\">Autograde\n" +
+    "\t\t<input type=\"checkbox\" style=\"display:none\" checked=\"checked\">&nbsp;\n" +
     "\t</span>\n" +
     "\t<a class=\"btn\" ui-sref=\"gradebook.page({page_id: assessment.rubric.page.id})\">Finished</a>\n" +
     "</div>"
@@ -262,14 +262,14 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
     "\t\t\t<div class=\"grade row\" ng-repeat=\"student in page.students | orderBy:'last_name'\">\n" +
-    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics\" ng-init=\"assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;\" ng-switch=\"assessment.$status\">\n" +
-    "\t\t\t\t\t<a ng-switch-when=\"incomplete\" ui-sref=\"assessment({id: assessment.id})\" class=\"gray\">\n" +
-    "\t\t\t\t\t\t? <span ng-if=\"averageGrade\">({{averageGrade}})</span>\n" +
+    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics\" ng-initt=\"assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;\" ng-switch=\"student.assessments.$firstForRubric(rubric).$status\">\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"incomplete\" ui-sref=\"assessment({id: student.assessments.$firstForRubric(rubric).id})\" class=\"gray\">\n" +
+    "\t\t\t\t\t\t? <span ng-if=\"student.assessments.$firstForRubric(rubric).$averageGrade\">({{student.assessments.$firstForRubric(rubric).$averageGrade}})</span>\n" +
     "\t\t\t\t\t</a>\n" +
-    "\t\t\t\t\t<a ng-switch-when=\"marked\" ui-sref=\"assessment({id: assessment.id})\" class=\"color{{averageGrade.substr(0,1)}}\">\n" +
-    "\t\t\t\t\t\t{{assessment.value || assessment.$averageGrade}}\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"marked\" ui-sref=\"assessment({id: student.assessments.$firstForRubric(rubric).id})\" class=\"color{{student.assessments.$firstForRubric(rubric).$averageGrade.substr(0,1)}}\">\n" +
+    "\t\t\t\t\t\t{{student.assessments.$firstForRubric(rubric).value || student.assessments.$firstForRubric(rubric).$averageGrade}}\n" +
     "\t\t\t\t\t</a>\n" +
-    "\t\t\t\t\t<a ng-switch-default=\"\" href=\"\" class=\"new\" ng-click=\"saveAndAssess(assessment)\"> + </a>\n" +
+    "\t\t\t\t\t<a ng-switch-default=\"\" href=\"\" class=\"new\" ng-click=\"saveAndAssess(student.assessments.$firstForRubric(rubric))\"> + </a>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
     "\t\t</div>\n" +

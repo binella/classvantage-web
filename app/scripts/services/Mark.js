@@ -45,11 +45,11 @@ angular.module('classvantageApp')
 		
 		resource.collectionPrototype.$firstForRow = function (row) {
 			for (var i=0,l=this.length; i<l; i++) {
-				if (this[i].row_id === row.id) { return this[i]; };
+				if (this[i].row.id === row.id) { return this[i]; };
 			}
 			var newInstance = resource.new({row: row, value: null});
 			this.$insert(newInstance);
-			newInstance.$save();
+			//newInstance.$save();
 			return newInstance;
 		};
 
