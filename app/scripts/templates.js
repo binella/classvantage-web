@@ -96,7 +96,7 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t</div>\n" +
     "\t\t<div style=\"clear:both\">\n" +
     "\t\t<div class=\"rubric-group\">\n" +
-    "\t\t\t<div class=\"rubric-row\" ng-repeat=\"row in assessment.rubric.rows\" ng-init=\"mark = assessment.marks.$firstForRow(row)\" ng-switch=\"mark.$wholeValue\">\n" +
+    "\t\t\t<div class=\"rubric-row\" ng-repeat=\"row in assessment.rubric.rows track by markFor(row)\" ng-switch=\"marks[row.id].$wholeValue\">\n" +
     "\t\t\t\t<div class=\"top-cover\"></div>\n" +
     "\t\t\t\t<div class=\"rubric-column criteria min-height\">\n" +
     "\t\t\t\t\t<span>{{row.criteria}}</span>\n" +
@@ -104,48 +104,48 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
     "\t\t\t\t\t<span class=\"mark four red\">\n" +
     "\t\t\t\t\t\t<div class=\"marked\" style=\"background-color:rgba(0,0,0,0.8)\" ng-switch-when=\"0\">\n" +
-    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{marks[row.id].$value}}</span>\n" +
     "\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"1\">\n" +
-    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{marks[row.id].$value}}</span>\n" +
     "\t\t\t\t\t\t</div>\n" +
-    "\t\t\t\t\t\t<div class=\"value frst colorR\" ng-click=\"saveMark(mark, 0)\"><span class=\"middle\">R</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 1)\"><span class=\"middle\">1-</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 2)\"><span class=\"middle\">1</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value frth\" ng-click=\"saveMark(mark, 3)\"><span class=\"middle\">1+</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst colorR\" ng-click=\"saveMark(marks[row.id], 0)\"><span class=\"middle\">R</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(marks[row.id], 1)\"><span class=\"middle\">1-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(marks[row.id], 2)\"><span class=\"middle\">1</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frth\" ng-click=\"saveMark(marks[row.id], 3)\"><span class=\"middle\">1+</span></div>\n" +
     "\t\t\t\t\t\t{{row.level1_description}}\n" +
     "\t\t\t\t\t</span>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
     "\t\t\t\t\t<span class=\"mark yellow\">\n" +
     "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"2\">\n" +
-    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{marks[row.id].$value}}</span>\n" +
     "\t\t\t\t\t\t</div>\n" +
-    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 4)\"><span class=\"middle\">2-</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 5)\"><span class=\"middle\">2</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 6)\"><span class=\"middle\">2+</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(marks[row.id], 4)\"><span class=\"middle\">2-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(marks[row.id], 5)\"><span class=\"middle\">2</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(marks[row.id], 6)\"><span class=\"middle\">2+</span></div>\n" +
     "\t\t\t\t\t\t{{row.level2_description}}\n" +
     "\t\t\t\t\t</span>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
     "\t\t\t\t\t<span class=\"mark bright-green\">\n" +
     "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"3\">\n" +
-    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{marks[row.id].$value}}</span>\n" +
     "\t\t\t\t\t\t</div>\n" +
-    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 7)\"><span class=\"middle\">3-</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 8)\"><span class=\"middle\">3</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 9)\"><span class=\"middle\">3+</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(marks[row.id], 7)\"><span class=\"middle\">3-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(marks[row.id], 8)\"><span class=\"middle\">3</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(marks[row.id], 9)\"><span class=\"middle\">3+</span></div>\n" +
     "\t\t\t\t\t\t{{row.level3_description}}\n" +
     "\t\t\t\t\t</span>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t\t<div class=\"rubric-column level assess\">\n" +
     "\t\t\t\t\t<span class=\"mark green\">\n" +
     "\t\t\t\t\t\t<div class=\"marked\" ng-switch-when=\"4\">\n" +
-    "\t\t\t\t\t\t\t<span class=\"middle\">{{mark.$value}}</span>\n" +
+    "\t\t\t\t\t\t\t<span class=\"middle\">{{marks[row.id].$value}}</span>\n" +
     "\t\t\t\t\t\t</div>\n" +
-    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(mark, 10)\"><span class=\"middle\">4-</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(mark, 11)\"><span class=\"middle\">4</span></div>\n" +
-    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(mark, 12)\"><span class=\"middle\">4+</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value frst\" ng-click=\"saveMark(marks[row.id], 10)\"><span class=\"middle\">4-</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value scnd\" ng-click=\"saveMark(marks[row.id], 11)\"><span class=\"middle\">4</span></div>\n" +
+    "\t\t\t\t\t\t<div class=\"value thrd\" ng-click=\"saveMark(marks[row.id], 12)\"><span class=\"middle\">4+</span></div>\n" +
     "\t\t\t\t\t\t{{row.level4_description}}\n" +
     "\t\t\t\t\t</span>\n" +
     "\t\t\t\t</div>\n" +
@@ -262,14 +262,14 @@ angular.module('classvantageApp').run(['$templateCache', function($templateCache
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
     "\t\t\t<div class=\"grade row\" ng-repeat=\"student in page.students | orderBy:'last_name'\">\n" +
-    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics\" ng-initt=\"assessment = student.assessments.$firstForRubric(rubric);averageGrade = assessment.$averageGrade;\" ng-switch=\"student.assessments.$firstForRubric(rubric).$status\">\n" +
-    "\t\t\t\t\t<a ng-switch-when=\"incomplete\" ui-sref=\"assessment({id: student.assessments.$firstForRubric(rubric).id})\" class=\"gray\">\n" +
-    "\t\t\t\t\t\t? <span ng-if=\"student.assessments.$firstForRubric(rubric).$averageGrade\">({{student.assessments.$firstForRubric(rubric).$averageGrade}})</span>\n" +
+    "\t\t\t\t<div class=\"grade-cell\" ng-repeat=\"rubric in page.rubrics track by assessmentFor(student, rubric)\" ng-switch=\"assessments[student.id][rubric.id].$status\">\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"incomplete\" ui-sref=\"assessment({id: assessments[student.id][rubric.id].id})\" class=\"gray\">\n" +
+    "\t\t\t\t\t\t? <span ng-if=\"assessments[student.id][rubric.id].$cachedAverage\">({{assessments[student.id][rubric.id].$cachedAverage}})</span>\n" +
     "\t\t\t\t\t</a>\n" +
-    "\t\t\t\t\t<a ng-switch-when=\"marked\" ui-sref=\"assessment({id: student.assessments.$firstForRubric(rubric).id})\" class=\"color{{student.assessments.$firstForRubric(rubric).$averageGrade.substr(0,1)}}\">\n" +
-    "\t\t\t\t\t\t{{student.assessments.$firstForRubric(rubric).value || student.assessments.$firstForRubric(rubric).$averageGrade}}\n" +
+    "\t\t\t\t\t<a ng-switch-when=\"marked\" ui-sref=\"assessment({id: assessments[student.id][rubric.id].id})\" class=\"color{{assessments[student.id][rubric.id].$cachedAverage.substr(0,1)}}\">\n" +
+    "\t\t\t\t\t\t{{assessments[student.id][rubric.id].value || assessments[student.id][rubric.id].$cachedAverage}}\n" +
     "\t\t\t\t\t</a>\n" +
-    "\t\t\t\t\t<a ng-switch-default=\"\" href=\"\" class=\"new\" ng-click=\"saveAndAssess(student.assessments.$firstForRubric(rubric))\"> + </a>\n" +
+    "\t\t\t\t\t<a ng-switch-default=\"\" href=\"\" class=\"new\" ng-click=\"saveAndAssess(assessments[student.id][rubric.id])\"> + </a>\n" +
     "\t\t\t\t</div>\n" +
     "\t\t\t</div>\n" +
     "\t\t</div>\n" +

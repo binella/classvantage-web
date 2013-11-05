@@ -15,14 +15,22 @@ var mountFolder = function (connect, dir) {
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
-	require('grunt-angular-templates')(grunt);
 	
 	grunt.loadNpmTasks('grunt-ng-constant');
 	
 	// FOR NOW
 	grunt.loadNpmTasks('grunt-inline-angular-templates');
 
+
 	grunt.registerTask('beep', function () {
+		var path = require('path');		
+		var filepath = 'dist/views/something.html';
+		var templateUrl = path.join('', path.relative('dist', filepath)).replace(/\\/g, '/');
+		grunt.log.writeln(templateUrl);
+		/*
+		var con = grunt.config(['concat','<%= yeoman.dist %>/scripts/scripts.js'])
+		grunt.log.write(con);
+		
 		var locator = function (p) { return grunt.file.expand({filter: 'isFile'}, p); };
 		var RevvedFinder = require(require('path').resolve('node_modules/grunt-usemin/lib/revvedfinder'));
 		var revvedfinder = new RevvedFinder(locator);
@@ -31,6 +39,7 @@ module.exports = function (grunt) {
 		var newname = revvedfinder.find('scripts.js', grunt.config('beep').dest + '/scripts');
 		grunt.config('templateHelperScriptsFile', newname);
 		grunt.log.writeln(newname);
+		*/
 	});
 
   // configurable paths
@@ -92,7 +101,7 @@ module.exports = function (grunt) {
 		inline_angular_templates: {
 			dist: {
 				options: {
-					base: '../views'
+					base: 'dist'
 				},
 				files: {
 					'dist/index.html': ['dist/views/*.html']
@@ -101,18 +110,6 @@ module.exports = function (grunt) {
 		},
 		beep: {
 			dest: '<%= yeoman.dist %>'
-		},
-		ngtemplates: {
-			app: {
-				cwd: '<%= yeoman.dist %>',
-				src: 'views/**.html',
-				dest: '<%= yeoman.app %>/scripts/templates.js',
-				options: {
-					module: 'classvantageApp',
-					concat: '<%= yeoman.dist %>/scripts/1e6e074d.scripts.js',
-					htmlmin:  '<%= htmlmin.dist %>'
-				}
-			}
 		},
     yeoman: yeomanConfig,
     watch: {
@@ -471,12 +468,9 @@ module.exports = function (grunt) {
 	    'ngmin',
 	    'cssmin',
 	    'uglify',
-
 			'inline_angular_templates',
 	    'rev',
-	    'usemin'//,
-			//'beep',
-			//'ngtemplates'
+	    'usemin'
 		]);
 	});
 
