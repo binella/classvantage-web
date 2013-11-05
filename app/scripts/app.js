@@ -1,25 +1,16 @@
 'use strict';
 
-var _oauthEndPoint = 'http://localhost\:3000/oauth/token'
-var _baseURL = 'http://localhost\:3000/v1/';
+angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
 
-//var _oauthEndPoint = 'http://com-classvantage-test.herokuapp.com/oauth/token'
-//var _baseURL = 'http://com-classvantage-test.herokuapp.com/v1/';
-
-//var _oauthEndPoint = 'http://com-classvantage-staging.herokuapp.com/oauth/token'
-//var _baseURL = 'http://com-classvantage-staging.herokuapp.com/v1/';
-
-angular.module('classvantageApp', ['ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
-
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV) {
 		
 		// Allow CORS
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 		// OAuth config
-		oauthProvider.setEndPoint(_oauthEndPoint);
-		oauthProvider.setClientId('20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de');
-		oauthProvider.setClientSecret('9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29');
+		oauthProvider.setEndPoint(ENV.oAuth.endPoint);
+		oauthProvider.setClientId(ENV.oAuth.clientId);
+		oauthProvider.setClientSecret(ENV.oAuth.clientSecret);
 
 		// Routes
 		$urlRouterProvider.otherwise("/");

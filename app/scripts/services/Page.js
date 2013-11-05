@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Page', function (Store) {
+  .factory('Page', function (Store, ENV) {
 		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
 
 		var resource = Store({
 			type: 'page',
-			url: _baseURL + 'pages',
+			url: ENV.baseURL + 'pages',
 			relations: [
 				{
 					name: 'students',

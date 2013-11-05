@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('OverallExpectation', function (Store) {
+  .factory('OverallExpectation', function (Store, ENV) {
 		return Store({
 			type: 'overall_expectation',
-			url: _baseURL + 'overall_expectations',
+			url: ENV.baseURL + 'overall_expectations',
 			relations: [
 				{
 					name: 'unit',

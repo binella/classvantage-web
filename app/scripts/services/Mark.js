@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Mark', function (Store) {
+  .factory('Mark', function (Store, ENV) {
 
 		var resource = Store({
 			type: 'mark',
-			url: _baseURL + 'marks',
+			url: ENV.baseURL + 'marks',
 			relations: [
 				{
 					name: 'assessment',

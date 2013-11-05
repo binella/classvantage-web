@@ -17,6 +17,8 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 	require('grunt-angular-templates')(grunt);
 	
+	grunt.loadNpmTasks('grunt-ng-constant');
+	
 	// FOR NOW
 	grunt.loadNpmTasks('grunt-inline-angular-templates');
 
@@ -42,6 +44,51 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
+		// ENV variables
+		ngconstant: {
+			dev: {
+				dest: '<%= yeoman.app %>/scripts/environment.js',
+				name: 'env',
+				constants: {
+					'ENV': {
+						baseURL: 'http://localhost:3000/v1/',
+						oAuth: {
+							endPoint: 'http://localhost:3000/oauth/token',
+							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
+							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
+						}
+					}
+				}
+			},
+			test: {
+				dest: '<%= yeoman.app %>/scripts/environment.js',
+				name: 'env',
+				constants: {
+					'ENV': {
+						baseURL: 'http://com-classvantage-test.herokuapp.com/v1/',
+						oAuth: {
+							endPoint: 'http://com-classvantage-test.herokuapp.com/oauth/token',
+							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
+							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
+						}
+					}
+				}
+			},
+			staging: {
+				dest: '<%= yeoman.app %>/scripts/environment.js',
+				name: 'env',
+				constants: {
+					'ENV': {
+						baseURL: 'http://com-classvantage-staging.herokuapp.com/v1/',
+						oAuth: {
+							endPoint: 'http://com-classvantage-staging.herokuapp.com/oauth/token',
+							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
+							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
+						}
+					}
+				}
+			}
+		},
 		inline_angular_templates: {
 			dist: {
 				options: {
@@ -395,6 +442,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
+			'ngconstant:dev',
       'open',
       'watch'
     ]);
@@ -408,24 +456,29 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
-    'clean:dist',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'copy:dist',
-    'cdnify',
-    'ngmin',
-    'cssmin',
-    'uglify',
-		
-		'inline_angular_templates',
-    'rev',
-    'usemin'//,
-		//'beep',
-		//'ngtemplates'
-  ]);
+	grunt.registerTask('build', function (target) {
+		target = target || 'test'; // FOR NOW
+			
+		grunt.task.run([
+			'clean:dist',
+	    'useminPrepare',
+	    'concurrent:dist',
+	    'autoprefixer',
+			'ngconstant:' + target,
+	    'concat',
+	    'copy:dist',
+	    'cdnify',
+	    'ngmin',
+	    'cssmin',
+	    'uglify',
+
+			'inline_angular_templates',
+	    'rev',
+	    'usemin'//,
+			//'beep',
+			//'ngtemplates'
+		]);
+	});
 
   grunt.registerTask('default', [
     'jshint',
