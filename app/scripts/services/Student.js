@@ -22,6 +22,17 @@ angular.module('classvantageApp')
 			]
 		});
 
+		resource.resourcePrototype.$assessmentsForRubrics = function (rubrics) {
+			//console.log('CALLED');
+			var arr = [];
+			for (var i=0, l=rubrics.length; i<l; i++) {
+				var assessment = this.assessments.$firstForRubric(rubrics[i]);
+				assessment.$cachedAverage = assessment.$averageGrade;
+				arr.push(assessment);
+			}
+			return arr;
+		}
+
 		return resource;
   })
 // This is required to load the factory, otherwise angular wont load until its needed

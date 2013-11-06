@@ -13,13 +13,13 @@
 			<div style="float:left;width:639px;">
 				<textarea ng-model="rubric.title" class="title-input-text editable-text" msd-elastic="" 
 									placeholder="Type a title" rows="2" cols="17" autocorrect="off" 
-									style="height:100px;" blurs-on-enter cv-input></textarea>
+									style="height:100px;" ng-blur="rubric.$save()" blurs-on-enter></textarea>
 				<br />
 				<a class="plus white" ng-click="displayDesc = true"
 					 ng-show="(rubric.description == null || rubric.description == '') && displayDesc == false">Add a description</a>
 				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text editable-text"
 									ng-show="(rubric.description != null && rubric.description != '') || displayDesc == true"
-									focus-when="displayDesc == true" ng-blur="displayDesc = false" cv-input></textarea>
+									focus-when="displayDesc == true" ng-blur="displayDesc = false;rubric.$save();"></textarea>
 			</div>
 			
 			<div style="float:left;width:1px;height:215px;margin-top:21px;" class="verticalLine"></div>
@@ -28,21 +28,21 @@
 				<ul>
 					<li>
 						<span>Grade:</span><br/>
-						<select ng-model="rubric.unit.grade" ng-change="rubric.unit.strand.subject.id = null;rubric.unit_id = null;updateModel();"
-										ng-options="u.grade as u.grade for u in units | unique:'grade'" cv-styled-select></select>
+						<select ng-model="rubric.$grade" ng-change="rubric.$subjectId = null;rubric.unit = null;rubric.$save();selectionChanged('subject_id',null);selectionChanged('unit',null);selectionChanged('overall',null);"
+										ng-options="u.grade as u.grade for u in units | unique:'grade' | orderBy:'grade'" cv-styled-select></select>
 					</li>
 					<li>
 						<span>Subject:</span><br/>
-						<select ng-model="rubric.unit.strand.subject.id" class="wide-select" ng-disabled="rubric.unit.grade == null" ng-change="rubric.unit_id = null;updateModel();"
-										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.unit.grade} | unique:'subject_id'" cv-styled-select>
+						<select ng-model="rubric.$subjectId" class="wide-select" ng-disabled="rubric.$grade === null" ng-change="rubric.unit = null;rubric.$save();"
+										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.$grade} | unique:'subject_id' | orderBy:'id'" cv-styled-select>
 							<option value="" disabled="disabled" >Select a subject</option>
 						</select>
 					</li>
 					<li>
 						<span>Unit:</span><br/>
-						<select ng-model="rubric.unit_id" class="wide-select" ng-disabled="rubric.unit.strand.subject.id == null"
-										ng-options="u.id as u.title for u in units | filter: filterUnits"
-										ng-change="updateModel()" cv-styled-select>
+						<select ng-model="rubric.unit" class="wide-select" ng-disabled="rubric.$subjectId == null"
+										ng-options="u as u.title for u in units | filter: filterUnits | orderBy:'id'"
+										ng-change="rubric.$save()" cv-styled-select>
 							<option value="" disabled="disabled">Select a unit</option>
 						</select>
 					</li>
@@ -103,9 +103,60 @@
 			</div>
 		</div>
 		
+		<!-- SPECIFIC EXPECTATIONS -->
+		<br/>
+		<div class="specific-picker" ng-show="showSpecificSelect">
+			<a class="close-button" ng-click="showSpecificSelect = false"><img src="images/beige-ex.png" /></a>
+			<div class="column-container animate-slide" ng-show="!selection.overall">
+				<div class="column shadow" style="width:296px;">
+					<span>SUBJECTS</span>
+					<div class="list">
+						<ul>
+							<li ng-repeat="u in units | filter:{grade: rubric.$grade} | unique:'subject_id'"
+									ng-class="{true:'selected'}[selection.subject_id === u.subject_id]"
+									ng-click="selectionChanged('subject_id', u.subject_id)">{{u.strand.subject.title}}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column shadow" style="width:353px;z-index:102;">
+					<span>UNIT</span>
+					<div class="list">
+						<ul>
+							<li ng-repeat="unit in units | filter:filterUnitsSpec"
+									ng-class="{true:'selected'}[selection.unit === unit]"
+									ng-click="selectionChanged('unit', unit)">{{unit.title}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="column" style="width:280px;z-index:101;">
+				<span ng-click="selection.overall = null">
+					<div ng-show="!selection.overall">OVERALL EXPECTATIONS</div>
+					<div class="back-button" ng-show="selection.overall">change unit</div>
+				</span>
+				<div class="list">
+					<ul>
+						<li ng-repeat="overall in selection.unit.overall_expectations"
+								ng-class="{true:'selected'}[selection.overall === overall]"
+						 		ng-click="selectionChanged('overall', overall)">{{overall.short_form}}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="column white" style="">
+				<div class="list">
+					<ul>
+						<li ng-repeat="specific in selection.overall.specific_expectations"
+								ng-click="addRow({criteria: specific.description})">{{specific.description}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		
 		<br/><br/><br/><br/><br/>
-		<a class="plus green" ng-click="addRow()" style="margin-left:-39px;">Add a specific expectation</a>
-		<br/><br/>
+		<div ng-show="!showSpecificSelect">
+			<a class="plus green" ng-click="showSpecificSelect = true" style="margin-left:-39px;">Add specific expectation</a>
+			<a class="plus green" ng-click="addRow({})" style="margin-left:39px;">Add custom expectation</a>
+		</div>
+		<br/><br/></br>
 	</section>
 </div>

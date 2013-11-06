@@ -48,11 +48,11 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
 						var rubric = Rubric.fetchOne($stateParams.id);
 						rubric.$promise.then(function (rubric) {
-							if (!rubric.unit.grade)
-								rubric.unit = {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
+							rubric.$resolveGradeAndSubject();
 							return rubric;
 						});
-						rubric.unit = rubric.unit || {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
+						rubric.$resolveGradeAndSubject();
+						//rubric.unit = rubric.unit || {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
 						return rubric;
 					}],
 					units: ['Unit', function (Unit) {
@@ -201,11 +201,30 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 	.directive('cvStyledCheckbox', ['$timeout', function ($timeout) {
 		return {
 			restrict: 'A',
-			link: function(scope, element, attrs) {
+			require: 'ngModel',
+			link: function(scope, element, attrs, ngModel) {
 				element.uniform({});
+				scope.$watch(function() {return ngModel.$modelValue}, function() {
+					$timeout(jQuery.uniform.update, 0);
+				});
 			}
 		}
 	}])
+	
+	.directive('cvPattern', function () {
+		
+		return {
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				var regex = eval(attrs.cvPattern);
+				// TODO: also do onChange
+				element.bind('keypress', function (event) {
+					var value = element.val() + String.fromCharCode(event.which);
+					if (!regex.test(value)) { event.preventDefault() };
+				});
+			}
+		}
+	})
 	
 	.directive('scrollWith', function () {
 		return {

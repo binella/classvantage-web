@@ -5,6 +5,13 @@ angular.module('classvantageApp')
 		
 		$scope.assessment = assessment;
 
+		$scope.toggleAutograde = function () {
+			if ($scope.assessment.value) { 
+				$scope.assessment.value = null;
+				$scope.assessment.$save();
+			}
+		}
+		
 		$scope.saveMark = function (mark, value) {
 			mark.value = value;
 			mark.$save();

@@ -104,12 +104,19 @@
 
 <!-- FINAl GRADE -->
 <div class="final">
-	<span>FINAL GRADE</span>
+	<span class="grade-span">FINAL GRADE</span>
 	<div class="grade color{{assessment.$averageGrade.substr(0,1)}}">
-		<span>{{assessment.$averageGrade || '?'}}</span>
+		<span class="grade-span" ng-show="assessment.$isAutoGrade">{{assessment.$averageGrade.substr(0,1) || '?'}}</span>
+		<input class="manual" type="text" 
+					 ng-show="!assessment.$isAutoGrade"
+					 ng-model="assessment.$averageGrade" 
+					 ng-blur="assessment.$save()" 
+					 cv-pattern="/^(r|R|[1-4](\+|\-)?)$/"
+					 blurs-on-enter></input>
 	</div>
 	<span class="auto-grade">
-		<input type="checkbox" style="display:none;" checked></input>&nbsp;
+		<input type="checkbox" ng-model="assessment.$isAutoGrade" 
+													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
 	<a class="btn" ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">Finished</a>
 </div>
