@@ -11,19 +11,34 @@ angular.module('classvantageApp')
 			$scope.selection.subject_id = r.$subjectId;
 			if (r.unit) { r.unit.$reload(); };
 		});
+		$scope.overallEnabled = {};
 		$scope.displayDesc = false;
 		
 		
 		// TODO: make a global fix for this + file an issue on github
 		$scope.filterUnits = function (unit) {
-			//if (!$scope.rubric.unit) {return false};
 			return unit.grade === $scope.rubric.$grade && unit.strand.subject.id === $scope.rubric.$subjectId;
 		}
+		
+		$scope.updateRubricOveralls = function (overall, checked) {
+			if (checked) { 
+				$scope.rubric.overall_expectations.$insert(overall);
+			} else {
+				$scope.rubric.overall_expectations.$remove(overall);
+			}
+			$scope.rubric.$save();
+		}
+		
+		$scope.$watch('rubric.custom_expectation', function (new_value, old_value) {
+			if (new_value !== old_value && old_value !== undefined)
+				$scope.rubric.custom_expectation_enabled = new_value !== '';
+		});
 		
 		$scope.addRow = function (data) {
 			var row = Row.new(data);
 			$scope.rubric.rows.$insert(row);
 			row.$save();
+			$scope.showSpecificSelect = false;
 		}
 		
 		$scope.deleteRow = function(row) {
@@ -47,7 +62,7 @@ angular.module('classvantageApp')
 		// Specific Expectation Row
 		// TODO: make a global fix for this + file an issue on github
 		$scope.filterUnitsSpec = function (unit) {
-			return unit.grade == $scope.rubric.$grade && unit.strand.subject.id == $scope.selection.subject_id;
+			return unit.grade === $scope.rubric.$grade && unit.strand.subject.id === $scope.selection.subject_id;
 		}
 		
 		

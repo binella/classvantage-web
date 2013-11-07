@@ -12,6 +12,24 @@
 		font-weight:300;
 		font-family: $roboto;
 		resize:none;
+		margin-left:-2px;
+	}
+	
+	li {
+		
+		.dark-uniform {
+			position:absolute;
+			margin-left:-30px;
+			margin-top:-1px;
+		}
+		
+		color:$dark-beige;
+		padding-bottom:15px;
+		line-height:26px;
+		font-weight:300;
+		font-size:18px;
+		padding-left:30px;
+		
 	}
 	
 	::-webkit-input-placeholder { /* WebKit browsers */

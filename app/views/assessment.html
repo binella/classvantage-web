@@ -106,7 +106,7 @@
 <div class="final">
 	<span class="grade-span">FINAL GRADE</span>
 	<div class="grade color{{assessment.$averageGrade.substr(0,1)}}">
-		<span class="grade-span" ng-show="assessment.$isAutoGrade">{{assessment.$averageGrade.substr(0,1) || '?'}}</span>
+		<span class="grade-span" ng-show="assessment.$isAutoGrade">{{assessment.$averageGrade || '?'}}</span>
 		<input class="manual" type="text" 
 					 ng-show="!assessment.$isAutoGrade"
 					 ng-model="assessment.$averageGrade" 

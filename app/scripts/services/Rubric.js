@@ -20,6 +20,11 @@ angular.module('classvantageApp')
 				{
 					name: 'unit',
 					type: 'unit'
+				},
+				{
+					name: 'overall_expectations',
+					type: 'overall_expectation',
+					isArray: true
 				}
 			]
 		});
@@ -33,6 +38,16 @@ angular.module('classvantageApp')
 				this.$subjectId = this.unit.strand.subject.id;
 			}
 		};
+		
+		resource.resourcePrototype.$hasOverall = function (overall) {
+			// SHOULD BE ABLE TO USE indexOf
+			for (var i=0, l=this.overall_expectations.length; i<l; i++) {
+				if (overall.id === this.overall_expectations[i].id) {
+					return true;
+				};
+			}
+			return false;
+		}
 		
 		return resource;    
   })
