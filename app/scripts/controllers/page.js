@@ -3,31 +3,22 @@
 angular.module('classvantageApp')
   .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, currentPage, pages) {
 		
-		// We are promissed currentPage here
 		$scope.page = currentPage;	
 		$scope.rubrics = $scope.page.rubrics;
 
-		//console.log(temp);
-		// New Rubric
 		$scope.newRubric = function () {
-			//console.log(temp);
-			//console.log(temp === $scope.page.rubrics);
-			// TOOD: find a good way to set page_id vs. page
-			//Rubric.create({page_id: $scope.page.id, page: $scope.page}).$promise.then(function (rubric) {
-			//	$location.path('/rubrics/' + rubric.id);
-			//}, function () { alert('Error creating rubric'); });
-			
-			$scope.page.$reload();
-			//var temp = $scope.page.rubrics[0];
-			//$scope.page.rubrics[0] = $scope.page.rubrics[1];
-			//$scope.page.rubrics[1] = temp;
+			var rubric = Rubric.new();
+			$scope.page.rubrics.$insert(rubric);
+			rubric.$save().then(function (r) {
+				$location.path('/rubrics/' + r.id);
+			});
 		};
 		
 		$scope.newAssignment = function () {
 			var assignment = Assignment.new();
 			$scope.page.assignments.$insert(assignment);
 			assignment.$save();
-		}
+		};
 		
 		// New Student
 		$scope.newStudent = function () {
