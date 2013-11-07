@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, currentPage, pages) {
+  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, currentPage, pages) {
 		
 		// We are promissed currentPage here
 		$scope.page = currentPage;	
@@ -23,9 +23,11 @@ angular.module('classvantageApp')
 			//$scope.page.rubrics[1] = temp;
 		};
 		
-		//$scope.$watchCollection('page.rubrics', function(){
-		//	console.log('WATCH');
-		//});
+		$scope.newAssignment = function () {
+			var assignment = Assignment.new();
+			$scope.page.assignments.$insert(assignment);
+			assignment.$save();
+		}
 		
 		// New Student
 		$scope.newStudent = function () {
@@ -70,12 +72,6 @@ angular.module('classvantageApp')
 		
 		
 		// Assessments
-		
-		$scope.studentId = function (student) {
-			//console.log(student);
-			return '_' + Math.random().toString(36).substr(2, 9);
-		}
-		
 		/*
 		$scope.assessments = {};
 		

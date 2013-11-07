@@ -19,6 +19,12 @@ angular.module('classvantageApp')
 					type: 'rubric',
 					inverse: 'page',
 					isArray: true
+				},
+				{
+					name: 'assignments',
+					type: 'assignment',
+					inverse: 'page',
+					isArray: true
 				}
 			]
 		});

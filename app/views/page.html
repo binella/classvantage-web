@@ -27,24 +27,33 @@
 <div class="grid-container">
 	<div class="drop-shadow" ng-show="page.rubrics.length > 5"></div>
 	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length > 0" scroll-with="#grid-scrollbar" >
-		<div class="scroll-content" ng-style="{width: (page.rubrics.length*117) + 'px'}">
+		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*117) + 'px'}">
 			<div class="rubric header-row">
-				<div class="rubric header-cell" ng-repeat="rubric in page.rubrics">
-					<div class="title-container">
-						<a ui-sref="rubric({id: rubric.id})">{{rubric.title || 'Untitled'}}</a>
+				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments)">
+					<div class="title-container" ng-switch="column.$type">
+						<a ng-switch-when="rubric" ui-sref="rubric({id: column.id})">{{column.title || 'Untitled'}}</a>
+						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" msd-elastic="" blurs-on-enter></textarea>
 					</div>
 				</div>
 			</div>
 			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
-				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsForRubrics(page.rubrics)" gng-repeat="rubric in page.rubrics track by assessmentFor(student, rubric)" 
-																ng-switch="assessment.$status">
-					<a ng-switch-when="incomplete" ui-sref="assessment({id: assessment.id})" class="gray">
-						? <span ng-if="assessment.$cachedAverage">({{assessment.$cachedAverage}})</span>
-					</a>
-					<a ng-switch-when="marked" ui-sref="assessment({id: assessment.id})" class="color{{assessment.$cachedAverage.substr(0,1)}}">
-						{{assessment.$cachedAverage}}
-					</a>
-					<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
+				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments)" 
+																ng-switch-old="assessment.$status"
+																ng-switch="assessment.assessable.$type">
+					<span ng-switch-when="rubric" ng-switch="assessment.$status">
+						<a ng-switch-when="incomplete" ui-sref="assessment({id: assessment.id})" class="gray">
+							? <span ng-if="assessment.$cachedAverage">({{assessment.$cachedAverage}})</span>
+						</a>
+						<a ng-switch-when="marked" ui-sref="assessment({id: assessment.id})" class="color{{assessment.$cachedAverage.substr(0,1)}}">
+							{{assessment.$cachedAverage}}
+						</a>
+						<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
+					</span>
+					<span ng-switch-when="assignment">
+						<a class="color{{assessment.$assignmentAverage}}">
+							<input type="text" ng-model="assessment.value" cv-pattern="/^[1-9]\d?$/" ng-blur="assessment.$save()" blurs-on-enter/>%
+						</a>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -53,9 +62,20 @@
 <div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length > 0]" ng-style="{height: (94 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
 	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]">
 		<div class="rubric header-cell" ng-style="{width: (page.rubrics.length > 0 ? '113px' : '265px')}">
-			<a class="plus green"  ng-style="{'margin-left': (page.rubrics.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;" ng-click="newRubric()">
-				{{page.rubrics.length > 0 ? '' : 'Add your first rubric'}}
+			<a class="plus green dropdown-toggle"  ng-style="{'margin-left': (page.rubrics.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;">
+				
 			</a>
+			<ul class="dropdown-menu" style="">
+	    	<li>
+	      	<a class="menu-item" ng-click="newRubric()">{{page.rubrics.length > 0 ? 'Rubric' : 'Add your first rubric'}}</a>
+	    	</li>
+				<li>
+					<a class="menu-item" ng-click="newAssignment()">Manual Assignment</a>
+				</li>
+				<li>
+					<a class="menu-item" ng-click="newCheckAssignment()">Manual Check</a>
+				</li>
+	  	</ul>
 		</div>
 	</div>
 </div>

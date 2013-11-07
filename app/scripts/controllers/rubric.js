@@ -9,7 +9,7 @@ angular.module('classvantageApp')
 		$scope.rubric.$promise.then(function (r) {
 			$scope.selection.unit = r.unit;
 			$scope.selection.subject_id = r.$subjectId;
-			if (r.unit) { r.unit.$reload(); };
+			if (r.unit && r.unit.$reload) { r.unit.$reload(); }; // This should somehow be handled in data-store: {} is returned when there is no association
 		});
 		$scope.overallEnabled = {};
 		$scope.displayDesc = false;
@@ -68,7 +68,9 @@ angular.module('classvantageApp')
 		
 		$scope.selectionChanged = function (key, value) {
 			$scope.selection[key] = value;
-			if (key === 'unit' && value !== null) 
+			console.log(key + ':');
+			console.log(value);
+			if (key === 'unit' && value !== null)
 				value.$reload();
 		}
 		

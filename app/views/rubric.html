@@ -42,7 +42,7 @@
 						<span>Unit:</span><br/>
 						<select ng-model="rubric.unit" class="wide-select" ng-disabled="rubric.$subjectId == null"
 										ng-options="u as u.title for u in units | filter: filterUnits | orderBy:'id'"
-										ng-change="rubric.$save()" cv-styled-select>
+										ng-change="rubric.$save();rubric.unit.$reload();" cv-styled-select>
 							<option value="" disabled="disabled">Select a unit</option>
 						</select>
 					</li>

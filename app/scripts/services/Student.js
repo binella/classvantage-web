@@ -22,12 +22,18 @@ angular.module('classvantageApp')
 			]
 		});
 
-		resource.resourcePrototype.$assessmentsForRubrics = function (rubrics) {
-			//console.log('CALLED');
+		resource.resourcePrototype.$assessmentsFor = function (rubrics, assignments) {
 			var arr = [];
+			// Rubrics
 			for (var i=0, l=rubrics.length; i<l; i++) {
 				var assessment = this.assessments.$firstForRubric(rubrics[i]);
 				assessment.$cachedAverage = assessment.$averageGrade;
+				arr.push(assessment);
+			}
+			// Assignments
+			for (var i=0, l=assignments.length; i<l; i++) {
+				var assessment = this.assessments.$firstForAssignment(assignments[i]);
+				assessment.$cachedAverage = '99';
 				arr.push(assessment);
 			}
 			return arr;

@@ -128,6 +128,12 @@
 .color {
 	background-color:$silver;
 }
+.color0 {
+	color:$dark-beige !important;
+	input {
+		border:1px solid $dark-beige !important;
+	}
+}
 .color1 {
 	background-color:$red;
 }

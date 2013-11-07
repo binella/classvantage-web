@@ -4,14 +4,14 @@
   	<form>
 			
 			<div class="breadcrumbs">
-				<div ng-show="assessment.rubric.page">
-					<a ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">{{assessment.rubric.page.title}}</a>
-					<span>{{assessment.rubric.title || 'Untitled'}}</span>
+				<div ng-show="assessment.assessable.page">
+					<a ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">{{assessment.assessable.page.title}}</a>
+					<span>{{assessment.assessable.title || 'Untitled'}}</span>
 				</div>
 			</div>
 			
 			<div style="float:left;width:639px;">
-				<label class="title-input-text" style="margin-left:28px;">{{assessment.rubric.title}}</label>
+				<label class="title-input-text" style="margin-left:28px;">{{assessment.assessable.title}}</label>
 				<br />
 
 			</div>
@@ -36,7 +36,7 @@
 		<div style="clear:both;">
 		<div class="rubric-group">
 			<div class="rubric-row" 
-					 ng-repeat="row in assessment.rubric.rows track by markFor(row)"
+					 ng-repeat="row in assessment.assessable.rows track by markFor(row)"
 					 ng-switch="marks[row.id].$wholeValue">
 				<div class="top-cover"></div>
 				<div class="rubric-column criteria min-height">
@@ -118,5 +118,5 @@
 		<input type="checkbox" ng-model="assessment.$isAutoGrade" 
 													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
-	<a class="btn" ui-sref="gradebook.page({page_id: assessment.rubric.page.id})">Finished</a>
+	<a class="btn" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
 </div>

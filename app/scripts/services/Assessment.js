@@ -12,10 +12,16 @@ angular.module('classvantageApp')
 					type: 'student',
 					inverse: 'assessments'
 				},
+				//{
+				//	name: 'rubric',
+				//	type: 'rubric',
+				//	inverse: 'assessments' // DOES THIS EXIST?
+				//},
 				{
-					name: 'rubric',
-					type: 'rubric',
-					inverse: 'assessments' // DOES THIS EXIST?
+					name: 'assessable',
+					type: 'assessable',
+					inverse: 'assessments',
+					polymorphic: true
 				},
 				{
 					name: 'marks',
@@ -42,7 +48,11 @@ angular.module('classvantageApp')
 				if (!this.id) { return 'not_started'; };
 				if (this.value !== null) { return 'marked'; };
 				if (this.$shouldAutoGrade && (this.value === null || this.value === '')) { return 'incomplete'; };
-				if (this.marks.length < this.rubric.rows.length || this.rubric.rows.length === 0) { return 'incomplete'; }
+				
+				if (this.assessable_type === 'Rubric') {
+					if (this.marks.length < this.assessable.rows.length || this.assessable.rows.length === 0) { return 'incomplete'; }
+				}
+				
 				for (var i=0,l=this.marks.length; i<l; i++) {
 					if (this.marks[i].value === null) { return 'incomplete'; };
 				}
@@ -95,17 +105,38 @@ angular.module('classvantageApp')
 			}
 		})
 		
+		Object.defineProperty(resource.resourcePrototype, '$assignmentAverage', {
+			get: function () {
+				if (!this.value || this.value == '') { return 0; };
+				if (this.value < 60) { return 1;};
+				if (this.value < 70) { return 2;};
+				if (this.value < 80) { return 3;};
+				return 4;
+			}
+		})
+		
+		// Collection methods
 		
 		resource.collectionPrototype.$firstForRubric = function (rubric) {
-
+			// TODO: merge these two methods
 			for (var i=0,l=this.length; i<l; i++) {
-				if (this[i].rubric.id === rubric.id) { return this[i]; };
+				if (this[i].assessable.id === rubric.id && this[i].assessable.$type === rubric.$type) { return this[i]; };
 			}
-			var newInstance = resource.new({rubric: rubric});
+			var newInstance = resource.new({assessable: rubric});
 			this.$insert(newInstance);
 			return newInstance;
 		};
 		
+		resource.collectionPrototype.$firstForAssignment = function (assignment) {
+			for (var i=0,l=this.length; i<l; i++) {
+				if (this[i].assessable.id === assignment.id && this[i].assessable.$type === assignment.$type) {
+					return this[i];
+				}
+			}
+			var newInstance = resource.new({assessable: assignment});
+			this.$insert(newInstance);
+			return newInstance;
+		};
 		
 
 		return resource;

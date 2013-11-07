@@ -76,7 +76,7 @@
 	width: 115px;
 	height: 100%;
 	
-	a:not(.plus) {
+	a:not(.plus):not(.menu-item) {
 		position: absolute;
 		bottom: 0;
 		margin: 17px;
@@ -85,9 +85,36 @@
 		line-height: 19px;
 	}
 	
+	.dropdown-menu {
+		position:relative;
+		top:60px;
+		border:3px solid $green;
+		color:$green;
+		
+		li {
+			a {
+				
+			}
+		}
+	}
+	
 	.title-container {
 		position: relative;
 		height: 95px;
+		overflow:hidden;
+		
+		textarea {
+			position: absolute;
+			bottom: -3px;
+			margin: 17px;
+			font-size: 14px;
+			color: #666050;
+			line-height: 19px;
+			width: 78px;
+			outline: none;
+			border: none;
+			resize: none;
+		}
 	}
 }
 
@@ -113,6 +140,20 @@
 		color:white;
 		font-size:16px;
 		position:relative;
+		
+		input {
+			width:25px;
+			font-size:16px;
+			text-align:center;
+			margin-top:-4px;
+			margin-left:12px;
+			margin-right:2px;
+			background:transparent;
+			border:1px solid white;
+			color:white;
+			outline:none;
+		}
+		
 	}
 	
 	a.new {
