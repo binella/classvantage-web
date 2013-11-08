@@ -68,8 +68,6 @@ angular.module('classvantageApp')
 		
 		$scope.selectionChanged = function (key, value) {
 			$scope.selection[key] = value;
-			console.log(key + ':');
-			console.log(value);
 			if (key === 'unit' && value !== null)
 				value.$reload();
 		}

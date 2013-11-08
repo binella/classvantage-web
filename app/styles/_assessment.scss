@@ -187,7 +187,7 @@
 	right:0;
 	background-color:$dark-slate;
 	top:358px;
-	@include border-left-radius(5px);
+	@include border-left-radius(6px);
 	color:white;
 	z-index:999;
 	
@@ -235,7 +235,6 @@
 	}
 	
 	.btn {
-		background-color:$green;
 		margin-left:auto;
 		margin-right:auto;
 		display:block;

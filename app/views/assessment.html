@@ -97,9 +97,17 @@
 		</div>
 		
 		
-		<br/><br/><br/><br/><br/>
+		<br/><br/><br/>
 
 	</section>
+	<section class="specific">
+		<h4>ADDITIONAL COMMENTS</h4>
+		<br/>
+		<span class="overalls">
+			<textarea ng-model="assessment.comment" class="editable-text" style="height:22px;margin-top:8px;" msd-elastic="" placeholder="Type a comment" ng-blur="assessment.$save()" blurs-on-enter></textarea>
+		</span>
+	</section>
+	<br/><br/><br/>
 </div>
 
 <!-- FINAl GRADE -->
@@ -118,5 +126,5 @@
 		<input type="checkbox" ng-model="assessment.$isAutoGrade" 
 													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
-	<a class="btn" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
+	<a class="btn btn-green" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
 </div>
