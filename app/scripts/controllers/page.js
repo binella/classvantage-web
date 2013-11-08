@@ -14,8 +14,8 @@ angular.module('classvantageApp')
 			});
 		};
 		
-		$scope.newAssignment = function () {
-			var assignment = Assignment.new();
+		$scope.newAssignment = function (data) {
+			var assignment = Assignment.new(data);
 			$scope.page.assignments.$insert(assignment);
 			assignment.$save();
 		};

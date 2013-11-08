@@ -28,12 +28,13 @@ angular.module('classvantageApp')
 			for (var i=0, l=rubrics.length; i<l; i++) {
 				var assessment = this.assessments.$firstForRubric(rubrics[i]);
 				assessment.$cachedAverage = assessment.$averageGrade;
+				assessment.$columnCreatedAt = rubrics[i].created_at;
 				arr.push(assessment);
 			}
 			// Assignments
 			for (var i=0, l=assignments.length; i<l; i++) {
 				var assessment = this.assessments.$firstForAssignment(assignments[i]);
-				assessment.$cachedAverage = '99';
+				assessment.$columnCreatedAt = assignments[i].created_at;
 				arr.push(assessment);
 			}
 			return arr;

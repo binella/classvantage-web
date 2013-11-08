@@ -264,19 +264,62 @@ div.criteria {
 	div.column.white {
 		background:transparent;
 		color:$dark-slate;
-		width:578px;
+		width:649px;
 		//padding-left:35px;
 		//padding-right:35px;
 		
+		.list {
+			height:100%;
+		}
+		
+		ul {
+			margin-top:5px;
+		}
+		
 		li {
-			border-bottom:2px solid $greenish-gray;
 			padding-left:38px;
 			cursor:default;
 			font-size:14px;
-			background-image:url(/images/btn-plus-green.png);
-			background-repeat:no-repeat;
-			background-position:left center;
+			//background-image:url(/images/btn-plus-green.png);
+			//background-repeat:no-repeat;
+			//background-position:left top 18px;
+			margin-left:40px;
+			margin-right:40px;
+			line-height:23px;
+			min-height:46px;
+			padding-top:12px;
+			padding-bottom:5px;
+			margin-top:7px;
+			cursor:pointer;
 			
+			.plus {
+				//display: block;
+				background-image: url(/images/btn-plus-green.png);
+				width: 2px;
+				//height: 23px;
+				position: absolute;
+				margin-left: -38px;
+				margin-top: 5px;
+				background-repeat: no-repeat;
+				border:none;
+			}
+		}
+		
+		li:not(:last-child) {
+			border-bottom:1px solid lightgray;
+		}
+		
+		li:last-child {
+			border-bottom:none;
+		}
+		
+		li:hover {
+			background-color:transparent;
+			color:$green;
+			
+			.plus {
+				background-position:-22px 0px;
+			}
 		}
 	}
 	

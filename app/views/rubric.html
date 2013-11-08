@@ -61,13 +61,13 @@
 		<ul class="overalls">
 			<li ng-repeat="overall in rubric.unit.overall_expectations" ng-init="overallEnabled[overall.id] = rubric.$hasOverall(overall)">
 				<span class="dark-uniform">
-					<input type="checkbox" ng-model="overallEnabled[overall.id]" ng-change="updateRubricOveralls(overall, overallEnabled[overall.id])" cv-styled-checkbox/>
+					<input type="checkbox" style="cursor:pointer;" ng-model="overallEnabled[overall.id]" ng-change="updateRubricOveralls(overall, overallEnabled[overall.id])" cv-styled-checkbox/>
 				</span>
 				{{overall.long_form}}
 			</li>
 			<li>
 				<span class="dark-uniform">
-				 <input type="checkbox" ng-model="rubric.custom_expectation_enabled" ng-change="rubric.$save()" cv-styled-checkbox/>
+				 <input type="checkbox" style="cursor:pointer;" ng-model="rubric.custom_expectation_enabled" ng-change="rubric.$save()" cv-styled-checkbox/>
 				</span>
 				<textarea ng-model="rubric.custom_expectation" class="editable-text" style="height:22px;" msd-elastic="" placeholder="Type an overall expectation" ng-blur="rubric.$save()" blurs-on-enter></textarea>
 			</li>
@@ -153,13 +153,16 @@
 				<div class="list">
 					<ul>
 						<li ng-repeat="specific in selection.overall.specific_expectations"
-								ng-click="addRow({criteria: specific.description});">{{specific.description}}</li>
+								ng-click="addRow({criteria: specific.description});">
+								<span class="plus"></span>
+								{{specific.description}}
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		
-		<br/><br/><br/><br/><br/>
+		<br/><br/>
 		<div ng-show="!showSpecificSelect">
 			<a class="plus green" ng-click="showSpecificSelect = true" style="margin-left:-39px;">Add specific expectation</a>
 			<a class="plus green" ng-click="addRow({})" style="margin-left:39px;">Add custom expectation</a>
