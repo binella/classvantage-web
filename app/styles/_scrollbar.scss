@@ -52,6 +52,7 @@ div.scrollbar::-webkit-scrollbar-thumb {
   left:0;
   width:100%;
   height:100%;
+	z-index:999;
 	@include inner-shadow(15px, 0px, 99px, -56px, black);
 }
 

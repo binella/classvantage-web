@@ -20,6 +20,14 @@ angular.module('classvantageApp')
 			assignment.$save();
 		};
 		
+		$scope.removeAssignment = function (assignment) {
+			var confirmRemove = confirm("Are you sure you want to delete this column?");
+			if (confirmRemove) {
+				$scope.page.assignments.$remove(assignment);
+				$scope.page.$save();
+			};
+		}
+		
 		// New Student
 		$scope.newStudent = function () {
 			var modalInstance = $modal.open({
@@ -81,6 +89,11 @@ angular.module('classvantageApp')
 				$location.path('/assessments/' + assessment.id);
 			});
 		}
-			
+		
+		
+		$scope.delayComment = function () {
+			console.log('ata');
+		}
+		
   });
 

@@ -25,7 +25,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				controller: 'GradebookCtrl',
 				resolve: {
 					pages: ['Page', function (Page) {
-						return Page.fetchAll().$promise;
+						return Page.fetchAll();
 					}]
 				}
 			})
@@ -117,7 +117,8 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 	    }
 	  }
 	})
-
+	
+	/*
 	.directive('cvInput', function() {
 		return {
 			restrict: 'A',
@@ -130,7 +131,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 			}
 		}
 	})
-	
+	*/
 	.directive('blursOnEnter', function (){
 		return {
 			restrict: 'A',
@@ -232,16 +233,135 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 			link: function (scope, element, attrs) {
 				var elm = $(element), target = $(attrs.scrollWith);
 				target.scroll(function(){
-		        elm
-		            .scrollLeft(target.scrollLeft());
+		        elm.scrollLeft(target.scrollLeft());
+						//$('.bubble').css('margin-left', 106-target.scrollLeft());
+						$('.delay-bubble').removeClass('delay-bubble');
 		    });
 		    elm.scroll(function(){
-		        target
-		            .scrollLeft(elm.scrollLeft());
+		        target.scrollLeft(elm.scrollLeft());
+						//$('.bubble').css('margin-left', 106-elm.scrollLeft());
 		    });
 			}
 		}
 	})
+	
+	.directive('bubbleDelay', ['$timeout', function ($timeout) {
+		var bubbleTimer, fromMouseOver;
+		return {
+			restrict: 'CA',
+			link: function(scope, element, attrs) {
+				
+				element.bind('mouseenter', function (event) {
+					clearTimeout(bubbleTimer);
+					if (scope.$eval(attrs.bubbleDelay)) {
+						
+						bubbleTimer = setTimeout(function() {
+							// Collision
+
+							var bubble = element.children('.bubble')
+							var newLeft = 106-$('#grid-scrollbar').scrollLeft();
+							var widthRequired = (element.offset().left + element.width() + bubble.width());
+							if (widthRequired > window.innerWidth) {
+								bubble.css('margin-left', newLeft - 102 - bubble.width());
+								bubble.addClass('right');
+							} else {
+								bubble.css('margin-left', newLeft);
+								bubble.removeClass('right');
+							}
+							element.addClass('delay-bubble');
+							fromMouseOver = true;
+						}, 500);
+					
+					}
+				});
+				element.bind('mouseleave', function (event) {
+					clearTimeout(bubbleTimer);
+					if (fromMouseOver) {
+						element.removeClass('delay-bubble');
+						fromMouseOver = false;
+					}
+				});
+			}
+		}
+	}])
+	
+	.directive('bubbleToggle', ['$document', '$timeout', function ($document, $timeout) {
+		var	openBubble = null,
+				closeBubble = angular.noop;
+		return {
+			restrict: 'CA',
+			link: function(scope, element, attrs) {
+	
+				//scope.$watch('$location.path', function() { closeBubble(); });
+	      //element.parent().parent().parent().bind('click', function() { closeBubble(); });
+				$('#grid-scrollbar').scroll(function() { closeBubble(); });
+	      element.bind(attrs.bubbleToggle, function (event) {
+		      var bubbleWasOpen = (element === openBubble);
+		
+	        event.preventDefault();
+	        event.stopPropagation();
+
+	        if (!!openBubble) {
+						if (attrs.bubbleToggle === 'focus' && event.target === openBubble.context) { return; }
+	          closeBubble();
+	        }
+
+	        if (!bubbleWasOpen) {
+
+						// Collision
+						var bubble = element.parent().parent().parent().children('.bubble')
+						var newLeft = 106-$('#grid-scrollbar').scrollLeft();
+						var widthRequired = (element.parent().offset().left + element.parent().parent().parent().width() + bubble.width());
+						if (widthRequired > window.innerWidth) {
+							bubble.css('margin-left', newLeft - 102 - bubble.width());
+							bubble.addClass('right');
+						} else {
+							bubble.css('margin-left', newLeft);
+							bubble.removeClass('right');
+						}
+
+						element.parent().parent().parent().addClass('open-bubble');
+						if (attrs.bubbleToggle === 'click')
+							element.parent().parent().parent().children('.bubble').children('textarea').focus();
+	          openBubble = element;
+	          closeBubble = function (event) {
+	            if (event) {
+								if (event.target.className.indexOf('bubble') != -1 || 
+										event.target.className.indexOf('editable-text') != -1 ||
+										event.target === element.context) { return; };
+	              event.preventDefault();
+	              event.stopPropagation();
+	            }
+	            $document.unbind('click', closeBubble);
+							element.parent().parent().parent().children('.bubble').children('textarea').unbind('keypress');
+	            element.parent().parent().parent().removeClass('open-bubble');
+	            closeBubble = angular.noop;
+	            openBubble = null;
+	          };
+						$timeout(function() {
+	          		$document.bind('click', closeBubble);
+								element.parent().parent().parent().children('.bubble').children('textarea').bind('keypress', function(event) {
+									if (event.which == 13) {
+										event.preventDefault();
+										closeBubble();
+									};
+								})
+	        	}, 100);
+					}
+				});
+				
+				// Hijack tab
+				element.bind('keydown', function (event) {
+					if (event.which === 9) {
+						event.preventDefault();
+						event.stopPropagation();
+						var bubbleText = element.parent().parent().parent().children('.bubble').children('textarea')
+						bubbleText.focus();
+					};
+				});
+			}
+		}
+	}])
 	
 	.run(['$rootScope', 'Me', '$state', '$stateParams', '$location',
 	  function( scope, Me, state, stateParams, $location) {
