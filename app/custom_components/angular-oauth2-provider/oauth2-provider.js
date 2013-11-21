@@ -11,6 +11,14 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 	    return $cookieStore.get('access_token');
 	  };
 	
+		tokenHandler.setAccessLevel = function (level) {
+			$cookieStore.put('access_level', level);
+		};
+		
+		tokenHandler.getAccessLevel = function () {
+			return $cookieStore.get('access_level');
+		};
+	
 		return tokenHandler;
   })
 	.provider('oauth', function () {
@@ -21,7 +29,10 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 				return {
 					clientId: clientId,
 					clientSecret: clientSecret,
-					endPoint: endPoint
+					endPoint: endPoint,
+					authorize: function () {
+						
+					}
 				}
 			},
 			setClientId: function (newClientId) {
@@ -35,16 +46,50 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 			}
 		};
 	})
-	.run(['$rootScope', '$http', 'TokenHandler', 'authService', 'oauth', function (scope, $http, tokenHandler, authService, oauth) {
+	.run(['$rootScope', '$http', 'TokenHandler', 'authService', 'oauth', '$location', '$state', function (scope, $http, tokenHandler, authService, oauth, $location, $state) {
 		// Set access_token if there is any
-		$http.defaults.headers.common['Authorization'] = 'Bearer ' + tokenHandler.get();
+		var isLoggedIn = false;
+		var accessToken = tokenHandler.get();
+		var accessLevel = tokenHandler.getAccessLevel();
+		if (accessToken) { isLoggedIn = true; };
+		$http.defaults.headers.common['Authorization'] = 'Bearer ' + accessToken;
+		
+
+		scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+			if (toState.access) {
+				if (!isLoggedIn) {
+					scope.$previousUrl = toState.url;
+					event.preventDefault();
+					$location.path('/signin');
+					return;
+				};
+				if (toState.access > accessLevel) {
+					event.preventDefault();
+					$location.path('/');
+				};
+			};
+		});
 
 		scope.$on('event:auth-signout', function (event) {
 			scope.$emit('event:auth-loginRequired')
 			tokenHandler.set(null);
+			tokenHandler.setAccessLevel(null);
 			delete $http.defaults.headers.common['Authorization'];
+			$location.path('/signin');
+		});
+		
+		scope.$on('event:auth-loginRequired', function (event) {
+			scope.me = {};
+			isLoggedIn = false;
+			accessLevel = null;
 		});
 
+		scope.$on('event:auth-loginConfirmed', function (event) {
+			isLoggedIn = true;
+			accessLevel = tokenHandler.getAccessLevel();
+			// Reload?
+		});
+/*
 		scope.$on( 'event:authenticate',
 		  function( event, username, password ) {
 		    var payload = {
@@ -68,4 +113,5 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 		    );
 		  }
 		);;
+*/
 	}]);

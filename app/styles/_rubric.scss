@@ -222,6 +222,10 @@ div.criteria {
 			border-bottom:1px solid $greenish-gray;
 			padding-left:20px;
 			cursor:pointer;
+			text-overflow:ellipsis;
+			white-space:nowrap;
+			overflow:hidden;
+			padding-right:34px;
 		}
 		
 		li:hover {
@@ -291,6 +295,7 @@ div.criteria {
 			padding-bottom:5px;
 			margin-top:7px;
 			cursor:pointer;
+			position:relative;
 			
 			.plus {
 				//display: block;

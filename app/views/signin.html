@@ -1,0 +1,44 @@
+<style>
+	header {
+		display:none !important;
+	}
+	
+	body {
+		background-image:url(/images/beige-background-pattern.gif);
+	}
+</style>
+<div class="auth-box" style="width:450px;">
+	<div>
+		<div class="bottom-noise">
+			<div class="top-noise"></div>
+			<img src="images/beige-logo.png" style="margin:auto;display:block;margin-top:66px;position:relative;" />
+			<form>
+				<ul style="margin-top:36px;text-align:center;position:relative;">
+					<li style="margin-bottom:20px;">
+						<input type="text" placeholder="Email" ng-class="{red:'red-text'}[error]" ng-model="username" ng-change="resetColor()"/>
+					</li>
+					<li style="margin-bottom:-7px;">
+						<input type="password" placeholder="Password" ng-class="{red:'red-text'}[error]" ng-model="password" ng-change="resetColor()"/>
+					</li>
+					<li>
+						<button type="submit" ng-click="logIn()" class="btn btn-green" style="height:48px;width:150px;font-size:18px;font-weight:300;margin:auto;display:block;margin-top:35px;">Sign in</button>
+					</li>
+					<li style="font-size:16px;font-weight:300;width:250px;margin:auto;text-align:center;margin-top:43px;" ng-show="error">
+						<img style="vertical-align:middle;margin-left:-37px;position:absolute;" src="/images/exclamation.png" />
+						<p style="display:inline;line-height:23px;">Oops, there was a problem with your email or password</p>
+					</li>
+				</ul>
+			</form>
+			<ul style="width:148px;font-size:14px;text-align:center;height:115px;">
+				<li>
+					<a>Forgot your password?</a>
+					<hr style="margin-top:15px"/>
+					<br/>
+					<a style="margin-top:100px;" ui-sref="signup">Sign up</a>
+				</li>
+			</ul>
+			<span class="chalk-brush"></span>
+			<span class="ledge"></span>
+		</div>
+	</div>
+</div>

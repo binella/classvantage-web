@@ -96,6 +96,20 @@ module.exports = function (grunt) {
 						}
 					}
 				}
+			},
+			production: {
+				dest: '<%= yeoman.app %>/scripts/environment.js',
+				name: 'env',
+				constants: {
+					'ENV': {
+						baseURL: 'http://com-classvantage-production.herokuapp.com/v1/',
+						oAuth: {
+							endPoint: 'http://com-classvantage-production.herokuapp.com/oauth/token',
+							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
+							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
+						}
+					}
+				}
 			}
 		},
 		inline_angular_templates: {

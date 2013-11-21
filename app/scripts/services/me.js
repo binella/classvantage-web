@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Me', function ($resource, ENV) {
-    // Service logic
-    // ...
+  .factory('Me', function (Store, ENV) {
+	
+		var resource = Store({
+			type: 'me',
+			url: ENV.baseURL + 'me'
+		});
 
-    // Public API here
-    return $resource(ENV.baseURL + 'me');
-  });
+    return resource;
+  })
+	.run(function (Me) {});

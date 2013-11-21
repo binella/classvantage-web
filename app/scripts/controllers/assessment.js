@@ -4,7 +4,6 @@ angular.module('classvantageApp')
   .controller('AssessmentCtrl', function ($scope, assessment, Mark) {
 		
 		$scope.assessment = assessment;
-		console.log(assessment);
 
 		$scope.toggleAutograde = function () {
 			if ($scope.assessment.value) { 

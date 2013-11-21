@@ -28,7 +28,7 @@
 				<ul>
 					<li>
 						<span>Grade:</span><br/>
-						<select ng-model="rubric.$grade" ng-change="rubric.$subjectId = null;rubric.unit = null;rubric.$save();selectionChanged('subject_id',null);selectionChanged('unit',null);selectionChanged('overall',null);"
+						<select ng-model="rubric.$grade" ng-change="rubric.$subjectId = null;rubric.unit = null;rubric.$save();"
 										ng-options="u.grade as u.grade for u in units | unique:'grade' | orderBy:'grade'" cv-styled-select></select>
 					</li>
 					<li>
@@ -42,7 +42,7 @@
 						<span>Unit:</span><br/>
 						<select ng-model="rubric.unit" class="wide-select" ng-disabled="rubric.$subjectId == null"
 										ng-options="u as u.title for u in units | filter: filterUnits | orderBy:'id'"
-										ng-change="rubric.$save();rubric.unit.$reload();" cv-styled-select>
+										ng-change="rubric.$save();rubric.overall_expectations.length = 0;rubric.unit.$reload();" cv-styled-select>
 							<option value="" disabled="disabled">Select a unit</option>
 						</select>
 					</li>
@@ -121,7 +121,8 @@
 						<ul>
 							<li ng-repeat="u in units | filter:{grade: rubric.$grade} | unique:'subject_id'"
 									ng-class="{true:'selected'}[selection.subject_id === u.subject_id]"
-									ng-click="selectionChanged('subject_id', u.subject_id)">{{u.strand.subject.title}}</li>
+									ng-click="selectionChanged('subject_id', u.subject_id)"
+									title="{{u.strand.subject.title}}">{{u.strand.subject.title}}</li>
 						</ul>
 					</div>
 				</div>
@@ -131,7 +132,8 @@
 						<ul>
 							<li ng-repeat="unit in units | filter:filterUnitsSpec"
 									ng-class="{true:'selected'}[selection.unit === unit]"
-									ng-click="selectionChanged('unit', unit)">{{unit.title}}</li>
+									ng-click="selectionChanged('unit', unit)"
+									title="{{unit.title}}">{{unit.title}}</li>
 						</ul>
 					</div>
 				</div>
@@ -145,7 +147,8 @@
 					<ul>
 						<li ng-repeat="overall in selection.unit.overall_expectations"
 								ng-class="{true:'selected'}[selection.overall === overall]"
-						 		ng-click="selectionChanged('overall', overall)">{{overall.short_form}}</li>
+						 		ng-click="selectionChanged('overall', overall)"
+								title="{{overall.short_form}}">{{overall.short_form}}</li>
 					</ul>
 				</div>
 			</div>
@@ -164,7 +167,7 @@
 		
 		<br/><br/>
 		<div ng-show="!showSpecificSelect">
-			<a class="plus green" ng-click="showSpecificSelect = true" style="margin-left:-39px;">Add specific expectation</a>
+			<a class="plus green" ng-click="showSpecificSelectBox()" style="margin-left:-39px;">Add specific expectation</a>
 			<a class="plus green" ng-click="addRow({})" style="margin-left:39px;">Add custom expectation</a>
 		</div>
 		<br/><br/></br>

@@ -94,6 +94,7 @@ angular.module('classvantageApp')
 		$scope.delayComment = function () {
 			console.log('ata');
 		}
+
 		
   });
 

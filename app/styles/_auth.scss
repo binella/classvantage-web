@@ -1,0 +1,110 @@
+.auth-box {
+	border:8px solid $orange;
+	width:529px;
+	margin:auto;
+	position:relative;
+	top:100px;
+	
+	.top-noise {
+		background-image: url(/images/chalkboard-bg-topright.gif);
+		background-repeat: no-repeat;
+		background-position: top right;
+		border: none;
+		height: 295px;
+		float: right;
+		position: absolute;
+		right: 13px;
+		width: 289px;
+	}
+	
+	.bottom-noise {
+		background-image:url(/images/chalkboard-bg-bottomleft.gif);
+		background-repeat:no-repeat;
+		background-position:bottom left;
+	}
+	
+	div {
+		border:4px solid $off-orange;
+		
+		div {
+			border:9px solid $orange;
+			background-color: $slate;
+			
+			img {
+				position:relative;
+			}
+			
+			span {
+				position:relative;
+			}
+			
+			ul {
+				color:white;
+				margin:auto;
+				width:384px;
+				margin-top:45px;
+				position:relative;
+				
+				li {
+					height:39px;
+					margin-bottom:13px;
+					
+					span {
+						display:block;
+						float:left;
+						width:94px;
+						height:39px;
+						line-height:40px;
+						
+					}
+					
+					input {
+						background-color:$darker-slate;
+						border:none;
+						height:31px;
+						width:274px;
+						@include border-radius(3px);
+						color:white;
+						font-size:18px;
+						outline:none;
+						padding:5px;
+					}
+					
+					hr {
+						display: block; height: 1px;
+					    border: 0; border-top: 1px solid #364d53;
+					    margin: 0; padding: 0;
+					}
+					
+					a {
+						color:gray;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+.chalk-brush {
+	background-image: url(/images/chalk-brush.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 21px;
+	float: right;
+	width: 100%;
+	margin-top: -21px;
+	background-position: right 20px top 0px;
+}
+
+.ledge {
+	border-bottom: 3px solid rgba(0,0,0,0.4);
+	width: 100%;
+	height: 3px;
+	display: block;
+	margin-top: -6px;
+}
+
+.red-text {
+	color:red !important;
+}

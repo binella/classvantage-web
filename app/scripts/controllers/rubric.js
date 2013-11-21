@@ -3,13 +3,26 @@
 angular.module('classvantageApp')
   .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row) {
 	
+		/*
+		$scope.unitChanged = function(unit) {
+			$scope.selection.unit = unit;
+			$scope.selection.subject_id = unit.subject_id;
+			if (unit.overall_expectations.length > 0)
+				$scope.selection.overall = unit.overall_expectations[0];
+		}
+		*/
+		
 		$scope.units = units;
 		$scope.rubric = rubric;
 		$scope.selection = {subject_id: rubric.$subjectId};
 		$scope.rubric.$promise.then(function (r) {
-			$scope.selection.unit = r.unit;
-			$scope.selection.subject_id = r.$subjectId;
-			if (r.unit && r.unit.$reload) { r.unit.$reload(); }; // This should somehow be handled in data-store: {} is returned when there is no association
+			//$scope.selection.unit = r.unit;
+			//$scope.selection.subject_id = r.$subjectId;
+			if (r.unit && r.unit.$reload) { 
+				r.unit.$reload(); 
+			}; // This should somehow be handled in data-store: {} is returned when there is no association
+			r.$resolveGradeAndSubject();
+			return r;
 		});
 		$scope.overallEnabled = {};
 		$scope.displayDesc = false;
@@ -70,6 +83,19 @@ angular.module('classvantageApp')
 			$scope.selection[key] = value;
 			if (key === 'unit' && value !== null)
 				value.$reload();
+		}
+		
+		$scope.showSpecificSelectBox = function () {
+			$scope.selection.unit = $scope.rubric.unit;
+			$scope.selection.subject_id = $scope.rubric.$subjectId;
+			$scope.selection.overall = null;
+			if ($scope.selection.unit && $scope.selection.unit.overall_expectations && $scope.selection.unit.overall_expectations.length > 0) {
+				$scope.selection.overall = $scope.selection.unit.overall_expectations[0];
+				var tmp = $scope.selection.overall.specific_expectations;
+				$scope.selection.overall.specific_expectations = [];
+				setTimeout(function() {$scope.$apply(function() {  $scope.selection.overall.specific_expectations = tmp;  })}, 1);
+			}
+			$scope.showSpecificSelect = true;
 		}
 		
   });

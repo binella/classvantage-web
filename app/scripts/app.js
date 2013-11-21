@@ -17,15 +17,29 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 		$stateProvider
 			.state('home', {
 				url: "/",
-				templateUrl: "views/main.html"
+				templateUrl: "views/main.html",
+				access: 1
+			})
+			.state('signup', {
+				url: "/signup",
+				templateUrl: "views/signup.html",
+				controller: "LoginCtrl",
+				access: 0
+			})
+			.state('signin', {
+				url: "/signin",
+				templateUrl: "views/signin.html",
+				controller: "LoginCtrl",
+				access: 0
 			})
 			.state('gradebook', {
 				url: "/gradebook",
 				templateUrl: "views/gradebook.html",
 				controller: 'GradebookCtrl',
+				access: 1,
 				resolve: {
 					pages: ['Page', function (Page) {
-						return Page.fetchAll();
+						return Page.fetchAll().$promise;
 					}]
 				}
 			})
@@ -33,6 +47,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				url: "/:page_id",
 				templateUrl: "views/page.html",
 				controller: 'PageCtrl',
+				access: 1,
 				resolve: {
 					currentPage: ['$stateParams', '$filter', 'Page', 'pages', function ($stateParams, $filter, Page, pages) {
 						var page = Page.fetchOne($stateParams.page_id);
@@ -44,6 +59,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				url: '/rubrics/:id',
 				templateUrl: 'views/rubric.html',
 				controller: 'RubricCtrl',
+				access: 1,
 				resolve: {
 					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
 						var rubric = Rubric.fetchOne($stateParams.id);
@@ -64,6 +80,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				url: '/assessments/:id',
 				templateUrl: 'views/assessment.html',
 				controller: 'AssessmentCtrl',
+				access: 1,
 				resolve: {
 					assessment: ['$stateParams', 'Assessment', function ($stateParams, Assessment) {
 						return Assessment.fetchOne($stateParams.id);
@@ -74,6 +91,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				url: '/admin',
 				templateUrl: 'views/admin.html',
 				controller: 'AdminCtrl',
+				access: 2,
 				resolve: {
 					units: ['Unit', function (Unit) {
 						return Unit.fetchAll().$promise;
@@ -84,6 +102,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				url: '/:unit_id',
 				templateUrl: 'views/adminUnit.html',
 				controller: 'AdminUnitCtrl',
+				access: 2,
 				resolve: {
 					unit: ['$stateParams', 'Unit', function ($stateParams, Unit) {
 						return Unit.fetchOne($stateParams.unit_id);
@@ -91,7 +110,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				}
 			});
   })
-
+/*
 	.directive('login', function() {
 	  return {
 	    restrict: 'A',
@@ -117,7 +136,7 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 	    }
 	  }
 	})
-	
+	*/
 	/*
 	.directive('cvInput', function() {
 		return {
@@ -220,7 +239,12 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 				var regex = eval(attrs.cvPattern);
 				// TODO: also do onChange
 				element.bind('keypress', function (event) {
-					var value = element.val() + String.fromCharCode(event.which);
+					var value;
+					if (element.context.selectionStart !== element.context.selectionEnd)
+						value = element.val().substr(0,element.context.selectionStart) + String.fromCharCode(event.which) + element.val().substr(element.context.selectionEnd);
+					else
+						value = element.val() + String.fromCharCode(event.which);
+					
 					if (!regex.test(value)) { event.preventDefault() };
 				});
 			}
@@ -374,18 +398,29 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 			scope.logOut = function () {
 				scope.me = {};
 				scope.$emit('event:auth-signout');
-				$location.path('/');
 			};
 			
+			/*
+			scope.reloadMe = function () {
+				if(!scope.$$phase) {
+				  scope.$apply(function () {
+						scope.me = Me.fetchOne('');
+					});
+				} else {
+					scope.me = Me.fetchOne('');
+				}
+			}
+			*/
+			/*
 			scope.$on('event:auth-loginConfirmed', function( event ) {
-        scope.me = Me.get();
+				scope.reloadMe();
       });
+			*/
 			
 			scope.$state = state;
 			scope.$stateParams = stateParams;
 			
-
-			scope.me = Me.get();
+			//scope.reloadMe();
 			
 	  }
 	]);

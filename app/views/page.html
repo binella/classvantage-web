@@ -26,7 +26,7 @@
 </div>
 <div class="grid-container">
 	<div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div>
-	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length > 0" scroll-with="#grid-scrollbar" >
+	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length > 0" scroll-with="#grid-scrollbar" >
 		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*117) + 'px'}">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments) | orderBy:'created_at'">
@@ -74,11 +74,11 @@
 		</div>
 	</div>
 </div>
-<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length > 0]" ng-style="{height: (104 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
-	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]">
-		<div class="rubric header-cell" ng-style="{width: (page.rubrics.length > 0 ? '113px' : '285px')}">
-			<a class="plus green dropdown-toggle"  ng-style="{'margin-left': (page.rubrics.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;">
-				{{page.rubrics.length > 0 ? '' : 'Add your first assignment'}}
+<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length + page.assignments.length > 0]" ng-style="{height: (104 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
+	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || (page.rubrics.length + page.assignments.length) > 0]">
+		<div class="rubric header-cell" ng-style="{width: (page.rubrics.length + page.assignments.length > 0 ? '113px' : '315px')}">
+			<a class="plus green dropdown-toggle"  ng-style="{'margin-left': (page.rubrics.length + page.assignments.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;">
+				{{page.rubrics.length + page.assignments.length > 0 ? '' : 'Add your first assessment'}}
 			</a>
 			<ul class="dropdown-menu" style="">
 	    	<li>

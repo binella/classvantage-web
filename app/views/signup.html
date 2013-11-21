@@ -1,0 +1,52 @@
+<style>
+	body {
+		background-image:url(/images/beige-background-pattern.gif);
+	}
+</style>
+<div class="auth-box">
+	<div>
+		<div class="bottom-noise">
+			<div class="top-noise"></div>
+			<img src="images/beige-logo.png" style="margin:auto;display:block;margin-top:66px;" />
+			<span style="color:white;margin:auto;width:270px;display:block;margin-top:33px;text-align:center;line-height:29px;font-weight:300;">
+				Get started with ClassVantage to easily assess your students!
+			</span>
+			<ul>
+				<li style="font-size:16px;font-weight:300;width:350px;margin:auto;text-align:center;margin-top:0px;height:auto;min-height:39px;" ng-repeat="message in error">
+					<img style="vertical-align:middle;margin-left:-37px;position:absolute;" src="/images/exclamation.png" />
+					<p style="display:inline;line-height:23px;">{{message}}</p>
+				</li>
+			</ul>
+			<ul style="margin-bottom:82px;">
+				<li>
+					<span>Name</span>
+					<input type="text" ng-model="name"/>
+				</li>
+				<li>
+					<span>Email</span>
+					<input type="text" ng-model="username"/>
+				</li>
+				<li>
+					<span>School</span>
+					<input type="text" ng-model="school"/>
+				</li>
+				<li>
+					<span>Province</span>
+					<input type="text" ng-model="province"/>
+				</li>
+				<li style="padding-top:17px;">
+					<hr/>
+				</li>
+				<li style="margin-top:-25px;">
+					<span>Password</span>
+					<input type="text" ng-model="password"/>
+				</li>
+				<li>
+					<button class="btn btn-green" ng-click="signUp()" style="height:48px;width:150px;font-size:18px;font-weight:300;margin:auto;display:block;margin-top:35px;">Sign up</button>
+				</li>
+			</ul>
+			<span class="chalk-brush"></span>
+			<span class="ledge"></span>
+		</div>
+	</div>
+</div>
