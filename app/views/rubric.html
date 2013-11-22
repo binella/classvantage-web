@@ -83,7 +83,7 @@
 		</div>
 		<div style="clear:both;">
 		<div class="rubric-group">
-			<div class="rubric-row" ng-repeat="row in rubric.rows">
+			<div class="rubric-row" ng-repeat="row in rubric.rows | orderBy:'created_at'">
 				<div class="top-cover"></div>
 				<div class="rubric-column criteria">
 					<a class="close-button" ng-click="deleteRow(row)"><img src="images/beige-ex.png" /></a>
@@ -177,12 +177,12 @@
 <!-- SIDE PANEL -->
 <div class="final" style="height:152px;">
 	<a class="btn-red btn" style="margin-top:14px" ui-sref="gradebook.page({page_id: rubric.page.id})">
-		<img src="/images/icn-save-white.png" style="vertical-align:middle;margin-right:10px;margin-top:-2px;" />Save
+		<img src="/images/icn-save-white.png" />Save
 	</a>
-	<a class="btn btn-red" style="margin-top:10px;" ng-click="print()">
-		Print
+	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="print()">
+		<img src="/images/print.png" />Print
 	</a>
-	<a class="btn btn-red" style="margin-top:10px;" ng-click="deleteRubric()">
-		Delete
+	<a class="btn btn-slate" style="margin-top:10px;" ng-click="deleteRubric()">
+		<img src="/images/trash.png" />Delete
 	</a>
 </div>

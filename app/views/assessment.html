@@ -63,7 +63,7 @@
 		<div style="clear:both;">
 		<div class="rubric-group">
 			<div class="rubric-row" 
-					 ng-repeat="row in assessment.assessable.rows track by markFor(row)"
+					 ng-repeat="row in assessment.assessable.rows | orderBy:'created_at' track by markFor(row)"
 					 ng-switch="marks[row.id].$wholeValue">
 				<div class="top-cover"></div>
 				<div class="rubric-column criteria min-height">
