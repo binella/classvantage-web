@@ -1,9 +1,17 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Gradebook, Unit, pages) {
-	
-		$scope.gradebook = Gradebook.currentGradebook || {};
+  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Unit, pages, $state) {
+
+		// Default to the first page
+		$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+			if (toState.name === 'gradebook' && pages.length > 0) {
+				event.preventDefault();
+				$state.go('gradebook.page', {page_id: pages[0].id});
+			};
+		});
+
+		//$scope.gradebook = Gradebook.currentGradebook || {};
 		$scope.pages = pages; // We are promised 'pages' here
 		
 		$scope.newPage = function () {

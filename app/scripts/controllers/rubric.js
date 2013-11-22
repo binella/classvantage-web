@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row) {
+  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row, $state) {
 	
 		/*
 		$scope.unitChanged = function(unit) {
@@ -96,6 +96,14 @@ angular.module('classvantageApp')
 				setTimeout(function() {$scope.$apply(function() {  $scope.selection.overall.specific_expectations = tmp;  })}, 1);
 			}
 			$scope.showSpecificSelect = true;
+		}
+		
+		$scope.deleteRubric = function () {
+			var confirmDelete = confirm("Are you sure you want to delete this rubric? All grades associated with this rubric will be deleted as well.");
+			if (confirmDelete) {
+				$state.go('gradebook.page', {page_id: $scope.rubric.page.id});
+				$scope.rubric.$destroy();
+			};
 		}
 		
   });

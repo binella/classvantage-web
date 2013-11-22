@@ -32,7 +32,11 @@
 				</li>
 				<li>
 					<span>Province</span>
-					<input type="text" ng-model="province"/>
+					<span class="slate-unifrom">
+						<select ng-model="province" ng-options="prv as prv for prv in provinces" style="width:250px;" cv-styled-select>
+							<option value="" disabled="disabled" >Select a province</option>
+						</select>
+					</span>
 				</li>
 				<li style="padding-top:17px;">
 					<hr/>

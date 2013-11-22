@@ -66,7 +66,7 @@
 							</a>
 						</span>
 						<a ng-switch-default class="color{{assessment.$assignmentAverage}}">
-							<input type="text" ng-class="{false:'marked'}[assessment.value == null || assessment.value === '']" ng-model="assessment.value" cv-pattern="/^[1-9]\d?$/" ng-blur="assessment.$save()" bubble-toggle="focus" blurs-on-enter/>%
+							<input type="text" ng-class="{false:'marked'}[assessment.value == null || assessment.value === '']" ng-model="assessment.value" cv-pattern="/(^[1-9]\d?$)|^100$/" ng-blur="assessment.$save()" bubble-toggle="focus" blurs-on-enter/>%
 						</a>
 					</span>
 				</div>

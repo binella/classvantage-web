@@ -80,6 +80,16 @@
 	}
 }
 
+.slate-unifrom {
+	@include use-backgrounds(url('/images/sprite_slate.png'), 0, url('../images/bg-input.png'), url('../images/bg-input-focus.png'), 0);
+	
+	span {
+		color: white !important;
+		text-shadow: none !important;
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
 
 // Modals
 $zindexModalBackdrop:     1040 !default;

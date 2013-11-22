@@ -13,6 +13,25 @@ angular.module('classvantageApp')
 		};
 		*/
 		
+		// Default
+		$scope.province = "Ontario";
+		
+		$scope.provinces = [
+			"Ontario",
+			"Quebec",
+			"British Columbia",
+			"Alberta",
+			"Manitoba",
+			"Saskatchewan",
+			"Nova Scotia",
+			"New Brunswick",
+			"Newfoundland and Labrador",
+			"Prince Edward Island",
+			"Northwest Territories",
+			"Yukon",
+			"Nunavut"
+		];
+		
 		if ($scope.me && $scope.me.name) {
 			$location.path('/');
 		};
@@ -71,7 +90,7 @@ angular.module('classvantageApp')
 				school: $scope.school,
 				name: $scope.name
 	    };
-
+	
 			$http.post(ENV.baseURL.substr(0,ENV.baseURL.length-3) + 'register', payload).success(function (data) {
 				$scope.logIn(payload.email, payload.password);
 			}).error(function (data) {
@@ -79,5 +98,4 @@ angular.module('classvantageApp')
 				$scope.error = data.error;
 			});
 		};
-		
   });

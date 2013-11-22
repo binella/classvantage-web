@@ -13,13 +13,15 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 		oauthProvider.setClientSecret(ENV.oAuth.clientSecret);
 
 		// Routes
-		$urlRouterProvider.otherwise("/");
+		$urlRouterProvider.otherwise("/gradebook");
 		$stateProvider
+			/*
 			.state('home', {
 				url: "/",
 				templateUrl: "views/main.html",
 				access: 1
 			})
+			*/
 			.state('signup', {
 				url: "/signup",
 				templateUrl: "views/signup.html",
@@ -308,6 +310,17 @@ angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospa
 			}
 		}
 	}])
+	
+	.directive('gainsFocus', function () {
+		return {
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				setTimeout(function () {
+					element.focus();
+				}, 100);
+			}
+		}
+	})
 	
 	.directive('bubbleToggle', ['$document', '$timeout', function ($document, $timeout) {
 		var	openBubble = null,
