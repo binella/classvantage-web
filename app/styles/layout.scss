@@ -170,13 +170,14 @@ body > header {
   a.logo {
     display: block;
     width: 138px;
-    height: 69px;
+    //height: 69px;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px 31px 17px 28px;
+    //padding: 20px 31px 17px 28px;
     background: $slate;
-    
+    padding-top:13px;
+
     img {
       display: block;
     }
