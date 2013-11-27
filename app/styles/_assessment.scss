@@ -160,6 +160,10 @@
 
 .assess {
 	padding:18px;
+	padding-bottom:0px;
+	padding-top:0px;
+	height:100%;
+	position:relative;
 	
 	span {
 		overflow-y:auto;
@@ -167,8 +171,9 @@
 		margin:0px;
 		height:100%;
 		padding-bottom:0px;
-		margin-bottom:5px;
+		//margin-bottom:5px;
 		//min-height:65px;
+		display:table;
 	}
 	
 	.value, .marked {
@@ -182,7 +187,7 @@
 
 .final {
 	width:196px;
-	height:228px;
+	height:272px;
 	position:fixed;
 	right:0;
 	background-color:$dark-slate;
@@ -261,5 +266,199 @@
 			margin-left:8px;
 			margin-top:3px;
 		}
+	}
+}
+
+.print-show {
+	display:none;
+}
+
+/* PRINT */
+@media print {
+	
+	.container {
+		margin-top:70px !important;
+	}
+	
+	.page-container {
+		padding-top:0px !important;
+		margin-top:-30px !important;
+	}
+	
+	div, body {
+		background-image:none !important;
+		background-color:transparent !important;
+	}
+	
+	label {
+		color:black !important;
+	}
+	
+	header, .final, .breadcrumbs, .side-panel, .details-toggle {
+		display:none !important;
+	}
+	
+	.hero {
+		margin-top:100px;
+		
+		ul {
+			width:auto !important;
+			border-left:none !important;
+			//margin-top:-115px !important;
+			top:145px;
+			position:absolute !important;
+			padding-left:0 !important;
+			line-height:40px !important;
+			width:930px !important;
+			border-bottom:1px solid black !important;
+			
+			li {
+				display:inline !important;
+				margin-right:50px;
+			}
+		}
+	}
+	
+	.rubric-details {
+		display:block !important;
+		margin-top:15px;
+		
+		.title-input-text {
+			font-size:20px !important;
+		}
+		
+		.desc-input-text {
+			font-size:16px !important;
+			margin-top:10px !important;
+		}
+		
+		ul {
+			//margin-top:-130px !important;
+		}
+		
+		label {
+			line-height:18px !important;
+		}
+	}
+	
+
+	
+	.title-input-text {
+		font-size:30px !important;
+		padding-bottom:20px !important;
+	}
+	
+	.desc-input-text {
+		margin-top:55px !important;
+	}
+	
+	h2 {
+		position:absolute;
+		top:30px;
+		right:30px;
+	}
+	
+	h2:after {
+		content:':';
+		//border-right:80px solid;
+		padding-right:15px;
+		display:inline-block;
+		line-height:100px;
+		margin-right:85px;
+	}
+	
+	.c {
+		border-color:$silver;
+		color:$silver !important;
+	}
+	.c1 {
+		border-color:$red;
+		color:$red !important;
+	}
+	.c2 {
+		border-color:$yellow;
+		color:$yellow !important;
+	}
+	.c3 {
+		border-color:$bright-green;
+		color:$bright-green !important;
+	}
+	.c4 {
+		border-color:$green;
+		color:$green !important;
+	}
+	.cR {
+		border-color:black !important;
+		color:black !important;
+	}
+	
+	
+	.marked:before {
+		content:'';
+		border-right:39px solid white;
+		width: 0px;
+		height: 29px;
+		display: block;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		margin-right: 1px;
+	}
+	
+	
+	.assess {
+		padding-right:0px !important;
+	}
+	
+	.rubric-column {
+		span {
+			width:147px !important;
+			margin-right:-25px;
+		}
+	}
+	
+	.mark {
+		div {
+			span {
+				width:35px !important;
+				position:absolute;
+				right:0px;
+				margin-right:1px;
+				border:2px solid;
+				top:100%;
+				margin-top:-30px !important;
+				line-height:25px;
+			}
+		}
+		
+		div.marked {
+			span {
+				//margin-top:7px !important;
+			}
+		}
+	}
+	
+	.rubric-info {
+		margin-bottom:0px !important;
+	}
+	
+	.print-hide {
+		display:none;
+	}
+	
+	.print-average {
+		position: absolute;
+		top: 34px;
+		right: 40px;
+		font-size: 40px;
+		width: 70px;
+		text-align: center;
+		color: black;
+		border: 3px solid;
+		line-height: 80px;
+	}
+	
+	.print-show {
+		display:block !important;
 	}
 }

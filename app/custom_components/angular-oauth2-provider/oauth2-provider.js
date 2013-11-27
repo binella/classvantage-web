@@ -65,9 +65,14 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 				};
 				if (toState.access > accessLevel) {
 					event.preventDefault();
-					$location.path('/');
+					$location.path('/gradebook');
 				};
-			};
+			} else {
+				//if (isLoggedIn) {
+				//	event.preventDefault();
+				//	$location.path(fromState.url || '/');
+				//};
+			}
 		});
 
 		scope.$on('event:auth-signout', function (event) {
@@ -86,8 +91,13 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 
 		scope.$on('event:auth-loginConfirmed', function (event) {
 			isLoggedIn = true;
-			accessLevel = tokenHandler.getAccessLevel();
+			accessToken = tokenHandler.get();
+			accessLevel = 1;
 			// Reload?
+		});
+		
+		scope.$on('event:access-levelDetermined', function (event) {
+			accessLevel = tokenHandler.getAccessLevel();
 		});
 /*
 		scope.$on( 'event:authenticate',

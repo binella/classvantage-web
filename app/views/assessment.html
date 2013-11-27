@@ -8,16 +8,16 @@
 			</div>
 		</div>
 		
-		<div style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">
+		<div class="rubric-info" style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">
 			<label class="title-input-text" >{{assessment.assessable.title}}</label>
 			<br />
 			<label class="desc-input-text" style="width:800px;display:block;line-height:28px;margin-top:30px;">{{assessment.assessable.description}}</label>
 			<br/>
-			<div ng-hide="!showDetails">
+			<div class="rubric-details" ng-hide="!showDetails">
 				<div style="float:left;width:600px;" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
 					<label class="title-input-text" style="font-size:22px;">Overall Expectations</label>
-					<label class="desc-input-text" style="display:block;width:700px;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
-					<label class="desc-input-text" style="display:block;width:700px;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
+					<label class="desc-input-text" style="display:block;width:590px;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
+					<label class="desc-input-text" style="display:block;width:590px;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
 				</div>
 				<ul style="float:left;padding-left:10px;margin-top:0px;width:180px;line-height:20px;border-left:4px solid white;" ng-show="assessment.assessable.unit.id">
 					<li>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div style="clear:both;"></div>
-		<a style="float:right;font-size:16px;font-weight:300;cursor:pointer;" ng-click="showDetails = !showDetails" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
+		<a class="details-toggle" style="float:right;font-size:16px;font-weight:300;cursor:pointer;" ng-click="showDetails = !showDetails" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
 			{{!!showDetails ? '&and; Hide' : '&or; Show'}} Details
 		</a>
 		<div style="clear:both;height:30px"></div>
@@ -43,13 +43,14 @@
 <!-- RUBRIC CONTENT -->
 <div class="container page-container" style="padding-left:54px;" >
 	<!-- STUDENTS -->
-	<div class="side-panel" style="position:absolute;margin-left:-200px;width:160px;margin-top:90px;">
+	<!--div class="side-panel" style="position:absolute;margin-left:-200px;width:160px;margin-top:90px;">
 		<ul>
 			<li ng-repeat="student in assessment.assessable.page.students">{{student.first_name + ' ' + student.last_name}}</li>
 		</ul>
-	</div>
+	</div-->
 	
 	<h2>{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
+	<div class="print-show print-average c{{assessment.$averageGrade.substr(0,1)}}">{{assessment.$averageGrade || '?'}}</div>
 	<div style="clear:both;"></div>
 	<br/>
 	<section style="margin-top:28px;" class="specific">
@@ -63,18 +64,18 @@
 		<div style="clear:both;">
 		<div class="rubric-group">
 			<div class="rubric-row" 
-					 ng-repeat="row in assessment.assessable.rows | orderBy:'created_at' track by markFor(row)"
+					 ng-repeat-start="row in assessment.assessable.rows | orderBy:'created_at' track by markFor(row)"
 					 ng-switch="marks[row.id].$wholeValue">
-				<div class="top-cover"></div>
+				<!-- div class="top-covers"></di v-->
 				<div class="rubric-column criteria min-height">
 					<span>{{row.criteria}}</span>
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark four red">
-						<div class="marked" style="background-color:rgba(0,0,0,0.8);" ng-switch-when="0">
+						<div class="marked cR" style="background-color:rgba(0,0,0,0.8);" ng-switch-when="0">
 							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
-						<div class="marked" ng-switch-when="1">
+						<div class="marked c1" ng-switch-when="1">
 							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
 						<div class="value frst colorR" ng-click="saveMark(marks[row.id], 0)"><span class="middle">R</span></div>
@@ -86,7 +87,7 @@
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark yellow">
-						<div class="marked" ng-switch-when="2">
+						<div class="marked c2" ng-switch-when="2">
 							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
 						<div class="value frst" ng-click="saveMark(marks[row.id], 4)"><span class="middle">2-</span></div>
@@ -97,7 +98,7 @@
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark bright-green">
-						<div class="marked" ng-switch-when="3">
+						<div class="marked c3" ng-switch-when="3">
 							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
 						<div class="value frst" ng-click="saveMark(marks[row.id], 7)"><span class="middle">3-</span></div>
@@ -108,7 +109,7 @@
 				</div>
 				<div class="rubric-column level assess">
 					<span class="mark green">
-						<div class="marked" ng-switch-when="4">
+						<div class="marked c4" ng-switch-when="4">
 							<span class="middle">{{marks[row.id].$value}}</span>
 						</div>
 						<div class="value frst" ng-click="saveMark(marks[row.id], 10)"><span class="middle">4-</span></div>
@@ -117,17 +118,18 @@
 						{{row.level4_description}}
 					</span>
 				</div>
-				<div class="bottom-divider"></div>
-				<div class="bottom-divider wide"></div>
-				<div class="bottom-cover"></div>
+				
+				<!--div class="bottom-cover"></div-->
 			</div>
+			<div class="bottom-divider"></div>
+			<div class="bottom-divider wide" ng-repeat-end></div>
 		</div>
 		
 		
 		<br/><br/><br/>
 
 	</section>
-	<section class="specific">
+	<section class="specific" ng-class="{null:'print-hide'}[assessment.comment]">
 		<h4>ADDITIONAL COMMENTS</h4>
 		<br/>
 		<span class="overalls">
@@ -154,4 +156,7 @@
 													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
 	<a class="btn btn-green" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
+	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="printAssessment()">
+		<img src="/images/print.png" />Print
+	</a>
 </div>

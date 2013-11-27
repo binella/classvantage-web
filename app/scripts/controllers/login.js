@@ -58,12 +58,6 @@ angular.module('classvantageApp')
 	        function( data ) {
 	          TokenHandler.set( data.access_token );
 						
-						if (data.admin) {
-							TokenHandler.setAccessLevel(2);
-						} else {
-							TokenHandler.setAccessLevel(1);
-						}
-						
 						$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token;
 						authService.loginConfirmed(data, function (config) {
 							config.headers['Authorization'] = 'Bearer ' + data.access_token;
