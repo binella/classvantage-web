@@ -285,6 +285,10 @@
 		margin-top:-30px !important;
 	}
 	
+	body {
+		height:auto !important;
+	}
+	
 	div, body {
 		background-image:none !important;
 		background-color:transparent !important;
@@ -368,24 +372,24 @@
 	}
 	
 	.c {
-		border-color:$silver;
-		color:$silver !important;
+		border-color:$silver !important;
+		color:black !important;
 	}
 	.c1 {
-		border-color:$red;
-		color:$red !important;
+		border-color:$red !important;
+		color:black !important;
 	}
 	.c2 {
-		border-color:$yellow;
-		color:$yellow !important;
+		border-color:$yellow !important;
+		color:black !important;
 	}
 	.c3 {
-		border-color:$bright-green;
-		color:$bright-green !important;
+		border-color:$bright-green !important;
+		color:black !important;
 	}
 	.c4 {
-		border-color:$green;
-		color:$green !important;
+		border-color:$green !important;
+		color:black !important;
 	}
 	.cR {
 		border-color:black !important;
@@ -414,6 +418,14 @@
 		span {
 			width:147px !important;
 			margin-right:-25px;
+		}
+	}
+	
+	div.criteria {
+		width:280px !important;
+		
+		span {
+			width:210px !important;
 		}
 	}
 	
