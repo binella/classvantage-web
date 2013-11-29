@@ -58,7 +58,7 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 		scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
 			if (toState.access) {
 				if (!isLoggedIn) {
-					scope.$previousUrl = toState.url;
+					scope.$previousUrl = $state.href(toState.name, toParams).substr(1);
 					event.preventDefault();
 					$location.path('/signin');
 					return;
@@ -68,10 +68,10 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 					$location.path('/gradebook');
 				};
 			} else {
-				//if (isLoggedIn) {
-				//	event.preventDefault();
-				//	$location.path(fromState.url || '/');
-				//};
+				if (isLoggedIn) {
+					event.preventDefault();
+					$location.path($state.href(fromState.name, fromParams).substr(1) || '/');
+				};
 			}
 		});
 
@@ -99,29 +99,5 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 		scope.$on('event:access-levelDetermined', function (event) {
 			accessLevel = tokenHandler.getAccessLevel();
 		});
-/*
-		scope.$on( 'event:authenticate',
-		  function( event, username, password ) {
-		    var payload = {
-		      username: username,
-		      password: password,
-		      grant_type: 'password',
-		      client_id: oauth.clientId,
-		      client_secret: oauth.clientSecret
-		    };
-
-		    $http.post(oauth.endPoint, payload).success(
-		        function( data ) {
-		          tokenHandler.set( data.access_token );
-							$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token;
-							authService.loginConfirmed(data, function (config) {
-								config.headers['Authorization'] = 'Bearer ' + data.access_token;
-								return config;
-							});
-
-		        }
-		    );
-		  }
-		);;
-*/
+		
 	}]);

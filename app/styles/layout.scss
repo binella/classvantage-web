@@ -246,6 +246,17 @@ body > header {
 		margin-bottom: 11px;
 	}
 	
+	ul.inline {
+		li {
+			display:inline-block;
+			margin-right:30px;
+		}
+	}
+	
+}
+
+:required {
+	box-shadow:none;
 }
 
 .hero.green {
@@ -269,6 +280,10 @@ body > header {
 		color: $dark-slate;
 		font-size: 14px;
 		font-weight: 500;
+	}
+	
+	.white-text {
+		color:white;
 	}
 	
 	h1 {
@@ -584,6 +599,10 @@ body > header {
 
 .editable-text:hover, .editable-text:focus {
 	background-color: rgba(0,0,0,0.1);
+}
+
+.text-edit {
+	background-color: rgba(0,0,0,0.1) !important;
 }
 
 button {

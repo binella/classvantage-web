@@ -132,9 +132,18 @@
 	<section class="specific" ng-class="{null:'print-hide'}[assessment.comment]">
 		<h4>ADDITIONAL COMMENTS</h4>
 		<br/>
-		<span class="overalls">
-			<textarea ng-model="assessment.comment" class="editable-text" style="height:22px;margin-top:8px;" msd-elastic="" placeholder="Type a comment" ng-blur="assessment.$save()" blurs-on-enter></textarea>
-		</span>
+		<ul class="overalls" style="padding-top:0px;">
+			<li style="padding-left:0px;" ng-show="!editComment" ng-hide="!assessment.comment">
+				<a class="pencil" style="margin-left:-43px;vertical-align:middle;padding-top:3px;" href="" ng-click="assessment.$commentClone = assessment.comment; editComment = true;"></a>
+				<pre style="margin-top:-28px;">{{assessment.comment}}</pre>
+			</li>
+			<li style="padding-left:0px;" ng-show="editComment || !assessment.comment">
+				<textarea class="text-edit" rows="4" ng-model="assessment.$commentClone"></textarea>
+				<button class="btn btn-green" ng-click="assessment.comment = assessment.$commentClone;assessment.$save();editComment = false;">Save</button>
+				<button class="btn btn-green" ng-show="assessment.comment" ng-click="editComment = false;">Cancel</button>
+			</li>
+			<!--textarea ng-model="assessment.comment" class="editable-text" style="height:22px;margin-top:8px;" msd-elastic="" placeholder="Type a comment" ng-blur="assessment.$save()" blurs-on-enter></textarea-->
+		</ul>
 	</section>
 	<br/><br/><br/>
 </div>

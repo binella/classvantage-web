@@ -1,4 +1,4 @@
-<div class="hero green" style="height:387px;">
+<div class="hero green" >
 	<div class="container">
 		<br/>
   	<form>
@@ -10,36 +10,30 @@
 				</div>
 			</div>
 			
-			<div style="float:left;width:639px;">
-				<textarea ng-model="rubric.title" class="title-input-text editable-text" msd-elastic="" 
-									placeholder="Type a title" rows="2" cols="17" autocorrect="off" 
-									style="height:100px;" ng-blur="rubric.$save()" blurs-on-enter></textarea>
+			<div style="width:900px;">
+				<textarea ng-model="rubric.title" class="title-input-text text-edit" msd-elastic="" 
+									placeholder="Type a title" rows="2" autocorrect="off" 
+									style="height:70px;width:100%;" ng-blur="rubric.$save()" blurs-on-enter></textarea>
 				<br />
-				<a class="plus white" ng-click="displayDesc = true"
-					 ng-show="(rubric.description == null || rubric.description == '') && displayDesc == false">Add a description</a>
-				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" cols="62" autocorrect="off" class="desc-input-text editable-text"
-									ng-show="(rubric.description != null && rubric.description != '') || displayDesc == true"
-									focus-when="displayDesc == true" ng-blur="displayDesc = false;rubric.$save();"></textarea>
+				<textarea id="rubricDescription" ng-model="rubric.description" rows="3" autocorrect="off" class="desc-input-text text-edit"
+									style="width:100%;height:43px;" ng-blur="rubric.$save();" placeholder="Type a description"></textarea>
 			</div>
-			
-			<div style="float:left;width:1px;height:215px;margin-top:21px;" class="verticalLine"></div>
-			
-			<div style="float:left;padding-left:20px;">
-				<ul>
+			<div style="padding-left:25px;padding-bottom:20px;">
+				<ul class="inline">
 					<li>
-						<span>Grade:</span><br/>
+						<span class="white-text">Grade:</span><br/>
 						<select ng-model="rubric.$grade" ng-change="rubric.$subjectId = null;rubric.unit = null;rubric.$save();"
 										ng-options="u.grade as u.grade for u in units | unique:'grade' | orderBy:'grade'" cv-styled-select></select>
 					</li>
 					<li>
-						<span>Subject:</span><br/>
+						<span class="white-text">Subject:</span><br/>
 						<select ng-model="rubric.$subjectId" class="wide-select" ng-disabled="rubric.$grade === null" ng-change="rubric.unit = null;rubric.$save();"
 										ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: rubric.$grade} | unique:'subject_id' | orderBy:'id'" cv-styled-select>
 							<option value="" disabled="disabled" >Select a subject</option>
 						</select>
 					</li>
 					<li>
-						<span>Unit:</span><br/>
+						<span class="white-text">Unit:</span><br/>
 						<select ng-model="rubric.unit" class="wide-select" ng-disabled="rubric.$subjectId == null"
 										ng-options="u as u.title for u in units | filter: filterUnits | orderBy:'id'"
 										ng-change="rubric.$save();rubric.overall_expectations.length = 0;rubric.unit.$reload();" cv-styled-select>
