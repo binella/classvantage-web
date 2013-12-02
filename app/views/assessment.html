@@ -11,25 +11,26 @@
 		<div class="rubric-info" style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">
 			<label class="title-input-text" >{{assessment.assessable.title}}</label>
 			<br />
-			<label class="desc-input-text" style="width:800px;display:block;line-height:28px;margin-top:30px;">{{assessment.assessable.description}}</label>
+			<ul style="margin-top:17px;line-height:20px;color:black;" ng-show="assessment.assessable.unit.id">
+				<li style="display:inline;margin-right:10px;">
+					<span>Grade {{assessment.assessable.unit.grade}}</span>
+				</li>&bull;
+				<li style="display:inline;margin-left:10px;margin-right:10px;">
+					<span>{{assessment.assessable.unit.strand.subject.title}}</span>
+				</li>&bull;
+				<li style="display:inline;margin-left:10px;">
+					<span>{{assessment.assessable.unit.title}}</span>
+				</li>
+			</ul><br/>
+			<hr style="width:930px;border-color:white;border-top:none;border-bottom:2px solid white;"/>
+			<label class="desc-input-text" style="width:800px;display:block;line-height:28px;margin-top:25px;">{{assessment.assessable.description}}</label>
 			<br/>
 			<div class="rubric-details" ng-hide="!showDetails">
-				<div style="float:left;width:600px;" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
+				<div style="float:left;width:800px;" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
 					<label class="title-input-text" style="font-size:22px;">Overall Expectations</label>
-					<label class="desc-input-text" style="display:block;width:590px;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
-					<label class="desc-input-text" style="display:block;width:590px;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
+					<label class="desc-input-text" style="display:block;;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
+					<label class="desc-input-text" style="display:block;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
 				</div>
-				<ul style="float:left;padding-left:10px;margin-top:0px;width:180px;line-height:20px;border-left:4px solid white;" ng-show="assessment.assessable.unit.id">
-					<li>
-						<span>Grade {{assessment.assessable.unit.grade}}</span>
-					</li>
-					<li>
-						<span>{{assessment.assessable.unit.strand.subject.title}}</span>
-					</li>
-					<li>
-						<span>{{assessment.assessable.unit.title}}</span>
-					</li>
-				</ul>
 			</div>
 		</div>
 		<div style="clear:both;"></div>
@@ -66,7 +67,6 @@
 			<div class="rubric-row" 
 					 ng-repeat-start="row in assessment.assessable.rows | orderBy:'created_at' track by markFor(row)"
 					 ng-switch="marks[row.id].$wholeValue">
-				<!-- div class="top-covers"></di v-->
 				<div class="rubric-column criteria min-height">
 					<span>{{row.criteria}}</span>
 				</div>
@@ -118,8 +118,6 @@
 						{{row.level4_description}}
 					</span>
 				</div>
-				
-				<!--div class="bottom-cover"></div-->
 			</div>
 			<div class="bottom-divider"></div>
 			<div class="bottom-divider wide" ng-repeat-end></div>
@@ -135,7 +133,7 @@
 		<ul class="overalls" style="padding-top:0px;">
 			<li style="padding-left:0px;" ng-show="!editComment" ng-hide="!assessment.comment">
 				<a class="pencil" style="margin-left:-43px;vertical-align:middle;padding-top:3px;" href="" ng-click="assessment.$commentClone = assessment.comment; editComment = true;"></a>
-				<pre style="margin-top:-28px;">{{assessment.comment}}</pre>
+				<pre style="margin-top:-28px;width:920px;">{{assessment.comment}}</pre>
 			</li>
 			<li style="padding-left:0px;" ng-show="editComment || !assessment.comment">
 				<textarea class="text-edit" rows="4" ng-model="assessment.$commentClone"></textarea>

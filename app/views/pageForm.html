@@ -3,7 +3,6 @@
 
     <input type="text" id="beige-input" placeholder="Type a title (eg. French P2)" ng-model="page.title" tabindex="0" gains-focus required />
 		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
-
 </div>
 <div class="modal-body">
     <ul>
@@ -39,9 +38,9 @@
     </ul>
 </div>
 <div class="modal-footer">
-		<button class="btn btn-red" type="submit" 
-						ng-disabledn="page.grade == '' || page.grade == null || page.subject == null">
+		<button class="btn btn-red" type="submit">
 						{{buttonCaption}}
 		</button>
+		<a class="trash-dark" style="margin-left:215px;display:none;" ng-shows="page.id" ng-click="deletePage()">Delete this page</a>
 </div>
 </form>

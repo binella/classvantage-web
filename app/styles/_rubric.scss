@@ -90,6 +90,12 @@
 	}
 }
 
+.rubric-row {
+	padding-top:20px;
+	height:100%;
+	display:table;
+}
+
 .rubric-column {
 	display: table-cell;
 	width: 171px;
@@ -99,13 +105,13 @@
 	textarea, span {
 		resize: none;
 		border:none;
-		font-family: $roboto;
-		font-size:13px;
 		margin:18px;
 		width:129px;
 		outline:none;
 		margin-top:0px;
 		margin-bottom:0px;
+		font-family: $roboto;
+		font-size:13px;
 	}
 
 	span {
@@ -150,11 +156,7 @@
 	border: none;
 }
 
-.rubric-row {
-	padding-top:20px;
-	height:100%;
-	display:table;
-}
+
 
 div.criteria {
 	//width: 245px;

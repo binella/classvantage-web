@@ -58,9 +58,20 @@ angular.module('classvantageApp')
 				  $scope.cancel = function () {
 				    $modalInstance.dismiss('cancel');
 				  };
+				
+					$scope.deletePage = function () {
+						var deleteConfirm = confirm("Are you sure you want to delete this page? All its rubrics and grade will also be deleted.");
+						if (deleteConfirm) {
+							
+						};
+					}
 					
 					$scope.submitForm = function () {
 						// Can we handle this on the backend?
+						if (!$scope.page.title) { alert("Please fill out the title"); return };
+						if (!$scope.page.grade) { alert("Plaese select a grade"); return };
+						if (!$scope.page.subject) { alert("Please select a subject"); return };
+						
 						angular.extend($scope.page, {subject_id: $scope.page.subject.id })
 	
 						angular.extend(currentPage, $scope.page);

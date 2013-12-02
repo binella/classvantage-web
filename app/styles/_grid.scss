@@ -76,6 +76,7 @@
 	width: 115px;
 	height: 100%;
 	position:relative;
+	overflow:hidden;
 	
 	a:not(.plus):not(.menu-item) {
 		position: absolute;
@@ -171,6 +172,7 @@
 		margin-right:0px;
 		float:left;
 		cursor:pointer;
+		//left:0px;
 		
 		.icn-ex {
 			background-image:url(/images/icn-ex.png);
@@ -218,15 +220,17 @@
 }
 
 .grade-cell:not(:hover) {
+
 	.selected {
 		width: 99px;
-		position: absolute;
+		//position: absolute;
 		margin-left: 8px;
 		z-index:50;
 	}
 	
 	.check.selected {
 		margin-left:-49px;
+		//left:-57px;
 	}
 	
 	.marked {
@@ -255,6 +259,8 @@
 		margin-right:12px;
 		opacity:0.5;
 	}
+	
+
 	
 }
 

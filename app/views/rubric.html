@@ -78,29 +78,25 @@
 		<div style="clear:both;">
 		<div class="rubric-group">
 			<div class="rubric-row" ng-repeat-start="row in rubric.rows | orderBy:'created_at'">
-				<!--div class="top-cover"></div-->
 				<div class="rubric-column criteria">
 					<a class="close-button" ng-click="deleteRow(row)"><img src="images/beige-ex.png" /></a>
 					<textarea class="editable-text" ng-model="row.criteria" style="height:64px;" msd-elastic="" placeholder="Type criteria description here" ng-blur="row.$save()" blurs-on-enter></textarea>
 				</div>
 				<div class="rubric-column level">
-					<textarea class="editable-text" ng-model="row.level1_description" placeholder="Type level description here" msd-elastic="" ng-blur="unlock(row);row.$save();" blurs-on-enter></textarea>
+					<textarea class="editable-text" ng-model="row.level1_description" placeholder="Type level description here" msd-elastic="\n" ng-blur="unlock(row);row.$save();" blurs-on-enter></textarea>
 				</div>
 				<div class="rubric-column level">
 					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
-					<textarea class="editable-text" ng-model="row.level2_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<textarea class="editable-text" ng-model="row.level2_description" msd-elastic="\n" ng-blur="row.$save()" blurs-on-enter></textarea>
 				</div>
 				<div class="rubric-column level">
 					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
-					<textarea class="editable-text" ng-model="row.level3_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<textarea class="editable-text" ng-model="row.level3_description" msd-elastic="\n" ng-blur="row.$save()" blurs-on-enter></textarea>
 				</div>
 				<div class="rubric-column level">
 					<label ng-show="levelsLocked(row)">{{row.level1_description}}</label>
-					<textarea class="editable-text" ng-model="row.level4_description" msd-elastic="" ng-blur="row.$save()" blurs-on-enter></textarea>
+					<textarea class="editable-text" ng-model="row.level4_description" msd-elastic="\n" ng-blur="row.$save()" blurs-on-enter></textarea>
 				</div>
-				<!--div class="bottom-divider"></div>
-				<div class="bottom-divider wide"></div>
-				<!--div class="bottom-cover"></div-->
 			</div>
 			<div class="bottom-divider"></div>
 			<div class="bottom-divider wide" ng-repeat-end></div>
