@@ -62,7 +62,11 @@ angular.module('classvantageApp')
 					$scope.deletePage = function () {
 						var deleteConfirm = confirm("Are you sure you want to delete this page? All its rubrics and grade will also be deleted.");
 						if (deleteConfirm) {
-							
+							// This should be done better through a collection from DATA STORE
+							currentPage.$destroy();
+							$scope.pages.splice($scope.pages.indexOf(currentPage), 1);
+							$scope.cancel();
+							$location.path('/gradebook');
 						};
 					}
 					

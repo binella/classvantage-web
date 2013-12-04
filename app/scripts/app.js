@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('classvantageApp', ['env', 'ngResource', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
+angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV) {
 		

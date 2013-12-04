@@ -1,4 +1,4 @@
-<div class="hero green" style="height:auto;min-height:251px;">
+<div class="hero green" style="height:auto;min-height:201px;">
 	<div class="container">
 		<br/>
 		<div class="breadcrumbs">
@@ -11,30 +11,32 @@
 		<div class="rubric-info" style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">
 			<label class="title-input-text" >{{assessment.assessable.title}}</label>
 			<br />
-			<ul style="margin-top:17px;line-height:20px;color:black;" ng-show="assessment.assessable.unit.id">
-				<li style="display:inline;margin-right:10px;">
-					<span>Grade {{assessment.assessable.unit.grade}}</span>
-				</li>&bull;
-				<li style="display:inline;margin-left:10px;margin-right:10px;">
-					<span>{{assessment.assessable.unit.strand.subject.title}}</span>
-				</li>&bull;
-				<li style="display:inline;margin-left:10px;">
-					<span>{{assessment.assessable.unit.title}}</span>
-				</li>
-			</ul><br/>
-			<hr style="width:930px;border-color:white;border-top:none;border-bottom:2px solid white;"/>
-			<label class="desc-input-text" style="width:800px;display:block;line-height:28px;margin-top:25px;">{{assessment.assessable.description}}</label>
-			<br/>
-			<div class="rubric-details" ng-hide="!showDetails">
-				<div style="float:left;width:800px;" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
-					<label class="title-input-text" style="font-size:22px;">Overall Expectations</label>
-					<label class="desc-input-text" style="display:block;;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
-					<label class="desc-input-text" style="display:block;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
+			<div ng-hide="!showDetails">
+				<ul style="margin-top:17px;line-height:20px;color:black;" ng-show="assessment.assessable.unit.id">
+					<li style="display:inline;margin-right:10px;">
+						<span>Grade {{assessment.assessable.unit.grade}}</span>
+					</li>&bull;
+					<li style="display:inline;margin-left:10px;margin-right:10px;">
+						<span>{{assessment.assessable.unit.strand.subject.title}}</span>
+					</li>&bull;
+					<li style="display:inline;margin-left:10px;">
+						<span>{{assessment.assessable.unit.title}}</span>
+					</li>
+				</ul><br/>
+				<hr style="width:930px;border-color:white;border-top:none;border-bottom:2px solid white;"/>
+				<label class="desc-input-text" style="width:800px;display:block;line-height:28px;margin-top:25px;">{{assessment.assessable.description}}</label>
+				<br/>
+				<div class="rubric-details" >
+					<div style="float:left;width:800px;" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
+						<label class="title-input-text" style="font-size:22px;">Overall Expectations</label>
+						<label class="desc-input-text" style="display:block;;line-height:28px;" ng-repeat="overall in assessment.assessable.overall_expectations">{{overall.long_form}}</label>
+						<label class="desc-input-text" style="display:block;line-height:28px;" ng-show="assessment.assessable.custom_expectation_enabled">{{assessment.assessable.custom_expectation}}</label>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div style="clear:both;"></div>
-		<a class="details-toggle" style="float:right;font-size:16px;font-weight:300;cursor:pointer;" ng-click="showDetails = !showDetails" ng-show="assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
+		<a class="details-toggle" style="float:right;font-size:16px;font-weight:300;cursor:pointer;" ng-click="showDetails = !showDetails" ng-show="assessment.assessable.description || assessment.assessable.unit.id || assessment.assessable.overall_expectations.length > 0 || assessment.assessable.custom_expectation_enabled">
 			{{!!showDetails ? '&and; Hide' : '&or; Show'}} Details
 		</a>
 		<div style="clear:both;height:30px"></div>

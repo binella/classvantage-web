@@ -126,6 +126,7 @@
 	width: 115px;
 	height: 100%;
 	float: left;
+	position:relative;
 	
 	a {
 		text-align:center;
@@ -221,6 +222,10 @@
 
 .grade-cell:not(:hover) {
 
+//	.not-selected {
+//		display:none;
+//	}
+
 	.selected {
 		width: 99px;
 		//position: absolute;
@@ -248,16 +253,17 @@
 	}
 	
 	.has-comment {
-		float:right;
+		//float:right;
 		height:4px;
 		width:4px;
 		background-color:white;
 		z-index:200;
-		position:relative;
+		position:absolute;
 		pointer-events:none;
 		margin-top:12px;
 		margin-right:12px;
 		opacity:0.5;
+		right:0px;
 	}
 	
 

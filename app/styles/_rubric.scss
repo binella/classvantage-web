@@ -144,7 +144,7 @@
 		z-index:303;
 		margin-top:0px;
 		margin-bottom:0px;
-		display:none;
+		//display:none;
 	}
 }
 
@@ -315,10 +315,11 @@ div.criteria {
 			line-height:23px;
 			min-height:46px;
 			padding-top:12px;
-			padding-bottom:5px;
+			padding-bottom:12px;
 			margin-top:7px;
 			cursor:pointer;
 			position:relative;
+			white-space:normal;
 			
 			.plus {
 				//display: block;

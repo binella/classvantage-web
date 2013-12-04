@@ -56,7 +56,7 @@
 						<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
 					</span>
 					<span ng-switch-when="assignment" ng-switch="assessment.assessable.assignment_type">
-						<span ng-switch-when="check" style="position:absolute;">
+						<span ng-switch-when="check">
 							<a class="ex hoverable" bubble-toggle="click" ng-class="{true:'selected'}[assessment.value == 0]" ng-click="assessment.value = 0;assessment.$save()">
 								<span class="icn-ex"></span>
 							</a>
