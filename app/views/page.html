@@ -8,26 +8,18 @@
 	</ul>
 </div>
 <div style="height:15px;"></div>
-<div class="student-list scroll-fixed" ng-style="{'border-right': (page.students.length > 0 || page.rubrics.length > 0 ? '' : 'none')}">
-	<div class="student" ng-class="{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]">
-		<div class="student header-cell">
-			<a class="plus green" ng-click="newStudent();">Add a student</a>
-		</div>
-	</div>
-	<div class="student row" ng-repeat="student in page.students | orderBy:'last_name'">
-		<div class="student-cell">
-			<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
-			<span>{{student.full_name}}</span>
-		</div>
+<div class="student" style="position:absolute;" ng-class="{true:'header-row', false:''}[page.students.length > 0 || page.rubrics.length > 0]">
+	<div class="student header-cell">
+		<a class="plus green" ng-click="newStudent();">Add a student</a>
 	</div>
 </div>
 <div class="scrollbar-container" ng-show="page.rubrics.length + page.assignments.length > 5">
 	<div class="scrollbar" id="grid-scrollbar"><div class="empty-content" style="height:17px;" ng-style="{'width': ((page.rubrics.length+page.assignments.length)*117)+'px'}"></div></div>
 </div>
-<div class="grid-container">
+<div class="grid-container" style="left:168px;">
 	<div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div>
 	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length > 0" scroll-with="#grid-scrollbar" >
-		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*117) + 'px'}">
+		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 'px'}">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments) | orderBy:'created_at'">
 					<a class="delete-ex" ng-click="removeAssignment(column)" ng-if="column.$type === 'assignment'"></a>
@@ -38,6 +30,11 @@
 				</div>
 			</div>
 			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
+				<div class="student-cell">
+					<div class="student-background"></div>
+					<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
+					<span>{{student.full_name}}</span>
+				</div>
 				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments) | orderBy:'$columnCreatedAt'" 
 																ng-switch-old="assessment.$status"
 																ng-switch="assessment.assessable.$type"
@@ -45,7 +42,9 @@
 					<div class="bubble">
 						<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save()" blurs-on-enter>Something here</textarea>
 					</div>
-					<div class="has-comment" ng-show="assessment.comment"></div>
+					<div class="has-comment" ng-show="assessment.comment">
+						<div class="dot"></div>
+					</div>
 					<span ng-switch-when="rubric" ng-switch="assessment.$status">
 						<a ng-switch-when="incomplete" ui-sref="assessment({id: assessment.id})" class="gray">
 							? <span ng-if="assessment.$cachedAverage">({{assessment.$cachedAverage}})</span>
@@ -56,12 +55,14 @@
 						<a ng-switch-default href="" class="new" ng-click="saveAndAssess(assessment)"> + </a>
 					</span>
 					<span ng-switch-when="assignment" ng-switch="assessment.assessable.assignment_type">
-						<span ng-switch-when="check">
-							<a class="ex hoverable" bubble-toggle="click" ng-class="{true:'selected'}[assessment.value == 0]" ng-click="assessment.value = 0;assessment.$save()">
+						<span ng-switch-when="check" ng-class="{0:'exed', 1:'checked'}[assessment.value]" >
+							<span class="divider-container">
+								<span ng-show="assessment.value == null" class="divider"></span>
+							</span>
+							<a class="ex hoverable" bubble-toggle="click" ng-classs="{true:'selected'}[assessment.value == 0]" ng-click="assessment.value = 0;assessment.$save()">
 								<span class="icn-ex"></span>
 							</a>
-							<span ng-show="assessment.value == null" class="divider"></span>
-							<a class="check hoverable" bubble-toggle="click" ng-class="{false:'selected'}[!!assessment.value == 0]" ng-click="assessment.value = 1;assessment.$save()">
+							<a class="check hoverable" bubble-toggle="click" ng-classs="{false:'selected'}[!!assessment.value == 0]" ng-click="assessment.value = 1;assessment.$save()">
 								<span class="icn-check"></span>
 							</a>
 						</span>
@@ -74,7 +75,7 @@
 		</div>
 	</div>
 </div>
-<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length + page.assignments.length > 0]" ng-style="{height: (104 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
+<div class="pin-right scroll-fixed" style="margin-left:168px;" ng-class="{true:'with-divider', false:''}[page.rubrics.length + page.assignments.length > 0]" ng-style="{height: (104 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
 	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || (page.rubrics.length + page.assignments.length) > 0]">
 		<div class="rubric header-cell" style="overflow:visible;" ng-style="{width: (page.rubrics.length + page.assignments.length > 0 ? '113px' : '315px')}">
 			<a class="plus green dropdown-toggle"  ng-style="{'margin-left': (page.rubrics.length + page.assignments.length > 0 ? '40px' : '34px')}" style="margin-left:34px;position:relative;top:39px;">

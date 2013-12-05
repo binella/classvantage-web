@@ -31,7 +31,21 @@
 	font-size: 16px;
 	font-weight: 500;
 	padding-left: 20px;
-	height: 100%;
+	height: 34px;
+	position:absolute;
+	left:-170px;
+	width:148px;
+
+	.student-background {
+		background-color: white;
+		width: 100%;
+		position: absolute;
+		height: 100%;
+		margin-left: -20px;
+		margin-top: -15px;
+		z-index: -1;
+		border-bottom:1px solid $grayish-beige;
+	}
 
 	.close-button {
 		display: none;
@@ -114,6 +128,10 @@
 	}
 }
 
+.divider-container {
+	position:relative;
+}
+
 .rubric.header-cell:not(:last-child) {
 	border-right: 1px solid $medium-beige;
 }
@@ -122,11 +140,20 @@
 	border-bottom: 1px solid $light-grayish-beige;
 }
 
+.grade.row:hover {
+	.student-background {
+		background-color:$light-silver;
+	}
+	.grade-cell {
+		background-color:white;
+	}
+}
+
 .grade-cell {
 	width: 115px;
 	height: 100%;
 	float: left;
-	position:relative;
+	//position:relative; CANNOT BE (cuz of comment bubbles)
 	
 	a {
 		text-align:center;
@@ -184,7 +211,8 @@
 		
 	}
 	
-	.ex.selected, .ex.hoverable:hover {
+	
+	.ex.hoverable:hover {
 		background-color:$red;
 		opacity:0.5;
 		.icn-ex {
@@ -194,47 +222,89 @@
 	
 	.check {
 		width:49px;
-		margin-left:0px;
-		float:right;
+		margin-left:58px;
+		//float:right;
 		cursor:pointer;
 		
 		.icn-check {
 			background-image:url(/images/icn-check.png);
 			height:12px;
 			width:15px;
-			margin-left:-7px;
+			margin-left:-8px;
 		}
+		
 	}
+
 	
-	.selected {
-		opacity:1 !important;
-	}
-	
-	.check.selected, .check.hoverable:hover {
+	.check.hoverable:hover {
 		background-color:$green;
 		opacity:0.5;
 		.icn-check {
 			background-position:-15px;
 		}
 	}
+	
+	
+	/* new stuff */
+	
+
 
 }
-
+/*
+.grade-cell:hover {
+		.icn-check {
+			margin-left:-8px;
+		}
+}
+*/
 .grade-cell:not(:hover) {
 
 //	.not-selected {
 //		display:none;
 //	}
 
+	.exed {
+		.ex, .ex.hoverable:hover {
+			width: 99px;
+			background-color:$red;
+			opacity:1;
+			.icn-ex {
+				background-position:-11px;
+			}
+		}
+		
+		.icn-check {
+			display:none;
+		}
+	}
+	
+	.checked {
+		.check, .check.hoverable:hover {
+			width:99px;
+			background-color:$green;
+			opacity:1;
+			margin-left:8px;
+			
+			.icn-check {
+				background-position:-15px;
+				margin-left:-31px;
+			}
+			
+		}
+		
+
+	}
+
 	.selected {
 		width: 99px;
 		//position: absolute;
 		margin-left: 8px;
 		z-index:50;
+		
 	}
 	
 	.check.selected {
-		margin-left:-49px;
+		//margin-left:-49px;
 		//left:-57px;
 	}
 	
@@ -247,23 +317,35 @@
 		width:1px;
 		height:12px;
 		background:$dark-beige;
-		position:absolute;
-		margin-top:18px;
-		opacity:0.5;
+		position: absolute;
+		opacity: 0.5;
+		float: left;
+		top: 19px;
+		left: 57px;
 	}
 	
 	.has-comment {
 		//float:right;
-		height:4px;
-		width:4px;
-		background-color:white;
+		//height:4px;
+		//width:4px;
+		//background-color:white;
 		z-index:200;
-		position:absolute;
+		//position:absolute;
 		pointer-events:none;
-		margin-top:12px;
-		margin-right:12px;
+		//margin-top:12px;
+		//margin-right:12px;
 		opacity:0.5;
-		right:0px;
+		position:relative;
+		//right:0px;
+	
+		.dot {
+			height:4px;
+			width:4px;
+			background-color:white;
+			position:absolute;
+			right:12px;
+			top:12px;
+		}
 	}
 	
 
