@@ -212,13 +212,7 @@
 	}
 	
 	
-	.ex.hoverable:hover {
-		background-color:$red;
-		opacity:0.5;
-		.icn-ex {
-			background-position:-11px;
-		}
-	}
+
 	
 	.check {
 		width:49px;
@@ -235,33 +229,54 @@
 		
 	}
 
+	span:not(.checked) {
 	
-	.check.hoverable:hover {
-		background-color:$green;
-		opacity:0.5;
-		.icn-check {
-			background-position:-15px;
+		.check.hoverable:hover {
+			background-color:$green;
+			opacity:0.5;
+			.icn-check {
+				background-position:-15px;
+			}
 		}
 	}
 	
+	span:not(.exed) {
+		
+		.ex.hoverable:hover {
+			background-color:$red;
+			opacity:0.5;
+			.icn-ex {
+				background-position:-11px;
+			}
+		}
+	}
 	
 	/* new stuff */
 	
 
 
 }
-/*
-.grade-cell:hover {
-		.icn-check {
-			margin-left:-8px;
-		}
-}
-*/
-.grade-cell:not(:hover) {
 
-//	.not-selected {
-//		display:none;
-//	}
+.grade-cell:hover {
+	.exed {
+		.ex {
+			background-color:$red;
+			.icn-ex {
+				background-position:-11px;
+			}
+		}
+	}
+	.checked {
+		.check {
+			background-color:$green;
+			.icn-check {
+				background-position:-15px;
+			}
+		}
+	}
+}
+
+.grade-cell:not(:hover) {
 
 	.exed {
 		.ex, .ex.hoverable:hover {
