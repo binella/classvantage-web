@@ -64,11 +64,13 @@
 }
 
 .student-cell:hover {
+	margin-left: -20px;
+	padding-left: 40px;
+	width:128px;
+	
 	.close-button {
 		display:block;
 	}
-	margin-left: -20px;
-	padding-left: 40px;
 }
 
 .student {
@@ -130,6 +132,7 @@
 
 .divider-container {
 	position:relative;
+	float:left;
 }
 
 .rubric.header-cell:not(:last-child) {

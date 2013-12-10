@@ -121,6 +121,7 @@ $baseBorderRadius:      4px !default;
 select {
 	height: 37px;
 	cursor: pointer;
+	background-color:lightgray !important;
 }
 
 select:disabled {

@@ -1,9 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Page', function (Store, ENV) {
-		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
-
+  .factory('Page', function (Store, ENV, $analytics) {
 		var resource = Store({
 			type: 'page',
 			url: ENV.baseURL + 'pages',
@@ -28,6 +26,12 @@ angular.module('classvantageApp')
 				}
 			]
 		});
+		
+		// Callbacks
+		resource.afterSave = function (instance, isNew) {
+			if (isNew) { $analytics.eventTrack('page.create'); };
+		};
+		
 
 		return resource;
   })

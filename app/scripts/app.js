@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store'])
+angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store', 'angulartics', 'angulartics.mixpanel'])
 
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV) {
 		
@@ -161,6 +161,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					if (event.which == 13) {
 						element.blur();
 						event.preventDefault();
+						event.stopPropagation();
 					};
 				})
 			}
@@ -273,6 +274,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	
 	.directive('bubbleDelay', ['$timeout', function ($timeout) {
 		var bubbleTimer, fromMouseOver;
+		var isFirefox = typeof InstallTrigger !== 'undefined';
 		return {
 			restrict: 'CA',
 			link: function(scope, element, attrs) {
@@ -288,10 +290,12 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 							var newLeft = 106-$('#grid-scrollbar').scrollLeft();
 							var widthRequired = (element.offset().left + element.width() + bubble.width());
 							if (widthRequired > window.innerWidth) {
-								bubble.css('margin-left', newLeft - 102 - bubble.width());
+								if (!isFirefox) bubble.css('margin-left', newLeft - 102 - bubble.width());
+								else bubble.css('margin-left', '-355px');
 								bubble.addClass('right');
 							} else {
-								bubble.css('margin-left', newLeft);
+								if (!isFirefox) bubble.css('margin-left', newLeft);
+								else bubble.css('margin-left','');
 								bubble.removeClass('right');
 							}
 							element.addClass('delay-bubble');
@@ -324,7 +328,8 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	
 	.directive('bubbleToggle', ['$document', '$timeout', function ($document, $timeout) {
 		var	openBubble = null,
-				closeBubble = angular.noop;
+				closeBubble = angular.noop,
+				isFirefox = typeof InstallTrigger !== 'undefined';
 		return {
 			restrict: 'CA',
 			link: function(scope, element, attrs) {
@@ -346,14 +351,17 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	        if (!bubbleWasOpen) {
 
 						// Collision
-						var bubble = element.parent().parent().parent().children('.bubble')
+						var bubble = element.parent().parent().parent().children('.bubble');
 						var newLeft = 106-$('#grid-scrollbar').scrollLeft();
 						var widthRequired = (element.parent().offset().left + element.parent().parent().parent().width() + bubble.width());
+						//console.log(newLeft);
 						if (widthRequired > window.innerWidth) {
-							bubble.css('margin-left', newLeft - 102 - bubble.width());
+							if (!isFirefox) bubble.css('margin-left', newLeft - 102 - bubble.width());
+							else bubble.css('margin-left', '-355px');
 							bubble.addClass('right');
 						} else {
-							bubble.css('margin-left', newLeft);
+							if (!isFirefox) bubble.css('margin-left', newLeft);
+							else bubble.css('margin-left','');
 							bubble.removeClass('right');
 						}
 
@@ -363,8 +371,8 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	          openBubble = element;
 	          closeBubble = function (event) {
 	            if (event) {
-								if (event.target.className.indexOf('bubble') != -1 || 
-										event.target.className.indexOf('editable-text') != -1 ||
+								if (event.target.nodeName === '#document' || ( (event.target.className.indexOf('bubble') != -1 || 
+										event.target.className.indexOf('editable-text') != -1)) ||
 										event.target === element.context) { return; };
 	              event.preventDefault();
 	              event.stopPropagation();

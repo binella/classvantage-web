@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Unit, pages, $state) {
+  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Unit, pages, $state, $analytics) {
 
 		// Default to the first page
 		$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
@@ -60,13 +60,15 @@ angular.module('classvantageApp')
 				  };
 				
 					$scope.deletePage = function () {
-						var deleteConfirm = confirm("Are you sure you want to delete this page? All its rubrics and grade will also be deleted.");
+						var deleteConfirm = confirm("Are you sure you want to delete this page? All of its rubrics and grades will also be deleted.");
 						if (deleteConfirm) {
 							// This should be done better through a collection from DATA STORE
 							currentPage.$destroy();
 							$scope.pages.splice($scope.pages.indexOf(currentPage), 1);
 							$scope.cancel();
 							$location.path('/gradebook');
+							/* Analytics */
+							$analytics.eventTrack('page.delete');
 						};
 					}
 					
@@ -85,7 +87,7 @@ angular.module('classvantageApp')
 								pages.unshift(page);
 								$scope.cancel();
 								$location.path('/gradebook/' + page.id);
-							})
+							});
 						} else {
 							currentPage.$save().then(function (page) {}, function () { alert('Error creating page'); });
 							$scope.cancel();

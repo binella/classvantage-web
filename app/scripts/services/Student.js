@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Student', function (Store, ENV) {
-		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
+  .factory('Student', function (Store, ENV, $analytics) {
 		var resource = Store({
 			type: 'student',
 			url: ENV.baseURL + 'students',
@@ -21,6 +20,11 @@ angular.module('classvantageApp')
 				}
 			]
 		});
+
+		// Callbacks
+		resource.afterSave = function (instance, isNew) {
+			if (isNew) { $analytics.eventTrack('student.create'); };
+		}
 
 		resource.resourcePrototype.$assessmentsFor = function (rubrics, assignments) {
 			var arr = [];

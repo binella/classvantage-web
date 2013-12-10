@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Assessment', function (Store, ENV) {
+  .factory('Assessment', function (Store, ENV, $analytics) {
 		//var resource = $resource(_baseURL + 'pages/:id', {id: "@id"}, {update: {method: 'PUT'}});
 		var resource = Store({
 			type: 'assessment',
@@ -31,6 +31,12 @@ angular.module('classvantageApp')
 				}
 			]
 		});
+		
+		// Callbacks
+		
+		resource.afterSave = function (data, isNew) {
+			if (isNew) { $analytics.eventTrack('assessment.create'); };
+		}
 		
 		// Calculated Properties
 		

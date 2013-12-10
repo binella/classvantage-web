@@ -17,8 +17,8 @@
 	<div class="scrollbar" id="grid-scrollbar"><div class="empty-content" style="height:17px;" ng-style="{'width': ((page.rubrics.length+page.assignments.length)*117)+'px'}"></div></div>
 </div>
 <div class="grid-container" style="left:168px;">
-	<div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div>
-	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length > 0" scroll-with="#grid-scrollbar" >
+	<!--div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div-->
+	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length + page.students.length > 0" scroll-with="#grid-scrollbar" >
 		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 'px'}">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments) | orderBy:'created_at'">
@@ -38,10 +38,12 @@
 				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments) | orderBy:'$columnCreatedAt'" 
 																ng-switch-old="assessment.$status"
 																ng-switch="assessment.assessable.$type"
-																bubble-delay="assessment.comment != null && assessment.comment !== ''">
-					<div class="bubble">
-						<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save()" blurs-on-enter>Something here</textarea>
-					</div>
+																bubble-delay="assessment.id">
+					<!--div class="bubble-container" style="position:absolute;"-->
+						<div class="bubble">
+							<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save();" blurs-on-enter></textarea>
+						</div>
+					<!--/div-->
 					<div class="has-comment" ng-show="assessment.comment">
 						<div class="dot"></div>
 					</div>
@@ -59,10 +61,10 @@
 							<span class="divider-container">
 								<span ng-show="assessment.value == null" class="divider"></span>
 							</span>
-							<a class="ex hoverable" bubble-toggle="click" ng-classs="{true:'selected'}[assessment.value == 0]" ng-click="assessment.value = 0;assessment.$save()">
+							<a class="ex hoverable" bubble-toggle="click" ng-classs="{true:'selected'}[assessment.value == 0]" ng-click="markAssessment(assessment, 0);">
 								<span class="icn-ex"></span>
 							</a>
-							<a class="check hoverable" bubble-toggle="click" ng-classs="{false:'selected'}[!!assessment.value == 0]" ng-click="assessment.value = 1;assessment.$save()">
+							<a class="check hoverable" bubble-toggle="click" ng-classs="{false:'selected'}[!!assessment.value == 0]" ng-click="markAssessment(assessment, 1);">
 								<span class="icn-check"></span>
 							</a>
 						</span>
@@ -83,7 +85,7 @@
 			</a>
 			<ul class="dropdown-menu" style="">
 	    	<li>
-	      	<a class="menu-item" ng-click="newRubric()">
+	      	<a class="menu-item" ng-click="newRubric()" >
 						<span class="icn-container">
 							<img src="/images/menu-rubric.png" />
 						</span>
@@ -91,7 +93,7 @@
 					</a>
 	    	</li>
 				<li>
-					<a class="menu-item" ng-click="newAssignment({assignment_type: 'percentage'})">
+					<a class="menu-item" ng-click="newAssignment({assignment_type: 'percentage'})" >
 						<span class="icn-container">
 							<img src="/images/menu-grade.png" />
 						</span>

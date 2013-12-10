@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .factory('Rubric', function (Store, ENV) {
+  .factory('Rubric', function (Store, ENV, $analytics) {
 
 		var resource = Store({
 			type: 'rubric',
@@ -28,6 +28,12 @@ angular.module('classvantageApp')
 				}
 			]
 		});
+		
+		// Callbacks
+		
+		resource.afterSave = function (instance, isNew) {
+			if (isNew) { $analytics.eventTrack('assignment.create', {type: 'rubric'}); };
+		}
 
 		resource.resourcePrototype.$resolveGradeAndSubject = function () {
 			if (!this.unit.id) {

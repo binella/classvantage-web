@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, currentPage, pages) {
+  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, currentPage, pages, $analytics) {
 		
 		$scope.page = currentPage;	
 		$scope.rubrics = $scope.page.rubrics;
@@ -25,6 +25,8 @@ angular.module('classvantageApp')
 			if (confirmRemove) {
 				$scope.page.assignments.$remove(assignment);
 				$scope.page.$save();
+				/* Analytics */
+				$analytics.eventTrack('assignment.delete', {type: assignment.assignment_type === 'percentage' ? 'manualgrade' : 'checkmark' });
 			};
 		}
 		
@@ -91,10 +93,10 @@ angular.module('classvantageApp')
 		}
 		
 		
-		$scope.delayComment = function () {
-			console.log('ata');
+		$scope.markAssessment = function (assessment, value) {
+			assessment.value = value;
+			assessment.$save();
 		}
-
 		
   });
 

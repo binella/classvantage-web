@@ -165,7 +165,7 @@
 													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
 	<a class="btn btn-green" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
-	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="printAssessment()">
+	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="printAssessment()" analytics-on="click" analytics-event="assessment.print">
 		<img src="/images/print.png" />Print
 	</a>
 </div>

@@ -86,9 +86,13 @@ angular.module('classvantageApp')
 	    };
 	
 			$http.post(ENV.baseURL.substr(0,ENV.baseURL.length-3) + 'register', payload).success(function (data) {
+				mixpanel.people.set({
+						"$name": payload.name,
+				    "$email": payload.email,
+				    "$created": new Date()
+				});
 				$scope.logIn(payload.email, payload.password);
 			}).error(function (data) {
-				console.log(data);
 				$scope.error = data.error;
 			});
 		};

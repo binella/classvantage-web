@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row, $state) {
+  .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row, $state, $analytics) {
 	
 		/*
 		$scope.unitChanged = function(unit) {
@@ -103,6 +103,8 @@ angular.module('classvantageApp')
 			if (confirmDelete) {
 				$state.go('gradebook.page', {page_id: $scope.rubric.page.id});
 				$scope.rubric.$destroy();
+				/* Analytics */
+				$analytics.eventTrack('assignment.delete', {type: 'rubric'});
 			};
 		}
 		
