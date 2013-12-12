@@ -28,12 +28,17 @@
 				</li>
 				<li>
 					<span>School</span>
-					<input type="text" ng-model="school"/>
+					<input type="text" ng-model="form.school" ng-show="province !== 'Ontario'"/>
+					<span class="slate-unifrom" ng-show="province === 'Ontario'">
+						<select ng-model="form.school" ng-options="sch as sch for sch in schools" style="width:250px;" cv-styled-select>
+							<option value="" disabled="disabled">Select a school</option>
+						</select>
+					</span>
 				</li>
 				<li>
 					<span>Province</span>
 					<span class="slate-unifrom">
-						<select ng-model="province" ng-options="prv as prv for prv in provinces" style="width:250px;" cv-styled-select>
+						<select ng-model="province" ng-options="prv as prv for prv in provinces" style="width:250px;" ng-change="form.school = ''" cv-styled-select>
 							<option value="" disabled="disabled" >Select a province</option>
 						</select>
 					</span>
@@ -44,6 +49,10 @@
 				<li style="margin-top:-25px;">
 					<span>Password</span>
 					<input ng-model="password" type="password"/>
+				</li>
+				<li>
+					<span>Confirm</span>
+					<input ng-model="password_confirmation" type="password"/>
 				</li>
 				<li>
 					<button class="btn btn-green" ng-click="signUp()" style="height:48px;width:150px;font-size:18px;font-weight:300;margin:auto;display:block;margin-top:35px;">Sign up</button>

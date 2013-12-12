@@ -186,8 +186,8 @@ body > header {
   
   nav {
     margin-left: 230px;
-    
-    a {
+
+    a.nav-item {
       @include link-colors(white);
       float: left;
       height: 63px;
@@ -206,7 +206,7 @@ body > header {
     }
     
 		.pull-right {
-			float: right;
+			float: right !important;
 		}
 
     a.gradebook.active, a.gradebook:hover { background: $green; }

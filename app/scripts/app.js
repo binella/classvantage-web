@@ -34,6 +34,18 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				controller: "LoginCtrl",
 				access: 0
 			})
+			.state('changePassword', {
+				url: "/change_password",
+				templateUrl: "views/changePassword.html",
+				controller: "MainCtrl",
+				access: 1
+			})
+			.state('resetPassword', {
+				url: "/reset_password?token",
+				templateUrl: "views/changePassword.html",
+				controller: "LoginCtrl",
+				access: 0
+			})
 			.state('gradebook', {
 				url: "/gradebook",
 				templateUrl: "views/gradebook.html",

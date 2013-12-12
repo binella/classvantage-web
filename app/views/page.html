@@ -19,15 +19,16 @@
 <div class="grid-container" style="left:168px;">
 	<!--div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div-->
 	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length + page.students.length > 0" scroll-with="#grid-scrollbar" >
-		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 'px'}">
+		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 1 + 'px'}">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments) | orderBy:'created_at'">
-					<a class="delete-ex" ng-click="removeAssignment(column)" ng-if="column.$type === 'assignment'"></a>
+					<a class="delete-ex" ng-click="removeAssignment(column)" ng-show="column.$type === 'assignment'"></a>
 					<div class="title-container" ng-switch="column.$type">
 						<a ng-switch-when="rubric" ui-sref="rubric({id: column.id})">{{column.title || 'Untitled'}}</a>
 						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" msd-elastic="" blurs-on-enter></textarea>
 					</div>
 				</div>
+				<div style="clear:both;"></div>
 			</div>
 			<div class="grade row" ng-repeat="student in page.students | orderBy:'last_name'">
 				<div class="student-cell">
@@ -35,12 +36,11 @@
 					<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
 					<span>{{student.full_name}}</span>
 				</div>
-				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments) | orderBy:'$columnCreatedAt'" 
-																ng-switch-old="assessment.$status"
+				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments) | orderBy:'$columnCreatedAt'"
 																ng-switch="assessment.assessable.$type"
 																bubble-delay="assessment.id">
 					<!--div class="bubble-container" style="position:absolute;"-->
-						<div class="bubble">
+						<div class="bubble" ng-show="assessment.id">
 							<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save();" blurs-on-enter></textarea>
 						</div>
 					<!--/div-->
@@ -58,13 +58,13 @@
 					</span>
 					<span ng-switch-when="assignment" ng-switch="assessment.assessable.assignment_type">
 						<span ng-switch-when="check" ng-class="{0:'exed', 1:'checked'}[assessment.value]" >
-							<span class="divider-container">
-								<span ng-show="assessment.value == null" class="divider"></span>
+							<span ng-show="assessment.value == null" class="divider-container">
+								<span class="divider"></span>
 							</span>
-							<a class="ex hoverable" bubble-toggle="click" ng-classs="{true:'selected'}[assessment.value == 0]" ng-click="markAssessment(assessment, 0);">
+							<a class="ex hoverable" bubble-toggle="click" ng-click="markAssessment(assessment, 0);">
 								<span class="icn-ex"></span>
 							</a>
-							<a class="check hoverable" bubble-toggle="click" ng-classs="{false:'selected'}[!!assessment.value == 0]" ng-click="markAssessment(assessment, 1);">
+							<a class="check hoverable" bubble-toggle="click" ng-click="markAssessment(assessment, 1);">
 								<span class="icn-check"></span>
 							</a>
 						</span>
@@ -73,6 +73,7 @@
 						</a>
 					</span>
 				</div>
+				<div style="clear:both;"></div>
 			</div>
 		</div>
 	</div>
