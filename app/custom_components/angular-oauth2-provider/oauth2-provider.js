@@ -70,7 +70,11 @@ angular.module('oauthService', ['ngCookies', 'http-auth-interceptor'])
 			} else {
 				if (isLoggedIn) {
 					event.preventDefault();
-					$location.path($state.href(fromState.name, fromParams).substr(1) || '/');
+					var fromHref = $state.href(fromState.name, fromParams);
+					if (fromHref)
+						$location.path(fromHref.substr(1) || '/');
+					else
+						$location.path('/gradebook');
 				};
 			}
 		});

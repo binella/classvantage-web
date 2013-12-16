@@ -33,6 +33,10 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+		<!--[if lte IE 10]>
+			<script src="bower_components/xdomain/dist/0.5/xdomain.min.js" slave="http://api.classvantage.com/proxy.html"></script>
+		<![endif]-->
+
 	  <header style="display:none;" ng-style="{display:$state.current.name !== 'signup' ? 'block' : 'none'}">
 	    <div class="container" ng-controller="MainCtrl">
 	      <a href="#/" class="logo"><img src="images/logo.png"></a>

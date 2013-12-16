@@ -210,6 +210,8 @@
 			height:11px;
 			width:11px;
 			margin-left:-5px;
+			position:relative;
+			display:inline-block;
 		}
 		
 	}
@@ -227,7 +229,9 @@
 			background-image:url(/images/icn-check.png);
 			height:12px;
 			width:15px;
-			margin-left:-8px;
+			margin-left:-2px;
+			position:relative;
+			display:inline-block;
 		}
 		
 	}
@@ -305,7 +309,7 @@
 			
 			.icn-check {
 				background-position:-15px;
-				margin-left:-31px;
+				margin-left:-51px;
 			}
 			
 		}

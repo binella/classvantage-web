@@ -88,9 +88,9 @@ module.exports = function (grunt) {
 				name: 'env',
 				constants: {
 					'ENV': {
-						baseURL: 'http://com-classvantage-staging.herokuapp.com/v1/',
+						baseURL: 'http://api-staging.classvantage.com/v1/',
 						oAuth: {
-							endPoint: 'http://com-classvantage-staging.herokuapp.com/oauth/token',
+							endPoint: 'http://api-staging.classvantage.com/oauth/token',
 							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
 							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
 						}
@@ -102,9 +102,9 @@ module.exports = function (grunt) {
 				name: 'env',
 				constants: {
 					'ENV': {
-						baseURL: 'http://com-classvantage-production.herokuapp.com/v1/',
+						baseURL: 'http://api.classvantage.com/v1/',
 						oAuth: {
-							endPoint: 'http://com-classvantage-production.herokuapp.com/oauth/token',
+							endPoint: 'http://api.classvantage.com/oauth/token',
 							clientId: '20100c70466699968233062227f148840238540ecf511a92e8d5d6748f0149de',
 							clientSecret: '9a13e2fd0a71494c87681b462213d416a3b8b503ca6ed13690bfe3de4ce0ee29'
 						}

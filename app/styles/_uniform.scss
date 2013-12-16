@@ -116,6 +116,7 @@ div#{$class-wrapper}#{$class-select} {
 /* Checker */
 div#{$class-wrapper}#{$class-checkbox} {
 	margin-right: 5px;
+	overflow:hidden;
 }
 
 /* Radio */

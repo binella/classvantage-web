@@ -149,11964 +149,11956 @@ angular.module('classvantageApp')
 		}
 		
 		$scope.schools = [
-		  "A A Wright Public School (Chatham-Kent)",
-		  "Abbey Lane Public School (Oakville)",
-		  "A B Ellis (Espanola)",
-		  "Aberarder Central School (Plympton-Wyoming)",
-		  "Aberdeen Public School (London)",
-		  "Aberfoyle Public School (Guelph)",
-		  "Abraham Erb Public School (Waterloo)",
-		  "Académie de la Moraine (Richmond Hill)",
-		  "Académie de la Tamise (London)",
-		  "Académie La Pinède (Essa)",
-		  "ACCESS Elementary (Vaughan)",
-		  "Adam Beck Junior Public School (Toronto)",
-		  "Adam Scott Intermediate School (Peterborough)",
-		  "Adamsdale Public School (Greater Sudbury)",
-		  "Adelaide Hoodless Public School (Hamilton)",
-		  "Adelaide Mclaughlin Public School (Oshawa)",
-		  "Adelaide - W G MacDonald Public School (Strathroy-Caradoc)",
-		  "Adjala Central Public School (Adjala-Tosorontio)",
-		  "Admaston Township Public School (Renfrew)",
-		  "Admiral Collingwood Elementary School (Collingwood)",
-		  "Adrienne Clarkson Elementary School (Ottawa)",
-		  "Adrienne Clarkson Public School (Richmond Hill)",
-		  "Africentric Alternative School (Toronto)",
-		  "Agincourt Junior Public School (Toronto)",
-		  "Agincourt Road Public School (Ottawa)",
-		  "Agnes Hodge Public School (Brantford)",
-		  "Agnes Macphail Public School (Toronto)",
-		  "Agnes Taylor Public School (Brampton)",
-		  "Agnew H Johnston Public School (Thunder Bay)",
-		  "Aileen-Wright English Catholic School (Cochrane)",
-		  "A J Baker Public School (Zorra)",
-		  "A J Charbonneau Elementary Public School (Arnprior)",
-		  "A K Wigg Public School (Pelham)",
-		  "Albion Heights Junior Middle School (Toronto)",
-		  "Alcona Glen Elementary School (Innisfil)",
-		  "Aldborough Public School (West Elgin)",
-		  "Aldergrove Public School (Markham)",
-		  "Aldershot Elementary School (Burlington)",
-		  "Alexander Graham Bell Public School (Ajax)",
-		  "Alexander Kuska KSG Catholic Elementary School (Welland)",
-		  "Alexander Muir/Gladstone Ave Junior and Senior Public School (Toronto)",
-		  "Alexander Muir Public School (Newmarket)",
-		  "Alexander Public School (Greater Sudbury)",
-		  "Alexander's Public School (Burlington)",
-		  "Alexander Stirling Public School (Toronto)",
-		  "Alexandra Community School (Owen Sound)",
-		  "Alexandra Public School (St. Catharines)",
-		  "Alexandra Public School (Kawartha Lakes)",
-		  "Alexmuir Junior Public School (Toronto)",
-		  "Algonquin Avenue Public School (Thunder Bay)",
-		  "Algonquin Public School (Woodstock)",
-		  "Algonquin Ridge Elementary School (Barrie)",
-		  "Algonquin Road Public School (Greater Sudbury)",
-		  "Allan A Greenleaf Elementary (Hamilton)",
-		  "Allan A Martin Senior Public School (Mississauga)",
-		  "Allandale Heights Public School (Barrie)",
-		  "Allan Drive Middle School (Caledon)",
-		  "Allenby Junior Public School (Toronto)",
-		  "Alliance French Immersion Public School (North Bay)",
-		  "Alliston Union Public School (New Tecumseth)",
-		  "Alloa Public School (Caledon)",
-		  "All Saints Catholic Elementary School (Markham)",
-		  "All Saints Catholic Intermediate School (Ottawa)",
-		  "All Saints Catholic School (Mississauga)",
-		  "All Saints Catholic School (Toronto)",
-		  "Alma Public School (Mapleton)",
-		  "Aloma Crescent Public School (Brampton)",
-		  "A. Lorne Cassidy Elementary School (Ottawa)",
-		  "ALPHA Alternative Junior School (Toronto)",
-		  "ALPHA II Alternative School (Toronto)",
-		  "Alpine Public School (Kitchener)",
-		  "Alta Vista Public School (Ottawa)",
-		  "Alternative Program Elementary School (Greater Sudbury)",
-		  "Altona Forest Public School (Pickering)",
-		  "Alton Public School (Caledon)",
-		  "Amabel-Sauble Community School (Bruce Peninsula)",
-		  "A M Cunningham Junior Public School (Hamilton)",
-		  "Amesbury Middle School (Toronto)",
-		  "Amherstburg Public School (Amherstburg)",
-		  "Amherst Island Public School (Loyalist)",
-		  "AmherstView Public School (Loyalist)",
-		  "Ancaster Meadow Elementary Public School (Hamilton)",
-		  "Ancaster Public School (Toronto)",
-		  "Ancaster Senior Public School (Hamilton)",
-		  "Anderdon Public School (Amherstburg)",
-		  "Andrew Hunter Elementary School (Barrie)",
-		  "Angus Morrison Elementary School (Essa)",
-		  "Anna McCrea Public School (Sault Ste. Marie)",
-		  "Anna Melick Memorial School (Haldimand)",
-		  "Annandale Public School (Tillsonburg)",
-		  "Anne Hathaway Public School (Stratford)",
-		  "Annette Street Junior and Senior Public School (Toronto)",
-		  "Annunciation Catholic School (Toronto)",
-		  "Annunciation of Our Lord Elementary School (Hamilton)",
-		  "Anson Park Public School (Toronto)",
-		  "Anson S Taylor Junior Public School (Toronto)",
+		"A A Wright Public School (Chatham-Kent)",
+		"Abbey Lane Public School (Oakville)",
+		"A B Ellis (Espanola)",
+		"Aberarder Central School (Plympton-Wyoming)",
+		"Aberdeen Public School (London)",
+		"Aberfoyle Public School (Guelph)",
+		"Abraham Erb Public School (Waterloo)",
+		"Académie de la Moraine (Richmond Hill)",
+		"Académie de la Tamise (London)",
+		"Académie La Pinède (Essa)",
+		"ACCESS Elementary (Vaughan)",
+		"Adam Beck Junior Public School (Toronto)",
+		"Adam Scott Intermediate School (Peterborough)",
+		"Adamsdale Public School (Greater Sudbury)",
+		"Adelaide Hoodless Public School (Hamilton)",
+		"Adelaide Mclaughlin Public School (Oshawa)",
+		"Adelaide - W G MacDonald Public School (Strathroy-Caradoc)",
+		"Adjala Central Public School (Adjala-Tosorontio)",
+		"Admaston Township Public School (Renfrew)",
+		"Admiral Collingwood Elementary School (Collingwood)",
+		"Adrienne Clarkson Elementary School (Ottawa)",
+		"Adrienne Clarkson Public School (Richmond Hill)",
+		"Africentric Alternative School (Toronto)",
+		"Agincourt Junior Public School (Toronto)",
+		"Agincourt Road Public School (Ottawa)",
+		"Agnes Hodge Public School (Brantford)",
+		"Agnes Macphail Public School (Toronto)",
+		"Agnes Taylor Public School (Brampton)",
+		"Agnew H Johnston Public School (Thunder Bay)",
+		"Aileen-Wright English Catholic School (Cochrane)",
+		"A J Baker Public School (Zorra)",
+		"A J Charbonneau Elementary Public School (Arnprior)",
+		"A K Wigg Public School (Pelham)",
+		"Albert College (Belleville)",
+		"Albion Heights Junior Middle School (Toronto)",
+		"Alcona Glen Elementary School (Innisfil)",
+		"Aldborough Public School (West Elgin)",
+		"Aldergrove Public School (Markham)",
+		"Aldershot Elementary School (Burlington)",
+		"Alexander Graham Bell Public School (Ajax)",
+		"Alexander Kuska KSG Catholic Elementary School (Welland)",
+		"Alexander Muir/Gladstone Ave Junior and Senior Public School (Toronto)",
+		"Alexander Muir Public School (Newmarket)",
+		"Alexander Public School (Greater Sudbury)",
+		"Alexander's Public School (Burlington)",
+		"Alexander Stirling Public School (Toronto)",
+		"Alexandra Community School (Owen Sound)",
+		"Alexandra Public School (St. Catharines)",
+		"Alexandra Public School (Kawartha Lakes)",
+		"Alexmuir Junior Public School (Toronto)",
+		"Algonquin Avenue Public School (Thunder Bay)",
+		"Algonquin Public School (Woodstock)",
+		"Algonquin Ridge Elementary School (Barrie)",
+		"Algonquin Road Public School (Greater Sudbury)",
+		"Allan A Greenleaf Elementary (Hamilton)",
+		"Allan A Martin Senior Public School (Mississauga)",
+		"Allandale Heights Public School (Barrie)",
+		"Allan Drive Middle School (Caledon)",
+		"Allenby Junior Public School (Toronto)",
+		"Alliance French Immersion Public School (North Bay)",
+		"Alliston Union Public School (New Tecumseth)",
+		"Alloa Public School (Caledon)",
+		"All Saints Catholic Elementary School (Markham)",
+		"All Saints Catholic Intermediate School (Ottawa)",
+		"All Saints Catholic School (Mississauga)",
+		"All Saints Catholic School (Toronto)",
+		"Alma Public School (Mapleton)",
+		"Aloma Crescent Public School (Brampton)",
+		"A. Lorne Cassidy Elementary School (Ottawa)",
+		"ALPHA Alternative Junior School (Toronto)",
+		"ALPHA II Alternative School (Toronto)",
+		"Alpine Public School (Kitchener)",
+		"Alta Vista Public School (Ottawa)",
+		"Alternative Program Elementary School (Greater Sudbury)",
+		"Altona Forest Public School (Pickering)",
+		"Alton Public School (Caledon)",
+		"Amabel-Sauble Community School (Bruce Peninsula)",
+		"A M Cunningham Junior Public School (Hamilton)",
+		"Amesbury Middle School (Toronto)",
+		"Amherstburg Public School (Amherstburg)",
+		"Amherst Island Public School (Loyalist)",
+		"AmherstView Public School (Loyalist)",
+		"Ancaster Meadow Elementary Public School (Hamilton)",
+		"Ancaster Public School (Toronto)",
+		"Ancaster Senior Public School (Hamilton)",
+		"Anderdon Public School (Amherstburg)",
+		"Andrew Hunter Elementary School (Barrie)",
+		"Angus Morrison Elementary School (Essa)",
+		"Anna McCrea Public School (Sault Ste. Marie)",
+		"Anna Melick Memorial School (Haldimand)",
+		"Annandale Public School (Tillsonburg)",
+		"Anne Hathaway Public School (Stratford)",
+		"Annette Street Junior and Senior Public School (Toronto)",
+		"Annunciation Catholic School (Toronto)",
+		"Annunciation of Our Lord Elementary School (Hamilton)",
+		"Anson Park Public School (Toronto)",
+		"Anson S Taylor Junior Public School (Toronto)",
+		"Appleby College (Oakville)",
+		"Applecroft Public School (Ajax)",
+		"Applewood Public School (St. Catharines)",
 
-		  "Applecroft Public School (Ajax)",
-		  "Applewood Public School (St. Catharines)",
 
+		"Apsley Central Public School (North Kawartha)",
 
-		  "Apsley Central Public School (North Kawartha)",
 
+		"Arbor Glen Public School (Toronto)",
 
-		  "Arbor Glen Public School (Toronto)",
 
+		"Archbishop O'Sullivan Catholic School (Kingston)",
 
-		  "Archbishop O'Sullivan Catholic School (Kingston)",
 
+		"Archie Stouffer Elementary School (Minden Hills)",
 
-		  "Archie Stouffer Elementary School (Minden Hills)",
 
+		"Arch Street Public School (Ottawa)",
 
-		  "Arch Street Public School (Ottawa)",
 
+		"Ardagh Bluffs Public School (Barrie)",
 
-		  "Ardagh Bluffs Public School (Barrie)",
 
+		"Ardtrea/Cumberland Beach Public School (Severn)",
 
-		  "Ardtrea/Cumberland Beach Public School (Severn)",
 
+		"Argyle Public School (Port Loring)",
 
-		  "Argyle Public School (Port Loring)",
 
+		"A R Kaufman Public School (Kitchener)",
 
-		  "A R Kaufman Public School (Kitchener)",
 
+		"Arklan Community Public School (Carleton Place)",
 
-		  "Arklan Community Public School (Carleton Place)",
 
+		"Arlington Middle School (Toronto)",
 
-		  "Arlington Middle School (Toronto)",
 
+		"Armadale Public School (Markham)",
 
-		  "Armadale Public School (Markham)",
 
+		"Armitage Village Public School (Newmarket)",
 
-		  "Armitage Village Public School (Newmarket)",
 
+		"Armour Heights Public School (Toronto)",
 
-		  "Armour Heights Public School (Toronto)",
 
+		"Armour Heights Public School (Peterborough)",
 
-		  "Armour Heights Public School (Peterborough)",
 
+		"Armstrong Elementary School (Armstrong)",
 
-		  "Armstrong Elementary School (Armstrong)",
 
+		"Arnott Charlton Public School (Brampton)",
 
-		  "Arnott Charlton Public School (Brampton)",
 
+		"Arran Tara Elementary School (Arran-Elderslie)",
 
-		  "Arran Tara Elementary School (Arran-Elderslie)",
 
+		"Artesian Drive Public School (Mississauga)",
 
-		  "Artesian Drive Public School (Mississauga)",
 
+		"Arthur Ford Public School (London)",
 
-		  "Arthur Ford Public School (London)",
 
+		"Arthur Henderson Public School (Bruce Mines)",
 
-		  "Arthur Henderson Public School (Bruce Mines)",
 
+		"Arthur Public School (Wellington North)",
 
-		  "Arthur Public School (Wellington North)",
 
+		"Arthur Stringer Public School (London)",
 
-		  "Arthur Stringer Public School (London)",
 
+		"Ascension Separate School (Burlington)",
 
-		  "Ascension Separate School (Burlington)",
+		"Ashbury College (Ottawa)",
+		"Ashgrove Public School (Mississauga)",
 
 
-		  "Ashgrove Public School (Mississauga)",
+		"Ashley Oaks Public School (London)",
 
 
-		  "Ashley Oaks Public School (London)",
+		"Ashton Meadows Public School (Markham)",
 
 
-		  "Ashton Meadows Public School (Markham)",
+		"Assiginack Public School (Assiginack)",
 
 
-		  "Assiginack Public School (Assiginack)",
+		"Assikinack Public School (Barrie)",
 
 
-		  "Assikinack Public School (Barrie)",
+		"Assumption Catholic Elementary School (St. Catharines)",
 
 
-		  "Assumption Catholic Elementary School (St. Catharines)",
+		"Assumption Elementary School (Ottawa)",
 
 
-		  "Assumption Elementary School (Ottawa)",
+		"Assumption Separate School (Aylmer)",
 
 
-		  "Assumption Separate School (Aylmer)",
+		"Athabasca Street Public School (Oshawa)",
 
 
-		  "Athabasca Street Public School (Oshawa)",
+		"Athol-South Marysburgh School Public School (Prince Edward County)",
 
 
-		  "Athol-South Marysburgh School Public School (Prince Edward County)",
+		"Atikokan High School Elementary (Atikokan)",
 
 
-		  "Atikokan High School Elementary (Atikokan)",
+		"Aurora Grove Public School (Aurora)",
 
 
-		  "Aurora Grove Public School (Aurora)",
+		"Aurora Heights Public School (Aurora)",
 
 
-		  "Aurora Heights Public School (Aurora)",
+		"Aurora Senior Public School (Aurora)",
 
 
-		  "Aurora Senior Public School (Aurora)",
+		"Avalon Public School (Ottawa)",
 
 
-		  "Avalon Public School (Ottawa)",
+		"Avenue Road Public School (Cambridge)",
 
 
-		  "Avenue Road Public School (Cambridge)",
+		"A V Graham Public School (Windsor)",
 
 
-		  "A V Graham Public School (Windsor)",
+		"Avondale Alternative Elementary School (Toronto)",
 
 
-		  "Avondale Alternative Elementary School (Toronto)",
+		"Avondale Public School (Toronto)",
 
 
-		  "Avondale Public School (Toronto)",
+		"Avon Public School (Stratford)",
 
 
-		  "Avon Public School (Stratford)",
+		"Aweres Public School (Sault Ste. Marie)",
 
 
-		  "Aweres Public School (Sault Ste. Marie)",
+		"Ayr Public School (North Dumfries)",
 
 
-		  "Ayr Public School (North Dumfries)",
+		"Baden Public School (Wilmot)",
 
 
-		  "Baden Public School (Wilmot)",
+		"Bakersfield Public School (Thornhill)",
 
 
-		  "Bakersfield Public School (Thornhill)",
+		"Bala Avenue Community School (Toronto)",
 
 
-		  "Bala Avenue Community School (Toronto)",
+		"Balaclava Public School (Hamilton)",
 
 
-		  "Balaclava Public School (Hamilton)",
+		"Ballantrae Public School (Whitchurch-Stouffville)",
 
 
-		  "Ballantrae Public School (Whitchurch-Stouffville)",
+		"Balmoral Drive Senior Public School (Brampton)",
 
 
-		  "Balmoral Drive Senior Public School (Brampton)",
+		"Balmy Beach Community School (Toronto)",
 
 
-		  "Balmy Beach Community School (Toronto)",
+		"Baltimore Public School (Hamilton)",
 
 
-		  "Baltimore Public School (Hamilton)",
+		"Banbury Heights School (Brantford)",
 
+		"Bannockburn School (Toronto)",
+		"Banting and Best Public School (Toronto)",
 
-		  "Banbury Heights School (Brantford)",
 
+		"B A Parker Public School (Greenstone)",
 
-		  "Banting and Best Public School (Toronto)",
 
+		"Barondale Public School (Mississauga)",
 
-		  "B A Parker Public School (Greenstone)",
 
+		"Barrhaven Public School (Ottawa)",
 
-		  "Barondale Public School (Mississauga)",
 
+		"Bath Public School (Loyalist)",
 
-		  "Barrhaven Public School (Ottawa)",
 
+		"Baxter Central Public School (Essa)",
 
-		  "Bath Public School (Loyalist)",
 
+		"Baycrest Public School (Toronto)",
 
-		  "Baxter Central Public School (Essa)",
 
+		"Bayridge Public School (Kingston)",
+		"Bayview Glen (Toronto)",
 
-		  "Baycrest Public School (Toronto)",
+		"Bayshore Public School (Ottawa)",
 
 
-		  "Bayridge Public School (Kingston)",
+		"Bayside Public School (Belleville)",
 
 
-		  "Bayshore Public School (Ottawa)",
+		"Baythorn Public School (Thornhill)",
 
 
-		  "Bayside Public School (Belleville)",
+		"Bayview Fairways Public School (Thornhill)",
 
 
-		  "Baythorn Public School (Thornhill)",
+		"Bayview Glen Public School (Thornhill)",
 
 
-		  "Bayview Fairways Public School (Thornhill)",
+		"Bayview Heights Public School (Pickering)",
 
 
-		  "Bayview Glen Public School (Thornhill)",
+		"Bayview Hill Elementary School (Richmond Hill)",
 
 
-		  "Bayview Heights Public School (Pickering)",
+		"Bayview Middle School (Toronto)",
 
 
-		  "Bayview Hill Elementary School (Richmond Hill)",
+		"Bayview Northeast #2 ES (Aurora)",
 
 
-		  "Bayview Middle School (Toronto)",
+		"Bayview Public School (Ottawa)",
 
 
-		  "Bayview Northeast #2 ES (Aurora)",
+		"Bayview Public School (Owen Sound)",
 
 
-		  "Bayview Public School (Ottawa)",
+		"Bayview Public School (Midland)",
 
 
-		  "Bayview Public School (Owen Sound)",
+		"Beachburg Public School (Whitewater)",
 
 
-		  "Bayview Public School (Midland)",
+		"Beaches Alternative Junior School (Toronto)",
 
 
-		  "Beachburg Public School (Whitewater)",
+		"Beardmore Public School (Greenstone)",
 
 
-		  "Beaches Alternative Junior School (Toronto)",
+		"Beatrice Strong Public School (Port Hope)",
 
 
-		  "Beardmore Public School (Greenstone)",
+		"Beatty-Fleming Sr Public School (Brampton)",
 
 
-		  "Beatrice Strong Public School (Port Hope)",
+		"Beaumonde Heights Junior Middle School (Toronto)",
 
 
-		  "Beatty-Fleming Sr Public School (Brampton)",
+		"Beau Valley Public School (Oshawa)",
 
 
-		  "Beaumonde Heights Junior Middle School (Toronto)",
+		"Beavercrest Community School (Grey Highlands)",
 
 
-		  "Beau Valley Public School (Oshawa)",
+		"Beaverton Public School (Brock)",
 
 
-		  "Beavercrest Community School (Grey Highlands)",
+		"Beaver Valley Community School (The Blue Mountains)",
 
 
-		  "Beaverton Public School (Brock)",
+		"Beckwith Public School (Carleton Place)",
 
 
-		  "Beaver Valley Community School (The Blue Mountains)",
+		"Bedford Park Public School (Toronto)",
 
 
-		  "Beckwith Public School (Carleton Place)",
+		"Bedford Public School (Stratford)",
 
 
-		  "Bedford Park Public School (Toronto)",
+		"Belfountain Public School (Caledon)",
 
 
-		  "Bedford Public School (Stratford)",
+		"Belle River Public School (Lakeshore)",
 
 
-		  "Belfountain Public School (Caledon)",
+		"Bellewood Public School (Windsor)",
 
 
-		  "Belle River Public School (Lakeshore)",
+		"Bellmere Junior Public School (Toronto)",
 
 
-		  "Bellewood Public School (Windsor)",
+		"Bellmoore Public School (Hamilton)",
 
 
-		  "Bellmere Junior Public School (Toronto)",
+		"Bells Corners Public School (Ottawa)",
 
 
-		  "Bellmoore Public School (Hamilton)",
+		"Bell Stone Public School (Hamilton)",
 
 
-		  "Bells Corners Public School (Ottawa)",
+		"Bellview Public School (Brantford)",
 
 
-		  "Bell Stone Public School (Hamilton)",
+		"Bellwood Public School (Whitby)",
 
 
-		  "Bellview Public School (Brantford)",
+		"Bendale Junior Public School (Toronto)",
 
 
-		  "Bellwood Public School (Whitby)",
+		"Bennetto Elementary School (Hamilton)",
 
 
-		  "Bendale Junior Public School (Toronto)",
+		"Bennington Heights Elementary School (Toronto)",
 
 
-		  "Bennetto Elementary School (Hamilton)",
+		"Ben R McMullin Public School (Sault Ste. Marie)",
 
 
-		  "Bennington Heights Elementary School (Toronto)",
+		"Benson Public School (Edwardsburgh/Cardinal)",
 
 
-		  "Ben R McMullin Public School (Sault Ste. Marie)",
+		"Berner Trail Junior Public School (Toronto)",
 
 
-		  "Benson Public School (Edwardsburgh/Cardinal)",
+		"Bernier-Stokes Elementary School (Collins)",
 
 
-		  "Berner Trail Junior Public School (Toronto)",
+		"Berrigan Elementary School (Ottawa)",
 
 
-		  "Bernier-Stokes Elementary School (Collins)",
+		"Bertha Shaw Public School (Timmins)",
 
 
-		  "Berrigan Elementary School (Ottawa)",
+		"Bertie Public School (Fort Erie)",
 
 
-		  "Bertha Shaw Public School (Timmins)",
+		"Beryl Ford (Brampton)",
 
 
-		  "Bertie Public School (Fort Erie)",
+		"Bessborough Drive Elementary and Middle School (Toronto)",
 
 
-		  "Beryl Ford (Brampton)",
+		"Beverley Acres Public School (Richmond Hill)",
 
 
-		  "Bessborough Drive Elementary and Middle School (Toronto)",
+		"Beverley Heights Middle School (Toronto)",
 
 
-		  "Beverley Acres Public School (Richmond Hill)",
+		"Beverley School (Toronto)",
 
 
-		  "Beverley Heights Middle School (Toronto)",
+		"Beverly Central Public School (Hamilton)",
 
 
-		  "Beverley School (Toronto)",
+		"Beverly Glen Junior Public School (Toronto)",
 
 
-		  "Beverly Central Public School (Hamilton)",
+		"Billy Green Elementary School (Hamilton)",
 
 
-		  "Beverly Glen Junior Public School (Toronto)",
+		"Binbrook Elementary (Hamilton)",
 
 
-		  "Billy Green Elementary School (Hamilton)",
+		"Birchbank Public School (Brampton)",
 
 
-		  "Binbrook Elementary (Hamilton)",
+		"Birch Cliff Heights Public School (Toronto)",
 
 
-		  "Birchbank Public School (Brampton)",
+		"Birch Cliff Public School (Toronto)",
 
 
-		  "Birch Cliff Heights Public School (Toronto)",
+		"Birchview Dunes Elementary School (Wasaga Beach)",
 
 
-		  "Birch Cliff Public School (Toronto)",
+		"Birds Creek Public School (Bancroft)",
 
 
-		  "Birchview Dunes Elementary School (Wasaga Beach)",
+		"Bishop Belleau School (Moosonee)",
 
 
-		  "Birds Creek Public School (Bancroft)",
+		"Bishop E. Q. Jennings Senior Elementary School (Thunder Bay)",
 
 
-		  "Bishop Belleau School (Moosonee)",
+		"Bishop Francis Allen Catholic School (Brampton)",
 
 
-		  "Bishop E. Q. Jennings Senior Elementary School (Thunder Bay)",
+		"Bishop Gallagher Senior Catholic Elementary School (Thunder Bay)",
 
 
-		  "Bishop Francis Allen Catholic School (Brampton)",
+		"Bishop Macdonell Separate School (Cornwall)",
 
 
-		  "Bishop Gallagher Senior Catholic Elementary School (Thunder Bay)",
+		"Bishop Scalabrini School (Mississauga)",
 
 
-		  "Bishop Macdonell Separate School (Cornwall)",
+		"Bishop Smith Separate School (Pembroke)",
 
 
-		  "Bishop Scalabrini School (Mississauga)",
+		"Bishop Townshend Public School (London)",
 
 
-		  "Bishop Smith Separate School (Pembroke)",
+		"Black River Public School (Georgina)",
 
 
-		  "Bishop Townshend Public School (London)",
+		"Blacksmith Public School (Toronto)",
 
 
-		  "Black River Public School (Georgina)",
+		"Blair Ridge Public School (Whitby)",
 
 
-		  "Blacksmith Public School (Toronto)",
+		"Blair Road Public School (Cambridge)",
 
 
-		  "Blair Ridge Public School (Whitby)",
+		"Blake Street Junior Public School (Toronto)",
 
 
-		  "Blair Road Public School (Cambridge)",
+		"Blantyre Public School (Toronto)",
 
 
-		  "Blake Street Junior Public School (Toronto)",
+		"Blaydon Public School (Toronto)",
 
 
-		  "Blantyre Public School (Toronto)",
+		"Blenheim District Public School (Blandford-Blenheim)",
 
 
-		  "Blaydon Public School (Toronto)",
+		"Blessed John Paul II Catholic Elementary School (Richmond Hill)",
 
 
-		  "Blenheim District Public School (Blandford-Blenheim)",
+		"Blessed John Paul II Elementary School (Hamilton)",
 
 
-		  "Blessed John Paul II Catholic Elementary School (Richmond Hill)",
+		"Blessed John XXIII Catholic Elementary School (Mississauga)",
 
 
-		  "Blessed John Paul II Elementary School (Hamilton)",
+		"Blessed John XXIII Catholic Elementary School (Markham)",
 
 
-		  "Blessed John XXIII Catholic Elementary School (Mississauga)",
+		"Blessed John XXIII Catholic School (Toronto)",
 
 
-		  "Blessed John XXIII Catholic Elementary School (Markham)",
+		"Blessed Kateri Catholic Elementary School (Kitchener)",
 
 
-		  "Blessed John XXIII Catholic School (Toronto)",
+		"Blessed Kateri Separate School (London)",
 
 
-		  "Blessed Kateri Catholic Elementary School (Kitchener)",
+		"Blessed Kateri Tekakwitha (Hamilton)",
 
 
-		  "Blessed Kateri Separate School (London)",
+		"Blessed Kateri Tekakwitha Catholic School (Toronto)",
 
 
-		  "Blessed Kateri Tekakwitha (Hamilton)",
+		"Blessed Kateri Tekakwitha Elementary School (Ottawa)",
 
 
-		  "Blessed Kateri Tekakwitha Catholic School (Toronto)",
+		"Blessed Margherita of Citta Castello Catholic School (Toronto)",
 
 
-		  "Blessed Kateri Tekakwitha Elementary School (Ottawa)",
+		"Blessed Pier Giorgio Frassati Catholic School (Toronto)",
 
 
-		  "Blessed Margherita of Citta Castello Catholic School (Toronto)",
+		"Blessed Sacrament Catholic Elementary School (Kitchener)",
 
 
-		  "Blessed Pier Giorgio Frassati Catholic School (Toronto)",
+		"Blessed Sacrament Catholic School (Toronto)",
 
 
-		  "Blessed Sacrament Catholic Elementary School (Kitchener)",
+		"Blessed Sacrament School (Brant)",
 
 
-		  "Blessed Sacrament Catholic School (Toronto)",
+		"Blessed Sacrament Separate School (Hamilton)",
 
 
-		  "Blessed Sacrament School (Brant)",
+		"Blessed Sacrament Separate School (London)",
 
 
-		  "Blessed Sacrament Separate School (Hamilton)",
+		"Blessed Scalabrini Catholic Elementary School (Thornhill)",
 
 
-		  "Blessed Sacrament Separate School (London)",
+		"Blessed Teresa of Calcutta Catholic Elementary School (Mississauga)",
 
 
-		  "Blessed Scalabrini Catholic Elementary School (Thornhill)",
+		"Blessed Teresa of Calcutta Elementary School (Hamilton)",
 
 
-		  "Blessed Teresa of Calcutta Catholic Elementary School (Mississauga)",
+		"Blessed Trinity Catholic Elementary School (Vaughan)",
 
 
-		  "Blessed Teresa of Calcutta Elementary School (Hamilton)",
+		"Blessed Trinity Catholic School (Toronto)",
 
 
-		  "Blessed Trinity Catholic Elementary School (Vaughan)",
+		"Blind River Public School (Blind River)",
 
 
-		  "Blessed Trinity Catholic School (Toronto)",
+		"Bliss Carman Senior Public School (Toronto)",
 
 
-		  "Blind River Public School (Blind River)",
+		"Bloomsburg Public School (Norfolk County)",
 
 
-		  "Bliss Carman Senior Public School (Toronto)",
+		"Bloordale Middle School (Toronto)",
 
 
-		  "Bloomsburg Public School (Norfolk County)",
+		"Bloorlea Middle School (Toronto)",
 
 
-		  "Bloordale Middle School (Toronto)",
+		"Bloorview School Authority (Toronto)",
 
 
-		  "Bloorlea Middle School (Toronto)",
+		"Blossom Park Public School (Ottawa)",
 
 
-		  "Bloorview School Authority (Toronto)",
+		"Blue Willow Public School (Vaughan)",
 
 
-		  "Blossom Park Public School (Ottawa)",
+		"Blyth Public School (North Huron)",
 
 
-		  "Blue Willow Public School (Vaughan)",
+		"Blythwood Junior Public School (Toronto)",
 
 
-		  "Blyth Public School (North Huron)",
+		"Bobby Orr Public School (Oshawa)",
 
 
-		  "Blythwood Junior Public School (Toronto)",
+		"Bobcaygeon Public School (Kawartha Lakes)",
 
 
-		  "Bobby Orr Public School (Oshawa)",
+		"Bogart Public School (Newmarket)",
 
 
-		  "Bobcaygeon Public School (Kawartha Lakes)",
+		"Bolton C Falby Public School (Ajax)",
 
 
-		  "Bogart Public School (Newmarket)",
+		"Bonaventure Meadows Public School (London)",
 
 
-		  "Bolton C Falby Public School (Ajax)",
+		"Bond Lake Public School (Richmond Hill)",
 
 
-		  "Bonaventure Meadows Public School (London)",
+		"Bosanquet Central Public School (Lambton Shores)",
 
 
-		  "Bond Lake Public School (Richmond Hill)",
+		"Boston Public School (Norfolk County)",
 
 
-		  "Bosanquet Central Public School (Lambton Shores)",
+		"Bowmanville Intermediate School (Clarington)",
 
 
-		  "Boston Public School (Norfolk County)",
+		"Bowmore Road Junior and Senior Public School (Toronto)",
 
 
-		  "Bowmanville Intermediate School (Clarington)",
+		"Boxwood Public School (Markham)",
 
 
-		  "Bowmore Road Junior and Senior Public School (Toronto)",
+		"Bracebridge Public School (Bracebridge)",
 
 
-		  "Boxwood Public School (Markham)",
+		"Bradford Elementary School (Bradford West Gwillimbury)",
 
 
-		  "Bracebridge Public School (Bracebridge)",
+		"Braeburn Junior School (Toronto)",
 
 
-		  "Bradford Elementary School (Bradford West Gwillimbury)",
+		"Brameast # 4 PS (Brampton)",
 
 
-		  "Braeburn Junior School (Toronto)",
+		"Brampton East Elementary ()",
 
 
-		  "Brameast # 4 PS (Brampton)",
+		"Bramwest Sub Area 1 P.S. (Brampton)",
 
 
-		  "Brampton East Elementary ()",
+		"Brandon Gate Public School (Mississauga)",
 
+		" Branksome Hall (Toronto)",
+		"Branlyn Community School (Brantford)",
 
-		  "Bramwest Sub Area 1 P.S. (Brampton)",
 
+		"Brant Avenue Public School (Guelph)",
 
-		  "Brandon Gate Public School (Mississauga)",
 
+		"Brant Hills Public School (Burlington)",
 
-		  "Branlyn Community School (Brantford)",
 
+		"Brant Township Central School (Brockton)",
 
-		  "Brant Avenue Public School (Guelph)",
 
+		"Breadner Elementary School (Quinte West)",
 
-		  "Brant Hills Public School (Burlington)",
 
+		"Brechin Public School (Ramara)",
 
-		  "Brant Township Central School (Brockton)",
 
+		"Breslau Public School (Woolwich)",
 
-		  "Breadner Elementary School (Quinte West)",
 
+		"Brian Public School (Toronto)",
 
-		  "Brechin Public School (Ramara)",
 
+		"Brian W. Fleming Public School (Mississauga)",
 
-		  "Breslau Public School (Woolwich)",
 
+		"Briarcrest Junior School (Toronto)",
 
-		  "Brian Public School (Toronto)",
 
+		"Briardale Public School (St. Catharines)",
 
-		  "Brian W. Fleming Public School (Mississauga)",
 
+		"Briargreen Public School (Ottawa)",
 
-		  "Briarcrest Junior School (Toronto)",
 
+		"Briar Hill Junior Public School (Toronto)",
 
-		  "Briardale Public School (St. Catharines)",
 
+		"Briarwood Public School (Mississauga)",
 
-		  "Briargreen Public School (Ottawa)",
 
+		"Bridgeport Public School (Kitchener)",
 
-		  "Briar Hill Junior Public School (Toronto)",
 
+		"Bridgeview Public School (Point Edward)",
 
-		  "Briarwood Public School (Mississauga)",
 
+		"Bridlewood Community Elementary School (Ottawa)",
 
-		  "Bridgeport Public School (Kitchener)",
 
+		"Bridlewood Junior Public School (Toronto)",
 
-		  "Bridgeview Public School (Point Edward)",
 
+		"Brier Park Public School (Brantford)",
 
-		  "Bridlewood Community Elementary School (Ottawa)",
 
+		"Brigadoon Public School (Kitchener)",
 
-		  "Bridlewood Junior Public School (Toronto)",
 
+		"Brigden School (St. Clair)",
 
-		  "Brier Park Public School (Brantford)",
 
+		"Brighton Public School (Brighton)",
 
-		  "Brigadoon Public School (Kitchener)",
 
+		"Bright's Grove Public School (Sarnia)",
 
-		  "Brigden School (St. Clair)",
 
+		"Brimwood Boulevard Junior Public School (Toronto)",
 
-		  "Brighton Public School (Brighton)",
 
+		"Brisbane Public School (Erin)",
 
-		  "Bright's Grove Public School (Sarnia)",
 
+		"Brisdale Public School (Brampton)",
 
-		  "Brimwood Boulevard Junior Public School (Toronto)",
 
+		"Bristol Road Middle School (Mississauga)",
 
-		  "Brisbane Public School (Erin)",
 
+		"Britannia Public School (Mississauga)",
 
-		  "Brisdale Public School (Brampton)",
 
+		"Britt Public School (Wallbridge)",
 
-		  "Bristol Road Middle School (Mississauga)",
 
+		"Broadacres Junior Public School (Toronto)",
 
-		  "Britannia Public School (Mississauga)",
 
+		"Broadlands Public School (Toronto)",
 
-		  "Britt Public School (Wallbridge)",
 
+		"Broadview Public School (Ottawa)",
 
-		  "Broadacres Junior Public School (Toronto)",
 
+		"Brock Public School (Toronto)",
 
-		  "Broadlands Public School (Toronto)",
 
+		"Brookdale Public School (Oakville)",
 
-		  "Broadview Public School (Ottawa)",
 
+		"Brooke Central School (Brooke-Alvinston)",
 
-		  "Brock Public School (Toronto)",
 
+		"Brookhaven Public School (Toronto)",
 
-		  "Brookdale Public School (Oakville)",
 
+		"Brooklin Village Public School (Whitby)",
 
-		  "Brooke Central School (Brooke-Alvinston)",
 
+		"Brookmede Public School (Mississauga)",
 
-		  "Brookhaven Public School (Toronto)",
 
+		"Brookmill Boulevard Junior Public School (Toronto)",
 
-		  "Brooklin Village Public School (Whitby)",
 
+		"Brookside Public School (Huron-Kinloss)",
 
-		  "Brookmede Public School (Mississauga)",
 
+		"Brookside Public School (Toronto)",
 
-		  "Brookmill Boulevard Junior Public School (Toronto)",
 
+		"Brooks Road Public School (Toronto)",
 
-		  "Brookside Public School (Huron-Kinloss)",
 
+		"Brookview Middle School (Toronto)",
 
-		  "Brookside Public School (Toronto)",
 
+		"Brookville Public School (Milton)",
 
-		  "Brooks Road Public School (Toronto)",
 
+		"Brother Andre Catholic Elementary School (Ottawa)",
 
-		  "Brookview Middle School (Toronto)",
 
+		"Brother Andre Catholic School (Ajax)",
 
-		  "Brookville Public School (Milton)",
 
+		"Brown Junior Public School (Toronto)",
 
-		  "Brother Andre Catholic Elementary School (Ottawa)",
 
+		"Brownridge Public School (Thornhill)",
 
-		  "Brother Andre Catholic School (Ajax)",
 
+		"Bruce Junior Public School (Toronto)",
 
-		  "Brown Junior Public School (Toronto)",
 
+		"Bruce Peninsula District School (Lion S Head)",
 
-		  "Brownridge Public School (Thornhill)",
 
+		"Bruce T Lindley (Burlington)",
 
-		  "Bruce Junior Public School (Toronto)",
 
+		"Bruce Trail Public School (Milton)",
 
-		  "Bruce Peninsula District School (Lion S Head)",
 
+		"Brussels Public School (Huron East)",
 
-		  "Bruce T Lindley (Burlington)",
 
+		"Buchanan Park School (Hamilton)",
 
-		  "Bruce Trail Public School (Milton)",
 
+		"Buchanan Public School (Toronto)",
 
-		  "Brussels Public School (Huron East)",
 
+		"Buckhorn Public School (Galway-Cavendish And Harvey)",
 
-		  "Buchanan Park School (Hamilton)",
 
+		"Burford District Elementary School (Brant)",
 
-		  "Buchanan Public School (Toronto)",
 
+		"Burkevale Protestant Separate School (Penetanguishene)",
 
-		  "Buckhorn Public School (Galway-Cavendish And Harvey)",
 
+		"Burleigh Hill Public School (St. Catharines)",
 
-		  "Burford District Elementary School (Brant)",
 
+		"Burlington Central Elementary School (Burlington)",
 
-		  "Burkevale Protestant Separate School (Penetanguishene)",
 
+		"Burnham School (Cobourg)",
 
-		  "Burleigh Hill Public School (St. Catharines)",
 
+		"Burnhamthorpe Public School (Mississauga)",
 
-		  "Burlington Central Elementary School (Burlington)",
 
+		"Burnt Elm Public School (Brampton)",
 
-		  "Burnham School (Cobourg)",
 
+		"Burrows Hall Junior Public School (Toronto)",
 
-		  "Burnhamthorpe Public School (Mississauga)",
 
+		"Buttonville Public School (Markham)",
 
-		  "Burnt Elm Public School (Brampton)",
 
+		"Byng Public School (Clearview)",
 
-		  "Burrows Hall Junior Public School (Toronto)",
 
+		"Byron Northview Public School (London)",
 
-		  "Buttonville Public School (Markham)",
 
+		"Byron Somerset Public School (London)",
 
-		  "Byng Public School (Clearview)",
 
+		"Byron Southwood Public School (London)",
 
-		  "Byron Northview Public School (London)",
 
+		"Cadarackque Public School (Ajax)",
 
-		  "Byron Somerset Public School (London)",
 
+		"Caistor Central Public School (West Lincoln)",
 
-		  "Byron Southwood Public School (London)",
 
+		"Calderstone Middle Middle School (Brampton)",
 
-		  "Cadarackque Public School (Ajax)",
 
+		"Caldwell Street Elementary School (Carleton Place)",
 
-		  "Caistor Central Public School (West Lincoln)",
 
+		"Caledon Central Public School (Caledon)",
 
-		  "Calderstone Middle Middle School (Brampton)",
 
+		"Caledon East Public School (Caledon)",
 
-		  "Caldwell Street Elementary School (Carleton Place)",
 
+		"Caledonia Centennial Public School (Haldimand County)",
 
-		  "Caledon Central Public School (Caledon)",
 
+		"Calico Public School (Toronto)",
 
-		  "Caledon East Public School (Caledon)",
 
+		"Calvin Park Public School (Kingston)",
 
-		  "Caledonia Centennial Public School (Haldimand County)",
 
+		"Camborne Public School (Cobourg)",
 
-		  "Calico Public School (Toronto)",
 
+		"Cambridge Public School (Russell)",
 
-		  "Calvin Park Public School (Kingston)",
 
+		"Cambridge Street Community Public School (Ottawa)",
 
-		  "Camborne Public School (Cobourg)",
 
+		"Cameron Public School (Toronto)",
 
-		  "Cambridge Public School (Russell)",
 
+		"Cameron Street Public School (Collingwood)",
 
-		  "Cambridge Street Community Public School (Ottawa)",
 
+		"Camilla Road Senior Public School (Mississauga)",
 
-		  "Cameron Public School (Toronto)",
 
+		"Campbell Children's School (Oshawa)",
 
-		  "Cameron Street Public School (Collingwood)",
 
+		"Campden Public School (Lincoln)",
 
-		  "Camilla Road Senior Public School (Mississauga)",
 
+		"Canadian Martyrs Catholic Elementary School (Kitchener)",
 
-		  "Campbell Children's School (Oshawa)",
 
+		"Canadian Martyrs Catholic Elementary School (St. Catharines)",
 
-		  "Campden Public School (Lincoln)",
 
+		"Canadian Martyrs Catholic Elementary School (Newmarket)",
 
-		  "Canadian Martyrs Catholic Elementary School (Kitchener)",
 
+		"Canadian Martyrs Catholic School (Penetanguishene)",
 
-		  "Canadian Martyrs Catholic Elementary School (St. Catharines)",
 
+		"Canadian Martyrs Catholic School (Toronto)",
 
-		  "Canadian Martyrs Catholic Elementary School (Newmarket)",
 
+		"Canadian Martyrs School (Hamilton)",
 
-		  "Canadian Martyrs Catholic School (Penetanguishene)",
 
+		"Canadian Martyrs School (Mississauga)",
 
-		  "Canadian Martyrs Catholic School (Toronto)",
 
+		"Canadian Martyrs School (Burlington)",
 
-		  "Canadian Martyrs School (Hamilton)",
 
+		"Captain Michael VandenBos Public School (Whitby)",
 
-		  "Canadian Martyrs School (Mississauga)",
 
+		"Captain R. Wilson Public School (Oakville)",
 
-		  "Canadian Martyrs School (Burlington)",
 
+		"Caradoc North School (Strathroy-Caradoc)",
 
-		  "Captain Michael VandenBos Public School (Whitby)",
 
+		"Caradoc Public School (Strathroy-Caradoc)",
 
-		  "Captain R. Wilson Public School (Oakville)",
 
+		"Caramat District Public School (Greenstone)",
 
-		  "Caradoc North School (Strathroy-Caradoc)",
 
+		"Carambeck Public School (Carleton Place)",
 
-		  "Caradoc Public School (Strathroy-Caradoc)",
 
+		"Carberry Public School (Brampton)",
 
-		  "Caramat District Public School (Greenstone)",
 
+		"Cardiff Elementary School (Highlands East)",
 
-		  "Carambeck Public School (Carleton Place)",
 
+		"Cardinal Carter Academy for the Arts (Toronto)",
 
-		  "Carberry Public School (Brampton)",
 
+		"Cardinal Heights Middle School (Hamilton)",
 
-		  "Cardiff Elementary School (Highlands East)",
 
+		"Cardinal Leger Catholic School (Toronto)",
 
-		  "Cardinal Carter Academy for the Arts (Toronto)",
 
+		"Cardinal Newman Catholic Elementary School (Niagara Falls)",
 
-		  "Cardinal Heights Middle School (Hamilton)",
 
+		"Cardinal Newman Catholic School (Brampton)",
 
-		  "Cardinal Leger Catholic School (Toronto)",
 
+		"Carl A Nesbitt Public School (Greater Sudbury)",
 
-		  "Cardinal Newman Catholic Elementary School (Niagara Falls)",
 
+		"Carleton Heights Public School (Ottawa)",
 
-		  "Cardinal Newman Catholic School (Brampton)",
 
+		"Carleton Public School (St. Catharines)",
 
-		  "Carl A Nesbitt Public School (Greater Sudbury)",
 
+		"Carleton Village Junior and Senior Public School (Toronto)",
 
-		  "Carleton Heights Public School (Ottawa)",
 
+		"Carruthers Creek Public School (Ajax)",
 
-		  "Carleton Public School (St. Catharines)",
 
+		"Carrville Mills Public School (Thornhill)",
 
-		  "Carleton Village Junior and Senior Public School (Toronto)",
 
+		"Carson Grove Elementary School (Ottawa)",
 
-		  "Carruthers Creek Public School (Ajax)",
 
+		"Cartwright Central Public School (Scugog)",
 
-		  "Carrville Mills Public School (Thornhill)",
 
+		"Cashmere Avenue Public School (Mississauga)",
 
-		  "Carson Grove Elementary School (Ottawa)",
 
+		"Cassandra Public School (Toronto)",
 
-		  "Cartwright Central Public School (Scugog)",
 
+		"Castlebridge Public School (Mississauga)",
 
-		  "Cashmere Avenue Public School (Mississauga)",
 
+		"Castlefrank Elementary School (Ottawa)",
 
-		  "Cassandra Public School (Toronto)",
 
+		"Castlemore Elementary Public School (Markham)",
 
-		  "Castlebridge Public School (Mississauga)",
 
+		"Castlemore Public School (Brampton)",
 
-		  "Castlefrank Elementary School (Ottawa)",
 
+		"Castor Valley Elementary School (Ottawa)",
 
-		  "Castlemore Elementary Public School (Markham)",
 
+		"Cataraqui Woods Elementary School (Kingston)",
 
-		  "Castlemore Public School (Brampton)",
 
+		"Cathcart Boulevard Public School (Sarnia)",
 
-		  "Castor Valley Elementary School (Ottawa)",
 
+		"Cathedral Catholic School (Pembroke)",
 
-		  "Cataraqui Woods Elementary School (Kingston)",
 
+		"Cathedrale Catholic School (Kingston)",
 
-		  "Cathcart Boulevard Public School (Sarnia)",
 
+		"Cathedral West #1 (Markham)",
 
-		  "Cathedral Catholic School (Pembroke)",
 
+		"Cathy Wever Elementary Public School (Hamilton)",
 
-		  "Cathedrale Catholic School (Kingston)",
 
+		"C C Carrothers Public School (London)",
 
-		  "Cathedral West #1 (Markham)",
 
+		"C D Farquharson Junior Public School (Toronto)",
 
-		  "Cathy Wever Elementary Public School (Hamilton)",
 
+		"C D Howe Public School (Thunder Bay)",
 
-		  "C C Carrothers Public School (London)",
 
+		"C E Broughton Public School (Whitby)",
 
-		  "C D Farquharson Junior Public School (Toronto)",
 
+		"Cecil B Stirling School (Hamilton)",
 
-		  "C D Howe Public School (Thunder Bay)",
 
+		"Cedarbrae Public School (Waterloo)",
 
-		  "C E Broughton Public School (Whitby)",
 
+		"Cedarbrook Public School (Toronto)",
 
-		  "Cecil B Stirling School (Hamilton)",
 
+		"Cedar Creek Public School (North Dumfries)",
 
-		  "Cedarbrae Public School (Waterloo)",
 
+		"Cedar Drive Junior Public School (Toronto)",
 
-		  "Cedarbrook Public School (Toronto)",
 
+		"Cedarland Public School (Brantford)",
 
-		  "Cedar Creek Public School (North Dumfries)",
 
+		"Cedarvale Community School (Toronto)",
 
-		  "Cedar Drive Junior Public School (Toronto)",
 
+		"Cedarview Middle School (Ottawa)",
 
-		  "Cedarland Public School (Brantford)",
 
+		"Cedarwood Public School (Markham)",
 
-		  "Cedarvale Community School (Toronto)",
 
+		"Centennial 67 Public School (Edwardsburgh/Cardinal)",
 
-		  "Cedarview Middle School (Ottawa)",
 
+		"Centennial (Cambridge) Public School (Cambridge)",
 
-		  "Cedarwood Public School (Markham)",
 
+		"Centennial Central Public School (Lakeshore)",
 
-		  "Centennial 67 Public School (Edwardsburgh/Cardinal)",
 
+		"Centennial Central School (Middlesex Centre)",
 
-		  "Centennial (Cambridge) Public School (Cambridge)",
 
+		"Centennial-Grand Woodlands School (Brantford)",
 
-		  "Centennial Central Public School (Lakeshore)",
 
+		"Centennial Hylands Elementary School (Shelburne)",
 
-		  "Centennial Central School (Middlesex Centre)",
+		"Centennial Middle School (Halton Hills)",
 
 
-		  "Centennial-Grand Woodlands School (Brantford)",
+		"Centennial Public School (Kingston)",
 
 
-		  "Centennial Hylands Elementary School (Shelburne)",
+		"Centennial Public School (Ottawa)",
 
 
-		  "Centennial Middle School (Halton Hills)",
+		"Centennial Road Junior Public School (Toronto)",
 
 
-		  "Centennial Public School (Kingston)",
+		"Centennial Senior Public School (Brampton)",
 
 
-		  "Centennial Public School (Ottawa)",
+		"Centennial (Waterloo) Public School (Waterloo)",
 
 
-		  "Centennial Road Junior Public School (Toronto)",
+		"Central Avenue Public School (Elliot Lake)",
 
 
-		  "Centennial Senior Public School (Brampton)",
+		"Central Junior Public School (Hamilton)",
 
 
-		  "Centennial (Waterloo) Public School (Waterloo)",
+		"Central Manitoulin Public School (Central Manitoulin)",
 
 
-		  "Central Avenue Public School (Elliot Lake)",
+		"Central Park Public School (Markham)",
 
 
-		  "Central Junior Public School (Hamilton)",
+		"Central Perth Elementary School (Perth South)",
 
 
-		  "Central Manitoulin Public School (Central Manitoulin)",
+		"Central Public School (Brantford)",
 
 
-		  "Central Park Public School (Markham)",
+		"Central Public School (Renfrew)",
 
 
-		  "Central Perth Elementary School (Perth South)",
+		"Central Public School (Cambridge)",
 
 
-		  "Central Public School (Brantford)",
+		"Central Public School (Kingston)",
 
 
-		  "Central Public School (Renfrew)",
+		"Central Public School (Guelph)",
 
 
-		  "Central Public School (Cambridge)",
+		"Central Public School (Cornwall)",
 
 
-		  "Central Public School (Kingston)",
+		"Central Public School (Woodstock)",
 
 
-		  "Central Public School (Guelph)",
+		"Central Public School (Clarington)",
 
 
-		  "Central Public School (Cornwall)",
+		"Central Public School (Windsor)",
 
 
-		  "Central Public School (Woodstock)",
+		"Central Public School (Grimsby)",
 
 
-		  "Central Public School (Clarington)",
+		"Central Public School (Burlington)",
 
 
-		  "Central Public School (Windsor)",
+		"Central School (Kirkland Lake)",
 
 
-		  "Central Public School (Grimsby)",
+		"Central Senior School (Kawartha Lakes)",
 
 
-		  "Central Public School (Burlington)",
+		"Centre Jules-Léger ÉA Difficulté (Ottawa)",
 
 
-		  "Central School (Kirkland Lake)",
+		"Centre Jules-Léger ÉP Surdicécité (Ottawa)",
 
 
-		  "Central Senior School (Kawartha Lakes)",
+		"Centre Jules-Léger ÉP Surdité palier (Ottawa)",
 
 
-		  "Centre Jules-Léger ÉA Difficulté (Ottawa)",
+		"Centre Peel Public School (Mapleton Township)",
 
 
-		  "Centre Jules-Léger ÉP Surdicécité (Ottawa)",
+		"Centreville Public School (Stone Mills)",
 
 
-		  "Centre Jules-Léger ÉP Surdité palier (Ottawa)",
+		"Century Public School (Ottawa)",
 
 
-		  "Centre Peel Public School (Mapleton Township)",
+		"Chalkfarm Public School (Toronto)",
 
 
-		  "Centreville Public School (Stone Mills)",
+		"Chalmers Street Public School (Cambridge)",
 
 
-		  "Century Public School (Ottawa)",
+		"Champlain Discovery Public School (Pembroke)",
 
 
-		  "Chalkfarm Public School (Toronto)",
+		"Champlain Trail Public School (Mississauga)",
 
 
-		  "Chalmers Street Public School (Cambridge)",
+		"Chapel Hill Catholic Elementary School (Ottawa)",
 
 
-		  "Champlain Discovery Public School (Pembroke)",
+		"Chapleau Public School (Chapleau)",
 
 
-		  "Champlain Trail Public School (Mississauga)",
+		"Char-Lan Intermediate School (South Glengarry)",
 
 
-		  "Chapel Hill Catholic Elementary School (Ottawa)",
+		"Charles Bowman Public School (Clarington)",
 
 
-		  "Chapleau Public School (Chapleau)",
+		"Charles C McLean Public School (Gore Bay)",
 
 
-		  "Char-Lan Intermediate School (South Glengarry)",
+		"Charles E Webster Public School (Toronto)",
 
 
-		  "Charles Bowman Public School (Clarington)",
+		"Charles G Fraser Junior Public School (Toronto)",
 
 
-		  "Charles C McLean Public School (Gore Bay)",
+		"Charles Gordon Senior Public School (Toronto)",
 
 
-		  "Charles E Webster Public School (Toronto)",
+		"Charles H Best Middle School (Toronto)",
 
 
-		  "Charles G Fraser Junior Public School (Toronto)",
+		"Charles H. Hulse Public School (Ottawa)",
 
 
-		  "Charles Gordon Senior Public School (Toronto)",
+		"Charles Howitt Public School (Richmond Hill)",
 
 
-		  "Charles H Best Middle School (Toronto)",
+		"Charles R. Beaudoin Public School (Burlington)",
 
 
-		  "Charles H. Hulse Public School (Ottawa)",
+		"Charlottetown Junior Public School (Toronto)",
 
 
-		  "Charles Howitt Public School (Richmond Hill)",
+		"Charlton Public School (Thornhill)",
 
 
-		  "Charles R. Beaudoin Public School (Burlington)",
+		"Charlton-Savard Public School (Charlton And Dack)",
 
 
-		  "Charlottetown Junior Public School (Toronto)",
+		"Chartland Junior Public School (Toronto)",
 
 
-		  "Charlton Public School (Thornhill)",
+		"C H Bray School (Hamilton)",
 
 
-		  "Charlton-Savard Public School (Charlton And Dack)",
+		"Chedoke Middle School (Hamilton)",
 
 
-		  "Chartland Junior Public School (Toronto)",
+		"Chelmsford Public School (Greater Sudbury)",
 
 
-		  "C H Bray School (Hamilton)",
+		"Chelmsford Valley District School (Greater Sudbury)",
 
 
-		  "Chedoke Middle School (Hamilton)",
+		"Chemong Public School (Smith-Ennismore-Lakefield)",
 
 
-		  "Chelmsford Public School (Greater Sudbury)",
+		"Cherokee Public School (Toronto)",
 
 
-		  "Chelmsford Valley District School (Greater Sudbury)",
+		"Cherrytree Public School (Brampton)",
 
 
-		  "Chemong Public School (Smith-Ennismore-Lakefield)",
+		"Cherrywood Acres Public School (Niagara Falls)",
 
 
-		  "Cherokee Public School (Toronto)",
+		"Chester Elementary School (Toronto)",
 
 
-		  "Cherrytree Public School (Brampton)",
+		"Chester Le Junior Public School (Toronto)",
 
 
-		  "Cherrywood Acres Public School (Niagara Falls)",
+		"Chesterville Public School (North Dundas)",
 
 
-		  "Chester Elementary School (Toronto)",
+		"Cheyne Middle School (Brampton)",
 
 
-		  "Chester Le Junior Public School (Toronto)",
+		"Chief Dan George Public School (Toronto)",
 
 
-		  "Chesterville Public School (North Dundas)",
+		"Chimo Elementary School (Smiths Falls)",
 
 
-		  "Cheyne Middle School (Brampton)",
+		"Chine Drive Public School (Toronto)",
 
 
-		  "Chief Dan George Public School (Toronto)",
+		"Chippewa Intermediate School (North Bay)",
 
 
-		  "Chimo Elementary School (Smiths Falls)",
+		"Chippewa Public School (London)",
 
 
-		  "Chine Drive Public School (Toronto)",
+		"C H Norton Public School (Burlington)",
 
 
-		  "Chippewa Intermediate School (North Bay)",
+		"Chris Hadfield Public School (Milton)",
 
 
-		  "Chippewa Public School (London)",
+		"Christ the King Catholic Elementary School (Richmond Hill)",
 
 
-		  "C H Norton Public School (Burlington)",
+		"Christ The King Catholic Elementary School (Cambridge)",
 
 
-		  "Chris Hadfield Public School (Milton)",
+		"Christ the King Catholic School (Toronto)",
 
 
-		  "Christ the King Catholic Elementary School (Richmond Hill)",
+		"Christ the King Catholic School (Chatham-Kent)",
 
 
-		  "Christ The King Catholic Elementary School (Cambridge)",
+		"Christ The King Catholic School (Mississauga)",
 
 
-		  "Christ the King Catholic School (Toronto)",
+		"Christ the King School (Brantford)",
 
 
-		  "Christ the King Catholic School (Chatham-Kent)",
+		"Christ the King Separate School (Windsor)",
 
 
-		  "Christ The King Catholic School (Mississauga)",
+		"Churchill Alternative School (Ottawa)",
 
 
-		  "Christ the King School (Brantford)",
+		"Churchill Heights Public School (Toronto)",
 
 
-		  "Christ the King Separate School (Windsor)",
+		"Churchill Meadows Public School (Mississauga)",
 
 
-		  "Churchill Alternative School (Ottawa)",
+		"Churchill Public School (Toronto)",
 
 
-		  "Churchill Heights Public School (Toronto)",
+		"Churchill Public School (Greater Sudbury)",
 
 
-		  "Churchill Meadows Public School (Mississauga)",
+		"Church Street Junior Public School (Toronto)",
 
 
-		  "Churchill Public School (Toronto)",
+		"City View Alternative Senior School (Toronto)",
 
 
-		  "Churchill Public School (Greater Sudbury)",
+		"Claireville Junior School (Toronto)",
 
 
-		  "Church Street Junior Public School (Toronto)",
+		"Claireville Public School (Brampton)",
 
 
-		  "City View Alternative Senior School (Toronto)",
+		"Clairlea Public School (Toronto)",
 
 
-		  "Claireville Junior School (Toronto)",
+		"Clara Brenton Public School (London)",
 
 
-		  "Claireville Public School (Brampton)",
+		"Claremont Public School (Pickering)",
 
 
-		  "Clairlea Public School (Toronto)",
+		"Clarendon Central Public School (North Frontenac)",
 
 
-		  "Clara Brenton Public School (London)",
+		"Clark Boulevard Public School (Brampton)",
 
 
-		  "Claremont Public School (Pickering)",
+		"Clarksdale Public School (Burlington)",
 
 
-		  "Clarendon Central Public School (North Frontenac)",
+		"Clarkson Public School (Mississauga)",
 
 
-		  "Clark Boulevard Public School (Brampton)",
+		"Claude E Garton Public School (Thunder Bay)",
 
 
-		  "Clarksdale Public School (Burlington)",
+		"Claude Watson School for the Arts (Toronto)",
 
 
-		  "Clarkson Public School (Mississauga)",
+		"Clayton Brown Public School (Hearst)",
 
 
-		  "Claude E Garton Public School (Thunder Bay)",
+		"Cleardale Public School (London)",
 
 
-		  "Claude Watson School for the Arts (Toronto)",
+		"Clearmeadow Public School (Newmarket)",
 
 
-		  "Clayton Brown Public School (Hearst)",
+		"Clearview Meadows Elementary School (Clearview)",
 
 
-		  "Cleardale Public School (London)",
+		"Clemens Mill Public School (Cambridge)",
 
 
-		  "Clearmeadow Public School (Newmarket)",
+		"Clifford Bowey Public School (Ottawa)",
 
 
-		  "Clearview Meadows Elementary School (Clearview)",
+		"Cliffside Public School (Toronto)",
 
 
-		  "Clemens Mill Public School (Cambridge)",
+		"Cliffwood Public School (Toronto)",
 
 
-		  "Clifford Bowey Public School (Ottawa)",
+		"Clifton Public School (Mississauga)",
 
 
-		  "Cliffside Public School (Toronto)",
+		"Clinton Public School (Central Huron)",
 
 
-		  "Cliffwood Public School (Toronto)",
+		"Clinton Street Junior Public School (Toronto)",
 
 
-		  "Clifton Public School (Mississauga)",
+		"C M L Snider Elementary School (Prince Edward County)",
 
 
-		  "Clinton Public School (Central Huron)",
+		"Cobalt Public School (Cobalt)",
 
 
-		  "Clinton Street Junior Public School (Toronto)",
+		"Cobblestone Elementary School (Brant)",
 
 
-		  "C M L Snider Elementary School (Prince Edward County)",
+		"Cobden District Public School (Whitewater Region)",
 
 
-		  "Cobalt Public School (Cobalt)",
+		"Cochrane Public School (Cochrane)",
 
 
-		  "Cobblestone Elementary School (Brant)",
+		"Codrington Public School (Barrie)",
 
 
-		  "Cobden District Public School (Whitewater Region)",
+		"Coe Hill Public School (Wollaston)",
 
 
-		  "Cochrane Public School (Cochrane)",
+		"Colborne Central School (Goderich)",
 
 
-		  "Codrington Public School (Barrie)",
+		"Colborne School (Cramahe)",
 
 
-		  "Coe Hill Public School (Wollaston)",
+		"Colborne Street School (Strathroy-Caradoc)",
 
 
-		  "Colborne Central School (Goderich)",
+		"Colchester North Public School (Essex)",
 
 
-		  "Colborne School (Cramahe)",
+		"Coldwater Public School (Severn)",
 
 
-		  "Colborne Street School (Strathroy-Caradoc)",
+		"Coledale Public School (Markham)",
 
 
-		  "Colchester North Public School (Essex)",
+		"Collège français élémentaire (Toronto)",
 
 
-		  "Coldwater Public School (Severn)",
+		"College Hill Public School (Oshawa)",
 
 
-		  "Coledale Public School (Markham)",
+		"College Street Public School (Quinte West)",
 
 
-		  "Collège français élémentaire (Toronto)",
+		"College Street Public School (West Lincoln)",
 
 
-		  "College Hill Public School (Oshawa)",
+		"Collegiate Avenue School (Hamilton)",
 
 
-		  "College Street Public School (Quinte West)",
+		"Collins Bay Public School (Kingston)",
 
 
-		  "College Street Public School (West Lincoln)",
+		"Colonel Cameron Public School (St. Clair)",
 
 
-		  "Collegiate Avenue School (Hamilton)",
+		"Colonel J E Farewell Public School (Whitby)",
 
 
-		  "Collins Bay Public School (Kingston)",
+		"Commonwealth Public School (Brockville)",
 
 
-		  "Colonel Cameron Public School (St. Clair)",
+		"Conestoga Public School (Brampton)",
 
 
-		  "Colonel J E Farewell Public School (Whitby)",
+		"Conestogo PS (Woolwich)",
 
 
-		  "Commonwealth Public School (Brockville)",
+		"Confederation Central School (Sarnia)",
 
 
-		  "Conestoga Public School (Brampton)",
+		"Connaught Public School (St. Catharines)",
 
 
-		  "Conestogo PS (Woolwich)",
+		"Connaught Public School (Ottawa)",
 
 
-		  "Confederation Central School (Sarnia)",
+		"Connaught Public School (Collingwood)",
 
 
-		  "Connaught Public School (St. Catharines)",
+		"Convent Glen Catholic Elementary School (Ottawa)",
 
 
-		  "Connaught Public School (Ottawa)",
+		"Convent Glen Elementary School (Ottawa)",
 
 
-		  "Connaught Public School (Collingwood)",
+		"Cookstown Central Public School (Innisfil)",
 
 
-		  "Convent Glen Catholic Elementary School (Ottawa)",
+		"Cooksville Creek Public School (Mississauga)",
 
 
-		  "Convent Glen Elementary School (Ottawa)",
+		"Copeland Public School (Brampton)",
 
 
-		  "Cookstown Central Public School (Innisfil)",
+		"Coppard Glen Public School (Markham)",
 
 
-		  "Cooksville Creek Public School (Mississauga)",
+		"Copper Cliff Public School (Greater Sudbury)",
 
 
-		  "Copeland Public School (Brampton)",
+		"Cordella Junior Public School (Toronto)",
 
 
-		  "Coppard Glen Public School (Markham)",
+		"Corliss Public School (Mississauga)",
 
 
-		  "Copper Cliff Public School (Greater Sudbury)",
+		"Cornell Junior Public School (Toronto)",
 
 
-		  "Cordella Junior Public School (Toronto)",
+		"Cornell Northeast #3 (Markham)",
 
 
-		  "Corliss Public School (Mississauga)",
+		"Cornell Village Public School (Markham)",
 
 
-		  "Cornell Junior Public School (Toronto)",
+		"Cornwall Intermediate School (Cornwall)",
 
 
-		  "Cornell Northeast #3 (Markham)",
+		"Coronation Public School (Windsor)",
 
 
-		  "Cornell Village Public School (Markham)",
+		"Coronation Public School (Oshawa)",
 
 
-		  "Cornwall Intermediate School (Cornwall)",
+		"Coronation Public School (Cambridge)",
 
 
-		  "Coronation Public School (Windsor)",
+		"Corpus Christi Catholic Elementary School (Thunder Bay)",
 
 
-		  "Coronation Public School (Oshawa)",
+		"Corpus Christi Catholic Elementary School (Richmond Hill)",
 
 
-		  "Coronation Public School (Cambridge)",
+		"Corpus Christi Catholic School (Greater Sudbury)",
 
 
-		  "Corpus Christi Catholic Elementary School (Thunder Bay)",
+		"Corpus Christi Elementary School (Ottawa)",
 
 
-		  "Corpus Christi Catholic Elementary School (Richmond Hill)",
+		"Corpus Christi School (Hamilton)",
 
 
-		  "Corpus Christi Catholic School (Greater Sudbury)",
+		"Corpus Christi School (Mississauga)",
 
 
-		  "Corpus Christi Elementary School (Ottawa)",
+		"Corpus Christi Separate School (North Bay)",
 
 
-		  "Corpus Christi School (Hamilton)",
+		"Corsair Public School (Mississauga)",
 
 
-		  "Corpus Christi School (Mississauga)",
+		"Corvette Junior Public School (Toronto)",
 
 
-		  "Corpus Christi Separate School (North Bay)",
+		"Cosburn Middle School (Toronto)",
 
 
-		  "Corsair Public School (Mississauga)",
+		"Cottingham Junior Public School (Toronto)",
 
 
-		  "Corvette Junior Public School (Toronto)",
+		"Couchiching Heights Public School (Orillia)",
 
 
-		  "Cosburn Middle School (Toronto)",
+		"Country Hills Public School (Kitchener)",
 
 
-		  "Cottingham Junior Public School (Toronto)",
+		"Courcelette Public School (Toronto)",
 
 
-		  "Couchiching Heights Public School (Orillia)",
+		"Courtice North Public School (Clarington)",
 
 
-		  "Country Hills Public School (Kitchener)",
+		"Courtland Avenue Public School (Kitchener)",
 
 
-		  "Courcelette Public School (Toronto)",
+		"Courtland Public School (Norfolk County)",
 
 
-		  "Courtice North Public School (Clarington)",
+		"Credit Meadows Elementary School (Orangeville)",
 
 
-		  "Courtland Avenue Public School (Kitchener)",
+		"Credit Valley Elementary ()",
 
 
-		  "Courtland Public School (Norfolk County)",
+		"Credit Valley Public School (Mississauga)",
 
 
-		  "Credit Meadows Elementary School (Orangeville)",
+		"Credit Valley Sub Area 2 # 1 PS (Brampton)",
 
 
-		  "Credit Valley Elementary ()",
+		"Credit Valley Sub Area 2 #2 Public School ()",
 
 
-		  "Credit Valley Public School (Mississauga)",
+		"Credit View Public School (Caledon)",
 
+		"Crescent School (Toronto)", 
+		"Crescent Town Elementary School (Toronto)",
 
-		  "Credit Valley Sub Area 2 # 1 PS (Brampton)",
 
+		"Cresthaven Public School (Toronto)",
 
-		  "Credit Valley Sub Area 2 #2 Public School ()",
 
+		"Crestview Public School (Oliver Paipoonge)",
 
-		  "Credit View Public School (Caledon)",
 
+		"Crestview Public School (Kitchener)",
 
-		  "Crescent Town Elementary School (Toronto)",
 
+		"Crestview Public School (Toronto)",
 
-		  "Cresthaven Public School (Toronto)",
+		" Crestwood School & Prep. College (Toronto)",
+		"Crestwood Elem Alter Ed Program Elementary School (Hamilton)",
 
 
-		  "Crestview Public School (Oliver Paipoonge)",
+		"C R Gummow School (Cobourg)",
 
 
-		  "Crestview Public School (Kitchener)",
+		"C R Judd Public School (Greater Sudbury)",
 
 
-		  "Crestview Public School (Toronto)",
+		"C R Marchant Middle School (Toronto)",
 
 
-		  "Crestwood Elem Alter Ed Program Elementary School (Hamilton)",
+		"Crolancia Public School (Pickle Lake)",
 
 
-		  "C R Gummow School (Cobourg)",
+		"Crosby Heights Public School (Richmond Hill)",
 
 
-		  "C R Judd Public School (Greater Sudbury)",
+		"Crossland Public School (Newmarket)",
 
 
-		  "C R Marchant Middle School (Toronto)",
+		"Crossroads Elementary Public School (La Vallee)",
 
 
-		  "Crolancia Public School (Pickle Lake)",
+		"Crossroads Public School (Niagara On The Lake)",
 
 
-		  "Crosby Heights Public School (Richmond Hill)",
+		"Crowland Central Public School (Welland)",
 
 
-		  "Crossland Public School (Newmarket)",
+		"Crystal Bay Centre for Special (Ottawa)",
 
 
-		  "Crossroads Elementary Public School (La Vallee)",
+		"Crystal Beach Public School (Fort Erie)",
 
 
-		  "Crossroads Public School (Niagara On The Lake)",
+		"Cummer Valley Middle School (Toronto)",
 
 
-		  "Crowland Central Public School (Welland)",
+		"Cundles Heights Public School (Barrie)",
 
 
-		  "Crystal Bay Centre for Special (Ottawa)",
+		"Cyril Varney Public School (Greater Sudbury)",
 
 
-		  "Crystal Beach Public School (Fort Erie)",
+		"D A Gordon Public School (Chatham-Kent)",
 
 
-		  "Cummer Valley Middle School (Toronto)",
+		"Dale Road Senior School (Cobourg)",
 
 
-		  "Cundles Heights Public School (Barrie)",
+		"Dalewood Senior Public School (St. Catharines)",
 
 
-		  "Cyril Varney Public School (Greater Sudbury)",
+		"Dalewood Senior Public School (Hamilton)",
 
 
-		  "D A Gordon Public School (Chatham-Kent)",
+		"Dallington Public School (Toronto)",
 
 
-		  "Dale Road Senior School (Cobourg)",
+		"D A Morrison Middle School (Toronto)",
 
 
-		  "Dalewood Senior Public School (St. Catharines)",
+		"Danforth Gardens Public School (Toronto)",
 
 
-		  "Dalewood Senior Public School (Hamilton)",
+		"Darcel Avenue Senior Public School (Mississauga)",
 
 
-		  "Dallington Public School (Toronto)",
+		"D'Arcy McGee Catholic School (Toronto)",
 
 
-		  "D A Morrison Middle School (Toronto)",
+		"D. Aubrey Moodie Intermediate School (Ottawa)",
 
 
-		  "Danforth Gardens Public School (Toronto)",
+		"Davenport Public School (Aylmer)",
 
 
-		  "Darcel Avenue Senior Public School (Mississauga)",
+		"David Hornell Junior School (Toronto)",
 
 
-		  "D'Arcy McGee Catholic School (Toronto)",
+		"David Leeder Middle School (Mississauga)",
 
 
-		  "D. Aubrey Moodie Intermediate School (Ottawa)",
+		"David Lewis Public School (Toronto)",
 
 
-		  "Davenport Public School (Aylmer)",
+		"David Maxwell Public School (Windsor)",
 
 
-		  "David Hornell Junior School (Toronto)",
+		"David Suzuki Public School (Markham)",
 
 
-		  "David Leeder Middle School (Mississauga)",
+		"da Vinci School (Toronto)",
 
 
-		  "David Lewis Public School (Toronto)",
+		"Davisville Junior Public School (Toronto)",
 
 
-		  "David Maxwell Public School (Windsor)",
+		"Dawn-Euphemia School (Chatham-Kent)",
 
 
-		  "David Suzuki Public School (Markham)",
+		"Dawnview Public School (Hanover)",
 
 
-		  "da Vinci School (Toronto)",
+		"Daystrom Public School (Toronto)",
 
 
-		  "Davisville Junior Public School (Toronto)",
+		"Deer Park Junior and Senior Public School (Toronto)",
 
 
-		  "Dawn-Euphemia School (Chatham-Kent)",
+		"Deer Park Public School (Georgina)",
+		"De La Salle College 'Oaklands' (Toronto)",
 
+		"Delaware Central School (Middlesex Centre)",
 
-		  "Dawnview Public School (Hanover)",
 
+		"Delhi Public School (Norfolk)",
 
-		  "Daystrom Public School (Toronto)",
 
+		"Delta Senior Alternative School (Toronto)",
 
-		  "Deer Park Junior and Senior Public School (Toronto)",
 
+		"Denlow Public School (Toronto)",
 
-		  "Deer Park Public School (Georgina)",
 
+		"Denne Public School (Newmarket)",
 
-		  "Delaware Central School (Middlesex Centre)",
 
+		"Dennis Avenue Community School (Toronto)",
 
-		  "Delhi Public School (Norfolk)",
 
+		"Derby Public School (Owen Sound)",
 
-		  "Delta Senior Alternative School (Toronto)",
 
+		"Derrydown Public School (Toronto)",
 
-		  "Denlow Public School (Toronto)",
 
+		"Derry West Village Public School (Mississauga)",
 
-		  "Denne Public School (Newmarket)",
 
+		"Deseronto Public School (Deseronto)",
 
-		  "Dennis Avenue Community School (Toronto)",
 
+		"Devins Drive Public School (Aurora)",
 
-		  "Derby Public School (Owen Sound)",
 
+		"Devonshire Community Public School (Ottawa)",
 
-		  "Derrydown Public School (Toronto)",
 
+		"DeWitt Carter Public School (Port Colborne)",
 
-		  "Derry West Village Public School (Mississauga)",
 
+		"Dewson Street Junior Public School (Toronto)",
 
-		  "Deseronto Public School (Deseronto)",
 
+		"Diamond Jubilee Public School (Kapuskasing)",
 
-		  "Devins Drive Public School (Aurora)",
 
+		"Dickson Public School (Cambridge)",
 
-		  "Devonshire Community Public School (Ottawa)",
 
+		"Diefenbaker Elementary School (Toronto)",
 
-		  "DeWitt Carter Public School (Port Colborne)",
 
+		"Discovery Public School (Vaughan)",
 
-		  "Dewson Street Junior Public School (Toronto)",
 
+		"Divine Infant Elementary School (Ottawa)",
 
-		  "Diamond Jubilee Public School (Kapuskasing)",
 
+		"Divine Mercy Catholic Elementary School (Vaughan)",
 
-		  "Dickson Public School (Cambridge)",
 
+		"Divine Mercy School (Mississauga)",
 
-		  "Diefenbaker Elementary School (Toronto)",
 
+		"Dixie Public School (Mississauga)",
 
-		  "Discovery Public School (Vaughan)",
 
+		"Dixon Grove Junior Middle School (Toronto)",
 
-		  "Divine Infant Elementary School (Ottawa)",
 
+		"D M Eagle Public School (Tecumseh)",
 
-		  "Divine Mercy Catholic Elementary School (Vaughan)",
 
+		"Dolphin Senior Public School (Mississauga)",
 
-		  "Divine Mercy School (Mississauga)",
 
+		"Donald Cousens Public School (Markham)",
 
-		  "Dixie Public School (Mississauga)",
 
+		"Donald Young Public School (Emo)",
 
-		  "Dixon Grove Junior Middle School (Toronto)",
 
+		"Doncrest Public School (Richmond Hill)",
 
-		  "D M Eagle Public School (Tecumseh)",
 
+		"Don Mills Middle School (Toronto)",
 
-		  "Dolphin Senior Public School (Mississauga)",
 
+		"Don Valley Junior High School (Toronto)",
 
-		  "Donald Cousens Public School (Markham)",
 
+		"Donview Middle School (Toronto)",
 
-		  "Donald Young Public School (Emo)",
 
+		"Donwood Park Junior Public School (Toronto)",
 
-		  "Doncrest Public School (Richmond Hill)",
 
+		"Doon Public School (Kitchener)",
 
-		  "Don Mills Middle School (Toronto)",
 
+		"Dorion Public School (Dorion)",
 
-		  "Don Valley Junior High School (Toronto)",
 
+		"Dorset Drive Public School (Brampton)",
 
-		  "Donview Middle School (Toronto)",
 
+		"Dorset Park Public School (Toronto)",
 
-		  "Donwood Park Junior Public School (Toronto)",
 
+		"Dougall Avenue Public School (Windsor)",
 
-		  "Doon Public School (Kitchener)",
 
+		"Dovercourt Public School (Toronto)",
 
-		  "Dorion Public School (Dorion)",
 
+		"Doverwood Public School (Norfolk County)",
 
-		  "Dorset Drive Public School (Brampton)",
 
+		"Downie Central Public School (Innisfil)",
 
-		  "Dorset Park Public School (Toronto)",
 
+		"Downsview Public School (Toronto)",
 
-		  "Dougall Avenue Public School (Windsor)",
 
+		"Downtown Alternative School (Toronto)",
 
-		  "Dovercourt Public School (Toronto)",
 
+		"Drayton Heights Public School (Mapleton)",
 
-		  "Doverwood Public School (Norfolk County)",
 
+		"Dr C F Cannon Public School (Oshawa)",
 
-		  "Downie Central Public School (Innisfil)",
 
+		"Dr Charles Best Public School (Burlington)",
 
-		  "Downsview Public School (Toronto)",
 
+		"Dr. David Suzuki Public School (Windsor)",
 
-		  "Downtown Alternative School (Toronto)",
 
+		"Dr Emily Stowe School (Clarington)",
 
-		  "Drayton Heights Public School (Mapleton)",
 
+		"Dresden Area Central School (Chatham-Kent)",
 
-		  "Dr C F Cannon Public School (Oshawa)",
 
+		"Dr F J McDonald Catholic Elementary School (Ottawa)",
 
-		  "Dr Charles Best Public School (Burlington)",
 
+		"Dr George Hall Public School (Greater Sudbury)",
 
-		  "Dr. David Suzuki Public School (Windsor)",
 
+		"Dr G J MacGillivray Public School (Clarington)",
 
-		  "Dr Emily Stowe School (Clarington)",
 
+		"Dr H D Taylor Public School (Windsor)",
 
-		  "Dresden Area Central School (Chatham-Kent)",
 
+		"Driftwood Park Public School (Kitchener)",
 
-		  "Dr F J McDonald Catholic Elementary School (Ottawa)",
 
+		"Driftwood Public School (Toronto)",
 
-		  "Dr George Hall Public School (Greater Sudbury)",
 
+		"Dr. J. Edgar Davey (New) Elementary Public School (Hamilton)",
 
-		  "Dr G J MacGillivray Public School (Clarington)",
 
+		"Dr John Seaton Senior Public School (Hamilton)",
 
-		  "Dr H D Taylor Public School (Windsor)",
 
+		"Dr MacDougall Public School (North Bay)",
 
-		  "Driftwood Park Public School (Kitchener)",
 
+		"Dr Marion Hilliard Senior Public School (Toronto)",
 
-		  "Driftwood Public School (Toronto)",
 
+		"Dr M S Hawkins Senior School (Port Hope)",
 
-		  "Dr. J. Edgar Davey (New) Elementary Public School (Hamilton)",
 
+		"D. Roy Kennedy Public School (Ottawa)",
 
-		  "Dr John Seaton Senior Public School (Hamilton)",
 
+		"Dr Roberta Bondar Public School (Ajax)",
 
-		  "Dr MacDougall Public School (North Bay)",
 
+		"Dr Roberta Bondar Public School (Vaughan)",
 
-		  "Dr Marion Hilliard Senior Public School (Toronto)",
 
+		"Dr Robert Thornton Public School (Whitby)",
 
-		  "Dr M S Hawkins Senior School (Port Hope)",
 
+		"Dr Ross Tilley Public School (Clarington)",
 
-		  "D. Roy Kennedy Public School (Ottawa)",
 
+		"Dr S J Phillips Public School (Oshawa)",
 
-		  "Dr Roberta Bondar Public School (Ajax)",
 
+		"Drummond Central School (Perth)",
 
-		  "Dr Roberta Bondar Public School (Vaughan)",
 
+		"DSBN Academy (Welland)",
 
-		  "Dr Robert Thornton Public School (Whitby)",
 
+		"Dublin Heights Elementary and Middle School (Toronto)",
 
-		  "Dr Ross Tilley Public School (Clarington)",
 
+		"Dufferin Elementary School (Owen Sound)",
 
-		  "Dr S J Phillips Public School (Oshawa)",
 
+		"Dufferin Public School (Brantford)",
 
-		  "Drummond Central School (Perth)",
 
+		"Duffin's Bay Public School (Ajax)",
 
-		  "DSBN Academy (Welland)",
 
+		"Duke of Connaught Junior and Senior Public School (Toronto)",
 
-		  "Dublin Heights Elementary and Middle School (Toronto)",
 
+		"Duke of Edinburgh Public School (Oshawa)",
 
-		  "Dufferin Elementary School (Owen Sound)",
 
+		"Duncan J Schoular Public School (Smiths Falls)",
 
-		  "Dufferin Public School (Brantford)",
 
+		"Dundalk &amp; Proton Community School (Southgate)",
 
-		  "Duffin's Bay Public School (Ajax)",
 
+		"Dundana Public School (Hamilton)",
 
-		  "Duke of Connaught Junior and Senior Public School (Toronto)",
 
+		"Dundas Central Public School (Hamilton)",
 
-		  "Duke of Edinburgh Public School (Oshawa)",
 
+		"Dundas Junior Public School (Toronto)",
 
-		  "Duncan J Schoular Public School (Smiths Falls)",
 
+		"Dunlace Public School (Toronto)",
 
-		  "Dundalk &amp; Proton Community School (Southgate)",
 
+		"Dunlop Public School (Ottawa)",
 
-		  "Dundana Public School (Hamilton)",
 
+		"Dunning-Foubert Elementary School (Ottawa)",
 
-		  "Dundas Central Public School (Hamilton)",
 
+		"Dunnville Central Public School (Haldimand)",
 
-		  "Dundas Junior Public School (Toronto)",
 
+		"Dunrankin Drive Public School (Mississauga)",
 
-		  "Dunlace Public School (Toronto)",
 
+		"Dunsford District Elementary School (Kawartha Lakes)",
 
-		  "Dunlop Public School (Ottawa)",
 
+		"Duntroon Central Public School (Clearview)",
 
-		  "Dunning-Foubert Elementary School (Ottawa)",
 
+		"Dunwich-Dutton Public School (Dutton/Dunwich)",
 
-		  "Dunnville Central Public School (Haldimand)",
 
+		"Eagle Heights Public School (London)",
 
-		  "Dunrankin Drive Public School (Mississauga)",
 
+		"Eagle Plains Public School (Brampton)",
 
-		  "Dunsford District Elementary School (Kawartha Lakes)",
 
+		"Eagle Ridge Public School (Ajax)",
 
-		  "Duntroon Central Public School (Clearview)",
 
+		"Ealing Public School (London)",
 
-		  "Dunwich-Dutton Public School (Dutton/Dunwich)",
 
+		"Eamer's Corners Public School (Cornwall)",
 
-		  "Eagle Heights Public School (London)",
 
+		"Ear Falls Public School (Ear Falls)",
 
-		  "Eagle Plains Public School (Brampton)",
 
+		"Earl A Fairman Public School (Whitby)",
 
-		  "Eagle Ridge Public School (Ajax)",
 
+		"Earl Beatty Junior and Senior Public School (Toronto)",
 
-		  "Ealing Public School (London)",
 
+		"Earl Grey Senior Public School (Toronto)",
 
-		  "Eamer's Corners Public School (Cornwall)",
 
+		"Earl Haig Public School (Toronto)",
 
-		  "Ear Falls Public School (Ear Falls)",
 
+		"Earl Kitchener Junior Public School (Hamilton)",
 
-		  "Earl A Fairman Public School (Whitby)",
 
+		"Earl Prentice Public School (Marmora And Lake)",
 
-		  "Earl Beatty Junior and Senior Public School (Toronto)",
 
+		"Earnscliffe Senior Public School (Brampton)",
 
-		  "Earl Grey Senior Public School (Toronto)",
 
+		"East Alternative School of Toronto (Toronto)",
 
-		  "Earl Haig Public School (Toronto)",
 
+		"Eastbourne Drive Public School (Brampton)",
 
-		  "Earl Kitchener Junior Public School (Hamilton)",
 
+		"Eastdale Public School (Hamilton)",
 
-		  "Earl Prentice Public School (Marmora And Lake)",
 
+		"Eastdale Public School (Woodstock)",
 
-		  "Earnscliffe Senior Public School (Brampton)",
 
+		"East Front Public School (Cornwall)",
 
-		  "East Alternative School of Toronto (Toronto)",
 
+		"East Garafraxa Central Public School (East Garafraxa)",
 
-		  "Eastbourne Drive Public School (Brampton)",
 
+		"East Lambton Elementary School (Warwick)",
 
-		  "Eastdale Public School (Hamilton)",
 
+		"East Mersea Public School (Chatham-Kent)",
 
-		  "Eastdale Public School (Woodstock)",
 
+		"Eastmount Park Junior Public School (Hamilton)",
 
-		  "East Front Public School (Cornwall)",
 
+		"East Oro Public School (Oro-Medonte)",
 
-		  "East Garafraxa Central Public School (East Garafraxa)",
 
+		"East Oxford Public School (Woodstock)",
 
-		  "East Lambton Elementary School (Warwick)",
 
+		"Eastview Public School (Oakville)",
 
-		  "East Mersea Public School (Chatham-Kent)",
 
+		"Eastview Public School (Toronto)",
 
-		  "Eastmount Park Junior Public School (Hamilton)",
 
+		"East View Public School (Sault Ste. Marie)",
 
-		  "East Oro Public School (Oro-Medonte)",
 
+		"East Wawanosh Public School (North Huron)",
 
-		  "East Oxford Public School (Woodstock)",
 
+		"East Williams Memorial Public School (North Middlesex)",
 
-		  "Eastview Public School (Oakville)",
 
+		"Eastwood Public School (Windsor)",
 
-		  "Eastview Public School (Toronto)",
 
+		"Eatonville Junior School (Toronto)",
 
-		  "East View Public School (Sault Ste. Marie)",
 
+		"E C Drury/Trillium Demonstration School (Milton)",
 
-		  "East Wawanosh Public School (North Huron)",
 
+		"Echo Bay Central Public School (Macdonald, Meredith And Aberdeen Additional)",
 
-		  "East Williams Memorial Public School (North Middlesex)",
 
+		"École Alliance St-Joseph (Greater Sudbury)",
 
-		  "Eastwood Public School (Windsor)",
 
+		"École Bishop Belleau - French Language Unit (Moosonee)",
 
-		  "Eatonville Junior School (Toronto)",
 
+		"École catholique André-Cary (Kapuskasing)",
 
-		  "E C Drury/Trillium Demonstration School (Milton)",
 
+		"École catholique Anicet-Morin (Timmins)",
 
-		  "Echo Bay Central Public School (Macdonald, Meredith And Aberdeen Additional)",
 
+		"École catholique Assomption (Armstrong)",
 
-		  "École Alliance St-Joseph (Greater Sudbury)",
 
+		"École catholique Assomption (Kirkland Lake)",
 
-		  "École Bishop Belleau - French Language Unit (Moosonee)",
 
+		"École catholique de La Vérendrye (Thunder Bay)",
 
-		  "École catholique André-Cary (Kapuskasing)",
 
+		"École catholique de l'Enfant-Jésus (Dryden)",
 
-		  "École catholique Anicet-Morin (Timmins)",
 
+		"École catholique des Étoiles-du-Nord (Red Lake)",
 
-		  "École catholique Assomption (Armstrong)",
 
+		"École catholique Don-Bosco (Timmins)",
 
-		  "École catholique Assomption (Kirkland Lake)",
 
+		"École catholique Franco-Supérieur (Thunder Bay)",
 
-		  "École catholique de La Vérendrye (Thunder Bay)",
 
+		"École catholique Franco-Terrace (Terrace Bay)",
 
-		  "École catholique de l'Enfant-Jésus (Dryden)",
 
+		"École catholique Georges-Vanier (Smooth Rock Falls)",
 
-		  "École catholique des Étoiles-du-Nord (Red Lake)",
 
+		"École catholique Immaculée-Conception (Black River-Matheson)",
 
-		  "École catholique Don-Bosco (Timmins)",
 
+		"École catholique Jacques-Cartier (Timmins)",
 
-		  "École catholique Franco-Supérieur (Thunder Bay)",
 
+		"École catholique Jacques-Cartier (Kapuskasing)",
 
-		  "École catholique Franco-Terrace (Terrace Bay)",
 
+		"École catholique Jeanne-Mance (Kapuskasing)",
 
-		  "École catholique Georges-Vanier (Smooth Rock Falls)",
 
+		"École catholique Jean-Vanier (Kirkland Lake)",
 
-		  "École catholique Immaculée-Conception (Black River-Matheson)",
 
+		"École catholique Louis-Rhéaume (Timmins)",
 
-		  "École catholique Jacques-Cartier (Timmins)",
 
+		"École catholique Nouveau Regard - Pavillon St-Joseph (Cochrane)",
 
-		  "École catholique Jacques-Cartier (Kapuskasing)",
 
+		"École catholique Pavillon Notre-Dame (Hearst)",
 
-		  "École catholique Jeanne-Mance (Kapuskasing)",
 
+		"École catholique Sacré-Coeur (Temiskaming Shores)",
 
-		  "École catholique Jean-Vanier (Kirkland Lake)",
 
+		"École catholique Sainte-Croix (Temiskaming Shores)",
 
-		  "École catholique Louis-Rhéaume (Timmins)",
 
+		"École catholique Sainte-Thérèse (Black River-Matheson)",
 
-		  "École catholique Nouveau Regard - Pavillon St-Joseph (Cochrane)",
 
+		"École catholique Saint-Michel (Temiskaming Shores)",
 
-		  "École catholique Pavillon Notre-Dame (Hearst)",
 
+		"École catholique St-Antoine-de-Padoue (Opasatika)",
 
-		  "École catholique Sacré-Coeur (Temiskaming Shores)",
 
+		"École catholique St-Charles (Timmins)",
 
-		  "École catholique Sainte-Croix (Temiskaming Shores)",
 
+		"École catholique St-Dominique (Timmins)",
 
-		  "École catholique Sainte-Thérèse (Black River-Matheson)",
 
+		"École catholique Ste-Anne (Hearst)",
 
-		  "École catholique Saint-Michel (Temiskaming Shores)",
 
+		"École catholique Ste-Rita (Val Rita-Harty)",
 
-		  "École catholique St-Antoine-de-Padoue (Opasatika)",
 
+		"École catholique St-François-Xavier (Mattice-Val Côté)",
 
-		  "École catholique St-Charles (Timmins)",
 
+		"École catholique St-Gérard (Timmins)",
 
-		  "École catholique St-Dominique (Timmins)",
 
+		"École catholique St-Jude (Timmins)",
 
-		  "École catholique Ste-Anne (Hearst)",
 
+		"École catholique St-Jules (Moonbeam)",
 
-		  "École catholique Ste-Rita (Val Rita-Harty)",
 
+		"École catholique St-Louis (Hearst)",
 
-		  "École catholique St-François-Xavier (Mattice-Val Côté)",
 
+		"École catholique St-Louis (Mcgarry)",
 
-		  "École catholique St-Gérard (Timmins)",
 
+		"École catholique Sts-Martyrs-Canadiens (Iroquois Falls)",
 
-		  "École catholique St-Jude (Timmins)",
 
+		"École catholique Val-des-Bois (Marathon)",
 
-		  "École catholique St-Jules (Moonbeam)",
 
+		"École élémentaire Antonine Maillet (Oshawa)",
 
-		  "École catholique St-Louis (Hearst)",
 
+		"École élémentaire Carrefour des Jeunes (Brampton)",
 
-		  "École catholique St-Louis (Mcgarry)",
 
+		"École élémentaire catholique Académie cath. Ange-Gabriel, pav. élé. (Brockville)",
 
-		  "École catholique Sts-Martyrs-Canadiens (Iroquois Falls)",
 
+		"École élémentaire catholique Alain-Fortin (Ottawa)",
 
-		  "École catholique Val-des-Bois (Marathon)",
 
+		"École élémentaire catholique Arc-en-ciel (Ottawa)",
 
-		  "École élémentaire Antonine Maillet (Oshawa)",
 
+		"École élémentaire catholique Bernard-Grandmaître (Ottawa)",
 
-		  "École élémentaire Carrefour des Jeunes (Brampton)",
 
+		"École élémentaire catholique Curé-Labrosse (East Hawkesbury)",
 
-		  "École élémentaire catholique Académie cath. Ange-Gabriel, pav. élé. (Brockville)",
 
+		"École élémentaire catholique de Casselman - Pav. St-Paul/Ste-Euphémie (Casselman)",
 
-		  "École élémentaire catholique Alain-Fortin (Ottawa)",
 
+		"École élémentaire catholique De la Découverte (Ottawa)",
 
-		  "École élémentaire catholique Arc-en-ciel (Ottawa)",
 
+		"École élémentaire catholique de l'Ange-Gardien (South Glengarry)",
 
-		  "École élémentaire catholique Bernard-Grandmaître (Ottawa)",
 
+		"École élémentaire catholique d'enseignement personnalisée - La Source (Ottawa)",
 
-		  "École élémentaire catholique Curé-Labrosse (East Hawkesbury)",
 
+		"École élémentaire catholique Des Pins (Ottawa)",
 
-		  "École élémentaire catholique de Casselman - Pav. St-Paul/Ste-Euphémie (Casselman)",
 
+		"École élémentaire catholique Des Pionniers (Ottawa)",
 
-		  "École élémentaire catholique De la Découverte (Ottawa)",
 
+		"École élémentaire catholique Des  Voyageurs (Ottawa)",
 
-		  "École élémentaire catholique de l'Ange-Gardien (South Glengarry)",
 
+		"École élémentaire catholique Du Rosaire (Clarence-Rockland)",
 
-		  "École élémentaire catholique d'enseignement personnalisée - La Source (Ottawa)",
 
+		"École élémentaire catholique Edouard-Bond (Ottawa)",
 
-		  "École élémentaire catholique Des Pins (Ottawa)",
 
+		"École élémentaire catholique Elda-Rouleau (North Glengarry)",
 
-		  "École élémentaire catholique Des Pionniers (Ottawa)",
 
+		"École élémentaire catholique Elisabeth-Bruyère (Ottawa)",
 
-		  "École élémentaire catholique Des  Voyageurs (Ottawa)",
 
+		"École élémentaire catholique Embrun - Pav. Saint-Jean/Pav. La Croisée (Russell)",
 
-		  "École élémentaire catholique Du Rosaire (Clarence-Rockland)",
 
+		"École élémentaire catholique Frère André (London)",
 
-		  "École élémentaire catholique Edouard-Bond (Ottawa)",
 
+		"École élémentaire catholique Georges-Étienne-Cartier (Ottawa)",
 
-		  "École élémentaire catholique Elda-Rouleau (North Glengarry)",
 
+		"École élémentaire catholique Georges P Vanier (Windsor)",
 
-		  "École élémentaire catholique Elisabeth-Bruyère (Ottawa)",
 
+		"École élémentaire catholique Horizon-Jeunesse (Ottawa)",
 
-		  "École élémentaire catholique Embrun - Pav. Saint-Jean/Pav. La Croisée (Russell)",
 
+		"École élémentaire catholique Jeanne-Lajoie, pavillon élémentaire (Pembroke)",
 
-		  "École élémentaire catholique Frère André (London)",
 
+		"École élémentaire catholique Jean-Paul II (Ottawa)",
 
-		  "École élémentaire catholique Georges-Étienne-Cartier (Ottawa)",
 
+		"École élémentaire catholique Jean-Paul II (Greater Sudbury)",
 
-		  "École élémentaire catholique Georges P Vanier (Windsor)",
 
+		"École élémentaire catholique Jean-Robert-Gauthier (Ottawa)",
 
-		  "École élémentaire catholique Horizon-Jeunesse (Ottawa)",
 
+		"École élémentaire catholique J.-L.-Couroux (Carleton Place)",
 
-		  "École élémentaire catholique Jeanne-Lajoie, pavillon élémentaire (Pembroke)",
 
+		"École élémentaire catholique Kanata Nord (Ottawa)",
 
-		  "École élémentaire catholique Jean-Paul II (Ottawa)",
 
+		"École élémentaire catholique Lamoureux (Ottawa)",
 
-		  "École élémentaire catholique Jean-Paul II (Greater Sudbury)",
 
+		"École élémentaire catholique La Source (North Stormont)",
 
-		  "École élémentaire catholique Jean-Robert-Gauthier (Ottawa)",
 
+		"École élémentaire catholique Laurier-Carrière (North Glengarry)",
 
-		  "École élémentaire catholique J.-L.-Couroux (Carleton Place)",
 
+		"École élémentaire catholique Laurier-Carrière (Ottawa)",
 
-		  "École élémentaire catholique Kanata Nord (Ottawa)",
 
+		"École élémentaire catholique La Vérendrye (Ottawa)",
 
-		  "École élémentaire catholique Lamoureux (Ottawa)",
 
+		"École élémentaire catholique L'Envol (Quinte West)",
 
-		  "École élémentaire catholique La Source (North Stormont)",
 
+		"École élémentaire catholique L'Étoile-de-l'Est (Ottawa)",
 
-		  "École élémentaire catholique Laurier-Carrière (North Glengarry)",
 
+		"École élémentaire catholique Marie-Tanguay (Cornwall)",
 
-		  "École élémentaire catholique Laurier-Carrière (Ottawa)",
 
+		"École élémentaire catholique Marius-Barbeau (Ottawa)",
 
-		  "École élémentaire catholique La Vérendrye (Ottawa)",
 
+		"École élémentaire catholique Mgr-Rémi-Gaulin (Kingston)",
 
-		  "École élémentaire catholique L'Envol (Quinte West)",
 
+		"École élémentaire catholique Monseigneur Augustin Caron (Lasalle)",
 
-		  "École élémentaire catholique L'Étoile-de-l'Est (Ottawa)",
 
+		"École élémentaire catholique Monseigneur-Bruyère (London)",
 
-		  "École élémentaire catholique Marie-Tanguay (Cornwall)",
 
+		"École élémentaire catholique Monseigneur Jean Noël (Windsor)",
 
-		  "École élémentaire catholique Marius-Barbeau (Ottawa)",
 
+		"École élémentaire catholique Montfort (Ottawa)",
 
-		  "École élémentaire catholique Mgr-Rémi-Gaulin (Kingston)",
 
+		"École élémentaire catholique Notre-Dame (Cornwall)",
 
-		  "École élémentaire catholique Monseigneur Augustin Caron (Lasalle)",
 
+		"École élémentaire catholique Notre-Dame (Woodstock)",
 
-		  "École élémentaire catholique Monseigneur-Bruyère (London)",
 
+		"École élémentaire catholique Notre-Dame-du-Rosaire (North Stormont)",
 
-		  "École élémentaire catholique Monseigneur Jean Noël (Windsor)",
 
+		"École élémentaire catholique Paul VI (Hawkesbury)",
 
-		  "École élémentaire catholique Montfort (Ottawa)",
 
+		"École élémentaire catholique Pavillon des Jeunes (Lakeshore)",
 
-		  "École élémentaire catholique Notre-Dame (Cornwall)",
 
+		"École élémentaire catholique Pierre-Elliott-Trudeau (Ottawa)",
 
-		  "École élémentaire catholique Notre-Dame (Woodstock)",
 
+		"École élémentaire catholique Reine-des-Bois (Ottawa)",
 
-		  "École élémentaire catholique Notre-Dame-du-Rosaire (North Stormont)",
 
+		"École élémentaire catholique Roger-Saint-Denis (Ottawa)",
 
-		  "École élémentaire catholique Paul VI (Hawkesbury)",
 
+		"École élémentaire catholique Sacré-Coeur (Clarence-Rockland)",
 
-		  "École élémentaire catholique Pavillon des Jeunes (Lakeshore)",
 
+		"École élémentaire catholique Saint-Albert (The Nation)",
 
-		  "École élémentaire catholique Pierre-Elliott-Trudeau (Ottawa)",
 
+		"École élémentaire catholique Saint-Ambroise (Lakeshore)",
 
-		  "École élémentaire catholique Reine-des-Bois (Ottawa)",
 
+		"École élémentaire catholique Saint-Antoine (Tecumseh)",
 
-		  "École élémentaire catholique Roger-Saint-Denis (Ottawa)",
 
+		"École élémentaire catholique Sainte-Anne (Ottawa)",
 
-		  "École élémentaire catholique Sacré-Coeur (Clarence-Rockland)",
 
+		"École élémentaire catholique Sainte-Bernadette (Ottawa)",
 
-		  "École élémentaire catholique Saint-Albert (The Nation)",
 
+		"École élémentaire catholique Sainte-Catherine (Chatham-Kent)",
 
-		  "École élémentaire catholique Saint-Ambroise (Lakeshore)",
 
+		"École élémentaire catholique Saint-Edmond (Windsor)",
 
-		  "École élémentaire catholique Saint-Antoine (Tecumseh)",
 
+		"École élémentaire catholique Sainte-Félicité (Clarence-Rockland)",
 
-		  "École élémentaire catholique Sainte-Anne (Ottawa)",
 
+		"École élémentaire catholique Sainte-Geneviève (Ottawa)",
 
-		  "École élémentaire catholique Sainte-Bernadette (Ottawa)",
 
+		"École élémentaire catholique Sainte-Lucie (South Stormont)",
 
-		  "École élémentaire catholique Sainte-Catherine (Chatham-Kent)",
 
+		"École élémentaire catholique Sainte-Marguerite-Bourgeois (Hawkesbury)",
 
-		  "École élémentaire catholique Saint-Edmond (Windsor)",
 
+		"École élémentaire catholique Sainte-Marguerite-Bourgeois (Merrickville-Wolford)",
 
-		  "École élémentaire catholique Sainte-Félicité (Clarence-Rockland)",
 
+		"École élémentaire catholique Sainte-Marguerite-Bourgeoys (Woodstock)",
 
-		  "École élémentaire catholique Sainte-Geneviève (Ottawa)",
 
+		"École élémentaire catholique Sainte-Marie (Ottawa)",
 
-		  "École élémentaire catholique Sainte-Lucie (South Stormont)",
 
+		"École élémentaire catholique Sainte-Marie (Chatham-Kent)",
 
-		  "École élémentaire catholique Sainte-Marguerite-Bourgeois (Hawkesbury)",
 
+		"École élémentaire catholique Sainte-Thérèse (Cornwall)",
 
-		  "École élémentaire catholique Sainte-Marguerite-Bourgeois (Merrickville-Wolford)",
 
+		"École élémentaire catholique Sainte-Thérèse (Windsor)",
 
-		  "École élémentaire catholique Sainte-Marguerite-Bourgeoys (Woodstock)",
 
+		"École élémentaire catholique Sainte-Thérèse-d'Avila (Russell)",
 
-		  "École élémentaire catholique Sainte-Marie (Ottawa)",
 
+		"École élémentaire catholique Sainte-Trinité (Clarence-Rockland)",
 
-		  "École élémentaire catholique Sainte-Marie (Chatham-Kent)",
 
+		"École élémentaire catholique Sainte-Ursule (Amherstburg)",
 
-		  "École élémentaire catholique Sainte-Thérèse (Cornwall)",
 
+		"École élémentaire catholique Saint-Francis (Chatham-Kent)",
 
-		  "École élémentaire catholique Sainte-Thérèse (Windsor)",
 
+		"École élémentaire catholique Saint-François-d'Assise (Ottawa)",
 
-		  "École élémentaire catholique Sainte-Thérèse-d'Avila (Russell)",
 
+		"École élémentaire catholique Saint-François-Xavier (Sarnia)",
 
-		  "École élémentaire catholique Sainte-Trinité (Clarence-Rockland)",
 
+		"École élémentaire catholique Saint-Gabriel (Cornwall)",
 
-		  "École élémentaire catholique Sainte-Ursule (Amherstburg)",
 
+		"École élémentaire catholique Saint-Grégoire (Champlain)",
 
-		  "École élémentaire catholique Saint-Francis (Chatham-Kent)",
 
+		"École élémentaire catholique Saint-Guillaume (Ottawa)",
 
-		  "École élémentaire catholique Saint-François-d'Assise (Ottawa)",
 
+		"École élémentaire catholique Saint-Isidore (The Nation)",
 
-		  "École élémentaire catholique Saint-François-Xavier (Sarnia)",
 
+		"École élémentaire catholique Saint-Jean-Baptiste (Champlain)",
 
-		  "École élémentaire catholique Saint-Gabriel (Cornwall)",
 
+		"École élémentaire catholique Saint-Jean-Baptiste (Amherstburg)",
 
-		  "École élémentaire catholique Saint-Grégoire (Champlain)",
 
+		"École élémentaire catholique Saint-Jean-de-Brébeuf (London)",
 
-		  "École élémentaire catholique Saint-Guillaume (Ottawa)",
 
+		"École élémentaire catholique Saint-Joseph d'Orléans (Ottawa)",
 
-		  "École élémentaire catholique Saint-Isidore (The Nation)",
 
+		"École élémentaire catholique Saint-Joseph (Lefaivre) (Alfred And Plantagenet)",
 
-		  "École élémentaire catholique Saint-Jean-Baptiste (Champlain)",
 
+		"École élémentaire catholique Saint-Joseph (Russell) (Russell)",
 
-		  "École élémentaire catholique Saint-Jean-Baptiste (Amherstburg)",
 
+		"École élémentaire catholique Saint-Joseph (Wendover) (Alfred And Plantagenet)",
 
-		  "École élémentaire catholique Saint-Jean-de-Brébeuf (London)",
 
+		"École élémentaire catholique Saint-Mathieu (Clarence-Rockland)",
 
-		  "École élémentaire catholique Saint-Joseph d'Orléans (Ottawa)",
 
+		"École élémentaire catholique Saint-Michel (Leamington)",
 
-		  "École élémentaire catholique Saint-Joseph (Lefaivre) (Alfred And Plantagenet)",
 
+		"École élémentaire catholique Saint-Paul (Alfred And Plantagenet)",
 
-		  "École élémentaire catholique Saint-Joseph (Russell) (Russell)",
 
+		"École élémentaire catholique Saint-Paul (Pointe-Aux- Roches)",
 
-		  "École élémentaire catholique Saint-Joseph (Wendover) (Alfred And Plantagenet)",
 
+		"École élémentaire catholique Saint-Philippe (Chatham-Kent)",
 
-		  "École élémentaire catholique Saint-Mathieu (Clarence-Rockland)",
 
+		"École élémentaire catholique Saint-Thomas-d'Aquin (Sarnia)",
 
-		  "École élémentaire catholique Saint-Michel (Leamington)",
 
+		"École élémentaire catholique Saint-Viateur (Russell)",
 
-		  "École élémentaire catholique Saint-Paul (Alfred And Plantagenet)",
 
+		"École élémentaire catholique Saint-Victor (Alfred And Plantagenet)",
 
-		  "École élémentaire catholique Saint-Paul (Pointe-Aux- Roches)",
 
+		"École élémentaire catholique St-Dominique-Savio (Owen Sound)",
 
-		  "École élémentaire catholique Saint-Philippe (Chatham-Kent)",
 
+		"École élémentaire catholique Ste-Jeanne-d'Arc (London)",
 
-		  "École élémentaire catholique Saint-Thomas-d'Aquin (Sarnia)",
 
+		"École élémentaire catholique Ste-Marguerite-d'Youville (Tecumseh)",
 
-		  "École élémentaire catholique Saint-Viateur (Russell)",
 
+		"École élémentaire catholique St-Joseph (West Nipissing)",
 
-		  "École élémentaire catholique Saint-Victor (Alfred And Plantagenet)",
 
+		"École élémentaire catholique Terre des Jeunes (Ottawa)",
 
-		  "École élémentaire catholique St-Dominique-Savio (Owen Sound)",
 
+		"École élémentaire catholique Trillium (Chapleau)",
 
-		  "École élémentaire catholique Ste-Jeanne-d'Arc (London)",
 
+		"École élémentaire Champlain (Welland)",
 
-		  "École élémentaire catholique Ste-Marguerite-d'Youville (Tecumseh)",
 
+		"École élémentaire Charles Sauriol (Toronto)",
 
-		  "École élémentaire catholique St-Joseph (West Nipissing)",
 
+		"École élémentaire Confédération (Welland)",
 
-		  "École élémentaire catholique Terre des Jeunes (Ottawa)",
 
+		"École élémentaire des Quatre-Rivières (Orangeville)",
 
-		  "École élémentaire catholique Trillium (Chapleau)",
 
+		"École élémentaire du Chêne (Oakville)",
 
-		  "École élémentaire Champlain (Welland)",
 
+		"École élémentaire Étienne-Brûlé (Toronto)",
 
-		  "École élémentaire Charles Sauriol (Toronto)",
 
+		"École élémentaire Félix-Leclerc (Toronto)",
 
-		  "École élémentaire Confédération (Welland)",
 
+		"École élémentaire Gabriel-Dumont (London)",
 
-		  "École élémentaire des Quatre-Rivières (Orangeville)",
 
+		"École élémentaire Gabrielle-Roy (Toronto)",
 
-		  "École élémentaire du Chêne (Oakville)",
 
+		"École élémentaire Georges-P-Vanier (Hamilton)",
 
-		  "École élémentaire Étienne-Brûlé (Toronto)",
 
+		"École élémentaire Horizon Jeunesse (Mississauga)",
 
-		  "École élémentaire Félix-Leclerc (Toronto)",
 
+		"École élémentaire Jeanne-Lajoie (Toronto)",
 
-		  "École élémentaire Gabriel-Dumont (London)",
 
+		"École élémentaire Jeunes sans frontières (Brampton)",
 
-		  "École élémentaire Gabrielle-Roy (Toronto)",
 
+		"École élémentaire L'Académie de la Seigneurie (Casselman)",
 
-		  "École élémentaire Georges-P-Vanier (Hamilton)",
 
+		"École élémentaire La Fontaine (Vaughan)",
 
-		  "École élémentaire Horizon Jeunesse (Mississauga)",
 
+		"École élémentaire LaMarsh (Niagara Falls)",
 
-		  "École élémentaire Jeanne-Lajoie (Toronto)",
 
+		"École élémentaire La Mosaïque (Toronto)",
 
-		  "École élémentaire Jeunes sans frontières (Brampton)",
 
+		"École élémentaire La Source (Barrie)",
 
-		  "École élémentaire L'Académie de la Seigneurie (Casselman)",
 
+		"École élémentaire Laure-Rièse (Toronto)",
 
-		  "École élémentaire La Fontaine (Vaughan)",
 
+		"École élémentaire L'Envolée (Windsor)",
 
-		  "École élémentaire LaMarsh (Niagara Falls)",
 
+		"École élémentaire Les Rapides (Sarnia)",
 
-		  "École élémentaire La Mosaïque (Toronto)",
 
+		"École élémentaire L'Harmonie (Waterloo)",
 
-		  "École élémentaire La Source (Barrie)",
 
+		"École élémentaire L'Héritage (St. Catharines)",
 
-		  "École élémentaire Laure-Rièse (Toronto)",
 
+		"École élémentaire L'Odyssée (Guelph)",
 
-		  "École élémentaire L'Envolée (Windsor)",
 
+		"École élémentaire Maison Montessori (Toronto)",
 
-		  "École élémentaire Les Rapides (Sarnia)",
 
+		"École élémentaire Marie-Curie (London)",
 
-		  "École élémentaire L'Harmonie (Waterloo)",
 
+		"École élémentaire Michel-Gratton (Windsor)",
 
-		  "École élémentaire L'Héritage (St. Catharines)",
 
+		"École élémentaire Nouvel Horizon (Welland)",
 
-		  "École élémentaire L'Odyssée (Guelph)",
 
+		"École élémentaire Patricia-Picknell (Oakville)",
 
-		  "École élémentaire Maison Montessori (Toronto)",
 
+		"École élémentaire Pavillon de la jeunesse (Hamilton)",
 
-		  "École élémentaire Marie-Curie (London)",
 
+		"École élémentaire Pierre-Elliott-Trudeau (Toronto)",
 
-		  "École élémentaire Michel-Gratton (Windsor)",
 
+		"École élémentaire publique Carrefour Jeunesse (Clarence-Rockland)",
 
-		  "École élémentaire Nouvel Horizon (Welland)",
 
+		"École élémentaire publique Charlotte Lemieux (Ottawa)",
 
-		  "École élémentaire Patricia-Picknell (Oakville)",
 
+		"École élémentaire publique Cité Jeunesse (Quinte West)",
 
-		  "École élémentaire Pavillon de la jeunesse (Hamilton)",
 
+		"École élémentaire publique De la Rivière Castor (Russell)",
 
-		  "École élémentaire Pierre-Elliott-Trudeau (Toronto)",
 
+		"École élémentaire publique De la Salle (Ottawa)",
 
-		  "École élémentaire publique Carrefour Jeunesse (Clarence-Rockland)",
 
+		"École élémentaire publique des Navigateurs (Temiskaming Shores)",
 
-		  "École élémentaire publique Charlotte Lemieux (Ottawa)",
 
+		"École élémentaire publique Des Sentiers (Ottawa)",
 
-		  "École élémentaire publique Cité Jeunesse (Quinte West)",
 
+		"École élémentaire publique Francojeunesse (Ottawa)",
 
-		  "École élémentaire publique De la Rivière Castor (Russell)",
 
+		"École élémentaire publique Gabrielle-Roy (Ottawa)",
 
-		  "École élémentaire publique De la Salle (Ottawa)",
 
+		"École élémentaire publique Gisèle-Lalonde (Ottawa)",
 
-		  "École élémentaire publique des Navigateurs (Temiskaming Shores)",
 
+		"École élémentaire publique Hearst (Hearst)",
 
-		  "École élémentaire publique Des Sentiers (Ottawa)",
 
+		"École élémentaire publique Jeanne-Sauvé (Ottawa)",
 
-		  "École élémentaire publique Francojeunesse (Ottawa)",
 
+		"École élémentaire publique Kanata (Ottawa)",
 
-		  "École élémentaire publique Gabrielle-Roy (Ottawa)",
 
+		"École élémentaire publique Le Prélude (Ottawa)",
 
-		  "École élémentaire publique Gisèle-Lalonde (Ottawa)",
 
+		"École élémentaire publique L'Équinoxe (Pembroke)",
 
-		  "École élémentaire publique Hearst (Hearst)",
 
+		"École élémentaire publique Le Sommet (Hawkesbury)",
 
-		  "École élémentaire publique Jeanne-Sauvé (Ottawa)",
 
+		"École élémentaire publique Le Trillium (Ottawa)",
 
-		  "École élémentaire publique Kanata (Ottawa)",
 
+		"École élémentaire publique L'Héritage (Cornwall)",
 
-		  "École élémentaire publique Le Prélude (Ottawa)",
 
+		"École élémentaire publique l'Odyssée (North Bay)",
 
-		  "École élémentaire publique L'Équinoxe (Pembroke)",
 
+		"École élémentaire publique L'Odyssée (Ottawa)",
 
-		  "École élémentaire publique Le Sommet (Hawkesbury)",
 
+		"École élémentaire publique Louis-Riel (Ottawa)",
 
-		  "École élémentaire publique Le Trillium (Ottawa)",
 
+		"École élémentaire publique Madeleine-de-Roybon (Kingston)",
 
-		  "École élémentaire publique L'Héritage (Cornwall)",
 
+		"École élémentaire publique Marc-Garneau (Quinte West)",
 
-		  "École élémentaire publique l'Odyssée (North Bay)",
 
+		"École élémentaire publique Marie-Curie (Ottawa)",
 
-		  "École élémentaire publique L'Odyssée (Ottawa)",
 
+		"École élémentaire publique Maurice-Lapointe (Ottawa)",
 
-		  "École élémentaire publique Louis-Riel (Ottawa)",
 
+		"École élémentaire publique Michaëlle-Jean (Ottawa)",
 
-		  "École élémentaire publique Madeleine-de-Roybon (Kingston)",
 
+		"École élémentaire publique Mille-Iles (Kingston)",
 
-		  "École élémentaire publique Marc-Garneau (Quinte West)",
 
+		"École élémentaire publique Nouvel Horizon (Hawkesbury)",
 
-		  "École élémentaire publique Marie-Curie (Ottawa)",
 
+		"École élémentaire publique Omer-Deslauriers (Ottawa)",
 
-		  "École élémentaire publique Maurice-Lapointe (Ottawa)",
 
+		"École élémentaire publique Rose des Vents (Cornwall)",
 
-		  "École élémentaire publique Michaëlle-Jean (Ottawa)",
 
+		"École élémentaire publique Séraphin-Marion (Ottawa)",
 
-		  "École élémentaire publique Mille-Iles (Kingston)",
 
+		"École élémentaire publique Terre des Jeunes (North Glengarry)",
 
-		  "École élémentaire publique Nouvel Horizon (Hawkesbury)",
 
+		"École élémentaire publique Trille des Bois (Ottawa)",
 
-		  "École élémentaire publique Omer-Deslauriers (Ottawa)",
 
+		"École élémentaire Renaissance (Burlington)",
 
-		  "École élémentaire publique Rose des Vents (Cornwall)",
 
+		"École élémentaire Roméo Dallaire (Barrie)",
 
-		  "École élémentaire publique Séraphin-Marion (Ottawa)",
 
+		"École élémentaire Scarborough Sud ()",
 
-		  "École élémentaire publique Terre des Jeunes (North Glengarry)",
 
+		"Ecole Gron Morgan Public School (Thunder Bay)",
 
-		  "École élémentaire publique Trille des Bois (Ottawa)",
 
+		"École Hillcrest Public School (Petrolia)",
 
-		  "École élémentaire Renaissance (Burlington)",
 
+		"École Immaculée-Conception (Ignace)",
 
-		  "École élémentaire Roméo Dallaire (Barrie)",
 
+		"École intermédiaire Académie cath. Ange-Gabriel 7e-8e (Brockville)",
 
-		  "École élémentaire Scarborough Sud ()",
 
+		"École intermédiaire Béatrice-Desloges 7e-8e (Ottawa)",
 
-		  "Ecole Gron Morgan Public School (Thunder Bay)",
 
+		"École intermédiaire catholique La Citadelle (Cornwall)",
 
-		  "École Hillcrest Public School (Petrolia)",
 
+		"École intermédiaire catholique - Pavillon Casselman (Casselman)",
 
-		  "École Immaculée-Conception (Ignace)",
 
+		"École intermédiaire catholique - Pavillon Embrun (Russell)",
 
-		  "École intermédiaire Académie cath. Ange-Gabriel 7e-8e (Brockville)",
 
+		"École intermédiaire catholique - Pavillon Hawkesbury (Hawkesbury)",
 
-		  "École intermédiaire Béatrice-Desloges 7e-8e (Ottawa)",
 
+		"École intermédiaire catholique - Pavillon Plantagenet (Alfred And Plantagenet)",
 
-		  "École intermédiaire catholique La Citadelle (Cornwall)",
 
+		"École intermédiaire catholique - Pavillon Rockland (Clarence-Rockland)",
 
-		  "École intermédiaire catholique - Pavillon Casselman (Casselman)",
 
+		"École intermédiaire Catholique Sacré-Coeur (Timmins)",
 
-		  "École intermédiaire catholique - Pavillon Embrun (Russell)",
 
+		"École intermédiaire Franco-Cité 7e-8e (Ottawa)",
 
-		  "École intermédiaire catholique - Pavillon Hawkesbury (Hawkesbury)",
 
+		"École intermédiaire Franco-Ouest 7e-8e (Ottawa)",
 
-		  "École intermédiaire catholique - Pavillon Plantagenet (Alfred And Plantagenet)",
 
+		"École intermédiaire Garmeau 7e-8e (Ottawa)",
 
-		  "École intermédiaire catholique - Pavillon Rockland (Clarence-Rockland)",
 
+		"École intermédiaire Jeanne-Lajoie 7e-8e (Pembroke)",
 
-		  "École intermédiaire Catholique Sacré-Coeur (Timmins)",
 
+		"École intermédiaire L'Équinoxe (Pembroke)",
 
-		  "École intermédiaire Franco-Cité 7e-8e (Ottawa)",
 
+		"École intermédiaire Marie-Rivier7e-8e (Kingston)",
 
-		  "École intermédiaire Franco-Ouest 7e-8e (Ottawa)",
 
+		"École intermédiaire Pierre-Savard 7e-8e (Ottawa)",
 
-		  "École intermédiaire Garmeau 7e-8e (Ottawa)",
 
+		"École intermédiaire Samuel-Genest 7e-8e (Ottawa)",
 
-		  "École intermédiaire Jeanne-Lajoie 7e-8e (Pembroke)",
 
+		"Ecole Lundy's Lane School (Kingston)",
 
-		  "École intermédiaire L'Équinoxe (Pembroke)",
 
+		"École Notre-Dame-de-Fatima (Greenstone)",
 
-		  "École intermédiaire Marie-Rivier7e-8e (Kingston)",
 
+		"École Notre-Dame-du-Sault (Sault Ste. Marie)",
 
-		  "École intermédiaire Pierre-Savard 7e-8e (Ottawa)",
 
+		"École publique Camille-Perron (Markstay-Warren)",
 
-		  "École intermédiaire Samuel-Genest 7e-8e (Ottawa)",
 
+		"École publique de la Découverte (Greater Sudbury)",
 
-		  "Ecole Lundy's Lane School (Kingston)",
 
+		"École publique de la Rivière-des-Français (French River)",
 
-		  "École Notre-Dame-de-Fatima (Greenstone)",
 
+		"École publique Étoile du Nord (Iroquois Falls)",
 
-		  "École Notre-Dame-du-Sault (Sault Ste. Marie)",
 
+		"École publique Foyer-Jeunesse (Greater Sudbury)",
 
-		  "École publique Camille-Perron (Markstay-Warren)",
 
+		"École publique Franco-Manitou (Manitouwadge)",
 
-		  "École publique de la Découverte (Greater Sudbury)",
 
+		"École publique Franco-Nord (Greater Sudbury)",
 
-		  "École publique de la Rivière-des-Français (French River)",
 
+		"École publique Hanmer (Greater Sudbury)",
 
-		  "École publique Étoile du Nord (Iroquois Falls)",
 
+		"École publique Hélène-Gravel (Greater Sudbury)",
 
-		  "École publique Foyer-Jeunesse (Greater Sudbury)",
 
+		"École publique Héritage (North Bay)",
 
-		  "École publique Franco-Manitou (Manitouwadge)",
 
+		"École publique Jean-Éthier-Blais (Greater Sudbury)",
 
-		  "École publique Franco-Nord (Greater Sudbury)",
 
+		"École publique Jeanne-Sauvé (Greater Sudbury)",
 
-		  "École publique Hanmer (Greater Sudbury)",
 
+		"École publique Jeunesse-Active (West Nipissing)",
 
-		  "École publique Hélène-Gravel (Greater Sudbury)",
 
+		"École publique Le Coeur du Nord (Kapuskasing)",
 
-		  "École publique Héritage (North Bay)",
 
+		"École publique l'Escalade (Wawa)",
 
-		  "École publique Jean-Éthier-Blais (Greater Sudbury)",
 
+		"École publique Lionel-Gauthier (Timmins)",
 
-		  "École publique Jeanne-Sauvé (Greater Sudbury)",
 
+		"École publique Macdonald-Cartier (Greater Sudbury)",
 
-		  "École publique Jeunesse-Active (West Nipissing)",
 
+		"École publique Pavillon-de-l'Avenir (Greater Sudbury)",
 
-		  "École publique Le Coeur du Nord (Kapuskasing)",
 
+		"École publique Pavillon Renaissance (Timmins)",
 
-		  "École publique l'Escalade (Wawa)",
 
+		"École publique Saint-Joseph (Penetanguishene)",
 
-		  "École publique Lionel-Gauthier (Timmins)",
 
+		"École publique Villa Française des Jeunes (Elliot Lake)",
 
-		  "École publique Macdonald-Cartier (Greater Sudbury)",
 
+		"École Saint-Joseph (Wawa)",
 
-		  "École publique Pavillon-de-l'Avenir (Greater Sudbury)",
 
+		"École Saint Nom de Jésus (Hornepayne)",
 
-		  "École publique Pavillon Renaissance (Timmins)",
 
+		"École Saint-Raymond (North Bay)",
 
-		  "École publique Saint-Joseph (Penetanguishene)",
 
+		"École secondaire catholique Algonquin (North Bay)",
 
-		  "École publique Villa Française des Jeunes (Elliot Lake)",
 
+		"École séparée Christ-Roi (West Nipissing)",
 
-		  "École Saint-Joseph (Wawa)",
 
+		"École séparée élémentaire l'Horizon (Greater Sudbury)",
 
-		  "École Saint Nom de Jésus (Hornepayne)",
 
+		"École séparée Félix-Ricard (Greater Sudbury)",
 
-		  "École Saint-Raymond (North Bay)",
 
+		"École séparée Georges-Vanier (Elliot Lake)",
 
-		  "École secondaire catholique Algonquin (North Bay)",
 
+		"École séparée La Résurrection (West Nipissing)",
 
-		  "École séparée Christ-Roi (West Nipissing)",
 
+		"École séparée Lorrain (Bonfield)",
 
-		  "École séparée élémentaire l'Horizon (Greater Sudbury)",
 
+		"École séparée Mariale (Thorne)",
 
-		  "École séparée Félix-Ricard (Greater Sudbury)",
 
+		"École séparée Notre-Dame (Greater Sudbury)",
 
-		  "École séparée Georges-Vanier (Elliot Lake)",
 
+		"École séparée Notre-Dame (Foleyet)",
 
-		  "École séparée La Résurrection (West Nipissing)",
 
+		"École séparée Notre-Dame-de-la-Merci (Greater Sudbury)",
 
-		  "École séparée Lorrain (Bonfield)",
 
+		"École séparée Notre-Dame-du-Rosaire (Gogama)",
 
-		  "École séparée Mariale (Thorne)",
 
+		"École séparée Sacré-Coeur (Chapleau)",
 
-		  "École séparée Notre-Dame (Greater Sudbury)",
 
+		"École séparée Saint-Antoine (French River)",
 
-		  "École séparée Notre-Dame (Foleyet)",
 
+		"École séparée Saint-Augustin (Greater Sudbury)",
 
-		  "École séparée Notre-Dame-de-la-Merci (Greater Sudbury)",
 
+		"École séparée Saint-Charles-Borromée (St.-Charles)",
 
-		  "École séparée Notre-Dame-du-Rosaire (Gogama)",
 
+		"École séparée Saint-Denis (Greater Sudbury)",
 
-		  "École séparée Sacré-Coeur (Chapleau)",
 
+		"École séparée Saint-Dominique (Greater Sudbury)",
 
-		  "École séparée Saint-Antoine (French River)",
 
+		"École séparée Sainte-Anne (Mattawa)",
 
-		  "École séparée Saint-Augustin (Greater Sudbury)",
 
+		"École séparée Sainte-Anne (Spanish)",
 
-		  "École séparée Saint-Charles-Borromée (St.-Charles)",
 
+		"École séparée Sainte-Anne (North Bay)",
 
-		  "École séparée Saint-Denis (Greater Sudbury)",
 
+		"École séparée Sainte-Marie (Greater Sudbury)",
 
-		  "École séparée Saint-Dominique (Greater Sudbury)",
 
+		"École séparée Sainte-Thérèse (Greater Sudbury)",
 
-		  "École séparée Sainte-Anne (Mattawa)",
 
+		"École séparée Saint-Joseph (Greater Sudbury)",
 
-		  "École séparée Sainte-Anne (Spanish)",
 
+		"École séparée Saint-Joseph (Blind River)",
 
-		  "École séparée Sainte-Anne (North Bay)",
 
+		"École séparée Saint-Joseph (Dubreuilville)",
 
-		  "École séparée Sainte-Marie (Greater Sudbury)",
 
+		"École séparée Saint-Joseph (Espanola)",
 
-		  "École séparée Sainte-Thérèse (Greater Sudbury)",
 
+		"École séparée Saint-Paul (Greater Sudbury)",
 
-		  "École séparée Saint-Joseph (Greater Sudbury)",
 
+		"École séparée Saint-Paul (North Bay)",
 
-		  "École séparée Saint-Joseph (Blind River)",
 
+		"École séparée Saint-Pierre (Greater Sudbury)",
 
-		  "École séparée Saint-Joseph (Dubreuilville)",
 
+		"École séparée Saint-Thomas (Markstay-Warren)",
 
-		  "École séparée Saint-Joseph (Espanola)",
 
+		"École séparée Saint-Thomas-D'Aquin (East Ferris)",
 
-		  "École séparée Saint-Paul (Greater Sudbury)",
 
+		"École séparée Saint-Vincent (North Bay)",
 
-		  "École séparée Saint-Paul (North Bay)",
 
+		"École séparée Ste-Marguerite-d'Youville (West Nipissing)",
 
-		  "École séparée Saint-Pierre (Greater Sudbury)",
 
+		"École séparée St-Étienne (Greater Sudbury)",
 
-		  "École séparée Saint-Thomas (Markstay-Warren)",
 
+		"École séparée St-Joseph (Greater Sudbury)",
 
-		  "École séparée Saint-Thomas-D'Aquin (East Ferris)",
 
+		"École Ste Marguerite Bourgeoys (Kenora)",
 
-		  "École séparée Saint-Vincent (North Bay)",
 
+		"École St-Joseph (Greenstone)",
 
-		  "École séparée Ste-Marguerite-d'Youville (West Nipissing)",
 
+		"Edenbrook Hill Public School (Brampton)",
 
-		  "École séparée St-Étienne (Greater Sudbury)",
 
+		"Edenrose Public School (Mississauga)",
 
-		  "École séparée St-Joseph (Greater Sudbury)",
 
+		"Edenwood Middle School (Mississauga)",
 
-		  "École Ste Marguerite Bourgeoys (Kenora)",
 
+		"Edgewater Park Public School (Thunder Bay)",
 
-		  "École St-Joseph (Greenstone)",
 
+		"Edgewood Public School (Toronto)",
 
-		  "Edenbrook Hill Public School (Brampton)",
 
+		"Edith Cavell Public School (St. Catharines)",
 
-		  "Edenrose Public School (Mississauga)",
 
+		"Edmison Heights Public School (Peterborough)",
 
-		  "Edenwood Middle School (Mississauga)",
 
+		"Edna Staebler Public School (Waterloo)",
 
-		  "Edgewater Park Public School (Thunder Bay)",
 
+		"Edward Johnson Public School (Guelph)",
 
-		  "Edgewood Public School (Toronto)",
 
+		"ÉÉC Ange-Gabriel (Mississauga)",
 
-		  "Edith Cavell Public School (St. Catharines)",
 
+		"ÉÉC Cardinal-Léger (Kitchener)",
 
-		  "Edmison Heights Public School (Peterborough)",
 
+		"ÉÉC Corpus-Christi (Oshawa)",
 
-		  "Edna Staebler Public School (Waterloo)",
 
+		"ÉÉC du Sacré-Coeur-Georgetown (Halton Hills)",
 
-		  "Edward Johnson Public School (Guelph)",
 
+		"ÉÉC du Sacré-Coeur-Toronto (Toronto)",
 
-		  "ÉÉC Ange-Gabriel (Mississauga)",
 
+		"ÉÉC du Sacré-Coeur-Welland (Welland)",
 
-		  "ÉÉC Cardinal-Léger (Kitchener)",
 
+		"ÉÉC Frère-André (Barrie)",
 
-		  "ÉÉC Corpus-Christi (Oshawa)",
 
+		"ÉÉC Georges-Étienne-Cartier (Toronto)",
 
-		  "ÉÉC du Sacré-Coeur-Georgetown (Halton Hills)",
 
+		"ÉÉC Immaculée-Conception (St. Catharines)",
 
-		  "ÉÉC du Sacré-Coeur-Toronto (Toronto)",
 
+		"ÉÉC Jean-Paul II (Whitby)",
 
-		  "ÉÉC du Sacré-Coeur-Welland (Welland)",
 
+		"ÉÉC Le-Petit-Prince (Vaughan)",
 
-		  "ÉÉC Frère-André (Barrie)",
 
+		"ÉÉC Marguerite-Bourgeois-Borden (Essa)",
 
-		  "ÉÉC Georges-Étienne-Cartier (Toronto)",
 
+		"ÉÉC Mère-Élisabeth-Bruyère (Waterloo)",
 
-		  "ÉÉC Immaculée-Conception (St. Catharines)",
 
+		"ÉÉC Monseigneur-de-Laval (Hamilton)",
 
-		  "ÉÉC Jean-Paul II (Whitby)",
 
+		"ÉÉC Monseigneur-Jamot (Peterborough)",
 
-		  "ÉÉC Le-Petit-Prince (Vaughan)",
 
+		"ÉÉC Notre-Dame (Hamilton)",
 
-		  "ÉÉC Marguerite-Bourgeois-Borden (Essa)",
 
+		"ÉÉC Notre-Dame-de-la-Jeunesse-Ajax (Ajax)",
 
-		  "ÉÉC Mère-Élisabeth-Bruyère (Waterloo)",
 
+		"ÉÉC Notre-Dame-de-la-Jeunesse-Niagara.F (Niagara Falls)",
 
-		  "ÉÉC Monseigneur-de-Laval (Hamilton)",
 
+		"ÉÉC Notre-Dame-des-Champs (Ottawa)",
 
-		  "ÉÉC Monseigneur-Jamot (Peterborough)",
 
+		"ÉÉC René-Lamoureux (Mississauga)",
 
-		  "ÉÉC Notre-Dame (Hamilton)",
 
+		"ÉÉC Saint-Antoine (Niagara Falls)",
 
-		  "ÉÉC Notre-Dame-de-la-Jeunesse-Ajax (Ajax)",
 
+		"ÉÉC Saint-Denis (Greater Sudbury)",
 
-		  "ÉÉC Notre-Dame-de-la-Jeunesse-Niagara.F (Niagara Falls)",
 
+		"ÉÉC Sainte-Croix (Tiny)",
 
-		  "ÉÉC Notre-Dame-des-Champs (Ottawa)",
 
+		"ÉÉC Sainte-Jeanne-d'Arc (Brampton)",
 
-		  "ÉÉC René-Lamoureux (Mississauga)",
 
+		"ÉÉC Sainte-Madeleine (Toronto)",
 
-		  "ÉÉC Saint-Antoine (Niagara Falls)",
 
+		"ÉÉC Sainte-Marguerite-Bourgeoys-Brantfrd (Brantford)",
 
-		  "ÉÉC Saint-Denis (Greater Sudbury)",
 
+		"ÉÉC Sainte-Marguerite-Bourgeoys-Markham (Markham)",
 
-		  "ÉÉC Sainte-Croix (Tiny)",
 
+		"ÉÉC Sainte-Marguerite-Bourgeoys-St.Cath (St. Catharines)",
 
-		  "ÉÉC Sainte-Jeanne-d'Arc (Brampton)",
 
+		"ÉÉC Sainte-Marguerite-d'Youville (Toronto)",
 
-		  "ÉÉC Sainte-Madeleine (Toronto)",
 
+		"ÉÉC Sainte-Marie-Oakville (Oakville)",
 
-		  "ÉÉC Sainte-Marguerite-Bourgeoys-Brantfrd (Brantford)",
 
+		"ÉÉC Sainte-Marie-Simcoe (Norfolk County)",
 
-		  "ÉÉC Sainte-Marguerite-Bourgeoys-Markham (Markham)",
 
+		"ÉÉC Saint-François-d'Assise (Welland)",
 
-		  "ÉÉC Sainte-Marguerite-Bourgeoys-St.Cath (St. Catharines)",
 
+		"ÉÉC Saint-Jean (Aurora)",
 
-		  "ÉÉC Sainte-Marguerite-d'Youville (Toronto)",
 
+		"ÉÉC Saint-Jean-Baptiste (Mississauga)",
 
-		  "ÉÉC Sainte-Marie-Oakville (Oakville)",
 
+		"ÉÉC Saint-Jean-de-Lalande (Toronto)",
 
-		  "ÉÉC Sainte-Marie-Simcoe (Norfolk County)",
 
+		"ÉÉC Saint-Joseph (Port Colborne)",
 
-		  "ÉÉC Saint-François-d'Assise (Welland)",
 
+		"ÉÉC Saint-Louis (Penetanguishene)",
 
-		  "ÉÉC Saint-Jean (Aurora)",
 
+		"ÉÉC Saint-Michel (TORONTO)",
 
-		  "ÉÉC Saint-Jean-Baptiste (Mississauga)",
 
+		"ÉÉC Saint-Nicolas (Milton)",
 
-		  "ÉÉC Saint-Jean-de-Lalande (Toronto)",
 
+		"ÉÉC Saint-Noël-Chabanel-Cambridge (Cambridge)",
 
-		  "ÉÉC Saint-Joseph (Port Colborne)",
 
+		"ÉÉC Saint-Noël-Chabanel-Toronto (Toronto)",
 
-		  "ÉÉC Saint-Louis (Penetanguishene)",
 
+		"ÉÉC Saint-Philippe (Burlington)",
 
-		  "ÉÉC Saint-Michel (TORONTO)",
 
+		"ÉÉC Saint-René-Goupil (Guelph)",
 
-		  "ÉÉC Saint-Nicolas (Milton)",
 
+		"ÉÉC Samuel-de-Champlain (Orillia)",
 
-		  "ÉÉC Saint-Noël-Chabanel-Cambridge (Cambridge)",
 
+		"Eganville &amp; District Public School (Bonnechere Valley)",
 
-		  "ÉÉC Saint-Noël-Chabanel-Toronto (Toronto)",
 
+		"Eglinton Junior Public School (Toronto)",
 
-		  "ÉÉC Saint-Philippe (Burlington)",
 
+		"Egremont Community School (Southgate)",
 
-		  "ÉÉC Saint-René-Goupil (Guelph)",
 
+		"ÉIC Jean-Vanier (Welland)",
 
-		  "ÉÉC Samuel-de-Champlain (Orillia)",
 
+		"ÉIC Monseigneur-de-Charbonnel (Toronto)",
 
-		  "Eganville &amp; District Public School (Bonnechere Valley)",
 
+		"ÉIC Nouvelle-Alliance (Barrie)",
 
-		  "Eglinton Junior Public School (Toronto)",
 
+		"ÉIC Père-René-de-Galinée (Cambridge)",
 
-		  "Egremont Community School (Southgate)",
 
+		"ÉIC Renaissance (Aurora)",
 
-		  "ÉIC Jean-Vanier (Welland)",
 
+		"ÉIC Saint-Charles-Garnier (Whitby)",
 
-		  "ÉIC Monseigneur-de-Charbonnel (Toronto)",
 
+		"ÉIC Sainte-Famille (Mississauga)",
 
-		  "ÉIC Nouvelle-Alliance (Barrie)",
 
+		"E I McCulley Public School (St. Catharines)",
 
-		  "ÉIC Père-René-de-Galinée (Cambridge)",
 
+		"E J James Public School (Oakville)",
 
-		  "ÉIC Renaissance (Aurora)",
 
+		"E J Sand Public School (Thornhill)",
 
-		  "ÉIC Saint-Charles-Garnier (Whitby)",
 
+		"Ekcoe Central School (Southwest Middlesex)",
 
-		  "ÉIC Sainte-Famille (Mississauga)",
 
+		"Elder's Mills Public School (Vaughan)",
 
-		  "E I McCulley Public School (St. Catharines)",
 
+		"Elgin Avenue Public School (Norfolk)",
 
-		  "E J James Public School (Oakville)",
 
+		"Elginburg Public School (Kingston)",
 
-		  "E J Sand Public School (Thornhill)",
 
+		"Elgin Court Public School (St. Thomas)",
 
-		  "Ekcoe Central School (Southwest Middlesex)",
 
+		"Elgin Market Public School (Kincardine)",
 
-		  "Elder's Mills Public School (Vaughan)",
 
+		"Elgin Street Public School (Cambridge)",
 
-		  "Elgin Avenue Public School (Norfolk)",
 
+		"Elgin Street Public School (Ottawa)",
 
-		  "Elginburg Public School (Kingston)",
 
+		"Elia Middle School (Toronto)",
 
-		  "Elgin Court Public School (St. Thomas)",
 
+		"Elizabeth Bagshaw School (Hamilton)",
 
-		  "Elgin Market Public School (Kincardine)",
 
+		"Elizabeth B Phin Public School (Pickering)",
 
-		  "Elgin Street Public School (Cambridge)",
 
+		"Elizabeth Park Public School (Ottawa)",
 
-		  "Elgin Street Public School (Ottawa)",
 
+		"Elizabeth Simcoe Junior Public School (Toronto)",
 
-		  "Elia Middle School (Toronto)",
 
+		"Elizabeth Ziegler Public School (Waterloo)",
 
-		  "Elizabeth Bagshaw School (Hamilton)",
 
+		"Elkhorn Public School (Toronto)",
 
-		  "Elizabeth B Phin Public School (Pickering)",
 
+		"Elk Lake Public School (James)",
 
-		  "Elizabeth Park Public School (Ottawa)",
 
+		"Ellen Fairclough Public School (Markham)",
 
-		  "Elizabeth Simcoe Junior Public School (Toronto)",
 
+		"Ellengale Public School (Mississauga)",
 
-		  "Elizabeth Ziegler Public School (Waterloo)",
 
+		"Ellesmere-Statton Public School (Toronto)",
 
-		  "Elkhorn Public School (Toronto)",
 
+		"Ellwood Memorial Public School (Caledon)",
 
-		  "Elk Lake Public School (James)",
 
+		"Elma Township Public School (North Perth)",
 
-		  "Ellen Fairclough Public School (Markham)",
 
+		"Elmbank Junior Middle Academy (Toronto)",
 
-		  "Ellengale Public School (Mississauga)",
 
+		"Elmcrest Public School (Mississauga)",
 
-		  "Ellesmere-Statton Public School (Toronto)",
 
+		"Elmdale Public School (Ottawa)",
 
-		  "Ellwood Memorial Public School (Caledon)",
 
+		"Elmlea Junior School (Toronto)",
+		" Elmwood School (Ottawa)",
 
-		  "Elma Township Public School (North Perth)",
+		"Elora Public School (Centre Wellington)",
 
 
-		  "Elmbank Junior Middle Academy (Toronto)",
+		"Emily Carr Middle School (Ottawa)",
 
 
-		  "Elmcrest Public School (Mississauga)",
+		"Emily Carr Public School (London)",
 
 
-		  "Elmdale Public School (Ottawa)",
+		"Emily Carr Public School (Oakville)",
 
 
-		  "Elmlea Junior School (Toronto)",
+		"Emily Carr Public School (Toronto)",
 
 
-		  "Elora Public School (Centre Wellington)",
+		"Emma King Elementary School (Barrie)",
 
 
-		  "Emily Carr Middle School (Ottawa)",
+		"Empire Public School (Waterloo)",
 
 
-		  "Emily Carr Public School (London)",
+		"Englehart Public School (Englehart)",
 
 
-		  "Emily Carr Public School (Oakville)",
+		"English Catholic Central School (Temiskaming Shores)",
 
 
-		  "Emily Carr Public School (Toronto)",
+		"Enniskillen Public School (Clarington)",
 
 
-		  "Emma King Elementary School (Barrie)",
+		"Enterprise Public School (Stone Mills)",
 
 
-		  "Empire Public School (Waterloo)",
+		"Epiphany of our Lord Catholic Academy (Toronto)",
 
 
-		  "Englehart Public School (Englehart)",
+		"Epsom Public School (Scugog)",
 
 
-		  "English Catholic Central School (Temiskaming Shores)",
+		"Equinox Holistic Alternative School (Toronto)",
 
 
-		  "Enniskillen Public School (Clarington)",
+		"Eramosa Public School (Guelph/Eramosa)",
 
 
-		  "Enterprise Public School (Stone Mills)",
+		"Erin Centre Middle School (Mississauga)",
 
 
-		  "Epiphany of our Lord Catholic Academy (Toronto)",
+		"Erin Mills Middle School (Mississauga)",
 
 
-		  "Epsom Public School (Scugog)",
+		"Erin Public School (Erin)",
 
 
-		  "Equinox Holistic Alternative School (Toronto)",
+		"Ernest C Drury Provincial School for (Milton)",
 
 
-		  "Eramosa Public School (Guelph/Eramosa)",
+		"Ernest Cumberland Elementary School (New Tecumseth)",
 
 
-		  "Erin Centre Middle School (Mississauga)",
+		"Ernest Public School (Toronto)",
 
 
-		  "Erin Mills Middle School (Mississauga)",
+		"Ernie Checkeris Public School (Greater Sudbury)",
 
 
-		  "Erin Public School (Erin)",
+		"Errol Road Public School (Sarnia)",
 
 
-		  "Ernest C Drury Provincial School for (Milton)",
+		"Errol Village Public School (Plympton-Wyoming)",
 
 
-		  "Ernest Cumberland Elementary School (New Tecumseth)",
+		"Escarpment View Public School (Milton)",
 
 
-		  "Ernest Public School (Toronto)",
+		"Esker Lake Public School (Brampton)",
 
 
-		  "Ernie Checkeris Public School (Greater Sudbury)",
+		"Essex Junior and Senior Public School (Toronto)",
 
 
-		  "Errol Road Public School (Sarnia)",
+		"Essex Public School (Essex)",
 
 
-		  "Errol Village Public School (Plympton-Wyoming)",
+		"Esten Park Public School (Elliot Lake)",
 
 
-		  "Escarpment View Public School (Milton)",
+		"E T Carmichael Public School (North Bay)",
 
 
-		  "Esker Lake Public School (Brampton)",
+		"E T Crowle Public School (Markham)",
 
 
-		  "Essex Junior and Senior Public School (Toronto)",
+		"Étienne Brûlé Junior School (Toronto)",
 
 
-		  "Essex Public School (Essex)",
+		"Etienne Brule Public School (Sault Ste. Marie)",
 
 
-		  "Esten Park Public School (Elliot Lake)",
+		"Evelyn Harrison Public School (London)",
 
 
-		  "E T Carmichael Public School (North Bay)",
+		"Evergreen Heights Education Centre (Perry)",
 
 
-		  "E T Crowle Public School (Markham)",
+		"Evergreen Public School (Kenora)",
 
 
-		  "Étienne Brûlé Junior School (Toronto)",
+		"E W Farr Memorial Public School (Pelham)",
 
 
-		  "Etienne Brule Public School (Sault Ste. Marie)",
+		"E W Foster School (Milton)",
 
 
-		  "Evelyn Harrison Public School (London)",
+		"E W Norman Public School (North Bay)",
 
 
-		  "Evergreen Heights Education Centre (Perry)",
+		"Exeter Public School (South Huron)",
 
 
-		  "Evergreen Public School (Kenora)",
+		"Fairbank Memorial Community School (Toronto)",
 
 
-		  "E W Farr Memorial Public School (Pelham)",
+		"Fairbank Middle School (Toronto)",
 
 
-		  "E W Foster School (Milton)",
+		"Fairfield Elementary School (Loyalist)",
 
 
-		  "E W Norman Public School (North Bay)",
+		"Fairglen Junior Public School (Toronto)",
 
 
-		  "Exeter Public School (South Huron)",
+		"Fairmont Public School (London)",
 
 
-		  "Fairbank Memorial Community School (Toronto)",
+		"Fairmount Public School (Toronto)",
 
 
-		  "Fairbank Middle School (Toronto)",
+		"Fairport Beach Public School (Pickering)",
 
 
-		  "Fairfield Elementary School (Loyalist)",
+		"Fairview Avenue Public School (Haldimand)",
 
 
-		  "Fairglen Junior Public School (Toronto)",
+		"Fairview Public School (Mississauga)",
 
 
-		  "Fairmont Public School (London)",
+		"Fairview School (Brantford)",
 
 
-		  "Fairmount Public School (Toronto)",
+		"Fairwind Senior Public School (Mississauga)",
 
 
-		  "Fairport Beach Public School (Pickering)",
+		"Fairwood Public School (Georgina)",
 
 
-		  "Fairview Avenue Public School (Haldimand)",
+		"Falgarwood Public School (Oakville)",
 
 
-		  "Fairview Public School (Mississauga)",
+		"Fallingbrook Community Elementary School (Ottawa)",
 
 
-		  "Fairview School (Brantford)",
+		"Fallingbrook Middle School (Mississauga)",
 
 
-		  "Fairwind Senior Public School (Mississauga)",
+		"Fallingbrook Public School (Whitby)",
 
 
-		  "Fairwood Public School (Georgina)",
+		"Fallingdale Public School (Brampton)",
 
 
-		  "Falgarwood Public School (Oakville)",
+		"Farley Mowat Public School (Ottawa)",
 
 
-		  "Fallingbrook Community Elementary School (Ottawa)",
+		"Father Clair Tipping School (Brampton)",
 
 
-		  "Fallingbrook Middle School (Mississauga)",
+		"Father C W Sullivan Catholic School (Brampton)",
 
 
-		  "Fallingbrook Public School (Whitby)",
+		"Father Daniel Zanon Elementary School (Mississauga)",
 
 
-		  "Fallingdale Public School (Brampton)",
+		"Father Francis McSpiritt Catholic Elementary School (Brampton)",
 
 
-		  "Farley Mowat Public School (Ottawa)",
+		"Father Frederick McGinn Catholic Elementary School (Richmond Hill)",
 
 
-		  "Father Clair Tipping School (Brampton)",
+		"Father F X O'Reilly School (New Tecumseth)",
 
 
-		  "Father C W Sullivan Catholic School (Brampton)",
+		"Father Hennepin Catholic Elementary School (Niagara Falls)",
 
 
-		  "Father Daniel Zanon Elementary School (Mississauga)",
+		"Father Henri J M Nouwen Catholic Elementary School (Richmond Hill)",
 
 
-		  "Father Francis McSpiritt Catholic Elementary School (Brampton)",
+		"Father John Kelly Catholic Elementary School (Vaughan)",
 
 
-		  "Father Frederick McGinn Catholic Elementary School (Richmond Hill)",
+		"Father Joseph Venini Catholic School (Oshawa)",
 
 
-		  "Father F X O'Reilly School (New Tecumseth)",
+		"Father Serra Catholic School (Toronto)",
 
 
-		  "Father Hennepin Catholic Elementary School (Niagara Falls)",
+		"Faywood Arts-Based Curriculum School (Toronto)",
 
 
-		  "Father Henri J M Nouwen Catholic Elementary School (Richmond Hill)",
+		"Featherston Drive Public School (Ottawa)",
 
 
-		  "Father John Kelly Catholic Elementary School (Vaughan)",
+		"Federal Public School (Kirkland Lake)",
 
 
-		  "Father Joseph Venini Catholic School (Oshawa)",
+		"Fenelon Twp Public School (Kawartha Lakes)",
 
 
-		  "Father Serra Catholic School (Toronto)",
+		"Fenside Public School (Toronto)",
 
 
-		  "Faywood Arts-Based Curriculum School (Toronto)",
+		"Fern Avenue Junior and Senior Public School (Toronto)",
 
 
-		  "Featherston Drive Public School (Ottawa)",
+		"Ferndale Public School (St. Catharines)",
 
 
-		  "Federal Public School (Kirkland Lake)",
+		"Ferndale Woods Elementary School (Barrie)",
 
 
-		  "Fenelon Twp Public School (Kawartha Lakes)",
+		"Fernforest Public School (Brampton)",
 
 
-		  "Fenside Public School (Toronto)",
+		"Ferris Glen Public School (East Ferris)",
 
 
-		  "Fern Avenue Junior and Senior Public School (Toronto)",
+		"Fessenden School (Hamilton)",
 
 
-		  "Ferndale Public School (St. Catharines)",
+		"F H Miller Junior Public School (Toronto)",
 
 
-		  "Ferndale Woods Elementary School (Barrie)",
+		"Fieldcrest Elementary School (Bradford West Gwillimbury)",
 
 
-		  "Fernforest Public School (Brampton)",
+		"Fielding Drive Public School (Ottawa)",
 
 
-		  "Ferris Glen Public School (East Ferris)",
+		"Finch Public School (Toronto)",
 
 
-		  "Fessenden School (Hamilton)",
+		"Firgrove Public School (Toronto)",
 
 
-		  "F H Miller Junior Public School (Toronto)",
+		"First Avenue Public School (Kingston)",
 
 
-		  "Fieldcrest Elementary School (Bradford West Gwillimbury)",
+		"First Avenue Public School (Ottawa)",
 
 
-		  "Fielding Drive Public School (Ottawa)",
+		"First Nations School of Toronto (Toronto)",
 
 
-		  "Finch Public School (Toronto)",
+		"Fisher Park/Summit AS Public School (Ottawa)",
 
 
-		  "Firgrove Public School (Toronto)",
+		"Fisherville Senior Public School (Toronto)",
 
 
-		  "First Avenue Public School (Kingston)",
+		"Fitch Street Public School (Welland)",
 
 
-		  "First Avenue Public School (Ottawa)",
+		"Five Mile Public School (Thunder Bay)",
 
 
-		  "First Nations School of Toronto (Toronto)",
+		"F J Rutland Public School (Niagara Falls)",
 
 
-		  "Fisher Park/Summit AS Public School (Ottawa)",
+		"Flamborough Centre School (Hamilton)",
 
 
-		  "Fisherville Senior Public School (Toronto)",
+		"Fleming Public School (Toronto)",
 
 
-		  "Fitch Street Public School (Welland)",
+		"Flemington Public School (Toronto)",
 
 
-		  "Five Mile Public School (Thunder Bay)",
+		"Fletcher's Creek Senior Public School (Brampton)",
 
 
-		  "F J Rutland Public School (Niagara Falls)",
+		"Fletcher's Creek South Jr. PS (Brampton)",
 
 
-		  "Flamborough Centre School (Hamilton)",
+		"Floradale Public School (Mississauga)",
 
 
-		  "Fleming Public School (Toronto)",
+		"Floradale Public School (Woolwich)",
 
 
-		  "Flemington Public School (Toronto)",
+		"Florence Meares Public School (Burlington)",
 
 
-		  "Fletcher's Creek Senior Public School (Brampton)",
+		"Foley Catholic School (Ramara)",
 
 
-		  "Fletcher's Creek South Jr. PS (Brampton)",
+		"Foleyet Public School (Foleyet)",
 
 
-		  "Floradale Public School (Mississauga)",
+		"Folkstone Public School (Brampton)",
 
 
-		  "Floradale Public School (Woolwich)",
+		"Forest Avenue Public School (Mississauga)",
 
 
-		  "Florence Meares Public School (Burlington)",
+		"Forest Glade Public School (Windsor)",
 
 
-		  "Foley Catholic School (Ramara)",
+		"Forest Glen Public School (Mississauga)",
 
 
-		  "Foleyet Public School (Foleyet)",
+		"Forest Glen Public School (Wilmot)",
 
 
-		  "Folkstone Public School (Brampton)",
+		"Forest Hill Junior and Senior Public School (Toronto)",
 
 
-		  "Forest Avenue Public School (Mississauga)",
+		"Forest Hill Public School (Kitchener)",
 
 
-		  "Forest Glade Public School (Windsor)",
+		"Forest Hill Public School (Springwater)",
 
 
-		  "Forest Glen Public School (Mississauga)",
+		"Forest Manor Public School (Toronto)",
 
 
-		  "Forest Glen Public School (Wilmot)",
+		"Forest Park Public School (St. Thomas)",
 
 
-		  "Forest Hill Junior and Senior Public School (Toronto)",
+		"Forest Run Elementary School (Vaughan)",
 
 
-		  "Forest Hill Public School (Kitchener)",
+		"Forest Trail Public School (Elementary) (Oakville)",
 
 
-		  "Forest Hill Public School (Springwater)",
+		"Forest Valley Elementary School (Ottawa)",
 
 
-		  "Forest Manor Public School (Toronto)",
+		"Forestview Public School (Niagara Falls)",
 
 
-		  "Forest Park Public School (St. Thomas)",
+		"Fort Erie Public School (Fort Erie)",
 
 
-		  "Forest Run Elementary School (Vaughan)",
+		"Fossil Hill Public School (Vaughan)",
 
 
-		  "Forest Trail Public School (Elementary) (Oakville)",
+		"Foxboro Public School (Belleville)",
 
 
-		  "Forest Valley Elementary School (Ottawa)",
+		"Francis H Clergue Public School (Sault Ste. Marie)",
 
 
-		  "Forestview Public School (Niagara Falls)",
+		"Francis Libermann Catholic Elementary School (Toronto)",
 
 
-		  "Fort Erie Public School (Fort Erie)",
+		"Frankford Public School (Quinte West)",
 
 
-		  "Fossil Hill Public School (Vaughan)",
+		"Frankland Community School (Toronto)",
 
 
-		  "Foxboro Public School (Belleville)",
+		"Franklin D Roosevelt Public School (London)",
 
 
-		  "Francis H Clergue Public School (Sault Ste. Marie)",
+		"Franklin Junior Public School (Hamilton)",
 
 
-		  "Francis Libermann Catholic Elementary School (Toronto)",
+		"Franklin Public School (Kitchener)",
 
 
-		  "Frankford Public School (Quinte West)",
+		"Franklin Street Public School (Markham)",
 
 
-		  "Frankland Community School (Toronto)",
+		"Frank P Krznaric Whitney Public School (Timmins)",
 
 
-		  "Franklin D Roosevelt Public School (London)",
+		"Frank Ryan Catholic Senior Elementary School (Ottawa)",
 
 
-		  "Franklin Junior Public School (Hamilton)",
+		"Frank W Begley Public School (Windsor)",
 
 
-		  "Franklin Public School (Kitchener)",
+		"Fred A Hamilton Public School (Guelph)",
 
 
-		  "Franklin Street Public School (Markham)",
+		"Fred C Cook Public School (Bradford West Gwillimbury)",
 
 
-		  "Frank P Krznaric Whitney Public School (Timmins)",
+		"Frenchman's Bay Public School (Pickering)",
 
 
-		  "Frank Ryan Catholic Senior Elementary School (Ottawa)",
+		"Frontenac Public School (Burlington)",
 
 
-		  "Frank W Begley Public School (Windsor)",
+		"Frontenac Public School (Kingston)",
 
 
-		  "Fred A Hamilton Public School (Guelph)",
+		"Front of Yonge Elementary School (Front Of Yonge)",
 
 
-		  "Fred C Cook Public School (Bradford West Gwillimbury)",
+		"Gainsborough Central Public School (West Lincoln)",
 
 
-		  "Frenchman's Bay Public School (Pickering)",
+		"Galloway Road Public School (Toronto)",
 
 
-		  "Frontenac Public School (Burlington)",
+		"Gananoque Intermediate School (Gananoque)",
 
 
-		  "Frontenac Public School (Kingston)",
+		"Ganaraska Trail Public School (Port Hope)",
 
 
-		  "Front of Yonge Elementary School (Front Of Yonge)",
+		"Gandatsetiagon Public School (Pickering)",
 
 
-		  "Gainsborough Central Public School (West Lincoln)",
+		"Garden Avenue Junior Public School (Toronto)",
 
 
-		  "Galloway Road Public School (Toronto)",
+		"Gardiner Public School (Halton Hills)",
 
 
-		  "Gananoque Intermediate School (Gananoque)",
+		"Garrison Road Public School (Fort Erie)",
 
 
-		  "Ganaraska Trail Public School (Port Hope)",
+		"Garthwood Park Public School (Mississauga)",
 
 
-		  "Gandatsetiagon Public School (Pickering)",
+		"Gatchell Sch for Students with Special (Greater Sudbury)",
 
 
-		  "Garden Avenue Junior Public School (Toronto)",
+		"Gatestone Elementary Public School (Hamilton)",
 
 
-		  "Gardiner Public School (Halton Hills)",
+		"Gateway Drive Public School (Guelph)",
 
 
-		  "Garrison Road Public School (Fort Erie)",
+		"Gateway Public School (Toronto)",
 
 
-		  "Garthwood Park Public School (Mississauga)",
+		"G C Huston Public School (Saugeen Shores)",
 
 
-		  "Gatchell Sch for Students with Special (Greater Sudbury)",
+		"GDCI - Elementary (Goderich)",
 
 
-		  "Gatestone Elementary Public School (Hamilton)",
+		"General Brock Public School (Toronto)",
 
 
-		  "Gateway Drive Public School (Guelph)",
+		"General Brock Public School (Windsor)",
 
 
-		  "Gateway Public School (Toronto)",
+		"General Crerar Public School (Toronto)",
 
+		"General Lake Public School (Petawawa)",
 
-		  "G C Huston Public School (Saugeen Shores)",
 
+		"General Mercer Junior Public School (Toronto)",
 
-		  "GDCI - Elementary (Goderich)",
 
+		"General Vanier Public School (Ottawa)",
 
-		  "General Brock Public School (Toronto)",
 
+		"General Vanier Public School (Fort Erie)",
 
-		  "General Brock Public School (Windsor)",
 
+		"George Anderson Public School (Toronto)",
 
-		  "General Crerar Public School (Toronto)",
 
+		"George B Little Public School (Toronto)",
 
-		  "General Lake Public School (Petawawa)",
 
+		"George Hamilton Public School (Port Hope)",
 
-		  "General Mercer Junior Public School (Toronto)",
 
+		"George Kennedy Public School (Halton Hills)",
 
-		  "General Vanier Public School (Ottawa)",
 
+		"George L Armstrong Public School (Hamilton)",
 
-		  "General Vanier Public School (Fort Erie)",
 
+		"George O'Neill Public School (Nipigon)",
 
-		  "George Anderson Public School (Toronto)",
 
+		"George Peck Public School (Toronto)",
 
-		  "George B Little Public School (Toronto)",
 
+		"George P Mackie Junior Public School (Toronto)",
 
-		  "George Hamilton Public School (Port Hope)",
 
+		"George R Allan Public School (Hamilton)",
 
-		  "George Kennedy Public School (Halton Hills)",
 
+		"George R Gauld Junior School (Toronto)",
 
-		  "George L Armstrong Public School (Hamilton)",
 
+		"Georges P Vanier Catholic School (Chatham-Kent)",
 
-		  "George O'Neill Public School (Nipigon)",
 
+		"George Street Public School (Aurora)",
 
-		  "George Peck Public School (Toronto)",
 
+		"Georges Vanier Catholic Elementary School (Ottawa)",
 
-		  "George P Mackie Junior Public School (Toronto)",
 
+		"Georges Vanier Catholic School (Belleville)",
 
-		  "George R Allan Public School (Hamilton)",
 
+		"Georges Vanier Catholic School (Brampton)",
 
-		  "George R Gauld Junior School (Toronto)",
 
+		"George Syme Community School (Toronto)",
 
-		  "Georges P Vanier Catholic School (Chatham-Kent)",
 
+		"George Vanier Separate School (Madawaska Valley)",
 
-		  "George Street Public School (Aurora)",
 
+		"George Webster Elementary School (Toronto)",
 
-		  "Georges Vanier Catholic Elementary School (Ottawa)",
 
+		"German Mills Public School (Thornhill)",
 
-		  "Georges Vanier Catholic School (Belleville)",
 
+		"Gertrude Colpus Public School (Oshawa)",
 
-		  "Georges Vanier Catholic School (Brampton)",
 
+		"Givins/Shaw Junior Public School (Toronto)",
 
-		  "George Syme Community School (Toronto)",
 
+		"Glad Park Public School (Whitchurch-Stouffville)",
 
-		  "George Vanier Separate School (Madawaska Valley)",
 
+		"Gladstone Public School (Cornwall)",
 
-		  "George Webster Elementary School (Toronto)",
 
+		"Gladys Speers Public School (Oakville)",
 
-		  "German Mills Public School (Thornhill)",
 
+		"Glamorgan Junior Public School (Toronto)",
 
-		  "Gertrude Colpus Public School (Oshawa)",
 
+		"Glashan Public School (Ottawa)",
 
-		  "Givins/Shaw Junior Public School (Toronto)",
 
+		"Gledhill Junior Public School (Toronto)",
 
-		  "Glad Park Public School (Whitchurch-Stouffville)",
 
+		"Glen Ames Senior Public School (Toronto)",
 
-		  "Gladstone Public School (Cornwall)",
 
+		"Glen Brae Middle School (Hamilton)",
 
-		  "Gladys Speers Public School (Oakville)",
 
+		"Glenburnie Public School (Kingston)",
 
-		  "Glamorgan Junior Public School (Toronto)",
 
+		"Glencairn Public School (Kitchener)",
 
-		  "Glashan Public School (Ottawa)",
 
+		"Glen Cairn Public School (London)",
 
-		  "Gledhill Junior Public School (Toronto)",
 
+		"Glen Cairn Public School (Ottawa)",
 
-		  "Glen Ames Senior Public School (Toronto)",
 
+		"Glen Cedar Public School (Newmarket)",
 
-		  "Glen Brae Middle School (Hamilton)",
 
+		"Glendale Public School (Welland)",
 
-		  "Glenburnie Public School (Kingston)",
 
+		"Glendale Public School (Brampton)",
 
-		  "Glencairn Public School (Kitchener)",
 
+		"Glen Dhu Public School (Whitby)",
 
-		  "Glen Cairn Public School (London)",
 
+		"Glen Echo Junior Public School (Hamilton)",
 
-		  "Glen Cairn Public School (Ottawa)",
 
+		"Glengarry Intermediate School (North Glengarry)",
 
-		  "Glen Cedar Public School (Newmarket)",
 
+		"Glengrove Public School (Pickering)",
 
-		  "Glendale Public School (Welland)",
 
+		"Glenhaven Senior Public School (Mississauga)",
 
-		  "Glendale Public School (Brampton)",
 
+		"Glen Morris Central Public School (Brant)",
 
-		  "Glen Dhu Public School (Whitby)",
 
+		"Glenn Gould Public School (Vaughan)",
 
-		  "Glen Echo Junior Public School (Hamilton)",
 
+		"Glen Ogilvie Public School (Ottawa)",
 
-		  "Glengarry Intermediate School (North Glengarry)",
 
+		"Glen Orchard/Honey Harbour Public School (Muskoka Lakes)",
 
-		  "Glengrove Public School (Pickering)",
 
+		"Glen Park Public School (Toronto)",
 
-		  "Glenhaven Senior Public School (Mississauga)",
 
+		"Glen Ravine Junior Public School (Toronto)",
 
-		  "Glen Morris Central Public School (Brant)",
 
+		"Glen Ridge Public School (St. Catharines)",
 
-		  "Glenn Gould Public School (Vaughan)",
 
+		"Glen Shields (Vaughan)",
 
-		  "Glen Ogilvie Public School (Ottawa)",
 
+		"Glen Street Public School (Oshawa)",
 
-		  "Glen Orchard/Honey Harbour Public School (Muskoka Lakes)",
 
+		"Glen Tay Public School (Perth)",
 
-		  "Glen Park Public School (Toronto)",
 
+		"Glenview Public School (Burlington)",
 
-		  "Glen Ravine Junior Public School (Toronto)",
 
+		"Glenview Senior Public School (Toronto)",
 
-		  "Glen Ridge Public School (St. Catharines)",
 
+		"Glen Williams Public School (Halton Hills)",
 
-		  "Glen Shields (Vaughan)",
 
+		"Glenwood Public School (Windsor)",
 
-		  "Glen Street Public School (Oshawa)",
 
+		"Glenwood Special Day School (Hamilton)",
 
-		  "Glen Tay Public School (Perth)",
 
+		"Glynn A Green Public School (Pelham)",
 
-		  "Glenview Public School (Burlington)",
 
+		"Goderich Public School (Goderich)",
 
-		  "Glenview Senior Public School (Toronto)",
 
+		"Gogama Public School (Gogama)",
 
-		  "Glen Williams Public School (Halton Hills)",
 
+		"Goldcrest Public School (Brampton)",
 
-		  "Glenwood Public School (Windsor)",
 
+		"Golden Avenue Public School (Timmins)",
 
-		  "Glenwood Special Day School (Hamilton)",
 
+		"Golden Learning Centre (Red Lake)",
 
-		  "Glynn A Green Public School (Pelham)",
 
+		"Golf Road Junior Public School (Toronto)",
 
-		  "Goderich Public School (Goderich)",
 
+		"Goodfellow Public School (Innisfil)",
 
-		  "Gogama Public School (Gogama)",
 
+		"Good Shepherd Catholic Elementary School (Clarington)",
 
-		  "Goldcrest Public School (Brampton)",
 
+		"Good Shepherd Catholic Elementary School (East Gwillimbury)",
 
-		  "Golden Avenue Public School (Timmins)",
 
+		"Good Shepherd Catholic Elementary School (Brampton)",
 
-		  "Golden Learning Centre (Red Lake)",
 
+		"Good Shepherd Catholic School (Scugog)",
 
-		  "Golf Road Junior Public School (Toronto)",
 
+		"Good Shepherd Catholic School (Chatham-Kent)",
 
-		  "Goodfellow Public School (Innisfil)",
 
+		"Good Shepherd Elementary School (Ottawa)",
 
-		  "Good Shepherd Catholic Elementary School (Clarington)",
 
+		"Goodwood Public School (Uxbridge)",
 
-		  "Good Shepherd Catholic Elementary School (East Gwillimbury)",
 
+		"Gordon A Brown Middle School (Toronto)",
 
-		  "Good Shepherd Catholic Elementary School (Brampton)",
 
+		"Gordon B Attersley Public School (Oshawa)",
 
-		  "Good Shepherd Catholic School (Scugog)",
 
+		"Gordon Graydon Senior Public School (Brampton)",
 
-		  "Good Shepherd Catholic School (Chatham-Kent)",
 
+		"Gordon McGregor Public School (Windsor)",
 
-		  "Good Shepherd Elementary School (Ottawa)",
 
+		"Gordon Price School (Hamilton)",
 
-		  "Goodwood Public School (Uxbridge)",
 
+		"Gordon Public School (Welland)",
 
-		  "Gordon A Brown Middle School (Toronto)",
 
+		"Gore Hill Public School (Leamington)",
 
-		  "Gordon B Attersley Public School (Oshawa)",
 
+		"Gorham and Ware Community Public School (Gorham)",
 
-		  "Gordon Graydon Senior Public School (Brampton)",
 
+		"Gosfield North Public School (Kingsville)",
 
-		  "Gordon McGregor Public School (Windsor)",
 
+		"Gosford Public School (Toronto)",
 
-		  "Gordon Price School (Hamilton)",
 
+		"Goulbourn Middle School (Ottawa)",
 
-		  "Gordon Public School (Welland)",
 
+		"Gracedale Public School (Toronto)",
 
-		  "Gore Hill Public School (Leamington)",
 
+		"Gracefield Public School (St. Catharines)",
 
-		  "Gorham and Ware Community Public School (Gorham)",
 
+		"Gracefield Public School (Toronto)",
 
-		  "Gosfield North Public School (Kingsville)",
 
+		"Grafton Public School (Alnwick/Haldimand)",
 
-		  "Gosford Public School (Toronto)",
 
+		"Graham Bell-Victoria Public School (Brantford)",
 
-		  "Goulbourn Middle School (Ottawa)",
 
+		"Grand Avenue Public School (Grimsby)",
 
-		  "Gracedale Public School (Toronto)",
 
+		"Grand Bend Public School (Lambton Shores)",
 
-		  "Gracefield Public School (St. Catharines)",
 
+		"Grand Valley &amp; District Public School (East Luther Grand Valley)",
 
-		  "Gracefield Public School (Toronto)",
 
+		"Grandview Central Public School (Haldimand)",
 
-		  "Grafton Public School (Alnwick/Haldimand)",
 
+		"Grandview Public School (Brantford)",
 
-		  "Graham Bell-Victoria Public School (Brantford)",
 
+		"Grandview Public School (Kawartha Lakes)",
 
-		  "Grand Avenue Public School (Grimsby)",
 
+		"Grandview Public School (Oshawa)",
 
-		  "Grand Bend Public School (Lambton Shores)",
 
+		"Grandview Public School (Wilmot)",
 
-		  "Grand Valley &amp; District Public School (East Luther Grand Valley)",
 
+		"Grand View Public School (Cambridge)",
 
-		  "Grandview Central Public School (Haldimand)",
 
+		"Grand View Public School (Sault Ste. Marie)",
 
-		  "Grandview Public School (Brantford)",
 
+		"Grant Alternative School (Ottawa)",
 
-		  "Grandview Public School (Kawartha Lakes)",
 
+		"Grant Sine Public School (Cobourg)",
 
-		  "Grandview Public School (Oshawa)",
 
+		"Grapeview Public School (St. Catharines)",
 
-		  "Grandview Public School (Wilmot)",
 
+		"Gravenhurst Public School (Gravenhurst)",
 
-		  "Grand View Public School (Cambridge)",
 
+		"Great Lakes Public School (Brampton)",
 
-		  "Grand View Public School (Sault Ste. Marie)",
 
+		"Greely Elementary School (Ottawa)",
 
-		  "Grant Alternative School (Ottawa)",
 
+		"Green Acres School (Hamilton)",
 
-		  "Grant Sine Public School (Cobourg)",
 
+		"Greenbank Middle School (Ottawa)",
 
-		  "Grapeview Public School (St. Catharines)",
 
+		"Greenbank Public School (Scugog)",
 
-		  "Gravenhurst Public School (Gravenhurst)",
 
+		"Greenbriar Senior Public School (Brampton)",
 
-		  "Great Lakes Public School (Brampton)",
 
+		"Greenbrier Public School (Brantford)",
 
-		  "Greely Elementary School (Ottawa)",
 
+		"Greendale Public School (Niagara Falls)",
 
-		  "Green Acres School (Hamilton)",
 
+		"Green Glade Senior Public School (Mississauga)",
 
-		  "Greenbank Middle School (Ottawa)",
 
+		"Greenholme Junior Middle School (Toronto)",
 
-		  "Greenbank Public School (Scugog)",
 
+		"Greenland Public School (Toronto)",
 
-		  "Greenbriar Senior Public School (Brampton)",
 
+		"Greensborough Public School (Markham)",
 
-		  "Greenbrier Public School (Brantford)",
 
+		"Greensville Public School (Hamilton)",
 
-		  "Greendale Public School (Niagara Falls)",
+		"Greenwood College School (Toronto)",
+		"Greenwood Public School (Sault Ste. Marie)",
 
+		"Gregory A Hogan Catholic School (Sarnia)",
 
-		  "Green Glade Senior Public School (Mississauga)",
 
+		"Gregory Drive Public School (Chatham-Kent)",
 
-		  "Greenholme Junior Middle School (Toronto)",
 
+		"Grenoble Public School (Brampton)",
 
-		  "Greenland Public School (Toronto)",
 
+		"Grenoble Public School (Toronto)",
 
-		  "Greensborough Public School (Markham)",
 
+		"Grey Central Public School (Huron East)",
 
-		  "Greensville Public School (Hamilton)",
 
+		"Grey Owl Junior Public School (Toronto)",
 
-		  "Greenwood Public School (Sault Ste. Marie)",
 
+		"Guardian Angels Catholic Elementary School (Brampton)",
 
-		  "Gregory A Hogan Catholic School (Sarnia)",
 
+		"Guardian Angels Catholic Elementary School (Milton)",
 
-		  "Gregory Drive Public School (Chatham-Kent)",
 
+		"Guardian Angels Elementary School (Hamilton)",
 
-		  "Grenoble Public School (Brampton)",
 
+		"Guardian Angels Elementary School (Ottawa)",
 
-		  "Grenoble Public School (Toronto)",
 
+		"Guardian Angels' School (Orillia)",
 
-		  "Grey Central Public School (Huron East)",
 
+		"Guildwood Junior Public School (Toronto)",
 
-		  "Grey Owl Junior Public School (Toronto)",
 
+		"Gulfstream Public School (Toronto)",
 
-		  "Guardian Angels Catholic Elementary School (Brampton)",
 
+		"Guthrie Public School (Oro-Medonte)",
 
-		  "Guardian Angels Catholic Elementary School (Milton)",
 
+		"Guy B Brown Elementary Public School (Hamilton)",
 
-		  "Guardian Angels Elementary School (Hamilton)",
 
+		"Hagersville Elementary School (Haldimand County)",
 
-		  "Guardian Angels Elementary School (Ottawa)",
 
+		"H A Halbert Junior Public School (Toronto)",
 
-		  "Guardian Angels' School (Orillia)",
 
+		"Haileybury Public School (Temiskaming Shores)",
 
-		  "Guildwood Junior Public School (Toronto)",
 
+		"Hamlet Public School (Stratford)",
 
-		  "Gulfstream Public School (Toronto)",
 
+		"Hampton Junior Public School (Clarington)",
 
-		  "Guthrie Public School (Oro-Medonte)",
 
+		"Hanna Memorial Public School (Sarnia)",
 
-		  "Guy B Brown Elementary Public School (Hamilton)",
 
+		"Hanover Heights Community School (Hanover)",
 
-		  "Hagersville Elementary School (Haldimand County)",
 
+		"Hanover Public School (Brampton)",
 
-		  "H A Halbert Junior Public School (Toronto)",
 
+		"Harmony Heights Public School (Oshawa)",
 
-		  "Haileybury Public School (Temiskaming Shores)",
 
+		"Harmony Public School (Belleville)",
 
-		  "Hamlet Public School (Stratford)",
 
+		"Harmony Public School (Oshawa)",
 
-		  "Hampton Junior Public School (Clarington)",
 
+		"Harold F Loughin Public School (Brampton)",
 
-		  "Hanna Memorial Public School (Sarnia)",
 
+		"Harold Longworth Public School (Clarington)",
 
-		  "Hanover Heights Community School (Hanover)",
 
+		"Harriett Todd Public School (Orillia)",
 
-		  "Hanover Public School (Brampton)",
 
+		"Harrisfield Public School (Ingersoll)",
 
-		  "Harmony Heights Public School (Oshawa)",
 
+		"Harrison Public School (Halton Hills)",
 
-		  "Harmony Public School (Belleville)",
 
+		"Harrison Public School (Toronto)",
 
-		  "Harmony Public School (Oshawa)",
 
+		"Harrow Public School (Essex)",
 
-		  "Harold F Loughin Public School (Brampton)",
 
+		"Harrow Senior Public School (Essex)",
 
-		  "Harold Longworth Public School (Clarington)",
 
+		"Harrowsmith Public School (South Frontenac)",
 
-		  "Harriett Todd Public School (Orillia)",
 
+		"Harry Bowes Public School (Whitchurch-Stouffville)",
 
-		  "Harrisfield Public School (Ingersoll)",
 
+		"Harry J Clarke Public School (Belleville)",
 
-		  "Harrison Public School (Halton Hills)",
 
+		"Hartman Public School (Aurora)",
 
-		  "Harrison Public School (Toronto)",
 
+		"Harwich-Raleigh Public School (Chatham-Kent)",
 
-		  "Harrow Public School (Essex)",
 
+		"Harwood Public School (Toronto)",
 
-		  "Harrow Senior Public School (Essex)",
 
+		"Hastings Public School (Trent Hills)",
 
-		  "Harrowsmith Public School (South Frontenac)",
 
+		"Havelock-Belmont Public School (Havenlock-Belmont-Methuen)",
+		"Havergal College (Toronto)",
+		"Hawthorn School for Girls (Toronto)", 
+		"Hawthorne II Bilingual Alternative Junior School (Toronto)",
 
-		  "Harry Bowes Public School (Whitchurch-Stouffville)",
 
+		"Hawthorne Public School (Ottawa)",
 
-		  "Harry J Clarke Public School (Belleville)",
 
+		"Hawthorne Village Public School (Milton)",
 
-		  "Hartman Public School (Aurora)",
 
+		"Hawthorn Public School (Mississauga)",
 
-		  "Harwich-Raleigh Public School (Chatham-Kent)",
 
+		"Hazel McCallion Senior Public School (Mississauga)",
 
-		  "Harwood Public School (Toronto)",
 
+		"Heather Heights Junior Public School (Toronto)",
 
-		  "Hastings Public School (Trent Hills)",
 
+		"Helen Detwiler Junior Elementary School (Hamilton)",
 
-		  "Havelock-Belmont Public School (Havenlock-Belmont-Methuen)",
 
+		"Helen Wilson Public School (Brampton)",
 
-		  "Hawthorne II Bilingual Alternative Junior School (Toronto)",
 
+		"Henderson Avenue Public School (Thornhill)",
 
-		  "Hawthorne Public School (Ottawa)",
 
+		"Henry Hudson Senior Public School (Toronto)",
 
-		  "Hawthorne Village Public School (Milton)",
 
+		"Henry Kelsey Senior Public School (Toronto)",
 
-		  "Hawthorn Public School (Mississauga)",
 
+		"Henry Larsen Elementary School (Ottawa)",
 
-		  "Hazel McCallion Senior Public School (Mississauga)",
 
+		"Henry Munro Middle School (Ottawa)",
 
-		  "Heather Heights Junior Public School (Toronto)",
 
+		"Hensall Public School (Bluewater)",
 
-		  "Helen Detwiler Junior Elementary School (Hamilton)",
 
+		"Hepworth Central Public School (South Bruce Peninsula)",
 
-		  "Helen Wilson Public School (Brampton)",
 
+		"Herb Campbell Public School (Caledon)",
 
-		  "Henderson Avenue Public School (Thornhill)",
 
+		"Herbert H Carnegie Public School (Vaughan)",
 
-		  "Henry Hudson Senior Public School (Toronto)",
 
+		"Heritage Glen Public School (Oakville)",
 
-		  "Henry Kelsey Senior Public School (Toronto)",
 
+		"Heritage Park Public School (Toronto)",
 
-		  "Henry Larsen Elementary School (Ottawa)",
 
+		"Heritage Public School (Ottawa)",
 
-		  "Henry Munro Middle School (Ottawa)",
 
+		"Herman Street Public School (Petawawa)",
 
-		  "Hensall Public School (Bluewater)",
 
+		"Hermon Public School (Bancroft)",
 
-		  "Hepworth Central Public School (South Bruce Peninsula)",
 
+		"Heron Park Junior Public School (Toronto)",
 
-		  "Herb Campbell Public School (Caledon)",
 
+		"Hespeler Public School (Cambridge)",
 
-		  "Herbert H Carnegie Public School (Vaughan)",
 
+		"Hess Street Junior Public School (Hamilton)",
 
-		  "Heritage Glen Public School (Oakville)",
 
+		"Hewitt's Creek Public School (Barrie)",
 
-		  "Heritage Park Public School (Toronto)",
 
+		"Hewson Elementary Public School (Brampton)",
 
-		  "Heritage Public School (Ottawa)",
 
+		"Heximer Avenue Public School (Niagara Falls)",
 
-		  "Herman Street Public School (Petawawa)",
 
+		"H G Bernard Public School (Richmond Hill)",
 
-		  "Hermon Public School (Bancroft)",
 
+		"H H Langford Public School (Greater Napanee)",
 
-		  "Heron Park Junior Public School (Toronto)",
 
+		"Hickory Wood Public School (Brampton)",
 
-		  "Hespeler Public School (Cambridge)",
 
+		"Hickson Central Public School (East Zorra-Tavistock)",
 
-		  "Hess Street Junior Public School (Hamilton)",
 
+		"Highbush Public School (Pickering)",
 
-		  "Hewitt's Creek Public School (Barrie)",
 
+		"Highcastle Public School (Toronto)",
 
-		  "Hewson Elementary Public School (Brampton)",
 
+		"Highfield Junior School (Toronto)",
 
-		  "Heximer Avenue Public School (Niagara Falls)",
 
+		"Highgate Public School (Markham)",
 
-		  "H G Bernard Public School (Richmond Hill)",
 
+		"Highland Creek Public School (Toronto)",
 
-		  "H H Langford Public School (Greater Napanee)",
 
+		"Highland Heights Junior Public School (Toronto)",
 
-		  "Hickory Wood Public School (Brampton)",
 
+		"Highland Heights Public School (Peterborough)",
 
-		  "Hickson Central Public School (East Zorra-Tavistock)",
 
+		"Highland Junior High School (Toronto)",
 
-		  "Highbush Public School (Pickering)",
 
+		"Highland Public School (Cambridge)",
 
-		  "Highcastle Public School (Toronto)",
 
+		"High Park Alternative School Junior (Toronto)",
 
-		  "Highfield Junior School (Toronto)",
 
+		"High Park Public School (Sarnia)",
 
-		  "Highgate Public School (Markham)",
 
+		"Highpoint Community Elementary School (Southgate)",
 
-		  "Highland Creek Public School (Toronto)",
 
+		"Highview Public School (Aurora)",
 
-		  "Highland Heights Junior Public School (Toronto)",
 
+		"Highview Public School (Pembroke)",
 
-		  "Highland Heights Public School (Peterborough)",
 
+		"Highview Public School (Toronto)",
 
-		  "Highland Junior High School (Toronto)",
 
+		"Highview Public School (Hamilton)",
 
-		  "Highland Public School (Cambridge)",
 
+		"Hillcrest Central School (South Bruce)",
 
-		  "High Park Alternative School Junior (Toronto)",
 
+		"Hillcrest Community School (Toronto)",
 
-		  "High Park Public School (Sarnia)",
 
+		"Hillcrest Elementary Public School (Hamilton)",
 
-		  "Highpoint Community Elementary School (Southgate)",
 
+		"Hillcrest Elementary School (Owen Sound)",
 
-		  "Highview Public School (Aurora)",
 
+		"Hillcrest Public School (Trent Hills)",
 
-		  "Highview Public School (Pembroke)",
 
+		"Hillcrest Public School (Cambridge)",
 
-		  "Highview Public School (Toronto)",
 
+		"Hillcrest Public School (Mississauga)",
 
-		  "Highview Public School (Hamilton)",
 
+		"Hillcrest Public School (London)",
 
-		  "Hillcrest Central School (South Bruce)",
 
+		"Hillcrest Public School (Belleville)",
 
-		  "Hillcrest Community School (Toronto)",
 
+		"Hillcrest Public School (Barrie)",
 
-		  "Hillcrest Elementary Public School (Hamilton)",
 
+		"Hilldale Public School (Brampton)",
+		" Hillfield Strathallan College (Hamilton)",
 
-		  "Hillcrest Elementary School (Owen Sound)",
+		"Hillmount Public School (Toronto)",
 
 
-		  "Hillcrest Public School (Trent Hills)",
+		"Hillsdale Elementary School (Springwater)",
 
 
-		  "Hillcrest Public School (Cambridge)",
+		"Hillsdale Public School (Oshawa)",
 
 
-		  "Hillcrest Public School (Mississauga)",
+		"Hillside Senior Public School (Mississauga)",
 
 
-		  "Hillcrest Public School (London)",
+		"Hilltop Middle School (Toronto)",
 
 
-		  "Hillcrest Public School (Belleville)",
+		"Hilson Avenue Public School (Ottawa)",
 
 
-		  "Hillcrest Public School (Barrie)",
+		"Hinchinbrooke Public School (Central Frontenac)",
 
 
-		  "Hilldale Public School (Brampton)",
+		"H J Alexander Community School (Toronto)",
 
 
-		  "Hillmount Public School (Toronto)",
+		"H J Lassaline Catholic School (Windsor)",
 
 
-		  "Hillsdale Elementary School (Springwater)",
+		"H M Robbins Public School (Sault Ste. Marie)",
 
 
-		  "Hillsdale Public School (Oshawa)",
+		"Hodgson Senior Public School (Toronto)",
 
 
-		  "Hillside Senior Public School (Mississauga)",
+		"Holbrook Junior Public School (Hamilton)",
 
+		"Holy Trinity School (Richmond Hill)",
+		"Holland-Chatsworth Central School (Chatsworth)",
 
-		  "Hilltop Middle School (Toronto)",
 
+		"Holland Landing Public School (East Gwillimbury)",
 
-		  "Hilson Avenue Public School (Ottawa)",
 
+		"Hollycrest Middle School (Toronto)",
 
-		  "Hinchinbrooke Public School (Central Frontenac)",
 
+		"Holly Meadows Elementary School (Barrie)",
 
-		  "H J Alexander Community School (Toronto)",
 
+		"Hollywood Public School (Toronto)",
 
-		  "H J Lassaline Catholic School (Windsor)",
 
+		"Holmesville Public School (Central Huron)",
 
-		  "H M Robbins Public School (Sault Ste. Marie)",
 
+		"Holy Angels Catholic School (Toronto)",
 
-		  "Hodgson Senior Public School (Toronto)",
 
+		"Holy Angels Separate School (Schreiber)",
 
-		  "Holbrook Junior Public School (Hamilton)",
 
+		"Holy Child Catholic Catholic School (Toronto)",
 
-		  "Holland-Chatsworth Central School (Chatsworth)",
 
+		"Holy Cross Catholic Elementary School (Lasalle)",
 
-		  "Holland Landing Public School (East Gwillimbury)",
 
+		"Holy Cross Catholic Elementary School (Thunder Bay)",
 
-		  "Hollycrest Middle School (Toronto)",
 
+		"Holy Cross Catholic School (Halton Hills)",
 
-		  "Holly Meadows Elementary School (Barrie)",
 
+		"Holy Cross Catholic School (Toronto)",
 
-		  "Hollywood Public School (Toronto)",
 
+		"Holy Cross Catholic School (Innisfil)",
 
-		  "Holmesville Public School (Central Huron)",
 
+		"Holy Cross Catholic School School (Greater Sudbury)",
 
-		  "Holy Angels Catholic School (Toronto)",
 
+		"Holy Cross Elementary School (Ottawa)",
 
-		  "Holy Angels Separate School (Schreiber)",
 
+		"Holy Cross School (Brantford)",
 
-		  "Holy Child Catholic Catholic School (Toronto)",
 
+		"Holy Cross School (North Grenville)",
 
-		  "Holy Cross Catholic Elementary School (Lasalle)",
 
+		"Holy Cross School (Mississauga)",
 
-		  "Holy Cross Catholic Elementary School (Thunder Bay)",
 
+		"Holy Cross Separate School (London)",
 
-		  "Holy Cross Catholic School (Halton Hills)",
 
+		"Holy Family (Hanover)",
 
-		  "Holy Cross Catholic School (Toronto)",
 
+		"Holy Family Catholic Elementary School (Thunder Bay)",
 
-		  "Holy Cross Catholic School (Innisfil)",
 
+		"Holy Family Catholic Elementary School (Thornhill)",
 
-		  "Holy Cross Catholic School School (Greater Sudbury)",
 
+		"Holy Family Catholic Elementary School (Wilmot)",
 
-		  "Holy Cross Elementary School (Ottawa)",
 
+		"Holy Family Catholic Elementary School (Clarington)",
 
-		  "Holy Cross School (Brantford)",
 
+		"Holy Family Catholic School (Chatham-Kent)",
 
-		  "Holy Cross School (North Grenville)",
 
+		"Holy Family Catholic School (Toronto)",
 
-		  "Holy Cross School (Mississauga)",
 
+		"Holy Family Catholic School (Brock)",
 
-		  "Holy Cross Separate School (London)",
 
+		"Holy Family Catholic School (Kingston)",
 
-		  "Holy Family (Hanover)",
 
+		"Holy Family Catholic School (Sault Ste. Marie)",
 
-		  "Holy Family Catholic Elementary School (Thunder Bay)",
 
+		"Holy Family Elementary School (London)",
 
-		  "Holy Family Catholic Elementary School (Thornhill)",
 
+		"Holy Family Elementary School (Ottawa)",
 
-		  "Holy Family Catholic Elementary School (Wilmot)",
 
+		"Holy Family French Immersion School (Woodstock)",
 
-		  "Holy Family Catholic Elementary School (Clarington)",
 
+		"Holy Family School (Caledon)",
 
-		  "Holy Family Catholic School (Chatham-Kent)",
 
+		"Holy Family School (Englehart)",
 
-		  "Holy Family Catholic School (Toronto)",
 
+		"Holy Family School (Brant)",
 
-		  "Holy Family Catholic School (Brock)",
 
+		"Holy Family School (Oakville)",
 
-		  "Holy Family Catholic School (Kingston)",
 
+		"Holy Family School (New Tecumseth)",
 
-		  "Holy Family Catholic School (Sault Ste. Marie)",
 
+		"Holy Jubilee Catholic Elementary School (Vaughan)",
 
-		  "Holy Family Elementary School (London)",
 
+		"Holy Name Catholic Elementary School (Welland)",
 
-		  "Holy Family Elementary School (Ottawa)",
 
+		"Holy Name Catholic Elementary School (King)",
 
-		  "Holy Family French Immersion School (Woodstock)",
 
+		"Holy Name Catholic School (Toronto)",
 
-		  "Holy Family School (Caledon)",
 
+		"Holy Name Catholic School (Essex)",
 
-		  "Holy Family School (Englehart)",
 
+		"Holy Name Catholic School (Kingston)",
 
-		  "Holy Family School (Brant)",
 
+		"Holy Name of Jesus Catholic School (Hornepayne)",
 
-		  "Holy Family School (Oakville)",
 
+		"Holy Name of Jesus Separate School (Hamilton)",
 
-		  "Holy Family School (New Tecumseth)",
 
+		"Holy Name of Mary Catholic School (Hamilton)",
 
-		  "Holy Jubilee Catholic Elementary School (Vaughan)",
 
+		"Holy Name of Mary Catholic School (Tyendinaga)",
 
-		  "Holy Name Catholic Elementary School (Welland)",
 
+		"Holy Name of Mary School (St. Marys)",
 
-		  "Holy Name Catholic Elementary School (King)",
 
+		"Holy Name of Mary Separate School (Mississippi Mills)",
 
-		  "Holy Name Catholic School (Toronto)",
 
+		"Holy Name Separate School (Pembroke)",
 
-		  "Holy Name Catholic School (Essex)",
 
+		"Holy Redeemer Catholic School (Pickering)",
 
-		  "Holy Name Catholic School (Kingston)",
 
+		"Holy Redeemer Catholic School (Toronto)",
 
-		  "Holy Name of Jesus Catholic School (Hornepayne)",
 
+		"Holy Redeemer Elementary School (Ottawa)",
 
-		  "Holy Name of Jesus Separate School (Hamilton)",
 
+		"Holy Rosary Catholic Elementary School (Waterloo)",
 
-		  "Holy Name of Mary Catholic School (Hamilton)",
 
+		"Holy Rosary Catholic School (Guelph)",
 
-		  "Holy Name of Mary Catholic School (Tyendinaga)",
 
+		"Holy Rosary Catholic School (Toronto)",
 
-		  "Holy Name of Mary School (St. Marys)",
 
+		"Holy Rosary Catholic School (Belleville)",
 
-		  "Holy Name of Mary Separate School (Mississippi Mills)",
 
+		"Holy Rosary Catholic School (Plympton-Wyoming)",
 
-		  "Holy Name Separate School (Pembroke)",
 
+		"Holy Rosary Separate School (Burlington)",
 
-		  "Holy Redeemer Catholic School (Pickering)",
 
+		"Holy Rosary Separate School (London)",
 
-		  "Holy Redeemer Catholic School (Toronto)",
 
+		"Holy Rosary Separate School (Milton)",
 
-		  "Holy Redeemer Elementary School (Ottawa)",
 
+		"Holy Saviour (Marathon)",
 
-		  "Holy Rosary Catholic Elementary School (Waterloo)",
 
+		"Holy Spirit Catholic Elementary School (Aurora)",
 
-		  "Holy Rosary Catholic School (Guelph)",
 
+		"Holy Spirit Catholic Elementary School (Brampton)",
 
-		  "Holy Rosary Catholic School (Toronto)",
 
+		"Holy Spirit Catholic Elementary School (Cambridge)",
 
-		  "Holy Rosary Catholic School (Belleville)",
 
+		"Holy Spirit Catholic School (Toronto)",
 
-		  "Holy Rosary Catholic School (Plympton-Wyoming)",
 
+		"Holy Spirit Elementary School (Ottawa)",
 
-		  "Holy Rosary Separate School (Burlington)",
 
+		"Holy Spirit Separate School (Hamilton)",
 
-		  "Holy Rosary Separate School (London)",
 
+		"Holy Trinity Catholic Elementary School (Cornwall)",
 
-		  "Holy Rosary Separate School (Milton)",
 
+		"Holy Trinity Catholic Intermediate School (Ottawa)",
 
-		  "Holy Saviour (Marathon)",
 
+		"Holy Trinity Catholic School (Guelph)",
 
-		  "Holy Spirit Catholic Elementary School (Aurora)",
 
+		"Holy Trinity Catholic School (Sarnia)",
 
-		  "Holy Spirit Catholic Elementary School (Brampton)",
 
+		"Homelands Senior Public School (Mississauga)",
 
-		  "Holy Spirit Catholic Elementary School (Cambridge)",
 
+		"Homestead Public School (Brampton)",
 
-		  "Holy Spirit Catholic School (Toronto)",
 
+		"Hon Earl Rowe Public School (Bradford West Gwillimbury)",
 
-		  "Holy Spirit Elementary School (Ottawa)",
 
+		"Hopewell Avenue Public School (Ottawa)",
 
-		  "Holy Spirit Separate School (Hamilton)",
 
+		"Horizon Alternative Senior School (Toronto)",
 
-		  "Holy Trinity Catholic Elementary School (Cornwall)",
 
+		"Hornepayne Public School (Hornepayne)",
 
-		  "Holy Trinity Catholic Intermediate School (Ottawa)",
 
+		"Houghton Public School (Norfolk County)",
 
-		  "Holy Trinity Catholic School (Guelph)",
 
+		"Howard Junior Public School (Toronto)",
 
-		  "Holy Trinity Catholic School (Sarnia)",
 
+		"Howard Robertson Public School (Kitchener)",
 
-		  "Homelands Senior Public School (Mississauga)",
 
+		"Howick Central School (Howick)",
 
-		  "Homestead Public School (Brampton)",
 
+		"Hugh Beaton Public School (Windsor)",
 
-		  "Hon Earl Rowe Public School (Bradford West Gwillimbury)",
 
+		"Hullett Central Public School (Central Huron)",
 
-		  "Hopewell Avenue Public School (Ottawa)",
 
+		"Humbercrest Public School (Toronto)",
 
-		  "Horizon Alternative Senior School (Toronto)",
 
+		"Humber Summit Middle School (Toronto)",
 
-		  "Hornepayne Public School (Hornepayne)",
 
+		"Humber Valley Village Junior Middle School (Toronto)",
 
-		  "Houghton Public School (Norfolk County)",
 
+		"Humberwood Downs Junior Middle Academy (Toronto)",
 
-		  "Howard Junior Public School (Toronto)",
 
+		"Humewood Community School (Toronto)",
 
-		  "Howard Robertson Public School (Kitchener)",
 
+		"Humphrey Central Public School (Parry Sound)",
 
-		  "Howick Central School (Howick)",
 
+		"Hunter's Glen Junior Public School (Toronto)",
 
-		  "Hugh Beaton Public School (Windsor)",
 
+		"Huntington Park Junior Public School (Hamilton)",
 
-		  "Hullett Central Public School (Central Huron)",
 
+		"Huntington Ridge Public School (Mississauga)",
 
-		  "Humbercrest Public School (Toronto)",
 
+		"Huntley Centennial Public School (Ottawa)",
 
-		  "Humber Summit Middle School (Toronto)",
 
+		"Huntsville Public School (Huntsville)",
 
-		  "Humber Valley Village Junior Middle School (Toronto)",
 
+		"Huron Centennial School (Huron East)",
 
-		  "Humberwood Downs Junior Middle Academy (Toronto)",
 
+		"Huron Heights Public School (London)",
 
-		  "Humewood Community School (Toronto)",
 
+		"Huron Heights Public School (Kincardine)",
 
-		  "Humphrey Central Public School (Parry Sound)",
 
+		"Huronia Centennial Public School (Springwater)",
 
-		  "Hunter's Glen Junior Public School (Toronto)",
 
+		"Huron Park Public School (Midland)",
 
-		  "Huntington Park Junior Public School (Hamilton)",
 
+		"Huron Street Junior Public School (Toronto)",
 
-		  "Huntington Ridge Public School (Mississauga)",
 
+		"Huttonville Public School (Brampton)",
 
-		  "Huntley Centennial Public School (Ottawa)",
 
+		"H W Burgess Public School (Chatham-Kent)",
 
-		  "Huntsville Public School (Huntsville)",
 
+		"Hyde Park Public School (Thunder Bay)",
 
-		  "Huron Centennial School (Huron East)",
 
+		"Hyland Heights Elementary School (Shelburne)",
 
-		  "Huron Heights Public School (London)",
 
+		"Ignace Elementary School (Ignace)",
 
-		  "Huron Heights Public School (Kincardine)",
 
+		"Immaculata Intermediate School (Ottawa)",
 
-		  "Huronia Centennial Public School (Springwater)",
 
+		"Immaculate Conception Catholic Elementary School (Peterborough)",
 
-		  "Huron Park Public School (Midland)",
 
+		"Immaculate Conception Catholic Elementary School (Vaughan)",
 
-		  "Huron Street Junior Public School (Toronto)",
 
+		"Immaculate Conception Catholic School (Greater Sudbury)",
 
-		  "Huttonville Public School (Brampton)",
 
+		"Immaculate Conception Catholic School (Scugog)",
 
-		  "H W Burgess Public School (Chatham-Kent)",
 
+		"Immaculate Conception Catholic School (Toronto)",
 
-		  "Hyde Park Public School (Thunder Bay)",
 
+		"Immaculate Conception Catholic School (Windsor)",
 
-		  "Hyland Heights Elementary School (Shelburne)",
 
+		"Immaculate Conception Elementary School (Hamilton)",
 
-		  "Ignace Elementary School (Ignace)",
 
+		"Immaculate Conception Separate School (South Bruce)",
 
-		  "Immaculata Intermediate School (Ottawa)",
 
+		"Immaculate Conception Separate School (Cornwall)",
 
-		  "Immaculate Conception Catholic Elementary School (Peterborough)",
 
+		"Immaculate Heart of Mary Catholic School (Toronto)",
 
-		  "Immaculate Conception Catholic Elementary School (Vaughan)",
 
+		"Immaculate Heart of Mary Separate School (Hamilton)",
 
-		  "Immaculate Conception Catholic School (Greater Sudbury)",
 
+		"Indian Creek Road Public School (Chatham-Kent)",
 
-		  "Immaculate Conception Catholic School (Scugog)",
 
+		"Indian Road Crescent Junior Public School (Toronto)",
 
-		  "Immaculate Conception Catholic School (Toronto)",
 
+		"Inglewood Heights Junior Public School (Toronto)",
 
-		  "Immaculate Conception Catholic School (Windsor)",
 
+		"Innerkip Central School (East Zorra-Tavistock)",
 
-		  "Immaculate Conception Elementary School (Hamilton)",
 
+		"Innisfil Central Public School (Innisfil)",
 
-		  "Immaculate Conception Separate School (South Bruce)",
 
+		"Iona Academy (South Glengarry)",
 
-		  "Immaculate Conception Separate School (Cornwall)",
 
+		"Ionview Public School (Toronto)",
 
-		  "Immaculate Heart of Mary Catholic School (Toronto)",
 
+		"Iron Bridge Public School (Huron Shores)",
 
-		  "Immaculate Heart of Mary Separate School (Hamilton)",
 
+		"Iroquois Falls Public School (Iroquois Falls)",
 
-		  "Indian Creek Road Public School (Chatham-Kent)",
 
+		"Iroquois Junior Public School (Toronto)",
 
-		  "Indian Road Crescent Junior Public School (Toronto)",
 
+		"Iroquois Public School (South Dundas)",
 
-		  "Inglewood Heights Junior Public School (Toronto)",
 
+		"Irwin Memorial Public School (Lake Of Bays)",
 
-		  "Innerkip Central School (East Zorra-Tavistock)",
 
+		"Isabel Fletcher Public School (Sault Ste. Marie)",
 
-		  "Innisfil Central Public School (Innisfil)",
 
+		"Island Lake Public School (Orangeville)",
 
-		  "Iona Academy (South Glengarry)",
 
+		"Island Public/Natural Science School (Toronto)",
 
-		  "Ionview Public School (Toronto)",
 
+		"Islington Junior Middle School (Toronto)",
 
-		  "Iron Bridge Public School (Huron Shores)",
 
+		"Jack Callaghan Public School (Kawartha Lakes)",
 
-		  "Iroquois Falls Public School (Iroquois Falls)",
 
+		"Jack Chambers Public School (London)",
 
-		  "Iroquois Junior Public School (Toronto)",
 
+		"Jack Donohue Public School (Ottawa)",
 
-		  "Iroquois Public School (South Dundas)",
 
+		"Jackman Avenue Junior Public School (Toronto)",
 
-		  "Irwin Memorial Public School (Lake Of Bays)",
 
+		"Jack Miner Public School (Kingsville)",
 
-		  "Isabel Fletcher Public School (Sault Ste. Marie)",
 
+		"Jack Miner Public School (Whitby)",
 
-		  "Island Lake Public School (Orangeville)",
 
+		"Jack Miner Senior Public School (Toronto)",
 
-		  "Island Public/Natural Science School (Toronto)",
 
+		"Jacob Beam Public School (Lincoln)",
 
-		  "Islington Junior Middle School (Toronto)",
 
+		"J A McWilliam Public School (Windsor)",
 
-		  "Jack Callaghan Public School (Kawartha Lakes)",
 
+		"James Bolton Public School (Caledon)",
 
-		  "Jack Chambers Public School (London)",
 
+		"James Culnan Catholic School (Toronto)",
 
-		  "Jack Donohue Public School (Ottawa)",
 
+		"James Grieve (Elementary) (Caledon)",
 
-		  "Jackman Avenue Junior Public School (Toronto)",
 
+		"James Hillier Public School (Brantford)",
 
-		  "Jack Miner Public School (Kingsville)",
 
+		"James Keating Public School (Penetanguishene)",
 
-		  "Jack Miner Public School (Whitby)",
 
+		"James MacDonald Public School (Hamilton)",
 
-		  "Jack Miner Senior Public School (Toronto)",
 
+		"James McQueen Public School (Centre Wellington)",
 
-		  "Jacob Beam Public School (Lincoln)",
 
+		"James Morden Public School (Niagara Falls)",
 
-		  "J A McWilliam Public School (Windsor)",
 
+		"James Potter Public School (Brampton)",
 
-		  "James Bolton Public School (Caledon)",
 
+		"James R Henderson Public School (Kingston)",
 
-		  "James Culnan Catholic School (Toronto)",
 
+		"James Robinson Public School (Markham)",
 
-		  "James Grieve (Elementary) (Caledon)",
 
+		"James S Bell Junior Middle School (Toronto)",
 
-		  "James Hillier Public School (Brantford)",
 
+		"James Strath Public School (Peterborough)",
 
-		  "James Keating Public School (Penetanguishene)",
 
+		"James W. Hill Public School (Oakville)",
 
-		  "James MacDonald Public School (Hamilton)",
 
+		"Janet I. McDougald Public School (Mississauga)",
 
-		  "James McQueen Public School (Centre Wellington)",
 
+		"Janet Lee Public School (Hamilton)",
 
-		  "James Morden Public School (Niagara Falls)",
 
+		"Jarvis Public School (Haldimand County)",
 
-		  "James Potter Public School (Brampton)",
 
+		"J B Tyrrell Senior Public School (Toronto)",
 
-		  "James R Henderson Public School (Kingston)",
 
+		"J Douglas Hodgson Elementary School (Dysart Et Al)",
 
-		  "James Robinson Public School (Markham)",
 
+		"J Douglas Hogarth Public School (Centre Wellington)",
 
-		  "James S Bell Junior Middle School (Toronto)",
 
+		"Jean Little Public School (Guelph)",
 
-		  "James Strath Public School (Peterborough)",
 
+		"Jeanne Sauvé Catholic School (Stratford)",
 
-		  "James W. Hill Public School (Oakville)",
 
+		"Jeanne-Sauvé Public School (London)",
 
-		  "Janet I. McDougald Public School (Mississauga)",
 
+		"Jean Vanier Catholic Elementary School (Brantford)",
 
-		  "Janet Lee Public School (Hamilton)",
 
+		"Jean Vanier Separate School (London)",
 
-		  "Jarvis Public School (Haldimand County)",
 
+		"J E Benson Public School (Windsor)",
 
-		  "J B Tyrrell Senior Public School (Toronto)",
 
+		"Jefferson Public School (Brampton)",
 
-		  "J Douglas Hodgson Elementary School (Dysart Et Al)",
 
+		"J E Horton Public School (Kingston)",
 
-		  "J Douglas Hogarth Public School (Centre Wellington)",
 
+		"Jersey Public School (Georgina)",
 
-		  "Jean Little Public School (Guelph)",
 
+		"Jesse Ketchum Junior and Senior Public School (Toronto)",
 
-		  "Jeanne Sauvé Catholic School (Stratford)",
 
+		"J F Carmichael Public School (Kitchener)",
 
-		  "Jeanne-Sauvé Public School (London)",
 
+		"J G Workman Public School (Toronto)",
 
-		  "Jean Vanier Catholic Elementary School (Brantford)",
 
+		"J.H.  Putman Public School (Ottawa)",
 
-		  "Jean Vanier Separate School (London)",
 
+		"J J O'Neill Catholic School (Greater Napanee)",
 
-		  "J E Benson Public School (Windsor)",
 
+		"J L Jordan Separate School (Brockville)",
 
-		  "Jefferson Public School (Brampton)",
 
+		"J L Mitchener Public School (Haldimand County)",
 
-		  "J E Horton Public School (Kingston)",
 
+		"J L R Bell Public School (Newmarket)",
 
-		  "Jersey Public School (Georgina)",
 
+		"J M Denyes Public School (Milton)",
 
-		  "Jesse Ketchum Junior and Senior Public School (Toronto)",
 
+		"Jockvale Elementary School (Ottawa)",
 
-		  "J F Carmichael Public School (Kitchener)",
 
+		"John A Leslie Public School (Toronto)",
 
-		  "J G Workman Public School (Toronto)",
 
+		"John Black Public School (Centre Wellington)",
 
-		  "J.H.  Putman Public School (Ottawa)",
 
+		"John Buchan Senior Public School (Toronto)",
 
-		  "J J O'Neill Catholic School (Greater Napanee)",
 
+		"John Campbell Public School (Windsor)",
 
-		  "J L Jordan Separate School (Brockville)",
 
+		"John Darling Public School (Kitchener)",
 
-		  "J L Mitchener Public School (Haldimand County)",
 
+		"John Dearness Public School (London)",
 
-		  "J L R Bell Public School (Newmarket)",
 
+		"John D Parker Junior School (Toronto)",
 
-		  "J M Denyes Public School (Milton)",
 
+		"John Dryden Public School (Whitby)",
 
-		  "Jockvale Elementary School (Ottawa)",
 
+		"John English Junior Middle School (Toronto)",
 
-		  "John A Leslie Public School (Toronto)",
 
+		"John Fisher Junior Public School (Toronto)",
 
-		  "John Black Public School (Centre Wellington)",
 
+		"John G Althouse Middle School (Toronto)",
 
-		  "John Buchan Senior Public School (Toronto)",
 
+		"John G Diefenbaker Public School (Toronto)",
 
-		  "John Campbell Public School (Windsor)",
 
+		"John Graves Simcoe Public School (Kingston)",
 
-		  "John Darling Public School (Kitchener)",
 
+		"John Mahood Public School (Woolwich)",
 
-		  "John Dearness Public School (London)",
 
+		"John Marshall Public School (Niagara Falls)",
 
-		  "John D Parker Junior School (Toronto)",
 
+		"John McCrae Public School (Markham)",
 
-		  "John Dryden Public School (Whitby)",
 
+		"John McCrae Public School (Toronto)",
 
-		  "John English Junior Middle School (Toronto)",
 
+		"John McCrae Public School (Guelph)",
 
-		  "John Fisher Junior Public School (Toronto)",
 
+		"John McGivney Children's Centre School (Windsor)",
 
-		  "John G Althouse Middle School (Toronto)",
 
+		"John M James School (Clarington)",
 
-		  "John G Diefenbaker Public School (Toronto)",
 
+		"John N Given Public School (Chatham-Kent)",
 
-		  "John Graves Simcoe Public School (Kingston)",
 
+		"John Paul II Elementary School (Ottawa)",
 
-		  "John Mahood Public School (Woolwich)",
 
+		"John P Robarts Public School (London)",
 
-		  "John Marshall Public School (Niagara Falls)",
 
+		"John Ross Robertson Junior Public School (Toronto)",
 
-		  "John McCrae Public School (Markham)",
 
+		"Johnson Street Public School (Barrie)",
 
-		  "John McCrae Public School (Toronto)",
 
+		"Johnson-Tarbutt Central Public School (Johnson)",
 
-		  "John McCrae Public School (Guelph)",
 
+		"Johnsview Village Public School (Thornhill)",
 
-		  "John McGivney Children's Centre School (Windsor)",
 
+		"John Sweeney Catholic Elementary School (Kitchener)",
 
-		  "John M James School (Clarington)",
 
+		"John T Tuck Public School (Burlington)",
 
-		  "John N Given Public School (Chatham-Kent)",
 
+		"John Wanless Junior Public School (Toronto)",
 
-		  "John Paul II Elementary School (Ottawa)",
 
+		"John William Boich Public School (Burlington)",
 
-		  "John P Robarts Public School (London)",
 
+		"John Wise Public School (St. Thomas)",
 
-		  "John Ross Robertson Junior Public School (Toronto)",
 
+		"John XXIII Catholic School (Kingston)",
 
-		  "Johnson Street Public School (Barrie)",
 
+		"John XXIII Catholic School (Oshawa)",
 
-		  "Johnson-Tarbutt Central Public School (Johnson)",
 
+		"John XXIII Separate School (Arnprior)",
 
-		  "Johnsview Village Public School (Thornhill)",
 
+		"John XXIII Separate School (North Bay)",
 
-		  "John Sweeney Catholic Elementary School (Kitchener)",
 
+		"John Young Elementary School (Ottawa)",
 
-		  "John T Tuck Public School (Burlington)",
 
+		"Jordan Public School (Lincoln)",
 
-		  "John Wanless Junior Public School (Toronto)",
 
+		"Joseph A Gibson (Vaughan)",
 
-		  "John William Boich Public School (Burlington)",
 
+		"Joseph Brant Senior Public School (Toronto)",
 
-		  "John Wise Public School (St. Thomas)",
 
+		"Joseph Gibbons Public School (Halton Hills)",
 
-		  "John XXIII Catholic School (Kingston)",
 
+		"Joseph Gould Public School (Uxbridge)",
 
-		  "John XXIII Catholic School (Oshawa)",
 
+		"Joseph H Kennedy Public School (Black River-Matheson)",
 
-		  "John XXIII Separate School (Arnprior)",
 
+		"Joseph Howe Senior Public School (Toronto)",
 
-		  "John XXIII Separate School (North Bay)",
 
+		"Joshua Creek Public School (Oakville)",
 
-		  "John Young Elementary School (Ottawa)",
 
+		"Josyf Cardinal Slipyj Catholic School (Toronto)",
 
-		  "Jordan Public School (Lincoln)",
 
+		"Joyce Public School (Toronto)",
 
-		  "Joseph A Gibson (Vaughan)",
 
+		"Joyceville Public School (Kingston)",
 
-		  "Joseph Brant Senior Public School (Toronto)",
 
+		"J R Wilcox Community School (Toronto)",
 
-		  "Joseph Gibbons Public School (Halton Hills)",
 
+		"J S Woodsworth Senior Public School (Toronto)",
 
-		  "Joseph Gould Public School (Uxbridge)",
 
+		"Julie Payette (Whitby)",
 
-		  "Joseph H Kennedy Public School (Black River-Matheson)",
 
+		"Julliard Public School (Vaughan)",
 
-		  "Joseph Howe Senior Public School (Toronto)",
 
+		"June Avenue Public School (Guelph)",
 
-		  "Joshua Creek Public School (Oakville)",
 
+		"June Rose Callwood Public School (St. Thomas)",
 
-		  "Josyf Cardinal Slipyj Catholic School (Toronto)",
 
+		"J W Gerth Public School (Kitchener)",
 
-		  "Joyce Public School (Toronto)",
 
+		"J W Trusler Public School (North Bay)",
 
-		  "Joyceville Public School (Kingston)",
 
+		"J W Walker Public School (Fort Frances)",
 
-		  "J R Wilcox Community School (Toronto)",
 
+		"Kakabeka Falls District Public School (Oliver Paipoonge)",
 
-		  "J S Woodsworth Senior Public School (Toronto)",
 
+		"Karen Kain School of the Arts (Toronto)",
 
-		  "Julie Payette (Whitby)",
 
+		"Kars Public School (Ottawa)",
 
-		  "Julliard Public School (Vaughan)",
 
+		"Kateri Tekakwitha Catholic Elementary School (Markham)",
 
-		  "June Avenue Public School (Guelph)",
 
+		"Kate S Durdan Public School (Niagara Falls)",
 
-		  "June Rose Callwood Public School (St. Thomas)",
 
+		"Katimavik Elementary School (Ottawa)",
 
-		  "J W Gerth Public School (Kitchener)",
 
+		"Kawartha Heights Public School (Peterborough)",
 
-		  "J W Trusler Public School (North Bay)",
 
+		"Keatsway Public School (Waterloo)",
 
-		  "J W Walker Public School (Fort Frances)",
 
+		"Kedron Public School (Oshawa)",
 
-		  "Kakabeka Falls District Public School (Oliver Paipoonge)",
 
+		"Keelesdale Junior Public School (Toronto)",
 
-		  "Karen Kain School of the Arts (Toronto)",
 
+		"Keele Street Junior Public School (Toronto)",
 
-		  "Kars Public School (Ottawa)",
 
+		"Keewatin Public School (Kenora)",
 
-		  "Kateri Tekakwitha Catholic Elementary School (Markham)",
 
+		"Keith Wightman Public School (Peterborough)",
 
-		  "Kate S Durdan Public School (Niagara Falls)",
+		" Kempenfelt Bay School (Barrie)",
+		"Kemptville Public School (North Grenville)",
 
 
-		  "Katimavik Elementary School (Ottawa)",
+		"Ken Danby Public School (Guelph)",
 
 
-		  "Kawartha Heights Public School (Peterborough)",
+		"Kenilworth Public School (Wellington North)",
 
 
-		  "Keatsway Public School (Waterloo)",
+		"Kennedy Public School (Toronto)",
 
 
-		  "Kedron Public School (Oshawa)",
+		"Kenner Intermediate School (Peterborough)",
 
 
-		  "Keelesdale Junior Public School (Toronto)",
+		"Kenollie Public School (Mississauga)",
 
 
-		  "Keele Street Junior Public School (Toronto)",
+		"Kensal Park Public School (London)",
 
 
-		  "Keewatin Public School (Kenora)",
+		"Kensington Community School (Toronto)",
 
 
-		  "Keith Wightman Public School (Peterborough)",
+		"Kente Public School (Prince Edward County)",
 
 
-		  "Kemptville Public School (North Grenville)",
+		"Kent Public School (Trent Hills)",
 
 
-		  "Ken Danby Public School (Guelph)",
+		"Kent Senior Public School (Toronto)",
 
 
-		  "Kenilworth Public School (Wellington North)",
+		"Keppel-Sarawak Elementary School (Owen Sound)",
 
 
-		  "Kennedy Public School (Toronto)",
+		"Kerns Public School (Thornloe)",
 
 
-		  "Kenner Intermediate School (Peterborough)",
+		"Keswick Public School (Georgina)",
 
 
-		  "Kenollie Public School (Mississauga)",
+		"Kettleby Public School (King)",
 
 
-		  "Kensal Park Public School (London)",
+		"Kettle Lakes Public School (Richmond Hill)",
 
 
-		  "Kensington Community School (Toronto)",
+		"Kew Beach Junior Public School (Toronto)",
 
 
-		  "Kente Public School (Prince Edward County)",
+		"KidsAbility School (Waterloo)",
 
 
-		  "Kent Public School (Trent Hills)",
+		"Kilbride Public School (Burlington)",
 
 
-		  "Kent Senior Public School (Toronto)",
+		"Killaloe Public School (Killaloe, Hagarty And Richards)",
 
 
-		  "Keppel-Sarawak Elementary School (Owen Sound)",
+		"Killarney Beach Public School (Innisfil)",
 
 
-		  "Kerns Public School (Thornloe)",
+		"Kimberley Junior Public School (Toronto)",
 
 
-		  "Keswick Public School (Georgina)",
+		"Kincardine Township-Tiverton Public School (Kincardine)",
 
 
-		  "Kettleby Public School (King)",
+		"Kindree Public School (Mississauga)",
+		"Kingsway College School (Toronto)",
 
+		"King Albert Public School (Kawartha Lakes)",
 
-		  "Kettle Lakes Public School (Richmond Hill)",
 
+		"King City Public School (King)",
 
-		  "Kew Beach Junior Public School (Toronto)",
 
+		"King Edward Junior and Senior Public School (Toronto)",
 
-		  "KidsAbility School (Waterloo)",
 
+		"King Edward Public School (Kitchener)",
 
-		  "Kilbride Public School (Burlington)",
 
+		"King Edward Public School (Windsor)",
 
-		  "Killaloe Public School (Killaloe, Hagarty And Richards)",
 
+		"King George Junior Public School (Hamilton)",
 
-		  "Killarney Beach Public School (Innisfil)",
 
+		"King George Junior Public School (Toronto)",
 
-		  "Kimberley Junior Public School (Toronto)",
 
+		"King George Public School (Peterborough)",
 
-		  "Kincardine Township-Tiverton Public School (Kincardine)",
 
+		"King George Public School (North Bay)",
 
-		  "Kindree Public School (Mississauga)",
 
+		"King George Public School ()",
 
-		  "King Albert Public School (Kawartha Lakes)",
 
+		"King George Public School (Guelph)",
 
-		  "King City Public School (King)",
 
+		"King George School (Brantford)",
 
-		  "King Edward Junior and Senior Public School (Toronto)",
 
+		"King George VI Public School (Kenora)",
 
-		  "King Edward Public School (Kitchener)",
 
+		"King George VI Public School (Chatham-Kent)",
 
-		  "King Edward Public School (Windsor)",
 
+		"King George VI Public School (Sarnia)",
 
-		  "King George Junior Public School (Hamilton)",
 
+		"Kinghurst Community (Arran-Elderslie)",
 
-		  "King George Junior Public School (Toronto)",
 
+		"Kingslake Public School (Toronto)",
 
-		  "King George Public School (Peterborough)",
 
+		"Kings Masting Public School (Mississauga)",
 
-		  "King George Public School (North Bay)",
 
+		"Kings Road Public School (Burlington)",
 
-		  "King George Public School ()",
 
+		"Kingsview Village Junior School (Toronto)",
 
-		  "King George Public School (Guelph)",
 
+		"Kingsville Public School (Kingsville)",
 
-		  "King George School (Brantford)",
 
+		"Kingsway Park Public School (Thunder Bay)",
 
-		  "King George VI Public School (Kenora)",
 
+		"Kingswood Drive Public School (Brampton)",
 
-		  "King George VI Public School (Chatham-Kent)",
 
+		"Kinnwood Central Public School (Lambton Shores)",
 
-		  "King George VI Public School (Sarnia)",
 
+		"Kinsmen/Vincent Massey School (Cornwall)",
 
-		  "Kinghurst Community (Arran-Elderslie)",
 
+		"Kirby Centennial Public School (Clarington)",
 
-		  "Kingslake Public School (Toronto)",
 
+		"Kirkland Lake District Composite Elementary School (Kirkland Lake)",
 
-		  "Kings Masting Public School (Mississauga)",
 
+		"Kiwedin Public School (Sault Ste. Marie)",
 
-		  "Kings Road Public School (Burlington)",
 
+		"Kleinburg Public School (Vaughan)",
 
-		  "Kingsview Village Junior School (Toronto)",
 
+		"Knob Hill Public School (Toronto)",
 
-		  "Kingsville Public School (Kingsville)",
 
+		"Knollwood Park Public School (London)",
 
-		  "Kingsway Park Public School (Thunder Bay)",
 
+		"Knoxdale Public School (Ottawa)",
 
-		  "Kingswood Drive Public School (Brampton)",
 
+		"Kortright Hills Public School (Guelph)",
 
-		  "Kinnwood Central Public School (Lambton Shores)",
 
+		"K P Manson Public School (Severn)",
 
-		  "Kinsmen/Vincent Massey School (Cornwall)",
 
+		"Lackner Woods (Kitchener)",
 
-		  "Kirby Centennial Public School (Clarington)",
 
+		"L A Desmarais Catholic School (Windsor)",
 
-		  "Kirkland Lake District Composite Elementary School (Kirkland Lake)",
 
+		"Lady Eaton Elementary School (Kawartha Lakes)",
 
-		  "Kiwedin Public School (Sault Ste. Marie)",
 
+		"Lady Evelyn Alternative School (Ottawa)",
 
-		  "Kleinburg Public School (Vaughan)",
 
+		"Lady Mackenzie Public School (Kawartha Lakes)",
 
-		  "Knob Hill Public School (Toronto)",
 
+		"Laggan Public School (North Glengarry)",
 
-		  "Knollwood Park Public School (London)",
 
+		"Laird Central Public School (Macdonald, Meredith And Aberdeen Additional)",
 
-		  "Knoxdale Public School (Ottawa)",
 
+		"Lake Avenue Public School (Hamilton)",
 
-		  "Kortright Hills Public School (Guelph)",
 
+		"Lakefield Intermediate School (Smith-Ennismore-Lakefield)",
 
-		  "K P Manson Public School (Severn)",
 
+		"Lakeroad Public School (Sarnia)",
 
-		  "Lackner Woods (Kitchener)",
 
+		"Lakeshore Discovery School (Lakeshore)",
 
-		  "L A Desmarais Catholic School (Windsor)",
 
+		"Lakeshore Public School (Burlington)",
 
-		  "Lady Eaton Elementary School (Kawartha Lakes)",
 
+		"Lakeside Public School (Georgina)",
 
-		  "Lady Evelyn Alternative School (Ottawa)",
 
+		"Lakeside Public School (Ajax)",
 
-		  "Lady Mackenzie Public School (Kawartha Lakes)",
 
+		"Lake Simcoe Public School (Georgina)",
 
-		  "Laggan Public School (North Glengarry)",
+		"Lakefield College School (Lakefield)",
+		"Lakeview Public School (Grimsby)",
 
 
-		  "Laird Central Public School (Macdonald, Meredith And Aberdeen Additional)",
+		"Lakeview Public School (Ottawa)",
 
+		"Lake Wilcox Public School (Richmond Hill)",
 
-		  "Lake Avenue Public School (Hamilton)",
 
+		"Lakewood School (Kenora)",
 
-		  "Lakefield Intermediate School (Smith-Ennismore-Lakefield)",
 
+		"Lakewoods Public School (Oshawa)",
 
-		  "Lakeroad Public School (Sarnia)",
 
+		"Lamberton Public School (Toronto)",
 
-		  "Lakeshore Discovery School (Lakeshore)",
 
+		"Lambeth Public School (London)",
 
-		  "Lakeshore Public School (Burlington)",
 
+		"Lambton Central Centennial School (Petrolia)",
 
-		  "Lakeside Public School (Georgina)",
 
+		"Lambton Kingsway Junior Middle School (Toronto)",
 
-		  "Lakeside Public School (Ajax)",
 
+		"Lambton Park Community School (Toronto)",
 
-		  "Lake Simcoe Public School (Georgina)",
 
+		"Lancaster Drive Public School (Kingston)",
 
-		  "Lakeview Public School (Grimsby)",
 
+		"Lancaster Public School (Mississauga)",
 
-		  "Lakeview Public School (Ottawa)",
 
+		"Land of Lakes Senior Public School (Burk'S Falls)",
 
-		  "Lake Wilcox Public School (Richmond Hill)",
 
+		"Land O Lakes Public School (Central Frontenac)",
 
-		  "Lakewood School (Kenora)",
 
+		"Langton Public School (Norfolk County)",
 
-		  "Lakewoods Public School (Oshawa)",
 
+		"Langton Public School (Kawartha Lakes)",
 
-		  "Lamberton Public School (Toronto)",
 
+		"Lanor Junior Middle School (Toronto)",
 
-		  "Lambeth Public School (London)",
 
+		"Lansdowne-Costain Public School (Brantford)",
 
-		  "Lambton Central Centennial School (Petrolia)",
 
+		"Lansdowne Public School (Sarnia)",
 
-		  "Lambton Kingsway Junior Middle School (Toronto)",
 
+		"Lansdowne Public School (Greater Sudbury)",
 
-		  "Lambton Park Community School (Toronto)",
 
+		"Larchwood Public School (Greater Sudbury)",
 
-		  "Lancaster Drive Public School (Kingston)",
 
+		"Larkspur Public School (Brampton)",
 
-		  "Lancaster Public School (Mississauga)",
 
+		"LaSalle Public School (Lasalle)",
 
-		  "Land of Lakes Senior Public School (Burk'S Falls)",
 
+		"Laurelwood Public School (Waterloo)",
 
-		  "Land O Lakes Public School (Central Frontenac)",
 
+		"Laurelwoods Elementary School (Orangeville)",
 
-		  "Langton Public School (Norfolk County)",
 
+		"Laurentian Public School (Kitchener)",
 
-		  "Langton Public School (Kawartha Lakes)",
 
+		"Laurie Hawkins Public School (Ingersoll)",
 
-		  "Lanor Junior Middle School (Toronto)",
 
+		"Laurine Avenue Public School (Guelph)",
 
-		  "Lansdowne-Costain Public School (Brantford)",
 
+		"Lawfield Elementary School (Hamilton)",
 
-		  "Lansdowne Public School (Sarnia)",
 
+		"Lawrence Heights Middle School (Toronto)",
 
-		  "Lansdowne Public School (Greater Sudbury)",
 
+		"Ledbury Park Elementary and Middle School (Toronto)",
 
-		  "Larchwood Public School (Greater Sudbury)",
 
+		"Legacy Public School (Markham)",
 
-		  "Larkspur Public School (Brampton)",
 
+		"Le Phare Elementary School (Ottawa)",
 
-		  "LaSalle Public School (Lasalle)",
 
+		"Lescon Public School (Toronto)",
 
-		  "Laurelwood Public School (Waterloo)",
 
+		"Leslie Frost Public School (Kawartha Lakes)",
 
-		  "Laurelwoods Elementary School (Orangeville)",
 
+		"Leslie Park Public School (Ottawa)",
 
-		  "Laurentian Public School (Kitchener)",
 
+		"Leslieville Junior Public School (Toronto)",
 
-		  "Laurie Hawkins Public School (Ingersoll)",
 
+		"Lester B. Pearson Catholic Intermediate School (Ottawa)",
 
-		  "Laurine Avenue Public School (Guelph)",
 
+		"Lester B Pearson Catholic School (Brampton)",
 
-		  "Lawfield Elementary School (Hamilton)",
 
+		"Lester B Pearson Elementary School (Toronto)",
 
-		  "Lawrence Heights Middle School (Toronto)",
 
+		"Lester B Pearson PS (Waterloo)",
 
-		  "Ledbury Park Elementary and Middle School (Toronto)",
 
+		"Lester B Pearson Public School (Aurora)",
 
-		  "Legacy Public School (Markham)",
 
+		"Lester B Pearson Public School (Ajax)",
 
-		  "Le Phare Elementary School (Ottawa)",
 
+		"Lester B Pearson School for the Arts (London)",
 
-		  "Lescon Public School (Toronto)",
 
+		"Levack Public School (Greater Sudbury)",
 
-		  "Leslie Frost Public School (Kawartha Lakes)",
 
+		"Levi Creek Public School (Mississauga)",
 
-		  "Leslie Park Public School (Ottawa)",
 
+		"Lexington Public School (Waterloo)",
 
-		  "Leslieville Junior Public School (Toronto)",
 
+		"Light of Christ Catholic Elementary School (Aurora)",
 
-		  "Lester B. Pearson Catholic Intermediate School (Ottawa)",
 
+		"Lillian Berg School (Machin)",
 
-		  "Lester B Pearson Catholic School (Brampton)",
 
+		"Lillian Public School (Toronto)",
 
-		  "Lester B Pearson Elementary School (Toronto)",
 
+		"Limehouse Public School (Halton Hills)",
 
-		  "Lester B Pearson PS (Waterloo)",
 
+		"Lincoln Alexander Public School (Ajax)",
 
-		  "Lester B Pearson Public School (Aurora)",
 
+		"Lincoln Alexander Public School (Hamilton)",
 
-		  "Lester B Pearson Public School (Ajax)",
 
+		"Lincoln Alexander Public School (Markham)",
 
-		  "Lester B Pearson School for the Arts (London)",
 
+		"Lincoln Avenue Public School (Cambridge)",
 
-		  "Levack Public School (Greater Sudbury)",
 
+		"Lincoln Avenue Public School (Ajax)",
 
-		  "Levi Creek Public School (Mississauga)",
 
+		"Lincoln Centennial Public School (St. Catharines)",
 
-		  "Lexington Public School (Waterloo)",
 
+		"Lincoln Heights Public School (Waterloo)",
 
-		  "Light of Christ Catholic Elementary School (Aurora)",
 
+		"Linden Park Junior Public School (Hamilton)",
 
-		  "Lillian Berg School (Machin)",
 
+		"Linklater Public School (Gananoque)",
 
-		  "Lillian Public School (Toronto)",
 
+		"Linwood Public School (Wellesley)",
 
-		  "Limehouse Public School (Halton Hills)",
 
+		"Lions Oval Public School (Orillia)",
 
-		  "Lincoln Alexander Public School (Ajax)",
 
+		"Lisgar Junior Public School (Hamilton)",
 
-		  "Lincoln Alexander Public School (Hamilton)",
 
+		"Lisgar Middle School (Mississauga)",
 
-		  "Lincoln Alexander Public School (Markham)",
 
+		"Listowel Central Public School (North Perth)",
 
-		  "Lincoln Avenue Public School (Cambridge)",
 
+		"Listowel Eastdale Public School (North Perth)",
 
-		  "Lincoln Avenue Public School (Ajax)",
 
+		"Little Current Public School (Northeastern Manitoulin And The Islands)",
 
-		  "Lincoln Centennial Public School (St. Catharines)",
 
+		"Little Falls Public School Public School (St. Marys)",
 
-		  "Lincoln Heights Public School (Waterloo)",
 
+		"Little Rouge Public School (Markham)",
 
-		  "Linden Park Junior Public School (Hamilton)",
 
+		"Lively District Elementary School (Greater Sudbury)",
 
-		  "Linklater Public School (Gananoque)",
 
+		"Lockes Public School (St. Thomas)",
 
-		  "Linwood Public School (Wellesley)",
 
+		"Lockview Public School (St. Catharines)",
 
-		  "Lions Oval Public School (Orillia)",
 
+		"Lombardy Public School (Rideau Lakes)",
 
-		  "Lisgar Junior Public School (Hamilton)",
 
+		"London Road School (Sarnia)",
 
-		  "Lisgar Middle School (Mississauga)",
 
+		"Longfields Davidson Heights Intermediate School (Ottawa)",
 
-		  "Listowel Central Public School (North Perth)",
 
+		"Longue Sault Public School (South Stormont)",
 
-		  "Listowel Eastdale Public School (North Perth)",
 
+		"Lord Dufferin Junior and Senior Public School (Toronto)",
 
-		  "Little Current Public School (Northeastern Manitoulin And The Islands)",
 
+		"Lord Elgin Public School (Ajax)",
 
-		  "Little Falls Public School Public School (St. Marys)",
 
+		"Lord Elgin Public School (London)",
 
-		  "Little Rouge Public School (Markham)",
 
+		"Lord Lansdowne Junior and Senior Public School (Toronto)",
 
-		  "Lively District Elementary School (Greater Sudbury)",
 
+		"Lord Nelson Public School (London)",
 
-		  "Lockes Public School (St. Thomas)",
 
+		"Lord Roberts Junior Public School (Toronto)",
 
-		  "Lockview Public School (St. Catharines)",
 
+		"Lord Roberts Public School (London)",
 
-		  "Lombardy Public School (Rideau Lakes)",
 
+		"Lord Strathcona Public School (Kingston)",
 
-		  "London Road School (Sarnia)",
 
+		"Loretto Catholic Elementary School (Niagara Falls)",
 
-		  "Longfields Davidson Heights Intermediate School (Ottawa)",
 
+		"Lorna Jackson Public School (Vaughan)",
 
-		  "Longue Sault Public School (South Stormont)",
 
+		"Lorne Avenue Public School (London)",
 
-		  "Lord Dufferin Junior and Senior Public School (Toronto)",
 
+		"Lorne Park Public School (Mississauga)",
 
-		  "Lord Elgin Public School (Ajax)",
 
+		"Loughborough Public School (South Frontenac)",
 
-		  "Lord Elgin Public School (London)",
 
+		"Lougheed Middle School (Brampton)",
 
-		  "Lord Lansdowne Junior and Senior Public School (Toronto)",
 
+		"Louis-Honore Frechette Public School (Thornhill)",
 
-		  "Lord Nelson Public School (London)",
 
+		"Lucknow Central Public School (Huron-Kinloss)",
 
-		  "Lord Roberts Junior Public School (Toronto)",
 
+		"Lucy Maud Montgomery Public School (Toronto)",
 
-		  "Lord Roberts Public School (London)",
 
+		"Lucy McCormick Senior School (Toronto)",
 
-		  "Lord Strathcona Public School (Kingston)",
 
+		"Lumen Christi Catholic Elementary School Elementary School (Burlington)",
 
-		  "Loretto Catholic Elementary School (Niagara Falls)",
 
+		"Lydia Trull Public School (Clarington)",
 
-		  "Lorna Jackson Public School (Vaughan)",
 
+		"Lynndale Heights Public School (Norfolk)",
 
-		  "Lorne Avenue Public School (London)",
 
+		"Lynngate Junior Public School (Toronto)",
 
-		  "Lorne Park Public School (Mississauga)",
 
+		"Lynnwood Heights Junior Public School (Toronto)",
 
-		  "Loughborough Public School (South Frontenac)",
 
+		"Lyn Public School (Elizabethtown-Kitley)",
 
-		  "Lougheed Middle School (Brampton)",
 
+		"Macaulay Public School (Bracebridge)",
 
-		  "Louis-Honore Frechette Public School (Thornhill)",
 
+		"MacGregor Public School (Waterloo)",
 
-		  "Lucknow Central Public School (Huron-Kinloss)",
+		"Mackenzie Community School - Elementary School (Deep River)",
 
 
-		  "Lucy Maud Montgomery Public School (Toronto)",
+		"Mackenzie Glen Public School (Vaughan)",
 
 
-		  "Lucy McCormick Senior School (Toronto)",
+		"MacKenzie King Public School (Kitchener)",
 
+		"MacLachlan College (Oakville)",
+		"Macklin Public School (Toronto)",
 
-		  "Lumen Christi Catholic Elementary School Elementary School (Burlington)",
 
+		"MacLeod Public School (Greater Sudbury)",
 
-		  "Lydia Trull Public School (Clarington)",
 
+		"MacLeod's Landing Public School (Richmond Hill)",
 
-		  "Lynndale Heights Public School (Norfolk)",
 
+		"Macphail Memorial Elementary School (Grey Highlands)",
 
-		  "Lynngate Junior Public School (Toronto)",
 
+		"Mactier Public School (Georgian Bay)",
 
-		  "Lynnwood Heights Junior Public School (Toronto)",
 
+		"Macville Public School (Caledon)",
 
-		  "Lyn Public School (Elizabethtown-Kitley)",
 
+		"Madawaska Public School (South Algonquin)",
 
-		  "Macaulay Public School (Bracebridge)",
 
+		"Madoc Drive Public School (Brampton)",
 
-		  "MacGregor Public School (Waterloo)",
 
+		"Madoc Public School (Centre Hasting)",
 
-		  "Mackenzie Community School - Elementary School (Deep River)",
 
+		"Madoc Township Public School (Centre Hasting)",
 
-		  "Mackenzie Glen Public School (Vaughan)",
 
+		"Magnetawan Central Public School (Magnetawan)",
 
-		  "MacKenzie King Public School (Kitchener)",
 
+		"Maitland River Elementary School (North Huron)",
 
-		  "Macklin Public School (Toronto)",
 
+		"Major Ballachey Public School (Brantford)",
 
-		  "MacLeod Public School (Greater Sudbury)",
 
+		"Malden Central Public School (Amherstburg)",
 
-		  "MacLeod's Landing Public School (Richmond Hill)",
 
+		"Malvern Junior Public School (Toronto)",
 
-		  "Macphail Memorial Elementary School (Grey Highlands)",
 
+		"Manchester Public School (Cambridge)",
 
-		  "Mactier Public School (Georgian Bay)",
 
+		"Manhattan Park Junior Public School (Toronto)",
 
-		  "Macville Public School (Caledon)",
 
+		"Manitouwadge Public School (Manitouwadge)",
 
-		  "Madawaska Public School (South Algonquin)",
 
+		"Manordale Public School (Ottawa)",
 
-		  "Madoc Drive Public School (Brampton)",
 
+		"Manor Park Public School (Ottawa)",
 
-		  "Madoc Public School (Centre Hasting)",
 
+		"Manotick Public School (Ottawa)",
 
-		  "Madoc Township Public School (Centre Hasting)",
 
+		"Maple Creek Public School (Vaughan)",
 
-		  "Magnetawan Central Public School (Magnetawan)",
 
+		"Maple Grove Public School (Oakville)",
 
-		  "Maitland River Elementary School (North Huron)",
 
+		"Maple Grove Public School (Barrie)",
 
-		  "Major Ballachey Public School (Brantford)",
 
+		"Maple Grove Public School (Lanark Highlands)",
 
-		  "Malden Central Public School (Amherstburg)",
 
+		"Maplehurst Public School (Burlington)",
 
-		  "Malvern Junior Public School (Toronto)",
 
+		"Maple Lane Public School (Tillsonburg)",
 
-		  "Manchester Public School (Cambridge)",
 
+		"Maple Leaf Public School (Newmarket)",
 
-		  "Manhattan Park Junior Public School (Toronto)",
 
+		"Maple Leaf Public School (Toronto)",
 
-		  "Manitouwadge Public School (Manitouwadge)",
 
+		"Maple Ridge Elementary School (Ottawa)",
 
-		  "Manordale Public School (Ottawa)",
 
+		"Mapleridge Public School (Powassan)",
 
-		  "Manor Park Public School (Ottawa)",
 
+		"Maple Ridge Public School (Pickering)",
 
-		  "Manotick Public School (Ottawa)",
 
+		"Mapleview Heights Elementary School (Barrie)",
 
-		  "Maple Creek Public School (Vaughan)",
 
+		"Maple Wood Public School (Mississauga)",
 
-		  "Maple Grove Public School (Oakville)",
 
+		"Marchmont Public School (Orillia)",
 
-		  "Maple Grove Public School (Barrie)",
 
+		"Margaret Avenue Public School (Kitchener)",
 
-		  "Maple Grove Public School (Lanark Highlands)",
 
+		"Margaret D Bennie Public School (Leamington)",
 
-		  "Maplehurst Public School (Burlington)",
 
+		"Margaret Twomey Public School (Marathon)",
 
-		  "Maple Lane Public School (Tillsonburg)",
 
+		"Marie of the Incarnation Separate School (Bradford West Gwillimbury)",
 
-		  "Maple Leaf Public School (Newmarket)",
 
+		"Mariposa Elementary School (Kawartha Lakes)",
 
-		  "Maple Leaf Public School (Toronto)",
 
+		"Marjorie Mills Public School (Greenstone)",
 
-		  "Maple Ridge Elementary School (Ottawa)",
 
+		"Market Lane Junior and Senior Public School (Toronto)",
 
-		  "Mapleridge Public School (Powassan)",
 
+		"Markham Gateway Public School (Markham)",
 
-		  "Maple Ridge Public School (Pickering)",
 
+		"Markstay Public School (Markstay-Warren)",
 
-		  "Mapleview Heights Elementary School (Barrie)",
 
+		"Marlborough Public School (Windsor)",
 
-		  "Maple Wood Public School (Mississauga)",
 
+		"Marmora Senior Public School (Marmora And Lake)",
 
-		  "Marchmont Public School (Orillia)",
 
+		"Marshall Park Public School (North Bay)",
 
-		  "Margaret Avenue Public School (Kitchener)",
 
+		"Martha Cullimore Public School (Niagara Falls)",
 
-		  "Margaret D Bennie Public School (Leamington)",
 
+		"Martin Street Public School (Milton)",
 
-		  "Margaret Twomey Public School (Marathon)",
 
+		"Marvin Heights Public School (Mississauga)",
 
-		  "Marie of the Incarnation Separate School (Bradford West Gwillimbury)",
 
+		"Maryborough Public School (Mapleton)",
 
-		  "Mariposa Elementary School (Kawartha Lakes)",
 
+		"Mary Fix Catholic School (Mississauga)",
 
-		  "Marjorie Mills Public School (Greenstone)",
 
+		"Mary Honeywell Elementary School (Ottawa)",
 
-		  "Market Lane Junior and Senior Public School (Toronto)",
 
+		"Mary Hopkins Public School (Hamilton)",
 
-		  "Markham Gateway Public School (Markham)",
 
+		"Mary Immaculate Community (Brockton)",
 
-		  "Markstay Public School (Markstay-Warren)",
 
+		"Mary Johnston Public School (Waterloo)",
 
-		  "Marlborough Public School (Windsor)",
 
+		"Marymount Elementary Academy (Greater Sudbury)",
 
-		  "Marmora Senior Public School (Marmora And Lake)",
 
+		"Mary Phelan Catholic School (Guelph)",
 
-		  "Marshall Park Public School (North Bay)",
 
+		"Mary Shadd Public School (Toronto)",
 
-		  "Martha Cullimore Public School (Niagara Falls)",
 
+		"Mary Street Community School (Oshawa)",
 
-		  "Martin Street Public School (Milton)",
 
+		"Marysville Public School (Frontenac Islands)",
 
-		  "Marvin Heights Public School (Mississauga)",
 
+		"Maryvale Public School (Toronto)",
 
-		  "Maryborough Public School (Mapleton)",
 
+		"Mary Ward Catholic Elementary School (Niagara Falls)",
 
-		  "Mary Fix Catholic School (Mississauga)",
 
+		"Mason Road Junior Public School (Toronto)",
 
-		  "Mary Honeywell Elementary School (Ottawa)",
 
+		"Masonville Public School (London)",
 
-		  "Mary Hopkins Public School (Hamilton)",
 
+		"Massassaga-Rednersville Public School (Belleville)",
 
-		  "Mary Immaculate Community (Brockton)",
 
+		"Massey Street Public School (Brampton)",
 
-		  "Mary Johnston Public School (Waterloo)",
 
+		"Mathews Public School (Welland)",
+		"Mattawa District Public School (Mattawa)",
+		"Matthews Hall (London)",
 
-		  "Marymount Elementary Academy (Greater Sudbury)",
+		"Maurice Cody Junior Public School (Toronto)",
 
 
-		  "Mary Phelan Catholic School (Guelph)",
+		"M A Wittick Junior Public School (Burk'S Falls)",
 
 
-		  "Mary Shadd Public School (Toronto)",
+		"Maxville Public School (North Glengarry)",
 
 
-		  "Mary Street Community School (Oshawa)",
+		"Mayfield West PS (Caledon)",
 
 
-		  "Marysville Public School (Frontenac Islands)",
+		"Maynard Public School (Prescott)",
 
 
-		  "Maryvale Public School (Toronto)",
+		"Maynooth Public School (Hastings Highlands)",
 
 
-		  "Mary Ward Catholic Elementary School (Niagara Falls)",
+		"Maywood Public School (St. Catharines)",
 
 
-		  "Mason Road Junior Public School (Toronto)",
+		"Mazo De La Roche Public School (Newmarket)",
 
 
-		  "Masonville Public School (London)",
+		"McBride Avenue Public School (Mississauga)",
 
 
-		  "Massassaga-Rednersville Public School (Belleville)",
+		"McCaskill's Mills Public School (Brock)",
 
 
-		  "Massey Street Public School (Brampton)",
+		"McCrimmon Middle School (Brampton)",
 
 
-		  "Mathews Public School (Welland)",
+		"McCrosson-Tovell Public School (Dawson)",
 
 
-		  "Mattawa District Public School (Mattawa)",
+		"McDougall Public School (Parry Sound)",
 
 
-		  "Maurice Cody Junior Public School (Toronto)",
+		"McGillivray Central School (North Middlesex)",
 
 
-		  "M A Wittick Junior Public School (Burk'S Falls)",
+		"McGregor Public School (Aylmer)",
 
 
-		  "Maxville Public School (North Glengarry)",
+		"McHugh Public School (Brampton)",
 
 
-		  "Mayfield West PS (Caledon)",
+		"McKay Public School (Port Colborne)",
 
 
-		  "Maynard Public School (Prescott)",
+		"McKee Public School (Toronto)",
 
 
-		  "Maynooth Public School (Hastings Highlands)",
+		"McKellar Park Central Public School (Thunder Bay)",
 
 
-		  "Maywood Public School (St. Catharines)",
+		"McKenzie Public School (Shuniah)",
 
 
-		  "Mazo De La Roche Public School (Newmarket)",
+		"McKenzie-Smith Bennett (Halton Hills)",
 
 
-		  "McBride Avenue Public School (Mississauga)",
+		"McKinnon Public School (Mississauga)",
 
 
-		  "McCaskill's Mills Public School (Brock)",
+		"McMasterCatholic Elementary School (Ottawa)",
 
 
-		  "McCrimmon Middle School (Brampton)",
+		"McMurrich Junior Public School (Toronto)",
 
 
-		  "McCrosson-Tovell Public School (Dawson)",
+		"McNab Public School (Arnprior)",
 
 
-		  "McDougall Public School (Parry Sound)",
+		"McNaughton Ave Public School (Chatham-Kent)",
 
 
-		  "McGillivray Central School (North Middlesex)",
+		"Meadowbrook Public School (Newmarket)",
 
 
-		  "McGregor Public School (Aylmer)",
+		"Meadowcrest Public School (Whitby)",
 
 
-		  "McHugh Public School (Brampton)",
+		"Meadowlands Public School (Ottawa)",
 
 
-		  "McKay Public School (Port Colborne)",
+		"Meadowlane Public School (Kitchener)",
 
 
-		  "McKee Public School (Toronto)",
+		"Meadowvale Public School (Toronto)",
 
 
-		  "McKellar Park Central Public School (Thunder Bay)",
+		"Meadowvale Public School (St. Catharines)",
 
 
-		  "McKenzie Public School (Shuniah)",
+		"Meadowvale Village Public School (Mississauga)",
 
 
-		  "McKenzie-Smith Bennett (Halton Hills)",
+		"Meadowview Public School (Elizabethtown-Kitley)",
 
 
-		  "McKinnon Public School (Mississauga)",
+		"Meaford Community School (Meaford)",
 
 
-		  "McMasterCatholic Elementary School (Ottawa)",
+		"Melody Village Junior School (Toronto)",
 
 
-		  "McMurrich Junior Public School (Toronto)",
+		"Memorial (City) School (Hamilton)",
 
 
-		  "McNab Public School (Arnprior)",
+		"Memorial Public School (St. Catharines)",
 
 
-		  "McNaughton Ave Public School (Chatham-Kent)",
+		"Memorial Public School (Hamilton)",
 
 
-		  "Meadowbrook Public School (Newmarket)",
+		"Merlin Area Public School (Chatham-Kent)",
 
 
-		  "Meadowcrest Public School (Whitby)",
+		"Merrickville Public School (Merrickville-Wolford)",
 
 
-		  "Meadowlands Public School (Ottawa)",
+		"Merwin Greer School (Cobourg)",
 
 
-		  "Meadowlane Public School (Kitchener)",
+		"Metcalfe Public School (Ottawa)",
 
 
-		  "Meadowvale Public School (Toronto)",
+		"Metropolitan Andrei Catholic School (Mississauga)",
 
 
-		  "Meadowvale Public School (St. Catharines)",
+		"Metropolitan Toronto School for the Deaf (Toronto)",
 
 
-		  "Meadowvale Village Public School (Mississauga)",
+		"Michael Cranny Elementary School (Vaughan)",
 
 
-		  "Meadowview Public School (Elizabethtown-Kitley)",
+		"Michael J Brennan Catholic Elementary School (St. Catharines)",
 
 
-		  "Meaford Community School (Meaford)",
+		"Michaelle Jean Public School (Richmond Hill)",
 
 
-		  "Melody Village Junior School (Toronto)",
+		"Middlebury Public School (Mississauga)",
 
 
-		  "Memorial (City) School (Hamilton)",
+		"Mildmay-Carrick Central School (South Bruce)",
 
 
-		  "Memorial Public School (St. Catharines)",
+		"Military Trail Public School (Toronto)",
 
 
-		  "Memorial Public School (Hamilton)",
+		"Millbrook/South Cavan Public School (Millbrook)",
 
 
-		  "Merlin Area Public School (Chatham-Kent)",
+		"Millen Woods Public School (Waterloo)",
 
 
-		  "Merrickville Public School (Merrickville-Wolford)",
+		"Miller's Grove School (Mississauga)",
 
 
-		  "Merwin Greer School (Cobourg)",
+		"Millgrove Public School (Hamilton)",
 
 
-		  "Metcalfe Public School (Ottawa)",
+		"Milliken Mills Public School (Markham)",
 
 
-		  "Metropolitan Andrei Catholic School (Mississauga)",
+		"Milliken Public School (Toronto)",
 
 
-		  "Metropolitan Toronto School for the Deaf (Toronto)",
+		"Mill Street Public School (Leamington)",
 
 
-		  "Michael Cranny Elementary School (Vaughan)",
+		"Mill Valley Junior School (Toronto)",
 
 
-		  "Michael J Brennan Catholic Elementary School (St. Catharines)",
+		"Millwood Junior School (Toronto)",
 
 
-		  "Michaelle Jean Public School (Richmond Hill)",
+		"Milne Valley Middle School (Toronto)",
 
 
-		  "Middlebury Public School (Mississauga)",
+		"Milverton Public School (Perth East)",
 
 
-		  "Mildmay-Carrick Central School (South Bruce)",
+		"Mine Centre Public School (Mine Centre)",
 
 
-		  "Military Trail Public School (Toronto)",
+		"Mineola Public School (Mississauga)",
 
 
-		  "Millbrook/South Cavan Public School (Millbrook)",
+		"Minesing Central Public School (Springwater)",
 
 
-		  "Millen Woods Public School (Waterloo)",
+		"Ministik Public School (Moose Factory)",
 
 
-		  "Miller's Grove School (Mississauga)",
+		"Minto-Clifford Central Public School (Minto)",
 
 
-		  "Millgrove Public School (Hamilton)",
+		"Missarenda Consolidated Public School (Missanabie)",
 
 
-		  "Milliken Mills Public School (Markham)",
+		"Mitchell Hepburn Public School (St. Thomas)",
 
 
-		  "Milliken Public School (Toronto)",
+		"Mitchell Woods Public School (Guelph)",
 
 
-		  "Mill Street Public School (Leamington)",
+		"M J Hobbs Senior Public School (Clarington)",
 
 
-		  "Mill Valley Junior School (Toronto)",
+		"Module de l'Acadie (Kingston)",
 
 
-		  "Millwood Junior School (Toronto)",
+		"Module Vanier (Kingston)",
 
 
-		  "Milne Valley Middle School (Toronto)",
+		"Moffat Creek Public School (Kitchener)",
 
 
-		  "Milverton Public School (Perth East)",
+		"Mohawk Gardens Public School (Burlington)",
 
 
-		  "Mine Centre Public School (Mine Centre)",
+		"Monck Public School (Bracebridge)",
 
 
-		  "Mineola Public School (Mississauga)",
+		"Monetville Public School (Monetville)",
 
 
-		  "Minesing Central Public School (Springwater)",
+		"Mono-Amaranth Public School (Orangeville)",
 
 
-		  "Ministik Public School (Moose Factory)",
+		"Monsignor Castex Separate School (Midland)",
 
 
-		  "Minto-Clifford Central Public School (Minto)",
+		"Monsignor Clair Separate School (Barrie)",
 
 
-		  "Missarenda Consolidated Public School (Missanabie)",
+		"Monsignor Clancy Catholic Elementary School (Thorold)",
 
 
-		  "Mitchell Hepburn Public School (St. Thomas)",
+		"Monsignor Haller Catholic Elementary School (Kitchener)",
 
 
-		  "Mitchell Woods Public School (Guelph)",
+		"Monsignor J E Ronan Catholic School (New Tecumseth)",
 
 
-		  "M J Hobbs Senior Public School (Clarington)",
+		"Monsignor J H O'Neil School (Tillsonburg)",
 
 
-		  "Module de l'Acadie (Kingston)",
+		"Monsignor Lee Separate School (Orillia)",
 
 
-		  "Module Vanier (Kingston)",
+		"Monsignor Leo Cleary Catholic Elementary School (Clarington)",
 
 
-		  "Moffat Creek Public School (Kitchener)",
+		"Monsignor Michael O'Leary School (Bracebridge)",
 
 
-		  "Mohawk Gardens Public School (Burlington)",
+		"Monsignor Morrison Separate School (St. Thomas)",
 
 
-		  "Monck Public School (Bracebridge)",
+		"Monsignor O'Donoghue Catholic Elementary School (Peterborough)",
 
 
-		  "Monetville Public School (Monetville)",
+		"Monsignor Paul Baxter Elementary School (Ottawa)",
 
 
-		  "Mono-Amaranth Public School (Orangeville)",
+		"Monsignor Philip Coffey Catholic School (Oshawa)",
 
 
-		  "Monsignor Castex Separate School (Midland)",
+		"Monsignor Uyen Catholic School (Chatham-Kent)",
 
 
-		  "Monsignor Clair Separate School (Barrie)",
+		"Montague Public School (Smiths Falls)",
 
 
-		  "Monsignor Clancy Catholic Elementary School (Thorold)",
+		"Montclair Public School (Oakville)",
 
+		" Montcrest School (Toronto)",
+		"Montgomery Village Public School (Orangeville)",
 
-		  "Monsignor Haller Catholic Elementary School (Kitchener)",
 
+		"Montrose Junior Public School (Toronto)",
 
-		  "Monsignor J E Ronan Catholic School (New Tecumseth)",
 
+		"Moonstone Elementary School (Oro-Medonte)",
 
-		  "Monsignor J H O'Neil School (Tillsonburg)",
 
+		"Mooretown-Courtright School (St. Clair)",
 
-		  "Monsignor Lee Separate School (Orillia)",
 
+		"Moosonee Public School (Moosonee)",
 
-		  "Monsignor Leo Cleary Catholic Elementary School (Clarington)",
 
+		"Moraine Hills Public School (Richmond Hill)",
 
-		  "Monsignor Michael O'Leary School (Bracebridge)",
 
+		"Morning Glory Public School (Georgina)",
 
-		  "Monsignor Morrison Separate School (St. Thomas)",
 
+		"Morning Star Middle School (Mississauga)",
 
-		  "Monsignor O'Donoghue Catholic Elementary School (Peterborough)",
 
+		"Mornington Central Public School (Perth East)",
 
-		  "Monsignor Paul Baxter Elementary School (Ottawa)",
 
+		"Morrisburg Public School (South Dundas)",
 
-		  "Monsignor Philip Coffey Catholic School (Oshawa)",
 
+		"Morrish Public School (Toronto)",
 
-		  "Monsignor Uyen Catholic School (Chatham-Kent)",
 
+		"Morse Street Junior Public School (Toronto)",
 
-		  "Montague Public School (Smiths Falls)",
 
+		"Morton Way Public School (Brampton)",
 
-		  "Montclair Public School (Oakville)",
 
+		"Mosa Central Public School (Southwest Middlesex)",
 
-		  "Montgomery Village Public School (Orangeville)",
 
+		"Mother Cabrini Catholic School (Toronto)",
 
-		  "Montrose Junior Public School (Toronto)",
 
+		"Mother St Bride School (North Bay)",
 
-		  "Moonstone Elementary School (Oro-Medonte)",
 
+		"Mother Teresa (Brockton)",
 
-		  "Mooretown-Courtright School (St. Clair)",
 
+		"Mother Teresa Catholic (Russell)",
 
-		  "Moosonee Public School (Moosonee)",
 
+		"Mother Teresa Catholic Elementary School (St. Catharines)",
 
-		  "Moraine Hills Public School (Richmond Hill)",
 
+		"Mother Teresa Catholic Elementary School (Cambridge)",
 
-		  "Morning Glory Public School (Georgina)",
 
+		"Mother Teresa Catholic Elementary School (Oakville)",
 
-		  "Morning Star Middle School (Mississauga)",
 
+		"Mother Teresa Catholic Elementary School (Markham)",
 
-		  "Mornington Central Public School (Perth East)",
 
+		"Mother Teresa Catholic Elementary School (Clarington)",
 
-		  "Morrisburg Public School (South Dundas)",
 
+		"Mother Teresa Catholic Intermediate School (Ottawa)",
 
-		  "Morrish Public School (Toronto)",
 
+		"Mother Teresa Catholic School (Ajax)",
 
-		  "Morse Street Junior Public School (Toronto)",
 
+		"Mother Teresa Catholic School (Bradford West Gwillimbury)",
 
-		  "Morton Way Public School (Brampton)",
 
+		"Mother Teresa Catholic School (Kingston)",
 
-		  "Mosa Central Public School (Southwest Middlesex)",
 
+		"Mountain Ash Middle School (Brampton)",
 
-		  "Mother Cabrini Catholic School (Toronto)",
 
+		"Mountain View Public School (Goulais River)",
 
-		  "Mother St Bride School (North Bay)",
 
+		"Mountain View Public School (Hamilton)",
 
-		  "Mother Teresa (Brockton)",
 
+		"Mountain View Public School (Collingwood)",
 
-		  "Mother Teresa Catholic (Russell)",
 
+		"Mount Albert Public School (East Gwillimbury)",
 
-		  "Mother Teresa Catholic Elementary School (St. Catharines)",
 
+		"Mount Albion Public School (Hamilton)",
 
-		  "Mother Teresa Catholic Elementary School (Cambridge)",
 
+		"Mount Carmel Blytheswood Public School (Leamington)",
 
-		  "Mother Teresa Catholic Elementary School (Oakville)",
 
+		"Mount Hope Public School (Hamilton)",
 
-		  "Mother Teresa Catholic Elementary School (Markham)",
 
+		"Mount Joy Public School (Markham)",
 
-		  "Mother Teresa Catholic Elementary School (Clarington)",
 
+		"Mount Pleasant School (Brant)",
 
-		  "Mother Teresa Catholic Intermediate School (Ottawa)",
 
+		"Mount Pleasant Village Public School (Brampton)",
 
-		  "Mother Teresa Catholic School (Ajax)",
 
+		"Mount Royal Public School (Brampton)",
 
-		  "Mother Teresa Catholic School (Bradford West Gwillimbury)",
 
+		"Mountsfield Public School (London)",
 
-		  "Mother Teresa Catholic School (Kingston)",
 
+		"Mountview Alternative School Junior (Toronto)",
 
-		  "Mountain Ash Middle School (Brampton)",
 
+		"Mountview Junior Public School (Hamilton)",
 
-		  "Mountain View Public School (Goulais River)",
 
+		"Msgr John Corrigan Catholic School (Toronto)",
 
-		  "Mountain View Public School (Hamilton)",
 
+		"M S Hetherington Public School (Windsor)",
 
-		  "Mountain View Public School (Collingwood)",
 
+		"M T Davidson Public School (Callander)",
 
-		  "Mount Albert Public School (East Gwillimbury)",
 
+		"Muirhead Public School (Toronto)",
 
-		  "Mount Albion Public School (Hamilton)",
 
+		"Munden Park Public School (Mississauga)",
 
-		  "Mount Carmel Blytheswood Public School (Leamington)",
 
+		"Mundy's Bay Elementary Public School (Midland)",
 
-		  "Mount Hope Public School (Hamilton)",
 
+		"Munn's Public School (Oakville)",
 
-		  "Mount Joy Public School (Markham)",
 
+		"Munster Elementary School (Ottawa)",
 
-		  "Mount Pleasant School (Brant)",
 
+		"Murray Centennial Public School (Quinte West)",
 
-		  "Mount Pleasant Village Public School (Brampton)",
 
+		"Muskoka Beechgrove Public School (Gravenhurst)",
 
-		  "Mount Royal Public School (Brampton)",
 
+		"Muskoka Falls Public School (Bracebridge)",
 
-		  "Mountsfield Public School (London)",
 
+		"Mutchmor Public School (Ottawa)",
 
-		  "Mountview Alternative School Junior (Toronto)",
 
+		"M W Moore Public School (Shining Tree)",
 
-		  "Mountview Junior Public School (Hamilton)",
 
+		"Naahii Ridge Public School (Chatham-Kent)",
 
-		  "Msgr John Corrigan Catholic School (Toronto)",
 
+		"Nahani Way Public School (Mississauga)",
 
-		  "M S Hetherington Public School (Windsor)",
 
+		"Naismith Memorial Public School (Mississippi Mills)",
 
-		  "M T Davidson Public School (Callander)",
 
+		"Nakina Public School (Greenstone)",
 
-		  "Muirhead Public School (Toronto)",
 
+		"N A MacEachern Public School (Waterloo)",
 
-		  "Munden Park Public School (Mississauga)",
 
+		"Nationview Public School (North Dundas)",
 
-		  "Mundy's Bay Elementary Public School (Midland)",
 
+		"Nativity of Our Lord Catholic School (Toronto)",
 
-		  "Munn's Public School (Oakville)",
 
+		"Nelles Public School (Grimsby)",
 
-		  "Munster Elementary School (Ottawa)",
 
+		"Nellie McClung Public School (Vaughan)",
 
-		  "Murray Centennial Public School (Quinte West)",
 
+		"Nelson Mandela Park Public School (Toronto)",
 
-		  "Muskoka Beechgrove Public School (Gravenhurst)",
 
+		"Nestor Falls Public School (Sioux Narrows-Nestor Falls)",
 
-		  "Muskoka Falls Public School (Bracebridge)",
 
+		"Newburgh Public School (Stone Mills)",
 
-		  "Mutchmor Public School (Ottawa)",
 
+		"Newcastle Public School (Clarington)",
 
-		  "M W Moore Public School (Shining Tree)",
 
+		"New Central Public School (Oakville)",
 
-		  "Naahii Ridge Public School (Chatham-Kent)",
 
+		"New Dundee Public School (Wilmot)",
 
-		  "Nahani Way Public School (Mississauga)",
 
+		"New Huron Road Public School ()",
 
-		  "Naismith Memorial Public School (Mississippi Mills)",
 
+		"New Liskeard Public School (Temiskaming Shores)",
 
-		  "Nakina Public School (Greenstone)",
 
+		"New Lowell Central Public School (Clearview)",
 
-		  "N A MacEachern Public School (Waterloo)",
 
+		"New Prospect School (Dryden)",
 
-		  "Nationview Public School (North Dundas)",
 
+		"New Sarum Public School (St. Thomas)",
 
-		  "Nativity of Our Lord Catholic School (Toronto)",
 
+		"New school to open Sept. 2012 - North Ajax (Ajax)",
 
-		  "Nelles Public School (Grimsby)",
 
+		"New Stirling School ()",
 
-		  "Nellie McClung Public School (Vaughan)",
 
+		"Niagara Peninsula Children's Centre School (St. Catharines)",
 
-		  "Nelson Mandela Park Public School (Toronto)",
 
+		"Niagara Street Junior Public School (Toronto)",
 
-		  "Nestor Falls Public School (Sioux Narrows-Nestor Falls)",
 
+		"Nicholas Wilson Public School (London)",
 
-		  "Newburgh Public School (Stone Mills)",
 
+		"Nobel Public School (Mcdougall)",
 
-		  "Newcastle Public School (Clarington)",
 
+		"Nobleton Junior Public School (King)",
 
-		  "New Central Public School (Oakville)",
 
+		"Nobleton Senior Public School (King)",
 
-		  "New Dundee Public School (Wilmot)",
 
+		"Normanby Community School (West Grey)",
 
-		  "New Huron Road Public School ()",
 
+		"Norman Cook Junior Public School (Toronto)",
 
-		  "New Liskeard Public School (Temiskaming Shores)",
 
+		"Norman G. Powers Public School (Oshawa)",
 
-		  "New Lowell Central Public School (Clearview)",
 
+		"Norman Ingram Public School (Toronto)",
 
-		  "New Prospect School (Dryden)",
 
+		"Norseman Junior Middle School (Toronto)",
 
-		  "New Sarum Public School (St. Thomas)",
 
+		"North Addington Education Centre Public School (North Frontenac)",
 
-		  "New school to open Sept. 2012 - North Ajax (Ajax)",
 
+		"North Agincourt Junior Public School (Toronto)",
 
-		  "New Stirling School ()",
 
+		"North Bendale Junior Public School (Toronto)",
 
-		  "Niagara Peninsula Children's Centre School (St. Catharines)",
 
+		"Northbrae Public School (London)",
 
-		  "Niagara Street Junior Public School (Toronto)",
 
+		"North Bridlewood Junior Public School (Toronto)",
 
-		  "Nicholas Wilson Public School (London)",
 
+		"North Cavan Public School (Cavan-Monaghan)",
 
-		  "Nobel Public School (Mcdougall)",
 
+		"Northdale Central Public School (Thames Centre)",
 
-		  "Nobleton Junior Public School (King)",
 
+		"Northdale Public School (Woodstock)",
 
-		  "Nobleton Senior Public School (King)",
 
+		"North Dundas Intermediate School (North Dundas)",
 
-		  "Normanby Community School (West Grey)",
 
+		"Northeastern Elementary School (Greater Sudbury)",
 
-		  "Norman Cook Junior Public School (Toronto)",
 
+		"North Easthope Public School (Stratford)",
 
-		  "Norman G. Powers Public School (Oshawa)",
 
+		"North Elmsley Public School (Perth)",
 
-		  "Norman Ingram Public School (Toronto)",
 
+		"Northern Heights Public School (Sault Ste. Marie)",
 
-		  "Norseman Junior Middle School (Toronto)",
 
+		"Northern Lights Public School (Aurora)",
 
-		  "North Addington Education Centre Public School (North Frontenac)",
 
+		"North Gower/Marlborough Public School (Ottawa)",
 
-		  "North Agincourt Junior Public School (Toronto)",
 
+		"North Hope Central Public School (Port Hope)",
 
-		  "North Bendale Junior Public School (Toronto)",
 
+		"North Ingersoll Public School (Ingersoll)",
 
-		  "Northbrae Public School (London)",
 
+		"North Kipling Junior Middle School (Toronto)",
 
-		  "North Bridlewood Junior Public School (Toronto)",
 
+		"Northlake Woods Public School (Waterloo)",
 
-		  "North Cavan Public School (Cavan-Monaghan)",
 
+		"Northlea Elementary and Middle School (Toronto)",
 
-		  "Northdale Central Public School (Thames Centre)",
 
+		"North Meadows Elementary School (Strathroy-Caradoc)",
 
-		  "Northdale Public School (Woodstock)",
 
+		"North Norwich Public School (Norwich)",
 
-		  "North Dundas Intermediate School (North Dundas)",
 
+		"Northport Elementary School (Saugeen Shores)",
 
-		  "Northeastern Elementary School (Greater Sudbury)",
 
+		"North Preparatory Junior Public School (Toronto)",
 
-		  "North Easthope Public School (Stratford)",
 
+		"Northridge Public School (London)",
 
-		  "North Elmsley Public School (Perth)",
 
+		"North Shore Public School (Otonabee-South Monaghan)",
 
-		  "Northern Heights Public School (Sault Ste. Marie)",
 
+		"North Star Community School (Atikokan)",
 
-		  "Northern Lights Public School (Aurora)",
 
+		"North Stormont Public School (North Stormont)",
 
-		  "North Gower/Marlborough Public School (Ottawa)",
 
+		"North Trenton Public School (Quinte West)",
 
-		  "North Hope Central Public School (Port Hope)",
 
+		"Northumberland Hills Public School (Cramahe)",
 
-		  "North Ingersoll Public School (Ingersoll)",
 
+		"North Ward School (Brant)",
 
-		  "North Kipling Junior Middle School (Toronto)",
 
+		"Northwood Public School (Brampton)",
 
-		  "Northlake Woods Public School (Waterloo)",
 
+		"Northwood Public School (Windsor)",
 
-		  "Northlea Elementary and Middle School (Toronto)",
 
+		"Norway Junior Public School (Toronto)",
 
-		  "North Meadows Elementary School (Strathroy-Caradoc)",
 
+		"Nor'wester View Public School (Thunder Bay)",
 
-		  "North Norwich Public School (Norwich)",
 
+		"Norwich Public School (Norwich)",
 
-		  "Northport Elementary School (Saugeen Shores)",
 
+		"Norwood District Public School (Asphodel-Norwood)",
 
-		  "North Preparatory Junior Public School (Toronto)",
 
+		"Norwood Park Elementary School (Hamilton)",
 
-		  "Northridge Public School (London)",
 
+		"Notre Dame Catholic Elementary School (Haldimand County)",
 
-		  "North Shore Public School (Otonabee-South Monaghan)",
 
+		"Notre Dame Catholic Elementary School (Newmarket)",
 
-		  "North Star Community School (Atikokan)",
 
+		"Notre Dame Catholic Elementary School (Niagara Falls)",
 
-		  "North Stormont Public School (North Stormont)",
 
+		"Notre Dame Catholic Elementary School (Cobourg)",
 
-		  "North Trenton Public School (Quinte West)",
 
+		"Notre Dame Catholic School (Orillia)",
 
-		  "Northumberland Hills Public School (Cramahe)",
 
+		"Notre Dame Catholic School (Owen Sound)",
 
-		  "North Ward School (Brant)",
 
+		"Notre Dame Catholic School (Windsor)",
 
-		  "Northwood Public School (Brampton)",
 
+		"Notre Dame Catholic Separate School (Carleton Place)",
 
-		  "Northwood Public School (Windsor)",
 
+		"Notre-Dame-des-Écoles (Greenstone)",
 
-		  "Norway Junior Public School (Toronto)",
 
+		"Notre Dame Intermediate School (Ottawa)",
 
-		  "Nor'wester View Public School (Thunder Bay)",
 
+		"Notre Dame School (Brantford)",
 
-		  "Norwich Public School (Norwich)",
 
+		"Notre Dame Separate School (London)",
 
-		  "Norwood District Public School (Asphodel-Norwood)",
 
+		"Nottawa Elementary School (Collingwood)",
 
-		  "Norwood Park Elementary School (Hamilton)",
 
+		"Nottawasaga and Creemore Public School (Clearview)",
 
-		  "Notre Dame Catholic Elementary School (Haldimand County)",
 
+		"Nottingham Public School (Ajax)",
 
-		  "Notre Dame Catholic Elementary School (Newmarket)",
 
+		"Oakdale Park Middle School (Toronto)",
 
-		  "Notre Dame Catholic Elementary School (Niagara Falls)",
 
+		"Oakland-Scotland Public School (Brant)",
 
-		  "Notre Dame Catholic Elementary School (Cobourg)",
 
+		"Oakley Park Public School (Barrie)",
 
-		  "Notre Dame Catholic School (Orillia)",
 
+		"Oakridge Junior Public School (Toronto)",
 
-		  "Notre Dame Catholic School (Owen Sound)",
 
+		"Oakridge Public School (Mississauga)",
 
-		  "Notre Dame Catholic School (Windsor)",
 
+		"Oakridge Public School (St. Catharines)",
 
-		  "Notre Dame Catholic Separate School (Carleton Place)",
 
+		"Oak Ridges Public School (Richmond Hill)",
 
-		  "Notre-Dame-des-Écoles (Greenstone)",
 
+		"Oakwood Public School (Oakville)",
 
-		  "Notre Dame Intermediate School (Ottawa)",
 
+		"Oakwood Public School (Port Colborne)",
 
-		  "Notre Dame School (Brantford)",
 
+		"Oakwood Public School (Windsor)",
 
-		  "Notre Dame Separate School (London)",
 
+		"O'Connor Public School (Toronto)",
 
-		  "Nottawa Elementary School (Collingwood)",
 
+		"Odessa Public School (Loyalist)",
 
-		  "Nottawasaga and Creemore Public School (Clearview)",
 
+		"Ogden Community Public School (Thunder Bay)",
 
-		  "Nottingham Public School (Ajax)",
 
+		"Ogden Junior Public School (Toronto)",
 
-		  "Oakdale Park Middle School (Toronto)",
 
+		"O'Gorman Intermediate Catholic School (Timmins)",
 
-		  "Oakland-Scotland Public School (Brant)",
 
+		"Oliver Stephens Public School (Woodstock)",
 
-		  "Oakley Park Public School (Barrie)",
 
+		"O M MacKillop Public School (Richmond Hill)",
 
-		  "Oakridge Junior Public School (Toronto)",
 
+		"Oneida Central Public School (Haldimand County)",
 
-		  "Oakridge Public School (Mississauga)",
 
+		"Onondaga-Brant Public School (Brantford)",
 
-		  "Oakridge Public School (St. Catharines)",
 
+		"Ontario Public School (Thorold)",
 
-		  "Oak Ridges Public School (Richmond Hill)",
 
+		"Ontario Street Public School (Clarington)",
 
-		  "Oakwood Public School (Oakville)",
 
+		"Open Roads Public School (Dryden)",
 
-		  "Oakwood Public School (Port Colborne)",
 
+		"Orchard Park Elementary School (Orillia)",
 
-		  "Oakwood Public School (Windsor)",
 
+		"Orchard Park Public School (Niagara Falls)",
 
-		  "O'Connor Public School (Toronto)",
 
+		"Orchard Park Public School (Burlington)",
 
-		  "Odessa Public School (Loyalist)",
 
+		"Orchard Park Public School (London)",
 
-		  "Ogden Community Public School (Thunder Bay)",
 
+		"Orde Street Junior Public School (Toronto)",
 
-		  "Ogden Junior Public School (Toronto)",
 
+		"Oriole Park Junior Public School (Toronto)",
 
-		  "O'Gorman Intermediate Catholic School (Timmins)",
 
+		"Orleans Wood Elementary School (Ottawa)",
 
-		  "Oliver Stephens Public School (Woodstock)",
 
+		"Ormiston Public School (Whitby)",
 
-		  "O M MacKillop Public School (Richmond Hill)",
 
+		"Orono Public School (Clarington)",
 
-		  "Oneida Central Public School (Haldimand County)",
 
+		"Oscar Peterson Public School (Whitchurch-Stouffville)",
 
-		  "Onondaga-Brant Public School (Brantford)",
 
+		"Oscar Peterson Public School (Mississauga)",
 
-		  "Ontario Public School (Thorold)",
 
+		"Osgoode Public School (Ottawa)",
 
-		  "Ontario Street Public School (Clarington)",
 
+		"Osprey Central School (Grey Highlands)",
 
-		  "Open Roads Public School (Dryden)",
 
+		"Osprey Woods Public School (Mississauga)",
 
-		  "Orchard Park Elementary School (Orillia)",
 
+		"Ossington/Old Orchard Junior Public School (Toronto)",
 
-		  "Orchard Park Public School (Niagara Falls)",
 
+		"Otonabee Valley Public School (Peterborough)",
 
-		  "Orchard Park Public School (Burlington)",
 
+		"Ottawa Children's Treatment Centre School (Ottawa)",
 
-		  "Orchard Park Public School (London)",
 
+		"Ottawa Crescent Public School (Guelph)",
 
-		  "Orde Street Junior Public School (Toronto)",
 
+		"Otterville Public School (Norwich)",
 
-		  "Oriole Park Junior Public School (Toronto)",
 
+		"Our Lady Help of Christians Catholic Elementary School (Richmond Hill)",
 
-		  "Orleans Wood Elementary School (Ottawa)",
 
+		"Our Lady Immaculate School (Strathroy-Caradoc)",
 
-		  "Ormiston Public School (Whitby)",
 
+		"Our Lady of Charity Catholic Elementary School (Thunder Bay)",
 
-		  "Orono Public School (Clarington)",
 
+		"Our Lady of Fatima Catholic Elementary School (Milton)",
 
-		  "Oscar Peterson Public School (Whitchurch-Stouffville)",
 
+		"Our Lady of Fatima Catholic Elementary School (Grimsby)",
 
-		  "Oscar Peterson Public School (Mississauga)",
 
+		"Our Lady of Fatima Catholic Elementary School (Cambridge)",
 
-		  "Osgoode Public School (Ottawa)",
 
+		"Our Lady of Fatima Catholic Elementary School (St. Catharines)",
 
-		  "Osprey Central School (Grey Highlands)",
 
+		"Our Lady of Fatima Catholic Elementary School (Vaughan)",
 
-		  "Osprey Woods Public School (Mississauga)",
 
+		"Our Lady of Fatima Catholic School (Belleville)",
 
-		  "Ossington/Old Orchard Junior Public School (Toronto)",
 
+		"Our Lady of Fatima Catholic School (Elliot Lake)",
 
-		  "Otonabee Valley Public School (Peterborough)",
 
+		"Our Lady of Fatima Catholic School (Toronto)",
 
-		  "Ottawa Children's Treatment Centre School (Ottawa)",
 
+		"Our Lady of Fatima Catholic School (Chatham-Kent)",
 
-		  "Ottawa Crescent Public School (Guelph)",
 
+		"Our Lady of Fatima Catholic School (Chapleau)",
 
-		  "Otterville Public School (Norwich)",
 
+		"Our Lady of Fatima Elementary School (Ottawa)",
 
-		  "Our Lady Help of Christians Catholic Elementary School (Richmond Hill)",
 
+		"Our Lady of Fatima School (Brampton)",
 
-		  "Our Lady Immaculate School (Strathroy-Caradoc)",
 
+		"Our Lady of Fatima School (Norfolk County)",
 
-		  "Our Lady of Charity Catholic Elementary School (Thunder Bay)",
 
+		"Our Lady of Fatima Separate School (Renfrew)",
 
-		  "Our Lady of Fatima Catholic Elementary School (Milton)",
 
+		"Our Lady of Fatima Separate School (Greenstone)",
 
-		  "Our Lady of Fatima Catholic Elementary School (Grimsby)",
 
+		"Our Lady of Fatima Separate School (North Bay)",
 
-		  "Our Lady of Fatima Catholic Elementary School (Cambridge)",
 
+		"Our Lady of Good Counsel Catholic Elementary School (East Gwillimbury)",
 
-		  "Our Lady of Fatima Catholic Elementary School (St. Catharines)",
 
+		"Our Lady of Good Counsel Separate School (South Stormont)",
 
-		  "Our Lady of Fatima Catholic Elementary School (Vaughan)",
 
+		"Our Lady of Good Voyage Catholic School (Mississauga)",
 
-		  "Our Lady of Fatima Catholic School (Belleville)",
 
+		"Our Lady of Grace Catholic Elementary School (Aurora)",
 
-		  "Our Lady of Fatima Catholic School (Elliot Lake)",
 
+		"Our Lady of Grace Catholic Elementary School (Kitchener)",
 
-		  "Our Lady of Fatima Catholic School (Toronto)",
 
+		"Our Lady of Grace Catholic School (Toronto)",
 
-		  "Our Lady of Fatima Catholic School (Chatham-Kent)",
 
+		"Our Lady of Grace School (Essa)",
 
-		  "Our Lady of Fatima Catholic School (Chapleau)",
 
+		"Our Lady of Grace Separate School (Whitewater Region)",
 
-		  "Our Lady of Fatima Elementary School (Ottawa)",
 
+		"Our Lady of Guadalupe Catholic School (Toronto)",
 
-		  "Our Lady of Fatima School (Brampton)",
 
+		"Our Lady of Hope Catholic Elementary School (Richmond Hill)",
 
-		  "Our Lady of Fatima School (Norfolk County)",
 
+		"Our Lady of La Salette Separate School (Norfolk County)",
 
-		  "Our Lady of Fatima Separate School (Renfrew)",
 
+		"Our Lady of Lourdes Catholic Elementary School (Waterloo)",
 
-		  "Our Lady of Fatima Separate School (Greenstone)",
 
+		"Our Lady of Lourdes Catholic Elementary School (Brampton)",
 
-		  "Our Lady of Fatima Separate School (North Bay)",
 
+		"Our Lady of Lourdes Catholic School (Sault Ste. Marie)",
 
-		  "Our Lady of Good Counsel Catholic Elementary School (East Gwillimbury)",
 
+		"Our Lady of Lourdes Catholic School (Toronto)",
 
-		  "Our Lady of Good Counsel Separate School (South Stormont)",
 
+		"Our Lady of Lourdes Catholic School (Windsor)",
 
-		  "Our Lady of Good Voyage Catholic School (Mississauga)",
 
+		"Our Lady of Lourdes Catholic School (Kingston)",
 
-		  "Our Lady of Grace Catholic Elementary School (Aurora)",
 
+		"Our Lady of Lourdes French Immersion Catholic School (Elliot Lake)",
 
-		  "Our Lady of Grace Catholic Elementary School (Kitchener)",
 
+		"Our Lady of Lourdes School (Manitouwadge)",
 
-		  "Our Lady of Grace Catholic School (Toronto)",
 
+		"Our Lady of Lourdes Separate School (Middlesex Centre)",
 
-		  "Our Lady of Grace School (Essa)",
 
+		"Our Lady of Lourdes Separate School (Springwater)",
 
-		  "Our Lady of Grace Separate School (Whitewater Region)",
 
+		"Our Lady of Lourdes Separate School (Hamilton)",
 
-		  "Our Lady of Guadalupe Catholic School (Toronto)",
 
+		"Our Lady of Lourdes Separate School (Pembroke)",
 
-		  "Our Lady of Hope Catholic Elementary School (Richmond Hill)",
 
+		"Our Lady of Mercy Catholic School (Bancroft)",
 
-		  "Our Lady of La Salette Separate School (Norfolk County)",
 
+		"Our Lady of Mercy Elementary School (Mississauga)",
 
-		  "Our Lady of Lourdes Catholic Elementary School (Waterloo)",
 
+		"Our Lady of Mercy Separate School (Georgian Bay)",
 
-		  "Our Lady of Lourdes Catholic Elementary School (Brampton)",
 
+		"Our Lady of Mount Carmel (Hamilton)",
 
-		  "Our Lady of Lourdes Catholic School (Sault Ste. Marie)",
 
+		"Our Lady of Mount Carmel Catholic Elementary School (Niagara Falls)",
 
-		  "Our Lady of Lourdes Catholic School (Toronto)",
 
+		"Our Lady of Mount Carmel Catholic School (Loyalist)",
 
-		  "Our Lady of Lourdes Catholic School (Windsor)",
 
+		"Our Lady of Mount Carmel Catholic School (Windsor)",
 
-		  "Our Lady of Lourdes Catholic School (Kingston)",
 
+		"Our Lady of Mount Carmel Elementary School (Ottawa)",
 
-		  "Our Lady of Lourdes French Immersion Catholic School (Elliot Lake)",
 
+		"Our Lady of Mt Carmel School (Bluewater)",
 
-		  "Our Lady of Lourdes School (Manitouwadge)",
 
+		"Our Lady of Peace (Hamilton)",
 
-		  "Our Lady of Lourdes Separate School (Middlesex Centre)",
 
+		"Our Lady of Peace Catholic Elementary School (Vaughan)",
 
-		  "Our Lady of Lourdes Separate School (Springwater)",
 
+		"Our Lady of Peace Catholic School (Toronto)",
 
-		  "Our Lady of Lourdes Separate School (Hamilton)",
 
+		"Our Lady of Peace Elementary School (Ottawa)",
 
-		  "Our Lady of Lourdes Separate School (Pembroke)",
 
+		"Our Lady of Peace School (Oakville)",
 
-		  "Our Lady of Mercy Catholic School (Bancroft)",
 
+		"Our Lady of Peace School (Brampton)",
 
-		  "Our Lady of Mercy Elementary School (Mississauga)",
 
+		"Our Lady of Perpetual Help Catholic School (Windsor)",
 
-		  "Our Lady of Mercy Separate School (Georgian Bay)",
 
+		"Our Lady of Perpetual Help Catholic School (Toronto)",
 
-		  "Our Lady of Mount Carmel (Hamilton)",
 
+		"Our Lady of Providence Catholic Elementary School (Brantford)",
 
-		  "Our Lady of Mount Carmel Catholic Elementary School (Niagara Falls)",
 
+		"Our Lady of Providence Elementary School (Brampton)",
 
-		  "Our Lady of Mount Carmel Catholic School (Loyalist)",
 
+		"Our Lady of Sorrows Catholic School (Toronto)",
 
-		  "Our Lady of Mount Carmel Catholic School (Windsor)",
 
+		"Our Lady of Sorrows Separate School (Petawawa)",
 
-		  "Our Lady of Mount Carmel Elementary School (Ottawa)",
 
+		"Our Lady of Sorrows Separate School (West Nipissing)",
 
-		  "Our Lady of Mt Carmel School (Bluewater)",
 
+		"Our Lady of the Annunciation Catholic Elementary School (Richmond Hill)",
 
-		  "Our Lady of Peace (Hamilton)",
 
+		"Our Lady of the Annunciation Catholic School (Lakeshore)",
 
-		  "Our Lady of Peace Catholic Elementary School (Vaughan)",
 
+		"Our Lady of the Assumption Catholic School (Toronto)",
 
-		  "Our Lady of Peace Catholic School (Toronto)",
 
+		"Our Lady of the Assumption Separate School (Hamilton)",
 
-		  "Our Lady of Peace Elementary School (Ottawa)",
 
+		"Our Lady of the Assumption Separate School (Clearview)",
 
-		  "Our Lady of Peace School (Oakville)",
 
+		"Our Lady of the Bay Catholic School (Pickering)",
 
-		  "Our Lady of Peace School (Brampton)",
 
+		"Our Lady of the Lake Catholic Elementary School (Georgina)",
 
-		  "Our Lady of Perpetual Help Catholic School (Windsor)",
 
+		"Our Lady of the Rosary Catholic Elementary School (Vaughan)",
 
-		  "Our Lady of Perpetual Help Catholic School (Toronto)",
 
+		"Our Lady of the Way (Morley)",
 
-		  "Our Lady of Providence Catholic Elementary School (Brantford)",
 
+		"Our Lady of Victory Catholic Elementary School (Fort Erie)",
 
-		  "Our Lady of Providence Elementary School (Brampton)",
 
+		"Our Lady of Victory Catholic School (Toronto)",
 
-		  "Our Lady of Sorrows Catholic School (Toronto)",
 
+		"Our Lady of Victory Elementary School (Ottawa)",
 
-		  "Our Lady of Sorrows Separate School (Petawawa)",
 
+		"Our Lady of Victory School (Milton)",
 
-		  "Our Lady of Sorrows Separate School (West Nipissing)",
 
+		"Our Lady of Wisdom Catholic School (Toronto)",
 
-		  "Our Lady of the Annunciation Catholic Elementary School (Richmond Hill)",
 
+		"Our Lady of Wisdom Elementary School (Ottawa)",
 
-		  "Our Lady of the Annunciation Catholic School (Lakeshore)",
 
+		"Owen Public School (Toronto)",
 
-		  "Our Lady of the Assumption Catholic School (Toronto)",
 
+		"Owenwood Public School (Mississauga)",
 
-		  "Our Lady of the Assumption Separate School (Hamilton)",
 
+		"Oxbow Public School (Middlesex Centre)",
 
-		  "Our Lady of the Assumption Separate School (Clearview)",
 
+		"Oxford on Rideau Public School (North Grenville)",
 
-		  "Our Lady of the Bay Catholic School (Pickering)",
 
+		"Paisley Central School (Arran-Elderslie)",
 
-		  "Our Lady of the Lake Catholic Elementary School (Georgina)",
 
+		"Paisley Road Public School (Guelph)",
 
-		  "Our Lady of the Rosary Catholic Elementary School (Vaughan)",
 
+		"Pakenham Public School (Mississippi Mills)",
 
-		  "Our Lady of the Way (Morley)",
 
+		"Palermo Public School (Oakville)",
 
-		  "Our Lady of Victory Catholic Elementary School (Fort Erie)",
 
+		"Palgrave Public School (Caledon)",
 
-		  "Our Lady of Victory Catholic School (Toronto)",
 
+		"Palmer Rapids Public School (Brudenell, Lyndoch And Raglan)",
 
-		  "Our Lady of Victory Elementary School (Ottawa)",
 
+		"Palmerston Avenue Junior Public School (Toronto)",
 
-		  "Our Lady of Victory School (Milton)",
 
+		"Palmerston Public School (Minto)",
 
-		  "Our Lady of Wisdom Catholic School (Toronto)",
 
+		"Pape Avenue Junior Public School (Toronto)",
 
-		  "Our Lady of Wisdom Elementary School (Ottawa)",
 
+		"Paris Central Public School (Brant)",
 
-		  "Owen Public School (Toronto)",
 
+		"Park Avenue Public School (East Gwillimbury)",
 
-		  "Owenwood Public School (Mississauga)",
 
+		"Parkdale Junior and Senior Public School (Toronto)",
 
-		  "Oxbow Public School (Middlesex Centre)",
 
+		"Park Dale Public School (Belleville)",
 
-		  "Oxford on Rideau Public School (North Grenville)",
 
+		"Parkdale School (Hamilton)",
 
-		  "Paisley Central School (Arran-Elderslie)",
 
+		"Parkfield Junior School (Toronto)",
 
-		  "Paisley Road Public School (Guelph)",
 
+		"Parkhill-West Williams School (North Middlesex)",
 
-		  "Pakenham Public School (Mississippi Mills)",
 
+		"Parkinson Centennial School (Orangeville)",
 
-		  "Palermo Public School (Oakville)",
 
+		"Parkland Public School (Markham)",
 
-		  "Palgrave Public School (Caledon)",
 
+		"Parkland Public School (Sault Ste. Marie)",
 
-		  "Palmer Rapids Public School (Brudenell, Lyndoch And Raglan)",
 
+		"Park Lane Public School (Toronto)",
 
-		  "Palmerston Avenue Junior Public School (Toronto)",
 
+		"Park Lawn Junior and Middle School (Toronto)",
 
-		  "Palmerston Public School (Minto)",
 
+		"Park Manor Public School (Woolwich)",
 
-		  "Pape Avenue Junior Public School (Toronto)",
 
+		"Park Public School (Grimsby)",
 
-		  "Paris Central Public School (Brant)",
 
+		"Park Public School (Halton Hills)",
 
-		  "Park Avenue Public School (East Gwillimbury)",
 
+		"Parkside Elementary School (Toronto)",
 
-		  "Parkdale Junior and Senior Public School (Toronto)",
 
+		"Parkview Public School (Middlesex Centre)",
 
-		  "Park Dale Public School (Belleville)",
 
+		"Parkview Public School (Windsor)",
 
-		  "Parkdale School (Hamilton)",
 
+		"Parkview Public School (Markham)",
 
-		  "Parkfield Junior School (Toronto)",
 
+		"Parkview Public School (Kawartha Lakes)",
 
-		  "Parkhill-West Williams School (North Middlesex)",
 
+		"Parkway Public School (Brampton)",
 
-		  "Parkinson Centennial School (Orangeville)",
 
+		"Parkway Public School (Cambridge)",
 
-		  "Parkland Public School (Markham)",
 
+		"Parliament Oak Public School (Niagara-On-The-Lake)",
 
-		  "Parkland Public School (Sault Ste. Marie)",
 
+		"Parnall Public School (St. Catharines)",
 
-		  "Park Lane Public School (Toronto)",
 
+		"Paul A Fisher Public School (Burlington)",
 
-		  "Park Lawn Junior and Middle School (Toronto)",
 
+		"Pauline Johnson Junior Public School (Toronto)",
 
-		  "Park Manor Public School (Woolwich)",
 
+		"Pauline Johnson Public School (Hamilton)",
 
-		  "Park Public School (Grimsby)",
 
+		"Pauline Johnson Public School (Burlington)",
 
-		  "Park Public School (Halton Hills)",
 
+		"Pauline Junior Public School (Toronto)",
 
-		  "Parkside Elementary School (Toronto)",
 
+		"Pauline Vanier Catholic Elementary School (Brampton)",
 
-		  "Parkview Public School (Middlesex Centre)",
 
+		"Peel Alternative - North Elementary (Brampton)",
 
-		  "Parkview Public School (Windsor)",
 
+		"Peel Alternative - South Elementary (Mississauga)",
 
-		  "Parkview Public School (Markham)",
 
+		"Peel Alternative - West Elementary (Mississauga)",
 
-		  "Parkview Public School (Kawartha Lakes)",
 
+		"Pelee Island Public School (Pelee)",
 
-		  "Parkway Public School (Brampton)",
 
+		"Pelham Centre Public School (Pelham)",
 
-		  "Parkway Public School (Cambridge)",
 
+		"Pelmo Park Public School (Toronto)",
 
-		  "Parliament Oak Public School (Niagara-On-The-Lake)",
 
+		"P.E. McGibbon Public School (Sarnia)",
 
-		  "Parnall Public School (St. Catharines)",
 
+		"Peninsula Shores District School (South Bruce Peninsula)",
 
-		  "Paul A Fisher Public School (Burlington)",
 
+		"Percy Centennial Public School (Trent Hills)",
 
-		  "Pauline Johnson Junior Public School (Toronto)",
 
+		"Percy P McCallum Public School (Windsor)",
 
-		  "Pauline Johnson Public School (Hamilton)",
 
+		"Percy Williams Junior Public School (Toronto)",
 
-		  "Pauline Johnson Public School (Burlington)",
 
+		"Perth Avenue Junior Public School (Toronto)",
 
-		  "Pauline Junior Public School (Toronto)",
 
+		"Perth Road Public School (South Frontenac)",
 
-		  "Pauline Vanier Catholic Elementary School (Brampton)",
 
+		"Peter Secor Junior Public School (Toronto)",
 
-		  "Peel Alternative - North Elementary (Brampton)",
 
+		"Pheasant Run Public School (Mississauga)",
 
-		  "Peel Alternative - South Elementary (Mississauga)",
 
+		"Phelps Central School (North Bay)",
 
-		  "Peel Alternative - West Elementary (Mississauga)",
+		"Pickering College (Newmarket)",
+		"Pierre Berton Public School (Vaughan)",
 
 
-		  "Pelee Island Public School (Pelee)",
+		"Pierre Elliott Trudeau French Immersion Public School (St. Thomas)",
 
 
-		  "Pelham Centre Public School (Pelham)",
+		"Pierre Elliott Trudeau Public School (Oshawa)",
 
 
-		  "Pelmo Park Public School (Toronto)",
+		"Pierre Laporte Middle School (Toronto)",
 
 
-		  "P.E. McGibbon Public School (Sarnia)",
+		"Pilgrim Wood Public School (Oakville)",
 
 
-		  "Peninsula Shores District School (South Bruce Peninsula)",
+		"Pinecrest Memorial Elementary School (Prince Edward County)",
 
 
-		  "Percy Centennial Public School (Trent Hills)",
+		"Pinecrest Public School (Greater Sudbury)",
 
 
-		  "Percy P McCallum Public School (Windsor)",
+		"Pinecrest Public School (Petawawa)",
 
 
-		  "Percy Williams Junior Public School (Toronto)",
+		"Pinecrest Public School (Timmins)",
 
 
-		  "Perth Avenue Junior Public School (Toronto)",
+		"Pinecrest Public School (Ottawa)",
 
 
-		  "Perth Road Public School (South Frontenac)",
+		"Pine Glen Public School (Huntsville)",
 
 
-		  "Peter Secor Junior Public School (Toronto)",
+		"Pine Grove Public School (Oakville)",
 
 
-		  "Pheasant Run Public School (Mississauga)",
+		"Pine Grove Public School (St. Catharines)",
 
 
-		  "Phelps Central School (North Bay)",
+		"Pine Grove Public School (Vaughan)",
 
 
-		  "Pierre Berton Public School (Vaughan)",
+		"Pineland Public School (Burlington)",
 
 
-		  "Pierre Elliott Trudeau French Immersion Public School (St. Thomas)",
+		"Pine River Elementary School (Essa)",
 
 
-		  "Pierre Elliott Trudeau Public School (Oshawa)",
+		"Pineview Public School (Athens)",
 
 
-		  "Pierre Laporte Middle School (Toronto)",
+		"Pineview Public School (Halton Hills)",
 
 
-		  "Pilgrim Wood Public School (Oakville)",
+		"Pine View Public School (Pembroke)",
 
 
-		  "Pinecrest Memorial Elementary School (Prince Edward County)",
+		"Pineway Public School (Toronto)",
 
 
-		  "Pinecrest Public School (Greater Sudbury)",
+		"Pinewood Public School (Sault Ste. Marie)",
 
 
-		  "Pinecrest Public School (Petawawa)",
+		"Pioneer Park Public School (Kitchener)",
 
 
-		  "Pinecrest Public School (Timmins)",
+		"Pius XII Catholic School (Greater Sudbury)",
 
 
-		  "Pinecrest Public School (Ottawa)",
+		"Plainville Public School (Hamilton)",
 
 
-		  "Pine Glen Public School (Huntsville)",
+		"Plantagenet Public School (Alfred And Plantagenet)",
 
 
-		  "Pine Grove Public School (Oakville)",
+		"Plattsville & District Public School (Blandford-Blenheim)",
 
 
-		  "Pine Grove Public School (St. Catharines)",
+		"Pleasant Corners Public School (Champlain)",
 
 
-		  "Pine Grove Public School (Vaughan)",
+		"Pleasant Park Public School (Ottawa)",
 
 
-		  "Pineland Public School (Burlington)",
+		"Pleasant Public School (Toronto)",
 
 
-		  "Pine River Elementary School (Essa)",
+		"Pleasant View Junior High School (Toronto)",
 
 
-		  "Pineview Public School (Athens)",
+		"Pleasantville Public School (Richmond Hill)",
 
 
-		  "Pineview Public School (Halton Hills)",
+		"Plowman's Park Public School (Mississauga)",
 
 
-		  "Pine View Public School (Pembroke)",
+		"P. L. Robertson Public School (Milton)",
 
 
-		  "Pineway Public School (Toronto)",
+		"Plum Tree Park Public School (Mississauga)",
 
 
-		  "Pinewood Public School (Sault Ste. Marie)",
+		"Plymouth Public School (Welland)",
 
 
-		  "Pioneer Park Public School (Kitchener)",
+		"Polson Park Public School (Kingston)",
 
 
-		  "Pius XII Catholic School (Greater Sudbury)",
+		"Ponsonby Public School (Guelph)",
 
 
-		  "Plainville Public School (Hamilton)",
+		"Pope John Paul II (Kenora)",
 
 
-		  "Plantagenet Public School (Alfred And Plantagenet)",
+		"Pope John Paul II Catholic Elementary School (Oakville)",
 
 
-		  "Plattsville &amp; District Public School (Blandford-Blenheim)",
+		"Pope John Paul II Catholic Elementary School (Kawartha Lakes)",
 
 
-		  "Pleasant Corners Public School (Champlain)",
+		"Pope John Paul II Catholic Elementary School (Kitchener)",
 
 
-		  "Pleasant Park Public School (Ottawa)",
+		"Pope John Paul II Elementary School (Thunder Bay)",
 
 
-		  "Pleasant Public School (Toronto)",
+		"Pope John Paul II Regional Elementary School (Clarence-Rockland)",
 
 
-		  "Pleasant View Junior High School (Toronto)",
+		"Pope John Paul II Separate School (Caledon)",
 
 
-		  "Pleasantville Public School (Richmond Hill)",
+		"Pope John Paul II Separate School (Barrie)",
 
 
-		  "Plowman's Park Public School (Mississauga)",
+		"Pope John XXIII Elementary School (Ottawa)",
 
 
-		  "P. L. Robertson Public School (Milton)",
+		"Pope Paul Catholic School (Toronto)",
 
 
-		  "Plum Tree Park Public School (Mississauga)",
+		"Poplar Bank Public School (Newmarket)",
 
 
-		  "Plymouth Public School (Welland)",
+		"Poplar Road Junior Public School (Toronto)",
 
 
-		  "Polson Park Public School (Kingston)",
+		"Portage Trail Community Junior School (Toronto)",
 
 
-		  "Ponsonby Public School (Guelph)",
+		"Portage Trail Community Middle School (Toronto)",
 
 
-		  "Pope John Paul II (Kenora)",
+		"Portage View Public School (Barrie)",
 
 
-		  "Pope John Paul II Catholic Elementary School (Oakville)",
+		"Port Burwell Public School (Bayham)",
 
 
-		  "Pope John Paul II Catholic Elementary School (Kawartha Lakes)",
+		"Port Dover Elementary Composite School (Norfolk County)",
 
 
-		  "Pope John Paul II Catholic Elementary School (Kitchener)",
+		"Port Elgin-Saugeen Central School (Saugeen Shores)",
 
 
-		  "Pope John Paul II Elementary School (Thunder Bay)",
+		"Port McNicoll Public School (Tay)",
 
 
-		  "Pope John Paul II Regional Elementary School (Clarence-Rockland)",
+		"Port Rowan Public School (Norfolk County)",
 
 
-		  "Pope John Paul II Separate School (Caledon)",
+		"Port Royal Public School (Toronto)",
 
 
-		  "Pope John Paul II Separate School (Barrie)",
+		"Port Stanley Public School (Central Elgin)",
 
 
-		  "Pope John XXIII Elementary School (Ottawa)",
+		"Port Weller Public School (St. Catharines)",
 
 
-		  "Pope Paul Catholic School (Toronto)",
+		"Post's Corners Public School (Oakville)",
 
 
-		  "Poplar Bank Public School (Newmarket)",
+		"Power Glen School (St. Catharines)",
 
 
-		  "Poplar Road Junior Public School (Toronto)",
+		"Precious Blood Catholic School (Toronto)",
 
 
-		  "Portage Trail Community Junior School (Toronto)",
+		"Precious Blood Separate School (South Huron)",
 
 
-		  "Portage Trail Community Middle School (Toronto)",
+		"Presteign Heights Elementary School (Toronto)",
 
 
-		  "Portage View Public School (Barrie)",
+		"Preston Public School (Cambridge)",
 
 
-		  "Port Burwell Public School (Bayham)",
+		"Primrose Elementary School (Shelburne)",
 
 
-		  "Port Dover Elementary Composite School (Norfolk County)",
+		"Prince Albert Public School (Scugog)",
 
 
-		  "Port Elgin-Saugeen Central School (Saugeen Shores)",
+		"Prince Andrew Public School (Burlington)",
 
 
-		  "Port McNicoll Public School (Tay)",
+		"Prince Charles Public School (Brantford)",
 
 
-		  "Port Rowan Public School (Norfolk County)",
+		"Prince Charles Public School (South Frontenac)",
 
 
-		  "Port Royal Public School (Toronto)",
+		"Prince Charles Public School (Quinte West)",
 
 
-		  "Port Stanley Public School (Central Elgin)",
+		"Prince Charles Public School (Belleville)",
 
 
-		  "Port Weller Public School (St. Catharines)",
+		"Prince Charles Public School (London)",
 
 
-		  "Post's Corners Public School (Oakville)",
+		"Prince Charles Public School (Newmarket)",
 
 
-		  "Power Glen School (St. Catharines)",
+		"Prince Edward Public School (Windsor)",
 
 
-		  "Precious Blood Catholic School (Toronto)",
+		"Prince of Peace Catholic Elementary School (Georgina)",
 
 
-		  "Precious Blood Separate School (South Huron)",
+		"Prince of Peace Catholic School (Toronto)",
 
 
-		  "Presteign Heights Elementary School (Toronto)",
+		"Prince of Peace Elementary School (Ottawa)",
 
 
-		  "Preston Public School (Cambridge)",
+		"Prince of Peace School (Essa)",
 
 
-		  "Primrose Elementary School (Shelburne)",
+		"Prince of Wales Elementary Public School (Hamilton)",
 
 
-		  "Prince Albert Public School (Scugog)",
+		"Prince of Wales Public School (Peterborough)",
 
 
-		  "Prince Andrew Public School (Burlington)",
+		"Prince of Wales Public School (Thorold)",
 
 
-		  "Prince Charles Public School (Brantford)",
+		"Prince of Wales Public School (St. Catharines)",
 
 
-		  "Prince Charles Public School (South Frontenac)",
+		"Prince of Wales Public School (Belleville)",
 
 
-		  "Prince Charles Public School (Quinte West)",
+		"Prince of Wales Public School (Brockville)",
 
 
-		  "Prince Charles Public School (Belleville)",
+		"Prince Philip Junior Public School (Hamilton)",
 
 
-		  "Prince Charles Public School (London)",
+		"Prince Philip Public School (St. Catharines)",
 
 
-		  "Prince Charles Public School (Newmarket)",
+		"Prince Philip Public School (Niagara Falls)",
 
 
-		  "Prince Edward Public School (Windsor)",
+		"Princess AnneFrench Immersion Public School (London)",
 
 
-		  "Prince of Peace Catholic Elementary School (Georgina)",
+		"Princess Anne Public School (Greater Sudbury)",
 
 
-		  "Prince of Peace Catholic School (Toronto)",
+		"Princess Elizabeth Public School (Brantford)",
 
 
-		  "Prince of Peace Elementary School (Ottawa)",
+		"Princess Elizabeth Public School (Orangeville)",
 
 
-		  "Prince of Peace School (Essa)",
+		"Princess Elizabeth Public School (Windsor)",
 
 
-		  "Prince of Wales Elementary Public School (Hamilton)",
+		"Princess Elizabeth Public School (London)",
 
 
-		  "Prince of Wales Public School (Peterborough)",
+		"Princess Elizabeth Public School (Welland)",
 
 
-		  "Prince of Wales Public School (Thorold)",
+		"Princess Margaret Junior School (Toronto)",
 
 
-		  "Prince of Wales Public School (St. Catharines)",
+		"Princess Margaret Public School (Orangeville)",
 
 
-		  "Prince of Wales Public School (Belleville)",
+		"Princess Margaret Public School (Niagara Falls)",
 
 
-		  "Prince of Wales Public School (Brockville)",
+		"Pringdale Gardens Junior Public School (Toronto)",
 
 
-		  "Prince Philip Junior Public School (Hamilton)",
+		"Pringle Creek Public School (Whitby)",
 
 
-		  "Prince Philip Public School (St. Catharines)",
+		"Priory Park Public School (Guelph)",
 
 
-		  "Prince Philip Public School (Niagara Falls)",
+		"Prueter Public School (Kitchener)",
 
 
-		  "Princess AnneFrench Immersion Public School (London)",
+		"Quaker Road Public School (Welland)",
 
 
-		  "Princess Anne Public School (Greater Sudbury)",
+		"Quaker Village Public School (Uxbridge)",
 
 
-		  "Princess Elizabeth Public School (Brantford)",
+		"Queen Alexandra Middle School (Toronto)",
 
 
-		  "Princess Elizabeth Public School (Orangeville)",
+		"Queen Elizabeth II C Public School (Chatham-Kent)",
 
 
-		  "Princess Elizabeth Public School (Windsor)",
+		"Queen Elizabeth II P Public School (Petrolia)",
 
 
-		  "Princess Elizabeth Public School (London)",
+		"Queen Elizabeth II Public School (Greater Sudbury)",
 
 
-		  "Princess Elizabeth Public School (Welland)",
+		"Queen Elizabeth II School (Sarnia)",
 
 
-		  "Princess Margaret Junior School (Toronto)",
+		"Queen Elizabeth Public School (Kitchener)",
 
 
-		  "Princess Margaret Public School (Orangeville)",
+		"Queen Elizabeth Public School (Leamington)",
 
 
-		  "Princess Margaret Public School (Niagara Falls)",
+		"Queen Elizabeth Public School (Peterborough)",
 
 
-		  "Pringdale Gardens Junior Public School (Toronto)",
+		"Queen Elizabeth Public School (Prince Edward County)",
 
 
-		  "Pringle Creek Public School (Whitby)",
+		"Queen Elizabeth Public School (Renfrew)",
 
 
-		  "Priory Park Public School (Guelph)",
+		"Queen Elizabeth Public School (Sault Ste. Marie)",
 
 
-		  "Prueter Public School (Kitchener)",
+		"Queen Elizabeth Public School (Quinte West)",
 
 
-		  "Quaker Road Public School (Welland)",
+		"Queen Elizabeth Public School (Belleville)",
 
 
-		  "Quaker Village Public School (Uxbridge)",
+		"Queen Elizabeth Public School (Oshawa)",
 
 
-		  "Queen Alexandra Middle School (Toronto)",
+		"Queen Elizabeth Public School (Ottawa)",
 
 
-		  "Queen Elizabeth II C Public School (Chatham-Kent)",
+		"Queen Elizabeth Senior Public School (Mississauga)",
 
 
-		  "Queen Elizabeth II P Public School (Petrolia)",
+		"Queen Mary Public School (Hamilton)",
 
 
-		  "Queen Elizabeth II Public School (Greater Sudbury)",
+		"Queen Mary Public School (Peterborough)",
 
 
-		  "Queen Elizabeth II School (Sarnia)",
+		"Queen Mary Public School (St. Catharines)",
 
 
-		  "Queen Elizabeth Public School (Kitchener)",
+		"Queen Mary Street Public School (Ottawa)",
 
 
-		  "Queen Elizabeth Public School (Leamington)",
+		"Queen of Heaven School (Mississauga)",
 
 
-		  "Queen Elizabeth Public School (Peterborough)",
+		"Queen of Peace Catholic School (Leamington)",
 
 
-		  "Queen Elizabeth Public School (Prince Edward County)",
+		"Queensdale School (Hamilton)",
 
 
-		  "Queen Elizabeth Public School (Renfrew)",
+		"Queensmount Public School (Kitchener)",
 
 
-		  "Queen Elizabeth Public School (Sault Ste. Marie)",
+		"Queen's Rangers Public School (Hamilton)",
 
 
-		  "Queen Elizabeth Public School (Quinte West)",
+		"Queenston Drive Public School (Mississauga)",
 
 
-		  "Queen Elizabeth Public School (Belleville)",
+		"Queen Street Public School (Brampton)",
 
 
-		  "Queen Elizabeth Public School (Oshawa)",
+		"Queensville Public School (East Gwillimbury)",
 
 
-		  "Queen Elizabeth Public School (Ottawa)",
+		"Queen Victoria Elementary Public School (Hamilton)",
 
 
-		  "Queen Elizabeth Senior Public School (Mississauga)",
+		"Queen Victoria Junior Public School (Toronto)",
 
 
-		  "Queen Mary Public School (Hamilton)",
+		"Queen Victoria Public School (Windsor)",
 
 
-		  "Queen Mary Public School (Peterborough)",
+		"Queen Victoria Public School (Kawartha Lakes)",
 
 
-		  "Queen Mary Public School (St. Catharines)",
+		"Queen Victoria School (Belleville)",
 
 
-		  "Queen Mary Street Public School (Ottawa)",
+		"Quest Alternative School Senior (Toronto)",
 
 
-		  "Queen of Heaven School (Mississauga)",
+		"Rainham Central School (Haldimand County)",
 
 
-		  "Queen of Peace Catholic School (Leamington)",
+		"Rama Central Public School (Severn)",
 
 
-		  "Queensdale School (Hamilton)",
+		"Ramer Wood Public School (Markham)",
 
 
-		  "Queensmount Public School (Kitchener)",
+		"Ranchdale Public School (Toronto)",
 
 
-		  "Queen's Rangers Public School (Hamilton)",
+		"Randall Public School (Markham)",
 
 
-		  "Queenston Drive Public School (Mississauga)",
+		"R A Riddell Public School (Hamilton)",
 
 
-		  "Queen Street Public School (Brampton)",
+		"Rawlinson Community School (Toronto)",
 
 
-		  "Queensville Public School (East Gwillimbury)",
+		"Ray Lewis (Elementary) School (Hamilton)",
 
 
-		  "Queen Victoria Elementary Public School (Hamilton)",
+		"Ray Underhill Public School (Mississauga)",
 
 
-		  "Queen Victoria Junior Public School (Toronto)",
+		"Red Lake Madsen Public School (Red Lake)",
 
 
-		  "Queen Victoria Public School (Windsor)",
+		"Red Maple Public School (Richmond Hill)",
 
 
-		  "Queen Victoria Public School (Kawartha Lakes)",
+		"Red Rock Public School (Red Rock)",
 
 
-		  "Queen Victoria School (Belleville)",
+		"Redstone Public School (Richmond Hill)",
 
 
-		  "Quest Alternative School Senior (Toronto)",
+		"Red Willow Public School (Brampton)",
 
 
-		  "Rainham Central School (Haldimand County)",
+		"Redwood Acres Public School (Greater Sudbury)",
 
 
-		  "Rama Central Public School (Severn)",
+		"Reesor Park Public School (Markham)",
 
 
-		  "Ramer Wood Public School (Markham)",
+		"Regal Road Junior Public School (Toronto)",
 
 
-		  "Ranchdale Public School (Toronto)",
+		"Regency Acres Public School (Aurora)",
 
 
-		  "Randall Public School (Markham)",
+		"Regent Heights Public School (Toronto)",
 
 
-		  "R A Riddell Public School (Hamilton)",
+		"Regent Park/Duke of York Junior Public School (Toronto)",
 
 
-		  "Rawlinson Community School (Toronto)",
+		"Regent Park Public School (Orillia)",
 
 
-		  "Ray Lewis (Elementary) School (Hamilton)",
+		"Regina Mundi Catholic School (Toronto)",
 
 
-		  "Ray Underhill Public School (Mississauga)",
+		"Regina Mundi Separate School (Hamilton)",
 
 
-		  "Red Lake Madsen Public School (Red Lake)",
+		"Regina Street Public School (Ottawa)",
 
 
-		  "Red Maple Public School (Richmond Hill)",
+		"Rene Gordon Elementary School (Toronto)",
 
 
-		  "Red Rock Public School (Red Rock)",
+		"Renfrew Collegiate Intermediate School (Renfrew)",
 
 
-		  "Redstone Public School (Richmond Hill)",
+		"Resurrection School (Brantford)",
 
 
-		  "Red Willow Public School (Brampton)",
+		"R F Downey Public School (Peterborough)",
 
 
-		  "Redwood Acres Public School (Greater Sudbury)",
+		"R Gordon Sinclair Public School (Kingston)",
 
 
-		  "Reesor Park Public School (Markham)",
+		"R H Cornish Public School (Scugog)",
 
 
-		  "Regal Road Junior Public School (Toronto)",
+		"R H McGregor Elementary School (Toronto)",
 
 
-		  "Regency Acres Public School (Aurora)",
+		"R. H. Murray Public School (Whitefish)",
 
 
-		  "Regent Heights Public School (Toronto)",
+		"Richard Beasley Junior Public School (Hamilton)",
 
 
-		  "Regent Park/Duke of York Junior Public School (Toronto)",
+		"Richmond Public School (Ottawa)",
 
 
-		  "Regent Park Public School (Orillia)",
+		"Richmond Rose Public School (Richmond Hill)",
 
 
-		  "Regina Mundi Catholic School (Toronto)",
+		"Richmond Street Public School (Thorold)",
 
 
-		  "Regina Mundi Separate School (Hamilton)",
+		"Rick Hansen Public School (London)",
 
 
-		  "Regina Street Public School (Ottawa)",
+		"Rickson Ridge Public School (Guelph)",
 
 
-		  "Rene Gordon Elementary School (Toronto)",
+		"Rideau Centennial Public School (Rideau Lakes)",
 
 
-		  "Renfrew Collegiate Intermediate School (Renfrew)",
+		"Rideau Heights Public School (Kingston)",
 
 
-		  "Resurrection School (Brantford)",
+		"Rideau Intermediate School (Rideau Lakes)",
 
 
-		  "R F Downey Public School (Peterborough)",
+		"Rideau Public School (Kingston)",
 
 
-		  "R Gordon Sinclair Public School (Kingston)",
+		"Rideau Valley Middle School (Ottawa)",
 
+		"Rideau Vista Public School (Westport)",
 
-		  "R H Cornish Public School (Scugog)",
 
+		"Ridgemount Junior Public School (Hamilton)",
 
-		  "R H McGregor Elementary School (Toronto)",
 
+		"Ridgetown DHS-Gr. 7 &amp; 8 (Chatham-Kent)",
 
-		  "R. H. Murray Public School (Whitefish)",
 
+		"Ridgeview Public School (Brampton)",
 
-		  "Richard Beasley Junior Public School (Hamilton)",
 
+		"Ridgeway Public School (Fort Erie)",
 
-		  "Richmond Public School (Ottawa)",
 
+		"Ridgewood Public School (Kawartha Lakes)",
 
-		  "Richmond Rose Public School (Richmond Hill)",
 
+		"Ridgewood Public School (Mississauga)",
 
-		  "Richmond Street Public School (Thorold)",
+		"Ridley College (St. Catharines)",
+		"Ridpath Junior Public School (Smith-Ennismore-Lakefield)",
 
 
-		  "Rick Hansen Public School (London)",
+		"Ripley-Huron Community - Junior Campus School (Huron-Kinloss)",
 
 
-		  "Rickson Ridge Public School (Guelph)",
+		"Rippleton Public School (Toronto)",
 
 
-		  "Rideau Centennial Public School (Rideau Lakes)",
+		"Ritson Public School (Oshawa)",
 
 
-		  "Rideau Heights Public School (Kingston)",
+		"Rivercrest Junior School (Toronto)",
 
 
-		  "Rideau Intermediate School (Rideau Lakes)",
+		"River Heights School (Haldimand County)",
 
 
-		  "Rideau Public School (Kingston)",
+		"River Heights School (Thames Centre)",
 
 
-		  "Rideau Valley Middle School (Ottawa)",
+		"River Oaks Public School (Oakville)",
 
 
-		  "Rideau Vista Public School (Westport)",
+		"Riverside Public School (Huntsville)",
 
 
-		  "Ridgemount Junior Public School (Hamilton)",
+		"Riverside Public School (Mississauga)",
 
 
-		  "Ridgetown DHS-Gr. 7 &amp; 8 (Chatham-Kent)",
+		"Riverside Public School (London)",
 
 
-		  "Ridgeview Public School (Brampton)",
+		"Riverside Public School (Woolwich)",
 
 
-		  "Ridgeway Public School (Fort Erie)",
+		"Riverview Alternative School (Ottawa)",
 
 
-		  "Ridgewood Public School (Kawartha Lakes)",
+		"Riverview Central School (St. Clair)",
 
 
-		  "Ridgewood Public School (Mississauga)",
+		"Riverview Elementary School (Rainy River)",
 
 
-		  "Ridpath Junior Public School (Smith-Ennismore-Lakefield)",
+		"River View Public School (Niagara Falls)",
 
 
-		  "Ripley-Huron Community - Junior Campus School (Huron-Kinloss)",
+		"River View Public School (Sault Ste. Marie)",
 
 
-		  "Rippleton Public School (Toronto)",
+		"R J Lang Elementary and Middle School (Toronto)",
 
 
-		  "Ritson Public School (Oshawa)",
+		"R L Beattie Public School (Greater Sudbury)",
 
 
-		  "Rivercrest Junior School (Toronto)",
+		"R L Graham Public School (Georgina)",
 
 
-		  "River Heights School (Haldimand County)",
+		"R L Hyslop Elementary School (Hamilton)",
 
 
-		  "River Heights School (Thames Centre)",
+		"R M Moore Public School (Sault Ste. Marie)",
 
 
-		  "River Oaks Public School (Oakville)",
+		"Robarts/Amethyst Demonstration Elementary School (London)",
 
 
-		  "Riverside Public School (Huntsville)",
+		"Robarts Provincial School for the Deaf (London)",
 
 
-		  "Riverside Public School (Mississauga)",
+		"Roberta Bondar Public School (Ottawa)",
 
 
-		  "Riverside Public School (London)",
+		"Roberta Bondar Public School (Brampton)",
 
 
-		  "Riverside Public School (Woolwich)",
+		"Robert Baldwin Public School (Milton)",
 
 
-		  "Riverview Alternative School (Ottawa)",
+		"Robert Bateman Public School (Ottawa)",
 
 
-		  "Riverview Central School (St. Clair)",
+		"Robert E.  Wilson Public School (Ottawa)",
 
 
-		  "Riverview Elementary School (Rainy River)",
+		"Robert H Lagerquist Senior Public School (Brampton)",
 
 
-		  "River View Public School (Niagara Falls)",
+		"Robert Hopkins Public School (Ottawa)",
 
 
-		  "River View Public School (Sault Ste. Marie)",
+		"Robert J Lee Public School (Brampton)",
 
 
-		  "R J Lang Elementary and Middle School (Toronto)",
+		"Robert Little Public School (Halton Hills)",
 
 
-		  "R L Beattie Public School (Greater Sudbury)",
+		"Robert Moore Public School (Fort Frances)",
 
 
-		  "R L Graham Public School (Georgina)",
+		"Robert Munsch Public School (Whitby)",
 
 
-		  "R L Hyslop Elementary School (Hamilton)",
+		"Robert Service Senior Public School (Toronto)",
 
 
-		  "R M Moore Public School (Sault Ste. Marie)",
+		"Roch Carrier Elementary School (Ottawa)",
 
 
-		  "Robarts/Amethyst Demonstration Elementary School (London)",
+		"Roch Carrier French Immersion Public School (Woodstock)",
 
 
-		  "Robarts Provincial School for the Deaf (London)",
+		"Rockcliffe Middle School (Toronto)",
 
 
-		  "Roberta Bondar Public School (Ottawa)",
+		"Rockcliffe Park Public School (Ottawa)",
 
 
-		  "Roberta Bondar Public School (Brampton)",
+		"Rockford Public School (Toronto)",
 
 
-		  "Robert Baldwin Public School (Milton)",
+		"Rockhaven School for Exceptional (The North Shore)",
 
 
-		  "Robert Bateman Public School (Ottawa)",
+		"Rockland Public School (Clarence-Rockland)",
 
 
-		  "Robert E.  Wilson Public School (Ottawa)",
+		"Rockway Public School (Kitchener)",
 
 
-		  "Robert H Lagerquist Senior Public School (Brampton)",
+		"Rockwood Centennial Public School (Guelph/Eramosa)",
 
 
-		  "Robert Hopkins Public School (Ottawa)",
+		"Rockwood Public School (Pembroke)",
 
 
-		  "Robert J Lee Public School (Brampton)",
+		"Roden Public School (Toronto)",
 
 
-		  "Robert Little Public School (Halton Hills)",
+		"Roger Neilson Public School (Peterborough)",
 
 
-		  "Robert Moore Public School (Fort Frances)",
+		"Rogers Public School (Newmarket)",
 
 
-		  "Robert Munsch Public School (Whitby)",
+		"Roland Michener Public School (Ajax)",
 
 
-		  "Robert Service Senior Public School (Toronto)",
+		"Roland Michener Public School (Ottawa)",
 
 
-		  "Roch Carrier Elementary School (Ottawa)",
+		"Rolling Hills Public School (Kawartha Lakes)",
 
 
-		  "Roch Carrier French Immersion Public School (Woodstock)",
+		"Rolling Meadows Public School (Burlington)",
 
 
-		  "Rockcliffe Middle School (Toronto)",
+		"Rolph Road Elementary School (Toronto)",
 
 
-		  "Rockcliffe Park Public School (Ottawa)",
+		"Rolph Street Public School (Tillsonburg)",
 
 
-		  "Rockford Public School (Toronto)",
+		"Romeo Dallaire Public School (Ajax)",
 
 
-		  "Rockhaven School for Exceptional (The North Shore)",
+		"Romeo Public School (Stratford)",
 
 
-		  "Rockland Public School (Clarence-Rockland)",
+		"Rose Avenue Junior Public School (Toronto)",
 
 
-		  "Rockway Public School (Kitchener)",
+		"Rosebank Road Public School (Pickering)",
 
 
-		  "Rockwood Centennial Public School (Guelph/Eramosa)",
+		"Rosedale Elementary School (Hamilton)",
 
 
-		  "Rockwood Public School (Pembroke)",
+		"Rosedale Heights Public School (Thornhill)",
 
 
-		  "Roden Public School (Toronto)",
+		"Rosedale Junior Public School (Toronto)",
 
 
-		  "Roger Neilson Public School (Peterborough)",
+		"Rosedale Public School (Sault Ste. Marie)",
 
 
-		  "Rogers Public School (Newmarket)",
+		"Rosedale Public School (Sarnia)",
 
 
-		  "Roland Michener Public School (Ajax)",
+		"Roseland Public School (Windsor)",
 
 
-		  "Roland Michener Public School (Ottawa)",
+		"Roselands Junior Public School (Toronto)",
 
 
-		  "Rolling Hills Public School (Kawartha Lakes)",
+		"Roselawn Public School (Richmond Hill)",
 
 
-		  "Rolling Meadows Public School (Burlington)",
+		"Rosemount School (Kitchener)",
 
 
-		  "Rolph Road Elementary School (Toronto)",
+		"Roseneath Centennial Public School (Alnwick-Haldimand)",
 
 
-		  "Rolph Street Public School (Tillsonburg)",
+		"Rose Seaton Public School (Fort Erie)",
 
 
-		  "Romeo Dallaire Public School (Ajax)",
+		"Rosethorn Junior School (Toronto)",
 
 
-		  "Romeo Public School (Stratford)",
+		"Roseville Public School (Windsor)",
 
 
-		  "Rose Avenue Junior Public School (Toronto)",
+		"Ross Doan Public School (Richmond Hill)",
 
 
-		  "Rosebank Road Public School (Pickering)",
+		"Ross Public School (Welland)",
 
 
-		  "Rosedale Elementary School (Hamilton)",
+		"Ross R MacKay Public School (Erin)",
+		" Rosseau Lake College (Rosseau)",
+		"Rothesay Netherwood School (Rothesay)",
+		"Rothwell-Osnabruck Elementary School (South Stormont)",
 
 
-		  "Rosedale Heights Public School (Thornhill)",
+		"Rouge Valley Public School (Toronto)",
 
+		"Rosseau Lake College (Rosseau)",
+		"Rousseau Public School (Hamilton)",
 
-		  "Rosedale Junior Public School (Toronto)",
 
+		"Rowntree Public School (Brampton)",
 
-		  "Rosedale Public School (Sault Ste. Marie)",
 
+		"Roxborough Park Junior Public School (Hamilton)",
 
-		  "Rosedale Public School (Sarnia)",
 
+		"Roxmore Public School (North Stormont)",
 
-		  "Roseland Public School (Windsor)",
 
+		"Royal Orchard Middle School (Brampton)",
 
-		  "Roselands Junior Public School (Toronto)",
 
+		"Royal Roads Public School Public School (Ingersoll)",
+		"Royal St. George's College (Toronto)",
 
-		  "Roselawn Public School (Richmond Hill)",
+		"Roy H Crosby Public School (Markham)",
 
 
-		  "Rosemount School (Kitchener)",
+		"Roywood Public School (Toronto)",
 
 
-		  "Roseneath Centennial Public School (Alnwick-Haldimand)",
+		"R Ross Beattie Senior Public School (Timmins)",
 
 
-		  "Rose Seaton Public School (Fort Erie)",
+		"R Tait McKenzie Public School (Mississippi Mills)",
 
 
-		  "Rosethorn Junior School (Toronto)",
+		"Runnymede Junior and Senior Public School (Toronto)",
 
 
-		  "Roseville Public School (Windsor)",
+		"Russell D Barber Public School (Brampton)",
 
 
-		  "Ross Doan Public School (Richmond Hill)",
+		"Russell Intermediate School (Russell)",
 
 
-		  "Ross Public School (Welland)",
+		"Russell Public Public School (Russell)",
 
 
-		  "Ross R MacKay Public School (Erin)",
+		"Russell Reid Public School (Brantford)",
 
 
-		  "Rothwell-Osnabruck Elementary School (South Stormont)",
+		"Ruth Thompson Middle School (Mississauga)",
 
 
-		  "Rouge Valley Public School (Toronto)",
+		"Ruthven Public School (Kingsville)",
 
 
-		  "Rousseau Public School (Hamilton)",
+		"Ryerson Community School (Toronto)",
 
 
-		  "Rowntree Public School (Brampton)",
+		"Ryerson Heights Elementary School (Brantford)",
 
 
-		  "Roxborough Park Junior Public School (Hamilton)",
+		"Ryerson Middle School (Hamilton)",
 
 
-		  "Roxmore Public School (North Stormont)",
+		"Ryerson Public School (Burlington)",
 
 
-		  "Royal Orchard Middle School (Brampton)",
+		"Ryerson Public School (London)",
 
 
-		  "Royal Roads Public School Public School (Ingersoll)",
+		"Ryerson Public School (Cambridge)",
 
 
-		  "Roy H Crosby Public School (Markham)",
+		"S A Cawker Public School (Scugog)",
 
 
-		  "Roywood Public School (Toronto)",
+		"Sacred Heart Catholic Elementary School (Lasalle)",
 
 
-		  "R Ross Beattie Senior Public School (Timmins)",
+		"Sacred Heart Catholic Elementary School (Niagara Falls)",
 
 
-		  "R Tait McKenzie Public School (Mississippi Mills)",
+		"Sacred Heart Catholic Elementary School (Brant)",
 
 
-		  "Runnymede Junior and Senior Public School (Toronto)",
+		"Sacred HeartCatholic School (Guelph)",
 
 
-		  "Russell D Barber Public School (Brampton)",
+		"Sacred Heart Catholic School (Espanola)",
 
 
-		  "Russell Intermediate School (Russell)",
+		"Sacred Heart Catholic School (Marmora And Lake)",
 
 
-		  "Russell Public Public School (Russell)",
+		"Sacred Heart Catholic School (St. Clair)",
 
 
-		  "Russell Reid Public School (Brantford)",
+		"Sacred Heart Catholic School (Frontenac Islands)",
 
 
-		  "Ruth Thompson Middle School (Mississauga)",
+		"Sacred Heart Catholic School (Quinte West)",
 
 
-		  "Ruthven Public School (Kingsville)",
+		"Sacred Heart Catholic School (Kirkland Lake)",
 
 
-		  "Ryerson Community School (Toronto)",
+		"Sacred Heart Catholic School (Sarnia)",
 
 
-		  "Ryerson Heights Elementary School (Brantford)",
+		"Sacred Heart Catholic School (Toronto)",
 
 
-		  "Ryerson Middle School (Hamilton)",
+		"Sacred Heart Intermediate School (Ottawa)",
 
 
-		  "Ryerson Public School (Burlington)",
+		"Sacred Heart of Jesus Catholic School (Burlington)",
 
 
-		  "Ryerson Public School (London)",
+		"Sacred Heart of Jesus Separate School (Lanark Highlands)",
 
 
-		  "Ryerson Public School (Cambridge)",
+		"Sacred Heart School (South Bruce)",
 
 
-		  "S A Cawker Public School (Scugog)",
+		"Sacred Heart School (Timmins)",
 
 
-		  "Sacred Heart Catholic Elementary School (Lasalle)",
+		"Sacred Heart School (Norfolk County)",
 
 
-		  "Sacred Heart Catholic Elementary School (Niagara Falls)",
+		"Sacred Heart School (Cornwall)",
 
 
-		  "Sacred Heart Catholic Elementary School (Brant)",
+		"Sacred Heart School (Midland)",
 
 
-		  "Sacred HeartCatholic School (Guelph)",
+		"Sacred Heart Separate School (Hamilton)",
 
 
-		  "Sacred Heart Catholic School (Espanola)",
+		"Sacred Heart Separate School (North Middlesex)",
 
 
-		  "Sacred Heart Catholic School (Marmora And Lake)",
+		"Sacred Heart Separate School (Sioux Lookout)",
 
 
-		  "Sacred Heart Catholic School (St. Clair)",
+		"Sacred Heart Separate School (Brampton)",
 
 
-		  "Sacred Heart Catholic School (Frontenac Islands)",
+		"Sacred Heart Separate School (North Huron)",
 
 
-		  "Sacred Heart Catholic School (Quinte West)",
+		"Sacred Heart Separate School (South Bruce)",
 
 
-		  "Sacred Heart Catholic School (Kirkland Lake)",
+		"Saginaw Public School (Cambridge)",
 
 
-		  "Sacred Heart Catholic School (Sarnia)",
+		"Saint Gabriel the Archangel Catholic School (Barrie)",
 
 
-		  "Sacred Heart Catholic School (Toronto)",
+		"Saint Mary's School (Huntsville)",
 
 
-		  "Sacred Heart Intermediate School (Ottawa)",
+		"Saint Patrick Separate School (Cobalt)",
 
 
-		  "Sacred Heart of Jesus Catholic School (Burlington)",
+		"Salem Public School (Centre Wellington)",
 
 
-		  "Sacred Heart of Jesus Separate School (Lanark Highlands)",
+		"Sam Chapman Public School (Markham)",
 
 
-		  "Sacred Heart School (South Bruce)",
+		"Sam Sherratt Public School (Milton)",
 
 
-		  "Sacred Heart School (Timmins)",
+		"Samuel Hearne Public School (Toronto)",
 
 
-		  "Sacred Heart School (Norfolk County)",
+		"Sandhills Public School (Kitchener)",
 
 
-		  "Sacred Heart School (Cornwall)",
+		"Sandowne Public School (Waterloo)",
 
 
-		  "Sacred Heart School (Midland)",
+		"Sandwich West Public School (Burlington)",
 
 
-		  "Sacred Heart Separate School (Hamilton)",
+		"San Lorenzo Ruiz Catholic Elementary School (Markham)",
 
 
-		  "Sacred Heart Separate School (North Middlesex)",
+		"San Lorenzo Ruiz Elementary School (Mississauga)",
 
 
-		  "Sacred Heart Separate School (Sioux Lookout)",
+		"San Marco Catholic Elementary School (Vaughan)",
 
 
-		  "Sacred Heart Separate School (Brampton)",
+		"Santa Maria Catholic School (Toronto)",
 
 
-		  "Sacred Heart Separate School (North Huron)",
+		"Savant Lake Public School (Savant Lake)",
 
 
-		  "Sacred Heart Separate School (South Bruce)",
+		"Sawmill Creek Elementary School (Ottawa)",
 
 
-		  "Saginaw Public School (Cambridge)",
+		"Sawmill Valley Public School (Mississauga)",
 
 
-		  "Saint Gabriel the Archangel Catholic School (Barrie)",
+		"Scarborough Village Public School (Toronto)",
 
 
-		  "Saint Mary's School (Huntsville)",
+		"Schomberg Public School (King)",
 
 
-		  "Saint Patrick Separate School (Cobalt)",
+		"Schreiber Public School (Schreiber)",
 
 
-		  "Salem Public School (Centre Wellington)",
+		"Schumacher Public School (Timmins)",
 
 
-		  "Sam Chapman Public School (Markham)",
+		"Scott Central Public School (Uxbridge)",
 
 
-		  "Sam Sherratt Public School (Milton)",
+		"Scott Young Public School (Kawartha Lakes)",
 
 
-		  "Samuel Hearne Public School (Toronto)",
+		"Seaforth Public School (Huron East)",
 
 
-		  "Sandhills Public School (Kitchener)",
+		"Seaway Intermediate School (South Dundas)",
 
 
-		  "Sandowne Public School (Waterloo)",
+		"Second Street Junior Middle School (Toronto)",
 
 
-		  "Sandwich West Public School (Burlington)",
+		"Secord Elementary School (Toronto)",
 
 
-		  "San Lorenzo Ruiz Catholic Elementary School (Markham)",
+		"Selby Public School (Greater Napanee)",
 
 
-		  "San Lorenzo Ruiz Elementary School (Mississauga)",
+		"Selwyn Elementary School (Toronto)",
 
 
-		  "San Marco Catholic Elementary School (Vaughan)",
+		"Senator Gibson (Lincoln)",
 
 
-		  "Santa Maria Catholic School (Toronto)",
+		"Seneca Central Public School (Toronto)",
 
 
-		  "Savant Lake Public School (Savant Lake)",
+		"Seneca Hill Public School (Toronto)",
 
 
-		  "Sawmill Creek Elementary School (Ottawa)",
+		"Seneca School (Toronto)",
 
 
-		  "Sawmill Valley Public School (Mississauga)",
+		"Senhor Santo Cristo Catholic School (Toronto)",
 
 
-		  "Scarborough Village Public School (Toronto)",
+		"Settler's Green Public School (Mississauga)",
 
 
-		  "Schomberg Public School (King)",
+		"Seventh Street Junior School (Toronto)",
 
 
-		  "Schreiber Public School (Schreiber)",
+		"Severn Avenue Public School (Ottawa)",
 
 
-		  "Schumacher Public School (Timmins)",
+		"S Geiger Public School (Massey)",
 
 
-		  "Scott Central Public School (Uxbridge)",
+		"Shakespeare Public School (Stratford)",
 
 
-		  "Scott Young Public School (Kawartha Lakes)",
+		"Shanty Bay Public School (Oro-Medonte)",
 
 
-		  "Seaforth Public School (Huron East)",
+		"Sharbot Lake Intermediate School (Central Frontenac)",
 
 
-		  "Seaway Intermediate School (South Dundas)",
+		"Sharbot Lake Public School (Central Frontenac)",
 
 
-		  "Second Street Junior Middle School (Toronto)",
+		"Sharon Public School (East Gwillimbury)",
 
 
-		  "Secord Elementary School (Toronto)",
+		"Shaughnessy Public School (Toronto)",
 
 
-		  "Selby Public School (Greater Napanee)",
+		"Shaw Public School (Brampton)",
 
 
-		  "Selwyn Elementary School (Toronto)",
+		"S H Connor Public School (Tweed)",
 
 
-		  "Senator Gibson (Lincoln)",
+		"Shelter Bay Public School (Mississauga)",
 
 
-		  "Seneca Central Public School (Toronto)",
+		"Sheppard Public School (Kitchener)",
 
 
-		  "Seneca Hill Public School (Toronto)",
+		"Sheppard Public School (Toronto)",
 
 
-		  "Seneca School (Toronto)",
+		"Sherbrooke Public School (Thunder Bay)",
 
 
-		  "Senhor Santo Cristo Catholic School (Toronto)",
+		"Sheridan Park Public School (St. Catharines)",
 
 
-		  "Settler's Green Public School (Mississauga)",
+		"Sheridan Park Public School (Mississauga)",
 
 
-		  "Seventh Street Junior School (Toronto)",
+		"Sheridan Public School (Oakville)",
 
 
-		  "Severn Avenue Public School (Ottawa)",
+		"Sherwood Forest Public School (London)",
 
 
-		  "S Geiger Public School (Massey)",
+		"Sherwood Mills Public School (Mississauga)",
 
 
-		  "Shakespeare Public School (Stratford)",
+		"Sherwood Public School (Madawaska Valley)",
 
 
-		  "Shanty Bay Public School (Oro-Medonte)",
+		"Sherwood Public School (Oshawa)",
 
 
-		  "Sharbot Lake Intermediate School (Central Frontenac)",
+		"Shirley Street Junior Public School (Toronto)",
 
 
-		  "Sharbot Lake Public School (Central Frontenac)",
+		"Shoreham Public School (Toronto)",
 
 
-		  "Sharon Public School (East Gwillimbury)",
+		"Silver Birches Senior School (North Bay)",
 
 
-		  "Shaughnessy Public School (Toronto)",
+		"Silver Creek Public School (Halton Hills)",
 
 
-		  "Shaw Public School (Brampton)",
+		"Silver Creek Public School (Mississauga)",
 
 
-		  "S H Connor Public School (Tweed)",
+		"Silverheights Public School (Cambridge)",
 
 
-		  "Shelter Bay Public School (Mississauga)",
+		"Silver Pines Public School (Richmond Hill)",
 
 
-		  "Sheppard Public School (Kitchener)",
+		"Silver Springs Public School (Toronto)",
 
 
-		  "Sheppard Public School (Toronto)",
+		"Silver Stream Public School (Richmond Hill)",
 
 
-		  "Sherbrooke Public School (Thunder Bay)",
+		"Silverthorn Community School (Toronto)",
 
 
-		  "Sheridan Park Public School (St. Catharines)",
+		"Silverthorn Public School (Mississauga)",
 
 
-		  "Sheridan Park Public School (Mississauga)",
+		"Simcoe Street Public School (Niagara Falls)",
 
 
-		  "Sheridan Public School (Oakville)",
+		"Sioux Mountain Public School (Sioux Lookout)",
 
 
-		  "Sherwood Forest Public School (London)",
+		"Sioux Narrows Public School (Sioux Narrows Nestor Falls)",
 
 
-		  "Sherwood Mills Public School (Mississauga)",
+		"Sir Adam Beck Junior School (Toronto)",
 
 
-		  "Sherwood Public School (Madawaska Valley)",
+		"Sir Adam Beck Public School (Wilmot)",
 
 
-		  "Sherwood Public School (Oshawa)",
+		"Sir Albert Love Catholic School (Oshawa)",
 
 
-		  "Shirley Street Junior Public School (Toronto)",
+		"Sir Alexander Mackenzie Senior Public School (Toronto)",
 
 
-		  "Shoreham Public School (Toronto)",
+		"Sir Arthur Carty Separate School (London)",
 
 
-		  "Silver Birches Senior School (North Bay)",
+		"Sir Edgar Bauer Catholic Elementary School (Waterloo)",
 
 
-		  "Silver Creek Public School (Halton Hills)",
+		"Sir Ernest Macmillan Public School (Burlington)",
 
 
-		  "Silver Creek Public School (Mississauga)",
+		"Sir Ernest MacMillan Senior Public School (Toronto)",
 
 
-		  "Silverheights Public School (Cambridge)",
+		"Sir George Etienne Cartier Public School (London)",
 
 
-		  "Silver Pines Public School (Richmond Hill)",
+		"Sir Isaac Brock Junior Public School (Hamilton)",
 
 
-		  "Silver Springs Public School (Toronto)",
+		"Sir Isaac Brock Public School (London)",
 
 
-		  "Silver Stream Public School (Richmond Hill)",
+		"Sir Isaac Brock Public School (Guelph)",
 
 
-		  "Silverthorn Community School (Toronto)",
+		"Sir James Dunn Public School (Wawa)",
 
 
-		  "Silverthorn Public School (Mississauga)",
+		"Sir James Whitney Provincial School for the Deaf Elementary (Belleville)",
 
 
-		  "Simcoe Street Public School (Niagara Falls)",
+		"Sir James Whitney/Sagonaska Elementary School (Belleville)",
 
 
-		  "Sioux Mountain Public School (Sioux Lookout)",
+		"Sir John A Macdonald Public School (Pickering)",
 
 
-		  "Sioux Narrows Public School (Sioux Narrows Nestor Falls)",
+		"Sir John A Macdonald Public School (London)",
 
 
-		  "Sir Adam Beck Junior School (Toronto)",
+		"Sir John A Macdonald Public School (Belleville)",
 
 
-		  "Sir Adam Beck Public School (Wilmot)",
+		"Sir John A. Macdonald Senior Public School (Brampton)",
 
 
-		  "Sir Albert Love Catholic School (Oshawa)",
+		"Sir John Moore Community School (St. Clair)",
 
 
-		  "Sir Alexander Mackenzie Senior Public School (Toronto)",
+		"Sir Richard W Scott Catholic Elementary School (Markham)",
 
 
-		  "Sir Arthur Carty Separate School (London)",
+		"Sir Samuel B Steele Junior Public School (Toronto)",
 
 
-		  "Sir Edgar Bauer Catholic Elementary School (Waterloo)",
+		"Sir Samuel Steele Public School (Whitby)",
 
 
-		  "Sir Ernest Macmillan Public School (Burlington)",
+		"Sir Wilfrid Laurier Public School (Markham)",
 
 
-		  "Sir Ernest MacMillan Senior Public School (Toronto)",
+		"Sir Wilfrid Laurier Public School (Hamilton)",
 
 
-		  "Sir George Etienne Cartier Public School (London)",
+		"Sir Wilfrid Laurier Public School (Brampton)",
 
 
-		  "Sir Isaac Brock Junior Public School (Hamilton)",
+		"Sir William Gage Middle School (Brampton)",
 
 
-		  "Sir Isaac Brock Public School (London)",
+		"Sir William Osler Elementary School (Hamilton)",
 
 
-		  "Sir Isaac Brock Public School (Guelph)",
+		"Sir William Osler Public School (Bradford West Gwillimbury)",
 
 
-		  "Sir James Dunn Public School (Wawa)",
+		"Sir William Stephenson Public School (Whitby)",
 
 
-		  "Sir James Whitney Provincial School for the Deaf Elementary (Belleville)",
+		"Sir Winston Churchill Elementary School (Thunder Bay)",
 
 
-		  "Sir James Whitney/Sagonaska Elementary School (Belleville)",
+		"Sir Winston Churchill Public School (Belleville)",
 
 
-		  "Sir John A Macdonald Public School (Pickering)",
+		"Sir Winston Churchill Public School (London)",
 
 
-		  "Sir John A Macdonald Public School (London)",
+		"Sir Winston Churchill Public School (Brampton)",
 
 
-		  "Sir John A Macdonald Public School (Belleville)",
+		"Sir Winston Churchill Public School (Ottawa)",
 
 
-		  "Sir John A. Macdonald Senior Public School (Brampton)",
+		"Sister Catherine Donnelly Catholic School (Barrie)",
 
 
-		  "Sir John Moore Community School (St. Clair)",
+		"Sister Mary Clare Catholic School (Sault Ste. Marie)",
 
 
-		  "Sir Richard W Scott Catholic Elementary School (Markham)",
+		"Sixteenth Avenue Public School (Richmond Hill)",
 
 
-		  "Sir Samuel B Steele Junior Public School (Toronto)",
+		"S J McLeod Public School (South Glengarry)",
 
 
-		  "Sir Samuel Steele Public School (Whitby)",
+		"Sloane Public School (Toronto)",
 
 
-		  "Sir Wilfrid Laurier Public School (Markham)",
+		"Smithfield Middle School (Toronto)",
 
 
-		  "Sir Wilfrid Laurier Public School (Hamilton)",
+		"Smithfield Public School (Brighton)",
 
 
-		  "Sir Wilfrid Laurier Public School (Brampton)",
+		"Smith Public School (Grimsby)",
 
 
-		  "Sir William Gage Middle School (Brampton)",
+		"Smithson Public School (Kitchener)",
 
 
-		  "Sir William Osler Elementary School (Hamilton)",
+		"Smooth Rock Falls Public School (Smooth Rock Falls)",
 
 
-		  "Sir William Osler Public School (Bradford West Gwillimbury)",
+		"Somerset Drive Public School (Brampton)",
 
 
-		  "Sir William Stephenson Public School (Whitby)",
+		"Sophiasburgh Central Public School (Prince Edward County)",
 
 
-		  "Sir Winston Churchill Elementary School (Thunder Bay)",
+		"South Branch Elementary School (North Grenville)",
 
 
-		  "Sir Winston Churchill Public School (Belleville)",
+		"South Crosby Public School (Rideau Lakes)",
 
 
-		  "Sir Winston Churchill Public School (London)",
+		"Southdale Public School (Strathroy-Caradoc)",
 
 
-		  "Sir Winston Churchill Public School (Brampton)",
+		"South Dorchester Public School (Central Elgin)",
 
 
-		  "Sir Winston Churchill Public School (Ottawa)",
+		"South Edwardsburg Public School (Prescott)",
 
 
-		  "Sister Catherine Donnelly Catholic School (Barrie)",
+		"South Grenville Intermediate School (Prescott)",
 
 
-		  "Sister Mary Clare Catholic School (Sault Ste. Marie)",
+		"South March Public School (Ottawa)",
 
 
-		  "Sixteenth Avenue Public School (Richmond Hill)",
+		"South Monaghan Public School (Otonabee-South Monaghan)",
 
 
-		  "S J McLeod Public School (South Glengarry)",
+		"South Perth Centennial Public School (St. Marys)",
 
 
-		  "Sloane Public School (Toronto)",
+		"South Plympton Central School (Plympton-Wyoming)",
 
 
-		  "Smithfield Middle School (Toronto)",
+		"Southridge Public School (Kitchener)",
 
 
-		  "Smithfield Public School (Brighton)",
+		"South Ridge Public School (Tillsonburg)",
 
 
-		  "Smith Public School (Grimsby)",
+		"South River Public School (South River)",
 
 
-		  "Smithson Public School (Kitchener)",
+		"South Shore Education Centre (Nipissing)",
 
 
-		  "Smooth Rock Falls Public School (Smooth Rock Falls)",
+		"Southside Public School (Woodstock)",
 
 
-		  "Somerset Drive Public School (Brampton)",
+		"Southwold Public School (St. Thomas)",
 
 
-		  "Sophiasburgh Central Public School (Prince Edward County)",
+		"Southwood Park Public School (Ajax)",
 
 
-		  "South Branch Elementary School (North Grenville)",
+		"Southwood Public School (Windsor)",
 
 
-		  "South Crosby Public School (Rideau Lakes)",
+		"Sparta Public School (Central Elgin)",
 
 
-		  "Southdale Public School (Strathroy-Caradoc)",
+		"Spectrum Alternative Senior School (Toronto)",
 
 
-		  "South Dorchester Public School (Central Elgin)",
+		"Spencer Valley Public School (Hamilton)",
 
 
-		  "South Edwardsburg Public School (Prescott)",
+		"Springbank Public School (Woodstock)",
 
 
-		  "South Grenville Intermediate School (Prescott)",
+		"Springdale Public School (Brampton)",
 
 
-		  "South March Public School (Ottawa)",
+		"Springfield Public School (Malahide)",
 
 
-		  "South Monaghan Public School (Otonabee-South Monaghan)",
+		"Springfield Public School (Mississauga)",
 
 
-		  "South Perth Centennial Public School (St. Marys)",
+		"Spring Valley Public School (Brighton)",
 
 
-		  "South Plympton Central School (Plympton-Wyoming)",
+		"Sprucecourt Junior Public School (Toronto)",
 
 
-		  "Southridge Public School (Kitchener)",
+		"Sprucedale Public School (Perth East)",
 
 
-		  "South Ridge Public School (Tillsonburg)",
+		"Spruce Glen Public School (Huntsville)",
 
 
-		  "South River Public School (South River)",
+		"Spruce Ridge Community School (West Grey)",
 
 
-		  "South Shore Education Centre (Nipissing)",
+		"St Agatha Catholic Elementary School (Wilmot)",
 
 
-		  "Southside Public School (Woodstock)",
+		"St Agatha Catholic School (Toronto)",
 
 
-		  "Southwold Public School (St. Thomas)",
+		"St Agnes (Hamilton)",
 
 
-		  "Southwood Park Public School (Ajax)",
+		"St Agnes Catholic Elementary School (Waterloo)",
 
 
-		  "Southwood Public School (Windsor)",
+		"St Agnes Catholic School (Chatham-Kent)",
 
 
-		  "Sparta Public School (Central Elgin)",
+		"St Agnes Catholic School (Toronto)",
 
 
-		  "Spectrum Alternative Senior School (Toronto)",
+		"St Agnes of Assisi Catholic Elementary School (Vaughan)",
 
 
-		  "Spencer Valley Public School (Hamilton)",
+		"St Agnes Separate School (Brampton)",
 
 
-		  "Springbank Public School (Woodstock)",
+		"St. Aidan Catholic Elementary School (Brampton)",
 
 
-		  "Springdale Public School (Brampton)",
+		"St Aidan Catholic School (Toronto)",
 
 
-		  "Springfield Public School (Malahide)",
+		"St Albert Catholic School (Toronto)",
 
 
-		  "Springfield Public School (Mississauga)",
+		"St Albert of Jerusalem Elementary School (Mississauga)",
 
 
-		  "Spring Valley Public School (Brighton)",
+		"St Alexander Catholic Elementary School (Pelham)",
 
 
-		  "Sprucecourt Junior Public School (Toronto)",
+		"St Alexander Catholic School (Windsor)",
 
 
-		  "Sprucedale Public School (Perth East)",
+		"St Alexander Separate School (North Bay)",
 
 
-		  "Spruce Glen Public School (Huntsville)",
+		"St Alfred Catholic Elementary School (St. Catharines)",
 
 
-		  "Spruce Ridge Community School (West Grey)",
+		"St Alfred School (Mississauga)",
+		"St.Andrew's College (Aurora)",
 
+		"St Aloysius Catholic Elementary School (Kitchener)",
 
-		  "St Agatha Catholic Elementary School (Wilmot)",
 
+		"St Aloysius School (Stratford)",
 
-		  "St Agatha Catholic School (Toronto)",
 
+		"St. Alphonsus Catholic Elementary School (Peterborough)",
 
-		  "St Agnes (Hamilton)",
 
+		"St Alphonsus Catholic School (Toronto)",
 
-		  "St Agnes Catholic Elementary School (Waterloo)",
 
+		"St Ambrose Catholic Elementary School (Cambridge)",
 
-		  "St Agnes Catholic School (Chatham-Kent)",
 
+		"St Ambrose Catholic School (Toronto)",
 
-		  "St Agnes Catholic School (Toronto)",
 
+		"St Ambrose Separate School (Stratford)",
 
-		  "St Agnes of Assisi Catholic Elementary School (Vaughan)",
 
+		"St. Andre (Toronto)",
 
-		  "St Agnes Separate School (Brampton)",
 
+		"St Andrew Catholic Elementary School (Welland)",
 
-		  "St. Aidan Catholic Elementary School (Brampton)",
 
+		"St Andrew Catholic Elementary School (Vaughan)",
 
-		  "St Aidan Catholic School (Toronto)",
 
+		"St Andrew Catholic School (Toronto)",
 
-		  "St Albert Catholic School (Toronto)",
 
+		"St Andrew Catholic School (Oakville)",
 
-		  "St Albert of Jerusalem Elementary School (Mississauga)",
 
+		"St Andrew Catholic School (Greater Sudbury)",
 
-		  "St Alexander Catholic Elementary School (Pelham)",
 
+		"St Andrew Elementary School (Ottawa)",
 
-		  "St Alexander Catholic School (Windsor)",
 
+		"St Andrew School (Orangeville)",
 
-		  "St Alexander Separate School (North Bay)",
 
+		"St Andrew's Junior High School (Toronto)",
 
-		  "St Alfred Catholic Elementary School (St. Catharines)",
 
+		"St Andrews Public School (Toronto)",
 
-		  "St Alfred School (Mississauga)",
 
+		"St Andrew's Public School (Cambridge)",
 
-		  "St Aloysius Catholic Elementary School (Kitchener)",
 
+		"St Andrew's Separate School (Killaloe, Hagarty And Richards)",
 
-		  "St Aloysius School (Stratford)",
 
+		"St Andrew's Separate School (South Stormont)",
 
-		  "St. Alphonsus Catholic Elementary School (Peterborough)",
 
+		"St Angela Catholic School (Toronto)",
 
-		  "St Alphonsus Catholic School (Toronto)",
 
+		"St Angela Catholic School (Windsor)",
 
-		  "St Ambrose Catholic Elementary School (Cambridge)",
 
+		"St Angela Merici Catholic Elementary School (Vaughan)",
 
-		  "St Ambrose Catholic School (Toronto)",
 
+		"St Angela Merici Catholic Elementary School (Brampton)",
 
-		  "St Ambrose Separate School (Stratford)",
 
+		"Stanley Mills Public School (Brampton)",
 
-		  "St. Andre (Toronto)",
 
+		"Stanley Park Public School (Kitchener)",
 
-		  "St Andrew Catholic Elementary School (Welland)",
 
+		"Stanley Public School (Toronto)",
 
-		  "St Andrew Catholic Elementary School (Vaughan)",
 
+		"St Ann (Ancaster) Catholic Elementary School (Hamilton)",
 
-		  "St Andrew Catholic School (Toronto)",
 
+		"St Ann Catholic Elementary School (Thunder Bay)",
 
-		  "St Andrew Catholic School (Oakville)",
 
+		"St Ann Catholic Elementary School (St. Catharines)",
 
-		  "St Andrew Catholic School (Greater Sudbury)",
 
+		"St Ann Catholic Elementary School (Pelham)",
 
-		  "St Andrew Elementary School (Ottawa)",
 
+		"St Ann Catholic School (Sault Ste. Marie)",
 
-		  "St Andrew School (Orangeville)",
 
+		"St Anne Catholic Elementary School (Cambridge)",
 
-		  "St Andrew's Junior High School (Toronto)",
 
+		"St Anne Catholic Elementary School (Kitchener)",
 
-		  "St Andrews Public School (Toronto)",
 
+		"St Anne Catholic Elementary School (Richmond Hill)",
 
-		  "St Andrew's Public School (Cambridge)",
 
+		"St. Anne Catholic Elementary School (Peterborough)",
 
-		  "St Andrew's Separate School (Killaloe, Hagarty And Richards)",
 
+		"St Anne Catholic School (Sarnia)",
 
-		  "St Andrew's Separate School (South Stormont)",
 
+		"St Anne Catholic School (Chatham-Kent)",
 
-		  "St Angela Catholic School (Toronto)",
 
+		"St Anne Elementary School (Ottawa)",
 
-		  "St Angela Catholic School (Windsor)",
 
+		"St Anne French Immersion Catholic School (Windsor)",
 
-		  "St Angela Merici Catholic Elementary School (Vaughan)",
 
+		"St Anne Separate School (Greater Sudbury)",
 
-		  "St Angela Merici Catholic Elementary School (Brampton)",
 
+		"St Anne Separate School (Iroquois Falls)",
 
-		  "Stanley Mills Public School (Brampton)",
 
+		"St Anne Separate School (Brampton)",
 
-		  "Stanley Park Public School (Kitchener)",
 
+		"St Anne's School (Cornwall)",
 
-		  "Stanley Public School (Toronto)",
 
+		"St Anne's Separate School (London)",
 
-		  "St Ann (Ancaster) Catholic Elementary School (Hamilton)",
 
+		"St. Anne's Separate School (St. Thomas)",
 
-		  "St Ann Catholic Elementary School (Thunder Bay)",
 
+		"St Anns Separate School (Hamilton)",
 
-		  "St Ann Catholic Elementary School (St. Catharines)",
 
+		"St Ann's Separate School (Penetanguishene)",
 
-		  "St Ann Catholic Elementary School (Pelham)",
 
+		"St Anselm Catholic School (Toronto)",
 
-		  "St Ann Catholic School (Sault Ste. Marie)",
 
+		"St Anthony Catholic Elementary School (St. Catharines)",
 
-		  "St Anne Catholic Elementary School (Cambridge)",
 
+		"St Anthony Catholic Elementary School (Thornhill)",
 
-		  "St Anne Catholic Elementary School (Kitchener)",
 
+		"St. Anthony Catholic Elementary School (Port Hope)",
 
-		  "St Anne Catholic Elementary School (Richmond Hill)",
 
+		"St Anthony Catholic French Immersion School (London)",
 
-		  "St. Anne Catholic Elementary School (Peterborough)",
 
+		"St Anthony Catholic School (Essex)",
 
-		  "St Anne Catholic School (Sarnia)",
 
+		"St Anthony Catholic School (Toronto)",
 
-		  "St Anne Catholic School (Chatham-Kent)",
 
+		"St Anthony Daniel Catholic School (Pickering)",
 
-		  "St Anne Elementary School (Ottawa)",
 
+		"St. Anthony Daniel School (Brant)",
 
-		  "St Anne French Immersion Catholic School (Windsor)",
 
+		"St Anthony Elementary School (Ottawa)",
 
-		  "St Anne Separate School (Greater Sudbury)",
 
+		"St. Anthony of Padua Catholic Elementary School (Milton)",
 
-		  "St Anne Separate School (Iroquois Falls)",
 
+		"St Anthony School (Brampton)",
 
-		  "St Anne Separate School (Brampton)",
 
+		"St Anthony's Separate School (Laurentian Hills)",
 
-		  "St Anne's School (Cornwall)",
 
+		"St Anthony's Separate School (Kincardine)",
 
-		  "St Anne's Separate School (London)",
 
+		"St Antoine Daniel Catholic School (Tay)",
 
-		  "St. Anne's Separate School (St. Thomas)",
 
+		"St Antoine Daniel Catholic School (Toronto)",
 
-		  "St Anns Separate School (Hamilton)",
 
+		"St Augustine Catholic Elementary School (Cambridge)",
 
-		  "St Ann's Separate School (Penetanguishene)",
 
+		"St Augustine Catholic Elementary School (Welland)",
 
-		  "St Anselm Catholic School (Toronto)",
 
+		"St Augustine Catholic School (Toronto)",
 
-		  "St Anthony Catholic Elementary School (St. Catharines)",
 
+		"St Augustine Elementary School (Ottawa)",
 
-		  "St Anthony Catholic Elementary School (Thornhill)",
 
+		"St Augustines School (Hamilton)",
 
-		  "St. Anthony Catholic Elementary School (Port Hope)",
 
+		"St Barbara Catholic School (Toronto)",
 
-		  "St Anthony Catholic French Immersion School (London)",
 
+		"St. Barbara Elementary School (Mississauga)",
 
-		  "St Anthony Catholic School (Essex)",
 
+		"St Barnabas Catholic School (Toronto)",
 
-		  "St Anthony Catholic School (Toronto)",
 
+		"St Bartholomew Catholic School (Toronto)",
 
-		  "St Anthony Daniel Catholic School (Pickering)",
 
+		"St. Basil Catholic Elementary School (Brantford)",
 
-		  "St. Anthony Daniel School (Brant)",
 
+		"St Basil Catholic School (White River)",
 
-		  "St Anthony Elementary School (Ottawa)",
 
+		"St Basil School (Mississauga)",
 
-		  "St. Anthony of Padua Catholic Elementary School (Milton)",
 
+		"St Basil's Separate School (Owen Sound)",
 
-		  "St Anthony School (Brampton)",
 
+		"St Bede Catholic School (Toronto)",
 
-		  "St Anthony's Separate School (Laurentian Hills)",
 
+		"St Benedict Catholic Elementary School (Markham)",
 
-		  "St Anthony's Separate School (Kincardine)",
 
+		"St Benedict Catholic School (Toronto)",
 
-		  "St Antoine Daniel Catholic School (Tay)",
 
+		"St. Benedict Elementary Catholic School (Greater Sudbury)",
 
-		  "St Antoine Daniel Catholic School (Toronto)",
 
+		"St Benedict Elementary School (Orangeville)",
 
-		  "St Augustine Catholic Elementary School (Cambridge)",
 
+		"St Bernadette Catholic Elementary School (Kitchener)",
 
-		  "St Augustine Catholic Elementary School (Welland)",
 
+		"St Bernadette Catholic School (Ajax)",
 
-		  "St Augustine Catholic School (Toronto)",
 
+		"St Bernadette Catholic School (Sault Ste. Marie)",
 
-		  "St Augustine Elementary School (Ottawa)",
 
+		"St Bernadette Catholic School (Greater Sudbury)",
 
-		  "St Augustines School (Hamilton)",
 
+		"St Bernadette Elementary School (Mississauga)",
 
-		  "St Barbara Catholic School (Toronto)",
 
+		"St Bernadette Elementary School (Barrie)",
 
-		  "St. Barbara Elementary School (Mississauga)",
 
+		"St Bernadette's Catholic Elementary School (Georgina)",
 
-		  "St Barnabas Catholic School (Toronto)",
 
+		"St Bernadette School (Hamilton)",
 
-		  "St Bartholomew Catholic School (Toronto)",
 
+		"St Bernadette Separate School (London)",
 
-		  "St. Basil Catholic Elementary School (Brantford)",
 
+		"St Bernadette Separate School (Oakville)",
 
-		  "St Basil Catholic School (White River)",
 
+		"St Bernard Catholic Elementary School (Thunder Bay)",
 
-		  "St Basil School (Mississauga)",
 
+		"St Bernard Catholic School (Whitby)",
 
-		  "St Basil's Separate School (Owen Sound)",
 
+		"St Bernard Catholic School (Amherstburg)",
 
-		  "St Bede Catholic School (Toronto)",
 
+		"St Bernard Catholic School (Toronto)",
 
-		  "St Benedict Catholic Elementary School (Markham)",
 
+		"St Bernard Catholic School (Windsor)",
 
-		  "St Benedict Catholic School (Toronto)",
 
+		"St Bernard Elementary School (Ottawa)",
 
-		  "St. Benedict Elementary Catholic School (Greater Sudbury)",
 
+		"St. Bernard of Clairvaux Catholic Elementary School (Mississauga)",
 
-		  "St Benedict Elementary School (Orangeville)",
 
+		"St. Bernard of Clairvaux School (Norfolk County)",
 
-		  "St Bernadette Catholic Elementary School (Kitchener)",
 
+		"St. Bernard School (Brantford)",
 
-		  "St Bernadette Catholic School (Ajax)",
 
+		"St Bernard's Separate School (Orillia)",
 
-		  "St Bernadette Catholic School (Sault Ste. Marie)",
 
+		"St. Bonaventure Catholic Elementary School (Brampton)",
 
-		  "St Bernadette Catholic School (Greater Sudbury)",
 
+		"St Bonaventure Catholic School (Toronto)",
 
-		  "St Bernadette Elementary School (Mississauga)",
 
+		"St Boniface Catholic Elementary School (Woolwich)",
 
-		  "St Bernadette Elementary School (Barrie)",
 
+		"St Boniface Catholic School (Toronto)",
 
-		  "St Bernadette's Catholic Elementary School (Georgina)",
 
+		"St Boniface Separate School (Bluewater)",
 
-		  "St Bernadette School (Hamilton)",
 
+		"St Brendan Catholic School (Toronto)",
 
-		  "St Bernadette Separate School (London)",
 
+		"St Brendan Catholic School (Stouffville)",
 
-		  "St Bernadette Separate School (Oakville)",
 
+		"St Bridget Catholic School (Whitby)",
 
-		  "St Bernard Catholic Elementary School (Thunder Bay)",
 
+		"St Brigid Catholic Elementary School (Whitchurch-Stouffville)",
 
-		  "St Bernard Catholic School (Whitby)",
 
+		"St Brigid Catholic Elementary School (North Dumfries)",
 
-		  "St Bernard Catholic School (Amherstburg)",
 
+		"St Brigid Catholic School (Toronto)",
 
-		  "St Bernard Catholic School (Toronto)",
 
+		"St Brigid Elementary School (Ottawa)",
 
-		  "St Bernard Catholic School (Windsor)",
 
+		"St Brigid School (Brampton)",
 
-		  "St Bernard Elementary School (Ottawa)",
 
+		"St Brigid School (Halton Hills)",
 
-		  "St. Bernard of Clairvaux Catholic Elementary School (Mississauga)",
 
+		"St Brigid Separate School (Greenstone)",
 
-		  "St. Bernard of Clairvaux School (Norfolk County)",
 
+		"St Brigids Separate School (Hamilton)",
 
-		  "St. Bernard School (Brantford)",
 
+		"St Bruno Catholic School (Toronto)",
 
-		  "St Bernard's Separate School (Orillia)",
 
+		"St Carthagh Catholic School (Tweed)",
 
-		  "St. Bonaventure Catholic Elementary School (Brampton)",
 
+		"St Casimir's Catholic School (Killaloe, Hagarty And Richards)",
 
-		  "St Bonaventure Catholic School (Toronto)",
 
+		"St. Catherine Catholic Elementary School (Peterborough)",
 
-		  "St Boniface Catholic Elementary School (Woolwich)",
 
+		"St Catherine Catholic School (Toronto)",
 
-		  "St Boniface Catholic School (Toronto)",
 
+		"St Catherine Elementary School (Ottawa)",
 
-		  "St Boniface Separate School (Bluewater)",
 
+		"St Catherine of Alexandria Elementary School (Halton Hills)",
 
-		  "St Brendan Catholic School (Toronto)",
 
+		"St Catherine of Siena (London)",
 
-		  "St Brendan Catholic School (Stouffville)",
 
+		"St Catherine of Siena Catholic Elementary School (Vaughan)",
 
-		  "St Bridget Catholic School (Whitby)",
 
+		"St Catherine of Siena Catholic School (Ajax)",
 
-		  "St Brigid Catholic Elementary School (Whitchurch-Stouffville)",
 
+		"St Catherine of Siena School (Mississauga)",
 
-		  "St Brigid Catholic Elementary School (North Dumfries)",
 
+		"St Catherine of Siena School (Barrie)",
 
-		  "St Brigid Catholic School (Toronto)",
 
+		"St Cecilia Catholic Elementary School (Vaughan)",
 
-		  "St Brigid Elementary School (Ottawa)",
 
+		"St Cecilia Catholic School (Toronto)",
 
-		  "St Brigid School (Brampton)",
 
+		"St Cecilia Elementary School (Brampton)",
 
-		  "St Brigid School (Halton Hills)",
 
+		"St. Cecilia's School (Norfolk County)",
 
-		  "St Brigid Separate School (Greenstone)",
 
+		"St Charles Catholic Elementary School (Thorold)",
 
-		  "St Brigids Separate School (Hamilton)",
 
+		"St Charles Catholic School (Greater Sudbury)",
 
-		  "St Bruno Catholic School (Toronto)",
 
+		"St Charles Catholic School (Toronto)",
 
-		  "St Carthagh Catholic School (Tweed)",
 
+		"St Charles Garnier Catholic Elementary School (Richmond Hill)",
 
-		  "St Casimir's Catholic School (Killaloe, Hagarty And Richards)",
 
+		"St Charles Garnier Catholic School (Toronto)",
 
-		  "St. Catherine Catholic Elementary School (Peterborough)",
 
+		"St. Charles Garnier School (Mississauga)",
 
-		  "St Catherine Catholic School (Toronto)",
 
+		"St Charles School (Bradford West Gwillimbury)",
 
-		  "St Catherine Elementary School (Ottawa)",
 
+		"St Charles Separate School (Southwest Middlesex)",
 
-		  "St Catherine of Alexandria Elementary School (Halton Hills)",
 
+		"St Christopher Catholic Elementary School (St. Catharines)",
 
-		  "St Catherine of Siena (London)",
 
+		"St. Christopher Catholic Elementary School (Burlington)",
 
-		  "St Catherine of Siena Catholic Elementary School (Vaughan)",
 
+		"St Christopher Catholic School (Greater Sudbury)",
 
-		  "St Catherine of Siena Catholic School (Ajax)",
 
+		"St Christopher Catholic School (Windsor)",
 
-		  "St Catherine of Siena School (Mississauga)",
 
+		"St Christopher Catholic School (Oshawa)",
 
-		  "St Catherine of Siena School (Barrie)",
 
+		"St Christopher School (Mississauga)",
 
-		  "St Cecilia Catholic Elementary School (Vaughan)",
 
+		"St Clare Catholic Elementary School (Vaughan)",
 
-		  "St Cecilia Catholic School (Toronto)",
 
+		"St Clare Catholic School (Toronto)",
 
-		  "St Cecilia Elementary School (Brampton)",
 
+		"St Clare Elementary School (Ottawa)",
 
-		  "St. Cecilia's School (Norfolk County)",
 
+		"St Clare of Assisi (Hamilton)",
 
-		  "St Charles Catholic Elementary School (Thorold)",
 
+		"St Clare School (Mississauga)",
 
-		  "St Charles Catholic School (Greater Sudbury)",
 
+		"St Clement Catholic Elementary School (Vaughan)",
 
-		  "St Charles Catholic School (Toronto)",
 
+		"St Clement Catholic Elementary School (Wellesley)",
 
-		  "St Charles Garnier Catholic Elementary School (Richmond Hill)",
 
+		"St Clement Catholic School (Toronto)",
+		"St Clement's School (Toronto)",
 
-		  "St Charles Garnier Catholic School (Toronto)",
+		"St Columba Catholic School (Toronto)",
 
 
-		  "St. Charles Garnier School (Mississauga)",
+		"St Columban's Catholic Elementary School (Cornwall)",
 
 
-		  "St Charles School (Bradford West Gwillimbury)",
+		"St Columban Separate School (Huron East)",
 
 
-		  "St Charles Separate School (Southwest Middlesex)",
+		"St Columba Separate School (Hamilton)",
 
 
-		  "St Christopher Catholic Elementary School (St. Catharines)",
+		"St Conrad Catholic School (Toronto)",
 
 
-		  "St. Christopher Catholic Elementary School (Burlington)",
+		"St Cornelius School (Caledon)",
 
 
-		  "St Christopher Catholic School (Greater Sudbury)",
+		"St Cyril Catholic School (Toronto)",
 
 
-		  "St Christopher Catholic School (Windsor)",
+		"St Daniel Catholic Elementary School (Kitchener)",
 
 
-		  "St Christopher Catholic School (Oshawa)",
+		"St Daniel Elementary School (Ottawa)",
 
 
-		  "St Christopher School (Mississauga)",
+		"St Daniel's School (Hamilton)",
 
 
-		  "St Clare Catholic Elementary School (Vaughan)",
+		"St David Catholic Elementary School (Vaughan)",
 
 
-		  "St Clare Catholic School (Toronto)",
+		"St David Catholic School (Greater Sudbury)",
 
 
-		  "St Clare Elementary School (Ottawa)",
+		"St David of Wales Separate School (Mississauga)",
 
 
-		  "St Clare of Assisi (Hamilton)",
+		"St David School (Hamilton)",
 
 
-		  "St Clare School (Mississauga)",
+		"St David Separate School (Thames Centre)",
 
 
-		  "St Clement Catholic Elementary School (Vaughan)",
+		"St Davids Public School (Niagara-On-The-Lake)",
 
 
-		  "St Clement Catholic Elementary School (Wellesley)",
+		"St Demetrius Catholic School (Toronto)",
 
 
-		  "St Clement Catholic School (Toronto)",
+		"St Denis Catholic Elementary School (St. Catharines)",
 
 
-		  "St Columba Catholic School (Toronto)",
+		"St Denis Catholic School (Toronto)",
 
 
-		  "St Columban's Catholic Elementary School (Cornwall)",
+		"St. Dominic Catholic Elementary School (Kawartha Lakes)",
 
 
-		  "St Columban Separate School (Huron East)",
+		"St Dominic Savio Catholic Elementary School (Kitchener)",
 
 
-		  "St Columba Separate School (Hamilton)",
+		"St Dominic Savio Catholic School (Toronto)",
 
 
-		  "St Conrad Catholic School (Toronto)",
+		"St Dominic Separate School (Mississauga)",
 
 
-		  "St Cornelius School (Caledon)",
+		"St Dominics Separate School (Oakville)",
 
 
-		  "St Cyril Catholic School (Toronto)",
+		"St Dorothy Catholic School (Toronto)",
 
 
-		  "St Daniel Catholic Elementary School (Kitchener)",
+		"St Dunstan Catholic School (Toronto)",
 
 
-		  "St Daniel Elementary School (Ottawa)",
+		"St Dunstan Elementary School (Mississauga)",
 
 
-		  "St Daniel's School (Hamilton)",
+		"St Edith Stein Elementary School (Mississauga)",
 
 
-		  "St David Catholic Elementary School (Vaughan)",
+		"St Edmund Campion Catholic School (Toronto)",
 
 
-		  "St David Catholic School (Greater Sudbury)",
+		"St Edmund Separate School (Mississauga)",
 
 
-		  "St David of Wales Separate School (Mississauga)",
+		"St Edmunds Public School (Northern Bruce Peninsula)",
 
 
-		  "St David School (Hamilton)",
+		"St. Edward (Toronto)",
 
 
-		  "St David Separate School (Thames Centre)",
+		"St Edward Catholic Elementary School (Lincoln)",
 
 
-		  "St Davids Public School (Niagara-On-The-Lake)",
+		"St Edward Catholic Elementary School (Markham)",
 
 
-		  "St Demetrius Catholic School (Toronto)",
+		"St Edward Catholic School (Toronto)",
 
 
-		  "St Denis Catholic Elementary School (St. Catharines)",
+		"St Edward School (Nipigon)",
 
 
-		  "St Denis Catholic School (Toronto)",
+		"St Edward's School (Westport)",
 
 
-		  "St. Dominic Catholic Elementary School (Kawartha Lakes)",
+		"Steele Street Public School (Barrie)",
 
 
-		  "St Dominic Savio Catholic Elementary School (Kitchener)",
+		"Steele Street Public School (Port Colborne)",
 
 
-		  "St Dominic Savio Catholic School (Toronto)",
+		"Steelesview Public School (Toronto)",
 
 
-		  "St Dominic Separate School (Mississauga)",
+		"St Elizabeth Ann Seton Elementary School (Ottawa)",
 
 
-		  "St Dominics Separate School (Oakville)",
+		"St Elizabeth Catholic Elementary School (Cambridge)",
 
 
-		  "St Dorothy Catholic School (Toronto)",
+		"St Elizabeth Catholic Elementary School (Thunder Bay)",
 
 
-		  "St Dunstan Catholic School (Toronto)",
+		"St Elizabeth Catholic Elementary School (Wainfleet)",
 
 
-		  "St Dunstan Elementary School (Mississauga)",
+		"St. Elizabeth Catholic Elementary School (Clarington)",
 
 
-		  "St Edith Stein Elementary School (Mississauga)",
+		"St Elizabeth Catholic School (Chatham-Kent)",
 
 
-		  "St Edmund Campion Catholic School (Toronto)",
+		"St Elizabeth Catholic School (Toronto)",
 
 
-		  "St Edmund Separate School (Mississauga)",
+		"St Elizabeth Elementary School (Ottawa)",
 
 
-		  "St Edmunds Public School (Northern Bruce Peninsula)",
+		"St Elizabeth Seton Catholic Elementary School (Newmarket)",
 
 
-		  "St. Edward (Toronto)",
+		"St Elizabeth Seton Catholic Elementary School (Burlington)",
 
 
-		  "St Edward Catholic Elementary School (Lincoln)",
+		"St Elizabeth Seton Catholic School (Toronto)",
 
 
-		  "St Edward Catholic Elementary School (Markham)",
+		"St Elizabeth Seton Catholic School (Pickering)",
 
 
-		  "St Edward Catholic School (Toronto)",
+		"St Elizabeth Seton School (Mississauga)",
 
 
-		  "St Edward School (Nipigon)",
+		"Stella Maris Catholic School (Amherstburg)",
 
 
-		  "St Edward's School (Westport)",
+		"Stella Maris Catholic School (Toronto)",
 
 
-		  "Steele Street Public School (Barrie)",
+		"St Emily Catholic Elementary School (Vaughan)",
 
 
-		  "Steele Street Public School (Port Colborne)",
+		"St Emily (Elementary) Separate School (Ottawa)",
 
 
-		  "Steelesview Public School (Toronto)",
+		"Stephen Central Public School (South Huron)",
 
 
-		  "St Elizabeth Ann Seton Elementary School (Ottawa)",
+		"Stephen G Saywell Public School (Oshawa)",
 
 
-		  "St Elizabeth Catholic Elementary School (Cambridge)",
+		"Stephen Leacock Public School (Ottawa)",
 
 
-		  "St Elizabeth Catholic Elementary School (Thunder Bay)",
+		"St Eugene Catholic School (Toronto)",
 
 
-		  "St Elizabeth Catholic Elementary School (Wainfleet)",
+		"St Eugenes School (Hamilton)",
+		"St John's-Kilmarnock School (Breslau)",
+		"St John's Ravencourt School (Winnipeg)",
+		"St Michael's College School (Toronto)",
+		"St. Mildred's-Lightbourn School (Oakville)",
+		"Steve MacLean Public School (Ottawa)",
+		"Stevensville Public School (Fort Erie)",
 
 
-		  "St. Elizabeth Catholic Elementary School (Clarington)",
+		"Stewart Avenue Public School (Cambridge)",
 
 
-		  "St Elizabeth Catholic School (Chatham-Kent)",
+		"Stewarttown Middle School (Halton Hills)",
 
 
-		  "St Elizabeth Catholic School (Toronto)",
+		"St Faustina Elementary School (Mississauga)",
 
 
-		  "St Elizabeth Elementary School (Ottawa)",
+		"St Fidelis Catholic School (Toronto)",
 
 
-		  "St Elizabeth Seton Catholic Elementary School (Newmarket)",
+		"St Finnan's Catholic School (North Glengarry)",
 
 
-		  "St Elizabeth Seton Catholic Elementary School (Burlington)",
+		"St Florence Catholic School (Toronto)",
 
 
-		  "St Elizabeth Seton Catholic School (Toronto)",
+		"St. Frances Cabrini School (Norfolk)",
 
 
-		  "St Elizabeth Seton Catholic School (Pickering)",
+		"St Francis Catholic Elementary School (Thunder Bay)",
 
 
-		  "St Elizabeth Seton School (Mississauga)",
+		"St Francis Catholic Elementary School (Cambridge)",
 
 
-		  "Stella Maris Catholic School (Amherstburg)",
+		"St Francis Catholic School (Sault Ste. Marie)",
 
 
-		  "Stella Maris Catholic School (Toronto)",
+		"St Francis Catholic School (Greater Sudbury)",
 
 
-		  "St Emily Catholic Elementary School (Vaughan)",
+		"St Francis de Sales Catholic School (Ajax)",
 
 
-		  "St Emily (Elementary) Separate School (Ottawa)",
+		"St Francis de Sales Catholic School (Toronto)",
 
 
-		  "Stephen Central Public School (South Huron)",
+		"St Francis de Sales Separate School (Smiths Falls)",
 
 
-		  "Stephen G Saywell Public School (Oshawa)",
+		"St Francis of Assisi Catholic Elementary School (Vaughan)",
 
 
-		  "Stephen Leacock Public School (Ottawa)",
+		"St. Francis of Assisi Catholic Elementary School (Clarington)",
 
 
-		  "St Eugene Catholic School (Toronto)",
+		"St Francis of Assisi Catholic School (Petawawa)",
 
 
-		  "St Eugenes School (Hamilton)",
+		"St Francis of Assisi Catholic School (Guelph)",
 
 
-		  "Steve MacLean Public School (Ottawa)",
+		"St Francis of Assisi Catholic School (Toronto)",
 
 
-		  "Stevensville Public School (Fort Erie)",
+		"St Francis of Assisi Elementary School (Ottawa)",
 
 
-		  "Stewart Avenue Public School (Cambridge)",
+		"St Francis of Assisi Elementary School (Innisfil)",
 
 
-		  "Stewarttown Middle School (Halton Hills)",
+		"St Francis of Assisi School (Mississauga)",
 
 
-		  "St Faustina Elementary School (Mississauga)",
+		"St Francis of Assisi Separate School (Halton Hills)",
 
 
-		  "St Fidelis Catholic School (Toronto)",
+		"St Francis School (Blandford-Blenheim)",
 
 
-		  "St Finnan's Catholic School (North Glengarry)",
+		"St Francis School (London)",
 
 
-		  "St Florence Catholic School (Toronto)",
+		"St Francis Separate School (North Bay)",
 
 
-		  "St. Frances Cabrini School (Norfolk)",
+		"St Francis Separate School (Fort Frances)",
 
 
-		  "St Francis Catholic Elementary School (Thunder Bay)",
+		"St. Francis Xavier (7-8) Catholic School (Ottawa)",
 
 
-		  "St Francis Catholic Elementary School (Cambridge)",
+		"St Francis Xavier Catholic Elementary School (Markham)",
 
 
-		  "St Francis Catholic School (Sault Ste. Marie)",
+		"St Francis Xavier Catholic School (Toronto)",
 
 
-		  "St Francis Catholic School (Greater Sudbury)",
+		"St Francis Xavier Elementary School (Clarence-Rockland)",
 
 
-		  "St Francis de Sales Catholic School (Ajax)",
+		"St Francis Xavier Elementary School (Brampton)",
 
 
-		  "St Francis de Sales Catholic School (Toronto)",
+		"St Francis Xavier Junior Separate School (Hamilton)",
 
 
-		  "St Francis de Sales Separate School (Smiths Falls)",
+		"St Francis Xavier Separate School (Brockville)",
 
 
-		  "St Francis of Assisi Catholic Elementary School (Vaughan)",
+		"St Gabriel Catholic Catholic School (Toronto)",
 
 
-		  "St. Francis of Assisi Catholic Elementary School (Clarington)",
+		"St. Gabriel Catholic (Elementary) School (Brantford)",
 
 
-		  "St Francis of Assisi Catholic School (Petawawa)",
+		"St Gabriel Catholic School (Windsor)",
 
 
-		  "St Francis of Assisi Catholic School (Guelph)",
+		"St. Gabriel Elementary School (Ottawa)",
 
 
-		  "St Francis of Assisi Catholic School (Toronto)",
+		"St Gabriel Lalemant Catholic Elementary School (Niagara Falls)",
 
 
-		  "St Francis of Assisi Elementary School (Ottawa)",
+		"St Gabriel Lalemant Catholic School (Toronto)",
 
 
-		  "St Francis of Assisi Elementary School (Innisfil)",
+		"St Gabriel School (Burlington)",
 
 
-		  "St Francis of Assisi School (Mississauga)",
+		"St Gabriel the Archangel Catholic Elementary School (Vaughan)",
 
 
-		  "St Francis of Assisi Separate School (Halton Hills)",
+		"St George Catholic Elementary School (Fort Erie)",
 
 
-		  "St Francis School (Blandford-Blenheim)",
+		"St George Elementary School (Ottawa)",
 
 
-		  "St Francis School (London)",
+		"St George-German Public School (Brant)",
 
 
-		  "St Francis Separate School (North Bay)",
+		"St George Separate School (London)",
 
 
-		  "St Francis Separate School (Fort Frances)",
+		"St George's Junior School (Toronto)",
 
 
-		  "St. Francis Xavier (7-8) Catholic School (Ottawa)",
+		"St Georges Public School (London)",
 
 
-		  "St Francis Xavier Catholic Elementary School (Markham)",
+		"St George's Separate School (South Stormont)",
 
 
-		  "St Francis Xavier Catholic School (Toronto)",
+		"St Gerald Catholic School (Toronto)",
 
 
-		  "St Francis Xavier Elementary School (Clarence-Rockland)",
+		"St Gerard Majella Catholic School (Toronto)",
 
 
-		  "St Francis Xavier Elementary School (Brampton)",
+		"St Gerard Separate School (Mississauga)",
 
 
-		  "St Francis Xavier Junior Separate School (Hamilton)",
+		"St Gertrude School (Mississauga)",
 
 
-		  "St Francis Xavier Separate School (Brockville)",
+		"St. Gregory Catholic (Carleton Place)",
 
 
-		  "St Gabriel Catholic Catholic School (Toronto)",
+		"St Gregory Catholic Elementary School (Cambridge)",
 
 
-		  "St. Gabriel Catholic (Elementary) School (Brantford)",
+		"St Gregory Catholic School (Tecumseh)",
 
 
-		  "St Gabriel Catholic School (Windsor)",
+		"St Gregory Catholic School (Toronto)",
 
 
-		  "St. Gabriel Elementary School (Ottawa)",
+		"St Gregory Catholic School (Prince Edward County)",
 
 
-		  "St Gabriel Lalemant Catholic Elementary School (Niagara Falls)",
+		"St Gregory Elementary School (Ottawa)",
 
 
-		  "St Gabriel Lalemant Catholic School (Toronto)",
+		"St Gregory School (Mississauga)",
 
 
-		  "St Gabriel School (Burlington)",
+		"St Gregory Separate School (Powassan)",
 
 
-		  "St Gabriel the Archangel Catholic Elementary School (Vaughan)",
+		"St Gregory the Great Catholic Academy (Vaughan)",
 
 
-		  "St George Catholic Elementary School (Fort Erie)",
+		"St Hedwig Catholic School (Oshawa)",
 
 
-		  "St George Elementary School (Ottawa)",
+		"St Helen Catholic School (Toronto)",
 
 
-		  "St George-German Public School (Brant)",
+		"St Helen Separate School (Mississauga)",
 
 
-		  "St George Separate School (London)",
+		"St Henry Catholic Catholic School (Toronto)",
 
 
-		  "St George's Junior School (Toronto)",
+		"St Herbert School (Mississauga)",
 
 
-		  "St Georges Public School (London)",
+		"St Hilary Elementary School (Mississauga)",
 
 
-		  "St George's Separate School (South Stormont)",
+		"St Hilary School (Red Rock)",
 
 
-		  "St Gerald Catholic School (Toronto)",
+		"St Hubert Catholic School (Sault Ste. Marie)",
 
 
-		  "St Gerard Majella Catholic School (Toronto)",
+		"St Hubert Separate School (North Bay)",
 
 
-		  "St Gerard Separate School (Mississauga)",
+		"St Ignatius of Loyola Catholic School (Guelph)",
 
 
-		  "St Gertrude School (Mississauga)",
+		"St Ignatius of Loyola Catholic School (Toronto)",
 
 
-		  "St. Gregory Catholic (Carleton Place)",
+		"Stilecroft Public School (Toronto)",
 
 
-		  "St Gregory Catholic Elementary School (Cambridge)",
+		"Stirling Junior Public School (Stirling-Rawdon)",
 
 
-		  "St Gregory Catholic School (Tecumseh)",
+		"Stirling Primary Public School (Stirling-Rawdon)",
 
 
-		  "St Gregory Catholic School (Toronto)",
+		"Stirling Senior Public School (Stirling-Rawdon)",
 
 
-		  "St Gregory Catholic School (Prince Edward County)",
+		"St Isaac Jogues Catholic School (Pickering)",
 
 
-		  "St Gregory Elementary School (Ottawa)",
+		"St Isaac Jogues Catholic School (Toronto)",
 
 
-		  "St Gregory School (Mississauga)",
+		"St Isaac Jogues Elementary School (Brampton)",
 
 
-		  "St Gregory Separate School (Powassan)",
+		"St Isidore Elementary School (Ottawa)",
 
 
-		  "St Gregory the Great Catholic Academy (Vaughan)",
+		"Stittsville Public School (Ottawa)",
 
 
-		  "St Hedwig Catholic School (Oshawa)",
+		"St Jacobs Public School (Woolwich)",
 
 
-		  "St Helen Catholic School (Toronto)",
+		"St James (Greater Sudbury)",
 
 
-		  "St Helen Separate School (Mississauga)",
+		"St James Catholic Elementary School (Vaughan)",
 
 
-		  "St Henry Catholic Catholic School (Toronto)",
+		"St James Catholic Elementary School (St. Catharines)",
 
 
-		  "St Herbert School (Mississauga)",
+		"St James Catholic School (Ajax)",
 
 
-		  "St Hilary Elementary School (Mississauga)",
+		"St James Catholic School (Toronto)",
 
 
-		  "St Hilary School (Red Rock)",
+		"St James Catholic School (Windsor)",
 
 
-		  "St Hubert Catholic School (Sault Ste. Marie)",
+		"St James Elementary School (Ottawa)",
 
 
-		  "St Hubert Separate School (North Bay)",
+		"St James Major (Central Frontenac)",
 
 
-		  "St Ignatius of Loyola Catholic School (Guelph)",
+		"St James Public School (Thunder Bay)",
 
 
-		  "St Ignatius of Loyola Catholic School (Toronto)",
+		"St James Separate School (Huron East)",
 
 
-		  "Stilecroft Public School (Toronto)",
+		"St James Separate School (New Tecumseth)",
 
 
-		  "Stirling Junior Public School (Stirling-Rawdon)",
+		"St James Separate School (Bonnechere Valley)",
 
 
-		  "Stirling Primary Public School (Stirling-Rawdon)",
+		"St James Separate School (Oakville)",
 
 
-		  "Stirling Senior Public School (Stirling-Rawdon)",
+		"St James the Apostle Separate School (Hamilton)",
 
 
-		  "St Isaac Jogues Catholic School (Pickering)",
+		"St James the Greater Separate School (Smiths Falls)",
 
 
-		  "St Isaac Jogues Catholic School (Toronto)",
+		"St Jane Frances Catholic School (Toronto)",
 
 
-		  "St Isaac Jogues Elementary School (Brampton)",
+		"St Jean Brebeuf Separate School (Brampton)",
 
 
-		  "St Isidore Elementary School (Ottawa)",
+		"St Jean de Brebeuf Catholic School (Toronto)",
 
 
-		  "Stittsville Public School (Ottawa)",
+		"St Jean de Brebeuf Separate School (Bradford West Gwillimbury)",
 
 
-		  "St Jacobs Public School (Woolwich)",
+		"St Jerome Catholic Elementary School (Aurora)",
 
 
-		  "St James (Greater Sudbury)",
+		"St Jerome Catholic School (Toronto)",
 
 
-		  "St James Catholic Elementary School (Vaughan)",
+		"St Jerome Elementary School (Ottawa)",
 
 
-		  "St James Catholic Elementary School (St. Catharines)",
+		"St Jerome School (Kirkland Lake)",
 
 
-		  "St James Catholic School (Ajax)",
+		"St Jerome Separate School (Mississauga)",
 
 
-		  "St James Catholic School (Toronto)",
+		"St Joachim Catholic School (Toronto)",
 
 
-		  "St James Catholic School (Windsor)",
+		"St Joachim School (Hamilton)",
 
 
-		  "St James Elementary School (Ottawa)",
+		"St Joachim Separate School (Brampton)",
 
 
-		  "St James Major (Central Frontenac)",
+		"St Joan of Arc Catholic Elementary School (Oakville)",
 
 
-		  "St James Public School (Thunder Bay)",
+		"St John Bosco Catholic Elementary School (Port Colborne)",
 
 
-		  "St James Separate School (Huron East)",
+		"St John Bosco Catholic Elementary School (Vaughan)",
 
 
-		  "St James Separate School (New Tecumseth)",
+		"St John Bosco Catholic School (Brockville)",
 
 
-		  "St James Separate School (Bonnechere Valley)",
+		"St John Bosco Catholic School (Oshawa)",
 
 
-		  "St James Separate School (Oakville)",
+		"St John Bosco Catholic School (Toronto)",
 
 
-		  "St James the Apostle Separate School (Hamilton)",
+		"St John Bosco School (Brampton)",
 
 
-		  "St James the Greater Separate School (Smiths Falls)",
+		"St John Bosco Separate School (Madawaska Valley)",
 
 
-		  "St Jane Frances Catholic School (Toronto)",
+		"St John Brebeuf Catholic School (Erin)",
 
 
-		  "St Jean Brebeuf Separate School (Brampton)",
+		"St John Catholic Elementary School (Kitchener)",
 
 
-		  "St Jean de Brebeuf Catholic School (Toronto)",
+		"St John Catholic Elementary School (Lincoln)",
 
 
-		  "St Jean de Brebeuf Separate School (Bradford West Gwillimbury)",
+		"St. John Catholic Elementary School (Kawartha Lakes)",
 
 
-		  "St Jerome Catholic Elementary School (Aurora)",
+		"St. John Catholic Elementary School (Peterborough)",
 
 
-		  "St Jerome Catholic School (Toronto)",
+		"St John Catholic School (Wellington North)",
 
 
-		  "St Jerome Elementary School (Ottawa)",
+		"St John Catholic School (Windsor)",
 
 
-		  "St Jerome School (Kirkland Lake)",
+		"St John Catholic School (Greater Sudbury)",
 
 
-		  "St Jerome Separate School (Mississauga)",
+		"St John Catholic School (Toronto)",
 
 
-		  "St Joachim Catholic School (Toronto)",
+		"St John Catholic School (Guelph)",
 
 
-		  "St Joachim School (Hamilton)",
+		"St John Catholic School (Sault Ste. Marie)",
 
 
-		  "St Joachim Separate School (Brampton)",
+		"St John Chrysostom Catholic Elementary School (Newmarket)",
 
 
-		  "St Joan of Arc Catholic Elementary School (Oakville)",
+		"St John de Brebeuf Catholic School (Kingsville)",
 
 
-		  "St John Bosco Catholic Elementary School (Port Colborne)",
+		"St John Elementary School (Perth)",
 
 
-		  "St John Bosco Catholic Elementary School (Vaughan)",
+		"St John Fisher Catholic School (Lambton Shores)",
 
 
-		  "St John Bosco Catholic School (Brockville)",
+		"St John Fisher Separate School (Brampton)",
 
 
-		  "St John Bosco Catholic School (Oshawa)",
+		"St. John French Immersion School (London)",
 
 
-		  "St John Bosco Catholic School (Toronto)",
+		"St. John Intermediate School (Perth)",
 
 
-		  "St John Bosco School (Brampton)",
+		"St John of the Cross School (Mississauga)",
 
 
-		  "St John Bosco Separate School (Madawaska Valley)",
+		"St Johns School (Oakville)",
 
 
-		  "St John Brebeuf Catholic School (Erin)",
+		"St Johns Separate School (Burlington)",
 
 
-		  "St John Catholic Elementary School (Kitchener)",
+		"St John's Separate School (Red Lake)",
 
 
-		  "St John Catholic Elementary School (Lincoln)",
+		"St John the Apostle Elementary School (Ottawa)",
 
 
-		  "St. John Catholic Elementary School (Kawartha Lakes)",
+		"St John the Baptist Catholic School (Lakeshore)",
 
 
-		  "St. John Catholic Elementary School (Peterborough)",
+		"St John the Baptist Elementary School (Caledon)",
 
 
-		  "St John Catholic School (Wellington North)",
+		"St John the Baptist Separate School (Hamilton)",
 
 
-		  "St John Catholic School (Windsor)",
+		"St John the Evangelist Catholic (Lakeshore)",
 
 
-		  "St John Catholic School (Greater Sudbury)",
+		"St John the Evangelist Catholic School (Toronto)",
 
 
-		  "St John Catholic School (Toronto)",
+		"St John the Evangelist Catholic School (Whitby)",
 
 
-		  "St John Catholic School (Guelph)",
+		"St John Vianney Catholic School (Windsor)",
 
 
-		  "St John Catholic School (Sault Ste. Marie)",
+		"St John Vianney Catholic School (Toronto)",
 
 
-		  "St John Chrysostom Catholic Elementary School (Newmarket)",
+		"St John Vianney Separate School (Barrie)",
 
 
-		  "St John de Brebeuf Catholic School (Kingsville)",
+		"St Josaphat Catholic School (Toronto)",
 
 
-		  "St John Elementary School (Perth)",
+		"St Joseph Catholic Elementary School (Aurora)",
 
 
-		  "St John Fisher Catholic School (Lambton Shores)",
+		"St Joseph Catholic Elementary School (Cambridge)",
 
 
-		  "St John Fisher Separate School (Brampton)",
+		"St Joseph Catholic Elementary School (Grimsby)",
 
 
-		  "St. John French Immersion School (London)",
+		"St Joseph Catholic Elementary School (Fort Erie)",
 
 
-		  "St. John Intermediate School (Perth)",
+		"St Joseph Catholic Elementary School (Markham)",
 
 
-		  "St John of the Cross School (Mississauga)",
+		"St Joseph Catholic Elementary School (Richmond Hill)",
 
 
-		  "St Johns School (Oakville)",
+		"St. Joseph Catholic Elementary School (Douro-Dummer)",
 
 
-		  "St Johns Separate School (Burlington)",
+		"St. Joseph Catholic Elementary School (Clarington)",
 
 
-		  "St John's Separate School (Red Lake)",
+		"St. Joseph Catholic Elementary School (Cobourg)",
 
 
-		  "St John the Apostle Elementary School (Ottawa)",
+		"St JosephCatholic School (Centre Wellington)",
 
 
-		  "St John the Baptist Catholic School (Lakeshore)",
+		"St Joseph Catholic School (Wawa)",
 
 
-		  "St John the Baptist Elementary School (Caledon)",
+		"St Joseph Catholic School (Killarney)",
 
 
-		  "St John the Baptist Separate School (Hamilton)",
+		"St Joseph Catholic School (Toronto)",
 
 
-		  "St John the Evangelist Catholic (Lakeshore)",
+		"St Joseph Catholic School (Oshawa)",
 
 
-		  "St John the Evangelist Catholic School (Toronto)",
+		"St Joseph Catholic School (Chatham-Kent)",
 
 
-		  "St John the Evangelist Catholic School (Whitby)",
+		"St Joseph Catholic School (Belleville)",
 
 
-		  "St John Vianney Catholic School (Windsor)",
+		"St Joseph Catholic School (Uxbridge)",
 
 
-		  "St John Vianney Catholic School (Toronto)",
+		"St Joseph Catholic School (Chatham-Kent)",
 
 
-		  "St John Vianney Separate School (Barrie)",
+		"St Joseph Catholic School (St. Clair)",
 
 
-		  "St Josaphat Catholic School (Toronto)",
+		"St Joseph Catholic School (Lasalle)",
 
 
-		  "St Joseph Catholic Elementary School (Aurora)",
+		"St Joseph Catholic School (Guelph)",
 
 
-		  "St Joseph Catholic Elementary School (Cambridge)",
+		"St. Josephine Bakhita Catholic Elementary School (Brampton)",
 
 
-		  "St Joseph Catholic Elementary School (Grimsby)",
+		"St Joseph Intermediate School (Ottawa)",
 
 
-		  "St Joseph Catholic Elementary School (Fort Erie)",
+		"St Joseph Island Central Public School (St. Joseph)",
 
 
-		  "St Joseph Catholic Elementary School (Markham)",
+		"St Joseph's Catholic Elementary School (Zorra)",
 
 
-		  "St Joseph Catholic Elementary School (Richmond Hill)",
+		"St Joseph School (Kingston)",
 
 
-		  "St. Joseph Catholic Elementary School (Douro-Dummer)",
+		"St Joseph School (Brampton)",
 
 
-		  "St. Joseph Catholic Elementary School (Clarington)",
+		"St Joseph Separate School (Central Huron)",
 
 
-		  "St. Joseph Catholic Elementary School (Cobourg)",
+		"St Joseph Separate School (Stratford)",
 
 
-		  "St JosephCatholic School (Centre Wellington)",
+		"St Joseph Separate School (Timmins)",
 
 
-		  "St Joseph Catholic School (Wawa)",
+		"St Joseph Separate School (Mississauga)",
 
 
-		  "St Joseph Catholic School (Killarney)",
+		"St Joseph Separate School (Greenstone)",
 
 
-		  "St Joseph Catholic School (Toronto)",
+		"St Joseph's School (Saugeen Shores)",
 
 
-		  "St Joseph Catholic School (Oshawa)",
+		"St Joseph's School (Halton Hills)",
 
 
-		  "St Joseph Catholic School (Chatham-Kent)",
+		"St Joseph's School (Oakville)",
 
 
-		  "St Joseph Catholic School (Belleville)",
+		"St Joseph's School (Tillsonburg)",
 
 
-		  "St Joseph Catholic School (Uxbridge)",
+		"St. Joseph's School (Norfolk)",
 
 
-		  "St Joseph Catholic School (Chatham-Kent)",
+		"St Josephs Separate School (Dryden)",
 
 
-		  "St Joseph Catholic School (St. Clair)",
+		"St Josephs Separate School (Hamilton)",
 
 
-		  "St Joseph Catholic School (Lasalle)",
+		"St Joseph's Separate School (Elizabethtown-Kitley)",
 
 
-		  "St Joseph Catholic School (Guelph)",
+		"St Joseph's Separate School (Gananoque)",
 
 
-		  "St. Josephine Bakhita Catholic Elementary School (Brampton)",
+		"St Joseph's Separate School (Arnprior)",
 
 
-		  "St Joseph Intermediate School (Ottawa)",
+		"St Joseph's Separate School (Greater Madawaska)",
 
 
-		  "St Joseph Island Central Public School (St. Joseph)",
+		"St. Joseph's Separate School (Renfrew)",
 
 
-		  "St Joseph's Catholic Elementary School (Zorra)",
+		"St Joseph The Worker Catholic Elementary School (Thornhill)",
 
 
-		  "St Joseph School (Kingston)",
+		"St Jude Catholic Elementary School (Thunder Bay)",
 
 
-		  "St Joseph School (Brampton)",
+		"St Jude Catholic School (Ajax)",
 
 
-		  "St Joseph Separate School (Central Huron)",
+		"St Jude Catholic School (Toronto)",
 
 
-		  "St Joseph Separate School (Stratford)",
+		"St Jude's Catholic Elementary School (Champlain)",
 
 
-		  "St Joseph Separate School (Timmins)",
+		"St Jude School (Mississauga)",
 
 
-		  "St Joseph Separate School (Mississauga)",
+		"St Jude Separate School (London)",
 
 
-		  "St Joseph Separate School (Greenstone)",
+		"St Jude's School (Ingersoll)",
 
 
-		  "St Joseph's School (Saugeen Shores)",
+		"St Jules Catholic School (Windsor)",
 
 
-		  "St Joseph's School (Halton Hills)",
+		"St Julia Billiart Catholic Elementary School (Markham)",
 
 
-		  "St Joseph's School (Oakville)",
+		"St Julia Catholic Elementary School (Mississauga)",
 
 
-		  "St Joseph's School (Tillsonburg)",
+		"St Justin Martyr Catholic Elementary School (Markham)",
 
 
-		  "St. Joseph's School (Norfolk)",
+		"St Kevin Catholic Elementary School (Welland)",
 
 
-		  "St Josephs Separate School (Dryden)",
+		"St Kevin Catholic School (Toronto)",
 
 
-		  "St Josephs Separate School (Hamilton)",
+		"St Kevin School (Brampton)",
 
 
-		  "St Joseph's Separate School (Elizabethtown-Kitley)",
+		"St Lawrence Catholic School (Toronto)",
 
 
-		  "St Joseph's Separate School (Gananoque)",
+		"St Lawrence Intermediate School (Cornwall)",
 
 
-		  "St Joseph's Separate School (Arnprior)",
+		"St Lawrence's Separate School (Hamilton)",
 
 
-		  "St Joseph's Separate School (Greater Madawaska)",
+		"St Leo Catholic School (Toronto)",
 
 
-		  "St. Joseph's Separate School (Renfrew)",
+		"St Leo Catholic School (Whitby)",
 
 
-		  "St Joseph The Worker Catholic Elementary School (Thornhill)",
+		"St Leonard Elementary School (Ottawa)",
 
 
-		  "St Jude Catholic Elementary School (Thunder Bay)",
+		"St Leonard School (Brampton)",
 
 
-		  "St Jude Catholic School (Ajax)",
+		"St. Leo School (Brantford)",
 
 
-		  "St Jude Catholic School (Toronto)",
+		"St Louis Catholic School (Toronto)",
 
 
-		  "St Jude's Catholic Elementary School (Champlain)",
+		"St Louis Catholic School (Leamington)",
 
 
-		  "St Jude School (Mississauga)",
+		"St Louis School (Mississauga)",
 
 
-		  "St Jude Separate School (London)",
+		"St Louis Separate School (Kenora)",
 
 
-		  "St Jude's School (Ingersoll)",
+		"St. Lucy Catholic Elementary School (Brampton)",
 
 
-		  "St Jules Catholic School (Windsor)",
+		"St Luigi Catholic School (Toronto)",
 
 
-		  "St Julia Billiart Catholic Elementary School (Markham)",
+		"St Luke Catholic Elementary School (Mississauga)",
 
 
-		  "St Julia Catholic Elementary School (Mississauga)",
+		"St Luke Catholic Elementary School (Waterloo)",
 
 
-		  "St Justin Martyr Catholic Elementary School (Markham)",
+		"St. Luke Catholic Elementary School (Kawartha Lakes)",
 
 
-		  "St Kevin Catholic Elementary School (Welland)",
+		"St Luke Catholic School (Toronto)",
 
+		"St. Luke Catholic School (Smiths Falls)",
 
-		  "St Kevin Catholic School (Toronto)",
 
+		"St Luke Elementary School (Oakville)",
 
-		  "St Kevin School (Brampton)",
 
+		"St Luke (Nepean) Elementary School (Ottawa)",
 
-		  "St Lawrence Catholic School (Toronto)",
 
+		"St Luke (Ottawa) Elementary School (Ottawa)",
 
-		  "St Lawrence Intermediate School (Cornwall)",
 
+		"St Luke Separate School (Hamilton)",
 
-		  "St Lawrence's Separate School (Hamilton)",
 
+		"St. Luke Separate School (North Bay)",
 
-		  "St Leo Catholic School (Toronto)",
 
+		"St Luke the Evangelist Catholic School (Whitby)",
 
-		  "St Leo Catholic School (Whitby)",
 
+		"St Malachy Catholic School (Toronto)",
 
-		  "St Leonard Elementary School (Ottawa)",
 
+		"St Marcellus Catholic School (Toronto)",
 
-		  "St Leonard School (Brampton)",
 
+		"St Margaret Catholic Elementary School (Thunder Bay)",
 
-		  "St. Leo School (Brantford)",
 
+		"St Margaret Catholic Elementary School (Cambridge)",
 
-		  "St Louis Catholic School (Toronto)",
 
+		"St Margaret Catholic School (Toronto)",
 
-		  "St Louis Catholic School (Leamington)",
 
+		"St Margaret Mary Catholic Elementary School (Vaughan)",
 
-		  "St Louis School (Mississauga)",
 
+		"St Margaret Mary Separate School (Hamilton)",
 
-		  "St Louis Separate School (Kenora)",
 
+		"St Margaret of Scotland School (Mississauga)",
 
-		  "St. Lucy Catholic Elementary School (Brampton)",
 
+		"St Margaret's Public School (Toronto)",
 
-		  "St Luigi Catholic School (Toronto)",
 
+		"St Marguerite Bourgeoys Catholic Catholic School (Toronto)",
 
-		  "St Luke Catholic Elementary School (Mississauga)",
 
+		"St Marguerite Bourgeoys Catholic School (Pickering)",
 
-		  "St Luke Catholic Elementary School (Waterloo)",
 
+		"St Marguerite Bourgeoys Catholic School (Kingston)",
 
-		  "St. Luke Catholic Elementary School (Kawartha Lakes)",
 
+		"St Marguerite Bourgeoys Separate School (Brampton)",
 
-		  "St Luke Catholic School (Toronto)",
 
+		"St Marguerite d'Youville (London)",
 
-		  "St. Luke Catholic School (Smiths Falls)",
 
 
-		  "St Luke Elementary School (Oakville)",
 
+		"St Marguerite d'Youville Catholic School (Whitby)",
 
-		  "St Luke (Nepean) Elementary School (Ottawa)",
 
+		"St Marguerite d'Youville Elementary School (Ottawa)",
 
-		  "St Luke (Ottawa) Elementary School (Ottawa)",
 
+		"St Marguerite d'Youville Elementary School (Oakville)",
 
-		  "St Luke Separate School (Hamilton)",
 
+		"St Marguerite d'Youville Elementary School (Hamilton)",
 
-		  "St. Luke Separate School (North Bay)",
 
+		"St Marguerite d'Youville Elementary School (Barrie)",
 
-		  "St Luke the Evangelist Catholic School (Whitby)",
 
+		"St Maria Goretti Catholic School (Windsor)",
 
-		  "St Malachy Catholic School (Toronto)",
 
+		"St Maria Goretti Catholic School (Toronto)",
 
-		  "St Marcellus Catholic School (Toronto)",
 
+		"St Maria Goretti Elementary School (Brampton)",
 
-		  "St Margaret Catholic Elementary School (Thunder Bay)",
 
+		"St Mark (London)",
 
-		  "St Margaret Catholic Elementary School (Cambridge)",
 
+		"St Mark Catholic Elementary School (Lincoln)",
 
-		  "St Margaret Catholic School (Toronto)",
 
+		"St Mark Catholic Elementary School (Kitchener)",
 
-		  "St Margaret Mary Catholic Elementary School (Vaughan)",
 
+		"St Mark Catholic Elementary School (Whitchurch-Stouffville)",
 
-		  "St Margaret Mary Separate School (Hamilton)",
 
+		"St Mark Catholic School (Markstay-Warren)",
 
-		  "St Margaret of Scotland School (Mississauga)",
 
+		"St Mark Catholic School (Toronto)",
 
-		  "St Margaret's Public School (Toronto)",
 
+		"St Mark Catholic School (Sault Ste. Marie)",
 
-		  "St Marguerite Bourgeoys Catholic Catholic School (Toronto)",
 
+		"St. Mark Catholic School (Prescott)",
 
-		  "St Marguerite Bourgeoys Catholic School (Pickering)",
 
+		"St Mark Intermediate School (Ottawa)",
 
-		  "St Marguerite Bourgeoys Catholic School (Kingston)",
 
+		"St Mark's Catholic Elementary School (Hamilton)",
 
-		  "St Marguerite Bourgeoys Separate School (Brampton)",
 
+		"St Mark Separate School (Mississauga)",
 
-		  "St Marguerite d'Youville (London)",
 
+		"St Marks Separate School (Burlington)",
 
-		  "St Marguerite D'Youville Catholic Elementary School (Richmond Hill)",
 
+		"St Mark the Evangelist Catholic School (Whitby)",
 
-		  "St Marguerite d'Youville Catholic School (Whitby)",
 
+		"St Martha Catholic School (Kingston)",
 
-		  "St Marguerite d'Youville Elementary School (Ottawa)",
 
+		"St Martha Catholic School (Toronto)",
 
-		  "St Marguerite d'Youville Elementary School (Oakville)",
 
+		"St Martin (London)",
 
-		  "St Marguerite d'Youville Elementary School (Hamilton)",
 
+		"St Martin Catholic Elementary School (Thunder Bay)",
 
-		  "St Marguerite d'Youville Elementary School (Barrie)",
 
+		"St Martin Catholic Elementary School (West Lincoln)",
 
-		  "St Maria Goretti Catholic School (Windsor)",
 
+		"St. Martin Catholic Elementary School (Smith-Ennismore-Lakefield)",
 
-		  "St Maria Goretti Catholic School (Toronto)",
 
+		"St Martin Catholic School (Terrace Bay)",
 
-		  "St Maria Goretti Elementary School (Brampton)",
 
+		"St Martin De Porres Catholic School (Toronto)",
 
-		  "St Mark (London)",
 
+		"St Martin de Porres Elementary School (Ottawa)",
 
-		  "St Mark Catholic Elementary School (Lincoln)",
 
+		"St Martin of Tours Catholic School (South Algonquin)",
 
-		  "St Mark Catholic Elementary School (Kitchener)",
 
+		"St Martin of Tours Separate School (Hamilton)",
 
-		  "St Mark Catholic Elementary School (Whitchurch-Stouffville)",
 
+		"St Mary Catholic (Lakeshore)",
 
-		  "St Mark Catholic School (Markstay-Warren)",
 
+		"St Mary Catholic Elementary School (Niagara Falls)",
 
-		  "St Mark Catholic School (Toronto)",
 
+		"St Mary Catholic Elementary School (King)",
 
-		  "St Mark Catholic School (Sault Ste. Marie)",
 
+		"St Mary Catholic Elementary School (Welland)",
 
-		  "St. Mark Catholic School (Prescott)",
 
+		"St. Mary Catholic Elementary School (Alnwick/Haldimand)",
 
-		  "St Mark Intermediate School (Ottawa)",
 
+		"St. Mary Catholic Elementary School (Kawartha Lakes)",
 
-		  "St Mark's Catholic Elementary School (Hamilton)",
 
+		"St. Mary Catholic Elementary School (Trent Hills)",
 
-		  "St Mark Separate School (Mississauga)",
 
+		"St Mary Catholic School (Greater Sudbury)",
 
-		  "St Marks Separate School (Burlington)",
 
+		"St Mary Catholic School (Tyendinaga)",
 
-		  "St Mark the Evangelist Catholic School (Whitby)",
 
+		"St Mary Catholic School (Quinte West)",
 
-		  "St Martha Catholic School (Kingston)",
 
+		"St Mary Catholic School (Centre Wellington)",
 
-		  "St Martha Catholic School (Toronto)",
 
+		"St Mary Catholic School (Sables-Spanish Rivers)",
 
-		  "St Martin (London)",
 
+		"St Mary Catholic School (Wellington North)",
 
-		  "St Martin Catholic Elementary School (Thunder Bay)",
 
+		"St Mary Catholic School (Toronto)",
 
-		  "St Martin Catholic Elementary School (West Lincoln)",
 
+		"St Mary Elementary School (Brampton)",
 
-		  "St. Martin Catholic Elementary School (Smith-Ennismore-Lakefield)",
 
+		"St Mary (Gloucester) Elementary School (Ottawa)",
 
-		  "St Martin Catholic School (Terrace Bay)",
 
+		"St Mary Immaculate Catholic Elementary School (Richmond Hill)",
 
-		  "St Martin De Porres Catholic School (Toronto)",
 
+		"St Mary of the Angels Catholic Elementary School (Vaughan)",
 
-		  "St Martin de Porres Elementary School (Ottawa)",
 
+		"St Mary of the Angels Catholic School (Toronto)",
 
-		  "St Martin of Tours Catholic School (South Algonquin)",
 
+		"St Mary's (West Elgin)",
 
-		  "St Martin of Tours Separate School (Hamilton)",
 
+		"St Mary's Catholic School (Blind River)",
 
-		  "St Mary Catholic (Lakeshore)",
 
+		"St Mary School (Stone Mills)",
 
-		  "St Mary Catholic Elementary School (Niagara Falls)",
 
+		"St Mary School (London)",
 
-		  "St Mary Catholic Elementary School (King)",
 
+		"St. Mary School (Brantford)",
 
-		  "St Mary Catholic Elementary School (Welland)",
 
+		"St. Marys DCVI - Elementary (St. Marys)",
 
-		  "St. Mary Catholic Elementary School (Alnwick/Haldimand)",
 
+		"St Mary's French Immersion Catholic School (Sault Ste. Marie)",
 
-		  "St. Mary Catholic Elementary School (Kawartha Lakes)",
 
+		"St. Mary's School (Haldimand County)",
 
-		  "St. Mary Catholic Elementary School (Trent Hills)",
 
+		"St Marys Separate School (Goderich)",
 
-		  "St Mary Catholic School (Greater Sudbury)",
 
+		"St Marys Separate School (Collingwood)",
 
-		  "St Mary Catholic School (Tyendinaga)",
 
+		"St Marys Separate School (Barrie)",
 
-		  "St Mary Catholic School (Quinte West)",
 
+		"St Mary's Separate School (North Perth)",
 
-		  "St Mary Catholic School (Centre Wellington)",
 
+		"St Mary's Separate School (Brockville)",
 
-		  "St Mary Catholic School (Sables-Spanish Rivers)",
 
+		"St Mary's Separate School (Carleton Place)",
 
-		  "St Mary Catholic School (Wellington North)",
 
+		"St Mary's Separate School (Deep River)",
 
-		  "St Mary Catholic School (Toronto)",
 
+		"St Mary's Separate School (Killaloe, Hagarty And Richards)",
 
-		  "St Mary Elementary School (Brampton)",
 
+		"St Mary's Separate School (North Dundas)",
 
-		  "St Mary (Gloucester) Elementary School (Ottawa)",
 
+		"St Mary-St Cecilia Catholic (South Dundas)",
 
-		  "St Mary Immaculate Catholic Elementary School (Richmond Hill)",
 
+		"St Matthew Catholic Elementary School (Hamilton)",
 
-		  "St Mary of the Angels Catholic Elementary School (Vaughan)",
 
+		"St Matthew Catholic Elementary School (Markham)",
 
-		  "St Mary of the Angels Catholic School (Toronto)",
 
+		"St Matthew Catholic Elementary School (Waterloo)",
 
-		  "St Mary's (West Elgin)",
 
+		"St. Matthew Catholic Elementary School (Cornwall)",
 
-		  "St Mary's Catholic School (Blind River)",
 
+		"St Matthew Catholic School (Toronto)",
 
-		  "St Mary School (Stone Mills)",
 
+		"St. Matthew Catholic School (Sarnia)",
 
-		  "St Mary School (London)",
 
+		"St Matthew Intermediate School (Ottawa)",
 
-		  "St. Mary School (Brantford)",
 
+		"St Matthew Separate School (Mississauga)",
 
-		  "St. Marys DCVI - Elementary (St. Marys)",
 
+		"St Matthew's School (Oakville)",
 
-		  "St Mary's French Immersion Catholic School (Sault Ste. Marie)",
 
+		"St Matthew the Evangelist Catholic School (Whitby)",
 
-		  "St. Mary's School (Haldimand County)",
 
+		"St Matthias Catholic School (Toronto)",
 
-		  "St Marys Separate School (Goderich)",
 
+		"St Maurice Catholic School (Toronto)",
 
-		  "St Marys Separate School (Collingwood)",
 
+		"St Michael (London)",
 
-		  "St Marys Separate School (Barrie)",
 
+		"St Michael Catholic Academy (Thornhill)",
 
-		  "St Mary's Separate School (North Perth)",
 
+		"St Michael Catholic Elementary School (Niagara-On-The-Lake)",
 
-		  "St Mary's Separate School (Brockville)",
 
+		"St Michael Catholic Elementary School (Cambridge)",
 
-		  "St Mary's Separate School (Carleton Place)",
 
+		"St. Michael Catholic Elementary School (Cobourg)",
 
-		  "St Mary's Separate School (Deep River)",
 
+		"St Michael Catholic School (Chatham-Kent)",
 
-		  "St Mary's Separate School (Killaloe, Hagarty And Richards)",
 
+		"St Michael Catholic School (Toronto)",
 
-		  "St Mary's Separate School (North Dundas)",
 
+		"St Michael Catholic School (Sarnia)",
 
-		  "St Mary-St Cecilia Catholic (South Dundas)",
 
+		"St Michael Catholic School (Guelph)",
 
-		  "St Matthew Catholic Elementary School (Hamilton)",
 
+		"St Michael Catholic School (Belleville)",
 
-		  "St Matthew Catholic Elementary School (Markham)",
 
+		"St Michael (Corkery) Elementary School (Ottawa)",
 
-		  "St Matthew Catholic Elementary School (Waterloo)",
 
+		"St Michael Elementary School (North Grenville)",
 
-		  "St. Matthew Catholic Elementary School (Cornwall)",
 
+		"St Michael Elementary School (Ottawa)",
 
-		  "St Matthew Catholic School (Toronto)",
 
+		"St Michael (Fitzroy) Elementary School (Ottawa)",
 
-		  "St. Matthew Catholic School (Sarnia)",
 
+		"St Michael's (Woodstock)",
 
-		  "St Matthew Intermediate School (Ottawa)",
 
+		"St Michaels Catholic Elementary School (Hamilton)",
 
-		  "St Matthew Separate School (Mississauga)",
 
+		"St Michael's Choir (Jr) School (Toronto)",
 
-		  "St Matthew's School (Oakville)",
 
+		"St Michaels School (Fort Frances)",
 
-		  "St Matthew the Evangelist Catholic School (Whitby)",
 
+		"St. Michael's School (Norfolk)",
 
-		  "St Matthias Catholic School (Toronto)",
 
+		"St. Michael's School (Haldimand)",
 
-		  "St Maurice Catholic School (Toronto)",
 
+		"St Michaels Separate School (Oakville)",
 
-		  "St Michael (London)",
 
+		"St Michael's Separate School (Admaston/Bromley)",
 
-		  "St Michael Catholic Academy (Thornhill)",
 
+		"St Michael the Archangel Catholic Elementary School (Vaughan)",
 
-		  "St Michael Catholic Elementary School (Niagara-On-The-Lake)",
 
+		"St Michael the Archangel Catholic Elementary School (Barrie)",
 
-		  "St Michael Catholic Elementary School (Cambridge)",
 
+		"St Monica Catholic Elementary School (Markham)",
 
-		  "St. Michael Catholic Elementary School (Cobourg)",
 
+		"St Monica Catholic School (Toronto)",
 
-		  "St Michael Catholic School (Chatham-Kent)",
 
+		"St Monica Catholic School (Pickering)",
 
-		  "St Michael Catholic School (Toronto)",
 
+		"St Monica Elementary School (Brampton)",
 
-		  "St Michael Catholic School (Sarnia)",
 
+		"St Monica Elementary School (Ottawa)",
 
-		  "St Michael Catholic School (Guelph)",
 
+		"St Monicas Separate School (Barrie)",
 
-		  "St Michael Catholic School (Belleville)",
 
+		"St Nicholas Catholic Elementary School (St. Catharines)",
 
-		  "St Michael (Corkery) Elementary School (Ottawa)",
 
+		"St Nicholas Catholic Elementary School (Newmarket)",
 
-		  "St Michael Elementary School (North Grenville)",
 
+		"St Nicholas Catholic Elementary School (Waterloo)",
 
-		  "St Michael Elementary School (Ottawa)",
 
+		"St Nicholas Catholic School (Toronto)",
 
-		  "St Michael (Fitzroy) Elementary School (Ottawa)",
 
+		"St Nicholas Elementary School (Caledon)",
 
-		  "St Michael's (Woodstock)",
 
+		"St Nicholas of Bari Catholic School (Toronto)",
 
-		  "St Michaels Catholic Elementary School (Hamilton)",
 
+		"St Nicholas School (Barrie)",
 
-		  "St Michael's Choir (Jr) School (Toronto)",
 
+		"St Noel Chabanel Catholic Elementary School (Wasaga Beach)",
 
-		  "St Michaels School (Fort Frances)",
 
+		"St Norbert Catholic School (Toronto)",
 
-		  "St. Michael's School (Norfolk)",
 
+		"Stockdale Public School (Quinte West)",
 
-		  "St. Michael's School (Haldimand)",
 
+		"Stonebridge Public School (Markham)",
 
-		  "St Michaels Separate School (Oakville)",
 
+		"Stonecrest Elementary School (Ottawa)",
 
-		  "St Michael's Separate School (Admaston/Bromley)",
 
+		"Stonehaven Elementary School (Newmarket)",
 
-		  "St Michael the Archangel Catholic Elementary School (Vaughan)",
 
+		"Stoneybrook Public School (London)",
 
-		  "St Michael the Archangel Catholic Elementary School (Barrie)",
 
+		"Stoney Creek Public School (London)",
 
-		  "St Monica Catholic Elementary School (Markham)",
 
+		"Stornoway Crescent Public School (Thornhill)",
 
-		  "St Monica Catholic School (Toronto)",
 
+		"Storrington Public School (South Frontenac)",
 
-		  "St Monica Catholic School (Pickering)",
 
+		"Stouffville South Central #1 ES (Whitchurch-Stouffville)",
 
-		  "St Monica Elementary School (Brampton)",
 
+		"St Padre Pio Catholic Elementary School (Vaughan)",
 
-		  "St Monica Elementary School (Ottawa)",
 
+		"St Paschal Baylon Catholic School (Toronto)",
 
-		  "St Monicas Separate School (Barrie)",
 
+		"St Patrick (Lucan Biddulph)",
 
-		  "St Nicholas Catholic Elementary School (St. Catharines)",
 
+		"St Patrick Catholic Elementary School (Clarence-Rockland)",
 
-		  "St Nicholas Catholic Elementary School (Newmarket)",
 
+		"St Patrick Catholic Elementary School (King)",
 
-		  "St Nicholas Catholic Elementary School (Waterloo)",
 
+		"St Patrick Catholic Elementary School (Port Colborne)",
 
-		  "St Nicholas Catholic School (Toronto)",
 
+		"St Patrick Catholic Elementary School (Niagara Falls)",
 
-		  "St Nicholas Elementary School (Caledon)",
 
+		"St Patrick Catholic Elementary School (Markham)",
 
-		  "St Nicholas of Bari Catholic School (Toronto)",
 
+		"St. Patrick Catholic Elementary School (Peterborough)",
 
-		  "St Nicholas School (Barrie)",
 
+		"St Patrick Catholic School (Stone Mills)",
 
-		  "St Noel Chabanel Catholic Elementary School (Wasaga Beach)",
 
+		"St Patrick Catholic School (Guelph)",
 
-		  "St Norbert Catholic School (Toronto)",
 
+		"St Patrick Catholic School (Sault Ste. Marie)",
 
-		  "Stockdale Public School (Quinte West)",
 
+		"St Patrick Catholic School (Ajax)",
 
-		  "Stonebridge Public School (Markham)",
 
+		"St Patrick Catholic School (South Frontenac)",
 
-		  "Stonecrest Elementary School (Ottawa)",
 
+		"St Patrick Catholic School (Kingston)",
 
-		  "Stonehaven Elementary School (Newmarket)",
 
+		"St Patrick Elementary School (Ottawa)",
 
-		  "Stoneybrook Public School (London)",
 
+		"St Patrick's (Woodstock)",
 
-		  "Stoney Creek Public School (London)",
 
+		"St Patrick's Catholic Elementary School (Hamilton)",
 
-		  "Stornoway Crescent Public School (Thornhill)",
 
+		"St Patrick School (Brampton)",
 
-		  "Storrington Public School (South Frontenac)",
 
+		"St. Patrick School (Brantford)",
 
-		  "Stouffville South Central #1 ES (Whitchurch-Stouffville)",
 
+		"St Patrick Separate School (Burlington)",
 
-		  "St Padre Pio Catholic Elementary School (Vaughan)",
 
+		"St Patrick's Intermediate School (Ottawa)",
 
-		  "St Paschal Baylon Catholic School (Toronto)",
 
+		"St Patricks School (Kapuskasing)",
 
-		  "St Patrick (Lucan Biddulph)",
 
+		"St Patrick's School (Atikokan)",
 
-		  "St Patrick Catholic Elementary School (Clarence-Rockland)",
 
+		"St. Patrick's School (Haldimand County)",
 
-		  "St Patrick Catholic Elementary School (King)",
 
+		"St Patricks Separate School (Perth South)",
 
-		  "St Patrick Catholic Elementary School (Port Colborne)",
 
+		"St Patricks Separate School (Huron East)",
 
-		  "St Patrick Catholic Elementary School (Niagara Falls)",
 
+		"St Paul Catholic Elementary School (Kitchener)",
 
-		  "St Patrick Catholic Elementary School (Markham)",
 
+		"St Paul Catholic Elementary School (Thunder Bay)",
 
-		  "St. Patrick Catholic Elementary School (Peterborough)",
 
+		"St Paul Catholic Elementary School (Newmarket)",
 
-		  "St Patrick Catholic School (Stone Mills)",
 
+		"St. Paul Catholic Elementary School (Asphodel-Norwood)",
 
-		  "St Patrick Catholic School (Guelph)",
 
+		"St. Paul Catholic Elementary School (Smith-Ennismore-Lakefield)",
 
-		  "St Patrick Catholic School (Sault Ste. Marie)",
 
+		"St. Paul Catholic Elementary School (Peterborough)",
 
-		  "St Patrick Catholic School (Ajax)",
 
+		"St Paul Catholic School (Guelph)",
 
-		  "St Patrick Catholic School (South Frontenac)",
 
+		"St Paul Catholic School (Kingston)",
 
-		  "St Patrick Catholic School (Kingston)",
 
+		"St Paul Catholic School (Whitby)",
 
-		  "St Patrick Elementary School (Ottawa)",
 
+		"St Paul Catholic School (Toronto)",
 
-		  "St Patrick's (Woodstock)",
 
+		"St Paul Catholic School (Sault Ste. Marie)",
 
-		  "St Patrick's Catholic Elementary School (Hamilton)",
 
+		"St Paul Intermediate School (Ottawa)",
 
-		  "St Patrick School (Brampton)",
 
+		"St Paul School (Burlington)",
 
-		  "St. Patrick School (Brantford)",
 
+		"St Paul Separate School (London)",
 
-		  "St Patrick Separate School (Burlington)",
 
+		"St Paul Separate School (Hamilton)",
 
-		  "St Patrick's Intermediate School (Ottawa)",
 
+		"St Paul Separate School (Timmins)",
 
-		  "St Patricks School (Kapuskasing)",
 
+		"St Paul's Separate School (New Tecumseth)",
 
-		  "St Patrick's School (Atikokan)",
 
+		"St Paul the Apostle Catholic School (Greater Sudbury)",
 
-		  "St. Patrick's School (Haldimand County)",
 
+		"St Peter Canisius Catholic School (Warwick)",
 
-		  "St Patricks Separate School (Perth South)",
 
+		"St Peter Catholic Elementary School (St. Catharines)",
 
-		  "St Patricks Separate School (Huron East)",
 
+		"St Peter Catholic Elementary School (Cambridge)",
 
-		  "St Paul Catholic Elementary School (Kitchener)",
 
+		"St Peter Catholic Elementary School (Vaughan)",
 
-		  "St Paul Catholic Elementary School (Thunder Bay)",
 
+		"St Peter Catholic School (Tecumseh)",
 
-		  "St Paul Catholic Elementary School (Newmarket)",
 
+		"St Peter Catholic School (Guelph)",
 
-		  "St. Paul Catholic Elementary School (Asphodel-Norwood)",
 
+		"St Peter Catholic School (Quinte West)",
 
-		  "St. Paul Catholic Elementary School (Smith-Ennismore-Lakefield)",
 
+		"St Peter Catholic School (Kingston)",
 
-		  "St. Paul Catholic Elementary School (Peterborough)",
 
+		"St Peter Intermediate School (Ottawa)",
 
-		  "St Paul Catholic School (Guelph)",
 
+		"St. Peter School (Brantford)",
 
-		  "St Paul Catholic School (Kingston)",
 
+		"St Peter Separate School (Orangeville)",
 
-		  "St Paul Catholic School (Whitby)",
 
+		"St Peters School (Milton)",
 
-		  "St Paul Catholic School (Toronto)",
 
+		"St Peter's School (Cornwall)",
 
-		  "St Paul Catholic School (Sault Ste. Marie)",
 
+		"St Peter's & St Paul's Separate School (West Grey)",
 
-		  "St Paul Intermediate School (Ottawa)",
 
+		"St Peter the Apostle School (Parry Sound)",
 
-		  "St Paul School (Burlington)",
 
+		"St Philip Catholic School (Petrolia)",
 
-		  "St Paul Separate School (London)",
 
+		"St Philip Elementary School (Ottawa)",
 
-		  "St Paul Separate School (Hamilton)",
 
+		"St Philip Elementary School (Mississauga)",
 
-		  "St Paul Separate School (Timmins)",
 
+		"St Philip Neri Catholic School (Toronto)",
 
-		  "St Paul's Separate School (New Tecumseth)",
 
+		"St Philomena Catholic Elementary School (Fort Erie)",
 
-		  "St Paul the Apostle Catholic School (Greater Sudbury)",
 
+		"St Pio of Pietrelcina Elementary School (Mississauga)",
 
-		  "St Peter Canisius Catholic School (Warwick)",
 
+		"St Pius X Catholic Elementary School (Thunder Bay)",
 
-		  "St Peter Catholic Elementary School (St. Catharines)",
 
+		"St Pius X Catholic School (Toronto)",
 
-		  "St Peter Catholic Elementary School (Cambridge)",
 
+		"St Pius X Catholic School (Sault Ste. Marie)",
 
-		  "St Peter Catholic Elementary School (Vaughan)",
 
+		"St Pius X Catholic School (Tecumseh)",
 
-		  "St Peter Catholic School (Tecumseh)",
 
+		"St Pius X Intermediate School (Ottawa)",
 
-		  "St Peter Catholic School (Guelph)",
 
+		"St. Pius X School (Brantford)",
 
-		  "St Peter Catholic School (Quinte West)",
 
+		"St Pius X Separate School (London)",
 
-		  "St Peter Catholic School (Kingston)",
 
+		"Straffordville Public School (Bayham)",
 
-		  "St Peter Intermediate School (Ottawa)",
 
+		"St Raphael Catholic School (Greater Sudbury)",
 
-		  "St. Peter School (Brantford)",
 
+		"St Raphael Catholic School (Toronto)",
 
-		  "St Peter Separate School (Orangeville)",
 
+		"St Raphael School (Mississauga)",
 
-		  "St Peters School (Milton)",
 
+		"St Raphaels Separate School (Burlington)",
 
-		  "St Peter's School (Cornwall)",
 
+		"St Raphael the Archangel Catholic Elementary School (Vaughan)",
 
-		  "St Peter's &amp; St Paul's Separate School (West Grey)",
 
+		"Stratford Central Public School (Stratford)",
 
-		  "St Peter the Apostle School (Parry Sound)",
 
+		"Stratford Northwestern Public School (Stratford)",
 
-		  "St Philip Catholic School (Petrolia)",
 
+		"Strathcona Junior Public School (Hamilton)",
 
-		  "St Philip Elementary School (Ottawa)",
 
+		"St Raymond Catholic School (Toronto)",
 
-		  "St Philip Elementary School (Mississauga)",
 
+		"St Raymond Elementary School (Mississauga)",
 
-		  "St Philip Neri Catholic School (Toronto)",
 
+		"St Rene Goupil Catholic School (Toronto)",
 
-		  "St Philomena Catholic Elementary School (Fort Erie)",
 
+		"St Rene Goupil-St Luke Catholic Elementary School (Thornhill)",
 
-		  "St Pio of Pietrelcina Elementary School (Mississauga)",
 
+		"St Richard Catholic School (Toronto)",
 
-		  "St Pius X Catholic Elementary School (Thunder Bay)",
 
+		"St Richard School (Mississauga)",
 
-		  "St Pius X Catholic School (Toronto)",
 
+		"St Rita Catholic School (Toronto)",
 
-		  "St Pius X Catholic School (Sault Ste. Marie)",
 
+		"St Rita Elementary School (Ottawa)",
 
-		  "St Pius X Catholic School (Tecumseh)",
 
+		"St Rita Elementary School (Brampton)",
 
-		  "St Pius X Intermediate School (Ottawa)",
 
+		"St Rita's School (Woodstock)",
 
-		  "St. Pius X School (Brantford)",
 
+		"St Robert Catholic School (Toronto)",
 
-		  "St Pius X Separate School (London)",
 
+		"St Robert Separate School (London)",
 
-		  "Straffordville Public School (Bayham)",
 
+		"St Roch Catholic School (Toronto)",
 
-		  "St Raphael Catholic School (Greater Sudbury)",
 
+		"St Rose Catholic School (Windsor)",
 
-		  "St Raphael Catholic School (Toronto)",
 
+		"St Rose of Lima Catholic School (Toronto)",
 
-		  "St Raphael School (Mississauga)",
 
+		"St. Rose of Lima Elementary School (Ottawa)",
 
-		  "St Raphaels Separate School (Burlington)",
 
+		"St Rose of Lima Separate School (Mississauga)",
 
-		  "St Raphael the Archangel Catholic Elementary School (Vaughan)",
 
+		"Sts Cosmas and Damian Catholic School (Toronto)",
 
-		  "Stratford Central Public School (Stratford)",
 
+		"St Sebastian Catholic Elementary School (Mississauga)",
 
-		  "Stratford Northwestern Public School (Stratford)",
 
+		"St Sebastian Catholic School (Toronto)",
 
-		  "Strathcona Junior Public School (Hamilton)",
 
+		"St Sebastian Separate School (London)",
 
-		  "St Raymond Catholic School (Toronto)",
 
+		"St Simon Catholic School (Toronto)",
 
-		  "St Raymond Elementary School (Mississauga)",
 
+		"St Simon Stock Elementary School (Mississauga)",
 
-		  "St Rene Goupil Catholic School (Toronto)",
 
+		"Sts Martha & Mary Separate School (Mississauga)",
 
-		  "St Rene Goupil-St Luke Catholic Elementary School (Thornhill)",
 
+		"St Sofia School (Mississauga)",
 
-		  "St Richard Catholic School (Toronto)",
 
+		"Sts Peter & Paul Separate School (Hamilton)",
 
-		  "St Richard School (Mississauga)",
 
+		"Sts. Peter & Paul Separate School (Mississauga)",
 
-		  "St Rita Catholic School (Toronto)",
 
+		"St Stephen Catholic Elementary School (Vaughan)",
 
-		  "St Rita Elementary School (Ottawa)",
 
+		"St. Stephen Catholic Elementary School (Ottawa)",
 
-		  "St Rita Elementary School (Brampton)",
 
+		"St Stephen Catholic School (Toronto)",
 
-		  "St Rita's School (Woodstock)",
 
+		"St Stephen Separate School (Brampton)",
 
-		  "St Robert Catholic School (Toronto)",
 
+		"St. Stephen's School (Haldimand County)",
 
-		  "St Robert Separate School (London)",
 
+		"St Sylvester Catholic School (Toronto)",
 
-		  "St Roch Catholic School (Toronto)",
 
+		"St Teresa Catholic Elementary School (Kitchener)",
 
-		  "St Rose Catholic School (Windsor)",
 
+		"St. Teresa Catholic Elementary School (Peterborough)",
 
-		  "St Rose of Lima Catholic School (Toronto)",
 
+		"St Teresa Catholic School (Toronto)",
 
-		  "St. Rose of Lima Elementary School (Ottawa)",
 
+		"St Teresa of Avila Catholic Elementary School (Woolwich)",
 
-		  "St Rose of Lima Separate School (Mississauga)",
 
+		"St Teresa of Avila Separate School (Hamilton)",
 
-		  "Sts Cosmas and Damian Catholic School (Toronto)",
 
+		"St Teresa of Avila Separate School (Mississauga)",
 
-		  "St Sebastian Catholic Elementary School (Mississauga)",
 
+		"St Theresa Catholic Elementary School (St. Catharines)",
 
-		  "St Sebastian Catholic School (Toronto)",
 
+		"St Theresa Catholic School (Essex)",
 
-		  "St Sebastian Separate School (London)",
 
+		"St Theresa Catholic School (Sault Ste. Marie)",
 
-		  "St Simon Catholic School (Toronto)",
 
+		"St Theresa Catholic School (Greater Sudbury)",
 
-		  "St Simon Stock Elementary School (Mississauga)",
 
+		"St Theresa Catholic School (Whitby)",
 
-		  "Sts Martha &amp; Mary Separate School (Mississauga)",
 
+		"St Theresa Elementary School (Ottawa)",
 
-		  "St Sofia School (Mississauga)",
 
+		"St Theresa School (Callander)",
 
-		  "Sts Peter &amp; Paul Separate School (Hamilton)",
 
+		"St. Theresa School (Brantford)",
 
-		  "Sts. Peter &amp; Paul Separate School (Mississauga)",
 
+		"St Theresa Separate School (London)",
 
-		  "St Stephen Catholic Elementary School (Vaughan)",
 
+		"St Theresa Shrine Catholic School (Toronto)",
 
-		  "St. Stephen Catholic Elementary School (Ottawa)",
 
+		"St Therese Catholic Elementary School (Port Colborne)",
 
-		  "St Stephen Catholic School (Toronto)",
 
+		"St. Thérèse of Lisieux Catholic Elementary School (Hamilton)",
 
-		  "St Stephen Separate School (Brampton)",
 
+		"St Therese of the Child Jesus (Elementary) Separate School (Mississauga)",
 
-		  "St. Stephen's School (Haldimand County)",
 
+		"St Thomas Aquinas Catholic Elementary School (Thunder Bay)",
 
-		  "St Sylvester Catholic School (Toronto)",
 
+		"St Thomas Aquinas Catholic Elementary School (Georgina)",
 
-		  "St Teresa Catholic Elementary School (Kitchener)",
 
+		"St Thomas Aquinas Catholic School (Oshawa)",
 
-		  "St. Teresa Catholic Elementary School (Peterborough)",
 
+		"St Thomas Aquinas Catholic School (Toronto)",
 
-		  "St Teresa Catholic School (Toronto)",
 
+		"St. Thomas Aquinas Catholic School (Russell)",
 
-		  "St Teresa of Avila Catholic Elementary School (Woolwich)",
 
+		"St Thomas Aquinas High School (Kenora)",
 
-		  "St Teresa of Avila Separate School (Hamilton)",
 
+		"St Thomas Catholic Elementary School (Hamilton)",
 
-		  "St Teresa of Avila Separate School (Mississauga)",
 
+		"St Thomas More Catholic Elementary School (Niagara Falls)",
 
-		  "St Theresa Catholic Elementary School (St. Catharines)",
 
+		"St Thomas More Catholic School (Toronto)",
 
-		  "St Theresa Catholic School (Essex)",
 
+		"St Thomas More Catholic School (Kingston)",
 
-		  "St Theresa Catholic School (Sault Ste. Marie)",
 
+		"St Thomas More Elementary School (Ottawa)",
 
-		  "St Theresa Catholic School (Greater Sudbury)",
 
+		"St Thomas More School (Mississauga)",
 
-		  "St Theresa Catholic School (Whitby)",
 
+		"St Thomas More Separate School (London)",
 
-		  "St Theresa Elementary School (Ottawa)",
 
+		"St Thomas the Apostle Separate School (Renfrew)",
 
-		  "St Theresa School (Callander)",
 
+		"St Timothy Catholic Elementary School (Kitchener)",
 
-		  "St. Theresa School (Brantford)",
 
+		"St Timothy Catholic School (Toronto)",
 
-		  "St Theresa Separate School (London)",
 
+		"St Timothy School (Mississauga)",
 
-		  "St Theresa Shrine Catholic School (Toronto)",
 
+		"St Timothy Separate School (Burlington)",
 
-		  "St Therese Catholic Elementary School (Port Colborne)",
 
+		"Stuart Scott Public School (Newmarket)",
 
-		  "St. Thérèse of Lisieux Catholic Elementary School (Hamilton)",
 
+		"Stuart W Baker Elementary School (Dysart Et Al)",
 
-		  "St Therese of the Child Jesus (Elementary) Separate School (Mississauga)",
 
+		"Sturgeon Creek School (Emo)",
 
-		  "St Thomas Aquinas Catholic Elementary School (Thunder Bay)",
 
+		"St Ursula Catholic School (Chatham-Kent)",
 
-		  "St Thomas Aquinas Catholic Elementary School (Georgina)",
 
+		"St Ursula Catholic School (Toronto)",
 
-		  "St Thomas Aquinas Catholic School (Oshawa)",
 
+		"St Ursula Elementary School (Brampton)",
 
-		  "St Thomas Aquinas Catholic School (Toronto)",
 
+		"St Valentine Elementary School (Mississauga)",
 
-		  "St. Thomas Aquinas Catholic School (Russell)",
 
+		"St Veronica Catholic Elementary School (Vaughan)",
 
-		  "St Thomas Aquinas High School (Kenora)",
 
+		"St Veronica Elementary School (Mississauga)",
 
-		  "St Thomas Catholic Elementary School (Hamilton)",
 
+		"St Victor Catholic School (Toronto)",
 
-		  "St Thomas More Catholic Elementary School (Niagara Falls)",
 
+		"St Victor Separate School (Mattawa)",
 
-		  "St Thomas More Catholic School (Toronto)",
 
+		"St Vincent Catholic (Chatham-Kent)",
 
-		  "St Thomas More Catholic School (Kingston)",
 
+		"St Vincent Catholic Elementary School (Thunder Bay)",
 
-		  "St Thomas More Elementary School (Ottawa)",
 
+		"St Vincent de Paul Catholic Elementary School (Niagara Falls)",
 
-		  "St Thomas More School (Mississauga)",
 
+		"St Vincent de Paul Catholic Elementary School (Cambridge)",
 
-		  "St Thomas More Separate School (London)",
 
+		"St Vincent de Paul Catholic Elementary School (Markham)",
 
-		  "St Thomas the Apostle Separate School (Renfrew)",
 
+		"St Vincent de Paul Catholic School (Toronto)",
 
-		  "St Timothy Catholic Elementary School (Kitchener)",
 
+		"St Vincent de Paul Separate School (Strathroy-Caradoc)",
 
-		  "St Timothy Catholic School (Toronto)",
 
+		"St Vincent de Paul Separate School (Hamilton)",
 
-		  "St Timothy School (Mississauga)",
 
+		"St Vincent de Paul Separate School (Mississauga)",
 
-		  "St Timothy Separate School (Burlington)",
 
+		"St Vincent-Euphrasia Elementary School (Meaford)",
 
-		  "Stuart Scott Public School (Newmarket)",
 
+		"St Vincent's Catholic School (Oakville)",
 
-		  "Stuart W Baker Elementary School (Dysart Et Al)",
 
+		"St Wilfrid Catholic School (Pickering)",
 
-		  "Sturgeon Creek School (Emo)",
 
+		"St Wilfrid Catholic School (Toronto)",
 
-		  "St Ursula Catholic School (Chatham-Kent)",
 
+		"St William Catholic School (Lakeshore)",
 
-		  "St Ursula Catholic School (Toronto)",
 
+		"S T Worden Public School (Clarington)",
 
-		  "St Ursula Elementary School (Brampton)",
 
+		"Suddaby Public School (Kitchener)",
 
-		  "St Valentine Elementary School (Mississauga)",
 
+		"Sullivan Community School (Chatsworth)",
 
-		  "St Veronica Catholic Elementary School (Vaughan)",
 
+		"Summers' Corners Public School (Aylmer)",
 
-		  "St Veronica Elementary School (Mississauga)",
 
+		"Summit Heights Public School (Toronto)",
 
-		  "St Victor Catholic School (Toronto)",
 
+		"Summitview Public School (Whitchurch-Stouffville)",
 
-		  "St Victor Separate School (Mattawa)",
 
+		"Sunderland Public School (Brock)",
 
-		  "St Vincent Catholic (Chatham-Kent)",
 
+		"Sundridge Centennial Public School (Sundridge)",
 
-		  "St Vincent Catholic Elementary School (Thunder Bay)",
 
+		"Sunningdale Public School (Oakville)",
 
-		  "St Vincent de Paul Catholic Elementary School (Niagara Falls)",
 
+		"Sunnybrae Public School (Innisfil)",
 
-		  "St Vincent de Paul Catholic Elementary School (Cambridge)",
 
+		"Sunnylea Junior School (Toronto)",
 
-		  "St Vincent de Paul Catholic Elementary School (Markham)",
 
+		"Sunnyside Public School (Kitchener)",
 
-		  "St Vincent de Paul Catholic School (Toronto)",
 
+		"Sunny View Junior and Senior Public School (Toronto)",
 
-		  "St Vincent de Paul Separate School (Strathroy-Caradoc)",
 
+		"Sunny View Middle School (Brampton)",
 
-		  "St Vincent de Paul Separate School (Hamilton)",
 
+		"Sunset Heights Public School (Oshawa)",
 
-		  "St Vincent de Paul Separate School (Mississauga)",
 
+		"Sunset Park Public School (North Bay)",
 
-		  "St Vincent-Euphrasia Elementary School (Meaford)",
 
+		"Superior Heights Community Education (Sault Ste. Marie)",
 
-		  "St Vincent's Catholic School (Oakville)",
 
+		"Superior Heights Intermediate Elementary School (Sault Ste. Marie)",
 
-		  "St Wilfrid Catholic School (Pickering)",
 
+		"Susanna Moodie Senior Elementary School (Belleville)",
 
-		  "St Wilfrid Catholic School (Toronto)",
 
+		"Sutton Public School (Georgina)",
 
-		  "St William Catholic School (Lakeshore)",
 
+		"Swansea Junior and Senior Junior and Senior Public School (Toronto)",
 
-		  "S T Worden Public School (Clarington)",
 
+		"SW Brantford Elem School (Brantford)",
 
-		  "Suddaby Public School (Kitchener)",
 
+		"Sweet's Corners Public School (Leeds And The Thousand Islands)",
 
-		  "Sullivan Community School (Chatsworth)",
 
+		"Sydenham Community School (Owen Sound)",
 
-		  "Summers' Corners Public School (Aylmer)",
 
+		"Sydenham Public School (Kingston)",
 
-		  "Summit Heights Public School (Toronto)",
 
+		"Tagwi Intermediate School (North Stormont)",
 
-		  "Summitview Public School (Whitchurch-Stouffville)",
 
+		"Tait Street Public School (Cambridge)",
 
-		  "Sunderland Public School (Brock)",
 
+		"Talbot Trail Public School (Windsor)",
 
-		  "Sundridge Centennial Public School (Sundridge)",
 
+		"Tam O'Shanter Junior Public School (Toronto)",
 
-		  "Sunningdale Public School (Oakville)",
 
+		"Tamworth Elementary School (Stone Mills)",
 
-		  "Sunnybrae Public School (Innisfil)",
 
+		"Tapleytown Public School (Hamilton)",
 
-		  "Sunnylea Junior School (Toronto)",
 
+		"Tarentorus Public School (Sault Ste. Marie)",
 
-		  "Sunnyside Public School (Kitchener)",
 
+		"Tavistock Public School (East Zorra-Tavistock)",
 
-		  "Sunny View Junior and Senior Public School (Toronto)",
 
+		"Taylor Evans Public School (Guelph)",
 
-		  "Sunny View Middle School (Brampton)",
 
+		"Tecumseh Public School (Chatham-Kent)",
 
-		  "Sunset Heights Public School (Oshawa)",
 
+		"Tecumseh Public School (London)",
 
-		  "Sunset Park Public School (North Bay)",
 
+		"Tecumseh Public School (Mississauga)",
 
-		  "Superior Heights Community Education (Sault Ste. Marie)",
 
+		"Tecumseh Public School (Burlington)",
 
-		  "Superior Heights Intermediate Elementary School (Sault Ste. Marie)",
 
+		"Tecumseh Senior Public School (Toronto)",
 
-		  "Susanna Moodie Senior Elementary School (Belleville)",
 
+		"Tecumseh Vista Academy - Elementary (Tecumseh)",
 
-		  "Sutton Public School (Georgina)",
 
+		"Tecumseth Beeton Elementary School (New Tecumseth)",
 
-		  "Swansea Junior and Senior Junior and Senior Public School (Toronto)",
 
+		"Tecumseth South Central Public School (New Tecumseth)",
 
-		  "SW Brantford Elem School (Brantford)",
 
+		"Teeterville Public School (Norfolk)",
 
-		  "Sweet's Corners Public School (Leeds And The Thousand Islands)",
 
+		"Temagami Public School (Temagami)",
 
-		  "Sydenham Community School (Owen Sound)",
 
+		"Templemead Elementary School (Hamilton)",
 
-		  "Sydenham Public School (Kingston)",
 
+		"Terrace Bay Public School (Terrace Bay)",
 
-		  "Tagwi Intermediate School (North Stormont)",
 
+		"Terraview-Willowfield Public School (Toronto)",
 
-		  "Tait Street Public School (Cambridge)",
 
+		"Terry Fox Elementary School (Barrie)",
 
-		  "Talbot Trail Public School (Windsor)",
 
+		"Terry Fox Elementary School (Ottawa)",
 
-		  "Tam O'Shanter Junior Public School (Toronto)",
 
+		"Terry Fox Public School (Newmarket)",
 
-		  "Tamworth Elementary School (Stone Mills)",
 
+		"Terry Fox Public School (Brampton)",
 
-		  "Tapleytown Public School (Hamilton)",
 
+		"Terry Fox Public School (Ajax)",
 
-		  "Tarentorus Public School (Sault Ste. Marie)",
 
+		"Terry Fox Public School (Cobourg)",
 
-		  "Tavistock Public School (East Zorra-Tavistock)",
 
+		"Terry Fox Public School (Toronto)",
 
-		  "Taylor Evans Public School (Guelph)",
 
+		"Teston Village Public School (Vaughan)",
+		"TFS School-Canada's International School (Toronto)",
 
-		  "Tecumseh Public School (Chatham-Kent)",
+		"Thamesford Public School (Zorra)",
+		"The Bishop Strachan School (Toronto)",
+		"The Country Day School (Toronto)",
+		"Thamesville Area Central Public School (Chatham-Kent)",
 
 
-		  "Tecumseh Public School (London)",
+		"The Divine Infant Catholic School (Toronto)",
 
 
-		  "Tecumseh Public School (Mississauga)",
+		"The Elms Junior Middle School (Toronto)",
 
 
-		  "Tecumseh Public School (Burlington)",
+		"The Good Shepherd Catholic School (Barrie)",
 
 
-		  "Tecumseh Senior Public School (Toronto)",
+		"The Grove Community School (Toronto)",
+		"The Mabin School (Toronto)",
 
+		"The Pines Senior Public School (Clarington)",
 
-		  "Tecumseh Vista Academy - Elementary (Tecumseh)",
 
+		"The Prince Charles School (Greater Napanee)",
 
-		  "Tecumseth Beeton Elementary School (New Tecumseth)",
 
+		"The Queen Elizabeth School (Perth)",
 
-		  "Tecumseth South Central Public School (New Tecumseth)",
 
+		"Thessalon Public School (Thessalon)",
+		"The Rosedale Day School (Toronto)",
+		"The Sterling Hall School (Toronto)",
+		"The Stewart Public School (Perth)",
 
-		  "Teeterville Public School (Norfolk)",
 
+		"The Valleys Senior Public School (Mississauga)",
 
-		  "Temagami Public School (Temagami)",
 
+		"The Waterfront School (Toronto)",
 
-		  "Templemead Elementary School (Hamilton)",
 
+		"The Woodlands (Mississauga)",
+		"The York School (Toronto)",
 
-		  "Terrace Bay Public School (Terrace Bay)",
+		"Thomas D'Arcy McGee Catholic Elementary School (Ottawa)",
 
 
-		  "Terraview-Willowfield Public School (Toronto)",
+		"Thomas L Wells Public School (Toronto)",
 
 
-		  "Terry Fox Elementary School (Barrie)",
+		"Thomas Street Middle School (Mississauga)",
 
 
-		  "Terry Fox Elementary School (Ottawa)",
+		"Thompson Creek Elementary School (Haldimand)",
 
 
-		  "Terry Fox Public School (Newmarket)",
+		"Thorah Central Public School (Brock)",
 
 
-		  "Terry Fox Public School (Brampton)",
+		"Thorncliffe Park Public School (Toronto)",
 
 
-		  "Terry Fox Public School (Ajax)",
+		"Thorndale Public School (Brampton)",
 
 
-		  "Terry Fox Public School (Cobourg)",
+		"Thornhill Public School (Thornhill)",
 
 
-		  "Terry Fox Public School (Toronto)",
+		"Thornhill Woods Public School (Thornhill)",
 
 
-		  "Teston Village Public School (Vaughan)",
+		"Thorn Lodge Public School (Mississauga)",
 
 
-		  "Thamesford Public School (Zorra)",
+		"Thornwood Public School (Mississauga)",
 
 
-		  "Thamesville Area Central Public School (Chatham-Kent)",
+		"Thousand Islands Elementary School (Leeds And The Thousand Islands)",
 
 
-		  "The Divine Infant Catholic School (Toronto)",
+		"Three Bridges Public School (Woolwich)",
 
 
-		  "The Elms Junior Middle School (Toronto)",
+		"Three Valleys Public School (Toronto)",
 
 
-		  "The Good Shepherd Catholic School (Barrie)",
+		"Tiger Jeet Singh Public School (Milton)",
 
 
-		  "The Grove Community School (Toronto)",
+		"Tilbury Area Public School (Chatham-Kent)",
 
 
-		  "The Pines Senior Public School (Clarington)",
+		"Timberbank Junior Public School (Toronto)",
 
 
-		  "The Prince Charles School (Greater Napanee)",
+		"Timmins Centennial Public School (Timmins)",
+		"TMS School (Richmond Hill)",
 
+		"Tomken Road Senior Public School (Mississauga)",
 
-		  "The Queen Elizabeth School (Perth)",
 
+		"Tom Longboat Junior Public School (Toronto)",
 
-		  "Thessalon Public School (Thessalon)",
 
+		"Tom Thomson Public School (Burlington)",
 
-		  "The Stewart Public School (Perth)",
 
+		"Toniata Public School (Brockville)",
 
-		  "The Valleys Senior Public School (Mississauga)",
 
+		"Topcliff Public School (Toronto)",
 
-		  "The Waterfront School (Toronto)",
 
+		"Tosorontio Central Public School (Adjala-Tosorontio)",
 
-		  "The Woodlands (Mississauga)",
 
+		"Tottenham Public School (New Tecumseth)",
 
-		  "Thomas D'Arcy McGee Catholic Elementary School (Ottawa)",
+		"Trafalgar Castle School (Whitby)",
+		"Trafalgar Public School (London)",
 
 
-		  "Thomas L Wells Public School (Toronto)",
+		"Transfiguration of our Lord Catholic School (Toronto)",
 
 
-		  "Thomas Street Middle School (Mississauga)",
+		"Treeline Public School (Brampton)",
 
 
-		  "Thompson Creek Elementary School (Haldimand)",
+		"Trelawny Public School (Mississauga)",
 
 
-		  "Thorah Central Public School (Brock)",
+		"Trillium Elementary School (Ottawa)",
 
 
-		  "Thorncliffe Park Public School (Toronto)",
+		"Trillium Public School (Kitchener)",
 
 
-		  "Thorndale Public School (Brampton)",
+		"Trillium Woods Elementary Public School (Barrie)",
 
 
-		  "Thornhill Public School (Thornhill)",
+		"Trillium Woods Public School (Richmond Hill)",
+		"Trinity College School (Port Hope)",
 
+		"T R McEwen Public School (Oshawa)",
 
-		  "Thornhill Woods Public School (Thornhill)",
 
+		"Truedell Public School (Kingston)",
 
-		  "Thorn Lodge Public School (Mississauga)",
 
+		"Tumpane Public School (Toronto)",
 
-		  "Thornwood Public School (Mississauga)",
 
+		"Turnberry Central Public School (North Huron)",
 
-		  "Thousand Islands Elementary School (Leeds And The Thousand Islands)",
 
+		"Tweed-Hungerford Senior Public School (Tweed)",
 
-		  "Three Bridges Public School (Woolwich)",
 
+		"Tweedsmuir Public School (North Bay)",
 
-		  "Three Valleys Public School (Toronto)",
 
+		"Tweedsmuir Public School (London)",
 
-		  "Tiger Jeet Singh Public School (Milton)",
 
+		"Twentieth Street Junior School (Toronto)",
 
-		  "Tilbury Area Public School (Chatham-Kent)",
 
+		"Tyendinaga Public School (Tyendinaga)",
 
-		  "Timberbank Junior Public School (Toronto)",
 
+		"Tytler Public School (Guelph)",
 
-		  "Timmins Centennial Public School (Timmins)",
 
+		"Unionville Meadows Public School (Markham)",
 
-		  "Tomken Road Senior Public School (Mississauga)",
 
+		"Unionville Public School (Markham)",
 
-		  "Tom Longboat Junior Public School (Toronto)",
 
+		"University Heights Public School (London)",
 
-		  "Tom Thomson Public School (Burlington)",
 
+		"Unnamed Ajax Williamson Catholic Elementary School (Ajax)",
 
-		  "Toniata Public School (Brockville)",
 
+		"Uplands Catholic Elementary School (Ottawa)",
 
-		  "Topcliff Public School (Toronto)",
+		"Upper Canada College (Toronto)",
+		"Upper Thames Elementary School (West Perth)",
 
 
-		  "Tosorontio Central Public School (Adjala-Tosorontio)",
+		"Upsala Public School (Upsala)",
 
 
-		  "Tottenham Public School (New Tecumseth)",
+		"Uptergrove Public School (Orillia)",
+		"UTS University of Toronto Schools (Toronto)",
 
+		"Usborne Central School (South Huron)",
 
-		  "Trafalgar Public School (London)",
 
+		"Uxbridge Public School (Uxbridge)",
 
-		  "Transfiguration of our Lord Catholic School (Toronto)",
 
+		"Vales South-Fairlawn Blvd Public School",
 
-		  "Treeline Public School (Brampton)",
 
+		"Valley Central Public School (Slate River)",
 
-		  "Trelawny Public School (Mississauga)",
 
+		"Valley Farm Public School (Pickering)",
 
-		  "Trillium Elementary School (Ottawa)",
 
+		"Valleyfield Junior School (Toronto)",
 
-		  "Trillium Public School (Kitchener)",
 
+		"Valley Park Middle School (Toronto)",
 
-		  "Trillium Woods Elementary Public School (Barrie)",
 
+		"Valleyview Central Public School (Middlesex Centre)",
 
-		  "Trillium Woods Public School (Richmond Hill)",
 
+		"Valley View Public School (Pickering)",
 
-		  "T R McEwen Public School (Oshawa)",
 
+		"Valley View Public School (Val Caron)",
 
-		  "Truedell Public School (Kingston)",
 
+		"Valleyview School (Kenora)",
 
-		  "Tumpane Public School (Toronto)",
 
+		"Valley Way Public School (Niagara Falls)",
 
-		  "Turnberry Central Public School (North Huron)",
 
+		"Vance Chapman Public School (Thunder Bay)",
 
-		  "Tweed-Hungerford Senior Public School (Tweed)",
 
+		"Vanier Public School (Brockville)",
 
-		  "Tweedsmuir Public School (North Bay)",
 
+		"Vaughan Willard Public School (Pickering)",
 
-		  "Tweedsmuir Public School (London)",
 
+		"Vellore Woods Public School (Vaughan)",
 
-		  "Twentieth Street Junior School (Toronto)",
 
+		"Venerable John Merlini Catholic School (Toronto)",
 
-		  "Tyendinaga Public School (Tyendinaga)",
 
+		"Venerable Michael McGivney Catholic Elementary School (Brampton)",
 
-		  "Tytler Public School (Guelph)",
 
+		"Ventura Park Public School (Thornhill)",
 
-		  "Unionville Meadows Public School (Markham)",
 
+		"Victoria Cross Public School (Wellington North)",
 
-		  "Unionville Public School (Markham)",
 
+		"Victoria Harbour Elementary School (Tay)",
 
-		  "University Heights Public School (London)",
 
+		"Victoria Park Elementary School (Toronto)",
 
-		  "Unnamed Ajax Williamson Catholic Elementary School (Ajax)",
 
+		"Victoria Public School (Niagara Falls)",
 
-		  "Uplands Catholic Elementary School (Ottawa)",
 
+		"Victoria Public School (Tecumseh)",
 
-		  "Upper Thames Elementary School (West Perth)",
 
+		"Victoria Public School (London)",
 
-		  "Upsala Public School (Upsala)",
 
+		"Victoria Terrace Public School (Centre Wellington)",
 
-		  "Uptergrove Public School (Orillia)",
 
+		"Victoria Village Public School (Toronto)",
 
-		  "Usborne Central School (South Huron)",
 
+		"Victor Lauriston Public School (Chatham-Kent)",
 
-		  "Uxbridge Public School (Uxbridge)",
 
+		"Victory Public School (Parry Sound)",
 
-		  "Vales South-Fairlawn Blvd Public School ()",
 
+		"Victory Public School (Guelph)",
 
-		  "Valley Central Public School (Slate River)",
 
+		"Village Union Public School (Oshawa)",
+		"Villanova College (King City)",
 
-		  "Valley Farm Public School (Pickering)",
+		"Vimy Ridge Public School (Ajax)",
 
 
-		  "Valleyfield Junior School (Toronto)",
+		"Vincent Massey Public School (Ottawa)",
 
 
-		  "Valley Park Middle School (Toronto)",
+		"Vincent Massey Public School (North Bay)",
 
 
-		  "Valleyview Central Public School (Middlesex Centre)",
+		"Vincent Massey Public School (Oshawa)",
 
 
-		  "Valley View Public School (Pickering)",
+		"Vincent Massey Public School (Clarington)",
 
 
-		  "Valley View Public School (Val Caron)",
+		"Vineland/Maple Grove Public School (Lincoln)",
 
 
-		  "Valleyview School (Kenora)",
+		"Viscount Alexander Public School (Cornwall)",
 
 
-		  "Valley Way Public School (Niagara Falls)",
+		"Viscount Alexander Public School (Ottawa)",
 
 
-		  "Vance Chapman Public School (Thunder Bay)",
+		"Viscount Montgomery Public School (Hamilton)",
 
 
-		  "Vanier Public School (Brockville)",
+		"Vista Heights Public School (Mississauga)",
 
 
-		  "Vaughan Willard Public School (Pickering)",
+		"V K Greer Memorial Public School (Huntsville)",
 
 
-		  "Vellore Woods Public School (Vaughan)",
+		"V P Carswell Public School (Quinte West)",
 
 
-		  "Venerable John Merlini Catholic School (Toronto)",
+		"Vradenburg Junior Public School (Toronto)",
 
 
-		  "Venerable Michael McGivney Catholic Elementary School (Brampton)",
+		"Walden Public School (Greater Sudbury)",
 
 
-		  "Ventura Park Public School (Thornhill)",
+		"Walkerton Public School (Brockton)",
 
 
-		  "Victoria Cross Public School (Wellington North)",
+		"Wallace Public School (North Perth)",
 
 
-		  "Victoria Harbour Elementary School (Tay)",
+		"Walpole North Elementary School (Haldimand County)",
 
 
-		  "Victoria Park Elementary School (Toronto)",
+		"Walsh Public School (Norfolk)",
 
 
-		  "Victoria Public School (Niagara Falls)",
+		"Walter E Harris Public School (Oshawa)",
 
 
-		  "Victoria Public School (Tecumseh)",
+		"Walter Gretzky Elementary School (Brantford)",
 
 
-		  "Victoria Public School (London)",
+		"Walter Perry Junior Public School (Toronto)",
 
 
-		  "Victoria Terrace Public School (Centre Wellington)",
+		"Walter Scott Public School (Richmond Hill)",
 
 
-		  "Victoria Village Public School (Toronto)",
+		"Walter Zadow Public School (Arnprior)",
 
 
-		  "Victor Lauriston Public School (Chatham-Kent)",
+		"Warden Avenue Public School (Toronto)",
 
 
-		  "Victory Public School (Parry Sound)",
+		"Warminster Elementary School (Oro-Medonte)",
 
 
-		  "Victory Public School (Guelph)",
+		"Warnica Public School (Barrie)",
 
 
-		  "Village Union Public School (Oshawa)",
+		"Warren Park Junior Public School (Toronto)",
 
 
-		  "Vimy Ridge Public School (Ajax)",
+		"Warsaw Public School (Douro-Dummer)",
 
 
-		  "Vincent Massey Public School (Ottawa)",
+		"Waterford Public School (Norfolk County)",
 
 
-		  "Vincent Massey Public School (North Bay)",
+		"Watt Public School (Huntsville)",
 
 
-		  "Vincent Massey Public School (Oshawa)",
+		"Waubaushene Elementary School (Tay)",
 
 
-		  "Vincent Massey Public School (Clarington)",
+		"Waverley Drive Public School (Guelph)",
 
 
-		  "Vineland/Maple Grove Public School (Lincoln)",
+		"Waverley Public School (Clarington)",
 
 
-		  "Viscount Alexander Public School (Cornwall)",
+		"Waverly Public School (Oshawa)",
 
 
-		  "Viscount Alexander Public School (Ottawa)",
+		"W C Little Elementary School (Barrie)",
 
 
-		  "Viscount Montgomery Public School (Hamilton)",
+		"W Earle Miller Public School (Timmins)",
 
 
-		  "Vista Heights Public School (Mississauga)",
+		"Webbwood Public School (Sables-Spanish Rivers)",
 
 
-		  "V K Greer Memorial Public School (Huntsville)",
+		"Wedgewood Junior School (Toronto)",
 
 
-		  "V P Carswell Public School (Quinte West)",
+		"W.E. Gowling Public School (Ottawa)",
 
 
-		  "Vradenburg Junior Public School (Toronto)",
+		"Welborne Avenue Public School (Kingston)",
 
 
-		  "Walden Public School (Greater Sudbury)",
+		"Wellesley Public School (Wellesley)",
 
 
-		  "Walkerton Public School (Brockton)",
+		"Wellesworth Junior School (Toronto)",
 
 
-		  "Wallace Public School (North Perth)",
+		"Wellington Elementary Public School (Prescott)",
 
 
-		  "Walpole North Elementary School (Haldimand County)",
+		"W. Erskine Johnston Public School (Ottawa)",
 
 
-		  "Walsh Public School (Norfolk)",
+		"Westacres Public School (Mississauga)",
 
 
-		  "Walter E Harris Public School (Oshawa)",
+		"West Bayfield Elementary School (Barrie)",
 
 
-		  "Walter Gretzky Elementary School (Brantford)",
+		"Westcreek Public School (Pickering)",
 
 
-		  "Walter Perry Junior Public School (Toronto)",
+		"Westdale Park Public School (Greater Napanee)",
 
 
-		  "Walter Scott Public School (Richmond Hill)",
+		"Westdale Public School (St. Catharines)",
 
 
-		  "Walter Zadow Public School (Arnprior)",
+		"West Elgin Senior Elementary School (West Elgin)",
 
 
-		  "Warden Avenue Public School (Toronto)",
+		"Westervelts Corners Public School (Brampton)",
 
 
-		  "Warminster Elementary School (Oro-Medonte)",
+		"West Glen Junior School (Toronto)",
 
 
-		  "Warnica Public School (Barrie)",
+		"Westheights Public School (Kitchener)",
 
 
-		  "Warren Park Junior Public School (Toronto)",
+		"West Hill Public School (Toronto)",
 
 
-		  "Warsaw Public School (Douro-Dummer)",
+		"West Humber Junior Middle School (Toronto)",
 
 
-		  "Waterford Public School (Norfolk County)",
+		"West Lynde Public School (Whitby)",
 
 
-		  "Watt Public School (Huntsville)",
+		"West Lynn Public School (Norfolk)",
 
 
-		  "Waubaushene Elementary School (Tay)",
+		"Westmeath Public School (Whitewater Region)",
 
 
-		  "Waverley Drive Public School (Guelph)",
+		"Westminster Central Public School (London)",
 
 
-		  "Waverley Public School (Clarington)",
+		"Westminster Public School (Thornhill)",
 
 
-		  "Waverly Public School (Oshawa)",
+		"Westminster Public School (Brockville)",
 
 
-		  "W C Little Elementary School (Barrie)",
+		"Westminster Woods Public School (Guelph)",
 
 
-		  "W Earle Miller Public School (Timmins)",
+		"Westmount Avenue Public School (Greater Sudbury)",
 
 
-		  "Webbwood Public School (Sables-Spanish Rivers)",
+		"Westmount Junior School (Toronto)",
 
 
-		  "Wedgewood Junior School (Toronto)",
+		"Westmount Public School (Kitchener)",
 
 
-		  "W.E. Gowling Public School (Ottawa)",
+		"Westmount Public School (London)",
 
 
-		  "Welborne Avenue Public School (Kingston)",
+		"Westmount Public School (Thorold)",
 
 
-		  "Wellesley Public School (Wellesley)",
+		"Westmount Public School (Thunder Bay)",
 
 
-		  "Wellesworth Junior School (Toronto)",
+		"Westmount Public School (Peterborough)",
 
 
-		  "Wellington Elementary Public School (Prescott)",
+		"Westney Heights Public School (Ajax)",
 
 
-		  "W. Erskine Johnston Public School (Ottawa)",
+		"West Nissouri Public School (Thames Centre)",
 
 
-		  "Westacres Public School (Mississauga)",
+		"West Oak Public School (Oakville)",
 
 
-		  "West Bayfield Elementary School (Barrie)",
+		"West Oaks French Immersion Public School (London)",
 
 
-		  "Westcreek Public School (Pickering)",
+		"Weston Memorial Junior Public School (Toronto)",
 
 
-		  "Westdale Park Public School (Greater Napanee)",
+		"West Preparatory Junior Public School (Toronto)",
 
 
-		  "Westdale Public School (St. Catharines)",
+		"West Rouge Junior Public School (Toronto)",
 
 
-		  "West Elgin Senior Elementary School (West Elgin)",
+		"Westvale Public School (Waterloo)",
 
 
-		  "Westervelts Corners Public School (Brampton)",
+		"Westview Middle School (Hamilton)",
 
 
-		  "West Glen Junior School (Toronto)",
+		"Westway Junior School (Toronto)",
 
 
-		  "Westheights Public School (Kitchener)",
+		"Westwind Public School (Ottawa)",
 
 
-		  "West Hill Public School (Toronto)",
+		"Westwood Junior Public School (Hamilton)",
 
 
-		  "West Humber Junior Middle School (Toronto)",
+		"Westwood Middle School (Toronto)",
 
 
-		  "West Lynde Public School (Whitby)",
+		"Westwood Public School (Guelph)",
 
 
-		  "West Lynn Public School (Norfolk)",
+		"Wexford Public School (Toronto)",
 
 
-		  "Westmeath Public School (Whitewater Region)",
+		"W H Ballard Public School (Hamilton)",
 
 
-		  "Westminster Central Public School (London)",
+		"W H Day Elementary School (Bradford West Gwillimbury)",
 
 
-		  "Westminster Public School (Thornhill)",
+		"Wheatley Area Public School (Chatham-Kent)",
+		
+		"Wheatley School (St.Catherines)",
 
+		"Whitby Shores P.S. Public School (Whitby)",
 
-		  "Westminster Public School (Brockville)",
 
+		"Whitchurch Highlands Public School (Whitchurch-Stouffville)",
 
-		  "Westminster Woods Public School (Guelph)",
 
+		"Whitefish Valley Public School (Oliver Paipoonge)",
 
-		  "Westmount Avenue Public School (Greater Sudbury)",
 
+		"White Haven Junior Public School (Toronto)",
 
-		  "Westmount Junior School (Toronto)",
 
+		"Whitehorn Public School (Mississauga)",
 
-		  "Westmount Public School (Kitchener)",
 
+		"Whiteoaks Public School (Mississauga)",
 
-		  "Westmount Public School (London)",
 
+		"White Oaks Public School (London)",
 
-		  "Westmount Public School (Thorold)",
 
+		"White Pines Intermediate Senior Elementary School (Sault Ste. Marie)",
 
-		  "Westmount Public School (Thunder Bay)",
 
+		"Whitestone Lake Central School (Whitestone)",
 
-		  "Westmount Public School (Peterborough)",
 
+		"White Woods Public School (West Nipissing)",
 
-		  "Westney Heights Public School (Ajax)",
 
+		"Whitney Junior Public School (Toronto)",
 
-		  "West Nissouri Public School (Thames Centre)",
 
+		"Whitney Public School (South Algonquin)",
 
-		  "West Oak Public School (Oakville)",
 
+		"W H Morden Public School (Oakville)",
 
-		  "West Oaks French Immersion Public School (London)",
 
+		"W I Dick Middle School (Milton)",
 
-		  "Weston Memorial Junior Public School (Toronto)",
 
+		"Wilberforce Elementary School (Highlands East)",
 
-		  "West Preparatory Junior Public School (Toronto)",
 
+		"Wilberforce Public School (Lucan Biddulph)",
 
-		  "West Rouge Junior Public School (Toronto)",
 
+		"Wilclay Public School (Markham)",
 
-		  "Westvale Public School (Waterloo)",
 
+		"Wilfrid Jury Public School (London)",
 
-		  "Westview Middle School (Hamilton)",
 
+		"Wilkinson Junior Public School (Toronto)",
 
-		  "Westway Junior School (Toronto)",
 
+		"William Armstrong Public School (Markham)",
 
-		  "Westwind Public School (Ottawa)",
 
+		"William Beatty Public School (Parry Sound)",
 
-		  "Westwood Junior Public School (Hamilton)",
 
+		"William Berczy Public School (Markham)",
 
-		  "Westwood Middle School (Toronto)",
 
+		"William Burgess Elementary School (Toronto)",
 
-		  "Westwood Public School (Guelph)",
 
+		"William Dunbar Public School (Pickering)",
 
-		  "Wexford Public School (Toronto)",
 
+		"William E Brown Public School (Wainfleet)",
 
-		  "W H Ballard Public School (Hamilton)",
 
+		"William G Davis Junior Public School (Toronto)",
 
-		  "W H Day Elementary School (Bradford West Gwillimbury)",
 
+		"William G Davis Public School (Windsor)",
 
-		  "Wheatley Area Public School (Chatham-Kent)",
 
+		"William G Davis Public School (Cambridge)",
 
-		  "Whitby Shores P.S. Public School (Whitby)",
 
+		"William G. Davis Senior Public School (Brampton)",
 
-		  "Whitchurch Highlands Public School (Whitchurch-Stouffville)",
 
+		"William G Miller Junior Public School (Toronto)",
 
-		  "Whitefish Valley Public School (Oliver Paipoonge)",
 
+		"William J McCordic School (Toronto)",
 
-		  "White Haven Junior Public School (Toronto)",
 
+		"Williamsburg Public School (Kitchener)",
 
-		  "Whitehorn Public School (Mississauga)",
 
+		"Williamsburg Public School (Whitby)",
 
-		  "Whiteoaks Public School (Mississauga)",
 
+		"Williamson Road Junior Public School (Toronto)",
 
-		  "White Oaks Public School (London)",
 
+		"Williams Parkway Senior Public School (Brampton)",
 
-		  "White Pines Intermediate Senior Elementary School (Sault Ste. Marie)",
 
+		"Williamstown Public School (South Glengarry)",
 
-		  "Whitestone Lake Central School (Whitestone)",
 
+		"William Tredway Junior Public School (Toronto)",
 
-		  "White Woods Public School (West Nipissing)",
 
+		"Willowbrook Public School (Thornhill)",
 
-		  "Whitney Junior Public School (Toronto)",
 
+		"Willowdale Middle School (Toronto)",
 
-		  "Whitney Public School (South Algonquin)",
 
+		"Willow Glen Public School (Mississauga)",
 
-		  "W H Morden Public School (Oakville)",
 
+		"Willow Landing Elementary School (Barrie)",
 
-		  "W I Dick Middle School (Milton)",
 
+		"Willow Park Junior Public School (Toronto)",
 
-		  "Wilberforce Elementary School (Highlands East)",
 
+		"Willow Road Public School (Guelph)",
 
-		  "Wilberforce Public School (Lucan Biddulph)",
 
+		"Willow Way Public School (Mississauga)",
 
-		  "Wilclay Public School (Markham)",
 
+		"Wilmington Elementary School (Toronto)",
 
-		  "Wilfrid Jury Public School (London)",
 
+		"Wilshire Elementary School (Thornhill)",
 
-		  "Wilkinson Junior Public School (Toronto)",
 
+		"Wilson Avenue Public School (Kitchener)",
 
-		  "William Armstrong Public School (Markham)",
 
+		"Wilton Grove Public School (London)",
 
-		  "William Beatty Public School (Parry Sound)",
 
+		"Winchester Junior and Senior Public School (Toronto)",
 
-		  "William Berczy Public School (Markham)",
 
+		"Winchester Public School (North Dundas)",
 
-		  "William Burgess Elementary School (Toronto)",
 
+		"Winchester Public School (Whitby)",
 
-		  "William Dunbar Public School (Pickering)",
 
+		"Winchester Street Public School (Woodstock)",
 
-		  "William E Brown Public School (Wainfleet)",
 
+		"Windfields Junior High School (Toronto)",
 
-		  "William G Davis Junior Public School (Toronto)",
 
+		"Windham Ridge Public School (Richmond Hill)",
 
-		  "William G Davis Public School (Windsor)",
 
+		"Winger Public School (Wainfleet)",
 
-		  "William G Davis Public School (Cambridge)",
 
+		"Wingham Public School (North Huron)",
 
-		  "William G. Davis Senior Public School (Brampton)",
 
+		"Winona Drive Senior Public School (Toronto)",
 
-		  "William G Miller Junior Public School (Toronto)",
 
+		"Winona Elementary (Hamilton)",
 
-		  "William J McCordic School (Toronto)",
 
+		"Winona Elementary School (Hamilton)",
 
-		  "Williamsburg Public School (Kitchener)",
 
+		"Winston Churchill Public School (Kingston)",
 
-		  "Williamsburg Public School (Whitby)",
 
+		"Winston Churchill Public School (Chatham-Kent)",
 
-		  "Williamson Road Junior Public School (Toronto)",
 
+		"Winston Churchill Public School (Waterloo)",
 
-		  "Williams Parkway Senior Public School (Brampton)",
 
+		"Wismer Public School (Markham)",
 
-		  "Williamstown Public School (South Glengarry)",
 
+		"Withrow Avenue Junior Public School (Toronto)",
 
-		  "William Tredway Junior Public School (Toronto)",
 
+		"W J Baird Public School (Chatham-Kent)",
 
-		  "Willowbrook Public School (Thornhill)",
 
+		"W J Fricker Senior Public School (North Bay)",
 
-		  "Willowdale Middle School (Toronto)",
 
+		"W.J. Holsgrove Public School (Kingston)",
 
-		  "Willow Glen Public School (Mississauga)",
 
+		"W J Langlois Catholic School (Windsor)",
 
-		  "Willow Landing Elementary School (Barrie)",
 
+		"W J Watson Public School (Georgina)",
 
-		  "Willow Park Junior Public School (Toronto)",
 
+		"Wm Merrifield VC Public School (Sault Ste. Marie)",
 
-		  "Willow Road Public School (Guelph)",
 
+		"Woburn Junior Public School (Toronto)",
 
-		  "Willow Way Public School (Mississauga)",
 
+		"Wolford Public School (Merrickville-Wolford)",
 
-		  "Wilmington Elementary School (Toronto)",
 
+		"W.O. Mitchell Elementary School (Ottawa)",
 
-		  "Wilshire Elementary School (Thornhill)",
 
+		"Woodbine Junior High School (Toronto)",
 
-		  "Wilson Avenue Public School (Kitchener)",
 
+		"Woodbridge Public School (Vaughan)",
 
-		  "Wilton Grove Public School (London)",
 
+		"Woodcrest Public School (Thunder Bay)",
 
-		  "Winchester Junior and Senior Public School (Toronto)",
 
+		"Woodcrest Public School (Oshawa)",
 
-		  "Winchester Public School (North Dundas)",
 
+		"Woodland Heights Public School (London)",
 
-		  "Winchester Public School (Whitby)",
 
+		"Woodland Park Public School (Cambridge)",
 
-		  "Winchester Street Public School (Woodstock)",
 
+		"Woodland Public School (St. Catharines)",
 
-		  "Windfields Junior High School (Toronto)",
 
+		"Woodland Public School (Thornhill)",
 
-		  "Windham Ridge Public School (Richmond Hill)",
 
+		"Woodman-Cainsville School (Brantford)",
 
-		  "Winger Public School (Wainfleet)",
 
+		"Woodroffe Avenue Public School (Ottawa)",
 
-		  "Wingham Public School (North Huron)",
 
+		"Woodville Elementary School (Kawartha Lakes)",
 
-		  "Winona Drive Senior Public School (Toronto)",
 
+		"Woodward Junior Public School (Hamilton)",
 
-		  "Winona Elementary (Hamilton)",
 
+		"Worsley Elementary School (Wasaga Beach)",
 
-		  "Winona Elementary School (Hamilton)",
 
+		"Worthington Public School (Brampton)",
 
-		  "Winston Churchill Public School (Kingston)",
 
+		"Wortley Road Public School (London)",
 
-		  "Winston Churchill Public School (Chatham-Kent)",
 
+		"W R Best Memorial Public School (Oro-Medonte)",
 
-		  "Winston Churchill Public School (Waterloo)",
 
+		"W Ross Macdonald Deaf Blind Elementary School (Brantford)",
 
-		  "Wismer Public School (Markham)",
 
+		"W Ross Macdonald Provincial School for the Visually Impaired Elementary (Brantford)",
 
-		  "Withrow Avenue Junior Public School (Toronto)",
 
+		"W Sherwood Fox Public School (London)",
 
-		  "W J Baird Public School (Chatham-Kent)",
 
+		"W.T. Townshend Public School (Kitchener)",
 
-		  "W J Fricker Senior Public School (North Bay)",
 
+		"Wyevale Central Public School (Tiny)",
 
-		  "W.J. Holsgrove Public School (Kingston)",
 
+		"Wyoming Public School (Plympton-Wyoming)",
 
-		  "W J Langlois Catholic School (Windsor)",
 
+		"Yarker Public School (Stone Mills)",
 
-		  "W J Watson Public School (Georgina)",
 
+		"Yorkhill Elementary School (Thornhill)",
 
-		  "Wm Merrifield VC Public School (Sault Ste. Marie)",
 
+		"York River PS (Bancroft)",
 
-		  "Woburn Junior Public School (Toronto)",
 
+		"York River Public School (Bancroft)",
 
-		  "Wolford Public School (Merrickville-Wolford)",
 
+		"York Street Public School (Ottawa)",
 
-		  "W.O. Mitchell Elementary School (Ottawa)",
 
+		"Yorkview Public School (Toronto)",
 
-		  "Woodbine Junior High School (Toronto)",
 
+		"Yorkview School (Hamilton)",
 
-		  "Woodbridge Public School (Vaughan)",
 
+		"Yorkwoods Public School (Toronto)",
 
-		  "Woodcrest Public School (Thunder Bay)",
 
+		"Zion Heights Junior High School (Toronto)",
 
-		  "Woodcrest Public School (Oshawa)",
 
+		"Zone Township Central School (Chatham-Kent)",
 
-		  "Woodland Heights Public School (London)",
 
+		"Zorra Highland Park Public School (Zorra)",
 
-		  "Woodland Park Public School (Cambridge)",
 
-
-		  "Woodland Public School (St. Catharines)",
-
-
-		  "Woodland Public School (Thornhill)",
-
-
-		  "Woodman-Cainsville School (Brantford)",
-
-
-		  "Woodroffe Avenue Public School (Ottawa)",
-
-
-		  "Woodville Elementary School (Kawartha Lakes)",
-
-
-		  "Woodward Junior Public School (Hamilton)",
-
-
-		  "Worsley Elementary School (Wasaga Beach)",
-
-
-		  "Worthington Public School (Brampton)",
-
-
-		  "Wortley Road Public School (London)",
-
-
-		  "W R Best Memorial Public School (Oro-Medonte)",
-
-
-		  "W Ross Macdonald Deaf Blind Elementary School (Brantford)",
-
-
-		  "W Ross Macdonald Provincial School for the Visually Impaired Elementary (Brantford)",
-
-
-		  "W Sherwood Fox Public School (London)",
-
-
-		  "W.T. Townshend Public School (Kitchener)",
-
-
-		  "Wyevale Central Public School (Tiny)",
-
-
-		  "Wyoming Public School (Plympton-Wyoming)",
-
-
-		  "Yarker Public School (Stone Mills)",
-
-
-		  "Yorkhill Elementary School (Thornhill)",
-
-
-		  "York River PS (Bancroft)",
-
-
-		  "York River Public School (Bancroft)",
-
-
-		  "York Street Public School (Ottawa)",
-
-
-		  "Yorkview Public School (Toronto)",
-
-
-		  "Yorkview School (Hamilton)",
-
-
-		  "Yorkwoods Public School (Toronto)",
-
-
-		  "Zion Heights Junior High School (Toronto)",
-
-
-		  "Zone Township Central School (Chatham-Kent)",
-
-
-		  "Zorra Highland Park Public School (Zorra)",
-
-
-		  "Zurich Public School (Bluewater)",
+		"Zurich Public School (Bluewater)"
 		];
 		
   });

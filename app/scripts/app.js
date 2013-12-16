@@ -420,6 +420,19 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 		}
 	}])
 	
+	.directive('adjustCellHeight', function () {
+		return {
+			restrict: 'A',
+			link: function (scope, element, attrs) {
+				scope.$watch(function () {
+					return element.innerHeight();
+				}, function () {
+					element.find('.mark').height(element.height());
+				});
+			}
+		}
+	})
+	
 	.run(['$rootScope', 'Me', '$state', '$stateParams', '$location',
 	  function( scope, Me, state, stateParams, $location) {
 	

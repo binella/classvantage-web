@@ -40,7 +40,7 @@
 																ng-switch="assessment.assessable.$type"
 																bubble-delay="assessment.id">
 					<!--div class="bubble-container" style="position:absolute;"-->
-						<div class="bubble" ng-show="assessment.id">
+						<div class="bubble" ng-shows="assessment.id">
 							<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save();" blurs-on-enter></textarea>
 						</div>
 					<!--/div-->

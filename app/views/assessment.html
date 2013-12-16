@@ -68,7 +68,8 @@
 		<div class="rubric-group">
 			<div class="rubric-row" 
 					 ng-repeat-start="row in assessment.assessable.rows | orderBy:'created_at' track by markFor(row)"
-					 ng-switch="marks[row.id].$wholeValue">
+					 ng-switch="marks[row.id].$wholeValue"
+					 adjust-cell-height>
 				<div class="rubric-column criteria min-height">
 					<span>{{row.criteria}}</span>
 				</div>

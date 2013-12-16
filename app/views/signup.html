@@ -30,15 +30,15 @@
 					<span>School</span>
 					<input type="text" ng-model="form.school" ng-show="province !== 'Ontario'"/>
 					<span class="slate-unifrom" ng-show="province === 'Ontario'">
-						<select ng-model="form.school" ng-options="sch as sch for sch in schools" style="width:250px;" cv-styled-select>
+						<select ng-model="form.school" ng-options="sch as sch for sch in schools" style="margin-left:20px;width:252px;" cv-styled-select>
 							<option value="" disabled="disabled">Select a school</option>
 						</select>
 					</span>
 				</li>
 				<li>
 					<span>Province</span>
-					<span class="slate-unifrom">
-						<select ng-model="province" ng-options="prv as prv for prv in provinces" style="width:250px;" ng-change="form.school = ''" cv-styled-select>
+					<span class="slate-unifrom" >
+						<select ng-model="province" ng-options="prv as prv for prv in provinces" style="width:252px;margin-left:20px;" ng-change="form.school = ''" cv-styled-select>
 							<option value="" disabled="disabled" >Select a province</option>
 						</select>
 					</span>
@@ -54,8 +54,17 @@
 					<span>Confirm</span>
 					<input ng-model="password_confirmation" type="password"/>
 				</li>
+				<li style="font-size: 15px;font-weight: 300;">
+					<br/>
+					<input type="checkbox" ng-model="agreement" style="overflow:hidden;" cv-styled-checkbox />
+					<p style="display: inline-block;width: 350px;vertical-align: top;line-height: 19px;margin-top: -1px;">
+						I agree to ClassVantage's <a href="privacy.html" onclick="window.open(this.href, 'mywin',
+						'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Privacy Policy</a> and <a href="eula.html" target="eula" onclick="window.open(this.href, 'mywin',
+						'left=20,top=20,width=500,height=500,toolbar=0,resizable=0,directories=no,titlebar=no,location=no,status=no,menubar=no'); return false;">Terms and Conditions</a>
+					</p>
+				</li>
 				<li>
-					<button class="btn btn-green" ng-click="signUp()" style="height:48px;width:150px;font-size:18px;font-weight:300;margin:auto;display:block;margin-top:35px;">Sign up</button>
+					<button class="btn btn-green" ng-click="signUp()" ng-disabled="!agreement" style="height:48px;width:150px;font-size:18px;font-weight:300;margin:auto;display:block;margin-top:35px;">Sign up</button>
 				</li>
 			</ul>
 			<span class="chalk-brush"></span>
