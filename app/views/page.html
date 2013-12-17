@@ -19,13 +19,13 @@
 <div class="grid-container" style="left:168px;">
 	<!--div class="drop-shadow" ng-show="page.rubrics.length + page.assignments.length > 5"></div-->
 	<div class="scroll-container" style="overflow-x: auto;" ng-show="page.rubrics.length + page.assignments.length + page.students.length > 0" scroll-with="#grid-scrollbar" >
-		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 1 + 'px'}">
+		<div class="scroll-content" ng-style="{width: ((page.rubrics.length + page.assignments.length)*116) + 2 + 'px'}">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments) | orderBy:'created_at'">
 					<a class="delete-ex" ng-click="removeAssignment(column)" ng-show="column.$type === 'assignment'"></a>
 					<div class="title-container" ng-switch="column.$type">
 						<a ng-switch-when="rubric" ui-sref="rubric({id: column.id})">{{column.title || 'Untitled'}}</a>
-						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" msd-elastic="" blurs-on-enter></textarea>
+						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" ng-auto-expand msd-elastics="" blurs-on-enter></textarea>
 					</div>
 				</div>
 				<div style="clear:both;"></div>
@@ -41,7 +41,7 @@
 																bubble-delay="assessment.id">
 					<!--div class="bubble-container" style="position:absolute;"-->
 						<div class="bubble" ng-shows="assessment.id">
-							<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" msd-elastic="" ng-blur="assessment.$save();" blurs-on-enter></textarea>
+							<textarea class="editable-text" style="height:43px;" placeholder="Type a comment" ng-model="assessment.comment" ng-auto-expands msd-elastics="" ng-blur="assessment.$save();" blurs-on-enter></textarea>
 						</div>
 					<!--/div-->
 					<div class="has-comment" ng-show="assessment.comment">

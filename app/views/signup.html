@@ -28,12 +28,7 @@
 				</li>
 				<li>
 					<span>School</span>
-					<input type="text" ng-model="form.school" ng-show="province !== 'Ontario'"/>
-					<span class="slate-unifrom" ng-show="province === 'Ontario'">
-						<select ng-model="form.school" ng-options="sch as sch for sch in schools" style="margin-left:20px;width:252px;" cv-styled-select>
-							<option value="" disabled="disabled">Select a school</option>
-						</select>
-					</span>
+					<input type="text" ng-model="form.school" />
 				</li>
 				<li>
 					<span>Province</span>

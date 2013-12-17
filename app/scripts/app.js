@@ -310,7 +310,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 								else bubble.css('margin-left','');
 								bubble.removeClass('right');
 							}
-							element.addClass('delay-bubble');
+							element.addClass('open-bubble');
 							fromMouseOver = true;
 						}, 500);
 					
@@ -319,7 +319,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				element.bind('mouseleave', function (event) {
 					clearTimeout(bubbleTimer);
 					if (fromMouseOver) {
-						element.removeClass('delay-bubble');
+						element.removeClass('open-bubble');
 						fromMouseOver = false;
 					}
 				});
@@ -432,6 +432,42 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 			}
 		}
 	})
+	
+	.directive('ngAutoExpand', ['$window', function($window) {
+    return {
+			restrict: 'A',
+			require: 'ngModel',
+			link: function(scope, element, attrs, ngModel) {
+				var minHeight = element.height();
+				var ta = element[0];
+				// listen
+				/*
+        if ('onpropertychange' in ta && 'oninput' in ta) {
+          // IE9
+          ta['oninput'] = ta.onkeyup = adjust;
+        } else {
+          ta['oninput'] = function () {
+						console.log('ONINPUT');
+					};
+        }
+				*/
+				scope.$watch(function () {
+					return ngModel.$modelValue;
+				}, function () {
+					setTimeout(function () {
+						element.height(0);
+		         var height = ta.scrollHeight;
+						console.log(height);
+		         // 8 is for the padding
+		         if (height < 20) {
+		             height = minHeight || 28;
+		         }
+		         element.height(height+8);
+					}, 0);
+				})
+			}
+		}
+	}])
 	
 	.run(['$rootScope', 'Me', '$state', '$stateParams', '$location',
 	  function( scope, Me, state, stateParams, $location) {

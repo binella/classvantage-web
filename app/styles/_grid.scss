@@ -406,8 +406,9 @@
 .bubble 
 {
 	position: absolute;
-	display:none;
+	//display:none;
 	width: 359px;
+	top:-999px;
 	//height: 61px;
 	padding: 0px;
 	background: #FFFFFF;
@@ -493,7 +494,7 @@
 .open-bubble {
 	
 	.bubble {
-		display:block;
+		top:auto;
 	}
 }
 
