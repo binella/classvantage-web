@@ -44,7 +44,7 @@
 </div>
 
 <!-- RUBRIC CONTENT -->
-<div class="container page-container" style="padding-left:54px;" >
+<div class="container page-container" style="padding-left:54px;" ng-switch="assessment.assessable.$type">
 	<!-- STUDENTS -->
 	<!--div class="side-panel" style="position:absolute;margin-left:-200px;width:160px;margin-top:90px;">
 		<ul>
@@ -56,7 +56,7 @@
 	<div class="print-show print-average c{{assessment.$averageGrade.substr(0,1)}}">{{assessment.$averageGrade || '?'}}</div>
 	<div style="clear:both;"></div>
 	<br/>
-	<section style="margin-top:28px;" class="specific">
+	<section style="margin-top:28px;" class="specific" ng-switch-when="rubric">
 		<div class="header">
 				<h4>SPECIFIC:</h4>
 				<h4>LEVEL 1</h4>
@@ -130,6 +130,41 @@
 		<br/><br/><br/>
 
 	</section>
+	<!-- CHECKLIST -->
+	<section style="margin-top:28px;" class="specific" ng-switch-when="checklist">
+		<div class="header" style="text-align:center;">
+				<h4 style="width:589px;">&nbsp;</h4>
+				<h4 style="padding-left:0px;width:168px;">YES</h4>
+				<h4 style="padding-left:0px;width:168px;">NO</h4>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="rubric-group">
+			<div class="rubric-row" 
+					 ng-repeat-start="item in assessment.assessable.checklist_items | orderBy:'created_at'" adjust-cell-height>
+				<div class="rubric-column criteria" style="width:589px;vertical-align:middle;height:55px;">
+					<span style="width:555px;padding-bottom:0px;font-size:16px;font-style:normal;line-height:24px;">{{item.criteria}}</span>
+				</div>
+				<div class="rubric-column level assess grade-cell" style="width:133px;">
+					<span class="mark">
+						<a class="check hoverable" style="margin:0px;height:100%;width:100%;padding-top:0px;">
+							<span class="icn-check"></span>
+						</a>
+					</span>
+				</div>
+				<div class="rubric-column level assess grade-cell" style="width:133px;">
+					<span class="mark">
+						<a class="ex hoverable" style="margin:0px;height:100%;width:100%;padding-top:0px;">
+							<span class="icn-ex"></span>
+						</a>
+					</span>
+				</div>
+			</div>
+			<div class="bottom-divider" style="width:890px;" ng-repeat-end></div>
+			<div class="bottom-divider wide" style="width:0px;" ></div>
+		</div>
+		<br/><br/><br/>
+	</section>
+	
 	<section class="specific" ng-class="{null:'print-hide'}[assessment.comment]">
 		<h4>ADDITIONAL COMMENTS</h4>
 		<br/>

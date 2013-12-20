@@ -76,14 +76,35 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				access: 1,
 				resolve: {
 					rubric: ['$stateParams', 'Rubric', function ($stateParams, Rubric) {
+						// TODO: this can def be done better
 						var rubric = Rubric.fetchOne($stateParams.id);
 						rubric.$promise.then(function (rubric) {
 							rubric.$resolveGradeAndSubject();
 							return rubric;
 						});
 						rubric.$resolveGradeAndSubject();
-						//rubric.unit = rubric.unit || {grade: rubric.page.grade, strand: {subject: {id: rubric.page.subject_id}}};
 						return rubric;
+					}],
+					units: ['Unit', function (Unit) {
+						return Unit.fetchAll();
+					}]
+				}
+			})
+			.state('checklist', {
+				url: '/checklists/:id',
+				templateUrl: 'views/rubric.html',
+				controller: 'ChecklistCtrl',
+				access: 1,
+				resolve: {
+					// TODO: DRY this out properly
+					rubric: ['$stateParams', 'Checklist', function ($stateParams, Checklist) {
+						var checklist = Checklist.fetchOne($stateParams.id);
+						checklist.$promise.then(function (checklist) {
+							checklist.$resolveGradeAndSubject();
+							return checklist;
+						});
+						checklist.$resolveGradeAndSubject();
+						return checklist;
 					}],
 					units: ['Unit', function (Unit) {
 						return Unit.fetchAll();
@@ -174,6 +195,21 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 						element.blur();
 						event.preventDefault();
 						event.stopPropagation();
+					};
+				})
+			}
+		}
+	})
+	
+	.directive('ngEnter', function (){
+		return {
+			restric: 'A',
+			link: function(scope, element, attrs) {
+				element.bind('keypress', function (event) {
+					if (event.which === 13) {
+						event.preventDefault();
+						event.stopPropagation();
+						scope.$eval(attrs.ngEnter);
 					};
 				})
 			}
@@ -274,7 +310,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				target.scroll(function(){
 		        elm.scrollLeft(target.scrollLeft());
 						//$('.bubble').css('margin-left', 106-target.scrollLeft());
-						$('.delay-bubble').removeClass('delay-bubble');
+						//$('.delay-bubble').removeClass('delay-bubble');
 		    });
 		    elm.scroll(function(){
 		        target.scrollLeft(elm.scrollLeft());
@@ -284,11 +320,12 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 		}
 	})
 	
-	.directive('bubbleDelay', ['$timeout', function ($timeout) {
+	.directive('bubbleDelays', ['$timeout', function ($timeout) {
 		var bubbleTimer, fromMouseOver;
 		var isFirefox = typeof InstallTrigger !== 'undefined';
 		return {
 			restrict: 'CA',
+			scope:false,
 			link: function(scope, element, attrs) {
 				
 				element.bind('mouseenter', function (event) {
@@ -338,10 +375,125 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 		}
 	})
 	
-	.directive('bubbleToggle', ['$document', '$timeout', function ($document, $timeout) {
+	.directive('bubbleDelay', ['$document', '$timeout', '$compile', function ($document, $timeout, $compile) {
+		var	gridScrollbar = angular.element('#grid-scrollbar'),
+				bubble = angular.element('<div class="bubble" id="bubble"><textarea class="editable-text" style="height:43px;" msd-elastic="" placeholder="Type a comment" ng-blur="assessment.$save()" blurs-on-enter></textarea></div>'),
+				currentScope = null,
+				closeBubble = function (event) {
+					if (event && (bubble.has(event.target).length > 0 || event.target.id === 'bubble'))
+						return;
+					
+					if (currentScope) {
+						currentScope.$destroy();
+						currentScope = null;
+					};
+					
+					forcedOpen = false;
+					
+					bubble.css('top', '-999px'); 
+					bubble.hide();
+					$document.unbind('click', closeBubble);
+					bubble.unbind('mouseleave', closeBubble);
+					
+				};
+				
+		angular.element('body').append(bubble);
+		var	bubbleWidth = bubble.width(),
+				bubbleMarginLeft = 106,
+				bubbleTa = bubble.children('textarea'),
+				bubbleTimer = null,
+				fromMouseOver = false,
+				forcedOpen = false;
+		gridScrollbar.scroll(closeBubble);
+		
+		return {
+			restrict: 'A',
+			scope: false,
+			link: function(scope, element, attrs) {
+				var	cell = element;
+				
+				scope.openBubble = function (force) {
+					closeBubble();
+					
+					if (force) {
+						clearTimeout(bubbleTimer);
+						fromMouseOver = false;
+						forcedOpen = true;
+					};
+					
+					// Position the bubble
+					var position = cell.position(),
+							absPosition = cell.offset();
+					if (absPosition.left + bubbleWidth + bubbleMarginLeft > window.innerWidth) {
+						bubble.addClass('right');
+						bubble.css('left', position.left - bubbleWidth - bubbleMarginLeft + 2);
+					} else {
+						bubble.removeClass('right');
+						bubble.css('left', position.left);
+					}
+					
+					// Attach Model
+					bubbleTa[0].setAttribute('ng-model', attrs.bubbleModel);
+					currentScope = scope.$new();
+					var clonedElement = $compile(bubbleTa)(currentScope, function(clonedElement, newScope) {
+						bubble.html(clonedElement);
+						bubble.appendTo(cell);
+						bubble.css('top', position.top);
+						bubble.show();
+					});
+					
+					// Bind close events
+					$timeout(function () {
+						$document.bind('click', closeBubble);
+					}, 100);
+				};
+				
+				// Mouse action
+				element.bind('mouseenter', function (event) {
+					clearTimeout(bubbleTimer);
+					if (scope.$eval(attrs.bubbleDelay) && !forcedOpen) {
+						
+						bubbleTimer = setTimeout(function() {
+							fromMouseOver = true;
+							scope.openBubble();
+						}, 500);
+					
+					}
+				});
+				
+				element.bind('mouseleave', function (event) {
+					clearTimeout(bubbleTimer);
+					if (fromMouseOver) {
+						if (event.toElement === bubble[0]) {
+							bubble.bind('mouseleave', function () { closeBubble(); }); // LEAK
+							return;
+						};
+						closeBubble();
+						fromMouseOver = false;
+					};
+				});
+				
+			}
+		}
+	}])
+	
+	.directive('bubbleToggle', function () {
+		return {
+			restrict: 'A',
+			link: function (scope, element, attrs, bubbleCtrl) {
+				// Toggle Action
+				element.bind(attrs.bubbleToggle, function (event) {
+					scope.openBubble(true);
+				});
+			}
+		}
+	})
+	
+	.directive('bubbleToggles', ['$document', '$timeout', function ($document, $timeout) {
 		var	openBubble = null,
 				closeBubble = angular.noop,
-				isFirefox = typeof InstallTrigger !== 'undefined';
+				isFirefox = typeof InstallTrigger !== 'undefined',
+				bubble = angular.element('#bubble');
 		return {
 			restrict: 'CA',
 			link: function(scope, element, attrs) {
@@ -363,7 +515,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	        if (!bubbleWasOpen) {
 
 						// Collision
-						var bubble = element.parent().parent().parent().children('.bubble');
+						//var bubble = element.parent().parent().parent().children('.bubble');
 						var newLeft = 106-$('#grid-scrollbar').scrollLeft();
 						var widthRequired = (element.parent().offset().left + element.parent().parent().parent().width() + bubble.width());
 						//console.log(newLeft);
@@ -377,7 +529,9 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 							bubble.removeClass('right');
 						}
 
-						element.parent().parent().parent().addClass('open-bubble');
+						//element.parent().parent().parent().addClass('open-bubble');
+						bubble.show();
+						
 						if (attrs.bubbleToggle === 'click')
 							element.parent().parent().parent().children('.bubble').children('textarea').focus();
 	          openBubble = element;

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, currentPage, pages, $analytics) {
-		
+  .controller('PageCtrl', function ($scope, $location, $modal, $filter, Page, Rubric, Assignment, Checklist, currentPage, pages, $analytics) {
+
 		$scope.page = currentPage;	
 		$scope.rubrics = $scope.page.rubrics;
 
@@ -13,6 +13,14 @@ angular.module('classvantageApp')
 				$location.path('/rubrics/' + r.id);
 			});
 		};
+		
+		$scope.newChecklist = function () {
+			var checklist = Checklist.new();
+			$scope.page.checklists.$insert(checklist);
+			checklist.$save().then(function (c) {
+				$location.path('/checklists/' + c.id);
+			});
+		}
 		
 		$scope.newAssignment = function (data) {
 			var assignment = Assignment.new(data);
@@ -73,25 +81,11 @@ angular.module('classvantageApp')
 		
 		
 		// Assessments
-		/*
-		$scope.assessments = {};
-		
-		$scope.assessmentFor = function (student, rubric) {
-			console.log(student.id + ' : ' + rubric.id);
-			var assessmentRow = $scope.assessments[student.id] = $scope.assessments[student.id] || {};
-			var assessment = assessmentRow[rubric.id] = student.assessments.$firstForRubric(rubric);
-			assessment.$cachedAverage = assessment.$averageGrade;
-			// TODO: use .id when datastore is capable of generating ids for newly created objects
-			return assessment.id || '_' + Math.random().toString(36).substr(2, 9);
-		}
-		*/
-		
 		$scope.saveAndAssess = function (assessment) {
 			assessment.$save().then(function (assessment) {
 				$location.path('/assessments/' + assessment.id);
 			});
 		}
-		
 		
 		$scope.markAssessment = function (assessment, value) {
 			assessment.value = value;

@@ -223,6 +223,7 @@ body > header {
 
 .hero {
   color: white;
+	position:relative;
 	
 	textarea {
 		background: transparent;
@@ -479,18 +480,21 @@ a.trash-dark{
 }
 
 .tab-container {
-	margin-top: 10px;
+	//margin-top: 10px;
 	margin-left: 34px;
-	float: left;
+	//float: left;
 	position: absolute;
-	width: inherit;
+	//width: inherit;
+	bottom:0px;
 }
 
 .pages-tab {
 	background-color: $medium-beige;
 	//border-top: 7px $red solid;
-	margin-top: 7px;
-	float: left;
+	//margin-top: 7px;
+	//float: left;
+	display:inline-block;
+	vertical-align:bottom;
 	
 	span {
 		display: block;

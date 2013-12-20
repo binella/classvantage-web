@@ -143,7 +143,6 @@ angular.module('classvantageApp')
 			this.$insert(newInstance);
 			return newInstance;
 		};
-		
 
 		return resource;
   })

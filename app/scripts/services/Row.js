@@ -15,8 +15,6 @@ angular.module('classvantageApp')
 			]
 		});
 
-		return resource;    
-
-		//return $resource(_baseURL + 'rubrics/:id', {id: "@id"}, {update: {method: 'PUT'}});
+		return resource;
   })
 	.run(function (Row) {});

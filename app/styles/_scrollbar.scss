@@ -3,6 +3,7 @@ $topMargin: 30px;
 .scroll-container {
 	max-width: 642px;
 	outline: none;
+	position:relative;
 /*	padding-top: 30px !important;*/
 	//margin-top: -$topMargin;
 }
@@ -42,8 +43,8 @@ div.scrollbar::-webkit-scrollbar-thumb {
 
 .grid-container {
 	float: left;
-	position: relative;
-	left:168px;
+	//position: relative;
+	margin-left:168px;
 	border-left:2px solid $medium-beige;
 }
 

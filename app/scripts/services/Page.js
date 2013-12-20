@@ -19,6 +19,12 @@ angular.module('classvantageApp')
 					isArray: true
 				},
 				{
+					name: 'checklists',
+					type: 'checklist',
+					inverse: 'page',
+					isArray: true
+				},
+				{
 					name: 'assignments',
 					type: 'assignment',
 					inverse: 'page',

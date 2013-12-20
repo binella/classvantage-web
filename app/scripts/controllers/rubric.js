@@ -2,16 +2,7 @@
 
 angular.module('classvantageApp')
   .controller('RubricCtrl', function ($scope, $stateParams, units, rubric, Row, $state, $analytics) {
-	
-		/*
-		$scope.unitChanged = function(unit) {
-			$scope.selection.unit = unit;
-			$scope.selection.subject_id = unit.subject_id;
-			if (unit.overall_expectations.length > 0)
-				$scope.selection.overall = unit.overall_expectations[0];
-		}
-		*/
-		
+
 		$scope.units = units;
 		$scope.rubric = rubric;
 		$scope.selection = {subject_id: rubric.$subjectId};
@@ -104,7 +95,7 @@ angular.module('classvantageApp')
 				$state.go('gradebook.page', {page_id: $scope.rubric.page.id});
 				$scope.rubric.$destroy();
 				/* Analytics */
-				$analytics.eventTrack('assignment.delete', {type: 'rubric'});
+				$analytics.eventTrack('assignment.delete', {type: $scope.rubric.$type});
 			};
 		}
 		

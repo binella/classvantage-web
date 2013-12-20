@@ -4,7 +4,7 @@
 
 .header-row {
 	height: 103px;
-	border-bottom: 2px solid $medium-beige;
+	display:inline-block;
 }
 
 .student.header-cell {
@@ -64,9 +64,11 @@
 }
 
 .student-cell:hover {
-	margin-left: -20px;
-	padding-left: 40px;
-	width:128px;
+	padding-left: 80px;
+	margin-left: -60px;
+	//margin-left: -170px;
+	//padding-left: 40px;
+	//width:128px;
 	
 	.close-button {
 		display:block;
@@ -75,12 +77,19 @@
 
 .student {
 	width: 168px;
+	position:absolute;
+	height:103px;
+}
+
+.bottom-border,.header-row {
+	border-bottom: 2px solid $medium-beige;
 }
 
 .scroll-content {
 	overflow: auto;
-	width: 1000px;
+	//width: 1000px;
 	background-color:$soft-beige;
+	white-space:nowrap;
 }
 
 .rubric.header-row {
@@ -88,7 +97,8 @@
 }
 
 .rubric.header-cell {
-	float: left;
+	//float: left;
+	display:inline-block;
 	width: 115px;
 	height: 100%;
 	position:relative;
@@ -141,6 +151,7 @@
 
 .grade.row {
 	border-bottom: 1px solid $light-grayish-beige;
+	display:inline-block;
 }
 
 .grade.row:hover {
@@ -154,9 +165,11 @@
 
 .grade-cell {
 	width: 115px;
-	height: 100%;
-	float: left;
-	//position:relative; CANNOT BE (cuz of comment bubbles)
+	height: 49px;
+	display:inline-block;
+	vertical-align:top;
+	//float: left;
+	//position:relative; CANNOT BE (cuz of comment bubbles) THIS IS NO LONGER THE CASE
 	
 	a {
 		text-align:center;

@@ -26,7 +26,7 @@ angular.module('classvantageApp')
 			if (isNew) { $analytics.eventTrack('student.create'); };
 		}
 
-		resource.resourcePrototype.$assessmentsFor = function (rubrics, assignments) {
+		resource.resourcePrototype.$assessmentsFor = function (rubrics, assignments, checklists) {
 			var arr = [];
 			// Rubrics
 			for (var i=0, l=rubrics.length; i<l; i++) {
@@ -39,6 +39,12 @@ angular.module('classvantageApp')
 			for (var i=0, l=assignments.length; i<l; i++) {
 				var assessment = this.assessments.$firstForAssignment(assignments[i]);
 				assessment.$columnCreatedAt = assignments[i].created_at;
+				arr.push(assessment);
+			}
+			// Checklists
+			for (var i=0, l=checklists.length; i<l; i++) {
+				var assessment = this.assessments.$firstForAssignment(checklists[i]);
+				assessment.$columnCreatedAt = checklists[i].created_at;
 				arr.push(assessment);
 			}
 			return arr;
