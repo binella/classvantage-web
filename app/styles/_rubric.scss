@@ -69,18 +69,21 @@
 		
 		h4:nth-child(2) {
 			margin-left:3px;
+		}
+		
+		h4.red {
 			border-color: $red;
 		}
 		
-		h4:nth-child(3) {
+		h4.yellow {
 			border-color: $yellow;
 		}
 		
-		h4:nth-child(4) {
+		h4.bright-green {
 			border-color: $bright-green;
 		}
 		
-		h4:nth-child(5) {
+		h4.green {
 			border-color: $green;
 		}
 		

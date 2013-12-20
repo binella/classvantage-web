@@ -44,6 +44,7 @@ angular.module('classvantageApp')
 			// Checklists
 			for (var i=0, l=checklists.length; i<l; i++) {
 				var assessment = this.assessments.$firstForAssignment(checklists[i]);
+				assessment.$cachedAverage = assessment.$averageGrade;
 				assessment.$columnCreatedAt = checklists[i].created_at;
 				arr.push(assessment);
 			}

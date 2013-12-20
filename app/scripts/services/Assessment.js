@@ -12,11 +12,6 @@ angular.module('classvantageApp')
 					type: 'student',
 					inverse: 'assessments'
 				},
-				//{
-				//	name: 'rubric',
-				//	type: 'rubric',
-				//	inverse: 'assessments' // DOES THIS EXIST?
-				//},
 				{
 					name: 'assessable',
 					type: 'assessable',
@@ -58,6 +53,10 @@ angular.module('classvantageApp')
 				if (this.assessable_type === 'Rubric') {
 					if (this.marks.length < this.assessable.rows.length || this.assessable.rows.length === 0) { return 'incomplete'; }
 				}
+				
+				if (this.assessable_type === 'Checklist') {
+					if (this.marks.length < this.assessable.checklist_items.length || this.assessable.checklist_items.length === 0) { return 'incomplete'; }
+				};
 				
 				for (var i=0,l=this.marks.length; i<l; i++) {
 					if (this.marks[i].value === null) { return 'incomplete'; };

@@ -13,8 +13,9 @@ angular.module('classvantageApp')
 					inverse: 'marks'
 				},
 				{
-					name: 'row',
-					type: 'row'//,
+					name: 'assessable_item',
+					type: 'assessable_item',
+					polymorphic: true//,
 					//inverse: 'assessments' // DOES THIS EXIST?
 				}
 			]
@@ -45,9 +46,9 @@ angular.module('classvantageApp')
 		
 		resource.collectionPrototype.$firstForRow = function (row) {
 			for (var i=0,l=this.length; i<l; i++) {
-				if (this[i].row.id === row.id) { return this[i]; };
+				if (this[i].assessable_item.id === row.id && this[i].assessable_item.$type === row.$type) { return this[i]; };
 			}
-			var newInstance = resource.new({row: row, value: null});
+			var newInstance = resource.new({assessable_item: row, value: null});
 			this.$insert(newInstance);
 			//newInstance.$save();
 			return newInstance;
