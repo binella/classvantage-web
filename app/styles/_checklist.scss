@@ -123,3 +123,67 @@
 		}
 	}
 }
+
+@media print {
+	.checklist {
+		.rubric-column.criteria {
+			width:auto !important;
+
+			span {
+				width:530px !important;
+				margin-right:45px !important;
+			}
+		}
+		
+		.rubric-column {
+			span {
+				width: auto !important;
+				margin-right: 24px !important;
+			}
+		}
+		
+		.grade-cell {
+			.icn-check {
+				display:none;
+			}
+			.icn-ex {
+				display:none;
+			}
+			
+			.checked {
+				.hoverable {
+					background-color:transparent !important;
+				}
+				
+				a.hoverable:after {
+					content:'✓';
+					top: 50%;
+					display: block;
+					position: relative;
+					margin-top: -10px;
+					font-size:30px;
+					color:black;
+				}
+			}
+
+			.exed {
+				.hoverable {
+					background-color:transparent !important;
+				}
+				
+				a.hoverable:after {
+					content:'✗';
+					top: 50%;
+					display: block;
+					position: relative;
+					margin-top: -10px;
+					font-size:30px;
+					color:black;
+					padding-left:30px;
+				}
+			}
+			
+		}
+		
+	}
+}

@@ -66,6 +66,7 @@
 .student-cell:hover {
 	padding-left: 80px;
 	margin-left: -60px;
+	overflow-x:hidden;
 	//margin-left: -170px;
 	//padding-left: 40px;
 	//width:128px;
@@ -393,6 +394,7 @@
 
 .pin-right {
 	float: left;
+	position:relative;
 	//height: 1000px; // THIS MUST BE SET PROGRAMATICALLY
 }
 .pin-right.with-divider {

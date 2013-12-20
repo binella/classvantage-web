@@ -78,13 +78,13 @@
 		</div>
 	</div>
 </div>
-<div class="pin-right scroll-fixed" ng-class="{true:'with-divider', false:''}[page.rubrics.length + page.assignments.length + page.checklists.length > 0]" ng-style="{height: (104 + (page.students ? page.students.length * 50 : 0)) + 'px'}"> <!-- HEIGHT MUST BE SET ON THIS -->
+<div class="pin-right scroll-fixed" style="{{page.rubrics.length + page.assignments.length + page.checklists.length > 5 ? '' : 'margin-left:-4px;'}}" ng-class="{true:'with-divider', false:''}[page.rubrics.length + page.assignments.length + page.checklists.length > 0]" ng-style="{height: ((104 + (page.students ? page.students.length * 50 : 0)) + 'px')}"> <!-- HEIGHT MUST BE SET ON THIS -->
 	<div class="rubric" ng-class="{true:'header-row', false:''}[page.students.length > 0 || (page.rubrics.length + page.assignments.length + page.checklists.length) > 0]">
 		<div class="rubric header-cell" style="overflow:visible;" ng-style="{width: (page.rubrics.length + page.assignments.length + page.checklists.length > 0 ? '113px' : (page.students.length > 0 ? '315px' : '615px'))}">
 			<a class="plus green dropdown-toggle"  ng-style="{'margin-left': (page.rubrics.length + page.assignments.length + page.checklists.length > 0 ? '40px' : (page.students.length > 0 ? '34px' : '204px'))}" style="margin-left:34px;position:relative;top:39px;">
 				{{page.rubrics.length + page.assignments.length + page.checklists.length > 0 ? '' : 'Add your first assessment'}}
 			</a>
-			<ul class="dropdown-menu">
+			<ul class="dropdown-menu" ng-style="{left:(page.rubrics.length + page.assignments.length + page.checklists.length + page.students.length > 0 ? '' : '140px')}">
 	    	<li>
 	      	<a class="menu-item" ng-click="newRubric()" >
 						<span class="icn-container">

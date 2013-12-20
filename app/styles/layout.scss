@@ -391,7 +391,8 @@ body > header {
 	position: absolute;
 	top: 507px;
 	left: 312px;
-	width: 435px;
+	width: 468px;
+	height:72px;
 	
 	#silver-input::-webkit-input-placeholder { /* WebKit browsers */
 	    color:    $silver;
@@ -418,7 +419,7 @@ body > header {
 		}
 		
 		.close-button {
-			margin-top: 15px;
+			margin-top: 23px;
 			margin-right: 17px;
 		}
 	}

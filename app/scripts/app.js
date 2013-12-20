@@ -1,8 +1,41 @@
 'use strict';
 
 angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store', 'angulartics', 'angulartics.mixpanel'])
-
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV) {
+	.provider('indicator', function () {
+		var elem = null, iCounter = 0;
+		var reqInt = function (config) {
+			if (config.method !== 'GET') {
+				iCounter++;
+				if (iCounter === 1)
+					elem.animate({right:'20px'},500);
+			}
+			return config;
+		}, resInt = function (response) {
+			if (response.config.method !== 'GET') {
+				setTimeout(function() {
+					iCounter--;
+					if (iCounter === 0)
+						elem.animate({right:'-50px'},500);
+				}, 1000);
+			}
+			return response
+		};
+		this.interceptors = function () {
+			return {
+				'request': reqInt,
+				'response': resInt
+			}
+		};
+		this.$get = function () {
+			return {
+				setElement: function (element) {
+					//element.hide();
+					elem = element;
+				}
+			};
+		}
+	})
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV, indicatorProvider) {
 		
 		// Allow CORS
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -11,6 +44,9 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 		oauthProvider.setEndPoint(ENV.oAuth.endPoint);
 		oauthProvider.setClientId(ENV.oAuth.clientId);
 		oauthProvider.setClientSecret(ENV.oAuth.clientSecret);
+		
+		// Loading Indicator
+		$httpProvider.interceptors.push(indicatorProvider.interceptors);
 
 		// Routes
 		$urlRouterProvider.otherwise("/gradebook");
@@ -226,6 +262,15 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 			}
 		}
 	})
+	
+	.directive('loadingIndicator', ['indicator', function (indicator) {
+		return {
+			restrict: 'CA',
+			link: function(scope, element, attrs) {
+				indicator.setElement(element);
+			}
+		}
+	}])
 	
 	/* This isnt needed in new version of angular */
 	/*

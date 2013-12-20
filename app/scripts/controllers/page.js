@@ -56,8 +56,7 @@ angular.module('classvantageApp')
 						var student = Student.new({full_name: $scope.student.full_name});
 						currentPage.students.$insert(student);
 						student.$save();
-						
-						$scope.cancel();
+						$scope.student = Student.new();
 					}
 					
 				}],
