@@ -35,6 +35,8 @@
 	position:absolute;
 	left:-170px;
 	width:148px;
+	overflow-y:hidden;
+	z-index:501;
 
 	.student-background {
 		background-color: white;
@@ -80,6 +82,7 @@
 	width: 168px;
 	position:absolute;
 	height:103px;
+	z-index:500;
 }
 
 .bottom-border,.header-row {
@@ -87,7 +90,8 @@
 }
 
 .scroll-content {
-	overflow: auto;
+	overflow-y: hidden;
+	overflow-x: auto;
 	//width: 1000px;
 	background-color:$soft-beige;
 	white-space:nowrap;
@@ -112,6 +116,7 @@
 		font-size: 14px;
 		color: $dark-beige;
 		line-height: 19px;
+		white-space: normal;
 	}
 	
 	.dropdown-menu {

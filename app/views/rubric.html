@@ -174,9 +174,9 @@
 		<div style="clear:both;">
 		<div class="rubric-group" ng-repeat="item in rubric.checklist_items | orderBy:'created_at'">
 			<div class="rubric-row">
-				<div class="rubric-column criteria">
+				<div class="rubric-column criterias">
 					<a class="close-button" ng-click="deleteChecklistItem(item)"><img src="images/beige-ex.png" /></a>
-					{{item.criteria}}
+					<textarea class="editable-text" style="margin-left:0px;width: 860px;height: 20px;" ng-model="item.criteria" msd-elastic="" ng-blur="item.$save()" blurs-on-enter></textarea>
 				</div>
 			</div>
 		</div>

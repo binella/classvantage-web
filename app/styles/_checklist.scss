@@ -46,16 +46,16 @@
 	
 	.overalls {
 		padding-top:10px;
-	}
 	
-	textarea {
-		width:880px;
-		height:26px;
-		padding:19px;
-		margin-left:0px;
-		padding-left:30px;
-		font-size:16px;
-		line-height:24px;
+		textarea {
+			width:880px;
+			height:26px;
+			padding:19px;
+			margin-left:0px;
+			padding-left:30px;
+			font-size:16px;
+			line-height:24px;
+		}
 	}
 	
 	.tip {
@@ -110,6 +110,7 @@
 			span {
 				top: 50%;
 				vertical-align: middle;
+				position:relative;
 			}
 		}
 		

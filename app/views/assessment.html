@@ -175,8 +175,8 @@
 				<pre style="margin-top:-28px;width:920px;">{{assessment.comment}}</pre>
 			</li>
 			<li style="padding-left:0px;" ng-show="editComment || !assessment.comment">
-				<textarea class="text-edit" rows="4" ng-model="assessment.$commentClone"></textarea>
-				<button class="btn btn-green" ng-click="assessment.comment = assessment.$commentClone;assessment.$save();editComment = false;">Save</button>
+				<textarea class="text-edit" rows="4" ng-model="assessment.$commentClone" msd-elastic=""></textarea>
+				<button class="btn btn-green" ng-click="assessment.comment = assessment.$commentClone;assessment.$save();editComment = false;">Save Comment</button>
 				<button class="btn btn-green" ng-show="assessment.comment" ng-click="editComment = false;">Cancel</button>
 			</li>
 			<!--textarea ng-model="assessment.comment" class="editable-text" style="height:22px;margin-top:8px;" msd-elastic="" placeholder="Type a comment" ng-blur="assessment.$save()" blurs-on-enter></textarea-->
