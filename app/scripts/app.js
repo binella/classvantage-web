@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store', 'angulartics', 'angulartics.mixpanel'])
+	/*
 	.provider('indicator', function () {
 		var elem = null, iCounter = 0;
 		var reqInt = function (config) {
@@ -34,8 +35,8 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				}
 			};
 		}
-	})
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV, indicatorProvider) {
+	})*/
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, oauthProvider, ENV) {
 		
 		// Allow CORS
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -46,7 +47,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 		oauthProvider.setClientSecret(ENV.oAuth.clientSecret);
 		
 		// Loading Indicator
-		$httpProvider.interceptors.push(indicatorProvider.interceptors);
+		//$httpProvider.interceptors.push(indicatorProvider.interceptors);
 
 		// Routes
 		$urlRouterProvider.otherwise("/gradebook");
@@ -158,6 +159,29 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					}]
 				}
 			})
+			.state('print', {
+				url: '/print/:type/:id?ungraded',
+				templateUrl: 'views/print.html',
+				access: 1,
+				controller: ['$scope', 'assignment', 'ungraded', 'Student', function ($scope, assignment, ungraded, Student) {
+					$scope.assignment = assignment;
+					if (ungraded) {
+						$scope.ungraded = true;
+						$scope.students = [Student.new()];
+					} else {
+						$scope.students = assignment.page.students;
+					}
+					assignment.page.$reload();
+				}],
+				resolve: {
+					assignment: ['$stateParams', 'Rubric', 'Checklist', function ($stateParams, Rubric, Checklist) {
+						return eval($stateParams.type.capitalize()).fetchOne($stateParams.id).$promise;
+					}],
+					ungraded: ['$stateParams', function ($stateParams) {
+						return $stateParams.ungraded;
+					}]
+				}
+			})
 			.state('admin', {
 				url: '/admin',
 				templateUrl: 'views/admin.html',
@@ -181,47 +205,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				}
 			});
   })
-/*
-	.directive('login', function() {
-	  return {
-	    restrict: 'A',
-	    link: function(scope, element, attrs) {
 
-	      scope.$on('event:auth-loginRequired', function( event ) {
-					scope.username = '';
-					scope.password = '';
-	        scope.show = true;
-
-	      });
-
-	      scope.$on('event:auth-loginConfirmed', function( event ) {
-	        scope.show = false;
-	      });
-	
-
-	      var button = angular.element(element.find('button'));
-	      button.bind('click', function(){
-	        scope.$emit('event:authenticate', scope.username, scope.password)
-
-	      });
-	    }
-	  }
-	})
-	*/
-	/*
-	.directive('cvInput', function() {
-		return {
-			restrict: 'A',
-			link: function(scope, element, attrs) {
-				element.bind('blur', function(e) {
-					if (scope.updateModel) {
-						scope.updateModel();
-					};
-				});
-			}
-		}
-	})
-	*/
 	.directive('blursOnEnter', function (){
 		return {
 			restrict: 'A',
@@ -262,7 +246,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 			}
 		}
 	})
-	
+	/*
 	.directive('loadingIndicator', ['indicator', function (indicator) {
 		return {
 			restrict: 'CA',
@@ -271,7 +255,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 			}
 		}
 	}])
-	
+	*/
 	/* This isnt needed in new version of angular */
 	/*
 	.directive('ngBlur', ['$parse', function($parse) {
@@ -341,7 +325,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					else
 						value = element.val() + String.fromCharCode(event.which);
 					
-					if (!regex.test(value)) { event.preventDefault() };
+					if (!regex.test(value) && event.which !== 8 && event.which !== 0) { event.preventDefault() };
 				});
 			}
 		}
@@ -354,12 +338,9 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				var elm = $(element), target = $(attrs.scrollWith);
 				target.scroll(function(){
 		        elm.scrollLeft(target.scrollLeft());
-						//$('.bubble').css('margin-left', 106-target.scrollLeft());
-						//$('.delay-bubble').removeClass('delay-bubble');
 		    });
 		    elm.scroll(function(){
 		        target.scrollLeft(elm.scrollLeft());
-						//$('.bubble').css('margin-left', 106-elm.scrollLeft());
 		    });
 			}
 		}
@@ -626,11 +607,41 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				scope.$watch(function () {
 					return element.innerHeight();
 				}, function () {
-					element.find('.mark').height(element.height());
+					setTimeout(function () {
+						element.find('.mark').height(element.height());
+					}, 100);
 				});
 			}
 		}
 	})
+	
+	.directive('prints', function ($document) {
+		var iFrame = angular.element('<iframe name="printFrame" style="width:0px;height:0px;"></iframe>');
+		angular.element(document.body).append(iFrame);
+		
+		return {
+			restrict: 'A',
+			link: function (scope, element, attrs) {
+				element.bind('click', function (event) {
+					iFrame.attr('src', '');
+					setTimeout(function () {
+						iFrame.attr('src', attrs.prints);
+					}, 200);
+				});
+			}
+		}
+	})
+	
+	.directive('resolveController', ['$controller', function($controller) {
+    return {
+      scope: true,
+      link: function(scope, elem, attrs) {
+        var resolve = scope.$eval(attrs.resolve);
+        angular.extend(resolve, {$scope: scope});
+        $controller(attrs.resolveController, resolve);
+      }
+    };
+  }])
 	
 	.directive('ngAutoExpand', ['$window', function($window) {
     return {

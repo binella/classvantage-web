@@ -71,8 +71,8 @@ angular.module('classvantageApp')
 				if (this.$shouldAutoGrade && (this.value === '' || this.value === null)) {
 					return '';
 				}
-				if (this.value || this.$shouldAutoGrade) { 
-					avg = this.value; 
+				if (this.value || this.$shouldAutoGrade) {
+					avg = parseInt(this.value); 
 				} else {
 					var count = 0;
 					var sum = 0;
@@ -112,11 +112,54 @@ angular.module('classvantageApp')
 		
 		Object.defineProperty(resource.resourcePrototype, '$assignmentAverage', {
 			get: function () {
-				if (!this.value || this.value == '') { return 0; };
-				if (this.value < 60) { return 1;};
-				if (this.value < 70) { return 2;};
-				if (this.value < 80) { return 3;};
+				var val;
+				if (this.assessable.assignment_type === 'grade') {
+					if (this.$value) { return this.$value.substr(0,1); };
+					return 0;
+				} else if (this.assessable.assignment_type === 'letter') {
+					if (!this.value) return 0;
+					switch(this.value.substr(0,1).toUpperCase()) {
+						case 'A':
+							return 4;
+						case 'B':
+							return 3;
+						case 'C':
+							return 2;
+						case 'D':
+							return 1;
+						case 'F':
+							return 'R';
+						default:
+							return 0;
+					}
+				} else {
+					val = this.value;
+				}
+				if (!val || val == '') { return 0; };
+				if (val < 60) { return 1;};
+				if (val < 70) { return 2;};
+				if (val < 80) { return 3;};
 				return 4;
+			}
+		})
+		
+		Object.defineProperty(resource.resourcePrototype, '$value', {
+			get: function () {
+				if (this.assessable.assignment_type === 'grade') {
+					//if (this.value === 0) {return 'R'};
+					this.$shouldAutoGrade = true;
+					return this.$averageGrade;
+				} else {
+					return this.value;
+				}
+			},
+			set: function (newValue) {
+				if (this.assessable.assignment_type === 'grade') {
+					if (newValue === 'r' || newValue === 'R') {this.value = 0; return;};
+					this.$averageGrade = newValue;
+				} else {
+					this.value = newValue;
+				}
 			}
 		})
 		

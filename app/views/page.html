@@ -23,6 +23,7 @@
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments, page.checklists) | orderBy:'created_at'">
 					<a class="delete-ex" ng-click="removeAssignment(column)" ng-show="column.$type === 'assignment'"></a>
+					<a class="print" style="top:-10px;cursor:pointer;height:20px;z-index:800" prints="#/print/rubric/{{column.id}}">PRINT</a>
 					<div class="title-container" ng-switch="column.$type">
 						<a ng-switch-default ui-sref="{{column.$type}}({id: column.id})">{{column.title || 'Untitled'}}</a>
 						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" msd-elastic="" blurs-on-enter></textarea>
@@ -34,7 +35,9 @@
 				<div class="student-cell">
 					<div class="student-background"></div>
 					<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
-					<span>{{student.full_name}}</span>
+					<span>
+						{{student.full_name}}
+					</span>
 				</div>
 				<div class="grade-cell" ng-repeat="assessment in student.$assessmentsFor(page.rubrics, page.assignments, page.checklists) | orderBy:'$columnCreatedAt'"
 																ng-switch="assessment.assessable.$type"
@@ -69,7 +72,7 @@
 							</a>
 						</span>
 						<a ng-switch-default class="color{{assessment.$assignmentAverage}}">
-							<input type="text" ng-class="{false:'marked'}[assessment.value == null || assessment.value === '']" ng-model="assessment.value" cv-pattern="/(^[1-9]\d?$)|^100$/" ng-blur="assessment.$save()" bubble-toggle="focus" blurs-on-enter/>%
+							<input type="text" style="text-transform: uppercase" ng-class="{false:'marked'}[assessment.$value == null || assessment.$value === '']" ng-model="assessment.$value" cv-pattern="{{assessment.assessable.$pattern}}" ng-blur="assessment.$save();log(assessment);" bubble-toggle="focus" blurs-on-enter/>{{assessment.assessable.assignment_type === 'percentage' ? '%' : ''}}
 						</a>
 					</span>
 				</div>
@@ -102,11 +105,20 @@
 					</a>
 				</li>
 				<li>
-					<a class="menu-item" ng-click="newAssignment({assignment_type: 'percentage'})" >
+					<a class="menu-item" style="cursor:default;" disabled>
 						<span class="icn-container">
 							<img src="/images/menu-grade.png" />
 						</span>
 						Manual Grade
+					</a>
+					<a class="menu-item" ng-click="newAssignment({assignment_type: 'percentage'})">
+						<span class="icn-container"></span>&nbsp;%
+					</a>
+					<a class="menu-item" ng-click="newAssignment({assignment_type: 'letter'})">
+						<span class="icn-container"></span>&nbsp;A-F
+					</a>
+					<a class="menu-item" ng-click="newAssignment({assignment_type: 'grade'})">
+						<span class="icn-container"></span>&nbsp;R-4
 					</a>
 				</li>
 				<li>

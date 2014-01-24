@@ -1,0 +1,25 @@
+<style>
+	h2 {
+		top: -80px;
+	}
+	.print-average { 
+		top: -74px;
+	}
+</style>
+<style ng-if="ungraded">
+ .print-average, h2 {
+		display:none !important;
+	}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	window.print();
+})
+</script>
+<ng-include ng-repeat-start="student in students"
+						src="'views/assessment.html'" 
+						resolve-controller="AssessmentCtrl" 
+						resolve="{assessment : student.assessments.$firstForAssignment(assignment)}"
+						style="position:relative;">
+</ng-include>
+<div class="footer" ng-repeat-end></div>

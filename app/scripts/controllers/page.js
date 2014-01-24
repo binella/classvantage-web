@@ -20,7 +20,7 @@ angular.module('classvantageApp')
 			checklist.$save().then(function (c) {
 				$location.path('/checklists/' + c.id);
 			});
-		}
+		};
 		
 		$scope.newAssignment = function (data) {
 			var assignment = Assignment.new(data);
@@ -34,7 +34,7 @@ angular.module('classvantageApp')
 				$scope.page.assignments.$remove(assignment);
 				$scope.page.$save();
 				/* Analytics */
-				$analytics.eventTrack('assignment.delete', {type: assignment.assignment_type === 'percentage' ? 'manualgrade' : 'checkmark' });
+				$analytics.eventTrack('assignment.delete', {type: assignment.assignment_type !== 'percentage' ? 'checkmark' : 'manualgrade' });
 			};
 		}
 		
@@ -89,6 +89,11 @@ angular.module('classvantageApp')
 		$scope.markAssessment = function (assessment, value) {
 			assessment.value = value;
 			assessment.$save();
+		}
+		
+		// TEST
+		$scope.log = function(a) {
+			console.log('VALUE: ' + a.$value + '.......' + a.value);
 		}
 		
   });

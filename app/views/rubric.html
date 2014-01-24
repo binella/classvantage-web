@@ -161,7 +161,7 @@
 		
 		<br/><br/>
 		<div ng-show="!showSpecificSelect">
-			<a class="plus green" ng-click="showSpecificSelectBox()" style="margin-left:-39px;">Add specific expectation</a>
+			<a class="plus green" ng-click="showSpecificSelect = true;showSpecificSelectBox();" style="margin-left:-39px;">Add specific expectation</a>
 			<a class="plus green" ng-click="addRow({})" style="margin-left:39px;">Add custom expectation</a>
 		</div>
 		<br/><br/></br>
@@ -189,9 +189,12 @@
 </div>
 
 <!-- SIDE PANEL -->
-<div class="final" style="height:110px;">
+<div class="final" style="height:150px;">
 	<a class="btn-red btn" style="margin-top:14px" ui-sref="gradebook.page({page_id: rubric.page.id})">
 		<img src="/images/icn-save-white.png" />Save
+	</a>
+	<a class="btn btn-light-slate" style="margin-top:10px;" prints="#/print/rubric/{{rubric.id}}?ungraded=true" analytics-on="click" analytics-event="assignment.print">
+		<img src="/images/print.png" />Print
 	</a>
 	<a class="btn btn-slate" style="margin-top:10px;" ng-click="deleteRubric()">
 		<img src="/images/trash.png" />Delete

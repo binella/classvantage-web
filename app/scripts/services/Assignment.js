@@ -13,9 +13,28 @@ angular.module('classvantageApp')
 			]
 		});
 		
+		// Callbacks
+		
 		resource.afterSave = function (instance, isNew) {
 			if (isNew) { $analytics.eventTrack('assignment.create', {type: instance.assignment_type === 'percentage' ? 'manualgrade' : 'checkmark' }); };
 		};
+		
+		
+		Object.defineProperty(resource.resourcePrototype, '$pattern', {
+			get: function () {
+				switch (this.assignment_type) {
+					case 'percentage':
+						return '/(^[1-9]\\d?$)|^100$/';
+					case 'letter':
+						return '/^(f|F|[a-dA-d](\\+|\\-)?)$/';
+					case 'grade':
+						return '/^(r|R|[1-4](\\+|\\-)?)$/';
+					default:
+						return '';
+				}
+			}
+		});
+		
 		
 		return resource;
   })

@@ -1,6 +1,6 @@
 <div class="hero green">
-	<div class="container" style="height:275px;">
-  	<h1 style="padding-top:97px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
+	<div class="container" style="height:200px;">
+  	<h1 style="padding-top:40px;">Gradebook&nbsp;&nbsp;<span><ng-pluralize count="pages.length" when="{'1': '(1 Page)', 'other': '({} Pages)'}"></ng-pluralize></span></h1>
 		
 		<div style="position:absolute;">
 			<a class="plus white" style="line-height:75px;" ng-click="newPage()"></a>
@@ -12,7 +12,7 @@
 				 ng-class="{selected: $stateParams.page_id == page.id}"
 				 ng-repeat="page in pages | orderBy:'created_at':true | swapForId:5:$stateParams.page_id | limitTo: 6" 
 				 ui-sref="gradebook.page({ page_id: page.id })">
-				<span>{{page.title}}</span>
+				<span title="{{page.title}}">{{page.title}}</span>
 			</a>
 			<a class="pages-tab dropdown-toggle" ng-show="pages.length > 6">
 				<span style="width:65px;">

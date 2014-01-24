@@ -86,7 +86,7 @@ angular.module('classvantageApp')
 				$scope.selection.overall.specific_expectations = [];
 				setTimeout(function() {$scope.$apply(function() {  $scope.selection.overall.specific_expectations = tmp;  })}, 1);
 			}
-			$scope.showSpecificSelect = true;
+			//$scope.
 		}
 		
 		$scope.deleteRubric = function () {
@@ -97,6 +97,10 @@ angular.module('classvantageApp')
 				/* Analytics */
 				$analytics.eventTrack('assignment.delete', {type: $scope.rubric.$type});
 			};
+		}
+		
+		$scope.print = function () {
+			window.print();
 		}
 		
   });
