@@ -204,3 +204,89 @@
 .narrow-select {
  width: 60px;
 }
+
+.assignment-total, .reuse-modal {
+	left:725px !important;
+	top:468px !important;
+	width:350px !important;
+	
+	span {
+		color:$slate;
+		font-size:21px;
+		font-weight:500;
+		position:relative;
+		top:18px;
+		left:20px;
+	}
+	
+	input {
+		width:65px !important;
+		left:20px !important;
+	}
+}
+
+.reuse-modal {
+	width:500px !important;
+	height:450px !important;
+	top:100px !important;
+	
+	.modal-header {
+		border-top:none !important;
+		height:100%;
+		position:absolute;
+		padding-top:15px;
+		
+		.close-button {
+			margin-right:40px !important;
+		}
+	}
+	
+	span {
+		top:22px;
+		left:40px;
+	}
+	
+	.tip {
+		font-style:italic;
+		color:$light-beige;
+		font-size:14px;
+		margin-left:40px;
+	}
+	
+	ul {
+		background-color:white;
+		color:gray;
+		margin-left:40px;
+		margin-right:40px;
+		border-top:2px solid $silver;
+		border-bottom:2px solid $silver;
+		overflow:auto;
+		height:310px;
+		font-size:14px;
+		line-height:34px;
+		
+		li:not(:first-child) {
+			border-top:1px solid lightgray;
+		}
+		
+		li {
+			height: 35px;
+			text-overflow: ellipsis;
+			width: 422px;
+			overflow: hidden;
+			white-space: nowrap;
+			vertical-aligh:middle;
+			
+			a {
+				margin-left:30px;
+			}
+			
+			.icn-container {
+				top:0px;
+				left:20px;
+				display:inline-block;
+				width:25px;
+			}
+		}
+	}
+}

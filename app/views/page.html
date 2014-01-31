@@ -22,8 +22,9 @@
 		<div class="scroll-content" scroll-with="#grid-scrollbar">
 			<div class="rubric header-row">
 				<div class="rubric header-cell" ng-repeat="column in page.rubrics.concat(page.assignments, page.checklists) | orderBy:'created_at'">
-					<a class="delete-ex" ng-click="removeAssignment(column)" ng-show="column.$type === 'assignment'"></a>
-					<a class="print" style="top:-10px;cursor:pointer;height:20px;z-index:800" prints="#/print/rubric/{{column.id}}">PRINT</a>
+					<a class="print-icon" prints="#/print/{{column.$type}}/{{column.id}}" ng-if="column.$type === 'rubric' || column.$type === 'checklist'" analytics-on="click" analytics-event="assessment.print_all" ></a>
+					<a class="edit-icon" ui-sref="{{column.$type}}({id: column.id})" ng-if="column.$type === 'rubric' || column.$type === 'checklist'"></a>
+					<a class="delete-ex" ng-click="removeAssignment(column)"></a>
 					<div class="title-container" ng-switch="column.$type">
 						<a ng-switch-default ui-sref="{{column.$type}}({id: column.id})">{{column.title || 'Untitled'}}</a>
 						<textarea ng-switch-when="assignment" class="editable-text" style="height:20px;" placeholder="Untitled" ng-model="column.title" ng-blur="column.$save()" msd-elastic="" blurs-on-enter></textarea>
@@ -35,7 +36,7 @@
 				<div class="student-cell">
 					<div class="student-background"></div>
 					<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
-					<span>
+					<span ng-click="editStudent(student);" style="cursor:pointer;">
 						{{student.full_name}}
 					</span>
 				</div>
@@ -71,8 +72,9 @@
 								<span class="icn-check"></span>
 							</a>
 						</span>
-						<a ng-switch-default class="color{{assessment.$assignmentAverage}}">
-							<input type="text" style="text-transform: uppercase" ng-class="{false:'marked'}[assessment.$value == null || assessment.$value === '']" ng-model="assessment.$value" cv-pattern="{{assessment.assessable.$pattern}}" ng-blur="assessment.$save();log(assessment);" bubble-toggle="focus" blurs-on-enter/>{{assessment.assessable.assignment_type === 'percentage' ? '%' : ''}}
+						<a ng-switch-default class="color{{assessment.$assignmentAverage}} {{assessment.assessable.assignment_type}}">
+							<input type="text" style="text-transform: uppercase" ng-class="{false:'marked'}[assessment.$value == null || assessment.$value === '']" ng-model="assessment.$value" cv-pattern="{{assessment.assessable.$pattern}}" ng-blur="assessment.$save();log(assessment);" bubble-toggle="focus" blurs-on-enter/>
+							{{assessment.assessable.assignment_type === 'percentage' ? '%' : (assessment.assessable.assignment_type === 'outof' ? '/'+assessment.assessable.total : '')}}
 						</a>
 					</span>
 				</div>
@@ -105,7 +107,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="menu-item" style="cursor:default;" disabled>
+					<a class="menu-item dummy" style="cursor:default;" disabled>
 						<span class="icn-container">
 							<img src="/images/menu-grade.png" />
 						</span>
@@ -120,6 +122,9 @@
 					<a class="menu-item" ng-click="newAssignment({assignment_type: 'grade'})">
 						<span class="icn-container"></span>&nbsp;R-4
 					</a>
+					<a class="menu-item" ng-click="newOutOf()">
+						<span class="icn-container"></span>&nbsp;/xx
+					</a>
 				</li>
 				<li>
 					<a class="menu-item" ng-click="newAssignment({assignment_type: 'check'})">
@@ -129,6 +134,14 @@
 						Manual Check
 					</a>
 				</li>
+				<!--li>
+					<a class="menu-item" ng-click="reUse()">
+						<span class="icn-container">
+							<img src="/images/menu-reuse.png" />
+						</span>
+						Reuse Existing
+					</a>
+				</li-->
 	  	</ul>
 		</div>
 	</div>

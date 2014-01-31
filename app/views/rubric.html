@@ -193,7 +193,7 @@
 	<a class="btn-red btn" style="margin-top:14px" ui-sref="gradebook.page({page_id: rubric.page.id})">
 		<img src="/images/icn-save-white.png" />Save
 	</a>
-	<a class="btn btn-light-slate" style="margin-top:10px;" prints="#/print/rubric/{{rubric.id}}?ungraded=true" analytics-on="click" analytics-event="assignment.print">
+	<a class="btn btn-light-slate" style="margin-top:10px;" prints="#/print/{{rubric.$type}}/{{rubric.id}}?ungraded=true" analytics-on="click" analytics-event="assignment.print">
 		<img src="/images/print.png" />Print
 	</a>
 	<a class="btn btn-slate" style="margin-top:10px;" ng-click="deleteRubric()">

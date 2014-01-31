@@ -1,25 +1,50 @@
 <style>
 	h2 {
-		top: -80px;
+		//top: -250px;
+		//right:0px;
 	}
 	.print-average { 
-		top: -74px;
+		//top: -244px;
+		//right:0px;
+		top:34px;
 	}
+	.page-container {
+		//position:relative;
+		width:90%;
+		padding-left:0px !important;
+	}
+	.specific {
+		margin-left:auto;
+		margin-right:auto;
+		width:940px;
+	}
+	.rubric-info {
+		padding-left:10px !important;
+	}
+	.container {
+		padding-top:0px !important;
+	}
+	.hero, .container {
+		margin-top:0px !important;
+	}
+	
 </style>
 <style ng-if="ungraded">
  .print-average, h2 {
 		display:none !important;
 	}
 </style>
-<script type="text/javascript">
-$(document).ready(function() {
-	window.print();
-})
+<script>
+setTimeout( function () {
+$(document).ready(function () {
+	//window.print();
+});
+}, 1000);
 </script>
-<ng-include ng-repeat-start="student in students"
+<ng-include ng-repeat-start="student in students | orderBy:'last_name'"
 						src="'views/assessment.html'" 
 						resolve-controller="AssessmentCtrl" 
 						resolve="{assessment : student.assessments.$firstForAssignment(assignment)}"
 						style="position:relative;">
 </ng-include>
-<div class="footer" ng-repeat-end></div>
+<div class="footers" style="page-break-before:always;" ng-repeat-end></div>

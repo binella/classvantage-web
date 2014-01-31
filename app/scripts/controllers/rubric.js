@@ -90,7 +90,7 @@ angular.module('classvantageApp')
 		}
 		
 		$scope.deleteRubric = function () {
-			var confirmDelete = confirm("Are you sure you want to delete this rubric? All grades associated with this rubric will be deleted as well.");
+			var confirmDelete = confirm("Are you sure you want to delete this " + $scope.rubric.$type + "? All grades associated with this " + $scope.rubric.$type + " will be deleted as well.");
 			if (confirmDelete) {
 				$state.go('gradebook.page', {page_id: $scope.rubric.page.id});
 				$scope.rubric.$destroy();

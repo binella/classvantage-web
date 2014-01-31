@@ -279,7 +279,7 @@
 @media print {
 	
 	.container {
-		margin-top:70px !important;
+		margin-top:0px !important;
 	}
 	
 	.page-container {
@@ -305,7 +305,7 @@
 	}
 	
 	.hero {
-		margin-top:100px;
+		margin-top:0px;
 		
 		ul {
 			width:auto !important;
@@ -365,6 +365,8 @@
 		position:absolute;
 		top:30px;
 		right:30px;
+		color:black;
+		font-size:26px;
 	}
 	
 	h2:after {
@@ -457,6 +459,7 @@
 	
 	.rubric-info {
 		margin-bottom:0px !important;
+		margin-top:110px !important;
 		
 		.desc-input-text {
 			font-size:16px !important;

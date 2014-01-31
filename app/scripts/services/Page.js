@@ -35,7 +35,7 @@ angular.module('classvantageApp')
 		
 		// Callbacks
 		resource.afterSave = function (instance, isNew) {
-			if (isNew) { $analytics.eventTrack('page.create'); };
+			if (isNew) { $analytics.eventTrack('page.create', {grade: instance.grade}); };
 		};
 		
 

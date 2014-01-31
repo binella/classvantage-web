@@ -160,6 +160,12 @@
 	}
 }
 
+.rubric.header-cell:hover {
+	.delete-ex, .print-icon, .edit-icon {
+		display:inline;
+	}
+}
+
 .divider-container {
 	position:relative;
 	float:left;
@@ -190,6 +196,11 @@
 	vertical-align:top;
 	//float: left;
 	//position:relative; CANNOT BE (cuz of comment bubbles) THIS IS NO LONGER THE CASE
+	
+	a.outof {
+		font-size:13px;
+		vertical-align:top;
+	}
 	
 	a {
 		text-align:center;
@@ -426,14 +437,30 @@
 
 .delete-ex {
 	background-image: url(/images/delete-ex.png);
-	background-repeat: no-repeat;
-	width: 10px;
-	height: 10px;
-	margin-top: 8px !important;
 	margin-left:97px !important;
+	margin-top:10px !important;
+}
+
+.print-icon {
+	background-image: url(/images/print-icon.png);
+	margin-left:50px !important;
+	margin-top: 8px !important;
+}
+
+.edit-icon {
+	background-image: url(/images/edit-icon.png);
+	margin-left:75px !important;
+	margin-top: 8px !important;
+}
+
+.print-icon, .edit-icon, .delete-ex {
+	z-index:400;
+	background-repeat: no-repeat;
 	bottom:auto !important;
 	cursor: pointer;
-	z-index:400;
+	width: 15px;
+	height: 15px;
+	display:none;
 }
 
 /* Comment Bubbles */

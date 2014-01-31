@@ -1,10 +1,10 @@
 <form ng-submit="submitForm()">
 <div class="modal-header" >
-
-    <input type="text" id="silver-input" placeholder="Type a student's name" ng-model="student.full_name" gains-focus required />
+		<span>Total Mark:</span>
+    <input type="text" id="silver-input" ng-model="assignment.total" gains-focus required />
 		<button class="btn btn-red" type="submit" style="top: 17px;position: relative;left: 50px;"
-						ng-disabled="student.full_name == null || student.full_name == ''">
-						{{student.id ? 'Save' : 'Add'}}
+						ng-disabled="assignment.total == null || assignment.total == ''">
+						Add
 		</button>
 		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
 

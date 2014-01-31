@@ -171,11 +171,24 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					} else {
 						$scope.students = assignment.page.students;
 					}
-					assignment.page.$reload();
+					if (assignment.unit && assignment.unit.$reload)	assignment.unit.$reload();
+					//$(document).ready(function () {window.print()});
 				}],
 				resolve: {
-					assignment: ['$stateParams', 'Rubric', 'Checklist', function ($stateParams, Rubric, Checklist) {
-						return eval($stateParams.type.capitalize()).fetchOne($stateParams.id).$promise;
+					assignment: ['$stateParams', 'Rubric', 'Checklist', '$q', function ($stateParams, Rubric, Checklist, $q) {
+						var deferred = $q.defer();
+						var a = eval($stateParams.type.capitalize()).fetchOne($stateParams.id).$promise.then(function(assignment) {
+							if (!$stateParams.ungraded) {
+								assignment.page.$reload().then(function(page) {
+									deferred.resolve(assignment);
+									return page;
+								})
+							} else {
+								deferred.resolve(assignment);
+							}
+							return assignment;
+						});
+						return deferred.promise;
 					}],
 					ungraded: ['$stateParams', function ($stateParams) {
 						return $stateParams.ungraded;
@@ -616,7 +629,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	})
 	
 	.directive('prints', function ($document) {
-		var iFrame = angular.element('<iframe name="printFrame" style="width:0px;height:0px;"></iframe>');
+		var iFrame = angular.element('<iframe id="printFrame" style="width:0px;height:0px;"></iframe>');
 		angular.element(document.body).append(iFrame);
 		
 		return {
@@ -625,7 +638,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				element.bind('click', function (event) {
 					iFrame.attr('src', '');
 					setTimeout(function () {
-						iFrame.attr('src', attrs.prints);
+						iFrame.attr('src', window.location.origin + '?' + attrs.prints );
 					}, 200);
 				});
 			}

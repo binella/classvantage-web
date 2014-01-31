@@ -7,6 +7,8 @@
 				<span>{{assessment.assessable.title || 'Untitled'}}</span>
 			</div>
 		</div>
+		<h2 class="print-show">{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
+		<div class="print-show print-average c{{assessment.$averageGrade.substr(0,1)}}">{{assessment.$averageGrade || '?'}}</div>
 		
 		<div class="rubric-info" style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">
 			<label class="title-input-text" >{{assessment.assessable.title}}</label>
@@ -52,8 +54,7 @@
 		</ul>
 	</div-->
 	
-	<h2>{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
-	<div class="print-show print-average c{{assessment.$averageGrade.substr(0,1)}}">{{assessment.$averageGrade || '?'}}</div>
+	<h2 class="print-hide">{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
 	<div style="clear:both;"></div>
 	<br/>
 	<section style="margin-top:28px;" class="specific" ng-switch-when="rubric">
@@ -202,7 +203,12 @@
 													 ng-click="toggleAutograde()" cv-styled-checkbox />Autograde
 	</span>
 	<a class="btn btn-green" ui-sref="gradebook.page({page_id: assessment.assessable.page.id})">Finished</a>
-	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="printAssessment()" analytics-on="click" analytics-event="assessment.print">
+	<a class="btn btn-light-slate" style="margin-top:10px;" ng-click="printAssessment()" analytics-on="click" analytics-event="assessment.print" analytics-assessment-type="{{assessment.$type}}">
 		<img src="/images/print.png" />Print
 	</a>
+</div>
+
+<!-- FOOTER LOGO -->
+<div class="print-show" style="position:absolute;bottom:10px;right:0px;">
+	<img src="/images/print_icon.jpg"/>
 </div>

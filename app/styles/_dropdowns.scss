@@ -138,8 +138,8 @@
 
 // Hover/Focus state
 // -----------
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover:not(.dummy),
+.dropdown-menu > li > a:focus:not(.dummy),
 .dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a {
   text-decoration: none;

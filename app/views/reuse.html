@@ -1,0 +1,17 @@
+<div class="modal-header" >
+		<span>Select an assessment</span>
+		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
+		<br /><br /><br />
+		<div class="tip">
+			Note that you can only reuse originally created assessments
+		</div>
+		<br />
+		<ul class="list">
+			<li ng-repeat="assignment in rubrics.concat(checklists) | orderBy:'created_at'">
+				<span class="icn-container">
+					<img src="/images/menu-{{assignment.$type}}.png" />
+				</span>
+				<a ng-click="copyAssignment(assignment)">{{assignment.title || 'Untitled'}}</a>
+			</li>
+		</ul>
+</div>

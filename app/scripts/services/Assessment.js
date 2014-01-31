@@ -30,7 +30,7 @@ angular.module('classvantageApp')
 		// Callbacks
 		
 		resource.afterSave = function (data, isNew) {
-			if (isNew) { $analytics.eventTrack('assessment.create'); };
+			if (isNew) { $analytics.eventTrack('assessment.create', {assessment_type: data.assessable.$type}); };
 		}
 		
 		// Calculated Properties
@@ -132,6 +132,8 @@ angular.module('classvantageApp')
 						default:
 							return 0;
 					}
+				} else if (this.assessable.assignment_type === 'outof') {
+					val = this.value / this.assessable.total * 100;
 				} else {
 					val = this.value;
 				}
