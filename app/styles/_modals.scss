@@ -275,7 +275,8 @@
 			width: 422px;
 			overflow: hidden;
 			white-space: nowrap;
-			vertical-aligh:middle;
+			vertical-align:middle;
+			cursor:pointer;
 			
 			a {
 				margin-left:30px;
@@ -287,6 +288,10 @@
 				display:inline-block;
 				width:25px;
 			}
+		}
+		
+		li:hover {
+			color:black;
 		}
 	}
 }

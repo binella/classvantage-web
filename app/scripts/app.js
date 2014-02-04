@@ -172,7 +172,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 						$scope.students = assignment.page.students;
 					}
 					if (assignment.unit && assignment.unit.$reload)	assignment.unit.$reload();
-					//$(document).ready(function () {window.print()});
+
 				}],
 				resolve: {
 					assignment: ['$stateParams', 'Rubric', 'Checklist', '$q', function ($stateParams, Rubric, Checklist, $q) {

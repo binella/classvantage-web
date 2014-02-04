@@ -7,11 +7,11 @@
 		</div>
 		<br />
 		<ul class="list">
-			<li ng-repeat="assignment in rubrics.concat(checklists) | orderBy:'created_at'">
+			<li ng-repeat="assignment in rubrics.concat(checklists) | orderBy:'created_at'" ng-click="copyAssignment(assignment)">
 				<span class="icn-container">
-					<img src="/images/menu-{{assignment.$type}}.png" />
+					<img ng-src="/images/menu-{{assignment.$type}}.png" />
 				</span>
-				<a ng-click="copyAssignment(assignment)">{{assignment.title || 'Untitled'}}</a>
+				<a>{{assignment.title || 'Untitled'}}</a>
 			</li>
 		</ul>
 </div>

@@ -56,7 +56,7 @@ angular.module('classvantageApp')
 			$modal.open({
 				templateUrl: 'views/reuse.html',
 				windowClass: 'reuse-modal',
-				containerElement: '.container',
+				//containerElement: '.container',
 				controller: ['$scope', '$modalInstance', 'page', 'rubrics', 'checklists', function ($scope, $modalInstance, page, rubrics, checklists) {
 					$scope.checklists = checklists;
 					$scope.rubrics = rubrics;
@@ -64,9 +64,10 @@ angular.module('classvantageApp')
 						$modalInstance.dismiss('cancel');
 					};
 					$scope.copyAssignment = function (assignment) {
-						var ass = eval(assignment.$type.capitalize()).new({copy_from_id: assignment.id});
+						var ass = eval(assignment.$type.capitalize()).new({copy_from_id: assignment.id, page: page});
 						eval('page.'+assignment.$type+'s').$insert(ass);
 						ass.$save().then(function(a) {
+							$scope.cancel();
 							$location.path('/'+assignment.$type+'s/' + a.id);
 						});
 					}
