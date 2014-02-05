@@ -7,7 +7,7 @@
 				<span>{{assessment.assessable.title || 'Untitled'}}</span>
 			</div>
 		</div>
-		<h2 class="print-show">{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
+		<h2 class="print-show" ng-show="assessment.id">{{assessment.student.first_name}} {{assessment.student.last_name}}</h2>
 		<div class="print-show print-average c{{assessment.$averageGrade.substr(0,1)}}">{{assessment.$averageGrade || '?'}}</div>
 		
 		<div class="rubric-info" style="float:left;width:800px;padding-left:28px;margin-bottom:35px;">

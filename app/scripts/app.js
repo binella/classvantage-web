@@ -169,7 +169,11 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 						$scope.ungraded = true;
 						$scope.students = [Student.new()];
 					} else {
-						$scope.students = assignment.page.students;
+						$scope.students = [];
+						for (var i=0,l=assignment.page.students.length; i < l; i++) {
+							var stud = assignment.page.students[i];
+							if (stud.assessments.$firstForAssignment(assignment).id) { $scope.students.push(stud); };
+						};
 					}
 					if (assignment.unit && assignment.unit.$reload)	assignment.unit.$reload();
 
@@ -631,6 +635,10 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	.directive('prints', function ($document) {
 		var iFrame = angular.element('<iframe id="printFrame" style="width:0px;height:0px;"></iframe>');
 		angular.element(document.body).append(iFrame);
+		// IE FIX
+		if (!window.location.origin) {
+		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+		}
 		
 		return {
 			restrict: 'A',

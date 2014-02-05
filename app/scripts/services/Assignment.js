@@ -28,7 +28,7 @@ angular.module('classvantageApp')
 					case 'grade':
 						return '/^(r|R|[1-4](\\+|\\-)?)$/';
 					default:
-						return '/(^[1-9]\\d*$)$/';
+						return '/(^[1-9]\\d*$)$|^0$/';
 				}
 			}
 		});

@@ -276,7 +276,7 @@
 }
 
 /* PRINT */
-@media print {
+//@media print {
 	
 	.container {
 		margin-top:0px !important;
@@ -497,11 +497,11 @@
 	}
 	
 	.print-show {
-		display:block !important;
+		display:block;
 	}
 	
 	.footer {
 		page-break-after:always;
 	}
 	
-}
+//}

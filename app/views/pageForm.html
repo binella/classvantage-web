@@ -41,6 +41,6 @@
 		<button class="btn btn-red" type="submit">
 						{{buttonCaption}}
 		</button>
-		<a class="trash-dark" style="margin-left:215px;" ng-shows="page.id" ng-click="deletePage()">Delete this page</a>
+		<a class="trash-dark" style="margin-left:215px;" ng-if="page.id" ng-click="deletePage()">Delete this page</a>
 </div>
 </form>

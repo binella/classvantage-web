@@ -9,7 +9,8 @@
 		<ul class="list">
 			<li ng-repeat="assignment in rubrics.concat(checklists) | orderBy:'created_at'" ng-click="copyAssignment(assignment)">
 				<span class="icn-container">
-					<img ng-src="/images/menu-{{assignment.$type}}.png" />
+					<img src="/images/menu-rubric.png" ng-if="assignment.$type === 'rubric'" />
+					<img src="/images/menu-checklist.png" ng-if="assignment.$type === 'checklist'" />
 				</span>
 				<a>{{assignment.title || 'Untitled'}}</a>
 			</li>
