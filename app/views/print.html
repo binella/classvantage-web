@@ -43,9 +43,10 @@ $(document).ready(function () {
 });
 }, 1000);
 </script>
-<ng-include ng-repeat="student in students | orderBy:'last_name'"
+<ng-include ng-repeat-start="student in students | orderBy:'last_name'"
 						src="'views/assessment.html'" 
 						resolve-controller="AssessmentCtrl" 
 						resolve="{assessment : student.assessments.$firstForAssignment(assignment)}"
-						style="position:relative;page-break-after:always;">
+						style="position:relative;">
 </ng-include>
+<div class="footer" ng-repeat-end></div>
