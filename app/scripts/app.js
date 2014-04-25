@@ -205,12 +205,37 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				controller: 'AdminCtrl',
 				access: 2,
 				resolve: {
-					units: ['Unit', function (Unit) {
-						return Unit.fetchAll().$promise;
+					curriculums: ['Curriculum', function (Curriculum) {
+						return Curriculum.fetchAll().$promise;
 					}]
 				}
 			})
-			.state('admin.unit', {
+			.state('admin.curriculum', {
+				url: '/:curriculum_id',
+				template: '<div ui-view></div>',
+				controller: ['$scope', 'curriculum', function ($scope, curriculum) {
+					$scope.curriculum = curriculum;
+				}],
+				access: 2,
+				resolve: {
+					curriculum: ['Curriculum', '$stateParams', function (Curriculum, $stateParams) {
+						return Curriculum.fetchOne($stateParams.curriculum_id);
+					}]
+				}
+			})
+			.state('admin.curriculum.subjects', {
+				url: '/subjects',
+				templateUrl: 'views/adminCurr.html',
+				controller: 'AdminCurrCtrl',
+				access: 2
+			})
+			.state('admin.curriculum.strand', {
+				url: '/units',
+				templateUrl: 'views/adminStrand.html',
+				controller: 'AdminStrandCtrl',
+				access: 2
+			})
+			.state('admin.curriculum.strand.unit', {
 				url: '/:unit_id',
 				templateUrl: 'views/adminUnit.html',
 				controller: 'AdminUnitCtrl',
@@ -626,6 +651,7 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				}, function () {
 					setTimeout(function () {
 						element.find('.mark').height(element.height());
+						element.find('.mark').focus();
 					}, 100);
 				});
 			}
@@ -633,11 +659,13 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 	})
 	
 	.directive('prints', function ($document) {
-		var iFrame = angular.element('<iframe id="printFrame" style="width:0px;height:0px;"></iframe>');
+		var iFrame = angular.element('<iframe id="printf" name="printf" style="width:0px;height:0px;"></iframe>');
 		angular.element(document.body).append(iFrame);
+		var isIE = false;
 		// IE FIX
 		if (!window.location.origin) {
 		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+			isIE = true;
 		}
 		
 		return {
@@ -647,6 +675,12 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					iFrame.attr('src', '');
 					setTimeout(function () {
 						iFrame.attr('src', window.location.origin + '?' + attrs.prints );
+						if (isIE) {
+							setTimeout(function() {
+								window.frames['printf'].focus();
+								window.frames['printf'].print();
+							}, 1200)
+						}
 					}, 200);
 				});
 			}
@@ -688,7 +722,6 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					setTimeout(function () {
 						element.height(0);
 		         var height = ta.scrollHeight;
-						console.log(height);
 		         // 8 is for the padding
 		         if (height < 20) {
 		             height = minHeight || 28;
@@ -712,6 +745,8 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				scope.me = {};
 				scope.$emit('event:auth-signout');
 			};
+			
+			//console.log(Me);
 			
 			/*
 			scope.reloadMe = function () {

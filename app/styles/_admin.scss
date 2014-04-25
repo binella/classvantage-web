@@ -9,6 +9,11 @@ div.specific {
 	font-size:14px;
 }
 
+div.unit {
+	height: 35px;
+	border-top: 1px dashed;
+}
+
 .editable-container {
 	float:left;
 }
@@ -79,4 +84,8 @@ textarea.long {
 	width:490px;
 	height:60px;
 	margin-top:2px;
+}
+
+input.xlong, div.xlong {
+	width:600px;
 }

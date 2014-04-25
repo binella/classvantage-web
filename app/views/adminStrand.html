@@ -1,0 +1,29 @@
+<br/>
+<h3>Grade:</h3>
+	<select ng-model="selection.grade" ng-change="selection.subject = null;revert();" 
+					ng-options="g for g in [1,2,3,4,5,6,7,8]" cv-styled-select>
+	</select>
+<br/><br/>
+
+<h3>Subject:</h3>
+<select ng-model="selection.subject" class="wide-select" ng-disabled="selection.grade == null" ng-change="selection.strand = null;revert();"
+				ng-options="s as s.title for s in curriculum.subjects" cv-styled-select>
+	<option value="" disabled="disabled" >Select a subject</option>
+</select>
+<br/><br/>
+
+<h3>Strand:</h3>
+<select ng-model="selection.strand" class="wide-select" ng-disabled="selection.subject == null"
+				ng-options="s as s.title for s in selection.subject.strands"
+				ng-change="noUnit=false;goToUnit(selection.strand, selection.grade);" cv-styled-select>
+	<option value="" disabled="disabled">Select a strand</option>
+</select>
+<br/><br/>
+
+<div ng-show="noUnit">
+	No unit exists for this grade-strand <a ng-click="createUnit()" style="color: #00a573;cursor: pointer;">Create one</a>
+</div>
+
+<div ui-view>
+
+</div>

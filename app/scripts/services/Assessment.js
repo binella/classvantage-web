@@ -88,6 +88,7 @@ angular.module('classvantageApp')
 				if (isNaN(avg)) { return null; };
 				
 				if (avg === 0) { return 'R'; };
+				avg = Math.round(avg);
 				var value = (avg + 1) / 3,
 						whole = Math.round(value),
 						sign = (value - whole) > 0 ? '+' : null,

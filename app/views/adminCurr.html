@@ -1,0 +1,22 @@
+<div style="height:60px;">
+	<h3 style="float:left;">Subjects: {{curriculum.subjects.length}}</h3>
+	<a ng-click="newSubject()" id="bottom" class="plus green" style="float:right;padding-top:3px;margin-bottom:20px;margin-top:12px;">Add subject</a>
+	<div style="clear:both;"></div>
+</div>
+
+<div class="overall" ng-repeat="subject in curriculum.subjects | orderBy:'created_at'">
+	<edit-in-place model="subject" save="save(subject)" cancel="cancel(subject)" remove="remove(subject)" required-field="title">
+		<editable-input field="title" class="exp xlong" placeholder="Title"></editable-input>
+	</edit-in-place>
+	<br/>
+	<div class="specific" ng-repeat="strand in subject.strands | orderBy:'created_at'">
+		<edit-in-place model="strand" save="saveStrand(strand)" cancel="cancelStrand(subject, strand)" remove="removeStrand(subject, strand)" required-field="title">
+			<editable-input field="title" class="exp xlong" placeholder="Title"></editable-input>
+		</edit-in-place>
+	</div>
+	<a ng-click="newStrand(subject)" class="plus green" style="margin-left:70px;line-height:90px;">Add a strand</a>
+</div>
+
+<div class="overall">
+	
+</div>

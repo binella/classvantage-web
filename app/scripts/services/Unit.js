@@ -11,6 +11,11 @@ angular.module('classvantageApp')
 					type: 'overall_expectation',
 					inverse: 'unit',
 					isArray: true
+				},
+				{
+					name: 'strand',
+					type: 'strand',
+					inverse: 'units'
 				}
 			]
 		});

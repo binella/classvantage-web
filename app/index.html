@@ -43,6 +43,7 @@
 	        <a ui-sref="gradebook" class="nav-item"><span>Gradebook</span></a>
 	        <!--a href="" class="students"><span>Students</span></a>
 	        <a href="" class="resources"><span>Resources</span></a-->
+					<a href="http://classvantage.zendesk.com/" target="blank" class="nav-item"><span>Support</span></a>
 					<a class="nav-item pull-right dropdown-toggle"><span ng-bind="me.name"></span></a>
 					<ul class="dropdown-menu" style="left:auto;right:50px;top:60px;">
 			    	<li>
@@ -91,7 +92,9 @@
         <script src="scripts/controllers/rubric.js"></script>
         <script src="scripts/controllers/gradebook.js"></script>
 				<script src="scripts/controllers/admin.js"></script>
+				<script src="scripts/controllers/adminCurr.js"></script>
 				<script src="scripts/controllers/adminUnit.js"></script>
+				<script src="scripts/controllers/adminStrand.js"></script>
 				<script src="scripts/controllers/assessment.js"></script>
         <script src="scripts/controllers/page.js"></script>
 				<script src="scripts/controllers/checklist.js"></script>
@@ -114,7 +117,33 @@
 				<script src="scripts/services/Assignment.js"></script>
 				<script src="scripts/services/Checklist.js"></script>
 				<script src="scripts/services/ChecklistItem.js"></script>
+				<script src="scripts/services/Curriculum.js"></script>
+				<script src="scripts/services/Subject.js"></script>
+				<script src="scripts/services/Strand.js"></script>
         <!-- endbuild -->
 
+				<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+				<style type="text/css" media="screen, projection">
+				  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+				</style>
+				<script type="text/javascript">
+				  if (typeof(Zenbox) !== "undefined") {
+				    Zenbox.init({
+				      dropboxID:   "20294226",
+				      url:         "https://classvantage.zendesk.com",
+				      tabTooltip:  "Ask Us",
+				      tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_ask_us.png",
+				      tabColor:    "black",
+				      tabPosition: "Left"
+				    });
+				  }
+				</script>
+				<script type="text/javascript" >
+				function getURLParameter(name) {
+				return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+				}
+				var showHelpPopup= getURLParameter('popup');
+				if (showHelpPopup) { Zenbox.show(); return false; }
+				</script>
 </body>
 </html>

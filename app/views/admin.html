@@ -1,28 +1,24 @@
-<div class="page-container container">
-	<br/>
-	<h3>Grade:</h3>
-	<select ng-model="selection.unit.grade" ng-change="selection.unit.subject_id = null;revert();"
-					ng-options="u.grade as u.grade for u in units | unique:'grade'" cv-styled-select></select>
-	<br/><br/>
-	
-	<h3>Subject:</h3>
-	<select ng-model="selection.unit.subject_id" class="wide-select" ng-disabled="selection.unit.grade == null" ng-change="selection.unit_id = null;revert();"
-					ng-options="u.strand.subject.id as u.strand.subject.title for u in units | filter:{grade: selection.unit.grade} | unique:'subject_id'" cv-styled-select>
-		<option value="" disabled="disabled" >Select a subject</option>
-	</select>
-	<br/><br/>
-	
-	<h3>Unit:</h3>
-	<select ng-model="selection.unit_id" class="wide-select" ng-disabled="selection.unit.subject_id == null"
-					ng-options="u.id as u.title for u in units | filter: filterUnits"
-					ng-change="goToUnit();" cv-styled-select>
-		<option value="" disabled="disabled">Select a unit</option>
-	</select>
-	<br/><br/>
-	
-	<br/><br/>
-	
-	<div ui-view>
-
+<div class="hero green">
+	<div class="container" style="height:200px;">
+		<div style="text-align: center;padding-top: 40px;">
+			<span>Select Curriculum:</span>
+			<select ng-model="curriculum" ng-options="c as c.title for c in curriculums" ng-change="$state.go('admin.curriculum', {curriculum_id: curriculum.id});" cv-styled-select></select>
+		</div>
+		<nav class="tab-container">
+			<a class="pages-tab" 
+				 ng-class="{selected: $state.is('admin.curriculum.subjects')}"
+				 ui-sref="admin.curriculum.subjects">
+				<span>Subject & Strands</span>
+			</a>
+			<a class="pages-tab" 
+				 ng-class="{selected: $state.includes('admin.curriculum.strand')}"
+				 ui-sref="admin.curriculum.strand">
+				<span>Units & Expectations</span>
+			</a>
+		</nav>
 	</div>
+</div>
+
+<div class="page-container container" ui-view>
+
 </div>

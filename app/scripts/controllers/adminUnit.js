@@ -4,9 +4,10 @@ angular.module('classvantageApp')
   .controller('AdminUnitCtrl', function ($scope, unit, OverallExpectation, SpecificExpectation) {
 	
 		$scope.unit = unit;
-		//if (!$scope.$parent.selection.unit.grade) {
-			$scope.$parent.selection = {unit: {subject_id:unit.subject_id ,grade: unit.grade}, unit_id: unit.id};
-		//}
+		$scope.unit.$promise.then(function (unit) {
+			$scope.$parent.selection = {grade: unit.grade, subject: unit.strand.subject, strand: unit.strand};
+		});
+		
 	
 		$scope.newOverall = function () {
 			var overall = OverallExpectation.new({ created_at: (new Date()).toISOString() });
@@ -42,6 +43,17 @@ angular.module('classvantageApp')
 			};
 			
 		};
+		
+		$scope.removeUnit = function () {
+			var confirmRemove = confirm("Are you sure you want to remove this unit? All its expectations will also be removed");
+			if (confirmRemove) {
+				var strand = $scope.unit.strand;
+				strand.units.$remove($scope.unit);
+				strand.$save().then(function (s) {
+					$scope.$state.go('admin.curriculum.strand');
+				});
+			};
+		}
 		
   })
 /*

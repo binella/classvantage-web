@@ -39,7 +39,13 @@
 <script>
 setTimeout( function () {
 $(document).ready(function () {
-	window.print();
+	var isIE = navigator.appName == 'Microsoft Internet Explorer';
+	if (isIE) {
+		//window.frames["printf"].focus();
+		//window.frames["printf"].print();
+	} else {
+		window.print();
+	}
 });
 }, 1000);
 </script>
