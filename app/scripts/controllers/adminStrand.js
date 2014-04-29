@@ -19,6 +19,7 @@ angular.module('classvantageApp')
 				$scope.$state.go('admin.curriculum.strand.unit', {unit_id: unit.id});
 			} else {
 				$scope.noUnit = true;
+				$scope.$state.go('admin.curriculum.strand');
 			}
 		}
 		

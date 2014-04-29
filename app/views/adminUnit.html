@@ -1,5 +1,5 @@
 <h3>Unit:</h3>
-	<input type="text" ng-model="unit.title" class="exp" placeholder="Title (optional)" style="width:500px;"></input>
+	<input type="text" ng-model="unit.title" class="exp" placeholder="Title (optional)" style="width:500px;" ng-blur="unit.$save()"></input>
 	<a style="color: #00a573;cursor: pointer;" ng-click="removeUnit()">Remove unit</a>
 <br/><br/><br/>
 

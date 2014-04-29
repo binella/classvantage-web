@@ -51,6 +51,7 @@ angular.module('classvantageApp')
 				strand.units.$remove($scope.unit);
 				strand.$save().then(function (s) {
 					$scope.$state.go('admin.curriculum.strand');
+					$scope.$parent.noUnit = true;
 				});
 			};
 		}
