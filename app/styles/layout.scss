@@ -70,6 +70,8 @@
 @import "assessment";
 @import "auth";
 @import "checklist";
+@import "students";
+@import "agendas";
 
 @import "admin";
 
@@ -392,7 +394,7 @@ body > header {
 	top: 507px;
 	left: 312px;
 	width: 468px;
-	height:72px;
+	height:114px;
 	
 	#silver-input::-webkit-input-placeholder { /* WebKit browsers */
 	    color:    $silver;
@@ -416,10 +418,15 @@ body > header {
 			top: 17px;
 			width: 292px;
 			border-bottom: 1px solid $silver;
+			font-size:20px;
+		}
+		
+		input.small {
+			font-size:17px;
 		}
 		
 		.close-button {
-			margin-top: 23px;
+			margin-top: -15px;
 			margin-right: 17px;
 		}
 	}

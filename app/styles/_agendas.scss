@@ -1,0 +1,86 @@
+ul.agendas {
+	padding-left:34px;
+	margin-top:25px;
+	margin-bottom:25px;
+	
+	li.red {
+		border-color: $red;
+	}
+	
+	li.yellow {
+		border-color: $yellow;
+	}
+	
+	li.green {
+		border-color: $green;
+	}
+	
+	li.silver {
+		border-color: $silver;
+	}
+	
+	li {
+		background: white;
+		border-left: 5px solid red;
+		height:42px;
+		line-height:38px;
+		margin-bottom:1px;
+	
+		span {
+			display:inline-block;
+			margin-left:10px;
+		}
+		
+		span.title{
+			width:242px;
+		}
+		
+		span.info {
+			font-size:17px;
+			font-weight:300;
+			color:$dark-beige;
+			width:443px;
+		}
+		
+		span.date {
+			font-weight:500;
+			font-size:15px;
+			width: 128px;
+			
+			span {
+				margin-left:1px;
+			}
+		}
+		
+		.delete {
+			background-image: url(/images/icn-ex.png);
+			background-position: 0px 11px;
+			width: 11px;
+			height: 11px;
+			display: inline-block;
+			cursor:pointer;
+		}
+		
+		.edit {
+			background-image: url(/images/pencil.png);
+			width: 13px;
+			height: 13px;
+			display: inline-block;
+			background-position: -8px 21px;
+			cursor:pointer;
+		}
+		
+		.plus-a {
+			background-image: url(/images/btn-plus-green.png);
+			background-position: 0px 23px;
+			width: 22px;
+			height: 23px;
+			display: inline-block;
+			cursor: pointer;
+			vertical-align: middle;
+		}
+		
+	}
+	
+	
+}

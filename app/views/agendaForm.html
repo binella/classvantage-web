@@ -1,0 +1,18 @@
+<form ng-submit="submitForm()">
+<div class="modal-header" >
+
+    <input type="text" id="silver-input" placeholder="Title" ng-model="agenda_item.title" 
+					gains-focus required />
+		<textarea ng-model="agenda_item.description" placeholder="Description"></textarea>
+		<button class="btn btn-red" type="submit" style="">
+			{{agenda_item.id ? 'Save' : 'Add'}} agenda item
+		</button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="bold">Due:</span>
+		<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="agenda_item.due_date" is-open="date.opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+		<a class="close-button" ng-click="cancel()"><img src="/images/beige-ex.png"/></a>
+
+</div>
+</form>

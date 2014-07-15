@@ -41,8 +41,8 @@
 	      <a href="#/" class="logo"><img src="images/logo.png"></a>
 	      <nav>
 	        <a ui-sref="gradebook" class="nav-item"><span>Gradebook</span></a>
-	        <!--a href="" class="students"><span>Students</span></a>
-	        <a href="" class="resources"><span>Resources</span></a-->
+	        <a ui-sref="students" class="nav-item students"><span>Students</span></a>
+	        <!--a href="" class="resources"><span>Resources</span></a-->
 					<a href="http://classvantage.zendesk.com/" target="blank" class="nav-item"><span>Support</span></a>
 					<a class="nav-item pull-right dropdown-toggle"><span ng-bind="me.name"></span></a>
 					<ul class="dropdown-menu" style="left:auto;right:50px;top:60px;">
@@ -80,6 +80,8 @@
 				<script src="custom_components/data-store/store.js"></script>
 				<script src="bower_components/angulartics/src/angulartics.js"></script>
 				<script src="bower_components/angulartics/src/angulartics-mixpanel.js"></script>
+				<script src="custom_components/angular-bootstrap-typeahead/angular-typahead.js"></script>
+				<script src="custom_components/angular-bootstrap-datepicker/datepicker.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -98,10 +100,12 @@
 				<script src="scripts/controllers/assessment.js"></script>
         <script src="scripts/controllers/page.js"></script>
 				<script src="scripts/controllers/checklist.js"></script>
+				<script src="scripts/controllers/students.js"></script>
         <!-- Filters -->
         <script src="scripts/filters/unique.js"></script>
 				<script src="scripts/filters/slice.js"></script>
 				<script src="scripts/filters/getById.js"></script>
+				<script src="scripts/filters/fromNow.js"></script>
 				<!-- Models -->
 				<script src="scripts/services/Me.js"></script>
         <script src="scripts/services/Gradebook.js"></script>
@@ -120,6 +124,7 @@
 				<script src="scripts/services/Curriculum.js"></script>
 				<script src="scripts/services/Subject.js"></script>
 				<script src="scripts/services/Strand.js"></script>
+				<script src="scripts/services/AgendaItem.js"></script>
         <!-- endbuild -->
 
 				<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>

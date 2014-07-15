@@ -29,6 +29,12 @@ angular.module('classvantageApp')
 					type: 'assignment',
 					inverse: 'page',
 					isArray: true
+				},
+				{
+					name: 'agenda_items',
+					type: 'agenda_item',
+					inverse: 'page',
+					isArray: true
 				}
 			]
 		});

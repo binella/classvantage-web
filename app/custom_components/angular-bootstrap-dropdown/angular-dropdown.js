@@ -19,7 +19,7 @@ angular.module('ui.bootstrap.dropdownToggle', []).directive('dropdownToggle', ['
     restrict: 'CA',
     link: function(scope, element, attrs) {
       scope.$watch('$location.path', function() { closeMenu(); });
-      element.parent().bind('click', function() { closeMenu(); });
+      element.parent().bind('click', function(event) { if(event.target.className.match(/\bcheck\b/) || event.target.parentNode.className.match(/\bcheck\b/) || event.target.parentNode.parentNode.parentNode.parentNode.className.match(/\bcheck\b/)) {return;}; closeMenu(); });
       element.bind('click', function (event) {
 
         var elementWasOpen = (element === openElement);
@@ -44,7 +44,7 @@ angular.module('ui.bootstrap.dropdownToggle', []).directive('dropdownToggle', ['
             closeMenu = angular.noop;
             openElement = null;
           };
-          $document.bind('click', closeMenu);
+          $document.bind('bclick', closeMenu);
         }
       });
     }

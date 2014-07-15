@@ -1,0 +1,15 @@
+<div class="modal-header">
+	<br/><br/>
+	<span class="title">It looks like you might already have a student on file:</span>
+	<a class="close-button" ng-click="close()"><img src="/images/beige-ex.png"/></a>
+	<ul>
+		<li ng-repeat="student in students">
+			<span>{{student.full_name}}</span>
+			<span>{{student.$parent_emails}}</span>
+			<button ng-click="addStudent(student);" class="btn btn-red" ng-disabled="isInPage(student)">{{isInPage(student) ? 'Added' : 'Add'}}</button>
+		</li>
+	</ul>
+	<br/>
+	<a class="footer-link" ng-click="differentStudent()">No, I have a different student</a>
+	<br/><br/>
+</div>

@@ -1,0 +1,32 @@
+<style>
+header {
+	display:none !important;
+}
+#zenbox_tab {
+	display:none !important;
+}
+</style>
+<div style="height: 70px;background: #1e3133;color: white;display:block;">
+	<img src="http://www.classvantage.com/images/logo.png" style="margin-top: 14px;margin-left: 10%;"/>
+</div>
+<div style="margin-left:10%;margin-top:30px;color:#93876C">Monday August 20, 2013</div>
+<div style="margin-left:10%;font-size:24px;font-weight:500;color:#1e3133;margin-top:20px;margin-right:10%;">
+	[Student Name] has <span style="color:#ff4626;">{{selectedAgendas.length}}</span> agenda item{{selectedAgendas.length > 1 ? 's' : ''}} for the next {{span}}
+</div>
+<br/>
+<hr style="margin-left:10%;margin-right:10%;"/>
+<br/>
+<div style="margin-left:10%;margin-right:10%;color:#93876C;">{{note}}</div>
+<br/></br/>
+<ul style="margin-left:10%;margin-right:10%;">
+	<li style="background: white;border-left: 5px solid {{agendaItem.$hexCode}};min-height: 42px;line-height: 38px;margin-bottom: 1px;" ng-repeat="agendaItem in selectedAgendas">
+		<span style="color:#1e3133;margin-left:10px;font-weight:500;";>{{agendaItem.title}}</span>
+		<span style="float:right;color:{{agendaItem.$hexCode}};margin-right:10px;">{{agendaItem.due_date | fromNow}}</span>
+		<span style="float:right;color:#1e3133;">Due:</span>
+		<div style="font-size:14px;margin-left:10px;margin-right:10px;">{{agendaItem.description}}</div>
+	</li>
+</ul>
+<br/>
+<div style="text-align:center;width:100%;font-size:12px;color:#93876C;display:none;">
+	Don't want to receive these emails anymore? <a href="somelink" style="text-decoration:underline;color:#93876C;">Unsubscribe</a>
+</div>

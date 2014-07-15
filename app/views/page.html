@@ -7,6 +7,24 @@
 		<li><a class="pencil" href="" ng-click="openPageModal(page)"></a></li>
 	</ul>
 </div>
+<hr/>
+<div style="margin-left:-34px;min-height:40px;padding-top:15px;">
+	<a class="plus green" ng-click="newAgenda();">Add an agenda item</a>
+	<a class="send-agenda btn btn-red" ng-click="sendAgenda();" style="float:right;" ng-show="page.agenda_items.length > 0"><img src="/images/mail.png" style="vertical-align:top;"/></a>
+	<ul class="agendas">
+		<li ng-repeat="agenda_item in page.agenda_items" class="{{agenda_item.$colorCode}}">
+			<span class="title">{{agenda_item.title}}</span>
+			<span class="info">{{agenda_item.description}}</span>
+			<span class="date">
+				Due:
+				<span class="{{agenda_item.$colorCode}}-font">{{agenda_item.due_date | fromNow}}</span>
+			</span>
+			<a class="edit" ng-click="newAgenda(agenda_item)"></a>&nbsp;&nbsp;&nbsp;
+			<a class="delete" ng-click="deleteAgenda(agenda_item)"></a>
+		</li>
+	</ul>
+</div>
+<hr/>
 <div style="height:15px;"></div>
 <div class="student" ng-class="{true:'bottom-border', false:''}[page.students.length > 0]">
 	<div class="student header-cell">
@@ -36,7 +54,7 @@
 				<div class="student-cell">
 					<div class="student-background"></div>
 					<a href="" class="close-button" ng-click="deleteStudent(student)"><img src="images/beige-ex.png" /></a>
-					<span ng-click="editStudent(student);" style="cursor:pointer;">
+					<span>
 						{{student.full_name}}
 					</span>
 				</div>

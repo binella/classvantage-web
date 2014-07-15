@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('classvantageApp')
-  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Unit, pages, $state, $analytics) {
+  .controller('GradebookCtrl', function ($scope, $location, $modal, $filter, Rubric, Page, Unit, pages, $state, $analytics, students) {
 
 		// Default to the first page
 		$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
@@ -13,6 +13,7 @@ angular.module('classvantageApp')
 
 		//$scope.gradebook = Gradebook.currentGradebook || {};
 		$scope.pages = pages; // We are promised 'pages' here
+		$scope.students = students;
 		
 		$scope.newPage = function () {
 			$scope.openPageModal(Page.new({ created_at: (new Date()).toISOString() }));

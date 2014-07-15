@@ -1,0 +1,26 @@
+<div class="hero green yellow">
+	<div class="container" style="height:231px;">
+  	<h1 style="padding-top:85px;">Students&nbsp;&nbsp;<span>({{students.length}})</span></h1>
+	</div>
+</div>
+<div class="container" id="studentContainer">
+	<div class="header-row">
+		<span class="short">NAME</span>
+		<span>PARENT EMAILS</span>
+	</div>
+	<div class="studentRow" ng-class="{true:'active'}[student.$inEditMode || student.$parentEmailEditMode]" ng-repeat="student in students">
+		<div class="short">
+			<span ng-hide="student.$inEditMode">{{student.full_name}}</span>
+			<input type="text" placeholder="Student name" ng-model="student.full_name" ng-show="student.$inEditMode"/>
+			<a class="hover" ng-click="student.$inEditMode = true;" ng-hide="!student.can_edit || student.$inEditMode">edit</a>
+			<a ng-click="student.$save();student.$inEditMode = false;" ng-show="student.$inEditMode">save</a>
+		</div>
+		<div class="emails">
+			<a ng-click="student.$parentEmailEditMode = true" ng-show="student.can_edit && student.parent_emails.length === 0 && !student.$parentEmailEditMode">add</a>
+			<span ng-hide="student.$parentEmailEditMode">{{student.$parent_emails}}</span>
+			<input type="text" placeholder="Type email addresses, comma separated" ng-model="student.$parent_emails" ng-show="student.$parentEmailEditMode" />
+			<a class="hover" ng-click="student.$parentEmailEditMode = true;" ng-hide="!student.can_edit || student.$parentEmailEditMode || !student.$parent_emails">edit</a>
+			<a ng-click="student.$save();student.$parentEmailEditMode = false;" ng-show="student.$parentEmailEditMode">save</a>
+		</div>
+	</div>
+</div>

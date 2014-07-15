@@ -295,3 +295,204 @@
 		}
 	}
 }
+
+.existing-student-modal {
+	width:790px;
+	margin-left:-395px;
+	
+	.modal-header {
+		text-align:center;
+		border-top:none;
+		height:auto !important;
+	}
+	
+	span.title {
+		font-size:22px;
+		font-weight:500;
+		margin-left:52px;
+		color:$dark-beige;
+	}
+	
+	a.close-button {
+		margin-right:49px;
+		margin-top:-3px;
+	}
+	
+	a.footer-link {
+		color:$chiaro-beige;
+		text-decoration:underline;
+		cursor:pointer;
+	}
+	
+	ul {
+		background-color:white;
+		margin-left:50px;
+		margin-right:50px;
+		margin-top:30px;
+		border-top:2px solid $dark-beige;
+		
+		span {
+			font-size:20px;
+			font-weight:400;
+			color:$dark-beige;
+			
+		}
+		
+
+		li {
+			span:first-child{
+				width:200px;
+			}
+			
+			span {
+				width:333px;
+				margin-right:20px;
+				display: inline-block;
+				text-align: left;
+			}
+			
+			border-bottom:1px solid lightgray;
+			line-height:70px;
+		}
+		
+	}
+}
+
+.new-agenda-modal
+{
+	position: absolute;
+	top: 405px;
+	left: 312px;
+	width: 524px;
+	height: 190px;
+	border-left:5px solid $silver;
+	
+	.modal-header {
+		border-top:none !important;
+		height:auto !important;
+		position:absolute;
+		padding-top:15px;
+		background-color:inherit;
+		
+		input {
+			left: 19px;
+			top: -3px;
+		}
+		
+		textarea {
+			border: none;
+			resize: none;
+			margin-left: 18px;
+			margin-top: 10px;
+			background: rgb(233, 231, 231);
+			width: 410px;
+			height: 50px;
+		}
+		
+		.close-button {
+			margin-right: 25px !important;
+			margin-top: -100px;
+		}
+		
+		.bold {
+			color:$dark-beige;
+		}
+		
+		input.form-control {
+			font-size: 13px;
+			width: 150px
+		}
+		
+		.btn-red {
+			margin-left: 18px;
+			margin-top: 14px;
+		}
+	}
+}
+
+.send-agenda-modal {
+	background-color:$beige;
+	width:610px;
+	color:$dark-beige;
+	
+	span.title {
+		color:$dark-slate;
+		margin:25px;
+		display:inline-block;
+		margin-top:31px;
+	}
+	
+	.close-button {
+		float:right;
+		margin:25px;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	
+	hr {
+		margin-left:25px;
+		margin-right:25px;
+		margin-top:0px;
+	}
+	
+	textarea {
+		width: 544px;
+		margin-left: 25px;
+		border: none;
+		resize: none;
+		outline: none;
+		font-size: 13px;
+		height: 45px;
+		padding: 8px;
+	}
+	
+	span.caption {
+		margin-left:25px;
+	}
+	
+	span.short {
+		width:370px;
+	}
+	
+	.agendas {
+		padding-left: 25px;
+		padding-right: 27px;
+	}
+	
+	.dropdown-menu {
+		left: 130px;
+		top: 210px;
+		max-height: 250px;
+		overflow: scroll;
+	}
+	
+	li.check {
+		padding-left: 10px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 218px;
+		height: 25px;
+		padding-top: 12px;
+	}
+	
+	a.inline {
+		display:inline;
+	}
+	
+	.btn-red {
+		float:right;
+		margin-right:29px;
+	}
+	
+	.moggle {
+		background-image: url(/images/box.png);
+		background-position: 0px 0px;
+		width: 150px;
+		height: 37px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		line-height: 32px;
+	}
+}

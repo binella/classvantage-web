@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store', 'angulartics', 'angulartics.mixpanel'])
+angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 'ui.bootstrap.modal', 'ui.router', 'ui.bootstrap.dropdownToggle', 'ngAnimate', 'data.store', 'angulartics', 'angulartics.mixpanel', 'ui.bootstrap.typeahead', 'ui.bootstrap.datepicker'])
 	/*
 	.provider('indicator', function () {
 		var elem = null, iCounter = 0;
@@ -91,6 +91,9 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 				resolve: {
 					pages: ['Page', function (Page) {
 						return Page.fetchAll().$promise;
+					}],
+					students: ['Student', function (Student) {
+						return Student.fetchAll();
 					}]
 				}
 			})
@@ -159,6 +162,17 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 					}]
 				}
 			})
+			.state('students', {
+				url: '/students',
+				templateUrl: 'views/students.html',
+				controller: 'StudentsCtrl',
+				access: 1,
+				resolve: {
+					students: ['Student', function (Student) {
+						return Student.fetchAll();
+					}]
+				}
+			})
 			.state('print', {
 				url: '/print/:type/:id?ungraded',
 				templateUrl: 'views/print.html',
@@ -198,6 +212,23 @@ angular.module('classvantageApp', ['env', 'oauthService', 'monospaced.elastic', 
 						return $stateParams.ungraded;
 					}]
 				}
+			})
+			.state('agenda_preview', {
+				url: '/agenda_preview?agenda_items&note&span',
+				templateUrl: 'views/agendaPreview.html',
+				access: 1,
+				controller: ['$scope', '$stateParams', 'AgendaItem', function ($scope, $stateParams, AgendaItem) {
+					$scope.agendaItemIds = $stateParams.agenda_items.split(',');
+					$scope.note = $stateParams.note;
+					$scope.span = $stateParams.span;
+					$scope.selectedAgendas = [];
+					$scope.allAgendas = AgendaItem.fetchAll().$promise.then(function (allAgendas) {
+						for (var i=0,l=allAgendas.length; i<l; i++) {
+							if ($scope.agendaItemIds.indexOf(allAgendas[i].id.toString()) != -1 )
+								$scope.selectedAgendas.push(allAgendas[i]);
+						}
+					});
+				}]
 			})
 			.state('admin', {
 				url: '/admin',

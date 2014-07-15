@@ -50,6 +50,17 @@ angular.module('classvantageApp')
 			}
 			return arr;
 		}
+		
+		Object.defineProperty(resource.resourcePrototype, '$parent_emails', {
+			get: function () {
+				if (!this.parent_emails) { return null;};
+				return this.parent_emails.join(',');
+			},
+			set: function (newValue) {
+				if (!newValue || newValue.trim() == '') { this.parent_emails = []; return; };
+				this.parent_emails = newValue.split(',');
+			}
+		});
 
 		return resource;
   })
