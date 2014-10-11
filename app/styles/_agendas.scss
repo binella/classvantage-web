@@ -29,6 +29,9 @@ ul.agendas {
 		span {
 			display:inline-block;
 			margin-left:10px;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
 		}
 		
 		span.title{
@@ -49,6 +52,8 @@ ul.agendas {
 			
 			span {
 				margin-left:1px;
+        display: inline;
+        vertical-align: baseline;
 			}
 		}
 		
