@@ -340,6 +340,7 @@ angular.module('classvantageApp')
 						}
 						$http.post(ENV.baseURL + 'send_agendas', {agenda_item_ids: agendaIds, note: $scope.$$childTail.personalNote, span: $scope.$$childTail.span}).success(function (data) {
 							alert('Emails were sent.');
+              $modalInstance.close(data);
 						});
 					};
 					$scope.sendMail = function () {};
