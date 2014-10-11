@@ -358,56 +358,94 @@
 	}
 }
 
-.new-agenda-modal
-{
+.new-agenda-modal {
 	position: absolute;
 	top: 405px;
 	left: 312px;
 	width: 524px;
-	height: 190px;
 	border-left:5px solid $silver;
 	
-	.modal-header {
+  .modal-header {
 		border-top:none !important;
-		height:auto !important;
-		position:absolute;
-		padding-top:15px;
-		background-color:inherit;
+    background-color:inherit;
+    height: 56px;
 		
-		input {
-			left: 19px;
-			top: -3px;
-		}
-		
-		textarea {
-			border: none;
-			resize: none;
-			margin-left: 18px;
-			margin-top: 10px;
-			background: rgb(233, 231, 231);
-			width: 410px;
-			height: 50px;
-		}
-		
-		.close-button {
-			margin-right: 25px !important;
-			margin-top: -100px;
-		}
-		
-		.bold {
-			color:$dark-beige;
-		}
-		
-		input.form-control {
-			font-size: 13px;
-			width: 150px
-		}
-		
-		.btn-red {
-			margin-left: 18px;
-			margin-top: 14px;
-		}
+    input {
+      left: 19px;
+      top: 16px;
+      width: 431px;
+    }
 	}
+  
+  .modal-body {
+    padding: 19px;
+    position: static;
+    
+    textarea {
+      border: none;
+      resize: none;
+      background: rgb(233, 231, 231);
+      width: 419px;
+      height: 50px;
+      padding: 6px;
+      font-size: 13px;
+      margin-bottom: 19px;
+    }
+    
+    .btn-red {
+      float: left;
+    }
+    
+    .due {
+      float: right;
+      margin-right: 55px;
+      line-height: 36px;
+      
+      label { 
+        font-size: 15px;
+        color: $dark-beige; 
+        margin-right: 4px;
+      }
+      
+  		input {
+  			background: transparent;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $light-beige;
+  			outline: none;
+  			font-size: 15px;
+  			color: $dark-beige;
+        padding: 5px 0;
+  		}
+    }
+    
+    ul.dropdown-menu {
+      
+      li {
+        padding: 15px;
+        
+        table { outline: none; }
+        
+        .btn {
+          background: transparent;
+          color: $dark-beige;
+        }
+        
+        .btn:disabled {
+          color: #ccc !important;
+          background-color: transparent !important;
+        }
+        
+        i.glyphicon-chevron-left::after { 
+          content: "<<";
+        }
+        
+        i.glyphicon-chevron-right::after { 
+          content: ">>";
+        }
+      }
+    }
+  }
 }
 
 .send-agenda-modal {

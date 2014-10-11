@@ -126,7 +126,8 @@ angular.module('classvantageApp')
 				  $scope.today();
 					$scope.dateOptions = {
 					    formatYear: 'yy',
-					    startingDay: 1
+					    startingDay: 1,
+              showWeeks: false
 					  };
 
 					  $scope.initDate = new Date('2016-15-20');
@@ -137,7 +138,9 @@ angular.module('classvantageApp')
 						    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
 						  };
 							$scope.toggleMin = function() {
-							    $scope.minDate = $scope.minDate ? null : new Date();
+                  var now = new Date(),
+                      min = now.setDate(now.getDate() + 1);
+							    $scope.minDate = $scope.minDate ? null : min;
 							  };
 							  $scope.toggleMin();
 				  $scope.clear = function () {
