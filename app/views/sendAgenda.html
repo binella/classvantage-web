@@ -11,10 +11,10 @@
     	<a class="inline green-font" ng-click="selectAll();">Select All</a>
 			<a class="inline red-font" ng-click="deselectAll();">Deselect All</a>
   	</li>
-		<li class="check" ng-repeat="page in pages" ng-click="page.$includeInAgenda = !page.$includeInAgenda;refreshAgendas();">
-			<span class="dark-uniform">
-				<input type="checkbox" ng-model="page.$includeInAgenda" style="overflow:hidden;" cv-styled-checkbox />{{page.title}}
-			</span>
+		<li class="check" ng-repeat="page in pages">
+			<label class="dark-uniform">
+				<input type="checkbox" ng-model="page.$includeInAgenda" ng-click="page.$includeInAgenda = !page.$includeInAgenda;refreshAgendas();" style="overflow:hidden;" cv-styled-checkbox />{{page.title}}
+			</label>
 		</li>
 	</ul>
 	<span class="caption">Limit to:</span>
